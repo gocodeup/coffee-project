@@ -32,6 +32,10 @@ improvements to it.
 
 **Bonus**
 
+- Add an option to select all roasts for roast type
+
+- Make your name search case insensitive
+
 - Allow the user to add new coffees to the page
 
     Create another form on the page that has an input for the coffee name, and
@@ -43,4 +47,13 @@ improvements to it.
 - Style it!
 
     The page looks pretty plain as it is, and the refactoring we did above to
-    use `div`s for coffees should give us more flexibility in styling.
+    use `div`s for coffees should give us more flexibility in styling. (*Hint:
+    the styling shown in the example below can be achieved purely with bootstrap
+    classes, that is, without custom CSS*)
+
+## Example
+
+Here is an example demonstrating the above functionality. Your application might
+look different, but should have the same features.
+
+![Cofee Project Demo](demo.gif)
