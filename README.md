@@ -6,7 +6,8 @@ improvements to it.
 
 ## Setup
 
-1. Fork this repository
+1. Fork this repository (Click on the "Fork" button on the top right of this
+   page)
 1. Clone the forked repository
 1. Open up the html file and check out the existing application
 1. Read through the code and understand the existing code structure
