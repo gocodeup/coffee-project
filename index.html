@@ -1,35 +1,40 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns="http://www.w3.org/1999/html">
 <head>
     <meta charset="UTF-8">
     <title></title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
+
 </head>
 <body>
+<div class="container">
+<header style="text-align: center;">
     <h1>Coffee!</h1>
-
+    <hr class="my-4">
+</header>
     <form>
         <label for="roast-selection"></label>
         <select id="roast-selection">
             <option>light</option>
             <option>medium</option>
             <option>dark</option>
-
-
         </select>
         <input id="submit" type="submit" />
     </form>
 
-    <table>
-        <thead>
-            <tr>
-                <th>ID</th>
-                <th>NAME</th>
-                <th>ROAST</th>
-            </tr>
-        </thead>
-        <tbody id="coffees"></tbody>
-    </table>
+    <!--<table>-->
+        <!--<thead>-->
+            <!--<tr>-->
+                <!--<th>ID</th>-->
+                <!--<th>NAME</th>-->
+                <!--<th>ROAST</th>-->
+            <!--</tr>-->
+        <!--</thead>-->
+        <!--<tbody id="coffees"></tbody>-->
+    <!--</table>-->
+<div id="coffees"></div>
+</div>
 
     <script src="main.js"></script>
 </body>
