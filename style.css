@@ -9,12 +9,20 @@ td, th {
 }
 
 .name {
-    float: left;
+    /*float: left;*/
     margin-right: 10px;
-    /*font-size: 2em;*/
+    font-size: 22px;
+    font-weight: bold;
 
 }
 .roast {
+    font-size: 15px;
+    color: lightgrey;
+    font-weight: normal;
+
+    /*float: right;*/
+
+
 }
 
 .Title {
@@ -23,7 +31,7 @@ td, th {
 
 body {
     margin:0 auto;
-    max-width: 50em;
+    max-width: 75em;
 
 
 }
