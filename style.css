@@ -11,7 +11,7 @@ td, th {
 .name {
     float: left;
     margin-right: 10px;
-    font-size: 2em;
+    /*font-size: 2em;*/
 
 }
 .roast {
@@ -23,5 +23,7 @@ td, th {
 
 body {
     margin:0 auto;
+    max-width: 50em;
+
 
 }
