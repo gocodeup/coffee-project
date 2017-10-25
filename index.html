@@ -9,21 +9,39 @@
 <body>
     <h1 class="Title">Coffee!</h1>
     <hr>
-<div class = "row">
-    <form class = "col-3">
-        <label for="roast-selection"></label>
-        <select id="roast-selection">
-            <option>all</option>
-            <option>light</option>
-            <option>medium</option>
-            <option>dark</option>
-        </select>
-        <input id="submit" type="submit" />
-    </form>
+<!--<div class = "row">-->
+    <!--<form class = "col-6">-->
+        <!--<label for="roast-selection"></label>-->
+        <!--<select id="roast-selection">-->
+            <!--<option>all</option>-->
+            <!--<option>light</option>-->
+            <!--<option>medium</option>-->
+            <!--<option>dark</option>-->
+        <!--</select>-->
+        <!--<input id="submit" type="submit" />-->
+    <!--</form>-->
 
 
-        <div id="coffees" class="col-3"></div>
-</div>
+        <!--<div id="coffees" class="col-6"></div>-->
+<!--</div>-->
+
+    <section>
+        <!-- 2/3rds column for the "selected work" 4 projects, 1/3rd column for "the last" and tweet -->
+        <div class="row">
+            <div id="coffees" class="col-md-6"></div>
+                <form class = "col-md-6">
+                    <label for="roast-selection"></label>
+                    <select id="roast-selection">
+                        <option>all</option>
+                        <option>light</option>
+                        <option>medium</option>
+                        <option>dark</option>
+                    </select>
+                    <input id="submit" type="submit" />
+                </form>
+        </div>
+    </section>
+
 
     <script src="main.js"></script>
 </body>
