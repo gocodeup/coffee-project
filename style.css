@@ -7,3 +7,13 @@ td, th {
     border: 1px solid black;
     padding: 5px 10px;
 }
+
+
+#coffees>h2 {
+    /*position: absolute;*/
+    float: left;
+}
+
+#coffees>p {
+    color: lightgray;
+}
