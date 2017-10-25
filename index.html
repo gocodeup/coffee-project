@@ -4,31 +4,59 @@
     <meta charset="UTF-8">
     <title></title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
 </head>
 <body>
-    <h1>Coffee!</h1>
+<div class="container">
+    <div class="panel panel-info">
+        <div class="panel-title" ><h1 align="center">Coffee!</h1></div>
+        <hr>
+            <div class="panel-body">
+                <form>
+                    <label for="roast-selection"></label>
+                    <select id="roast-selection">
+                        <option>light</option>
+                        <option>medium</option>
+                        <option>dark</option>
+                    </select>
+                    <input id="submit" type="submit" />
+                </form>
+                <table>
+                    <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>NAME</th>
+                        <th>ROAST</th>
+                    </tr>
+                    </thead>
+                    <tbody id="coffees"></tbody>
+                </table>
 
-    <form>
-        <label for="roast-selection"></label>
-        <select id="roast-selection">
-            <option>light</option>
-            <option>medium</option>
-            <option>dark</option>
-        </select>
-        <input id="submit" type="submit" />
-    </form>
-
-    <table>et
-        <thead>
-            <tr>
-                <th>ID</th>
-                <th>NAME</th>
-                <th>ROAST</th>
-            </tr>
-        </thead>
-        <tbody id="coffees"></tbody>
-    </table>
-
-    <script src="main.js"></script>
+                <!--<div class="panel panel-default">-->
+                    <!--<div class="panel-heading">Hand Tossed</div>-->
+                    <!--<div class="panel-body">Garlic seasoned .....</div>-->
+                    <!--<ul class="list-group">-->
+                        <!--<li class="list-group-item list-group-item-info">-->
+                            <!--<div class="radio">-->
+                                <!--<label>-->
+                                    <!--<input type="radio" name="optionsRadios" id="optionsRadios1" value="option1">-->
+                                    <!--Small (10")-->
+                                <!--</label>-->
+                            <!--</div>-->
+                        <!--</li>-->
+                        <!--<li class="list-group-item list-group-item-info">-->
+                            <!--<div class="radio">-->
+                                <!--<label>-->
+                                    <!--<input type="radio" name="optionsRadios" id="optionsRadios1" value="option1">-->
+                                    <!--Medium (12")-->
+                                <!--</label>-->
+                            <!--</div>-->
+                        <!--</li>-->
+                    <!--</ul>-->
+                <!--</div>    -->
+                <script src="main.js"></script>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
