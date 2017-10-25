@@ -32,10 +32,17 @@ function updateCoffees(e) {
 
 // This is grabbing any string typed in search box
 var searchbar = document.getElementById('searchBox');
-function myFunction() {
-    console.log(searchbar.value)
+function matchedCoffees() {
+    var userInput = searchbar.value;
+    var filteredCoffees = [];
+
+    function filteringCoffee(element, index) {
+        return element.name.indexOf(searchbar.value) > -1;
+    }
+    console.log(coffees.filter(filteringCoffee));
+
 }
-searchbar.addEventListener("keyup", myFunction);
+searchbar.addEventListener("keyup", matchedCoffees);
 
 
 // from http://www.ncausa.org/About-Coffee/Coffee-Roasts-Guide
