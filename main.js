@@ -2,7 +2,6 @@
 var tbody = document.querySelector('#coffees');
 var submitButton = document.querySelector('#submit');
 var roastSelection = document.querySelector('#roast-selection');
-// var coffeeText = document.querySelector("#coffeename");
 var coffeeInput = document.querySelector("#coffeeInput")
 
 
@@ -44,42 +43,29 @@ function renderCoffees(coffees) {
 //for the search -- event called input that happens every time i input
 
 
-
 function updateCoffees(e) {
     e.preventDefault(); // don't submit the form, we just want to update the data
     var selectedRoast = roastSelection.value.toLowerCase();
     var filteredCoffees = [];
     coffees.forEach(function (coffee) {
+
+        if(selectedRoast === "all"){
+            if (coffee.name.indexOf(coffeeInput.value) > - 1 ) {
+                filteredCoffees.push(coffee);
+            }
+        }
         if (coffee.roast === selectedRoast) {
-            filteredCoffees.push(coffee);
-            tbody.innerHTML = renderCoffees(filteredCoffees);
-        }
-
-        if(selectedRoast == "all"){
-            tbody.innerHTML = renderCoffees(coffees);
-        }
+            if (coffee.name.indexOf(coffeeInput.value) > - 1 ) {
+                filteredCoffees.push(coffee);
+            }
+        };
     });
-
-    //     filterItems(coffeeName);
-}
-
-
-
-// function filterItems(query) {
-//     return coffees.filter(function(el) {
-//         return el.toLowerCase().indexOf(query.toLowerCase()) > -1;
-//     })
-// };
-
-
-
-// console.log(filterItems('cit'));
-// console.log(filterItems('eur'));
-
-
+    tbody.innerHTML = renderCoffees(filteredCoffees);
+};
 
 tbody.innerHTML = renderCoffees(coffees);
 
 roastSelection.addEventListener('change', updateCoffees);
+coffeeInput.addEventListener("keyup", updateCoffees);
 
 
