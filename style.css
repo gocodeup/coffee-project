@@ -1,19 +1,31 @@
-table {
-    border-collapse: collapse;
-    margin: 15px 0;
-}
+/*table {*/
+    /*border-collapse: collapse;*/
+    /*margin: 15px 0;*/
+/*}*/
 
-td, th {
-    border: 1px solid black;
-    padding: 5px 10px;
-}
+/*td, th {*/
+    /*border: 1px solid black;*/
+    /*padding: 5px 10px;*/
+/*}*/
 
-
-#coffees>h2 {
-    /*position: absolute;*/
+.coffeelist {
     float: left;
+    width: 200px;
 }
 
-#coffees>p {
-    color: lightgray;
+.coffeelist>h3, p {
+    display: inline;
+}
+
+/*#coffees>h2 {*/
+    /*!*position: absolute;*!*/
+    /*float: left;*/
+/*}*/
+
+p {
+    color: gray;
+}
+
+.col-md-6 {
+    height: 10px;
 }

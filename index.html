@@ -13,34 +13,49 @@
     <h1>Coffee!</h1>
     <hr class="my-4">
 </header>
+
+<div class="row">
+
+    <div class="col-md-6">
+        <div id="coffees"></div>
+    </div>
+
+    <div class="col-md-6">
     <form>
+        <div class="form-group">
         <label for="roast-selection">Roast</label>
-        <select id="roast-selection" onChange="updateCoffees()">
+        <select id="roast-selection" class="form-control" onChange="updateCoffees()">
             <option selected="selected">all</option>
             <option>light</option>
             <option>medium</option>
             <option>dark</option>
         </select>
         <label for="coffeename">Coffee Name</label>
-        <input type="text" id="coffeename" onkeyup="updateCoffees()">
+        <input type="text" id="coffeename" class="form-control" onkeyup="updateCoffees()">
+        </div>
     </form>
+
     <hr>
+
     <h2>Add a Coffee</h2>
     <form>
+        <div class="form-group">
         <label for="new-roast-selection">Roast</label>
-        <select id="new-roast-selection">
+        <select id="new-roast-selection" class="form-control">
             <option>light</option>
             <option>medium</option>
             <option>dark</option>
         </select>
         <label for="add-coffee">Name</label>
-        <input type="text" id="add-coffee"/>
-        <input id="submit" type="submit" />
+        <input type="text" id="add-coffee" class="form-control"/>
+        <input id="submit" type="submit" class="btn btn-block btn-primary"/>
+        </div>
     </form>
-
-<div id="coffees"></div>
+    </div>
+</div>
 </div>
 
     <script src="main.js"></script>
+
 </body>
 </html>

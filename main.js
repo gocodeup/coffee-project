@@ -1,8 +1,8 @@
-"use strict"
+"use strict";
 
 function renderCoffee(coffee) {
 
-    var html =  "<div>" + "<h2>" + coffee.name + "</h2>" + "<p>" + coffee.roast + "</p>" + "</div>";
+    var html =  "<div class='coffeelist'>" + "<h3>" + coffee.name + "</h3>" + "<p>" + coffee.roast + "</p>" + "</div>";
 
     // var html = '<tr class="coffee">';
     // html += '<td>' + coffee.id + '</td>';
