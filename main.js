@@ -61,9 +61,17 @@ var coffees = [
 var tbody = document.querySelector('#coffees');
 var submitButton = document.querySelector('#submit');
 var roastSelection = document.querySelector('#roast-selection');
+var newSubmit = document.querySelector('#newSubmit');
 
 // this renders the searched coffees on the page, replacing the initial display of them all
 tbody.innerHTML = renderCoffees(coffees);
+
+function addedCoffee(newCoffeeName, newCoffeeRoast) {
+    console.log("added coffee fired");
+    console.log(newCoffeeName);
+    return coffees.push({id: 15, name: newCoffeeName, roast: newCoffeeRoast});
+
+}
 
 
 // This is grabbing any string typed in search box
@@ -83,3 +91,10 @@ function matchedCoffees() {
 // these add event listeners to the search field and submit button which trigger the fuctions defined above
 searchbar.addEventListener("keyup", matchedCoffees);
 submitButton.addEventListener('click', updateCoffees);
+newSubmit.addEventListener("click", function(e) {
+    e.preventDefault();
+    console.log("listener fired");
+    var newCoffeeName = document.querySelector('#newCoffeeInput');
+    var newCoffeeRoast = document.querySelector('#new-roast-selection');
+    addedCoffee(newCoffeeName.value, newCoffeeRoast.value);
+});
