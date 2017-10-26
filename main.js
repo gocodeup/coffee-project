@@ -7,6 +7,7 @@ function renderCoffee(coffee) {
     html += '<td>' + coffee.roast + '</td>';
     html += '</tr>';
 
+    var html = "div" + "<h2>" + coffee.name + "</h2>" + "<p>" + coffee.roast + "</p>" + "</div>";
     return html;
 }
 
@@ -14,6 +15,7 @@ function renderCoffees(coffees) {
     var html = '';
     for(var i = coffees.length - 1; i >= 0; i--) {
         html += renderCoffee(coffees[i]);
+        // debugger;
     }
     return html;
 }
