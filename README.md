@@ -57,4 +57,67 @@ improvements to it.
 Here is an example demonstrating the above functionality. Your application might
 look different, but should have the same features.
 
-![Cofee Project Demo](demo.gif)
+![Coffee Project Demo](demo.gif)
+
+README DIRECTIONS (slacked from zached)
+- Create a branch with your name
+- Do you work in this branch
+- Before switching branches, pulling, or pushing, make sure you have committed all changes
+- Checkout the information on working with git in teams in the [curriculum](http://java.codeup.com/git/working-in-teams/)
+
+## I need to....
+
+#### Share my work with my teammate
+
+( 1 ) Make sure your work is added and committed
+
+( 2 ) Push your branch
+
+`git push origin your-name`
+
+( 3 ) Open a Pull Request
+* On GitHub.com, open a Pull Request for your branch
+* When creating the pull requeset, make sure you choose your organization's repo for the "base fork"
+
+( 4 ) YELL AT HER to look over IDIOT and merge your pull request
+
+### Get the most recent version of the project (i.e. pull down a change your teamate made)
+
+Make sure you have added and committed any changes you are currently working on.
+
+1. Switch to your master branch
+
+    ```
+    git checkout master
+    ```
+
+1. Update your master branch
+
+    ```bash
+    git pull origin master
+    ```
+
+1. Switch back to your personal branch
+
+    ```bash
+    git checkout your-name
+    ```
+
+1. Merge your master branch
+
+    ```bash
+    git merge master
+    ```
+
+
+## COFFEE MACHINE OVERFLOW
+**(but workflow, don't be dumb**
+1. bootstrap for script, submit button, jumbotron Coffee!
+1. grid work work work work
+1. multi-select list, form input, 
+1. each coffee in <div>
+1. addEventListeners 
+1. add functions for object array of - var = coffees
+1. 
+
+
