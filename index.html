@@ -33,7 +33,7 @@
 
 
                     <ul class="list-group">
-                        <h5>Roast</h5><select class="form-control" name="roast">
+                        <h5>Roast</h5><select id="roast-selection" class="form-control" name="roast">
                           <li>
                             <option value="all">All</option>
                             <option value="light">Light</option>
@@ -45,8 +45,8 @@
                         <input type="text" class="form-control" name="coffeeName">
                     </ul>
 
-                    <button type="button" class="btn btn-primary btn-block">Button 1</button>
-
+                    <button type="button" id ="filterBtn" class="btn btn-primary btn-block">Submit</button>
+                    <hr>
 
                  <h2>Add a Coffee</h2>
 
@@ -64,7 +64,7 @@
 
                     <br>
 
-                    <button type="button" class="btn btn-primary btn-block">Button 1</button>
+                    <button type="button" id="addBtn" class="btn btn-primary btn-block">Submit</button>
 
                     <label for="roast-selection"></label>
                     <select id="roast-selection">
