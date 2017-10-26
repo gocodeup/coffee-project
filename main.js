@@ -1,16 +1,35 @@
 "use strict"
-//
-// function renderCoffee(coffee) {
-//     var html = '<tr class="coffee">';
-//     html += '<td>' + coffee.id + '</td>';
-//     html += '<td>' + coffee.name + '</td>';
-//     html += '<td>' + coffee.roast + '</td>';
-//     html += '</tr>';
-//
-//     return html;
-// }
+var coffeeName = document.getElementById("coffeename");
+coffeeName.addEventListener("keypress", function () {
+    var userinput = coffeeName.value;
+    console.log(userinput);
+    console.log("it is alive");
+    myFunction(userinput)
 
-// from http://www.ncausa.org/About-Coffee/Coffee-Roasts-Guide
+
+});
+
+
+function myFunction(input) {
+    // Declare variables
+    var filter;
+    filter = input;
+    // Loop through all list items, and hide those who don't match the search query
+    for (var i = 0; i < coffees.length; i++) {
+        var  coffee = coffees[i].name;
+        if (coffee.indexOf(filter)> -1){
+            console.log(coffee);
+            var displayDiv = document.getElementById("coffeetypes");
+
+            displayDiv.innerHTML += coffee.toString() + "\n";
+
+
+        }
+
+
+    }
+}
+
 var coffees = [
     {id: 1, name: 'Light City', roast: 'light'},
     {id: 2, name: 'Half City', roast: 'light'},
@@ -25,26 +44,37 @@ var coffees = [
     {id: 11, name: 'Espresso', roast: 'dark'},
     {id: 12, name: 'Viennese', roast: 'dark'},
     {id: 13, name: 'Italian', roast: 'dark'},
-    {id: 14, name: 'French', roast: 'dark'},
+    {id: 14, name: 'French', roast: 'dark'}
 ];
 
-function renderCoffees(coffees) {
-    var html = " ";
-    for(var i = 0; i <= coffees.length-1; i++) {
+
+
+function renderCoffees(coffees){
+    var html = "";
+    for (var i = 0; i <= coffees.length-1; i++){
         html += renderCoffee(coffees[i]);
     }
     return html;
 }
 
-var displayDiv = document.getElementById("coffees");
+// var displayDiv = document.getElementById("coffeetypes");
+//
+// displayDiv.innerHTML = renderCoffees(coffees);
 
-displayDiv.innerHTML = renderCoffees(coffees);
 
 
-function renderCoffee(coffee){
+function renderCoffee(coffee) {
     var html = '<div>' + coffee.name + " " + coffee.roast + '</div>';
     return html;
 }
+
+// function renderCoffees(coffees) {
+//     var html = '';
+//     for(var i = coffees.length - 1; i >= 0; i--) {
+//         html += renderCoffee(coffees[i]);
+//     }
+//     return html;
+// }
 
 function updateCoffees(e) {
     e.preventDefault(); // don't submit the form, we just want to update the data
@@ -59,9 +89,9 @@ function updateCoffees(e) {
 }
 
 
+// from http://www.ncausa.org/About-Coffee/Coffee-Roasts-Guide
 
-
-var tbody = document.querySelector('#coffees');
+var tbody = document.querySelector('#coffeetypes');
 var submitButton = document.querySelector('#submit');
 var roastSelection = document.querySelector('#roast-selection');
 
