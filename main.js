@@ -1,5 +1,10 @@
 "use strict"
 
+var tbody = document.querySelector('#coffees');
+var submitButtonFilter = document.querySelector('#filterBtn');
+var roastSelection = document.querySelector('#roast-selection');
+var coffeeFromText = document.querySelector('#text');
+
 function renderCoffee(coffee) {
     var html = '<div class="coffee">';
 
@@ -19,14 +24,19 @@ function renderCoffees(coffees) {
 }
 
 function updateCoffees(e) {
-    e.preventDefault(); // don't submit the form, we just want to update the data
+    // e.preventDefault(); // don't submit the form, we just want to update the data
     var selectedRoast = roastSelection.value;
     var filteredCoffees = [];
+    console.log(selectedRoast);
     coffees.forEach(function(coffee) {
-        if (selectedRoast === "all" ){
-            filteredCoffees.push(coffee)
-        }
+        // if (selectedRoast === "all" ){
+        //     filteredCoffees.push(coffee)
+        // }
+        if (coffee.name.indexOf(coffeeFromText.value) > -1) {
+            // console.log(coffeeFromText.value);
+                filteredCoffees.push(coffee);
 
+        }
         if (coffee.roast === selectedRoast) {
             filteredCoffees.push(coffee);
         }
@@ -34,11 +44,21 @@ function updateCoffees(e) {
     tbody.innerHTML = renderCoffees(filteredCoffees);
 }
 
-// function returnSelected(){
+// function returnSelected(e){
 // if (coffeeFromText === coffees.name[]){
 //     return fileredCoffees.push(coffees)
 // }
 // }
+
+function returnSelected() {
+    coffees.forEach(function(coffee) {
+        // if (coffee.name.indexOf(coffeeFromText.value) > -1) {
+        //     // console.log(coffeeFromText.value);
+        //
+            updateCoffees();
+        // }
+    });
+}
 
 
 
@@ -63,10 +83,6 @@ var coffees = [
     {id: 14, name: 'French', roast: 'dark'},
 ];
 
-var tbody = document.querySelector('#coffees');
-var submitButtonFilter = document.querySelector('#filterBtn');
-var roastSelection = document.querySelector('#roast-selection');
-var coffeeFromText = document.querySelector('#text')
 
 
 
@@ -74,7 +90,11 @@ tbody.innerHTML = renderCoffees(coffees);
 
 submitButtonFilter.addEventListener('click', updateCoffees);
 
-coffeeFromText.addEventListener('input', returnSelected)
+roastSelection.addEventListener("change", updateCoffees);
+
+coffeeFromText.addEventListener('keyup', returnSelected);
+
+
 
 
 
