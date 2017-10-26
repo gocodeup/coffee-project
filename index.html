@@ -8,36 +8,64 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Coffee!</h1>
-
-    <form>
-        <label for="roast-selection"></label>
-        <select id="roast-selection">
-            <option>light</option>
-            <option>medium</option>
-            <option>dark</option>
-            <option>all</option>
-        </select>
-        
-        <input id="searchBox" type="text">
-        
-        <input id="submit" type="submit" />
-    </form>
-
-    <form>
-        <label for="new-roast-selection"></label>
-        <select id="new-roast-selection">
-            <option>light</option>
-            <option>medium</option>
-            <option>dark</option>
-        </select>
-
-        <input id="newCoffeeInput" type="text">
-
-        <input id="newSubmit" type="submit" />
-    </form>
+<div class="container">
+    <div class="row">
+        <h1 class="col-xs-12 text-center">Coffee!</h1>
+    </div>
     
-    <div id="coffees"></div>
+    <hr>
+    
+    <div class="row">
+        <div class="col-xs-6">
+        <div id="coffees" class="row"></div>
+        </div>
+        
+       <div class="col-xs-6">
+           <div>
+            <form class="form-horizontal">
+                <div class="form-group">
+                    <label for="roast-selection" class="col-xs-12" >Roast</label>
+                    <select id="roast-selection" class="col-xs-12 form-control">
+                        <option>light</option>
+                        <option>medium</option>
+                        <option>dark</option>
+                        <option>all</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="searchBox" class="col-xs-12" >Coffee Name</label>
+                    <input id="searchBox" type="text" class="col-xs-12 form-control">
+                </div>
+                <div class="form-group">
+                    <input id="submit" type="submit" class="col-xs-12">
+                </div>
+            </form>
+               
+               <hr class="col-xs-12">
+               
+            <h3 class="col-xs-12 text-center">Add a Coffee</h3>
+            
+            <form class="form-horizontal">
+                <div class="form-group">
+                    <label for="new-roast-selection" class="col-xs-12">Roast</label>
+                    <select id="new-roast-selection" class="col-xs-12 form-control">
+                        <option>light</option>
+                        <option>medium</option>
+                        <option>dark</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="newCoffeeInput" class="col-xs-12">Name</label>
+                    <input id="newCoffeeInput" type="text" class="col-xs-12 form-control">
+                </div>
+                <div class="form-group">
+                    <input id="newSubmit" type="submit" class="col-xs-12 btn btn-info">
+                </div>
+            </form>
+           </div>
+       </div>
+    
+    <!--<div id="coffees"></div>-->
     
     <!--<table>-->
         <!--<thead>-->
@@ -49,7 +77,8 @@
         <!--</thead>-->
         <!--<tbody id="coffees"></tbody>-->
     <!--</table>-->
-
+    </div>
+</div>
     <script src="main.js"></script>
 </body>
 </html>

@@ -3,10 +3,10 @@
 // this function adds HTML elements to each coffee and places it into one div
 function renderCoffee(coffee) {
 
-    var html = '<div class="coffee">';
+    var html = '<div class="coffee col-xs-6">';
     // html += '<td>' + coffee.id + '</td>';
     html += '<span><h2><span>' + coffee.name + '</span></h2></span>';
-    html += '<span><p><span>' + coffee.roast + '</span></p></span>';
+    html += '<span><p><span>  ' + coffee.roast + '</span></p></span>';
     html += '</div>';
     return html;
 
@@ -91,6 +91,7 @@ function matchedCoffees() {
 // these add event listeners to the search field and submit button which trigger the fuctions defined above
 searchbar.addEventListener("keyup", matchedCoffees);
 submitButton.addEventListener('click', updateCoffees);
+roastSelection.addEventListener("change", updateCoffees);
 newSubmit.addEventListener("click", function(e) {
     e.preventDefault();
     console.log("listener fired");

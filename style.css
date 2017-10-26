@@ -11,3 +11,11 @@ td, th {
 h2, p {
     display: inline;
 }
+
+.coffee p {
+    color: grey;
+}
+
+#submit {
+    display: none;
+}
