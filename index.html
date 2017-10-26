@@ -4,31 +4,50 @@
     <meta charset="UTF-8">
     <title></title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
 </head>
 <body>
-    <h1>Coffee!</h1>
-
-    <form>
-        <label for="roast-selection"></label>
-        <select id="roast-selection">
-            <option>light</option>
-            <option>medium</option>
-            <option>dark</option>
-        </select>
-        <input id="submit" type="submit" />
-    </form>
-
-    <table>
-        <thead>
-            <tr>
-                <th>ID</th>
-                <th>NAME</th>
-                <th>ROAST</th>
-            </tr>
-        </thead>
-        <tbody id="coffees"></tbody>
-    </table>
+    <h1 class="text-center">Coffee!</h1>
+    <hr>
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-offset-1 col-xs-5">
+                <div id="coffees"></div>
+            </div>
+            <div class="col-xs-5">
+                <form>
+                    <label for="roast-selection">Roast</label>
+                    <select class="form-control" name="roast-selection" id="roast-selection">
+                        <option value="All" selected>All</option>
+                        <option value="light">light</option>
+                        <option value="medium">medium</option>
+                        <option value="dark">dark</option>
+                    </select>
+                    <br>
+                    <label for="search-text">Coffee Name</label>
+                    <input type="text" class="form-control" id="search-text">
+                    <br>
+                    <button class="btn-block btn btn-primary" id="submit" type="submit">Submit</button>
+                </form>
+                <hr>
+                <h2 class="text-center">Add a Coffee</h2>
+                <label for="roast-selection2">Roast</label>
+                <select class="form-control" name="roast-selection" id="roast-selection2">
+                    <option value="light" selected>light</option>
+                    <option value="medium">medium</option>
+                    <option value="dark">dark</option>
+                </select>
+                <br>
+                <label for="search-text">Coffee Name</label>
+                <input type="text" class="form-control" id="coffee-text">
+                <br>
+                <button class="btn-block btn btn-primary" type="submit" id="add-submit">Submit</button>
+            </div>
+        </div>
+    </div>
 
     <script src="main.js"></script>
+    <script src="js/jquery-2.2.4.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
 </body>
 </html>
