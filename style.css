@@ -11,6 +11,8 @@
 .coffeelist {
     float: left;
     width: 200px;
+    margin: 10px;
+    margin-bottom: 18px;
 }
 
 .coffeelist>h3, p {
@@ -24,8 +26,17 @@
 
 p {
     color: gray;
+    margin-left: 4px;
 }
 
 .col-md-6 {
     height: 10px;
+}
+
+h2 {
+    text-align: center;
+}
+
+#add-coffee {
+    margin-bottom: 10px;
 }
