@@ -1,36 +1,8 @@
 "use strict"
+var tbody = document.querySelector('#coffees');
+var submitButton = document.querySelector('#submit');
+    var roastSelection = document.querySelector('#roast-selection');
 
-function renderCoffee(coffee) {
-    var html = '<tr class="coffee">';
-    html += '<td>' + coffee.id + '</td>';
-    html += '<td>' + coffee.name + '</td>';
-    html += '<td>' + coffee.roast + '</td>';
-    html += '</tr>';
-
-    return html;
-}
-
-function renderCoffees(coffees) {
-    var html = '';
-    for(var i = coffees.length - 1; i >= 0; i--) {
-        html += renderCoffee(coffees[i]);
-    }
-    return html;
-}
-
-function updateCoffees(e) {
-    e.preventDefault(); // don't submit the form, we just want to update the data
-    var selectedRoast = roastSelection.value;
-    var filteredCoffees = [];
-    coffees.forEach(function(coffee) {
-        if (coffee.roast === selectedRoast) {
-            filteredCoffees.push(coffee);
-        }
-    });
-    tbody.innerHTML = renderCoffees(filteredCoffees);
-}
-
-// from http://www.ncausa.org/About-Coffee/Coffee-Roasts-Guide
 var coffees = [
     {id: 1, name: 'Light City', roast: 'light'},
     {id: 2, name: 'Half City', roast: 'light'},
@@ -48,10 +20,56 @@ var coffees = [
     {id: 14, name: 'French', roast: 'dark'},
 ];
 
-var tbody = document.querySelector('#coffees');
-var submitButton = document.querySelector('#submit');
-var roastSelection = document.querySelector('#roast-selection');
+function renderCoffee(coffee) {
+    var html = '<div id="coffees">';
+    // html += '<span> <h3>' + coffee.id + '</h3></span>';
+    html += '<span><h3>' + coffee.name + " " +  coffee.roast +'</h3></span>';
+    // html += '<span>' + coffee.roast + '</span>';
+    html += '</div>';
+
+    return html;
+}
+
+function renderCoffees(coffees) {
+    var html = '';
+    for(var i = coffees.length - 1; i >= 0; i--) {
+        html += renderCoffee(coffees[i]);
+    }
+    return html;
+}
+// edit for the all/
+//for the search -- event called input that happens every time i input
+
+function updateCoffees(e) {
+    e.preventDefault(); // don't submit the form, we just want to update the data
+    var selectedRoast = roastSelection.value.toLowerCase();
+    var filteredCoffees = [];
+    coffees.forEach(function(coffee) {
+        if (coffee.roast === selectedRoast) {
+            filteredCoffees.push(coffee);
+        } else if (coffee.roast !== selectedRoast) {
+            //xxxxxxxxxxxxxxxxxxxxxxxx;
+        }
+    });
+    tbody.innerHTML = renderCoffees(filteredCoffees);
+}
+
+// from http://www.ncausa.org/About-Coffee/Coffee-Roasts-Guide
+
+
+
+
+// function filterItems(query) {
+//     return coffees.filter(function(el) {
+//         return el.toLowerCase().indexOf(query.toLowerCase()) > -1;
+//     })
+// };
+//
+// console.log(filterItems('cit'));
+// console.log(filterItems('eur'));
 
 tbody.innerHTML = renderCoffees(coffees);
 
-submitButton.addEventListener('click', updateCoffees);
+roastSelection.addEventListener('change', updateCoffees);
+
+

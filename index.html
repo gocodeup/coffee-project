@@ -2,33 +2,90 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title></title>
+    <title>Coffee Project</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
 </head>
 <body>
-    <h1>Coffee!</h1>
 
-    <form>
-        <label for="roast-selection"></label>
-        <select id="roast-selection">
-            <option>light</option>
-            <option>medium</option>
-            <option>dark</option>
-        </select>
-        <input id="submit" type="submit" />
-    </form>
 
-    <table>
-        <thead>
-            <tr>
-                <th>ID</th>
-                <th>NAME</th>
-                <th>ROAST</th>
-            </tr>
-        </thead>
-        <tbody id="coffees"></tbody>
-    </table>
+<div class="container">
+    <div class="panel panel-info">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="panel-title" ><h1 align="center">Coffee!</h1></div>
+            </div>
+        </div>
+        <hr>
+        <div class="row">
+            <div class="col-lg-6" id="coffees">
+                <!--interactive-->
+            </div>
 
-    <script src="main.js"></script>
+            <div class="col-lg-6" id="coffees">
+                <div class="panel-body">
+                    <div class="panel panel-default">
+                        <div class="panel panel-default">
+                            <form>
+                                <div class="panel-heading">Roast</div>
+                                <label for="roast-selection"></label>
+                                <select class="form-control" id="roast-selection">
+                                    <option>All</option>
+                                    <option>Light</option>
+                                    <option>Medium</option>
+                                    <option>Dark</option>
+                                </select>
+                            </form>
+                        </div>
+                        <br>
+
+                        <div class="panel-default">Coffee Name
+                            <input type="text" name="coffee" class="form-control" placeholder="">
+                        </div>
+                    </div>
+                </div>
+                <div class="panel-footer text-center">
+                    <button id="submit" class="btn btn-primary">
+                        Submit
+                        <span aria-hidden="true"></span>
+                    </button>
+                </div>
+                <hr>
+                <div class = "row">
+                    <div class = "col-lg-12">
+                        <div class="panel-body">
+                            <div class="panel panel-default">
+                                <div class="panel-heading"><h3 align="center" class="panel-title">Add a Coffee</h3></div>
+                                <div class="panel panel-default">
+                                    <form>
+                                        <div class="panel-heading">Roast</div>
+                                        <label for="roast-selection"></label>
+                                            <select class="form-control" id="#">
+                                                <option>All</option>
+                                                <option>Light</option>
+                                                <option>Medium</option>
+                                                <option>Dark</option>
+                                            </select>
+                                    </form>
+                                </div>
+                            </div>
+                                <div class="panel-default">Name
+                                    <input type="text" name="coffee" class="form-control" placeholder="">
+                                </div>
+                        </div>
+                        <div class="panel-footer text-center">
+                            <button class="btn btn-primary">
+                                Submit
+                                <span aria-hidden="true"></span>
+                            </button>
+                        </div>
+                        <br>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="main.js"></script>
 </body>
 </html>
