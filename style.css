@@ -11,6 +11,10 @@ td, th {
 .container {
     background-color: greenyellow;
     margin-top: 40px;
-};
+}
+
+.btn {
+    width: 100%;
+}
 
 #
