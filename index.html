@@ -2,33 +2,85 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title></title>
+    <title>Pick your Coffee</title>
     <link rel="stylesheet" href="style.css">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
 </head>
 <body>
-    <h1>Coffee!</h1>
 
-    <form>
-        <label for="roast-selection"></label>
-        <select id="roast-selection">
-            <option>light</option>
-            <option>medium</option>
-            <option>dark</option>
-        </select>
-        <input id="submit" type="submit" />
-    </form>
+    <div class="container">
+        <h1 class="text-center">Coffee</h1>
+        <hr>
 
-    <table>
-        <thead>
-            <tr>
-                <th>ID</th>
-                <th>NAME</th>
-                <th>ROAST</th>
-            </tr>
-        </thead>
-        <tbody id="coffees"></tbody>
-    </table>
+        <div class="row">
+
+            <div id="coffees" class="col-md-6"></div>
+
+            <div class="col-md-6">
+                <form role="form">
+                    <div class="form-group">
+                        <label for="roast-selection">Roast</label>
+                        <select class="form-control" id="roast-selection" name="roast">
+                            <option value="all" selected>All</option>
+                            <option value="light">light</option>
+                            <option value="medium">medium</option>
+                            <option value="dark">dark</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="roast-name">Coffee Name</label>
+                        <input id="roast-name" type="text" class="form-control">
+                    </div>
+
+                </form>
+                <hr>
+                <h1 class="text-center">Add a Coffee</h1>
+                <form class="coffees" role="form">
+                    <div class="form-group">
+                        <label for="add-coffee">Roast</label>
+                        <select class="form-control" id="add-coffee" name="roast">
+                            <option selected>Select your roast</option>
+                            <option value="light">light</option>
+                            <option value="medium">medium</option>
+                            <option value="dark">dark</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="coffee-name">Coffee Name</label>
+                        <input type="text" class="form-control" id="coffee-name">
+                    </div>
+                    <button type="submit" id="submit" class="btn btn-primary center-block">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!--<form>-->
+        <!--<label for="roast-selection"></label>-->
+        <!--<select id="roast-selection">-->
+            <!--<option>light</option>-->
+            <!--<option>medium</option>-->
+            <!--<option>dark</option>-->
+        <!--</select>-->
+        <!--<input id="submit" type="submit" />-->
+    <!--</form>-->
+
+    <!--<table>-->
+        <!--<thead>-->
+        <!--<tr>-->
+            <!--<th>ID</th>-->
+            <!--<th>NAME</th>-->
+            <!--<th>ROAST</th>-->
+        <!--</tr>-->
+        <!--</thead>-->
+        <!--<tbody id="coffees"></tbody>-->
+    <!--</table>-->
 
     <script src="main.js"></script>
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 </body>
 </html>
