@@ -3,32 +3,46 @@
 <head>
     <meta charset="UTF-8">
     <title></title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous" />
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+<div class="container">
     <h1>Coffee!</h1>
 
+    <div class="col-sm-6">
     <form>
         <label for="roast-selection"></label>
         <select id="roast-selection">
             <option>light</option>
             <option>medium</option>
             <option>dark</option>
+            <option>all</option>
         </select>
         <input id="submit" type="submit" />
     </form>
+    <form>
+        Coffee Name:<br>
+        <input id="coffeename" type="text" name="coffeename"><br>
+    </form>
+    </div>
+    <div class="col-sm-6">
+       <div id="coffeetypes"></div>
+    </div>
+</div>
 
-    <table>
-        <thead>
-            <tr>
-                <th>ID</th>
-                <th>NAME</th>
-                <th>ROAST</th>
-            </tr>
-        </thead>
-        <tbody id="coffees"></tbody>
-    </table>
-
-    <script src="main.js"></script>
+<!--<table>-->
+<!--<thead>-->
+<!--<tr>-->
+<!--<th>ID</th>-->
+<!--<th>NAME</th>-->
+<!--<th>ROAST</th>-->
+<!--</tr>-->
+<!--</thead>-->
+<!--<tbody id="coffees"></tbody>-->
+<!--</table>-->
+<script src="//code.jquery.com/jquery-2.2.4.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<script src="main.js"></script>
 </body>
 </html>
