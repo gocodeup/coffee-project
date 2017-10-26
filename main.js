@@ -12,7 +12,7 @@ function renderCoffee(coffee) {
 
 function renderCoffees(coffees) {
     var html = '';
-    for(var i = coffees.length - 1; i >= 0; i--) {
+    for(var i = 0; i <= coffees.length - 1; i++) {
         html += renderCoffee(coffees[i]);
     }
     return html;
@@ -23,12 +23,27 @@ function updateCoffees(e) {
     var selectedRoast = roastSelection.value;
     var filteredCoffees = [];
     coffees.forEach(function(coffee) {
+        if (selectedRoast === "all" ){
+            filteredCoffees.push(coffee)
+        }
+
         if (coffee.roast === selectedRoast) {
             filteredCoffees.push(coffee);
         }
     });
     tbody.innerHTML = renderCoffees(filteredCoffees);
 }
+
+// function returnSelected(){
+// if (coffeeFromText === coffees.name[]){
+//     return fileredCoffees.push(coffees)
+// }
+// }
+
+
+
+
+
 
 // from http://www.ncausa.org/About-Coffee/Coffee-Roasts-Guide
 var coffees = [
@@ -51,9 +66,16 @@ var coffees = [
 var tbody = document.querySelector('#coffees');
 var submitButtonFilter = document.querySelector('#filterBtn');
 var roastSelection = document.querySelector('#roast-selection');
+var coffeeFromText = document.querySelector('#text')
+
+
 
 tbody.innerHTML = renderCoffees(coffees);
 
 submitButtonFilter.addEventListener('click', updateCoffees);
 
-test
+coffeeFromText.addEventListener('input', returnSelected)
+
+
+
+
