@@ -7,3 +7,30 @@ td, th {
     border: 1px solid black;
     padding: 5px 10px;
 }
+
+.name {
+    /*float: left;*/
+    margin-right: 10px;
+    font-size: 22px;
+    font-weight: bold;
+
+}
+.roast {
+    font-size: 15px;
+    color: lightgrey;
+    font-weight: normal;
+
+    /*float: right;*/
+
+
+}
+
+.Title {
+    text-align: center;
+}
+
+body {
+    margin:0 auto;
+    max-width: 75em;
+
+}
