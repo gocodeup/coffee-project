@@ -1,7 +1,10 @@
 "use strict"
 var tbody = document.querySelector('#coffees');
 var submitButton = document.querySelector('#submit');
-    var roastSelection = document.querySelector('#roast-selection');
+var roastSelection = document.querySelector('#roast-selection');
+// var coffeeText = document.querySelector("#coffeename");
+var coffeeInput = document.querySelector("#coffeeInput")
+
 
 var coffees = [
     {id: 1, name: 'Light City', roast: 'light'},
@@ -40,22 +43,25 @@ function renderCoffees(coffees) {
 // edit for the all/
 //for the search -- event called input that happens every time i input
 
+
+
 function updateCoffees(e) {
     e.preventDefault(); // don't submit the form, we just want to update the data
     var selectedRoast = roastSelection.value.toLowerCase();
     var filteredCoffees = [];
-    coffees.forEach(function(coffee) {
+    coffees.forEach(function (coffee) {
         if (coffee.roast === selectedRoast) {
             filteredCoffees.push(coffee);
-        } else if (coffee.roast !== selectedRoast) {
-            //xxxxxxxxxxxxxxxxxxxxxxxx;
+            tbody.innerHTML = renderCoffees(filteredCoffees);
+        }
+
+        if(selectedRoast == "all"){
+            tbody.innerHTML = renderCoffees(coffees);
         }
     });
-    tbody.innerHTML = renderCoffees(filteredCoffees);
+
+    //     filterItems(coffeeName);
 }
-
-// from http://www.ncausa.org/About-Coffee/Coffee-Roasts-Guide
-
 
 
 
@@ -64,9 +70,13 @@ function updateCoffees(e) {
 //         return el.toLowerCase().indexOf(query.toLowerCase()) > -1;
 //     })
 // };
-//
+
+
+
 // console.log(filterItems('cit'));
 // console.log(filterItems('eur'));
+
+
 
 tbody.innerHTML = renderCoffees(coffees);
 
