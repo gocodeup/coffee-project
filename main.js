@@ -1,7 +1,7 @@
 "use strict"
 var tbody = document.querySelector('#coffees');
 var submitButton = document.querySelector('#submit');
-var roastSelection = document.querySelector('#roast-selection');
+    var roastSelection = document.querySelector('#roast-selection');
 
 var coffees = [
     {id: 1, name: 'Light City', roast: 'light'},
@@ -22,9 +22,9 @@ var coffees = [
 
 function renderCoffee(coffee) {
     var html = '<div id="coffees">';
-    html += '<div>' + coffee.id + '</div>';
-    html += '<div>' + coffee.name + '</div>';
-    html += '<div>' + coffee.roast + '</div>';
+    // html += '<span> <h3>' + coffee.id + '</h3></span>';
+    html += '<span><h3>' + coffee.name + " " +  coffee.roast +'</h3></span>';
+    // html += '<span>' + coffee.roast + '</span>';
     html += '</div>';
 
     return html;
@@ -37,14 +37,18 @@ function renderCoffees(coffees) {
     }
     return html;
 }
+// edit for the all/
+//for the search -- event called input that happens every time i input
 
 function updateCoffees(e) {
     e.preventDefault(); // don't submit the form, we just want to update the data
-    var selectedRoast = roastSelection.value;
+    var selectedRoast = roastSelection.value.toLowerCase();
     var filteredCoffees = [];
     coffees.forEach(function(coffee) {
         if (coffee.roast === selectedRoast) {
             filteredCoffees.push(coffee);
+        } else if (coffee.roast !== selectedRoast) {
+            //xxxxxxxxxxxxxxxxxxxxxxxx;
         }
     });
     tbody.innerHTML = renderCoffees(filteredCoffees);
@@ -66,6 +70,6 @@ function updateCoffees(e) {
 
 tbody.innerHTML = renderCoffees(coffees);
 
-submitButton.addEventListener('click', updateCoffees);
+roastSelection.addEventListener('change', updateCoffees);
 
 
