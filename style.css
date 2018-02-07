@@ -8,7 +8,7 @@ td, th {
     padding: 5px 10px;
 }
 
-p,h1{
+p,h2{
     display: inline;
 }
 
@@ -38,4 +38,7 @@ select  {
 
 .btn{
     width: 100%;
+}
+.inlinediv{
+    display: inline;
 }
