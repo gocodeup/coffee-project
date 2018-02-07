@@ -6,53 +6,66 @@
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css?family=Indie+Flower" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat+Alternates:400,700" rel="stylesheet">
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 </head>
 <body>
 <header class="col-lg-12 col-md-12 col-sm-12">
     <div class="header-image col-sm-5 col-md-5 col-lg-5">
-        <div class="col-lg-2 col-md-2 col-sm-2 col-sm-offset-8 col-md-offset-8 col-lg-offset-8">
+        <div class="col-lg-2 col-md-2 col-sm-2 col-sm-offset-9 col-md-offset-9 col-lg-offset-9">
             <img src="images/coffee-gif.gif"/>
         </div>
     </div>
     <div class="col-sm-7 col-md-7 col-lg-7"><h1 class="main-heading">Coffee!</h1></div>
 </header>
 <main>
-    <div class="container">
+    <div class="container-fluid">
         <div class="row">
             <div class="col-sm-6 col-md-6 col-lg-6">
                 <div id="coffees"></div>
             </div>
             <div class="col-sm-6 col-md-6 col-lg-6">
-                <form>
-                    <label for="roast-selection">Roast</label> <!-- Watch this section -->
-                    <select id="roast-selection" onchange="updateCoffees(value)">
-                        <option value='all' selected>all</option>
-                        <option value="light">light</option>
-                        <option value="medium">medium</option>
-                        <option value="dark">dark</option>
-                    </select>
-                    <label for="coffee-search">Coffee Name</label>
-                    <input id="coffee-search" value='' type="text" onkeyup="searchCoffees(value)">
-                    <input id="submit" type="submit" />
-                </form>
+                <form class="top-form">
+                    <div class="form-group">
+                        <label for="roast-selection">Roast</label> <!-- Watch this section -->
+                        <select id="roast-selection" class="select-color form-control" onchange="updateCoffees(value)">
+                            <option value='all' selected>all</option>
+                            <option value="light">light</option>
+                            <option value="medium">medium</option>
+                            <option value="dark">dark</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="coffee-search">Coffee Name</label>
+                        <input id="coffee-search" class="form-spacing form-control" value='' type="text" onkeyup="searchCoffees(value)">
+                    </div>
+                        <button type="button" class="btn btn-default btn-lg btn-block">Submit</button>
 
+                </form>
                 <form>
-                    <label for="add-coffee-roast-select">Roast</label>
-                    <select id="add-coffee-roast-select">
-                        <option value="light">light</option>
-                        <option value="medium">medium</option>
-                        <option value="dark">dark</option>
-                    </select>
-                    <label for="add-coffee-name">Name</label>
-                    <input id="add-coffee-name" value='' type="text">
-                    <button id="add-coffee" type="button" onclick="addCoffee()">Submit</button>
+                    <h2 class="add-coffee-title">ADD COFFEE</h2>
+                    <div class="form-group">
+                        <label for="add-coffee-roast-select">Roast</label>
+                        <select id="add-coffee-roast-select" class="select-color form-control">
+                            <option value="light">light</option>
+                            <option value="medium">medium</option>
+                            <option value="dark">dark</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="add-coffee-name">Name</label>
+                        <input id="add-coffee-name" class="form-control" value='' type="text">
+                    </div>
+
+                        <button id="add-coffee" type="button" class="btn btn-default btn-lg btn-block" onclick="addCoffee()">Submit</button>
+
                 </form>
             </div>
         </div>
     </div>
 </main>
+<footer></footer>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
     <script src="main.js"></script>

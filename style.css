@@ -1,10 +1,16 @@
+.select-color, button {
+    background-color: #f5f4e3 !important;
+}
 header {
     width: 100%;
     /*clear: both;*/
     background-color: #f5f4e3;
+    border-top: 0.1em solid #444;
+    border-bottom: 0.1em solid #777;
+    box-shadow: 0 0 15px #333;
 }
 .main-heading {
-    font-size: 8em;
+    font-size: 6em;
     font-family: 'Lobster', cursive, sans-serif;
     float: left;
     vertical-align: middle;
@@ -14,18 +20,49 @@ header {
     /*height: 1em !important;*/
 }
 header img {
-    width: 150px;
+    width: 120px;
 }
 body {
     width: 100%;
-    background-image: url("images/coffe-beans.jpg");
+    background-image: url("images/coffe-beans-light.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 }
 main {
     width: 100%;
-    padding: 0em 10% 0em 10%;
-    margin-top: 3em;
+    padding: 0 4% 0 0;
+    margin-top: 2em;
 }
 li {
     list-style: none;
     float: left;
+}
+.form-spacing {
+    margin-bottom: 1.5em;
+}
+.top-form {
+    margin-top: 1.5em;
+}
+.add-coffee-title {
+    margin: 1em 0 .5em 0;
+    font-family: 'Lobster', cursive, sans-serif;
+    border-bottom: 0.08em solid #555;
+}
+footer {
+    width: 100%;
+    height: 6em;
+    margin-top: 2em;
+    background-color: #f5f4e3;
+    border-top: 0.1em solid #444;
+    box-shadow: 0 0 15px #333;
+}
+input[type="text"], textarea, select {
+    background-color: #f5f4e3;
+}
+.list-font, label {
+    font-family: 'Montserrat Alternates', sans-serif, sans-serif;
+    font-weight: 700;
+}
+label {
+    font-size: 2em;
 }

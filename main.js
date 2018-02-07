@@ -2,7 +2,7 @@
 
 function renderCoffee(coffee) {
     var html = '<ul class="coffee">';
-    html += '<li class="table-style col-sm-6 col-md-6 col-lg-6"><h2>' + coffee.name + ' <small>';
+    html += '<li class="list-font col-sm-6 col-md-6 col-lg-6"><h2 class="list-font">' + coffee.name + ' <small>';
     html += coffee.roast + '</small></h2></li></ul>';
     return html;
 }
