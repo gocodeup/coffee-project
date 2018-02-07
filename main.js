@@ -40,7 +40,6 @@ function updateCoffees(e) {
                 console.log("error");
             }
         }
-
     });
 
     tbody.innerHTML = renderCoffees(filteredCoffees);
@@ -50,7 +49,7 @@ function updateCoffees(e) {
 
 //___---_---_--_--_-_--_--_--this function updates the select option without pressing submit--_--_----_-__-_
 
-function choiceSelect( ) {
+function choiceSelect() {
 // var form = document.getElementById("input").value.toLowerCase();
 var selectedRoast = roastSelection.value;
 var filteredCoffees = [];
@@ -69,6 +68,34 @@ coffees.forEach(function(coffee) {
 tbody.innerHTML = renderCoffees(filteredCoffees);
 
 }
+
+function interactiveKey() {
+    var form = document.getElementById("input").value.toLowerCase();
+    var selectedRoast = roastSelection.value;
+    var filteredCoffees = [];
+    coffees.forEach(function(coffee) {
+        var lowerCoffee = coffee.name;
+        lowerCoffee = lowerCoffee.toLowerCase();
+        if (lowerCoffee.indexOf(form) !== -1 && selectedRoast === "all") {
+            filteredCoffees.push(coffee);
+        }
+        else {
+            if (coffee.roast === selectedRoast && form === "") {
+                filteredCoffees.push(coffee);
+            }
+            else if (lowerCoffee.indexOf(form) !== -1 && coffee.roast === selectedRoast) {
+                filteredCoffees.push(coffee);
+            } else {
+                console.log("error");
+            }
+        }
+
+    });
+
+    tbody.innerHTML = renderCoffees(filteredCoffees);
+
+}
+
 
 // from http://www.ncausa.org/About-Coffee/Coffee-Roasts-Guide
 var coffees = [
