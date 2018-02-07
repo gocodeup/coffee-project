@@ -10,25 +10,23 @@
 
     <form>
         <label for="roast-selection"></label>
-        <select id="roast-selection">
+        <select id="roast-selection" onchange="choiceSelect()">
+            <option>all</option>
             <option>light</option>
             <option>medium</option>
             <option>dark</option>
         </select>
+        <input id="input" onkeyup="interactiveKey()" type="text" autofocus placeholder="Enter coffee here!">
         <input id="submit" type="submit" />
     </form>
 
-    <table>
-        <thead>
-            <tr>
-                <th>ID</th>
-                <th>NAME</th>
-                <th>ROAST</th>
-            </tr>
-        </thead>
-        <tbody id="coffees"></tbody>
-    </table>
+
+
+<div id="coffees">
+</div>
+
 
     <script src="main.js"></script>
 </body>
 </html>
+
