@@ -12,16 +12,6 @@ function renderCoffee(coffee) {
     return html;
 }
 
-//
-// function renderCoffee(coffee) {
-//     var html = '<tr class="coffee">';
-//     html += '<td>' + coffee.id + '</td>';
-//     html += '<td>' + coffee.name + '</td>';
-//     html += '<td>' + coffee.roast + '</td>';
-//     html += '</tr>';
-//
-//     return html;
-// }
 
 function renderCoffees(coffees) {
     var html = '';
@@ -94,15 +84,36 @@ function nameSearch (){
     }
 }
 
+
+
+
+
+
+
+function addNewCoffee(){
+    var newCoffeeRoast = document.getElementById('newRoast');
+    var newCoffeeName = document.getElementById('newCoffeeName');
+    var newCoffee = {
+        name:newCoffeeName.value,
+        roast:newCoffeeRoast.value
+    };
+    coffees.push(newCoffee);
+    tbody.innerHTML = renderCoffees(coffees);
+
+
+}
+
 var tbody = document.querySelector('#coffees');
 var submitButton = document.querySelector('#submit');
 var roastSelection = document.querySelector('#roast-selection');
 var nameSelection = document.querySelector('#name-selection');
+var newCoffeeButton = document.querySelector('#newCoffeeButton');
 
 tbody.innerHTML = renderCoffees(coffees);
 
 roastSelection.addEventListener('change', updateCoffees);
 nameSelection.addEventListener('keyup',nameSearch);
+newCoffeeButton.addEventListener('click', addNewCoffee);
 
 
 
