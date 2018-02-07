@@ -5,8 +5,8 @@
 function renderCoffee(coffee) {
     var html = '<tr class="coffee">';
     // html += '<td>' + coffee.id + '</td>';
-    html += '<div class = \'inlinediv col-lg-6 bottom\'>' + '<h2>' + coffee.name + '</h2>';
-    html += '<p>'+ coffee.roast +'</p>'+ '</div>';
+    html += '<div class = \'inlinediv col-xs-6 bottom\'>' + '<h2>' + coffee.name + '</h2>';
+    html += '<p id=\'grey\'>' + coffee.roast +'</p>'+ '</div>';
     // html += '</tr>';
 
     return html;
@@ -23,7 +23,6 @@ function renderCoffees(coffees) {
 }
 
 function updateCoffees(e) {
-    // e.preventDefault(); // don't submit the form, we just want to update the data
     var selectedRoast = roastSelection.value;
     var filteredCoffees = [];
     coffees.forEach(function(coffee) {

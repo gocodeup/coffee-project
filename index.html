@@ -9,13 +9,15 @@
 </head>
 <body>
 
-<div class="container">
-    <h1 class="center-block text-center">Coffee!</h1>
 
-    <hr>
+    <div class="jumbotron">
+    <h1 class="center-block text-center" id="coffeeH1">Coffee!</h1>
+        </div>
+    <div class="container">
+    <hr id="topHR">
 
 
-     <div class="col-lg-6">
+     <div class="col-xs-6">
 
             <div class="row">
                 <div id="coffees">
@@ -27,7 +29,7 @@
 
 
 
-     <div class="col-lg-6">
+     <div class="col-xs-6">
          <div class="row bottom">
              <p>Roast</p>
              <select id="roast-selection">
@@ -46,7 +48,7 @@
          </div>
 
          <div class="row bottom">
-             <button class="btn btn-primary" id="submit">Submit</button>
+             <button class="btn btn-success" id="submit">Submit</button>
          </div>
 
 
@@ -67,12 +69,12 @@
         <div class="row bottom">
             <p>Coffee Name</p>
             <div class="input-group bottom">
-                <input type="text" class="form-control" id="newCoffeeName">
+                <input type="text" class="form-control" id="newCoffeeName" placeholder="Enter coffee name...">
             </div>
         </div>
 
         <div class="row bottom">
-            <button id="newCoffeeButton" class="btn btn-primary">Submit</button>
+            <button id="newCoffeeButton" class="btn btn-success">Submit</button>
         </div>
     </div>
 

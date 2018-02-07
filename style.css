@@ -1,21 +1,38 @@
-table {
-    border-collapse: collapse;
-    margin: 15px 0;
-}
 
-td, th {
-    border: 1px solid black;
-    padding: 5px 10px;
-}
+
+
+@import url('https://fonts.googleapis.com/css?family=Lobster');
+
 
 p,h2{
     display: inline;
 }
 
-p{
+h2{
+    font-size:2.3vw;
+    color: black;
+}
+
+#coffeeH1{
+    font-size: 8vw;
+}
+
+.jumbotron{
+    width: 100%;
+    background-image: url(img/beans.png);
+    color: white;
+    font-family: lobster, sans-serif;
+    height: 225px;
+}
+
+
+div p{
     color: grey;
 }
 
+#topHR{
+    margin-bottom: 2%;
+}
 
 select  {
     width: 100%;
@@ -34,6 +51,11 @@ select  {
 .bottom p{
     color: black;
     font-weight: bold;
+}
+
+#grey{
+    color: grey;
+    margin-left: 5px;
 }
 
 .btn{
