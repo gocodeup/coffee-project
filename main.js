@@ -5,7 +5,7 @@
 function renderCoffee(coffee) {
     var html = '<div class="coffee">';
     html += '<h2 class="coffee-name">' + coffee.name + '</h2>';
-    html += '<h3 class="roast-type">' + coffee.roast + '</h3>';
+    html += '<p class="roast-type">' + coffee.roast + '</p>';
     html += '</div>';
 
     return html;
@@ -20,8 +20,11 @@ function renderCoffees(coffees) {
     return html;
 }
 
+
+
 function updateCoffees(e) {
     e.preventDefault(); // don't submit the form, we just want to update the data
+
     var selectedRoast = roastSelection.value;
     var filteredCoffees = [];
     coffees.forEach(function(coffee) {
@@ -29,8 +32,11 @@ function updateCoffees(e) {
             filteredCoffees.push(coffee);
         }
     });
+
     coffeeDisplay.innerHTML = renderCoffees(filteredCoffees);
 }
+
+
 
 // from http://www.ncausa.org/About-Coffee/Coffee-Roasts-Guide
 var coffees = [
@@ -55,18 +61,27 @@ var coffeeDisplay = document.querySelector('#coffee-render-location');
 var submitButton = document.querySelector('#submit');
 var roastSelection = document.querySelector('#roast-selection');
 
+
+
 coffeeDisplay.innerHTML = renderCoffees(coffees);
 
 submitButton.addEventListener('click', updateCoffees);
 
+
+
+//Uses user input to search for coffee by coffee.name in real time.
 var searchField = document.getElementById("search-input");
+
+
 
 searchField.addEventListener('keyup', function () {
     var searchInput = document.getElementById('search-input').value.toLowerCase();
+    var filteredResults = [];
     coffees.forEach(function(coffee){
         var lowerCaseCoffeeName = coffee.name.toLowerCase();
         if (lowerCaseCoffeeName.includes(searchInput)){
-           console.log(lowerCaseCoffeeName);
+            filteredResults.push(coffee);
+            coffeeDisplay.innerHTML = renderCoffees(filteredResults);
         }
     });
 });
