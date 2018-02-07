@@ -35,7 +35,6 @@ function updateCoffees() {
     });
 
     coffeeDisplay.innerHTML = renderCoffees(filteredCoffees);
-    console.log(filteredCoffees);
     return filteredCoffees;
 }
 
@@ -88,17 +87,21 @@ searchField.addEventListener('keyup', function () {
     });
 });
 
-function addCoffee(input) {
+function addCoffee() {
     var newCoffee = document.getElementById("add-coffee").value;
     var newRoast = document.getElementById("roast-type").value;
-    var newCoffeeType = {
-        id: coffees.length,
-        name: newCoffee,
-        roast: newRoast
-    };
-    coffees.push(newCoffeeType);
-    updateCoffees();
-    console.log(coffees);
+    if (newCoffee === ''){
+        alert('Add a name for your coffee');
+    } else {
+        var newCoffeeType = {
+            id: coffees.length,
+            name: newCoffee,
+            roast: newRoast
+        };
+        coffees.push(newCoffeeType);
+        updateCoffees();
+
+    }
 }
 document.getElementById("coffee-btn").addEventListener("click", addCoffee);
 
