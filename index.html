@@ -9,19 +9,35 @@
     <h1>Coffee!</h1>
 
     <form>
-        <label for="roast-selection"></label>
-        <select id="roast-selection">
-            <option>light</option>
-            <option>medium</option>
-            <option>dark</option>
+        <label for="roast-selection">Roast</label> <!-- Watch this section -->
+        <select id="roast-selection" onchange="updateCoffees(value)">
+            <option value='all' selected>all</option>
+            <option value="light">light</option>
+            <option value="medium">medium</option>
+            <option value="dark">dark</option>
         </select>
         <input id="submit" type="submit" />
+
+        <label for="coffee-search">Coffee Name</label>
+        <input id="coffee-search" value='' type="text" onkeyup="searchCoffees(value)">
+    </form>
+
+    <form>
+        <label for="add-coffee-roast-select">Roast</label>
+        <select id="add-coffee-roast-select">
+            <option value="light">light</option>
+            <option value="medium">medium</option>
+            <option value="dark">dark</option>
+        </select>
+        <label for="add-coffee-name">Name</label>
+        <input id="add-coffee-name" value='' type="text">
+        <button id="add-coffee" type="button" onclick="addCoffee()">Submit</button>
     </form>
 
     <table>
         <thead>
             <tr>
-                <th>ID</th>
+                <!--<th>ID</th>-->
                 <th>NAME</th>
                 <th>ROAST</th>
             </tr>
