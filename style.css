@@ -7,3 +7,35 @@ td, th {
     border: 1px solid black;
     padding: 5px 10px;
 }
+
+p,h1{
+    display: inline;
+}
+
+p{
+    color: grey;
+}
+
+
+select  {
+    width: 100%;
+    background-color: white;
+    height: 32px;
+}
+
+.input-group{
+    width: 100%;
+}
+
+.bottom{
+    margin-bottom: 25px;
+}
+
+.bottom p{
+    color: black;
+    font-weight: bold;
+}
+
+.btn{
+    width: 100%;
+}
