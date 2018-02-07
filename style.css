@@ -11,3 +11,24 @@ h1 {
     text-align: center;
     border-bottom: 3px solid grey;
 }
+
+/*GRID SETUP*/
+    .grid-container {
+        display: grid;
+        grid-template-columns: 60% 40%;
+    }
+
+    .grid-item1 {
+        grid-column-start: ;
+
+    }
+
+    .grid-item2 {
+        grid-column-start: 1;
+
+    }
+
+    .grid-item3 {
+        grid-column-start: 1;
+
+    }
