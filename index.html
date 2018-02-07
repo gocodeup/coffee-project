@@ -6,8 +6,8 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Coffee Selector :)</h1>
-
+    <h1 id="main-header">Coffee Selector :)</h1>
+    <!--<button id="main-header-btn">CLICK FOR CHANGE</button>-->
     <form>
         <label for="roast-selection"></label>
         <select id="roast-selection">
@@ -15,12 +15,17 @@
             <option>medium</option>
             <option>dark</option>
         </select>
+        <p>Coffee Name:</p><input type="text" name="search"><br>
         <input id="submit" type="submit" />
     </form>
 
 
-    <div class="coffee"></div>
 
+
+
+
+
+    <!--<div class="coffee"></div>-->
         <!--<table>-->
             <!--<thead>-->
                 <!--<tr>-->
@@ -31,6 +36,12 @@
             <!--</thead>-->
             <!--<tbody id="coffees"></tbody>-->
         <!--</table>-->
+
+    <div id="coffees">
+        <h1>NAME</h1>
+        <p>ROAST</p>
+    </div>
+
 
     <script src="main.js"></script>
 </body>
