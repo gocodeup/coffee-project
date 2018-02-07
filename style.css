@@ -7,3 +7,33 @@ td, th {
     border: 1px solid black;
     padding: 5px 10px;
 }
+header {
+    width: 100%;
+    /*clear: both;*/
+    background-color: #f5f4e3;
+}
+.main-heading {
+    font-size: 8em;
+    font-family: 'Lobster', cursive, sans-serif;
+    float: left;
+    vertical-align: middle;
+    line-height: 2em;
+    padding: 0;
+    margin: 0;
+    /*height: 1em !important;*/
+}
+header img {
+    width: 150px;
+}
+body {
+    width: 100%;
+    background-image: url("images/coffe-beans.jpg");
+}
+main {
+    width: 100%;
+    padding: 0em 10% 0em 10%;
+    margin-top: 3em;
+}
+.table-style {
+    border: 0;
+}
