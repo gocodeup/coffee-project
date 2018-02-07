@@ -3,32 +3,54 @@
 <head>
     <meta charset="UTF-8">
     <title></title>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+          integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
+
 </head>
 <body>
     <h1>Coffee!</h1>
+    <div class="grid-container">
+        <div class="grid-item1">
+            <form>
+                <label for="roast-selection"></label>
+                Roast<select id="roast-selection">
+                    <option>light</option>
+                    <option>medium</option>
+                    <option>dark</option>
+                </select>
+                Coffee Name<input type="text" name="coffeeSelect">
+                <input id="submit" type="submit" />
+            </form>
+        </div>
+        <div class="grid-item2">
+            <h3>Add Coffee</h3>
 
-    <form>
-        <label for="roast-selection"></label>
-        <select id="roast-selection">
-            <option>light</option>
-            <option>medium</option>
-            <option>dark</option>
-        </select>
-        <input id="submit" type="submit" />
-    </form>
-
-    <table>
-        <thead>
-            <tr>
-                <th>ID</th>
-                <th>NAME</th>
-                <th>ROAST</th>
-            </tr>
-        </thead>
-        <tbody id="coffees"></tbody>
-    </table>
-
+            <form>
+                <label for="roast-selection"></label>
+                Roast<select id="roast-selection">
+                <option>light</option>
+                <option>medium</option>
+                <option>dark</option>
+            </select>
+                Coffee Name<input type="text" name="CoffeeAdd">
+                <input id="submit" type="submit" />
+            </form>
+        </div>
+        <div class="grid-item3">
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>NAME</th>
+                        <th>ROAST</th>
+                    </tr>
+                </thead>
+                <tbody id="coffees"></tbody>
+            </table>
+        </div>
+    </div>
     <script src="main.js"></script>
 </body>
 </html>
