@@ -58,3 +58,18 @@ var roastSelection = document.querySelector('#roast-selection');
 coffeeDisplay.innerHTML = renderCoffees(coffees);
 
 submitButton.addEventListener('click', updateCoffees);
+
+var searchField = document.getElementById("search-input");
+
+searchField.addEventListener('keyup', function () {
+    var searchInput = document.getElementById('search-input').value.toLowerCase();
+    coffees.forEach(function(coffee){
+        var lowerCaseCoffeeName = coffee.name.toLowerCase();
+        if (lowerCaseCoffeeName.includes(searchInput)){
+           console.log(lowerCaseCoffeeName);
+        }
+    });
+});
+
+
+
