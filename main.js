@@ -16,27 +16,49 @@ function renderCoffees(coffees) {
     }
     return html;
 }
-
 function updateCoffees(e) {
     e.preventDefault(); // don't submit the form, we just want to update the data
-    var selectedRoast = roastSelection.value;
     var form = document.getElementById("input").value.toLowerCase();
+    var selectedRoast = roastSelection.value;
     var filteredCoffees = [];
     coffees.forEach(function(coffee) {
-        if (coffee.roast === selectedRoast && !form) {
+        var lowerCoffee = coffee.name;
+        lowerCoffee = lowerCoffee.toLowerCase();
+        if (lowerCoffee.indexOf(form) !== -1 && selectedRoast === "all") {
             filteredCoffees.push(coffee);
         }
-        if (coffee.name == form) {
-            filteredCoffees = [];
-            filteredCoffees.push(coffee);
+        else {
+            if (coffee.roast === selectedRoast && form === "") {
+                filteredCoffees.push(coffee);
+            }
+            else if (lowerCoffee.indexOf(form) !== -1 && coffee.roast === selectedRoast) {
+                filteredCoffees.push(coffee);
+            } else {
+                console.log("error");
+            }
         }
+
     });
-    // if (selectedRoast === "all") {
-    //     tbody.innerHTML = renderCoffees(coffees);
-    // }
-    // else {
-        tbody.innerHTML = renderCoffees(filteredCoffees);
-    //}
+
+    tbody.innerHTML = renderCoffees(filteredCoffees);
+
+}
+
+
+function searchCoffees() {
+    event.preventDefault();
+    coffees.forEach(function(coffee){
+        var userInput = document.getElementById("input").value.toLowerCase();
+        var casedCoffeeName = coffee.name.toLowerCase();
+        console.log(coffee.name);
+        console.log(casedCoffeeName.indexOf(userInput));
+
+    });
+}
+
+function myFunction(e) {
+    var x = document.getElementById("roast-selection").value;
+    document.getElementById("coffees").innerHTML = x;
 }
 
 // from http://www.ncausa.org/About-Coffee/Coffee-Roasts-Guide
@@ -63,7 +85,9 @@ var roastSelection = document.querySelector('#roast-selection');
 
 tbody.innerHTML = renderCoffees(coffees);
 
+// submitButton.addEventListener('click', updateCoffees);
 submitButton.addEventListener('click', updateCoffees);
+//form.addEventListener('keydown', updateCoffees);
 
 //
 // "use strict"
