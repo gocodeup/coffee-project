@@ -1,12 +1,3 @@
-table {
-    border-collapse: collapse;
-    margin: 15px 0;
-}
-
-td, th {
-    border: 1px solid black;
-    padding: 5px 10px;
-}
 header {
     width: 100%;
     /*clear: both;*/
@@ -34,6 +25,7 @@ main {
     padding: 0em 10% 0em 10%;
     margin-top: 3em;
 }
-.table-style {
-    border: 0;
+li {
+    list-style: none;
+    float: left;
 }
