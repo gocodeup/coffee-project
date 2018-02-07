@@ -1,9 +1,7 @@
-table {
-    border-collapse: collapse;
-    margin: 15px 0;
+html {
+    font-family: Roboto, sans-serif;
 }
 
-td, th {
-    border: 1px solid black;
-    padding: 5px 10px;
+.coffee {
+    margin: 8px 0;
 }
