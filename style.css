@@ -11,15 +11,17 @@
 /*TOP OF SCREEN*/
 h1 {
     text-align: center;
-    color: firebrick;
+    color: white;
     text-decoration: underline;
 }
 
 body {
     width: 95%;
     margin: 0 auto;
-}
+    background: linear-gradient(rgba(141,153,174, .3), rgba(141,153,174, .3)), url("img/coffee_beans.jpg") no-repeat;
+    background-size: cover;
 
+}
 
 
 /*LEFT SIDE OF SCREEN*/
@@ -29,7 +31,7 @@ body {
 }
 
 .coffee-name {
-    color: brown;
+    color: white;
 }
 
 
