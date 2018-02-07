@@ -2,83 +2,51 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title></title>
+    <title>Coffee Project</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
 </head>
-<body>
-    <h1>Coffee!</h1>
+<body class="grey lighten-4">
+<div class="row">
+    <nav>
+        <div class="nav-wrapper grey darken-4">
+            <a href="#" class="brand-logo center">Dark Side Coffee</a>
+        </div>
+    </nav>
+</div>
+<div class="container">
+    <div class="row">
+        <div class="col s8">
+            <form>
+                <div class="input-field grey-text text-darken-4">
+                    <a id="submit" href="#" class="prefix btn-floating waves-effect brown"><i class="material-icons">search</i></a>
+                    <input type="search" id="search">
+                    <label for="search">Roast Filter</label>
+                </div>
+            </form>
+        </div>
+        <div class="input-field col s4">
+            <select name="roast-selection" id="roast-selection">
+                <option value="" disabled selected></option>
+                <option value="light">Light Roast</option>
+                <option value="medium">Medium Roast</option>
+                <option value="dark">Dark Roast</option>
+            </select>
+            <label>Roast Type</label>
+        </div>
+    </div>
+    <div class="row">
+        <div id="coffees"></div>
+    </div>
+</div>
 
-    <form>
-        <label for="roast-selection"></label>
-        <select id="roast-selection">
-            <option>light</option>
-            <option>medium</option>
-            <option>dark</option>
-        </select>
-        <input id="submit" type="submit" />
-    </form>
-
-    <div class="coffee">
-        <h1>American</h1>
-        <p>medium</p>
-    </div>
-    <div class="coffee">
-        <h1>Breakfast</h1>
-        <p>medium</p>
-    </div>
-    <div class="coffee">
-        <h1>Cinnamon</h1>
-        <p>light</p>
-    </div>
-    <div class="coffee">
-        <h1>City</h1>
-        <p>medium</p>
-    </div>
-    <div class="coffee">
-        <h1>Continental</h1>
-        <p>dark</p>
-    </div>
-    <div class="coffee">
-        <h1>Espresso</h1>
-        <p>dark</p>
-    </div>
-    <div class="coffee">
-        <h1>European</h1>
-        <p>dark</p>
-    </div>
-    <div class="coffee">
-        <h1>French</h1>
-        <p>dark</p>
-    </div>
-    <div class="coffee">
-        <h1>Half City</h1>
-        <p>light</p>
-    </div>
-    <div class="coffee">
-        <h1>High</h1>
-        <p>dark</p>
-    </div>
-    <div class="coffee">
-        <h1>Italian</h1>
-        <p>dark</p>
-    </div>
-    <div class="coffee">
-        <h1>Light City</h1>
-        <p>light</p>
-    </div>
-    <div class="coffee">
-        <h1>New Coffee</h1>
-        <p>light</p>
-    </div>
-    <div class="coffee">
-        <h1>New Orleans</h1>
-        <p>dark</p>
-    </div>
-    <div class="coffee">
-        <h1>Viennese</h1>
-        <p>dark</p>
-    </div>
-
-    <script src="main.js"></script>
+<script
+        src="https://code.jquery.com/jquery-3.3.1.min.js"
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+<script src="main.js"></script>
 </body>
 </html>

@@ -1,11 +1,10 @@
 "use strict"
 
 function renderCoffee(coffee) {
-    var html = '<tr class="coffee">';
-    html += '<td>' + coffee.id + '</td>';
-    html += '<td>' + coffee.name + '</td>';
-    html += '<td>' + coffee.roast + '</td>';
-    html += '</tr>';
+    var html = '<div class="coffee col s4"><div class="card"><div class="card-content">';
+    html += '<span class="card-title">' + coffee.name + '</span>';
+    html += '<p>' + coffee.roast + '</p>';
+    html += '</div></div></div>';
 
     return html;
 }
@@ -19,7 +18,7 @@ function renderCoffees(coffees) {
 }
 
 function updateCoffees(e) {
-    e.preventDefault(); // don't submit the form, we just want to update the data
+    // e.preventDefault(); // don't submit the form, we just want to update the data
     var selectedRoast = roastSelection.value;
     var filteredCoffees = [];
     coffees.forEach(function(coffee) {
@@ -48,10 +47,16 @@ var coffees = [
     {id: 14, name: 'French', roast: 'dark'},
 ];
 
+$(document).ready(function() {
+    $('select').material_select();
+});
+
 var tbody = document.querySelector('#coffees');
 var submitButton = document.querySelector('#submit');
+var searchBar = document.querySelector("#search");
 var roastSelection = document.querySelector('#roast-selection');
 
 tbody.innerHTML = renderCoffees(coffees);
 
 submitButton.addEventListener('click', updateCoffees);
+
