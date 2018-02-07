@@ -88,7 +88,18 @@ searchField.addEventListener('keyup', function () {
     });
 });
 
-
-
+function addCoffee(input) {
+    var newCoffee = document.getElementById("add-coffee").value;
+    var newRoast = document.getElementById("roast-type").value;
+    var newCoffeeType = {
+        id: coffees.length,
+        name: newCoffee,
+        roast: newRoast
+    };
+    coffees.push(newCoffeeType);
+    updateCoffees();
+    console.log(coffees);
+}
+document.getElementById("coffee-btn").addEventListener("click", addCoffee);
 
 
