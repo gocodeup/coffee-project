@@ -17,12 +17,65 @@ h2{
     font-size: 8vw;
 }
 
+.navbar-default{
+    background-color:#00A43A;
+}
+
+.addressSearchBar{
+    width:200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+#address{
+    color:black;
+    font-family: sans-serif;
+}
+
+#map{
+    width: 80%;
+    height: 600px;
+    margin: 0 auto;
+    background-color: lightgrey;
+    margin-bottom: 8%;
+    margin-top:2%;
+}
+
+#maptop{
+    margin-top: 10%;
+}
+
+
+
+.nav.navbar-nav.navbar-right li a {
+    color: white;
+    font-family: sans-serif;
+    font-size: 1.5em;
+    font-family: lobster,sans-serif;
+
+}
+
+#jumbotron2{
+    height: 100%;
+    opacity: .9;
+}
+
+
+
 .jumbotron{
     width: 100%;
     background-image: url(img/beans.png);
+    background-repeat: no-repeat;
+    background-size:cover;
     color: white;
     font-family: lobster, sans-serif;
     height: 225px;
+}
+
+.shopH1{
+    font-family: lobster, sans-serif;
+    font-size: 6em;
+    text-decoration: underline;
 }
 
 
@@ -31,7 +84,7 @@ div p{
 }
 
 #topHR{
-    margin-bottom: 2%;
+    margin-bottom: 1%;
 }
 
 select  {
@@ -61,6 +114,8 @@ select  {
 .btn{
     width: 100%;
 }
+
+
 .inlinediv{
     display: inline;
 }

@@ -13,6 +13,31 @@
     <div class="jumbotron">
     <h1 class="center-block text-center" id="coffeeH1">Coffee!</h1>
         </div>
+
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+            </div>
+
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="#maptop">Find a Shop</a></li>
+                </ul>
+
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
     <div class="container">
     <hr id="topHR">
 
@@ -81,6 +106,76 @@
 
      </div>
 </div>
+
+
+    <div id="jumbotron2" class = "jumbotron">
+
+    <div  id= "maptop"></div>
+
+    <h1 class="center-block text-center shopH1">Find a Coffee Shop Near You!</h1>
+
+    <div class="addressSearchBar">
+        <input class="bottom" type="text" id="address" name="address" value="Starbucks San Antonio" placeholder="Please input the address of a location to map!">
+        <br>
+        <button class="btn btn-success" id="get-address-button">Search!</button>
+    </div>
+
+    <div id="map"></div>
+
+    </div>
+
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCvGGiduHFnlohRyTubz_RvwUi46t0XOJU"></script>
+
+    <script>
+
+        "use strict";
+
+        var addressInput = document.getElementById('address');
+        var mapOptions = {
+
+            zoom: 15,
+            mapTypeId: google.maps.MapTypeId.ROAD
+        };
+
+
+
+        var getAddress = document.getElementById('get-address-button');
+        var map = new google.maps.Map(document.getElementById("map"), mapOptions);
+
+        var geocoder = new google.maps.Geocoder();
+
+        function initMap(address) {
+            geocoder.geocode({ "address": address }, function(results, status) {
+
+                if (status === google.maps.GeocoderStatus.OK) {
+                    map.setCenter(results[0].geometry.location);
+
+                    var marker = new google.maps.Marker({
+                      position: results[0].geometry.location,
+                        map: map
+                    });
+
+                } else {
+                    alert("Geocoding was not successful - STATUS: " + status);
+                        }
+                    });
+            }
+
+            initMap(addressInput.value);
+
+        getAddress.addEventListener('click', function() {
+
+            var address = addressInput.value;
+            initMap(address);
+        });
+    </script>
+
+
+
+
+
+
+
 
 
     <script src="main.js"></script>
