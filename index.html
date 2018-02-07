@@ -1,48 +1,38 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns="http://www.w3.org/1999/html">
 <head>
     <meta charset="UTF-8">
     <title></title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    <h1 id="main-header">Coffee Selector :)</h1>
-    <!--<button id="main-header-btn">CLICK FOR CHANGE</button>-->
-    <form>
+    <div class="main-header-coffee">
+        <h1 id="main-header" class="coffee-h1">Coffee Selector</h1>
+    </div>
+
+    <hr>
+
+    <form class="coffee-form">
         <label for="roast-selection"></label>
         <select id="roast-selection">
+            <option>all</option>
             <option>light</option>
             <option>medium</option>
             <option>dark</option>
         </select>
-        <p>Coffee Name:</p><input type="text" name="search"><br>
-        <input id="submit" type="submit" />
+        <p>Coffee Name:</p>
+        <input type="text" name="search" id="coffee-input"><br>
+        <input id="submit" type="submit">
+        </br>
     </form>
 
-
-
-
-
-
-
-    <!--<div class="coffee"></div>-->
-        <!--<table>-->
-            <!--<thead>-->
-                <!--<tr>-->
-                    <!--<th>ID</th>-->
-                    <!--<th>NAME</th>-->
-                    <!--<th>ROAST</th>-->
-                <!--</tr>-->
-            <!--</thead>-->
-            <!--<tbody id="coffees"></tbody>-->
-        <!--</table>-->
-
-    <div id="coffees">
+    <div class="coffee-form-style" id="coffees">
         <h1>NAME</h1>
         <p>ROAST</p>
     </div>
 
-
     <script src="main.js"></script>
+
 </body>
 </html>
