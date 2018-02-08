@@ -28,10 +28,10 @@
 
         </div>
 
-        <div class="col-sm-4 col-md-4 col-lg-4">
+        <div id="form1" class="col-sm-4 col-md-4 col-lg-4">
             <form>
                 <label for="roast-selection"></label>
-                <select id="roast-selection" onchange="choiceSelect()" class="form-control" id="exampleFormControlSelect1">
+                <select id="roast-selection" onchange="interactiveKey()" class="form-control" id="exampleFormControlSelect1">
                     <option>all</option>
                     <option>light</option>
                     <option>medium</option>
@@ -39,6 +39,19 @@
                 </select>
                 <input id="input"  class="form-control" onkeyup="interactiveKey()" type="text" autofocus placeholder="Enter coffee here!">
                 <input id="submit" type="submit" class="btn-block">
+            </form>
+
+        </div>
+        <div class="col-sm-4 col-md-4 col-lg-4">
+            <form>
+                <label id="addTitle" for="new-roast">Add a Coffee</label>
+                <select id="new-roast" class="form-control" onchange="choiceSelect()">
+                    <option>light</option>
+                    <option>medium</option>
+                    <option>dark</option>
+                </select>
+                <input id="new-coffee"  class="form-control" onkeyup="interactiveKey()" type="text" placeholder="Enter NEW coffee here!">
+                <input id="make-coffee" type="submit" class="btn-block">
             </form>
 
         </div>
