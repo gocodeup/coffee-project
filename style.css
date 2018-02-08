@@ -59,12 +59,11 @@ p {
 .input-section {
     width: 50%;
     float: right;
-    border: 1px solid black;
 }
 
 .sub-sec-1, .sub-sec-2 {
-    margin: 2em auto;
-    width: 75%;
+    margin: 1.2em auto;
+    width: 80%;
 }
 
 .sub-sec-1 {
@@ -77,14 +76,32 @@ select, input {
     font-size: 1em;
 }
 
-#add-coffee {
-    margin-bottom: 2em;
-}
+
 
 #search-input {
     margin-top: 2em;
 }
 
 .input-header {
+    text-align: center;
+    color: whitesmoke;
+    font-size: 1.7em;
+    margin-top: .3em;
+}
+
+/*BOTTOM RIGHT SECTION*/
+
+#add-coffee {
+    margin-bottom: 2em;
+}
+
+#coffee-btn {
+    height: 4em;
+    width: 99.89%;
+    background-color: lightsteelblue;
+    font-size: 1em;
+}
+
+.sub-sec-2 {
     text-align: center;
 }
