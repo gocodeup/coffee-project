@@ -6,7 +6,7 @@ function renderCoffee(coffee) {
     var html = '<tr class="coffee">';
     // html += '<td>' + coffee.id + '</td>';
     html += '<div class = \'inlinediv col-lg-6 bottom\'>' + '<h2>' + coffee.name + '</h2>';
-    html += '<p>'+ coffee.roast +'</p>'+ '</div>';
+    html += '<p>'+ '<span class="text-muted">'+ coffee.roast + '</span>' +'</p>'+ '</div>';
     // html += '</tr>';
 
     return html;
