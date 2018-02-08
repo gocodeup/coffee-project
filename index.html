@@ -2,31 +2,58 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title></title>
+    <title>Coffee-JS</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Coffee!</h1>
+<!--<div class="jumbotron">-->
+<!--<div id="companyImage">-->
+<!--<h2 id="companyName">LynAura <br>Coffee</h2>-->
+<!--</div>-->
+<!--</div>-->
+<main>
+    <div id="title-backdrop">
+        <h1 id="title-container">Available Coffees</h1>
+    </div>
+    <div class="container">
+        <div class="col-sm-12 col-md-12 col-lg-12"><hr></div>
 
-    <form>
-        <label for="roast-selection"></label>
-        <select id="roast-selection" onchange="choiceSelect()">
-            <option>all</option>
-            <option>light</option>
-            <option>medium</option>
-            <option>dark</option>
-        </select>
-        <input id="input" onkeyup="interactiveKey()" type="text" autofocus placeholder="Enter coffee here!">
-        <input id="submit" type="submit" />
-    </form>
+        <!--__--_--_--_-----_----Coffee JS----__--_-_------_----_--__-_-->
 
+        <div id="coffeeDiv" class="col-md-8 offset-md-6">
 
+            <div id="coffees"></div>
 
-<div id="coffees">
-</div>
+        </div>
 
+        <div class="col-sm-4 col-md-4 col-lg-4">
+            <form>
+                <label for="roast-selection"></label>
+                <select id="roast-selection" onchange="choiceSelect()" class="form-control" id="exampleFormControlSelect1">
+                    <option>all</option>
+                    <option>light</option>
+                    <option>medium</option>
+                    <option>dark</option>
+                </select>
+                <input id="input"  class="form-control" onkeyup="interactiveKey()" type="text" autofocus placeholder="Enter coffee here!">
+                <input id="submit" type="submit" class="btn-block">
+            </form>
 
-    <script src="main.js"></script>
+        </div>
+
+    </div>
+</main>
+
+<!--_-_--_--_----_-_----_--_-_---CSS BOOTSTRAP--_--_--_---_----_--_----_--_-__--_----_--_--_-->
+<script src="//code.jquery.com/jquery-2.2.4.min.js"></script>
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+<!-------_-------_--_--_----_--_-_--_-__-_--_---JS SHEET------_-----_--_-_----_----_--_--_--_--_------>
+<script src="main.js"></script>
+
 </body>
 </html>
 
