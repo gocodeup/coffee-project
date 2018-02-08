@@ -18,10 +18,13 @@ var coffees = [
 ];
 
 var outputHTML = document.querySelector('#coffees');
-outputHTML.innerHTML = renderCoffees(coffees);
+var roastSelection = document.querySelector('#roast-selection');
+var submitButton = document.querySelector('#submit');
+var search = document.getElementById("coffee-input");
+var newAdd = document.querySelector("#new-submit");
 
 function renderCoffee(coffee) {
-    var html = '<div class="coffee">';
+    var html = '<div class = \"inlinediv col-lg-6 bottom\">';
     html += '<h1>' + coffee.name + '</h1>';
     html += '<p>' + coffee.roast + '</p>';
     html += '</div>';
@@ -29,7 +32,6 @@ function renderCoffee(coffee) {
 }
 
 function renderCoffees(coffees) {
-    console.log(coffees);
     var html = '';
     for(var i = 0; i < coffees.length; i++) {
         html += renderCoffee(coffees[i]);
@@ -37,14 +39,9 @@ function renderCoffees(coffees) {
     return html;
 }
 
-var roastSelection = document.querySelector('#roast-selection');
-var submitButton = document.querySelector('#submit');
-submitButton.addEventListener('click', submitFire);
-
 function submitFire(e) {
     e.preventDefault();
     updateCoffees();
-
 }
 
 function updateCoffees() {
@@ -85,37 +82,25 @@ function updateCoffees() {
     outputHTML.innerHTML = renderCoffees(finalCoffees);
 }
 
-
-var search = document.getElementById("coffee-input");
-search.addEventListener("keyup", updateCoffees);
-roastSelection.addEventListener("change", updateCoffees);
-
-
 /**INSERT CODE/FUNCTION FOR ADDING COFFEE*/
 
 function addProduct () {
     event.preventDefault();
     var addCoffee = document.getElementById("new-coffee");
-    console.log(addCoffee);
     var addRoast = document.getElementById("new-roast");
     var newCoffee = {
         name: addCoffee.value,
         roast: addRoast.value
     };
     coffees.push(newCoffee);
-    console.log(coffees);
     outputHTML.innerHTML = renderCoffees(coffees);
-    console.log(renderCoffees(coffees));
-    console.log(outputHTML.innerHTML)
 }
 
-
-
-
-var newAdd = document.querySelector("#new-submit");
+outputHTML.innerHTML = renderCoffees(coffees);
+roastSelection.addEventListener("change", updateCoffees);
+submitButton.addEventListener('click', submitFire);
+search.addEventListener("keyup", updateCoffees);
 newAdd.addEventListener("click", addProduct);
-
-
 
 
 
