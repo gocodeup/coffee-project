@@ -3,32 +3,77 @@
 <head>
     <meta charset="UTF-8">
     <title></title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css?family=Cabin+Condensed:400,500,600,700|IM+Fell+French+Canon+SC&subset=latin-ext,vietnamese');
+        @import url('https://fonts.googleapis.com/css?family=Poiret+One');
+    </style>
 </head>
 <body>
-    <h1>Coffee!</h1>
 
-    <form>
-        <label for="roast-selection"></label>
-        <select id="roast-selection">
-            <option>light</option>
-            <option>medium</option>
-            <option>dark</option>
-        </select>
-        <input id="submit" type="submit" />
-    </form>
+    <header>
+        <h1 class="row col-lg-12 text-center">Find your Coffee</h1>
+    </header>
 
-    <table>
-        <thead>
-            <tr>
-                <th>ID</th>
-                <th>NAME</th>
-                <th>ROAST</th>
-            </tr>
-        </thead>
-        <tbody id="coffees"></tbody>
-    </table>
 
+    <main class="container">
+        <div class="row">
+            <div class="col-lg-8">
+                <div id="coffee-render-location"></div>
+            </div>
+
+
+
+
+
+            <div class="input-section col-lg-4">
+                <!--SEARCH SECTION-->
+
+               <div class="sub-sec-1 row col-lg-12 text-center">
+                   <h2 class="input-header col-lg-12">Search for Coffee</h2>
+                   <div class="row">
+                       <select id="roast-selection" class="col-lg-12">
+                           <option class="roast-color" selected>All</option>
+                           <option class="roast-color">light</option>
+                           <option class="roast-color">medium</option>
+                           <option class="roast-color">dark</option>
+                       </select>
+                    </div>
+                    <div class="row">
+                        <input class='col-lg-12' type="text" id="search-input" placeholder="Search Here!">
+                    </div>
+               </div>
+
+
+                <!--ADDING COFFEE SECITION-->
+                <div class="sub-sec-2 row col-lg-12 text-center">
+                    <h2 class="input-header col-lg-12">Add Your Own</h2>
+                    <div class="row">
+                        <input class="col-lg-12" type="text" id="add-coffee" placeholder="Enter new coffee." required>
+                    </div>
+                    <div class="row">
+                        <select class="col-lg-12" id="roast-type">
+                            <option>light</option>
+                            <option>medium</option>
+                            <option>dark</option>
+                        </select>
+                    </div>
+                    <div class="row">
+                        <button class="col-lg-12" type="button" id="coffee-btn">Add My Coffee!</button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </main>
+
+
+
+
+
+    <script src="//code.jquery.com/jquery-2.2.4.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
     <script src="main.js"></script>
 </body>
 </html>
