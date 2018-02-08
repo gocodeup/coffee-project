@@ -18,10 +18,15 @@
         <h1 id="main-header" class="coffee-h1">Coffee Selector</h1>
     </div>
 
+
     <div class="">
         <form class="coffee-form">
             <label for="roast-selection"></label>
 
+            <!--FINDING COFFEE NAME-->
+            <div>
+                <p>Roast:</p>
+            </div>
             <div>
                 <select class="selector" id="roast-selection">
                     <option>all</option>
@@ -30,6 +35,7 @@
                     <option>dark</option>
                 </select>
             </div>
+            <br>
 
             <div>
                 <p class="coffee-name-para">Coffee Name:</p>
@@ -40,9 +46,39 @@
                 <input id="submit" type="submit">
             </div>
 
+            <hr>
+
+            <!--ADDING A COFFEE-->
+            <div>
+                <h2>Add a Coffee</h2>
+            </div>
+
+            <div>
+                <p>Roast:</p>
+            </div>
+            <div>
+                <!--should we should the id to a class?-->
+                <select class="selector" id="new-roast">
+                    <option>light</option>
+                    <option>medium</option>
+                    <option>dark</option>
+                </select>
+            </div>
+
+            <br>
+
+            <div>
+                <p>Name:</p>
+            </div>
+
+            <div>
+                <input type="text" id="new-coffee">
+                <input  type="submit" id="new-submit">
+            </div>
+
         </form>
     </div>
-
+<hr>
     <div class="coffee-form-style" id="coffees">
         <h1>NAME</h1>
         <p>ROAST</p>
