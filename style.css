@@ -7,28 +7,41 @@ td, th {
     border: 1px solid black;
     padding: 5px 10px;
 }
-h1 {
-    text-align: center;
-    border-bottom: 3px solid grey;
+
+
+
+p{
+    color: grey;
+
+
 }
 
-/*GRID SETUP*/
-    .grid-container {
-        display: grid;
-        grid-template-columns: 60% 40%;
-    }
 
-    .grid-item1 {
-        grid-column-start: ;
+select  {
+    width: 50%;
+    background-color: white;
+    height: 32px;
+}
 
-    }
+.input-group{
+    width: 50%;
+}
 
-    .grid-item2 {
-        grid-column-start: 1;
+.bottom{
+    margin-top: 25px;
+}
 
-    }
+.bottom p{
+    color: black;
+    font-weight: bold;
 
-    .grid-item3 {
-        grid-column-start: 1;
+}
 
-    }
+.btn{
+    width: 50%;
+
+
+}
+
+
+
