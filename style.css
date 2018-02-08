@@ -1,24 +1,12 @@
 * {
-    margin: 0;
-    padding: 0;
     box-sizing: border-box;
-}
-
-table {
-    border-collapse: collapse;
-    margin: 15px 0;
-}
-
-td, th {
-    border: 1px solid black;
-    padding: 5px 10px;
 }
 
 .main-header-coffee {
     text-align: center;
     height: 100px;
     width: 100%;
-    border-top: 5px solid #166489;
+    border: 5px solid #166489;
     background-color: #cf4546;
     position: relative;
     color: white;
@@ -26,9 +14,9 @@ td, th {
 
 .coffee-h1 {
     position: relative;
-    top: 28px;
+    top: 7px;
 }
 
 .coffee-form {
-    border: 5px solid black;
+    padding-top: 50px;
 }
