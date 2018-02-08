@@ -84,12 +84,6 @@ function nameSearch (){
     }
 }
 
-
-
-
-
-
-
 function addNewCoffee(){
     var newCoffeeRoast = document.getElementById('newRoast');
     var newCoffeeName = document.getElementById('newCoffeeName');
@@ -99,7 +93,6 @@ function addNewCoffee(){
     };
     coffees.push(newCoffee);
     tbody.innerHTML = renderCoffees(coffees);
-
 
 }
 
@@ -114,3 +107,4 @@ tbody.innerHTML = renderCoffees(coffees);
 roastSelection.addEventListener('change', updateCoffees);
 nameSelection.addEventListener('keyup',nameSearch);
 newCoffeeButton.addEventListener('click', addNewCoffee);
+
