@@ -1,9 +1,9 @@
-"use strict"
+"use strict";
 
 
 
 function renderCoffee(coffee) {
-    var html = '<div class="coffee">';
+    var html = '<div class="coffee col-lg-4">';
     html += '<h2 class="coffee-name">' + coffee.name + '</h2>';
     html += '<p class="roast-type">' + coffee.roast + '</p>';
     html += '</div>';
@@ -104,5 +104,3 @@ function addCoffee() {
     }
 }
 document.getElementById("coffee-btn").addEventListener("click", addCoffee);
-
-

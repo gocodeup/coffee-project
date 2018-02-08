@@ -1,5 +1,6 @@
 
-
+/*font-family: 'Cabin Condensed', sans-serif;*/
+/*font-family: 'IM Fell French Canon SC', serif;*/
 
 /*!*GLOBAL STYLES*!*/
 /** {*/
@@ -9,32 +10,33 @@
 
 
 /*!*TOP OF SCREEN*!*/
-/*h1 {*/
-    /*text-align: center;*/
-    /*color: white;*/
-    /*text-decoration: underline;*/
-/*}*/
+h1 {
+    color: #d3d3d3;
+    font-family: 'IM Fell French Canon SC', serif;
+    font-size: 3.5em;
+}
 
-/*body {*/
-    /*width: 95%;*/
-    /*margin: 0 auto;*/
-    /*background: linear-gradient(rgba(141,153,174, .3), rgba(141,153,174, .3)), url("img/coffee_beans.jpg") no-repeat;*/
-    /*background-size: cover;*/
+body {
+    width: 95%;
+    margin: 0 auto;
+    background: linear-gradient(rgba(141,153,174, .3), rgba(141,153,174, .3)), url("img/coffee_beans.jpg") no-repeat;
+    background-size: cover;
 
-/*}*/
+}
 
 
 /*LEFT SIDE OF SCREEN*/
 
-/*.roast-type {*/
-    /*color: blue;*/
-    /*font-family: 'Poiret One', cursive;*/
-/*}*/
+.roast-type {
+    color: lightskyblue;
+    font-size: 1.2em;
+    font-family: 'Poiret One', cursive;
+}
 
-/*.coffee-name {*/
-    /*color: white;*/
-    /*font-family: 'Poiret One', cursive;*/
-/*}*/
+.coffee-name {
+    color: white;
+    font-family: 'Poiret One', cursive;
+}
 
 
 /*#coffee-render-location {*/
@@ -56,6 +58,11 @@
 /*}*/
 
 /*!*RIGHT SIDE OF SCREEN*!*/
+
+.input-header {
+    color: #d3d3d3;
+    font-family: 'IM Fell French Canon SC', serif;
+}
 
 
 /*.input-section {*/
