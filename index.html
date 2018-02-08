@@ -8,43 +8,44 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<!--<div class="jumbotron">-->
-<!--<div id="companyImage">-->
-<!--<h2 id="companyName">LynAura <br>Coffee</h2>-->
-<!--</div>-->
-<!--</div>-->
+<!--__-_--_----_--_--__Top display___--_-_----_-_--_--_-->
+<div class="jumbotron">
+<div id="companyImage">
+<h2 id="companyName">LynAura <br>Coffee</h2>
+</div>
+</div>
+<!--------_----_--_-_--_-_--_--_End of Top Display---------_--_--_-_--_---->
 <main>
+
+    <!---_----_-_----_--_----_--_--_--_-------Coffees Title------_-_----_--_---->
     <div id="title-backdrop">
         <h1 id="title-container">Available Coffees</h1>
     </div>
+    <!------------_-_--_--_-_--_--_----_-end of coffees title-------_--_-_--_-_--_-_-->
+
+    <!--Forms-->
+
     <div class="container">
         <div class="col-sm-12 col-md-12 col-lg-12"><hr></div>
 
-        <!--__--_--_--_-----_----Coffee JS----__--_-_------_----_--__-_-->
 
-        <div id="coffeeDiv" class="col-md-8 offset-md-6">
-
-            <div id="coffees"></div>
-
-        </div>
-
-        <div id="form1" class="col-sm-4 col-md-4 col-lg-4">
-            <form>
-                <label for="roast-selection"></label>
+        <div class="col-sm-8 col-md-8 col-lg-5">
+            <form id="form1">
+                <label class="addTitle" for="roast-selection"><em>Select your Poison</em></label>
                 <select id="roast-selection" onchange="interactiveKey()" class="form-control" id="exampleFormControlSelect1">
-                    <option>all</option>
-                    <option>light</option>
-                    <option>medium</option>
-                    <option>dark</option>
+                    <option class="tab">all</option>
+                    <option class="tab">light</option>
+                    <option class="tab">medium</option>
+                    <option class="tab">dark</option>
                 </select>
                 <input id="input"  class="form-control" onkeyup="interactiveKey()" type="text" autofocus placeholder="Enter coffee here!">
                 <input id="submit" type="submit" class="btn-block">
             </form>
 
-        </div>
-        <div class="col-sm-4 col-md-4 col-lg-4">
+        <!--</div>-->
+        <!--<div class="col-sm-4 col-md-4 col-lg-4">-->
             <form>
-                <label id="addTitle" for="new-roast">Add a Coffee</label>
+                <label class="addTitle" for="new-roast">Add a Coffee</label>
                 <select id="new-roast" class="form-control" onchange="choiceSelect()">
                     <option>light</option>
                     <option>medium</option>
@@ -55,6 +56,19 @@
             </form>
 
         </div>
+
+        <!--end of forms-->
+
+        <!--__--_--_--_-----_----Coffee JS Array----__--_-_------_----_--__-_-->
+
+        <div id="coffeeDiv" class="col-md-7">
+
+            <div id="coffees"></div>
+
+        </div>
+
+        <!-----_-_--_-_----_----_----_-------End of Array of coffees-_----_-_--_-->
+
 
     </div>
 </main>

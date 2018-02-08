@@ -1,5 +1,6 @@
+
 .jumbotron {
-    background: url("http://peekingduck.co/content/images/2016/02/viajero-oaxaca.jpg");
+    background-image: url("http://www.gsfdcy.com/data/img/43/1625011-industrial-wallpaper.jpg");
     height: 1000px;
     no-repeat: center center fixed;
     -webkit-background-size: cover;
@@ -14,21 +15,23 @@
 /*}*/
 
 #companyName {
-    margin-top: 400px;
-    margin-left: 31%;
+    font-family: "American Typewriter";
+    font-size: 4em;
+    font-weight: bold;
     background-position: center;
-    font-family: 'Anton', sans-serif;
-    color: #52260f;
-    text-align: left;
-    padding-top: 28%;
+    color: #4e2b0a;
+    text-align: center;
+    /*padding-top: 28%;*/
 
 }
 
 #companyImage {
-    margin-top: 250px;
-    margin-left: 40%;
-    height: 350px;
-    width: 350px;
+    /*opacity: 0.4;*/
+    margin-top: 200px;
+    margin-left: 35%;
+    height: 429px;
+    width: 460px;
+    padding: 80px;
     background-image: url("https://i.stack.imgur.com/CZeBo.png");
     background-position: center;
     no-repeat: center center fixed;
@@ -58,23 +61,26 @@
 }
 
 body {
-    background-image: url("http://www.gsfdcy.com/data/img/43/1625011-industrial-wallpaper.jpg");
+    background-image: url("https://img0.etsystatic.com/117/1/11718518/il_570xN.986174992_6ijs.jpg");
     no-repeat: center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
     position: relative;
+    margin-bottom: 1000px;
 }
 
 .container{
+    margin-right: 50px;
     background: rgba(60, 60, 60, 0.53);
-    /*background-image: url("https://sc02.alicdn.com/kf/HTB1faoZRVXXXXaXXFXXq6xXFXXX1/Peacock-Slate-Tiles-Floors-of-Stone-soft.jpg");*/
-    no-repeat: center center fixed;
     position: absolute;
     margin-left: 8%;
+    height: 100%;
     margin-bottom: 100px;
-    height: 1000px;
+    /*margin-bottom: 100px;*/
+    /*background-image: url("https://sc02.alicdn.com/kf/HTB1faoZRVXXXXaXXFXXq6xXFXXX1/Peacock-Slate-Tiles-Floors-of-Stone-soft.jpg");*/
+    no-repeat: center center fixed;
     /*opacity: 0.7;*/
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -82,16 +88,49 @@ body {
     background-size: cover;
 
 }
+
 #form1 {
-    margin-bottom: 100px;
+    margin-bottom: 50px;
 }
-label#addTitle {
+
+label.addTitle {
     font-size: 22px;
     color: #e2cdb6;
     text-align: center;
     font-family: sans-serif;
     width: 100%;
+
 }
+
+
+select.form-control {
+    background-color: #4e2b0a;
+    font-size: 23px;
+    color: white;
+    text-align-last: center;
+    font-family: "Arial Black";
+    height: 80px;
+}
+
+input.form-control {
+    background-color: #4e2b0a;
+    font-size: 23px;
+    color: white;
+    text-align-last: center;
+    font-family: "Arial Black";
+    height: 80px;
+}
+
+input.btn-block {
+    background-color: #4e2b0a;
+    font-size: 23px;
+    color: white;
+    text-align-last: center;
+    font-family: "Arial Black";
+    height: 80px;
+}
+
+
 /*main {*/
 /*background-image: url("http://www.gsfdcy.com/data/img/43/1625011-industrial-wallpaper.jpg");*/
 /*no-repeat: center center fixed;*/
@@ -106,10 +145,160 @@ label#addTitle {
 
 #coffeeDiv{
     margin-bottom: 30%;
+    position: relative;
 }
 
 .coffee {
     color: #e2cdb6;
     float: left;
     width: 50%;
+
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*.jumbotron {*/
+    /*background: url("http://peekingduck.co/content/images/2016/02/viajero-oaxaca.jpg");*/
+    /*height: 1000px;*/
+    /*no-repeat: center center fixed;*/
+    /*-webkit-background-size: cover;*/
+    /*-moz-background-size: cover;*/
+    /*-o-background-size: cover;*/
+    /*background-size: cover;*/
+/*}*/
+
+/*!*#title-container {*!*/
+/*!*font-family: 'Anton', sans-serif;*!*/
+/*!*text-align: center;*!*/
+/*!*}*!*/
+
+/*#companyName {*/
+    /*margin-top: 250px;*/
+    /*margin-left: 31%;*/
+    /*background-position: center;*/
+    /*font-family: sans-serif;*/
+    /*color: #52260f;*/
+    /*text-align: left;*/
+    /*padding-top: 28%;*/
+
+/*}*/
+
+/*#companyImage {*/
+    /*margin-top: 250px;*/
+    /*margin-left: 40%;*/
+    /*height: 350px;*/
+    /*width: 350px;*/
+    /*background-image: url("https://i.stack.imgur.com/CZeBo.png");*/
+    /*background-position: center;*/
+    /*no-repeat: center center fixed;*/
+    /*-webkit-background-size: cover;*/
+    /*-moz-background-size: cover;*/
+    /*-o-background-size: cover;*/
+    /*background-size: cover;*/
+    /*font-family: sans-serif;*/
+    /*text-align: center;*/
+/*}*/
+
+/*#title-backdrop{*/
+    /*background: url("http://images.unsplash.com/photo-1447933601403-0c6688de566e?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max&ixid=eyJhcHBfaWQiOjEyMDd9&s=2165e1b824f7f1e2faa7e6fdbcdf39c7");*/
+/*}*/
+
+/*#title-container {*/
+    /*background: url("http://images.unsplash.com/photo-1447933601403-0c6688de566e?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max&ixid=eyJhcHBfaWQiOjEyMDd9&s=2165e1b824f7f1e2faa7e6fdbcdf39c7");*/
+    /*padding: 100px;*/
+    /*border: 10px solid white;*/
+    /*border-radius: 50%;*/
+    /*font-family: sans-serif;*/
+    /*text-align: center;*/
+    /*color: white;*/
+    /*font-size: 28px;*/
+    /*!*display: flex;*!*/
+    /*justify-content: center;*/
+/*}*/
+
+/*body {*/
+    /*background-image: url("https://img0.etsystatic.com/117/1/11718518/il_570xN.986174992_6ijs.jpg");*/
+    /*no-repeat: center center fixed;*/
+    /*-webkit-background-size: cover;*/
+    /*-moz-background-size: cover;*/
+    /*-o-background-size: cover;*/
+    /*background-size: cover;*/
+    /*position: relative;*/
+/*}*/
+
+/*.container{*/
+    /*background: rgba(60, 60, 60, 0.53);*/
+    /*position: absolute;*/
+    /*!*background-image: url("https://sc02.alicdn.com/kf/HTB1faoZRVXXXXaXXFXXq6xXFXXX1/Peacock-Slate-Tiles-Floors-of-Stone-soft.jpg");*!*/
+    /*no-repeat: center center fixed;*/
+    /*position: absolute;*/
+    /*margin-left: 8%;*/
+    /*margin-bottom: 100px;*/
+    /*height: 1000px;*/
+    /*!*opacity: 0.7;*!*/
+    /*-webkit-background-size: cover;*/
+    /*-moz-background-size: cover;*/
+    /*-o-background-size: cover;*/
+    /*background-size: cover;*/
+
+/*}*/
+/*#form1 {*/
+    /*margin-bottom: 100px;*/
+/*}*/
+/*label#addTitle {*/
+    /*font-size: 22px;*/
+    /*color: #e2cdb6;*/
+    /*text-align: center;*/
+    /*font-family: sans-serif;*/
+    /*width: 100%;*/
+/*}*/
+/*!*main {*!*/
+/*!*background-image: url("http://www.gsfdcy.com/data/img/43/1625011-industrial-wallpaper.jpg");*!*/
+/*!*no-repeat: center center fixed;*!*/
+/*!*!*opacity: 0.7;*!*!*/
+/*!*!*-webkit-background-size: cover;*!*!*/
+/*!*!*-moz-background-size: cover;*!*!*/
+/*!*!*-o-background-size: cover;*!*!*/
+/*!*!*background-size: cover;*!*!*/
+
+
+/*!*}*!*/
+
+/*#coffeeDiv{*/
+    /*margin-bottom: 30%;*/
+    /*position: relative;*/
+/*}*/
+
+/*.coffee {*/
+    /*color: #e2cdb6;*/
+    /*float: left;*/
+    /*width: 50%;*/
+/*}*/
