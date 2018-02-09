@@ -1,7 +1,7 @@
 "use strict"
 
 
-
+//Function to write coffee names and roast into bootstrap columns on page, once they've been decided//
 function renderCoffee(coffee) {
     var html = '<tr class="coffee">';
     // html += '<td>' + coffee.id + '</td>';
@@ -12,7 +12,7 @@ function renderCoffee(coffee) {
     return html;
 }
 
-
+//For loop to decide which coffees will be written into HTML div - based on an array.//
 function renderCoffees(coffees) {
     var html = '';
     for(var i = 0; i <= coffees.length-1; i++) {
@@ -22,6 +22,8 @@ function renderCoffees(coffees) {
     return html;
 }
 
+
+//Function that filters what coffee is included in coffees array, based on what is selected from dropdown menu.
 function updateCoffees(e) {
     var selectedRoast = roastSelection.value;
     var filteredCoffees = [];
@@ -36,7 +38,7 @@ function updateCoffees(e) {
     tbody.innerHTML = renderCoffees(filteredCoffees);
 }
 
-// from http://www.ncausa.org/About-Coffee/Coffee-Roasts-Guide
+//Array of all coffee names and roasts.
 var coffees = [
     {id: 1, name: 'Light City', roast: 'light'},
     {id: 2, name: 'Half City', roast: 'light'},
@@ -54,6 +56,8 @@ var coffees = [
     {id: 14, name: 'French', roast: 'dark'},
 ];
 
+
+//Function that creates a new array of coffees, if the name includes letters in search terms.
 function nameSearch (){
         var newList = [];
     if(roastSelection.value === 'All'){
@@ -88,7 +92,7 @@ function nameSearch (){
 
 
 
-
+//Function that lets user create a new coffee and push it into the coffees array.
 function addNewCoffee(){
     var newCoffeeRoast = document.getElementById('newRoast');
     var newCoffeeName = document.getElementById('newCoffeeName');
@@ -101,6 +105,7 @@ function addNewCoffee(){
 
 
 }
+
 
 var tbody = document.querySelector('#coffees');
 var submitButton = document.querySelector('#submit');
