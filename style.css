@@ -1,9 +1,121 @@
-table {
-    border-collapse: collapse;
-    margin: 15px 0;
+
+
+
+@import url('https://fonts.googleapis.com/css?family=Lobster');
+
+
+p,h2{
+    display: inline;
 }
 
-td, th {
-    border: 1px solid black;
-    padding: 5px 10px;
+h2{
+    font-size:2.3vw;
+    color: black;
+}
+
+#coffeeH1{
+    font-size: 8vw;
+}
+
+.navbar-default{
+    background-color:#00A43A;
+}
+
+.addressSearchBar{
+    width:200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+#address{
+    color:black;
+    font-family: sans-serif;
+}
+
+#map{
+    width: 80%;
+    height: 600px;
+    margin: 0 auto;
+    background-color: lightgrey;
+    margin-bottom: 8%;
+    margin-top:2%;
+}
+
+#maptop{
+    margin-top: 10%;
+}
+
+
+
+.nav.navbar-nav.navbar-right li a {
+    color: white;
+    font-family: sans-serif;
+    font-size: 1.5em;
+    font-family: lobster,sans-serif;
+
+}
+
+#jumbotron2{
+    height: 100%;
+    opacity: .9;
+}
+
+
+
+.jumbotron{
+    width: 100%;
+    background-image: url(img/beans.png);
+    background-repeat: no-repeat;
+    background-size:cover;
+    color: white;
+    font-family: lobster, sans-serif;
+    height: 225px;
+}
+
+.shopH1{
+    font-family: lobster, sans-serif;
+    font-size: 6em;
+    text-decoration: underline;
+}
+
+
+div p{
+    color: grey;
+}
+
+#topHR{
+    margin-bottom: 1%;
+}
+
+select  {
+    width: 100%;
+    background-color: white;
+    height: 32px;
+}
+
+.input-group{
+    width: 100%;
+}
+
+.bottom{
+    margin-bottom: 25px;
+}
+
+.bottom p{
+    color: black;
+    font-weight: bold;
+}
+
+#grey{
+    color: grey;
+    margin-left: 5px;
+}
+
+.btn{
+    width: 100%;
+}
+
+
+.inlinediv{
+    display: inline;
 }
