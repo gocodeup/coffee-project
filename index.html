@@ -3,32 +3,56 @@
 <head>
     <meta charset="UTF-8">
     <title></title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css?family=Poiret+One');
+    </style>
 </head>
 <body>
-    <h1>Coffee!</h1>
+    <h1>Find your Coffee</h1>
 
-    <form>
-        <label for="roast-selection"></label>
-        <select id="roast-selection">
-            <option>light</option>
-            <option>medium</option>
-            <option>dark</option>
-        </select>
-        <input id="submit" type="submit" />
-    </form>
 
-    <table>
-        <thead>
-            <tr>
-                <th>ID</th>
-                <th>NAME</th>
-                <th>ROAST</th>
-            </tr>
-        </thead>
-        <tbody id="coffees"></tbody>
-    </table>
+    <div id="coffee-render-location"></div>
 
+    <div class="input-section">
+        <!--SEARCH SECTION-->
+        <h2 class="input-header">Search for Coffee</h2>
+       <div class="sub-sec-1">
+           <div>
+               <label for="roast-selection"></label>
+               <select id="roast-selection">
+                   <option class="roast-color" selected>All</option>
+                   <option class="roast-color">light</option>
+                   <option class="roast-color">medium</option>
+                   <option class="roast-color">dark</option>
+               </select>
+            </div>
+            <div>
+                <input type="text" id="search-input" placeholder="Search Here!">
+            </div>
+       </div>
+
+        <h2 class="input-header">Add Your Own</h2>
+        <!--ADDING COFFEE SECITION-->
+        <div class="sub-sec-2">
+            <input type="text" id="add-coffee" placeholder="Enter new coffee." required>
+            <label for="roast-type"></label>
+            <select id="roast-type">
+                <option>light</option>
+                <option>medium</option>
+                <option>dark</option>
+            </select>
+            <button type="button" id="coffee-btn">Add My Coffee!</button>
+        </div>
+    </div>
+
+
+
+
+
+
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
     <script src="main.js"></script>
 </body>
 </html>

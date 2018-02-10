@@ -1,9 +1,109 @@
-table {
-    border-collapse: collapse;
-    margin: 15px 0;
-}
 
-td, th {
-    border: 1px solid black;
-    padding: 5px 10px;
-}
+
+
+/*!*GLOBAL STYLES*!*/
+/** {*/
+    /*box-sizing: border-box;*/
+/*}*/
+
+
+
+/*!*TOP OF SCREEN*!*/
+/*h1 {*/
+    /*text-align: center;*/
+    /*color: white;*/
+    /*text-decoration: underline;*/
+/*}*/
+
+/*body {*/
+    /*width: 95%;*/
+    /*margin: 0 auto;*/
+    /*background: linear-gradient(rgba(141,153,174, .3), rgba(141,153,174, .3)), url("img/coffee_beans.jpg") no-repeat;*/
+    /*background-size: cover;*/
+
+/*}*/
+
+
+/*LEFT SIDE OF SCREEN*/
+
+/*.roast-type {*/
+    /*color: blue;*/
+    /*font-family: 'Poiret One', cursive;*/
+/*}*/
+
+/*.coffee-name {*/
+    /*color: white;*/
+    /*font-family: 'Poiret One', cursive;*/
+/*}*/
+
+
+/*#coffee-render-location {*/
+    /*width: 50%;*/
+/*}*/
+
+/*.coffee {*/
+    /*width: 50%;*/
+    /*float: left;*/
+    /*margin: 1em auto;*/
+/*}*/
+
+/*.coffee h2, .coffee p {*/
+    /*display: inline;*/
+/*}*/
+
+/*p {*/
+    /*padding-left: 1em;*/
+/*}*/
+
+/*!*RIGHT SIDE OF SCREEN*!*/
+
+
+/*.input-section {*/
+    /*width: 50%;*/
+    /*float: right;*/
+/*}*/
+
+/*.sub-sec-1, .sub-sec-2 {*/
+    /*margin: 1.2em auto;*/
+    /*width: 80%;*/
+/*}*/
+
+/*.sub-sec-1 {*/
+    /*margin-bottom: 5em;*/
+/*}*/
+
+/*select, input {*/
+    /*width: 100%;*/
+    /*height: 3em;*/
+    /*font-size: 1em;*/
+/*}*/
+
+
+
+/*#search-input {*/
+    /*margin-top: 2em;*/
+/*}*/
+
+/*.input-header {*/
+    /*text-align: center;*/
+    /*color: whitesmoke;*/
+    /*font-size: 1.7em;*/
+    /*margin-top: .3em;*/
+/*}*/
+
+/*!*BOTTOM RIGHT SECTION*!*/
+
+/*#add-coffee {*/
+    /*margin-bottom: 2em;*/
+/*}*/
+
+/*#coffee-btn {*/
+    /*height: 4em;*/
+    /*width: 99.89%;*/
+    /*background-color: lightsteelblue;*/
+    /*font-size: 1em;*/
+/*}*/
+
+/*.sub-sec-2 {*/
+    /*text-align: center;*/
+/*}*/
