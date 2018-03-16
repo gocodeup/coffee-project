@@ -1,9 +1,55 @@
 table {
     border-collapse: collapse;
-    margin: 15px 0;
+    margin: 0 0 0 0;
 }
 
 td, th {
     border: 1px solid black;
-    padding: 5px 10px;
+    padding: 0 0 0 0;
 }
+
+
+
+p{
+    color: grey;
+
+
+}
+
+
+select  {
+    width: 100%;
+    background-color: white;
+    height: 32px;
+
+}
+
+.input-group{
+    width: 100%;
+    display: inline;
+
+}
+
+.bottom{
+    margin-top: 25px;
+
+}
+
+.bottom p{
+    color: black;
+    font-weight: bold;
+
+
+}
+
+.btn{
+    width: 100%;
+    box-shadow: 3px 6px 5px #000000;
+
+
+}
+
+
+
+
+
