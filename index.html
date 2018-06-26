@@ -7,7 +7,51 @@
 </head>
 <body>
     <h1>Coffee!</h1>
+    <hr>
+    <div class="container">
+        <div class="row">
+            <div class="col-6"></div>
+            <div class="col-6">
+                <form action="http://java.codeup.com/examples/css/login-form.html#">
+                    <fieldset class="width-80">
+                        <div class="form-group">
+                            <label for="username" class="form-label">Username</label>
+                            <form>
+                                <label for="roast-selection"></label>
+                                <select id="roast-selection">
+                                    <option>light</option>
+                                    <option>medium</option>
+                                    <option>dark</option>
+                                </select>
+                            </form>
+                            <input type="text" id="username" name="username" class="form-control">
 
+                        </div>
+                        <div class="form-group">
+                            <label for="password" class="form-label">Password</label>
+                            <input type="password" id="password" name="password" class="form-control">
+                        </div>
+                        <button class="btn btn-block">Login</button>
+                    </fieldset>
+                </form>
+
+
+                    <form action="http://java.codeup.com/examples/css/login-form.html#">
+                        <fieldset class="width-80">
+                            <div class="form-group">
+                                <label for="username" class="form-label">Username</label>
+                                <input type="text" id="username" name="username" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <label for="password" class="form-label">Password</label>
+                                <input type="password" id="password" name="password" class="form-control">
+                            </div>
+                            <button class="btn btn-block">Login</button>
+                        </fieldset>
+                    </form>
+            </div>
+        </div>
+    </div>
     <form>
         <label for="roast-selection"></label>
         <select id="roast-selection">
@@ -18,16 +62,16 @@
         <input id="submit" type="submit" />
     </form>
 
-    <table>
-        <thead>
-            <tr>
-                <th>ID</th>
-                <th>NAME</th>
-                <th>ROAST</th>
-            </tr>
-        </thead>
-        <tbody id="coffees"></tbody>
-    </table>
+    <!--<table>-->
+        <!--<thead>-->
+            <!--<tr>-->
+                <!--<th>ID</th>-->
+                <!--<th>NAME</th>-->
+                <!--<th>ROAST</th>-->
+            <!--</tr>-->
+        <!--</thead>-->
+        <!--<tbody id="coffees"></tbody>-->
+    <!--</table>-->
 
     <script src="main.js"></script>
 </body>

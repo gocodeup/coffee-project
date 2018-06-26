@@ -1,9 +1,94 @@
-table {
-    border-collapse: collapse;
-    margin: 15px 0;
+* {
+    padding: 0;
+    margin: 0;
 }
 
-td, th {
-    border: 1px solid black;
-    padding: 5px 10px;
+body, html {
+    height: 100%;
+    width: 100%;
+
+    font-family: Arial, Ubuntu, sans-serif;
 }
+
+form {
+    margin: 1em;
+    padding: 1em;
+    /* This form should be separated from other elements by 1em */
+    /* There must be 1em between the content and the border of this element */
+}
+
+fieldset {
+    -webkit-box-shadow: 10px 10px 5px 0 rgba(0,0,0,0.75);
+    -moz-box-shadow: 10px 10px 5px 0 rgba(0,0,0,0.75);
+    box-shadow: 10px 10px 5px 0 rgba(0,0,0,0.75);
+    padding: 1em;
+    background-color: white;
+    border: 0;
+
+    /* There must be 1em between the content and the border of this element */
+    /* It should have no border */
+    /* Its background should be white */
+}
+
+.width-80 {
+    /* The element with this class should 80% of the width and it must be centered */
+    /* Read how to center elements with margin here: http://learnlayout.com/margin-auto.html*/
+
+    width: 80%;
+    margin: 0 auto;
+
+}
+
+.form-group {
+    /* This element must use 100% of the width */
+    /* It should have a separation of .5em from elements on top of it and below it*/
+    width: 100%;
+    margin-top: .5em;
+    margin-bottom: .5em;
+}
+
+.form-label {
+    /* The text of a label must be bold */
+    font-weight: bold;
+}
+
+.form-control {
+    /* There must be 4px on top of the text and below the text of an input with this class */
+    /* It should have a separation of .5em from elements on top of it and below it */
+
+    /* You'll need to use the `calc` function to make the width of this element match the width of the button */
+    /* See the example at: https://developer.mozilla.org/en-US/docs/Web/CSS/calc */
+    /* HINT: Calculate based on the padding of the `.btn` class */
+    width: 100%;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    margin-top: 4px;
+    margin-bottom: 4px;
+
+}
+
+.btn {
+    /* There must be a separation of 8px between the text and the border of this element */
+    /* The text color of this element should be white and bold */
+    /* The border of this element should be 1px, and its color should be light grey */
+    background-color: royalblue;
+    padding: 8px;
+    color: white;
+    font-weight: bold;
+    border: 1px, grey;
+}
+
+.btn-block {
+    /* This element should use 100% of the width */
+    width: 100%;
+
+
+/*table {*/
+    /*border-collapse: collapse;*/
+    /*margin: 15px 0;*/
+/*}*/
+
+/*td, th {*/
+    /*border: 1px solid black;*/
+    /*padding: 5px 10px;*/
+/*}*/
