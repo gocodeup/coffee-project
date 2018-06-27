@@ -1,9 +1,35 @@
-table {
-    border-collapse: collapse;
-    margin: 15px 0;
+@import url('https://fonts.googleapis.com/css?family=Italianno');
+
+
+body {
+    background-image: url("img/bg5.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    font-family: Italianno;
+    font-size: 2em;
+    font-weight: bold;
+    /*box-sizing: border-box;*/
 }
 
-td, th {
-    border: 1px solid black;
-    padding: 5px 10px;
+h1 {
+    position: center;
+
+}
+
+
+form {
+
+    padding: 5px 12px;
+    text-align: center;
+}
+
+h1 {
+    font-size: 3.5em;
+    text-align: center;
+    letter-spacing: 10px;
+    margin: 0;
+    padding: 0;
+    font-weight: bolder;
 }

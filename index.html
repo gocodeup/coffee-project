@@ -2,33 +2,70 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title></title>
+    <title>Caffè Fantasia</title>
+    <meta http-equiv="x-ua-compatible" content="ie=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"/>
     <link rel="stylesheet" href="style.css">
+
 </head>
 <body>
-    <h1>Coffee!</h1>
 
-    <form>
-        <label for="roast-selection"></label>
-        <select id="roast-selection">
-            <option>light</option>
-            <option>medium</option>
-            <option>dark</option>
-        </select>
-        <input id="submit" type="submit" />
-    </form>
+<div class="container">
+<h1>Caffè Italia</h1>
 
-    <table>
-        <thead>
-            <tr>
-                <th>ID</th>
-                <th>NAME</th>
-                <th>ROAST</th>
-            </tr>
-        </thead>
-        <tbody id="coffees"></tbody>
-    </table>
 
-    <script src="main.js"></script>
+
+<div class="row">
+    <div class="col-sm-8 col-md-6 col-lg-4">
+            <h2>Roast</h2>
+                <select class="form-control" id="roast-selection">
+                    <option id="roastchoice" value="light">light</option>
+                    <option id="roastchoice" value="medium">medium</option>
+                    <option id="roastchoice" value="dark">dark</option>
+                </select>
+
+            <h2>Coffee Name</h2>
+            <input class="form-control" type="text" id="myInput" placeholder="Coffee Name" title="Type in a name"><br>
+            <input id="submit" class="btn form-control btn-danger btn-lg btn-block" type="submit"/>
+        </div>
+
+        <!--<div class="box">-->
+            <!--<h2>Roast</h2>-->
+            <!--<form id="2nd choice">-->
+                <!--<label class="renderCoffees"></label>-->
+                <!--<select id="roast-selection2">-->
+                    <!--<option value="light">light</option>-->
+                    <!--<option value="medium">medium</option>-->
+                    <!--<option value="dark">dark</option>-->
+                <!--</select>-->
+            <!--</form>-->
+            <!--<h2>Coffee Name</h2>-->
+            <!--<input type="text" id="myInput2" placeholder="Coffee Name" title="Type in a name2"><br>-->
+            <!--<input id="submit2" class="btn btn-primary btn-lg btn-block" type="submit"/>-->
+        <!--</div>-->
+    <!--</div>-->
+    <div class="col-sm-12
+                col-md-10
+                col-lg-8">
+        <div class="box">
+            <p id="demo"></p>
+            <div class="container" id="coffees">
+            </div>
+        </div>
+    </div>
+</div>
+<script src="main.js"></script>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+</div>
 </body>
 </html>
