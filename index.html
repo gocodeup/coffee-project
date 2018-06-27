@@ -3,36 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <title>Caffè Fantasia</title>
-    <link rel="stylesheet" href="style.css">
     <meta http-equiv="x-ua-compatible" content="ie=edge"/>
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
           integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"/>
+    <link rel="stylesheet" href="style.css">
 
 </head>
 <body>
-<h1>Coffee!</h1>
+
+<div class="container">
+<h1>Caffè Italia</h1>
 
 
 
 <div class="row">
-    <div class="col-sm-8
-                col-md-6
-                col-lg-4">
-        <div class="box">
-
+    <div class="col-sm-8 col-md-6 col-lg-4">
             <h2>Roast</h2>
-            <form id="1st choice">
-                <label class="renderCoffees"></label>
-                <select id="roast-selection">
+                <select class="form-control" id="roast-selection">
                     <option id="roastchoice" value="light">light</option>
                     <option id="roastchoice" value="medium">medium</option>
                     <option id="roastchoice" value="dark">dark</option>
                 </select>
-            </form>
+
             <h2>Coffee Name</h2>
-            <input type="text" id="myInput" placeholder="Coffee Name" title="Type in a name"><br>
-            <input id="submit" class="btn btn-primary btn-lg btn-block" type="submit"/>
+            <input class="form-control" type="text" id="myInput" placeholder="Coffee Name" title="Type in a name"><br>
+            <input id="submit" class="btn form-control btn-danger btn-lg btn-block" type="submit"/>
         </div>
 
         <!--<div class="box">-->
@@ -70,5 +66,6 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
         integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
         crossorigin="anonymous"></script>
+</div>
 </body>
 </html>
