@@ -4,30 +4,59 @@
     <meta charset="UTF-8">
     <title></title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 </head>
 <body>
-    <h1>Coffee!</h1>
+    <div class="container-fluid">
+        <div class="row text-center">
+            <div class="col-12">
+                <h1>Coffee!</h1>
+            </div>
+        </div>
 
-    <form>
-        <label for="roast-selection"></label>
-        <select id="roast-selection">
-            <option>light</option>
-            <option>medium</option>
-            <option>dark</option>
-        </select>
-        <input id="submit" type="submit" />
-    </form>
+        <div class="row">
+            <div class="col-12">
+                <hr>
+            </div>
+        </div>
 
-    <table>
-        <thead>
-            <tr>
-                <th>ID</th>
-                <th>NAME</th>
-                <th>ROAST</th>
-            </tr>
-        </thead>
-        <tbody id="coffees"></tbody>
-    </table>
+
+
+
+        <div class="row">
+
+            <div class="col-6 coffee-types">
+                <table>
+                    <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>NAME</th>
+                        <th>ROAST</th>
+                    </tr>
+                    </thead>
+                    <tbody id="coffees"></tbody>
+                </table>
+            </div>
+
+            <div class="col-6 drop-down">
+                <form>
+                    <label for="roast-selection"></label>
+                        <select id="roast-selection">
+                            <option>light</option>
+                            <option>medium</option>
+                            <option>dark</option>
+                        </select>
+                    <input id="submit" type="submit" />
+                </form>
+            </div>
+
+
+
+        </div>
+
+
+
+    </div>
 
     <script src="main.js"></script>
 </body>
