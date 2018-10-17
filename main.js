@@ -96,14 +96,19 @@ var addCoffeeSubmitButton = document.querySelector('#addCoffeeSubmit');
 
 function pushNewArray() {
 
-    var addCoffeeRoast = document.querySelector('#AddRoast-selection').value;
-    var addCoffeeName = document.querySelector('#addCoffeeName').value;
-    var addCoffeeRoastArray = [addCoffeeRoast];
-    var addCoffeeNameArray = [addCoffeeName];
-    coffees.roast.push(addCoffeeRoastArray);
-    coffees.name.push(addCoffeeNameArray);
+    var newCoffee = {
+        roast: "",
+        name: "",
+    };
+
+    newCoffee.roast = document.querySelector('#AddRoast-selection').value;
+    newCoffee.name = document.querySelector('#addCoffeeName').value;
+    var addCoffeeRoastArray = [newCoffee.roast];
+    var addCoffeeNameArray = [newCoffee.name];
+    var combinedCoffee = addCoffeeRoastArray.concat(addCoffeeNameArray);
+    coffees.push(combinedCoffee);
+    document.getElementById('myInnerTable')
 }
 
 addCoffeeSubmitButton.oninput = pushNewArray;
 
-console.log(pushNewArray());
