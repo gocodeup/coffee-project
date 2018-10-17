@@ -48,20 +48,17 @@ function monitorCoffee() {
 }
 ////////////////////////////////////////////////////////////
 ////ADD NEW COFFEE
-function createCoffee() {
-    var newId = (coffees.length + 1);
 
-    console.log(newCoffee);
-    return {id: newId, name: newCoffee.value, roast: newRoast.value};
-}
 function addCoffee(e) {
     e.preventDefault();
-    var newCoffee = createCoffee();
+    var newId = (coffees.length + 1);
+    var newCoffee = {id: newId, name: capCoffee(), roast: newRoast.value};
     coffees.push(newCoffee);
     console.log(coffees);
     console.log(newCoffee);
-    var upperCoffee = capCoffee();
+    tbody.innerHTML = renderCoffees(coffees);
 }
+
 function capCoffee() {
     var coffeeSplit = newCoffee.value.split(" ");
     coffeeSplit[0] = coffeeSplit[0].charAt(0).toUpperCase() + coffeeSplit[0].slice(1);
@@ -86,8 +83,6 @@ var coffees = [
     {id: 13, name: 'Italian', roast: 'dark'},
     {id: 14, name: 'French', roast: 'dark'},
 ];
-
-
 
 
 var tbody = document.querySelector('#coffees');
