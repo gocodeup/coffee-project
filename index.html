@@ -7,26 +7,29 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 </head>
 <body>
-    <h1>Coffee!</h1>
+<h1>Coffee!</h1>
+<div class="container">
 
-    <form>
-        <label for="roast-selection"></label>
-        <select id="roast-selection">
-            <option>light</option>
-            <option>medium</option>
-            <option>dark</option>
-        </select>
-        <input id="submit" type="submit" />
-    </form>
+    <div class="row">
+        <div class="column-lg-6">
+            <table>
+                <tbody id="coffees"></tbody>
+            </table>
+        </div>
+        <div class="column-lg-6">
 
-    <table>
-
-
-
-
-        <tbody id="coffees"></tbody>
-    </table>
-
-    <script src="main.js"></script>
+            <form>
+                <label for="roast-selection"></label>
+                <select id="roast-selection">
+                    <option>light</option>
+                    <option>medium</option>
+                    <option>dark</option>
+                </select>
+                <input id="submit" type="submit"/>
+            </form>
+        </div>
+    </div>
+</div>
+<script src="main.js"></script>
 </body>
 </html>
