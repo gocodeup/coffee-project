@@ -2,14 +2,13 @@
 
 function renderCoffee(coffee) {
     var html = '<tr class="coffee">';
-    html += '<td>' + coffee.id + '</td>';
-    html += '<td>' + coffee.name + '</td>';
-    html += '<td>' + coffee.roast + '</td>';
-    html += '</tr>';
+    html += '<div>' + coffee.id + '</div>';
+    html += '<div>' + coffee.name + '</div>';
+    html += '<span>' + coffee.roast + '<span>';
+    html += '</div>';
 
     return html;
 }
-
 function renderCoffees(coffees) {
     var html = '';
     for(var i = coffees.length - 1; i >= 0; i--) {
@@ -45,8 +44,11 @@ var coffees = [
     {id: 11, name: 'Espresso', roast: 'dark'},
     {id: 12, name: 'Viennese', roast: 'dark'},
     {id: 13, name: 'Italian', roast: 'dark'},
-    {id: 14, name: 'French', roast: 'dark'},
-];
+    {id: 14, name: 'French', roast: 'dark'}
+].sort(function (index1, index2) {
+    return parseFloat(index2.id - index1.id);
+});
+
 
 var tbody = document.querySelector('#coffees');
 var submitButton = document.querySelector('#submit');
