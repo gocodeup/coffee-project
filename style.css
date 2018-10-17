@@ -9,6 +9,8 @@ td, th {
 }
 p{
     display: inline-block;
+    font-size: 14px;
+    color: grey;
 }
 .container{
     width: 90%;
@@ -17,4 +19,8 @@ p{
 }
 h1{
     text-align: center;
+}
+
+.coffee {
+    font-size: 25px;
 }
