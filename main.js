@@ -34,22 +34,37 @@ function updateCoffees(first) {
 }
 
 
+
+
+//TODO: Fix this VVV //
 function coffeeSearch() {
 
+    // var coffeeNameSearch = document.querySelector("#coffee-name-search input").value;
+    // coffeeNameSearch = coffeeNameSearch.toLowerCase();
+    // var filteredCoffees = [];
+    // coffees.forEach(function (coffee) {
+    //         if (coffee.indexOf(coffeeNameSearch) > -1) {
+    //             filteredCoffees.push(coffee);
+    //         }
+    //         else {
+    //             filteredCoffees = coffees;
+    //         }
+    // })
+    // tbody.innerHTML = renderCoffee(filteredCoffees);
 
     var coffeeNameSearch = document.querySelector("#coffee-name-search input").value;
+    coffeeNameSearch = coffeeNameSearch.toLowerCase();
+    var foundCoffees = [];
 
-    for (var i = 0; i < coffees.length; i++) {
-        var coffeeName = coffees[i].name;
-        if (coffeeName.toLowerCase().indexOf(coffeeNameSearch.toLowerCase()) > -1) {
-            console.log("fix");
-        }
-        else {
-            coffees[i].style.display = "none";
-        }
-    }
-    console.log(coffeeNameSearch);
+    coffees.forEach(function (coffee) {
+    foundCoffees += coffee.filter(inspectCoffee);
+    });
 
+    tbody.innerHTML = renderCoffee(foundCoffees);
+}
+
+function inspectCoffee (search){
+    return coffees.indexOf(coffeeNameSearch) > -1;
 }
 
 
