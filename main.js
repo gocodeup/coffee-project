@@ -1,11 +1,11 @@
-"use strict"
+"use strict";
 //DISPLAYS COFFEE NAMES
 function renderCoffee(coffee) {
-    var html = '<tr class="coffee">';
-    html += '<td>' + coffee.id + '</td>';
-    html += '<td>' + coffee.name + '</td>';
-    html += '<td>' + coffee.roast + '</td>';
-    html += '</tr>';
+    var html = '<div class="coffee">';
+    // html += '<div class="col-6">' + coffee.id + '</div>';
+    html += '<div class="col-6">' + coffee.name + '</div>';
+    html += '<div class="col-6">' + coffee.roast + '</div>';
+    html += '</div>';
     return html;
 }
 
@@ -29,7 +29,7 @@ function updateCoffees(e) {
             filteredCoffees.push(coffee);
         }
     });
-    tbody.innerHTML = renderCoffees(filteredCoffees);
+    divCoffees.innerHTML = renderCoffees(filteredCoffees);
 }
 /////////////////////////////////////////////////////////////
 //This function checks the search box and matches the current input
@@ -44,7 +44,7 @@ function monitorCoffee() {
             filteredCoffees.push(coffee);
         }
     });
-    tbody.innerHTML = renderCoffees(filteredCoffees);
+    divCoffees.innerHTML = renderCoffees(filteredCoffees);
 }
 ////////////////////////////////////////////////////////////
 ////ADD NEW COFFEE
@@ -56,7 +56,7 @@ function addCoffee(e) {
     coffees.push(newCoffee);
     console.log(coffees);
     console.log(newCoffee);
-    tbody.innerHTML = renderCoffees(coffees);
+    divCoffees.innerHTML = renderCoffees(coffees);
 }
 
 function capCoffee() {
@@ -87,7 +87,7 @@ var coffees = [
 
 
 
-var tbody = document.querySelector('#coffees');
+var divCoffees = document.querySelector('#coffees');
 var submitButton = document.querySelector('#submit');
 var roastSelection = document.querySelector('#roast-selection');
 var coffeeSelection = document.querySelector('#name-search');
@@ -101,7 +101,7 @@ coffeeSelection.addEventListener('keyup', monitorCoffee);
 submitButton.addEventListener('click', updateCoffees);
 submitCoffee.addEventListener('click', addCoffee);
 
-tbody.innerHTML = renderCoffees(coffees);
+divCoffees.innerHTML = renderCoffees(coffees);
 
 /////////////////////////TRASH BIN/////////////////////////
 
