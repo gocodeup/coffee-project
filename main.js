@@ -54,12 +54,16 @@ function searchCoffees(e) {
 }
 function addNewCoffee (e){
     e.preventDefault();
-    var newCoffee = new Object();
-    newCoffee.name=newCoffeeName.value;
-    newCoffee.roast=newCoffeeRoast.value;
-    newCoffee.id=coffees.length+1;
-    coffees.push(newCoffee);
-    main.innerHTML = renderCoffees(coffees);
+    var newCoffee = {};
+    if (newCoffeeName.value === "") {
+        return "how could you..."
+    } else {
+        newCoffee.name = newCoffeeName.value;
+        newCoffee.roast = newCoffeeRoast.value;
+        newCoffee.id = coffees.length + 1;
+        coffees.push(newCoffee);
+        return main.innerHTML = renderCoffees(coffees);
+    }
 }
 // from http://www.ncausa.org/About-Coffee/Coffee-Roasts-Guide
 var coffees = [

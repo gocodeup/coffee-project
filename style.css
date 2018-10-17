@@ -62,3 +62,23 @@ label{
 .make-a-line {
     border: rgb(157, 205, 138) 1px solid;
 }
+
+.signup {
+    color: rgb(83,163,81);
+}
+
+.signup:hover {
+    color: rgb(83,163,81);
+}
+
+.signup:visited {
+    color: rgb(83,163,81);
+}
+
+.signup:active {
+    color: rgb(83,163,81);
+}
+
+.bg-custom {
+    background: #A4ED95;
+}
