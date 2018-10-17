@@ -1,4 +1,4 @@
-"use strict"
+"use strict";
 
 function renderCoffee(coffee) {
     var html = '<tr class="coffee">';
@@ -18,7 +18,7 @@ function renderCoffees(coffees) {
     return html;
 }
 
-function updateCoffees(first) {
+function updateCoffees() {
     var selectedRoast = roastSelection.value;
     var filteredCoffees = [];
     coffees.forEach(function(coffee) {
@@ -35,58 +35,20 @@ function updateCoffees(first) {
 
 
 
-
-//TODO: Fix this VVV //
 function coffeeSearch() {
-
-    // var coffeeNameSearch = document.querySelector("#coffee-name-search input").value;
-    // coffeeNameSearch = coffeeNameSearch.toLowerCase();
-    // var filteredCoffees = [];
-    // coffees.forEach(function (coffee) {
-    //         if (coffee.indexOf(coffeeNameSearch) > -1) {
-    //             filteredCoffees.push(coffee);
-    //         }
-    //         else {
-    //             filteredCoffees = coffees;
-    //         }
-    // })
-    // tbody.innerHTML = renderCoffee(filteredCoffees);
-
-    var coffeeNameSearch = document.querySelector("#coffee-name-search input").value;
-    coffeeNameSearch = coffeeNameSearch.toLowerCase();
-    var foundCoffees = [];
-
-    coffees.forEach(function (coffee) {
-    foundCoffees += coffee.filter(inspectCoffee);
+    var selectedSearch = nameSelection.value;
+    var filteredCoffees = [];
+    coffees.forEach(function(coffee) {
+        if (coffee.name.toLowerCase().indexOf(selectedSearch) > -1) {
+            filteredCoffees.push(coffee);
+        } else if (selectedSearch === " ") {
+            filteredCoffees = coffees;
+        }
     });
+    tbody.innerHTML = renderCoffees(filteredCoffees);
 
-    tbody.innerHTML = renderCoffee(foundCoffees);
 }
 
-function inspectCoffee (search){
-    return coffees.indexOf(coffeeNameSearch) > -1;
-}
-
-
-//
-// function myFunction() {
-//     // Declare variables
-//     var input, filter, ul, li, a, i;
-//     input = document.getElementById('myInput');
-//     filter = input.value.toUpperCase();
-//     ul = document.getElementById("myUL");
-//     li = ul.getElementsByTagName('li');
-//
-//     // Loop through all list items, and hide those who don't match the search query
-//     for (i = 0; i < li.length; i++) {
-//         a = li[i].getElementsByTagName("a")[0];
-//         if (a.innerHTML.toUpperCase().indexOf(filter) > -1) {
-//             li[i].style.display = "";
-//         } else {
-//             li[i].style.display = "none";
-//         }
-//     }
-// }
 
 
 
@@ -105,13 +67,13 @@ var coffees = [
     {id: 11, name: 'Espresso', roast: 'dark'},
     {id: 12, name: 'Viennese', roast: 'dark'},
     {id: 13, name: 'Italian', roast: 'dark'},
-    {id: 14, name: 'French', roast: 'dark'},
+    {id: 14, name: 'French', roast: 'dark'}
 ];
 
 var tbody = document.querySelector('#coffees');
 // var submitButton = document.querySelector('#submit');
 var roastSelection = document.querySelector('#roast-selection');
-var nameSelection = document.querySelector("#coffee-name-search");
+var nameSelection = document.querySelector("#coffee-name-search input");
 
 tbody.innerHTML = renderCoffees(coffees);
 
