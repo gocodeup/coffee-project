@@ -10,24 +10,29 @@
 </head>
 <body>
     <div class="container">
+
             <div class="justify-content-center my-4 jumbotron jumbotron-fluid pizza">
                 <h1>Coffee!</h1>
             </div>
 
-
+        <div class="row">
+            <main class="col-6" id="coffees"></main>
+            <div class="col-6">
         <form>
-            <label for="roast-selection"></label>
+            <label for="roast-selection">Select Roast</label>
             <select id="roast-selection" class="form-control">
                 <option>Show All</option>
                 <option>Light</option>
                 <option>Medium</option>
                 <option>Dark</option>
             </select>
+            <label for="search">Search Coffee By Name</label>
             <input type="search" id="search" class="search form-control" placeholder="Bean Search">
-            <button id="submit" class="btn btn-success" type="submit">Submit</button>
+            <button id="submit" class="form-control mt-4 btn btn-success" type="submit">Submit</button>
         </form>
+            </div>
 
-        <main id="coffees"></main>
+        </div>
     </div>
 
     <script src="main.js"></script>
