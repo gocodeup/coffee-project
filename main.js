@@ -2,7 +2,7 @@
 
 
 function renderCoffee(coffee) {
-    var html = "<div id='coffee.id'>";
+    var html = "<div id='coffee.id' class='card col-6 float-left menu-item'>";
     if (coffee.roast === "Light"){
         html += "<span class='light'>" + coffee.name + "</span>" + " ";
     } else if (coffee.roast === "Medium"){
