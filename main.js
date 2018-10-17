@@ -6,7 +6,6 @@ function renderCoffee(coffee) {
     html += '<td>' + coffee.name + '</td>';
     html += '<td>' + coffee.roast + '</td>';
     html += '</tr>';
-    sortIt();
     return html;
 }
 
@@ -15,7 +14,6 @@ function renderCoffees(coffees) {
     for(var i = coffees.length - 1; i >= 0; i--) {
         html += renderCoffee(coffees[i]);
     }
-    sortIt();
     return html;
 }
 
@@ -38,7 +36,6 @@ function updateCoffees(e) {
 // to update the list of coffees displayed
 function monitorCoffee() {
     var coffeeName = new RegExp('^' + coffeeSelection.value);
-    // var coffeeName = coffeeSelection.value;
     var filteredCoffees = [];
     var coffeeNameLower;
     coffees.forEach(function(coffee) {
@@ -69,6 +66,7 @@ function capCoffee() {
     return coffeeSplit.join(" ");
 }
 
+
 // from http://www.ncausa.org/About-Coffee/Coffee-Roasts-Guide
 var coffees = [
     {id: 1, name: 'Light City', roast: 'light'},
@@ -87,13 +85,6 @@ var coffees = [
     {id: 14, name: 'French', roast: 'dark'},
 ];
 
-// for(var i = 0; i < coffees.length; i++) {
-    function sortIt(a, b) {
-        var coffee1 = a.id;
-        var coffee2 = b.id;
-
-    }
-// }
 
 
 var tbody = document.querySelector('#coffees');
@@ -112,27 +103,13 @@ submitCoffee.addEventListener('click', addCoffee);
 
 tbody.innerHTML = renderCoffees(coffees);
 
-/////////////////////////TRASH BIN
-// function monitorCoffee() {
-//     var coffeeName = new RegExp('^' + coffeeSelection.value);
-//     var whitespace = /\s/;
-//     // var coffeeName = coffeeSelection.value;
-//     var filteredCoffees = [];
-//     var coffeeNameLower;
-//     coffees.forEach(function(coffee) {
-//         coffeeNameLower = coffee.name.toLowerCase();
-//         var coffeeNameArr;
-//         var coffeeNameLower2;
-//         if(coffeeNameLower.search(whitespace) > -1){
-//             coffeeNameArr = coffeeNameLower.split(' ');
-//             // var coffeeNameLower1 = coffeeNameArr[0];
-//             coffeeNameLower2 = coffeeNameArr[1];
-//             // console.log(coffeeNameLower1);
-//             // console.log(coffeeNameLower2);
-//         }
-//         if ((coffeeNameLower.search(coffeeName) > -1) || (coffeeNameLower2.search(coffeeName) > -1)) {
-//             filteredCoffees.push(coffee);
-//         }
-//     });
-//     tbody.innerHTML = renderCoffees(filteredCoffees);
+/////////////////////////TRASH BIN/////////////////////////
+
+//FUNCTION BETA TO SORT COFFEE ARRAY
+// function sortCoffees(){
+//     coffees.sort(function(a, b){return a.id - b.id});
+//     renderCoffees();
 // }
+
+//call after coffees is called
+// console.log(sortCoffees());
