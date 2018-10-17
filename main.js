@@ -22,13 +22,57 @@ function updateCoffees(first) {
     var selectedRoast = roastSelection.value;
     var filteredCoffees = [];
     coffees.forEach(function(coffee) {
-        if (coffee.roast === selectedRoast) {
+        if (selectedRoast === "all") {
+            filteredCoffees = coffees;
+        } else if (coffee.roast === selectedRoast) {
             filteredCoffees.push(coffee);
+
         }
     });
     tbody.innerHTML = renderCoffees(filteredCoffees);
 
 }
+
+
+function coffeeSearch() {
+
+
+    var coffeeNameSearch = document.querySelector("#coffee-name-search input").value;
+
+    for (var i = 0; i < coffees.length; i++) {
+        var coffeeName = coffees[i].name;
+        if (coffeeName.toLowerCase().indexOf(coffeeNameSearch.toLowerCase()) > -1) {
+            console.log("fix");
+        }
+        else {
+            coffees[i].style.display = "none";
+        }
+    }
+    console.log(coffeeNameSearch);
+
+}
+
+
+//
+// function myFunction() {
+//     // Declare variables
+//     var input, filter, ul, li, a, i;
+//     input = document.getElementById('myInput');
+//     filter = input.value.toUpperCase();
+//     ul = document.getElementById("myUL");
+//     li = ul.getElementsByTagName('li');
+//
+//     // Loop through all list items, and hide those who don't match the search query
+//     for (i = 0; i < li.length; i++) {
+//         a = li[i].getElementsByTagName("a")[0];
+//         if (a.innerHTML.toUpperCase().indexOf(filter) > -1) {
+//             li[i].style.display = "";
+//         } else {
+//             li[i].style.display = "none";
+//         }
+//     }
+// }
+
 
 
 // from http://www.ncausa.org/About-Coffee/Coffee-Roasts-Guide
@@ -52,10 +96,12 @@ var coffees = [
 var tbody = document.querySelector('#coffees');
 // var submitButton = document.querySelector('#submit');
 var roastSelection = document.querySelector('#roast-selection');
+var nameSelection = document.querySelector("#coffee-name-search");
 
 tbody.innerHTML = renderCoffees(coffees);
 
 roastSelection.onchange = updateCoffees;
 
+nameSelection.oninput = coffeeSearch;
 
 // submitButton.addEventListener('click', updateCoffees);
