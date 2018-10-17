@@ -11,21 +11,44 @@
 <div class="container">
 
     <div class="row">
-        <div class="column-lg-6">
+        <div class="col-sm">
             <table>
                 <tbody id="coffees"></tbody>
             </table>
         </div>
-        <div class="column-lg-6">
+        <div class="col-sm">
 
             <form>
-                <label for="roast-selection"></label>
+                <label for="roast-selection">Roast</label>
+                <br>
                 <select id="roast-selection">
                     <option>light</option>
                     <option>medium</option>
                     <option>dark</option>
                 </select>
+                <br>
+                <label for="coffee-search">Coffee Name</label>
+                <br>
+                <input id="coffee-search" type="text">
+                <br>
                 <input id="submit" type="submit"/>
+            </form>
+            <hr>
+            <h2>Add a coffee</h2>
+            <form>
+                <label for="AddRoast-selection">Roast</label>
+                <br>
+                <select id="AddRoast-selection">
+                    <option>light</option>
+                    <option>medium</option>
+                    <option>dark</option>
+                </select>
+                <br>
+                <label for="AddCoffeeName">Coffee Name</label>
+                <br>
+                <input id="AddCoffeeName" type="text">
+                <br>
+                <input id="AddCoffeeSubmit" type="submit"/>
             </form>
         </div>
     </div>

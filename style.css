@@ -10,3 +10,11 @@ td, th {
 p{
     display: inline-block;
 }
+.container{
+    width: 90%;
+    margin-left: 0;
+    margin-right: 0;
+}
+h1{
+    text-align: center;
+}
