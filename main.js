@@ -1,12 +1,12 @@
 "use strict";
 
 function renderCoffee(coffee) {
-    var html = '<tr class="coffee">';
-    //html += '<td>' + coffee.id + '</td>';
-    html += '<h1>' + coffee.name + '</h1>';
+    var html = '<div class="coffee col-3 rounded-circle text-center">';
+    html += '<span class="m-2">';
+    html += '<h1 class="p-2">' + coffee.name + '</h1>';
     html += '<p>' + coffee.roast + '</p>';
-    // html += '</tr>';
-
+    html += '</span>';
+    html += '</div>';
     return html;
 }
 
@@ -36,10 +36,13 @@ function updateCoffees() {
 
 
 function coffeeSearch() {
+    var selectedRoast = roastSelection.value;
     var selectedSearch = nameSelection.value;
     var filteredCoffees = [];
     coffees.forEach(function(coffee) {
-        if (coffee.name.toLowerCase().indexOf(selectedSearch) > -1) {
+        if (coffee.name.toLowerCase().indexOf(selectedSearch) > -1 && selectedRoast === "all") {
+            filteredCoffees.push(coffee);
+        } else if (coffee.name.toLowerCase().indexOf(selectedSearch) > -1 && coffee.roast === selectedRoast) {
             filteredCoffees.push(coffee);
         } else if (selectedSearch === " ") {
             filteredCoffees = coffees;
