@@ -18,14 +18,10 @@
         <!--<input id="coffeeName" name="username" type="text">-->
         <!--<input id="submit" type="submit" />-->
     <!--</form>-->
-<div class="col-xs-6 w-50">
-    <table>
-        <thead>
-            <tr>
-            </tr>
-        </thead>
-        <tbody id="coffees"></tbody>
-    </table>
+<div class="col-xs-6 w-50" id="coffees">
+
+
+
 </div>
         <div class="col-xs-6 w-50">
             <form>
@@ -33,6 +29,7 @@
                 <p>
                 <label for="roast-selection"></label>
                 <select id="roast-selection">
+                    <option>all</option>
                     <option>light</option>
                     <option>medium</option>
                     <option>dark</option>
@@ -48,8 +45,31 @@
                 <input id="submit" type="submit"/>
                 </p>
             </form>
+            <hr class="w-100">
 
             <h2>Add a Coffee</h2>
+
+            <form>
+                <div class="font-weight-bold">Roast</div>
+                <p>
+                    <label for="roast-selection"></label>
+                    <select id="roast-creation">
+                        <option>all</option>
+                        <option>light</option>
+                        <option>medium</option>
+                        <option>dark</option>
+                    </select>
+                </p>
+                <div class="font-weight-bold">
+                    <label for="coffeeName">Coffee Name</label>
+                </div>
+                <p>
+                    <input id="coffeeCreateName" name="username" type="text">
+                </p>
+                <p>
+                    <input id="submitCreate" type="submit"/>
+                </p>
+            </form>
 
         </div>
 
