@@ -1,4 +1,7 @@
-
+@font-face {
+    font-family: haunted;
+    src: url("Butter Haunted.otf");
+}
 /*Entire Page*/
 
 
@@ -6,3 +9,26 @@ body {
     background: -webkit-linear-gradient(to right, #0b0a0b, #eb7d00, #0b0a0b);
     background: linear-gradient(to right, #0b0a0b, #eb7d00, #0b0a0b);
 }
+
+.coffee {
+    background-image: url("kisspng-jack-o-lantern-halloween-pumpkin-clip-art-halloween-pumpkins-5ae0838e56d725.0645269615246631823557.png");
+    background-size: cover;
+    /*background-color: rgba(0,0,0, 0.5);*/
+}
+
+h1.killer {
+    font-family: "haunted";
+    margin:100px auto;
+    width:25%;
+    font-size: 70px;
+    transition:all 3s ease-in-out;
+    -webkit-transition:all 3s ease-in-out;
+    -moz-transition:all 3s ease-in-out;
+    -o-transition:all 15s ease-in-out;
+    color:white;
+    text-shadow: 0px 0px 5px #888;
+}
+h1.killer:hover {
+    text-shadow: 0px 1px red, 0px 2px red, 0px 3px red, 0px 4px red, 0px 5px red, 0px 6px red, 0px 7px red, 0px 8px red, 0px 9px red, 0px 10px red, 0px 11px red, 0px 12px red, 0px 13px red, 0px 14px red, 0px 15px red, 0px 16px red, 0px 17px red, 0px 18px red, 0px 19px red, 0px 20px red, 0px 21px red, 0px 22px red, 0px 23px red, 0px 24px red, 0px 25px red, 0px 26px red, 0px 27px red, 0px 28px red, 0px 29px red, 0px 30px red;
+}
+
