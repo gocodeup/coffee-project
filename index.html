@@ -8,26 +8,17 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
 </head>
 <body>
-    <h1>Coffee!</h1>
-
-    <form>
-        <label for="roast-selection"></label>
-        <select id="roast-selection">
-            <option>light</option>
-            <option>medium</option>
-            <option>dark</option>
-        </select>
-        <label for="coffeeName">Coffee Name</label>
-        <input id="coffeeName" name="username" type="text" onkeyup="coffeeNameFilter()">
-        <input id="submit" type="submit" />
-    </form>
+<div class ="container">
+    <h1 class="text-center">Coffee!</h1>
+    <hr>
+    <div class="row">
 
     <!--<form>-->
         <!--<label for="coffeeName">Coffee Name</label>-->
         <!--<input id="coffeeName" name="username" type="text">-->
         <!--<input id="submit" type="submit" />-->
     <!--</form>-->
-
+<div class="col-xs-6 w-50">
     <table>
         <thead>
             <tr>
@@ -35,7 +26,36 @@
         </thead>
         <tbody id="coffees"></tbody>
     </table>
+</div>
+        <div class="col-xs-6 w-50">
+            <form>
+                <div class="font-weight-bold">Roast</div>
+                <p>
+                <label for="roast-selection"></label>
+                <select id="roast-selection">
+                    <option>light</option>
+                    <option>medium</option>
+                    <option>dark</option>
+                </select>
+                </p>
+                <div class="font-weight-bold">
+                <label for="coffeeName">Coffee Name</label>
+                </div>
+                <p>
+                <input id="coffeeName" name="username" type="text">
+                </p>
+                <p>
+                <input id="submit" type="submit"/>
+                </p>
+            </form>
 
+            <h2>Add a Coffee</h2>
+
+        </div>
+
+    </div>
+
+</div>
     <script src="main.js"></script>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
