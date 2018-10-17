@@ -2,33 +2,55 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title></title>
+    <title>Coffee Haus</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Domine|Mr+Dafoe" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+
 </head>
 <body>
-    <h1>Coffee!</h1>
+    <div class="container">
 
-    <form>
-        <label for="roast-selection"></label>
-        <select id="roast-selection">
-            <option>light</option>
-            <option>medium</option>
-            <option>dark</option>
-        </select>
-        <input id="submit" type="submit" />
-    </form>
+            <div class="justify-content-center my-4 jumbotron jumbotron-fluid pizza">
+                <h1>Coffee!</h1>
+            </div>
 
-    <table>
-        <thead>
-            <tr>
-                <th>ID</th>
-                <th>NAME</th>
-                <th>ROAST</th>
-            </tr>
-        </thead>
-        <tbody id="coffees"></tbody>
-    </table>
+        <div class="row">
+            <main class="col-7" id="coffees"></main>
+
+            <div class="col-5" id="form-boy">
+        <form>
+            <label for="roast-selection">Select Roast</label>
+            <select id="roast-selection" class="form-control">
+                <option>Show All</option>
+                <option>Light</option>
+                <option>Medium</option>
+                <option>Dark</option>
+            </select>
+            <label for="search">Search Coffee By Name</label>
+            <input type="search" id="search" class="search form-control" placeholder="Bean Search">
+            <button id="submit" class="form-control mt-4 btn btn-success" type="submit">Submit</button>
+        </form>
+                <div class="row make-a-line mt-3"></div>
+                <form action="#">
+                    <label for="roast-suggestion">Select Roast</label>
+                    <select id="roast-suggestion" class="form-control">
+                        <option value="Light">Light</option>
+                        <option value="Medium">Medium</option>
+                        <option value="Dark">Dark</option>
+                    </select>
+                    <label for="suggestion-name">Don't See Your Cup of Joe? Give Us A Suggestion!</label>
+                    <input type="text" id="suggestion-name" class="search form-control" placeholder="Name of Coffee">
+                    <button id="newSuggestion" class="form-control mt-4 btn btn-success" type="submit">Submit</button>
+                </form>
+            </div>
+
+        </div>
+    </div>
 
     <script src="main.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
 </body>
 </html>

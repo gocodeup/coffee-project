@@ -1,3 +1,6 @@
+body {
+    background: #C6FFBA;
+}
 table {
     border-collapse: collapse;
     margin: 15px 0;
@@ -6,4 +9,56 @@ table {
 td, th {
     border: 1px solid black;
     padding: 5px 10px;
+}
+
+h1 {
+    font-family: 'Mr Dafoe', cursive;
+    font-size: 82px;
+    text-align: center;
+    background: rgba(210, 252, 192, .5);
+}
+
+main {
+    font-family: 'Domine', serif;
+    font-size: 24px;
+}
+
+.roast-type {
+    font-size: 12px;
+    color: #595A4A;
+}
+
+.light {
+    color: #CC9557
+}
+
+.medium {
+    color: #BD632F
+}
+
+.dark {
+    color: #432818
+}
+.jumbotron {
+    background-image: url("img/flowercoffee.jpeg");
+    background-size: cover;
+}
+label{
+    font-family: 'Mr Dafoe', cursive;
+    font-size: 24px;
+    position: relative;
+    top: 5px;
+    left: 4px;
+}
+#form-boy {
+    position: relative;
+    top: -14px;
+}
+
+.menu-item {
+    background: #A4ED95;
+}
+
+.make-a-line {
+    border: rgb(157, 205, 138) 1px solid;
 }
