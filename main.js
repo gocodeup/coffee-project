@@ -1,16 +1,16 @@
 "use strict"
 
 function renderCoffee(coffee) {
-    var html ='<div class="coffee col-6 float-left" id="myInnerTable"'+ coffee.id+ '>';
-    html +=  coffee.name +' '+ '<p>' + coffee.roast + '</p>';
-    html += '</div>' ;
+    var html = '<div class="coffee col-6 float-left" id="myInnerTable"' + coffee.id + '>';
+    html += coffee.name + ' ' + '<p>' + coffee.roast + '</p>';
+    html += '</div>';
 
     return html;
 }
 
 function renderCoffees(coffees) {
     var html = '';
-    for(var i = coffees.length - 1; i >= 0; i--) {
+    for (var i = coffees.length - 1; i >= 0; i--) {
         html += renderCoffee(coffees[i]);
     }
     return html;
@@ -20,10 +20,10 @@ function updateCoffeesSearch(e) {
     e.preventDefault(); // don't submit the form, we just want to update the data
     var selectedRoast = searchFilter.value;
     var filteredCoffees = [];
-    coffees.forEach(function(coffee) {
+    coffees.forEach(function (coffee) {
         if (coffee.name.toLowerCase().indexOf(selectedRoast) > -1) {
             filteredCoffees.push(coffee);
-        } else if (selectedRoast === " "){
+        } else if (selectedRoast === " ") {
             filteredCoffees = coffees
         }
     });
@@ -34,7 +34,7 @@ function updateCoffees(e) {
     e.preventDefault(); // don't submit the form, we just want to update the data
     var selectedRoast = roastSelection.value;
     var filteredCoffees = [];
-    coffees.forEach(function(coffee) {
+    coffees.forEach(function (coffee) {
         if (coffee.roast === selectedRoast) {
             filteredCoffees.push(coffee);
         }
@@ -67,12 +67,12 @@ var coffeeSearch = document.querySelector('#coffee');
 
 var coffeeObjectNames =
     function getCoffeeNames() {
-    var i;
-    for (i = 0; i <= coffees.length; i++) {
-        var coffeeNames = coffees[i].name;
-        console.log(coffeeNames);
-    }
-};
+        var i;
+        for (i = 0; i <= coffees.length; i++) {
+            var coffeeNames = coffees[i].name;
+            console.log(coffeeNames);
+        }
+    };
 
 
 tbody.innerHTML = renderCoffees(coffees);
@@ -94,21 +94,16 @@ searchFilter.oninput = updateCoffeesSearch;
 
 var addCoffeeSubmitButton = document.querySelector('#addCoffeeSubmit');
 
-function pushNewArray() {
+addCoffeeSubmitButton.addEventListener('click', function pushNewArray() {
 
-    var newCoffee = {
-        roast: "",
-        name: "",
-    };
+        var newCoffee = {
+            roast: "",
+            name: ""
+        };
 
-    newCoffee.roast = document.querySelector('#AddRoast-selection').value;
-    newCoffee.name = document.querySelector('#addCoffeeName').value;
-    var addCoffeeRoastArray = [newCoffee.roast];
-    var addCoffeeNameArray = [newCoffee.name];
-    var combinedCoffee = addCoffeeRoastArray.concat(addCoffeeNameArray);
-    coffees.push(combinedCoffee);
-    document.getElementById('myInnerTable')
-}
-
-addCoffeeSubmitButton.oninput = pushNewArray;
-
+        newCoffee.roast = document.querySelector('#AddRoast-selection').value;
+        newCoffee.name = document.querySelector('#addCoffeeName').value;
+        var combinedCoffee = newCoffee.name + ' ' + newCoffee.roast;
+        tbody.innerHTML += combinedCoffee;
+    }
+)
