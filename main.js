@@ -1,19 +1,24 @@
 "use strict";
 //DISPLAYS COFFEE NAMES
 function renderCoffee(coffee) {
-    var html = '<div class="coffee">';
+    var html = '<div class="col-6 m-0">';
     // html += '<div class="col-6">' + coffee.id + '</div>';
-    html += '<div class="col-6">' + coffee.name + '</div>';
-    html += '<div class="col-6">' + coffee.roast + '</div>';
+    // html += '<div class="row">';
+    html += '<span class="coffeeName font-weight-bold">' + coffee.name + " " + '</span>';
+    html += '<span class="coffeeRoast font-weight-bold text-black-50">' + coffee.roast + '</span>';
+    // html += '<div class="col-6">' + coffee.roast + '</div>';
+    // html += '</div>';
     html += '</div>';
     return html;
 }
 
 function renderCoffees(coffees) {
     var html = '';
+    html = "<div class='row'>";
     for(var i = coffees.length - 1; i >= 0; i--) {
         html += renderCoffee(coffees[i]);
     }
+    html += "</div>";
     return html;
 }
 

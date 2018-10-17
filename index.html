@@ -14,7 +14,7 @@
 <body>
     <div class="container">
         <div class="row">
-            <div class="col-12">
+            <div class="col-12 text-center">
                 <h1>Coffee!</h1>
                 <hr>
             </div>
@@ -32,31 +32,34 @@
                         </select>
                         <label for="name-search"></label>
                         <input type="text" id="name-search">
-                        <input id="submit" type="submit"/>
+                        <input id="submit" type="submit" class="btn btn-primary btn-lg btn-block">
                     </form>
                 </div>
 
                 <div class="row">
-                    <h1>Add Coffee!</h1>
+                    <div class="col-12"><h1>Add Coffee!</h1></div>
 
                     <form>
                         <label for="add-roast"></label>
-                        <select id="add-roast">
+                        <div class="col-12"><select id="add-roast">
                             <option>light</option>
                             <option>medium</option>
                             <option>dark</option>
-                        </select>
+                        </select></div>
                         <label for="add-coffee"></label>
-                        <input type="text" id="add-coffee">
-                        <input id="submit-coffee" type="submit" />
+                        <input type="text" id="add-coffee" class="form-control form-control-lg">
+                        <input id="submit-coffee" type="submit" class="btn btn-primary btn-lg btn-block">
                     </form>
                 </div>
             </div>
             <!--close of coffee search and add section-->
 
             <div class="col-6" id="coffees">
-                <div class="row">
+                <div class="col-6">
 
+
+                </div>
+                <div class="col-6">
 
                 </div>
                 <!--<div class="row" id="coffees">-->
