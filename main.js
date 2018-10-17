@@ -6,7 +6,7 @@ function renderCoffee(coffee) {
     html += '<td>' + coffee.name + '</td>';
     html += '<td>' + coffee.roast + '</td>';
     html += '</tr>';
-
+    sortIt();
     return html;
 }
 
@@ -15,8 +15,11 @@ function renderCoffees(coffees) {
     for(var i = coffees.length - 1; i >= 0; i--) {
         html += renderCoffee(coffees[i]);
     }
+    sortIt();
     return html;
 }
+
+
 //////////////////////////////////////////////////////
 //UPDATES SEARCH
 function updateCoffees(e) {
@@ -83,6 +86,14 @@ var coffees = [
     {id: 13, name: 'Italian', roast: 'dark'},
     {id: 14, name: 'French', roast: 'dark'},
 ];
+
+// for(var i = 0; i < coffees.length; i++) {
+    function sortIt(a, b) {
+        var coffee1 = a.id;
+        var coffee2 = b.id;
+
+    }
+// }
 
 
 var tbody = document.querySelector('#coffees');
