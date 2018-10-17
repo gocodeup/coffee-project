@@ -1,9 +1,8 @@
-table {
-    border-collapse: collapse;
-    margin: 15px 0;
-}
 
-td, th {
-    border: 1px solid black;
-    padding: 5px 10px;
+/*Entire Page*/
+
+
+body {
+    background: -webkit-linear-gradient(to right, #0b0a0b, #eb7d00, #0b0a0b);
+    background: linear-gradient(to right, #0b0a0b, #eb7d00, #0b0a0b);
 }

@@ -2,33 +2,76 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title></title>
+    <title>Coffee Paired Project</title>
+
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 </head>
 <body>
-    <h1>Coffee!</h1>
 
-    <form>
-        <label for="roast-selection"></label>
-        <select id="roast-selection">
-            <option>light</option>
-            <option>medium</option>
-            <option>dark</option>
-        </select>
-        <input id="submit" type="submit" />
-    </form>
+    <div class="container text-white">
+        <header class="my-5 text-center">
+            <h1>Killer Coffee!</h1>
+        </header>
 
-    <table>
-        <thead>
-            <tr>
-                <th>ID</th>
-                <th>NAME</th>
-                <th>ROAST</th>
-            </tr>
-        </thead>
-        <tbody id="coffees"></tbody>
-    </table>
+        <section class="row">
+            <article class="col-12">
+                <div class="col-4">
+                    <form>
+                        <h3 class="text-center">Search For Coffee</h3>
+                        <div class="ml-5">
+                            <label id="coffee-name-search">Coffee Name
+                                <input type="text">
+                            </label>
+                        </div>
+                        <div class="ml-5">
+                            <label for="roast-selection">Roast</label>
+                            <select id="roast-selection">
+                                <option>all</option>
+                                <option>light</option>
+                                <option>medium</option>
+                                <option>dark</option>
+                            </select>
+                        </div>
+                        <div class="text-center">
+                            <input id="submit" type="submit" class="btn-light rounded px-5"/>
+                        </div>
+                    </form>
+                </div>
+            </article>
+        </section>
+
+        <section class="row">
+            <div id="coffees" class="col-12">
+                <h1 class="coffee_title"></h1>
+                <p id="type_of_roast"></p>
+            </div>
+        </section>
+
+        <section>
+        <form>
+            <label for="roast-addition">Roast</label>
+            <select id="roast-addition">
+                <option>light</option>
+                <option>medium</option>
+                <option>dark</option>
+            </select>
+            <label id="coffee-name-addition">Coffee Name
+                <input type="text">
+            </label>
+            <input id="addition" type="submit" />
+        </form>
+        </section>
+
+
+
+
+    </div>
 
     <script src="main.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
 </body>
 </html>
