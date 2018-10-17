@@ -73,4 +73,4 @@ var searchBox = document.querySelector('#coffeeNameSubmit');
 tbody.innerHTML = renderCoffees(coffees);
 
 submitButton.addEventListener('click', updateCoffees);
-searchBox.addEventListener('click', coffeeNameFilter);
+nameSelection.addEventListener('keypress', updateCoffees);
