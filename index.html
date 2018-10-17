@@ -13,7 +13,7 @@
 
     <div class="row">
         <div class="col-sm">
-            <table>
+            <table id="myTable">
                     <tbody id="coffees"></tbody>
             </table>
         </div>
@@ -28,11 +28,11 @@
                     <option>dark</option>
                 </select>
                 <br>
-                <label for="coffee-search">Coffee Name</label>
+                <label for="myInput">Coffee Name</label>
                 <br>
-                <input id="coffee-search" class="w-100" type="text">
+                <input id="myInput" class="w-100 form-control" type="text">
                 <br>
-                <button id="coffeeSearchSubmit" type="button" class="btn btn-primary w-100 mt-3">Submit</button>
+                <button id="submit" type="submit" class="btn btn-primary w-100 mt-3">Submit</button>
             </form>
             <hr>
             <h2>Add a coffee</h2>
@@ -55,17 +55,6 @@
     </div>
 </div>
 <script src="main.js"></script>
-
-<script>
-    $(document).ready(function(){
-        $("#coffee-search").on("keyup", function() {
-            var value = $(this).val().toLowerCase();
-            $("#myList li").filter(function() {
-                $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
-            });
-        });
-    });
-</script>
 
 
 <!--<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>-->

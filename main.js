@@ -1,9 +1,9 @@
 "use strict"
 
 function renderCoffee(coffee) {
-    var html ='<div class="col-6 float-left" id="coffeeMain">' +'<div class="coffee"'+ coffee.id+ '>';
+    var html ='<div class="coffee col-6 float-left" id="myTable"'+ coffee.id+ '>';
     html +=  coffee.name +' '+ '<p>' + coffee.roast + '</p>';
-    html += '</div>' + '</div>';
+    html += '</div>' ;
 
     return html;
 }
@@ -49,16 +49,12 @@ var coffees = [
 var tbody = document.querySelector('#coffees');
 var submitButton = document.querySelector('#submit');
 var roastSelection = document.querySelector('#roast-selection');
-
+var searchFilter = document.querySelector('#myInput')
 tbody.innerHTML = renderCoffees(coffees);
 
-// submitButton.addEventListener('click', updateCoffees);
 
-// $(document).ready(function(){
-//     $("#coffee-search").on("keyup", function() {
-//         var value = $(this).val().toLowerCase();
-//         $("#coffeeMain div").filter(function() {
-//             $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
-//         });
-//     });
-// });
+
+
+submitButton.addEventListener('click', updateCoffees);
+roastSelection.addEventListener('change', updateCoffees);
+// searchFilter.addEventListener('keypress', updateCoffees)
