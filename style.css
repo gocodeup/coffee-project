@@ -1,3 +1,6 @@
+body {
+    background: #C6FFBA;
+}
 table {
     border-collapse: collapse;
     margin: 15px 0;
@@ -6,4 +9,31 @@ table {
 td, th {
     border: 1px solid black;
     padding: 5px 10px;
+}
+
+h1 {
+    font-family: 'Mr Dafoe', cursive;
+    font-size: 82px;
+}
+
+main {
+    font-family: 'Domine', serif;
+    font-size: 24px;
+}
+
+.roast-type {
+    font-size: 12px;
+    color: #595A4A;
+}
+
+.light {
+    color: #CC9557
+}
+
+.medium {
+    color: #BD632F
+}
+
+.dark {
+    color: #432818
 }
