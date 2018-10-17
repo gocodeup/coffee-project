@@ -92,15 +92,16 @@ submitButton.addEventListener('click', updateCoffees);
 roastSelection.addEventListener('change', updateCoffees);
 searchFilter.oninput = updateCoffeesSearch;
 
-var addCoffeeRoast = document.querySelector('#AddRoast-selection').value;
-var addCoffeeName = document.querySelector('#addCoffeeName').value;
-var addCoffeeRoastArray = [addCoffeeRoast];
-var addCoffeeNameArray = [addCoffeeName];
 var addCoffeeSubmitButton = document.querySelector('#addCoffeeSubmit');
 
 function pushNewArray() {
-    coffees.push.roast(addCoffeeRoastArray);
-    coffees.push.name(addCoffeeNameArray);
+
+    var addCoffeeRoast = document.querySelector('#AddRoast-selection').value;
+    var addCoffeeName = document.querySelector('#addCoffeeName').value;
+    var addCoffeeRoastArray = [addCoffeeRoast];
+    var addCoffeeNameArray = [addCoffeeName];
+    coffees.roast.push(addCoffeeRoastArray);
+    coffees.name.push(addCoffeeNameArray);
 }
 
 addCoffeeSubmitButton.oninput = pushNewArray;
