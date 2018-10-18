@@ -1,9 +1,9 @@
 "use strict";
 
 function renderCoffee(coffee) {
-    var html = '<div class="coffee">';
-    html += '<h3>' + coffee.name + '</h3>';
-    html += '<p>' + coffee.roast + '</p>';
+    var html = '<div class="coffee col-6 m-0">';
+    html += '<span class="">' + coffee.name + '</span>';
+    html += '<span class="">' + coffee.roast + '</span>';
     html += '</div>';
 
     return html;
@@ -11,9 +11,11 @@ function renderCoffee(coffee) {
 
 function renderCoffees(coffees) {
     var html = '';
+    html = "<div class='row'>";
     for(var i = 0; i <= coffees.length - 1; i++) {
         html += renderCoffee(coffees[i]);
     }
+    html += "</div>";
     return html;
 }
 
