@@ -9,24 +9,22 @@
 </head>
 <body>
 
-    <div class="container">
+    <div class="container pb-4">
         <header class="my-5 text-center">
             <h1 class="killer">Killer Coffee!</h1>
         </header>
 
         <section class="row">
             <article class="col-12">
-                <div class="col-4">
+                <div>
                     <form>
                         <h3 class="text-center">Search For Coffee</h3>
-                        <div class="ml-5">
+                        <div class="text-center">
                             <label id="coffee-name-search">Coffee Name
-                                <input type="text">
+                                <input type="text"  class="text-center">
                             </label>
-                        </div>
-                        <div class="ml-5">
                             <label for="roast-selection">Roast</label>
-                            <select id="roast-selection">
+                            <select id="roast-selection" class="text-center">
                                 <option>all</option>
                                 <option>light</option>
                                 <option>medium</option>
@@ -49,7 +47,8 @@
 
 
         <section>
-        <form>
+        <form class="text-center m-3">
+            <h3> Add a Coffee</h3>
             <label for="roast-addition">Roast</label>
             <select id="roast-addition">
                 <option>light</option>
@@ -63,9 +62,10 @@
         </form>
         </section>
 
+    </div>
 
-
-
+    <div class="container-fluid">
+        <img src="cat_fence.svg" class="w-100">
     </div>
 
     <script src="main.js"></script>
