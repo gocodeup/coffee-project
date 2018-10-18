@@ -32,6 +32,7 @@ function updateCoffees(e) {
     tbody.innerHTML = renderCoffees(filteredCoffees);
 }
 
+<<<<<<< HEAD
 function resetCoffee(e) {
     e.preventDefault(); // don't submit the form, we just want to update the data
     var selectedRoast = roastSelection.value;
@@ -48,6 +49,8 @@ function resetCoffee(e) {
     document.getElementById('coffeeSearch').reset();
 }
 
+=======
+>>>>>>> 8130c4032bc6b82122c4f6155f46ff782af661e5
 function createCoffee(e) {
     e.preventDefault();
     var newCoffee = {};
@@ -56,7 +59,12 @@ function createCoffee(e) {
     newCoffee.roast = coffeeRoast.value;
     coffees.push(newCoffee);
     tbody.innerHTML = renderCoffees(coffees);
+<<<<<<< HEAD
     document.getElementById('coffeeCreation').reset();
+=======
+    var form = document.getElementById("coffeeCreation");
+    form.reset();
+>>>>>>> 8130c4032bc6b82122c4f6155f46ff782af661e5
 }
 
 // function coffeeNameFilter() {
@@ -107,6 +115,7 @@ nameSelection.addEventListener('input', updateCoffees);
 roastSelection.addEventListener('input', updateCoffees);
 submitCreate.addEventListener('click', createCoffee);
 submitButton.addEventListener('click', resetCoffee);
+
 
 
 
