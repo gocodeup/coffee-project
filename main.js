@@ -27,10 +27,9 @@ var coffees = [
 
 
 function renderCoffee(coffee) {
-    var html = '<div class="coffee">';
-    // html += '<td>' + coffee.id + '</td>';
-    html += '<h2>' + coffee.name + '</h2>';
-    html += '<p>' + coffee.roast + '</p>';
+    var html = '<div class="coffee my-3 col-6 d-inline-block">';
+    html += '<h3 class="d-inline mr-2">' + coffee.name + '</h3>';
+    html += '<p class="d-inline text-white">' + coffee.roast + '</p>';
     html += '</div>';
 
     return html;
