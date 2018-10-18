@@ -23,20 +23,8 @@ function renderCoffees(coffees) {
 //UPDATES SEARCH
 function updateCoffees(e) {
     e.preventDefault(); // don't submit the form, we just want to update the data
+
     var selectedRoast = roastSelection.value;
-    var filteredCoffees = [];
-    coffees.forEach(function(coffee) {
-        if (coffee.roast === selectedRoast || selectedRoast === 'all') {
-            filteredCoffees.push(coffee);
-        }
-        // filteredCoffees.sort(compare);
-    });
-    divCoffees.innerHTML = renderCoffees(filteredCoffees);
-}
-/////////////////////////////////////////////////////////////
-//This function checks the search box and matches the current input
-// to update the list of coffees displayed
-function monitorCoffee() {
     var coffeeName = new RegExp('^' + coffeeSelection.value.toLowerCase());
     var filteredCoffees = [];
     var coffeeNameLower;
@@ -44,14 +32,44 @@ function monitorCoffee() {
         coffeeNameLower = coffee.name.toLowerCase();
         var coffeeNameLowerArr = coffeeNameLower.split(' ');
         for(var i = 0; i < coffeeNameLowerArr.length; i++){
-            if(coffeeNameLowerArr[i].search(coffeeName) > -1){
+            //regex is used to check if the string entered by the user matches the beginning of any words present
+            // in the coffee name. If so, that coffee object is added to the list
+            //Added the or for the selectedRoast so that when all is selected
+            // all roasts pop up
+            if ((coffee.roast === selectedRoast || selectedRoast === 'all') && (coffeeNameLowerArr[i].search(coffeeName) > -1)) {
                 filteredCoffees.push(coffee);
                 break;
             }
         }
+
+
+        // filteredCoffees.sort(compare);
     });
     divCoffees.innerHTML = renderCoffees(filteredCoffees);
 }
+/////////////////////////////////////////////////////////////
+//This function checks the search box and matches the current input
+// to update the list of coffees displayed
+// function monitorCoffee() {
+//     var coffeeName = new RegExp('^' + coffeeSelection.value.toLowerCase());
+//     var filteredCoffees = [];
+//     var coffeeNameLower;
+//     coffees.forEach(function(coffee) {
+//         coffeeNameLower = coffee.name.toLowerCase();
+//         var coffeeNameLowerArr = coffeeNameLower.split(' ');
+//         for(var i = 0; i < coffeeNameLowerArr.length; i++){
+//             //regex is used to check if the string entered by the user matches the beginning of any words present
+//             // in the coffee name. If so, that coffee object is added to the list
+//             //Added the or for the selectedRoast so that when all is selected
+//             // all roasts pop up
+//             if ((coffee.roast === selectedRoast || selectedRoast === 'all') && (coffeeNameLowerArr[i].search(coffeeName) > -1)) {
+//                 filteredCoffees.push(coffee);
+//                 break;
+//             }
+//         }
+//     });
+//     divCoffees.innerHTML = renderCoffees(filteredCoffees);
+// }
 
 
 ////////////////////////////////////////////////////////////
@@ -59,6 +77,7 @@ function monitorCoffee() {
 
 function addCoffee(e) {
     e.preventDefault();
+    //if coffee name is not already on the list, it is turned into and object and added to the list
     if(!isInCoffees(newCoffee.value)){
         var newId = (coffees.length + 1);
         var addNewCoffee = {id: newId, name: newCoffee.value, roast: newRoast.value};
@@ -68,15 +87,20 @@ function addCoffee(e) {
 }
 
 function isInCoffees(newCoffeeName) {
+    //Makes sure users don't put too long of a coffee name
     if(newCoffeeName.length >= 21){
         alert('Please choose a name that is under 21 characters');
         return true;
     }
     var coffeeNameForTest = newCoffeeName.toLowerCase().trim();
+
+    //prevents the same name from being repeated even if the two words are separated by a space or special char
     var coffeeNameNoSpaces = coffeeNameForTest.split(/\s*/).join('');
     var coffeeNameNoSpecialChar = coffeeNameNoSpaces.split(/[,.?\*&\^%$#@!()~`+=[{\]};:'"></]/);
     var coffeeStringForTest = coffeeNameNoSpecialChar.join('');
 
+    //checks the array of coffee names against entered input to see if the name
+    // is already on the list
     for(var i = 0; i < coffees.length; i++){
         if(coffees[i].name.toLowerCase().split(' ').join('') === coffeeStringForTest){
             return true;
@@ -114,7 +138,7 @@ var submitCoffee = document.querySelector('#submit-coffee');
 
 
 
-coffeeSelection.addEventListener('keyup', monitorCoffee);
+coffeeSelection.addEventListener('keyup', updateCoffees);
 submitButton.addEventListener('click', updateCoffees);
 roastSelection.addEventListener('change', updateCoffees);
 submitCoffee.addEventListener('click', addCoffee);
