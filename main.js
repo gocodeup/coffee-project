@@ -108,9 +108,4 @@ function pushNewArray() {
         tbody.innerHTML += combinedCoffee;
     }
     //Trying to make the key enter search
-    // searchFilter.addEventListener("keyup", function(event) {
-    //     event.preventDefault();
-    //     if (event.keyCode === 13) {
-    //         submitButton.click();
-    //     }
-    // });
+
