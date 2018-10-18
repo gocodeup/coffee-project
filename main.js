@@ -49,14 +49,12 @@ function monitorCoffee() {
     coffees.forEach(function(coffee) {
         coffeeNameLower = coffee.name.toLowerCase();
         var coffeeNameLowerArr = coffeeNameLower.split(' ');
-        coffeeNameLowerArr.forEach(function (coffeeArrElement) {
-            if (coffeeArrElement.search(coffeeName) > -1) {
+        for(var i = 0; i < coffeeNameLowerArr.length; i++){
+            if(coffeeNameLowerArr[i].search(coffeeName) > -1){
                 filteredCoffees.push(coffee);
+                break;
             }
-        });
-        // if (coffeeNameLower.search(coffeeName) > -1) {
-        //     filteredCoffees.push(coffee);
-        // }
+        }
     });
     divCoffees.innerHTML = renderCoffees(filteredCoffees);
 }
