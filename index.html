@@ -5,12 +5,13 @@
     <title>Coffee Haus</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Domine|Mr+Dafoe" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
 
 </head>
 <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-custom border-top">
-        <a class="navbar-brand" href="#">Coffee Haus</a>
+        <a class="navbar-brand" id="coffee-call" href="#">Coffee Haus</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -31,7 +32,7 @@
                 </li>
             </ul>
             <a href="#" class="nav-link signup">
-                <img src="img/round_account_circle_black_18dp.png" alt="Sign up for our newsletter and coupons!" class="img-nav">
+                <i class="far fa-user mr-2"></i>
                 Sign up
             </a>
         </div>
@@ -44,9 +45,12 @@
             </div>
 
         <div class="row">
-            <main class="col-6" id="coffees"></main>
+            <div class="col-7">
+                <main id="coffees"></main>
+            </div>
 
-            <div class="col-6" id="form-boy">
+
+            <div class="col-5" id="form-boy">
         <form>
             <label for="roast-selection">Select Roast</label>
             <select id="roast-selection" class="form-control">

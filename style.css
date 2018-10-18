@@ -1,4 +1,5 @@
 body {
+    font-family: 'Domine', serif;
     background: #C6FFBA;
 }
 table {
@@ -19,7 +20,6 @@ h1 {
 }
 
 main {
-    font-family: 'Domine', serif;
     font-size: 24px;
 }
 
@@ -29,15 +29,15 @@ main {
 }
 
 .light {
-    color: #CC9557
+    color: #BD632F;
 }
 
 .medium {
-    color: #BD632F
+    color: #603E19;
 }
 
 .dark {
-    color: #432818
+    color: #432818;
 }
 .jumbotron {
     background-image: url("img/flowercoffee.jpeg");
@@ -81,4 +81,9 @@ label{
 
 .bg-custom {
     background: #A4ED95;
+}
+
+#coffee-call {
+    font-family: 'Mr Dafoe', cursive;
+    font-size: 32px;
 }

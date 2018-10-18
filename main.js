@@ -52,11 +52,16 @@ function searchCoffees(e) {
     });
     main.innerHTML = renderCoffees(filteredCoffees);
 }
-function addNewCoffee (e){
+function addNewCoffee (e) {
     e.preventDefault();
     var newCoffee = {};
+    for (var i = 0; i < coffees.length; i++) {
+        if (coffees[i].name === newCoffeeName.value && coffees[i].roast === newCoffeeRoast.value) {
+            return "Not today, Satan...";
+        }
+    }
     if (newCoffeeName.value === "") {
-        return "how could you..."
+        return "how could you...";
     } else {
         newCoffee.name = newCoffeeName.value;
         newCoffee.roast = newCoffeeRoast.value;
