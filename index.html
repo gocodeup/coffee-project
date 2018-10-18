@@ -19,10 +19,10 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item active">
-                    <a class="nav-link" href="#">Order Online <span class="sr-only">(current)</span></a>
+                    <a class="nav-link" href="#">Our Mission </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Menu</a>
+                    <a class="nav-link" href="#">Menu <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
                     <form method="get" class="form-inline my-2 my-lg-0">
@@ -38,7 +38,7 @@
         </div>
     </nav>
 
-    <div class="container">
+    <div class="container mb-3">
 
             <div class="justify-content-center my-4 jumbotron jumbotron-fluid pizza">
                 <h1>Coffee!</h1>
@@ -48,21 +48,24 @@
             <div class="col-7">
                 <div id="cup-size" class="row mb-3">
                     <div class="card coffeeCard bg-light">
-                    <img class="card-img-top" src="img/coffee-cup.png" alt="Card image cap">
+                    <img class="card-img-top" src="img/coffee-cup-s.png" alt="Card image cap">
                     <div class="card-body">
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <h4>Small</h4>
+                        <p class="card-text">Need a little pick me up? Our small size is available at 10oz. and is $2.99!</p>
                     </div>
                 </div>
                     <div class="card coffeeCard bg-light">
-                        <img class="card-img-top" src="img/coffee-cup.png" alt="Card image cap">
+                        <img class="card-img-top" src="img/coffee-cup-m.png" alt="Card image cap">
                         <div class="card-body">
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                            <h4>Medium</h4>
+                            <p class="card-text">Wanna enjoy our coffee for a little while longer? Our medium is available at 16oz. and is $3.99!</p>
                         </div>
                     </div>
                     <div class="card coffeeCard bg-light">
                         <img class="card-img-top" src="img/coffee-cup.png" alt="Card image cap">
                         <div class="card-body">
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                            <h4>Large</h4>
+                            <p class="card-text">Our largest size, as you'd expect is large. It is 24oz, and available for $4.99!</p>
                         </div>
                     </div>
                 </div>
@@ -70,30 +73,46 @@
             </div>
 
 
-            <div class="col-5" id="form-boy">
+            <div class="col-5" id="form-boy mt-3">
         <form>
-            <label for="roast-selection">Select Roast</label>
-            <select id="roast-selection" class="form-control">
-                <option>Show All</option>
-                <option>Light</option>
-                <option>Medium</option>
-                <option>Dark</option>
-            </select>
-            <label for="search">Search Coffee By Name</label>
-            <input type="search" id="search" class="search form-control" placeholder="Bean Search">
-            <button id="submit" class="form-control mt-4 btn btn-success" type="submit">Submit</button>
+            <div class="row card bg-light p-3">
+                <label for="roast-selection">Select Roast</label>
+                <select id="roast-selection" class="form-control">
+                    <option>Show All</option>
+                    <option>Light</option>
+                    <option>Medium</option>
+                    <option>Dark</option>
+                </select>
+                <label for="search">Search Coffee By Name</label>
+                <input type="search" id="search" class="search form-control" placeholder="Bean Search">
+                <button id="submit" class="form-control mt-4 btn btn-success" type="submit">Submit Search</button>
+            </div>
         </form>
-                <div class="row make-a-line mt-3"></div>
                 <form action="#">
-                    <label for="roast-suggestion">Select Roast</label>
-                    <select id="roast-suggestion" class="form-control">
-                        <option value="Light">Light</option>
-                        <option value="Medium">Medium</option>
-                        <option value="Dark">Dark</option>
-                    </select>
-                    <label for="suggestion-name">Don't See Your Cup of Joe? Give Us A Suggestion!</label>
-                    <input type="text" id="suggestion-name" class="search form-control" placeholder="Name of Coffee">
-                    <button id="newSuggestion" class="form-control mt-4 btn btn-success" type="submit">Submit</button>
+                    <div class="row card bg-light p-3">
+                        <label for="roast-suggestion">Select Roast</label>
+                        <select id="roast-suggestion" class="form-control">
+                            <option value="Light">Light</option>
+                            <option value="Medium">Medium</option>
+                            <option value="Dark">Dark</option>
+                        </select>
+                        <label for="suggestion-name">Don't See Your Cup of Joe? Give Us A Suggestion!</label>
+                        <input type="text" id="suggestion-name" class="search form-control" placeholder="Name of Coffee">
+                        <button id="newSuggestion" class="form-control mt-4 btn btn-success" type="submit">Submit Your Suggestion</button>
+                    </div>
+                </form>
+                <form action="#" method="post">
+                    <div class="row card bg-light p-3">
+                        <label for="coffee-order">Select your coffee!</label>
+                        <select name="coffee-order" id="coffee-order" class="form-control"></select>
+                        <label for="size-order">Select your coffee size!</label>
+                        <select name="size-order" id="size-order" class="form-control">
+                            <option>Small</option>
+                            <option>Medium</option>
+                            <option>Large</option>
+                        </select>
+                        <button id="submitOrder" class="form-control mt-4 btn btn-success" type="submit">Submit Your Order</button>
+                    </div>
                 </form>
             </div>
 
