@@ -13,7 +13,7 @@ p{
     color: grey;
 }
 .container{
-    width: 90%;
+    width: 100%;
     margin-left: 0;
     margin-right: 0;
 }
@@ -23,4 +23,13 @@ h1{
 
 .coffee {
     font-size: 25px;
+}
+
+.bgcolor {
+    background: rgb(193, 78, 0);
+    color: rgb(85, 34, 0);
+}
+
+.light-orange {
+    background-color: rgb(212, 149, 106);
 }
