@@ -1,5 +1,6 @@
 body{
     background: #C0B283;
+
 }
 table {
     border-collapse: collapse;
@@ -23,6 +24,9 @@ p{
 h1{
     text-align: center;
 }
+h2 ,form{
+    color: #f4f4f4;
+}
 
 .coffee {
     font-size: 25px;
@@ -35,6 +39,8 @@ h1{
 
 .light-orange {
     background-color: #F4F4F4;
+
+
 }
 .nav-link{
     color: #373737;
