@@ -2,22 +2,16 @@
 //DISPLAYS COFFEE NAMES
 function renderCoffee(coffee) {
     var html = '<div class="col-6 m-0">';
-    // html += '<div class="col-6">' + coffee.id + '</div>';
-    // html += '<div class="row">';
     html += '<span class="coffeeName font-weight-bold text-capitalize">' + coffee.name + " " + '</span>';
     html += '<span class="coffeeRoast font-weight-bold text-black-50 text-capitalize">' + coffee.roast + '</span>';
-    // html += '<div class="col-6">' + coffee.roast + '</div>';
-    // html += '</div>';
     html += '</div>';
     return html;
 }
 
 function renderCoffees(coffees) {
     var html = '';
-    // var list = coffees.sort((a, b) => a.id - b.id).map((coffees, id, array) => coffees.name);
     html = "<div class='row'>";
     for(var i = 0; i < coffees.length ; i++) {
-        // coffees.sort(compare);
         html += renderCoffee(coffees[i]);
     }
     html += "</div>";
@@ -58,14 +52,7 @@ function monitorCoffee() {
     });
     divCoffees.innerHTML = renderCoffees(filteredCoffees);
 }
-function showAll() {
-    divCoffees.innerHTML = renderCoffees(filteredCoffees);
 
-}
-// function splitCoffeeName() {
-//     var coffeeNameArray = coffees.name.split(' ');
-//
-// }
 
 ////////////////////////////////////////////////////////////
 ////ADD NEW COFFEE
@@ -75,9 +62,6 @@ function addCoffee(e) {
     var newId = (coffees.length + 1);
     var addNewCoffee = {id: newId, name: newCoffee.value, roast: newRoast.value};
     coffees.push(addNewCoffee);
-    // console.log(coffees);
-    // console.log(newCoffee);
-    // coffees.sort(compare);
     divCoffees.innerHTML = renderCoffees(coffees);
 }
 
@@ -122,13 +106,3 @@ submitCoffee.addEventListener('click', addCoffee);
 
 divCoffees.innerHTML = renderCoffees(coffees);
 
-/////////////////////////TRASH BIN/////////////////////////
-
-//FUNCTION BETA TO SORT COFFEE ARRAY
-// function sortCoffees(){
-//     coffees.sort(function(a, b){return a.id - b.id});
-//     renderCoffees();
-// }
-
-//call after coffees is called
-// console.log(sortCoffees());
