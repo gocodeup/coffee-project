@@ -59,8 +59,8 @@ function monitorCoffee() {
 function addCoffee(e) {
     e.preventDefault();
     var newId = (coffees.length + 1);
-    var newCoffee = {id: newId, name: capCoffee(), roast: newRoast.value};
-    coffees.push(newCoffee);
+    var addNewCoffee = {id: newId, name: newCoffee.value, roast: newRoast.value};
+    coffees.push(addNewCoffee);
     // console.log(coffees);
     // console.log(newCoffee);
     divCoffees.innerHTML = renderCoffees(coffees);
