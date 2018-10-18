@@ -66,6 +66,14 @@ document.getElementById("addition").addEventListener("click", function(e) {
         roast: newRoast
     };
 
+    for (var i = 0; i < coffees.length; i++) {
+        if (newCoffeeObject.name === coffees[i].name) {
+            return console.log(undefined);
+        } else if (coffees.length === i) {
+            break;
+        }
+    }
+
     coffees.push(newCoffeeObject);
 
 
