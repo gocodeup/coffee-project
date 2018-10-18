@@ -68,9 +68,14 @@ function addCoffee(e) {
 }
 
 function isInCoffees(newCoffeeName) {
+    if(newCoffeeName.length >= 21){
+        alert('Please choose a name that is under 21 characters');
+        return true;
+    }
     var coffeeNameForTest = newCoffeeName.toLowerCase().trim();
-    var coffeeNameForTestArr = coffeeNameForTest.split(/\s*/);
-    var coffeeStringForTest = coffeeNameForTestArr.join('');
+    var coffeeNameNoSpaces = coffeeNameForTest.split(/\s*/).join('');
+    var coffeeNameNoSpecialChar = coffeeNameNoSpaces.split(/[,.?\*&\^%$#@!()~`+=[{\]};:'"></]/);
+    var coffeeStringForTest = coffeeNameNoSpecialChar.join('');
 
     for(var i = 0; i < coffees.length; i++){
         if(coffees[i].name.toLowerCase().split(' ').join('') === coffeeStringForTest){
