@@ -1,9 +1,9 @@
 "use strict";
 
 function renderCoffee(coffee) {
-    var html = '<div class="coffee col-6 m-0">';
-    html += '<span class="">' + coffee.name + '</span>';
-    html += '<span class="">' + coffee.roast + '</span>';
+    var html = '<div class="coffee col-6 mt-2">';
+    html += '<span class="fontSizeCoffee">' + coffee.name + '</span>';
+    html += '<span class="roastFont ml-2">' + coffee.roast + '</span>';
     html += '</div>';
 
     return html;
@@ -61,20 +61,23 @@ function createCoffee(e) {
     document.getElementById('coffeeCreation').reset();
 }
 
-// function coffeeNameFilter() {
-//     var input, filter, h3, a, i;
-//     input = document.getElementById("coffeeNameSubmit");
-//     filter = input.value.toUpperCase();
-//     h3 = document.getElementsByTagName("h3");
-//     for (i = 0; i < h3.length; i++) {
-//         a = h3[i].getElementsByTagName("a")[0];
-//         if (a.innerHTML.toUpperCase().indexOf(filter) > -1) {
-//             h3[i].style.display = "";
-//         } else {
-//             h3[i].style.display = "none";
-//         }
-//     }
-// }
+function deleteCoffee(e) {
+    e.preventDefault();
+    var newCoffees = [];
+    var coffeeToDelete = deleteName.value;
+    coffees.forEach(function (coffee) {
+        if (coffee.name !== coffeeToDelete){
+            newCoffees.push(coffee);
+        }
+    });
+    coffees = newCoffees;
+    tbody.innerHTML = renderCoffees(coffees);
+    document.getElementById('coffeeSearch').reset();
+    var form = document.getElementById("coffeeDelete");
+    form.reset();
+}
+
+
 
 // from http://www.ncausa.org/About-Coffee/Coffee-Roasts-Guide
 var coffees = [
@@ -101,6 +104,8 @@ var nameSelection = document.querySelector('#coffeeName');
 var coffeeRoast = document.querySelector('#roast-creation');
 var coffeeName = document.querySelector('#coffeeCreateName');
 var submitCreate = document.querySelector('#submitCreate');
+var submitDelete = document.querySelector('#submitDelete');
+var deleteName = document.querySelector('#coffeeDeleteName');
 
 tbody.innerHTML = renderCoffees(coffees);
 
@@ -109,6 +114,8 @@ nameSelection.addEventListener('input', updateCoffees);
 roastSelection.addEventListener('input', updateCoffees);
 submitCreate.addEventListener('click', createCoffee);
 submitButton.addEventListener('click', resetCoffee);
+submitDelete.addEventListener('click', deleteCoffee);
+
 
 
 

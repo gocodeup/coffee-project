@@ -25,3 +25,12 @@ td, th {
     color: white;
     height: 33px;
 }
+
+.fontSizeCoffee {
+    font-size: 30px;
+    font-weight: 400;
+}
+
+.roastFont {
+    color: rgb(168, 164, 162);
+}
