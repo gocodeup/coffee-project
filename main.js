@@ -39,6 +39,7 @@ function coffeeSearch() {
 
     var selectedRoast = roastSelection.value;
     var selectedSearch = nameSelection.value;
+    selectedSearch = selectedSearch.toLowerCase();
     var filteredCoffees = [];
     coffees.forEach(function(coffee) {
         if (coffee.name.toLowerCase().indexOf(selectedSearch) > -1 && selectedRoast === "all") {

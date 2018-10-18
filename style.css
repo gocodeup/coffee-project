@@ -23,11 +23,17 @@ body {
  }
 
 .nav_web {
-    transform: rotate(270deg);
+    transform: rotate(272deg);
 }
 .navbar_icon {
     max-width: 50px;
 }
+a span{
+    color: black;
+    background-color: #eb7d00;
+    font-weight: bold;
+}
+
 
 
 h1.killer {
