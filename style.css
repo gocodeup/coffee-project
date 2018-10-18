@@ -1,3 +1,14 @@
 .coffeeName {
     font-size: 1.6em;
 }
+.back-img {
+    background-image: url('img/coffee-cup.jpg');
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: .6;
+
+}
