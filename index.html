@@ -20,9 +20,6 @@
                     <form>
                         <h3 class="text-center">Search For Coffee</h3>
                         <div class="text-center">
-                            <label id="coffee-name-search">Coffee Name
-                                <input type="text"  class="text-center">
-                            </label>
                             <label for="roast-selection">Roast</label>
                             <select id="roast-selection" class="text-center">
                                 <option>all</option>
@@ -30,6 +27,9 @@
                                 <option>medium</option>
                                 <option>dark</option>
                             </select>
+                            <label id="coffee-name-search">Coffee Name
+                                <input type="text"  class="text-center">
+                            </label>
                         </div>
                         <div class="text-center">
                             <input id="submit" type="submit" class="btn-light rounded px-5"/>
@@ -58,7 +58,9 @@
             <label id="coffee-name-addition">Coffee Name
                 <input type="text">
             </label>
-            <button id="addition">Submit</button>
+            <div>
+                <button id="addition" class="btn-light rounded px-5">Submit</button>
+            </div>
         </form>
         </section>
 
