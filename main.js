@@ -1,7 +1,7 @@
 "use strict";
 
 function renderCoffee(coffee) {
-    var html = '<div class="coffee col-xs-3">';
+    var html = '<div class="coffee">';
     html += '<h3>' + coffee.name + '</h3>';
     html += '<p>' + coffee.roast + '</p>';
     html += '</div>';
@@ -31,13 +31,16 @@ function updateCoffees(e) {
     tbody.innerHTML = renderCoffees(filteredCoffees);
 }
 
-function createCoffee() {
+function createCoffee(e) {
+    e.preventDefault();
     var newCoffee = {};
     newCoffee.id = coffees.length + 1;
-    newCoffee.name = coffeeName;
-    newCoffee.roast = coffeeRoast;
+    newCoffee.name = coffeeName.value;
+    newCoffee.roast = coffeeRoast.value;
     coffees.push(newCoffee);
     tbody.innerHTML = renderCoffees(coffees);
+    var form = document.getElementById("coffeeCreation");
+    form.reset();
 }
 
 // function coffeeNameFilter() {
@@ -87,6 +90,7 @@ submitButton.addEventListener('click', updateCoffees);
 nameSelection.addEventListener('input', updateCoffees);
 roastSelection.addEventListener('input', updateCoffees);
 submitCreate.addEventListener('click', createCoffee);
+
 
 
 
