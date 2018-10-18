@@ -59,16 +59,22 @@ function monitorCoffee() {
 
 function addCoffee(e) {
     e.preventDefault();
-    var newId = (coffees.length + 1);
-    var addNewCoffee = {id: newId, name: newCoffee.value, roast: newRoast.value};
-    coffees.push(addNewCoffee);
-    divCoffees.innerHTML = renderCoffees(coffees);
+    if(!isInCoffees(newCoffee.value)){
+        var newId = (coffees.length + 1);
+        var addNewCoffee = {id: newId, name: newCoffee.value, roast: newRoast.value};
+        coffees.push(addNewCoffee);
+        divCoffees.innerHTML = renderCoffees(coffees);
+    }
 }
 
-function compare(a, b){
-    return a.id - b.id;
+function isInCoffees(newCoffeeName) {
+    for(var i = 0; i < coffees.length; i++){
+        if(coffees[i].name.toLowerCase() === newCoffeeName.toLowerCase()){
+            return true;
+        }
+    }
+    return false;
 }
-
 
 // from http://www.ncausa.org/About-Coffee/Coffee-Roasts-Guide
 var coffees = [
