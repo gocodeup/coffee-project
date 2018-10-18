@@ -69,7 +69,7 @@ function addCoffee(e) {
 
 function isInCoffees(newCoffeeName) {
     for(var i = 0; i < coffees.length; i++){
-        if(coffees[i].name === newCoffeeName){
+        if(coffees[i].name.toLowerCase() === newCoffeeName.toLowerCase()){
             return true;
         }
     }
