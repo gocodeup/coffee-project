@@ -7,3 +7,29 @@ td, th {
     border: 1px solid black;
     padding: 5px 10px;
 }
+p{
+    display: inline-block;
+    font-size: 14px;
+    color: grey;
+}
+.container{
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+}
+h1{
+    text-align: center;
+}
+
+.coffee {
+    font-size: 25px;
+}
+
+.bgcolor {
+    background: rgb(193, 78, 0);
+    color: rgb(85, 34, 0);
+}
+
+.light-orange {
+    background-color: rgb(212, 149, 106);
+}
