@@ -68,8 +68,12 @@ function addCoffee(e) {
 }
 
 function isInCoffees(newCoffeeName) {
+    var coffeeNameForTest = newCoffeeName.toLowerCase().trim();
+    var coffeeNameForTestArr = coffeeNameForTest.split(/\s*/);
+    var coffeeStringForTest = coffeeNameForTestArr.join('');
+
     for(var i = 0; i < coffees.length; i++){
-        if(coffees[i].name.toLowerCase() === newCoffeeName.toLowerCase().trim()){
+        if(coffees[i].name.toLowerCase().split(' ').join('') === coffeeStringForTest){
             return true;
         }
     }
