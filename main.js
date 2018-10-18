@@ -29,7 +29,7 @@ function updateCoffees(e) {
         if (coffee.roast === selectedRoast || selectedRoast === 'all') {
             filteredCoffees.push(coffee);
         }
-        filteredCoffees.sort(compare);
+        // filteredCoffees.sort(compare);
     });
     divCoffees.innerHTML = renderCoffees(filteredCoffees);
 }
