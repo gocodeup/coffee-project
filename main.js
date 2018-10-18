@@ -16,7 +16,7 @@ function renderCoffees(coffees) {
     var html = '';
     // var list = coffees.sort((a, b) => a.id - b.id).map((coffees, id, array) => coffees.name);
     html = "<div class='row'>";
-    for(var i = coffees.length - 1; i >= 0; i--) {
+    for(var i = 0; i < coffees.length ; i++) {
         // coffees.sort(compare);
         html += renderCoffee(coffees[i]);
     }
