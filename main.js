@@ -17,6 +17,7 @@ function renderCoffees(coffees) {
     // var list = coffees.sort((a, b) => a.id - b.id).map((coffees, id, array) => coffees.name);
     html = "<div class='row'>";
     for(var i = coffees.length - 1; i >= 0; i--) {
+        // coffees.sort(compare);
         html += renderCoffee(coffees[i]);
     }
     html += "</div>";
@@ -34,6 +35,7 @@ function updateCoffees(e) {
         if (coffee.roast === selectedRoast) {
             filteredCoffees.push(coffee);
         }
+        filteredCoffees.sort(compare);
     });
     divCoffees.innerHTML = renderCoffees(filteredCoffees);
 }
@@ -46,13 +48,22 @@ function monitorCoffee() {
     var coffeeNameLower;
     coffees.forEach(function(coffee) {
         coffeeNameLower = coffee.name.toLowerCase();
-        if (coffeeNameLower.search(coffeeName) > -1) {
-            filteredCoffees.push(coffee);
-        }
+        var coffeeNameLowerArr = coffeeNameLower.split(' ');
+        coffeeNameLowerArr.forEach(function (coffeeArrElement) {
+            if (coffeeArrElement.search(coffeeName) > -1) {
+                filteredCoffees.push(coffee);
+            }
+        });
+        // if (coffeeNameLower.search(coffeeName) > -1) {
+        //     filteredCoffees.push(coffee);
+        // }
     });
     divCoffees.innerHTML = renderCoffees(filteredCoffees);
 }
-
+// function splitCoffeeName() {
+//     var coffeeNameArray = coffees.name.split(' ');
+//
+// }
 
 ////////////////////////////////////////////////////////////
 ////ADD NEW COFFEE
@@ -64,7 +75,12 @@ function addCoffee(e) {
     coffees.push(addNewCoffee);
     // console.log(coffees);
     // console.log(newCoffee);
+    // coffees.sort(compare);
     divCoffees.innerHTML = renderCoffees(coffees);
+}
+
+function compare(a, b){
+    return a.id - b.id;
 }
 
 
@@ -86,11 +102,6 @@ var coffees = [
     {id: 14, name: 'French', roast: 'dark'},
 ];
 
-// function compare(a, b){
-//     return a.id - b.id;
-// }
-//
-// coffees.sort(compare);
 
 var divCoffees = document.querySelector('#coffees');
 var submitButton = document.querySelector('#submit');
