@@ -31,7 +31,14 @@ function updateCoffees(e) {
     tbody.innerHTML = renderCoffees(filteredCoffees);
 }
 
-
+function createCoffee() {
+    var newCoffee = {};
+    newCoffee.id = coffees.length + 1;
+    newCoffee.name = coffeeName;
+    newCoffee.roast = coffeeRoast;
+    coffees.push(newCoffee);
+    tbody.innerHTML = renderCoffees(coffees);
+}
 
 // function coffeeNameFilter() {
 //     var input, filter, h3, a, i;
@@ -81,14 +88,7 @@ nameSelection.addEventListener('input', updateCoffees);
 roastSelection.addEventListener('input', updateCoffees);
 submitCreate.addEventListener('click', createCoffee);
 
-function createCoffee(name,roast) {
-    var newCoffee =  {
-        id: coffees[coffees.length + 2].id,
-        name: name,
-        roast: roast
-    };
-    coffees.push(newCoffee);
-}
+
 
 
 
