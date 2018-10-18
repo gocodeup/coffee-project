@@ -43,7 +43,7 @@ function updateCoffees(e) {
 //This function checks the search box and matches the current input
 // to update the list of coffees displayed
 function monitorCoffee() {
-    var coffeeName = new RegExp('^' + coffeeSelection.value);
+    var coffeeName = new RegExp('^' + coffeeSelection.value.toLowerCase());
     var filteredCoffees = [];
     var coffeeNameLower;
     coffees.forEach(function(coffee) {
