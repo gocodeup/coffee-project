@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+/* TODO IGNORE ME I'M NOT FINISH YET*/
+
+steps = ['Start order', 'Prepare gift', 'Pack gift', 'Decorate box', 'Send gift']
+<div class="progress">
+    <div class="progress_inner">
+        < @steps.each_with_index  do |step, i| %>
+        <div class="progress_inner__step">
+            <label for="step-<%= i + 1 %>">#{step}</label>
+        </div>
+        <% end %>
+        <input checked="checked" id="step-1" name="step" type="radio"></input>
+        <% (1..4).each_with_index  do |i| %>
+        <input id="step-<%= i + 1 %>" name="step" type="radio"></input>
+        <% end %>
+        <div class="progress_inner__bar"></div>
+        <div class="progress_inner__bar--set"></div>
+        <div class="progress_inner__tabs">
+            <% @steps.each_with_index  do |step, i| %>
+            <div class="tab-<%= i %> tab">
+                <h1>#{step}</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris tortor ipsum, eleifend vitae massa non, dignissim finibus eros. Maecenas non eros tristique nisl maximus sollicitudin.</p>
+            </div>
+            <% end %>
+        </div>
+        <div class="progress_inner__status">
+            <div class="box_base"></div>
+            <div class="box_lid"></div>
+            <div class="box_ribbon"></div>
+            <div class="box_bow">
+                <div class="box_bow__left"></div>
+                <div class="box_bow__right"></div>
+            </div>
+            <div class="box_item"></div>
+            <div class="box_tag"></div>
+            <div class="box_string"></div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
