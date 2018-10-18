@@ -91,3 +91,9 @@ label{
 .coffeeCard {
     width: 13.2em;
 }
+.logo-ch{
+    width: 32px;
+    height: 32px;
+    position: relative;
+    top: -4px;
+}
