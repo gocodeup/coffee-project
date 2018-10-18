@@ -1,3 +1,6 @@
+body{
+    background: #C0B283;
+}
 table {
     border-collapse: collapse;
     margin: 15px 0;
@@ -13,9 +16,9 @@ p{
     color: grey;
 }
 .container{
-    width: 90%;
-    margin-left: 0;
-    margin-right: 0;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
 }
 h1{
     text-align: center;
@@ -23,4 +26,27 @@ h1{
 
 .coffee {
     font-size: 25px;
+}
+
+.bgcolor {
+    background: #F4F4F4;
+    color: #C0B283;
+}
+
+.light-orange {
+    background-color: #F4F4F4;
+}
+.nav-link{
+    color: #373737;
+}
+.btn-warning{
+    color: white;
+    background-color: #373737;
+    border-color: #C0B283;
+}
+.btn-warning:hover {
+    background-color: #C0B283;
+}
+.nav-link:hover {
+    color: #C0B283;
 }

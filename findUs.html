@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style type="text/css">
+        #map-canvas {
+            width: 1200px;
+            height: 800px;
+        }
+    </style>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+<nav class="navbar navbar-light bgcolor">
+    <form class="form-inline">
+        <a class="nav-link" href="findUs.html">FIND US <span class="sr-only">(current)</span></a>
+        <a class="nav-link" href="">ABOUT US <span class="sr-only">(current)</span></a>
+    </form>
+    <h3>David Coffee</h3>
+    <form class="form-inline my-2 my-lg-0">
+        <a class="nav-link" href="contactUs.html">CONTACT US <span class="sr-only">(current)</span></a>
+        <a class="nav-link" href="#">JOIN US <span class="sr-only">(current)</span></a>
+    </form>
+</nav>
+<!-- div to hold map -->
+
+<div id="map-canvas" class="container light-orange"></div>
+
+<!-- Load the Google Maps API [DON'T FORGET TO USE A KEY] -->
+
+<script src="https://maps.googleapis.com/maps/api/js?key=????"></script>
+
+<!-- Script to show address on map -->
+<script type="text/javascript">
+    (function() {
+        "use strict";
+
+        // Set our map options
+        var mapOptions = {
+            // Set the zoom level
+            zoom: 19,
+
+            // This sets the center of the map at our location
+            center: {
+                lat:  29.4251,
+                lng: -98.5002
+            }
+        };
+
+
+        // Render the map
+        var map = new google.maps.Map(document.getElementById("map-canvas"), mapOptions);
+        // Create lat and long for our marker position
+        var Resto = { lat: 29.42507, lng: -98.50015 };
+
+// Add the marker to our existing map
+        var marker = new google.maps.Marker({
+            draggable: true,
+            animation: google.maps.Animation.DROP,
+            position: Resto,
+            map: map
+        });
+        // Create a new infoWindow object with content
+
+        var contentString = '<div id="content">'+
+            '<div id="siteNotice">'+
+            '</div>'+
+            '<h1 id="firstHeading" class="firstHeading">David Coffee</h1>'+
+            '<div id="bodyContent">'+
+            '<p><b>our Coffee</b> is a <b>Mexican Resto</b>, is a large ' +
+            'sandstone rock formation in the southern part of the '+
+            'Northern Territory, central Australia. It lies 335&#160;km (208&#160;mi) '+
+            'south west of the nearest large town, Alice Springs; 450&#160;km '+
+            '(280&#160;mi) by road. Kata Tjuta and Uluru are the two major '+
+            'features of the Uluru - Kata Tjuta National Park. Uluru is '+
+            'sacred to the Pitjantjatjara and Yankunytjatjara, the '+
+            'Aboriginal people of the area. It has many springs, waterholes, '+
+            'rock caves and ancient paintings. Uluru is listed as a World '+
+            'Heritage Site.</p>'+
+            '<p>Attribution: Uluru, <a href="https://en.wikipedia.org/w/index.php?title=Uluru&oldid=297882194">'+
+            'https://en.wikipedia.org/w/index.php?title=Uluru</a> '+
+            '(last visited June 22, 2009).</p>'+
+            '</div>'+
+            '</div>';
+
+        var infowindow = new google.maps.InfoWindow({
+            content: contentString
+        });
+// Open the window using our map and marker
+        marker.addListener('click', function () {
+                infowindow.open(map, marker);
+            }
+        )
+
+    })();
+</script>
+</body>

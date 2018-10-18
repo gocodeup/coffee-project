@@ -2,13 +2,23 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title></title>
-    <link rel="stylesheet" href="style.css">
+    <title>Welcome to David coffee</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<h1>Coffee!</h1>
-<div class="container">
+<nav class="navbar navbar-light bgcolor">
+    <form class="form-inline">
+        <a class="nav-link" href="findUs.html">FIND US <span class="sr-only">(current)</span></a>
+        <a class="nav-link" href="">ABOUT US <span class="sr-only">(current)</span></a>
+    </form>
+    <h3>David Coffee</h3>
+    <form class="form-inline my-2 my-lg-0">
+        <a class="nav-link" href="contactUs.html">CONTACT US <span class="sr-only">(current)</span></a>
+        <a class="nav-link" href="#">JOIN US <span class="sr-only">(current)</span></a>
+    </form>
+</nav>
+<div class="container light-orange">
     <hr>
 
     <div class="row">
@@ -32,7 +42,7 @@
                 <br>
                 <input id="myInput" class="w-100 form-control" type="text">
                 <br>
-                <button id="submit" type="submit" class="btn btn-primary w-100 mt-3">Submit</button>
+                <button id="submit" type="submit" class="btn btn-warning w-100 mt-3">Submit</button>
             </form>
             <hr>
             <h2>Add a coffee</h2>
@@ -49,7 +59,7 @@
                 <br>
                 <input id="addCoffeeName" class="w-100"  type="text">
                 <br>
-                <button id="addCoffeeSubmit" type="button" class="btn btn-primary w-100 mt-3">Add</button>
+                <button id="addCoffeeSubmit" type="button" class="btn btn-warning w-100 mt-3 mb-3">Add</button>
             </form>
         </div>
     </div>
