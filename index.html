@@ -4,31 +4,103 @@
     <meta charset="UTF-8">
     <title></title>
     <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+
 </head>
 <body>
-    <h1>Coffee!</h1>
+    <div class="container">
+        <div class="row">
+            <div class="col-12 text-center">
+                <h1>Coffee!</h1>
+                <hr>
+            </div>
+        </div>
 
-    <form>
-        <label for="roast-selection"></label>
-        <select id="roast-selection">
-            <option>light</option>
-            <option>medium</option>
-            <option>dark</option>
-        </select>
-        <input id="submit" type="submit" />
-    </form>
+       <div class="row"> <!--coffee section to search for and or add coffee names-->
+            <div class="col-6">
+                <div class="row">
+                    <div class="col-12">
+                        <form>
+                            <span class="font-weight-bold"><label for="roast-selection">Roast</label></span>
+                            <select id="roast-selection" class="input-group">
+                                <option>light</option>
+                                <option>medium</option>
+                                <option>dark</option>
+                            </select>
+                            <span class="font-weight-bold"><label for="name-search" class="mb-0 mt-2">Coffee Name</label></span>
+                            <input type="text" id="name-search" class="input-group mb-2">
+                            <input id="submit" type="submit" class="btn btn-primary btn-block">
+                            <hr>
+                        </form>
+                    </div>
+                </div>
 
-    <table>
-        <thead>
-            <tr>
-                <th>ID</th>
-                <th>NAME</th>
-                <th>ROAST</th>
-            </tr>
-        </thead>
-        <tbody id="coffees"></tbody>
-    </table>
+                <div class="row">
+                    <div class="col-12 text-center">
+                        <h1>Add a Coffee</h1>
+                    </div>
+
+                    <div class="col-12">
+                        <form>
+                            <span class="font-weight-bold"><label for="add-roast">Roast</label></span>
+                            <select id="add-roast" class="input-group">
+                                <option>light</option>
+                                <option>medium</option>
+                                <option>dark</option>
+                            </select>
+                            <span class="font-weight-bold"><label for="add-coffee" class="mb-0 mt-2">Name</label></span>
+                            <input type="text" id="add-coffee" class="form-control input-group mb-2">
+                            <input id="submit-coffee" type="submit" class="btn btn-primary btn-block">
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <!--close of coffee search and add section-->
+
+            <div class="col-6" id="coffees">
+                <div class="col-6">
+
+
+                </div>
+                <div class="col-6">
+
+                </div>
+                <!--<div class="row" id="coffees">-->
+                    <!--<div class="col-6">-->
+
+                    <!--</div>-->
+                    <!--<div class="col-6">-->
+
+                    <!--</div>-->
+                <!--</div>-->
+
+
+                <!--<table>-->
+                    <!--<thead>-->
+                        <!--<tr>-->
+                            <!--<th>ID</th>-->
+                            <!--<th>NAME</th>-->
+                            <!--<th>ROAST</th>-->
+                        <!--</tr>-->
+                    <!--</thead>-->
+                    <!--<tbody id="coffees"></tbody>-->
+                <!--</table>-->
+            </div>
+
+
+       </div>
+        <!--end of whole coffee section-->
+
+
+    </div>
 
     <script src="main.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
 </body>
 </html>

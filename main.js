@@ -1,23 +1,32 @@
-"use strict"
-
+"use strict";
+//DISPLAYS COFFEE NAMES
 function renderCoffee(coffee) {
-    var html = '<tr class="coffee">';
-    html += '<td>' + coffee.id + '</td>';
-    html += '<td>' + coffee.name + '</td>';
-    html += '<td>' + coffee.roast + '</td>';
-    html += '</tr>';
-
+    var html = '<div class="col-6 m-0">';
+    // html += '<div class="col-6">' + coffee.id + '</div>';
+    // html += '<div class="row">';
+    html += '<span class="coffeeName font-weight-bold text-capitalize">' + coffee.name + " " + '</span>';
+    html += '<span class="coffeeRoast font-weight-bold text-black-50 text-capitalize">' + coffee.roast + '</span>';
+    // html += '<div class="col-6">' + coffee.roast + '</div>';
+    // html += '</div>';
+    html += '</div>';
     return html;
 }
 
 function renderCoffees(coffees) {
     var html = '';
-    for(var i = coffees.length - 1; i >= 0; i--) {
+    // var list = coffees.sort((a, b) => a.id - b.id).map((coffees, id, array) => coffees.name);
+    html = "<div class='row'>";
+    for(var i = 0; i < coffees.length ; i++) {
+        // coffees.sort(compare);
         html += renderCoffee(coffees[i]);
     }
+    html += "</div>";
     return html;
 }
 
+
+//////////////////////////////////////////////////////
+//UPDATES SEARCH
 function updateCoffees(e) {
     e.preventDefault(); // don't submit the form, we just want to update the data
     var selectedRoast = roastSelection.value;
@@ -26,9 +35,54 @@ function updateCoffees(e) {
         if (coffee.roast === selectedRoast) {
             filteredCoffees.push(coffee);
         }
+        filteredCoffees.sort(compare);
     });
-    tbody.innerHTML = renderCoffees(filteredCoffees);
+    divCoffees.innerHTML = renderCoffees(filteredCoffees);
 }
+/////////////////////////////////////////////////////////////
+//This function checks the search box and matches the current input
+// to update the list of coffees displayed
+function monitorCoffee() {
+    var coffeeName = new RegExp('^' + coffeeSelection.value.toLowerCase());
+    var filteredCoffees = [];
+    var coffeeNameLower;
+    coffees.forEach(function(coffee) {
+        coffeeNameLower = coffee.name.toLowerCase();
+        var coffeeNameLowerArr = coffeeNameLower.split(' ');
+        coffeeNameLowerArr.forEach(function (coffeeArrElement) {
+            if (coffeeArrElement.search(coffeeName) > -1) {
+                filteredCoffees.push(coffee);
+            }
+        });
+        // if (coffeeNameLower.search(coffeeName) > -1) {
+        //     filteredCoffees.push(coffee);
+        // }
+    });
+    divCoffees.innerHTML = renderCoffees(filteredCoffees);
+}
+// function splitCoffeeName() {
+//     var coffeeNameArray = coffees.name.split(' ');
+//
+// }
+
+////////////////////////////////////////////////////////////
+////ADD NEW COFFEE
+
+function addCoffee(e) {
+    e.preventDefault();
+    var newId = (coffees.length + 1);
+    var addNewCoffee = {id: newId, name: newCoffee.value, roast: newRoast.value};
+    coffees.push(addNewCoffee);
+    // console.log(coffees);
+    // console.log(newCoffee);
+    // coffees.sort(compare);
+    divCoffees.innerHTML = renderCoffees(coffees);
+}
+
+function compare(a, b){
+    return a.id - b.id;
+}
+
 
 // from http://www.ncausa.org/About-Coffee/Coffee-Roasts-Guide
 var coffees = [
@@ -48,10 +102,30 @@ var coffees = [
     {id: 14, name: 'French', roast: 'dark'},
 ];
 
-var tbody = document.querySelector('#coffees');
+
+var divCoffees = document.querySelector('#coffees');
 var submitButton = document.querySelector('#submit');
 var roastSelection = document.querySelector('#roast-selection');
+var coffeeSelection = document.querySelector('#name-search');
+var newRoast = document.querySelector('#add-roast');
+var newCoffee = document.querySelector('#add-coffee');
+var submitCoffee = document.querySelector('#submit-coffee');
 
-tbody.innerHTML = renderCoffees(coffees);
 
+
+coffeeSelection.addEventListener('keyup', monitorCoffee);
 submitButton.addEventListener('click', updateCoffees);
+submitCoffee.addEventListener('click', addCoffee);
+
+divCoffees.innerHTML = renderCoffees(coffees);
+
+/////////////////////////TRASH BIN/////////////////////////
+
+//FUNCTION BETA TO SORT COFFEE ARRAY
+// function sortCoffees(){
+//     coffees.sort(function(a, b){return a.id - b.id});
+//     renderCoffees();
+// }
+
+//call after coffees is called
+// console.log(sortCoffees());
