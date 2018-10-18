@@ -1,7 +1,7 @@
 "use strict";
 
 function renderCoffee(coffee) {
-    var html = '<div class="coffee col-xs-3">';
+    var html = '<div class="coffee">';
     html += '<h3>' + coffee.name + '</h3>';
     html += '<p>' + coffee.roast + '</p>';
     html += '</div>';
@@ -22,6 +22,7 @@ function updateCoffees(e) {
     var selectedRoast = roastSelection.value;
     var selectedName = nameSelection.value;
     var filteredCoffees = [];
+
     coffees.forEach(function(coffee) {
          if (coffee.name.toLowerCase().indexOf(selectedName.toLowerCase()) > -1 &&
              (coffee.roast === selectedRoast || selectedRoast === 'all')) {
@@ -31,13 +32,31 @@ function updateCoffees(e) {
     tbody.innerHTML = renderCoffees(filteredCoffees);
 }
 
-function createCoffee() {
+function resetCoffee(e) {
+    e.preventDefault(); // don't submit the form, we just want to update the data
+    var selectedRoast = roastSelection.value;
+    var selectedName = nameSelection.value;
+    var filteredCoffees = [];
+
+    coffees.forEach(function(coffee) {
+        if (coffee.name.toLowerCase().indexOf(selectedName.toLowerCase()) > -1 &&
+            (coffee.roast === selectedRoast || selectedRoast === 'all')) {
+            filteredCoffees.push(coffee);
+        }
+    });
+    tbody.innerHTML = renderCoffees(filteredCoffees);
+    document.getElementById('coffeeSearch').reset();
+}
+
+function createCoffee(e) {
+    e.preventDefault();
     var newCoffee = {};
     newCoffee.id = coffees.length + 1;
-    newCoffee.name = coffeeName;
-    newCoffee.roast = coffeeRoast;
+    newCoffee.name = coffeeName.value;
+    newCoffee.roast = coffeeRoast.value;
     coffees.push(newCoffee);
     tbody.innerHTML = renderCoffees(coffees);
+    document.getElementById('coffeeCreation').reset();
 }
 
 // function coffeeNameFilter() {
@@ -87,6 +106,7 @@ submitButton.addEventListener('click', updateCoffees);
 nameSelection.addEventListener('input', updateCoffees);
 roastSelection.addEventListener('input', updateCoffees);
 submitCreate.addEventListener('click', createCoffee);
+submitButton.addEventListener('click', resetCoffee);
 
 
 

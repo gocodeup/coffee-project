@@ -22,13 +22,13 @@
 
 
 
-</div class="col-xs-6 w-50">
+</div>
         <div class="col-xs-6 w-50">
-            <form>
-                <div class="font-weight-bold">Roast</div>
+            <form id="coffeeSearch">
+                <div class="font-weight-bold" style="height: 8px">Roast</div>
                 <p>
                 <label for="roast-selection"></label>
-                <select id="roast-selection">
+                <select id="roast-selection" class ="w-100 roast-selection">
                     <option>all</option>
                     <option>light</option>
                     <option>medium</option>
@@ -39,21 +39,21 @@
                 <label for="coffeeName">Coffee Name</label>
                 </div>
                 <p>
-                <input id="coffeeName" name="username" type="text">
+                <input id="coffeeName" name="username" type="text" class="w-100 rounded coffeeName">
                 </p>
                 <p>
-                <input id="submit" type="submit"/>
+                <input id="submit" type="submit" class="w-100 rounded submit"/>
                 </p>
             </form>
             <hr class="w-100">
 
-            <h2>Add a Coffee</h2>
+            <h2 class="text-center">Add a Coffee</h2>
 
-            <form>
-                <div class="font-weight-bold">Roast</div>
+            <form id="coffeeCreation">
+                <div class="font-weight-bold" style="height: 8px">Roast</div>
                 <p>
                     <label for="roast-creation"></label>
-                    <select id="roast-creation">
+                    <select id="roast-creation" class="w-100 roast-selection">
                         <option>light</option>
                         <option>medium</option>
                         <option>dark</option>
@@ -63,10 +63,10 @@
                     <label for="coffeeName">Coffee Name</label>
                 </div>
                 <p>
-                    <input id="coffeeCreateName" name="username" type="text">
+                    <input id="coffeeCreateName" name="username" type="text" class="w-100 rounded coffeeName">
                 </p>
                 <p>
-                    <input id="submitCreate" type="submit"/>
+                    <input id="submitCreate" type="submit" class="w-100 rounded submit"/>
                 </p>
             </form>
 

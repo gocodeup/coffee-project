@@ -7,3 +7,21 @@ td, th {
     border: 1px solid black;
     padding: 5px 10px;
 }
+
+.roast-selection {
+    height: 32px;
+    background-color: white;
+    border: solid lightgray 1px;
+
+}
+
+.coffeeName {
+    border: solid lightgray 1px;
+    height: 30px;
+}
+
+.submit {
+    background-color: rgb(54, 139, 198);
+    color: white;
+    height: 33px;
+}
