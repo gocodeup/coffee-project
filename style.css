@@ -55,9 +55,6 @@ label{
     top: -14px;
 }
 
-.menu-item {
-    background: #A4ED95;
-}
 
 .make-a-line {
     border: rgb(157, 205, 138) 1px solid;
@@ -86,4 +83,11 @@ label{
 #coffee-call {
     font-family: 'Mr Dafoe', cursive;
     font-size: 32px;
+}
+#cup-size {
+    position: relative;
+    left: 16px;
+}
+.coffeeCard {
+    width: 13.2em;
 }
