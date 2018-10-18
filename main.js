@@ -4,8 +4,8 @@ function renderCoffee(coffee) {
     var html = '<div class="col-6 m-0">';
     // html += '<div class="col-6">' + coffee.id + '</div>';
     // html += '<div class="row">';
-    html += '<span class="coffeeName font-weight-bold">' + coffee.name + " " + '</span>';
-    html += '<span class="coffeeRoast font-weight-bold text-black-50">' + coffee.roast + '</span>';
+    html += '<span class="coffeeName font-weight-bold text-capitalize">' + coffee.name + " " + '</span>';
+    html += '<span class="coffeeRoast font-weight-bold text-black-50 text-capitalize">' + coffee.roast + '</span>';
     // html += '<div class="col-6">' + coffee.roast + '</div>';
     // html += '</div>';
     html += '</div>';
@@ -51,6 +51,8 @@ function monitorCoffee() {
     });
     divCoffees.innerHTML = renderCoffees(filteredCoffees);
 }
+
+
 ////////////////////////////////////////////////////////////
 ////ADD NEW COFFEE
 
@@ -59,16 +61,9 @@ function addCoffee(e) {
     var newId = (coffees.length + 1);
     var newCoffee = {id: newId, name: capCoffee(), roast: newRoast.value};
     coffees.push(newCoffee);
-    console.log(coffees);
-    console.log(newCoffee);
+    // console.log(coffees);
+    // console.log(newCoffee);
     divCoffees.innerHTML = renderCoffees(coffees);
-}
-
-function capCoffee() {
-    var coffeeSplit = newCoffee.value.split(" ");
-    coffeeSplit[0] = coffeeSplit[0].charAt(0).toUpperCase() + coffeeSplit[0].slice(1);
-    coffeeSplit[1] = coffeeSplit[1].charAt(0).toUpperCase() + coffeeSplit[1].slice(1);
-    return coffeeSplit.join(" ");
 }
 
 
