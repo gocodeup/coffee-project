@@ -93,8 +93,9 @@ roastSelection.addEventListener('change', updateCoffees);
 searchFilter.oninput = updateCoffeesSearch;
 
 var addCoffeeSubmitButton = document.querySelector('#addCoffeeSubmit');
-
-addCoffeeSubmitButton.addEventListener('click', function pushNewArray() {
+addCoffeeSubmitButton.addEventListener('click',pushNewArray)
+addCoffeeSubmitButton.addEventListener('keydown', keyEnter)
+function pushNewArray() {
 
         var newCoffee = {
             roast: "",
@@ -103,7 +104,13 @@ addCoffeeSubmitButton.addEventListener('click', function pushNewArray() {
 
         newCoffee.roast = document.querySelector('#AddRoast-selection').value;
         newCoffee.name = document.querySelector('#addCoffeeName').value;
-        var combinedCoffee = newCoffee.name + ' ' + newCoffee.roast;
+        var combinedCoffee = '<div class="coffee col-6 float-left">'+newCoffee.name + ' ' +'<p>'+ newCoffee.roast+'</p>'+'</div>';
         tbody.innerHTML += combinedCoffee;
     }
-)
+    //Trying to make the key enter search
+    // searchFilter.addEventListener("keyup", function(event) {
+    //     event.preventDefault();
+    //     if (event.keyCode === 13) {
+    //         submitButton.click();
+    //     }
+    // });
