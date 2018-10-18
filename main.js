@@ -14,6 +14,7 @@ function renderCoffee(coffee) {
 
 function renderCoffees(coffees) {
     var html = '';
+    // var list = coffees.sort((a, b) => a.id - b.id).map((coffees, id, array) => coffees.name);
     html = "<div class='row'>";
     for(var i = coffees.length - 1; i >= 0; i--) {
         html += renderCoffee(coffees[i]);
@@ -85,7 +86,11 @@ var coffees = [
     {id: 14, name: 'French', roast: 'dark'},
 ];
 
-
+// function compare(a, b){
+//     return a.id - b.id;
+// }
+//
+// coffees.sort(compare);
 
 var divCoffees = document.querySelector('#coffees');
 var submitButton = document.querySelector('#submit');
