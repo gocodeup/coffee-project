@@ -8,6 +8,9 @@ function renderCoffee(coffee) {
     return html;
 }
 
+//Issue: coffee names were being displayed in on column instead of floating by default
+//Solution: Have the row be a part of the dynamically created code by adding the div tag before
+// and after the for loop of calling renderCoffees executes
 function renderCoffees(coffees) {
     var html = '';
     html = "<div class='row'>";
@@ -23,7 +26,7 @@ function renderCoffees(coffees) {
 //UPDATES SEARCH
 function updateCoffees(e) {
     e.preventDefault(); // don't submit the form, we just want to update the data
-
+    //We grabbed the value of user input with the .value method
     var selectedRoast = roastSelection.value;
     var coffeeName = new RegExp('^' + coffeeSelection.value.toLowerCase());
     var filteredCoffees = [];
@@ -88,7 +91,7 @@ function addCoffee(e) {
 
 function isInCoffees(newCoffeeName) {
     //Makes sure users don't put too long of a coffee name
-    if(newCoffeeName.length >= 21){
+    if(newCoffeeName.length <= 21){
         alert('Please choose a name that is under 21 characters');
         return true;
     }
