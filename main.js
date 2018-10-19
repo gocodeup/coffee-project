@@ -50,29 +50,7 @@ function updateCoffees(e) {
     });
     divCoffees.innerHTML = renderCoffees(filteredCoffees);
 }
-/////////////////////////////////////////////////////////////
-//This function checks the search box and matches the current input
-// to update the list of coffees displayed
-// function monitorCoffee() {
-//     var coffeeName = new RegExp('^' + coffeeSelection.value.toLowerCase());
-//     var filteredCoffees = [];
-//     var coffeeNameLower;
-//     coffees.forEach(function(coffee) {
-//         coffeeNameLower = coffee.name.toLowerCase();
-//         var coffeeNameLowerArr = coffeeNameLower.split(' ');
-//         for(var i = 0; i < coffeeNameLowerArr.length; i++){
-//             //regex is used to check if the string entered by the user matches the beginning of any words present
-//             // in the coffee name. If so, that coffee object is added to the list
-//             //Added the or for the selectedRoast so that when all is selected
-//             // all roasts pop up
-//             if ((coffee.roast === selectedRoast || selectedRoast === 'all') && (coffeeNameLowerArr[i].search(coffeeName) > -1)) {
-//                 filteredCoffees.push(coffee);
-//                 break;
-//             }
-//         }
-//     });
-//     divCoffees.innerHTML = renderCoffees(filteredCoffees);
-// }
+
 
 
 ////////////////////////////////////////////////////////////
