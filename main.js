@@ -121,7 +121,7 @@ function isValidInput(newCoffeeName) {
     var isValid = false;
     //Makes sure users don't put too long of a coffee name and that they enter a string that has at least 3
     //characters and alerts the user if they do
-    if(newCoffeeName <= 21 && newCoffeeName > 3 && isNaN(newCoffeeName)){
+    if(newCoffeeName <= 21 && newCoffeeName >= 3 && isNaN(newCoffeeName)){
         isValid = true;
     } else{
         alert('Please choose a valid name that is between 3 and 21 characters');
