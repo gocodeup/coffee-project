@@ -81,7 +81,7 @@ function updateCoffees(e) {
 function addCoffee(e) {
     e.preventDefault();
     //if coffee name is not already on the list, it is turned into and object and added to the list
-    if(!isInCoffees(newCoffee.value)){
+    if(!isNotInCoffees(newCoffee.value)){
         var newId = (coffees.length + 1);
         var addNewCoffee = {id: newId, name: newCoffee.value, roast: newRoast.value};
         coffees.push(addNewCoffee);
@@ -89,30 +89,47 @@ function addCoffee(e) {
     }
 }
 
-function isInCoffees(newCoffeeName) {
+function isNotInCoffees(newCoffeeName) {
+    var isNotInCoffees = false; //default value
+
+    //Check that user enters valid length of input before proceeding
+    if (isValidInput(newCoffeeName.length)) {
+        //Issue: Coffee Names with extra spaces in the middle or at the end were being treated like new coffees
+        //Solution: Take the input, make it lowercase, trim spaces and take out spaces in between using split
+
+        //This then treats French Roast the same as French       Roast so only one French Roast is added to the list
+
+        //NOTE: Special characters were also not allowed
+        var coffeeNameForTest = newCoffeeName.toLowerCase().trim();
+        var coffeeNameNoSpaces = coffeeNameForTest.split(/\s*/).join(''); //makes an array of the names and then make them into a string with no spaces
+        var coffeeNameNoSpecialChar = coffeeNameNoSpaces.split(/[,.?\*&\^%$#@!()~`+=[{\]};:'"></]/);
+        //splits where ever there's a special character and returns one string without spaces
+
+        var coffeeStringForTest = coffeeNameNoSpecialChar.join('');
+
+        //checks the array of coffee names against entered input to see if the name
+        // is already on the list
+        for (var i = 0; i < coffees.length; i++) {
+            var coffeeObjName = coffees[i].name.toLowerCase().split(' ').join('');//takes the coffee object name and makes it one lowercase string
+            if (coffeeObjName === coffeeStringForTest) {
+                isNotInCoffees = true;
+            }
+        }
+        return isNotInCoffees;
+    }
+}
+
+//////////Checks to see that the string entered is greater than length 3 and under 21 characters
+function isValidInput(newCoffeeNameLength) {
+    var isValid = false;
     //Makes sure users don't put too long of a coffee name and that they enter a string that has at least 3
     //characters and alerts the user if they do
-    if(newCoffeeName.length > 21 || newCoffeeName.length <= 3){
-        alert('Please choose a valid name that is under 21 characters');
-        return true;
+    if(newCoffeeNameLength <= 21 && newCoffeeNameLength > 3){
+        isValid = true;
+    } else{
+        alert('Please choose a valid name that is between 3 and 21 characters');
     }
-
-    //Issue:
-    var coffeeNameForTest = newCoffeeName.toLowerCase().trim();
-
-    //prevents the same name from being repeated even if the two words are separated by a space or special char
-    var coffeeNameNoSpaces = coffeeNameForTest.split(/\s*/).join('');
-    var coffeeNameNoSpecialChar = coffeeNameNoSpaces.split(/[,.?\*&\^%$#@!()~`+=[{\]};:'"></]/);
-    var coffeeStringForTest = coffeeNameNoSpecialChar.join('');
-
-    //checks the array of coffee names against entered input to see if the name
-    // is already on the list
-    for(var i = 0; i < coffees.length; i++){
-        if(coffees[i].name.toLowerCase().split(' ').join('') === coffeeStringForTest){
-            return true;
-        }
-    }
-    return false;
+    return isValid;
 }
 
 // from http://www.ncausa.org/About-Coffee/Coffee-Roasts-Guide
