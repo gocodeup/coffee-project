@@ -81,7 +81,7 @@ function updateCoffees(e) {
 function addCoffee(e) {
     e.preventDefault();
     //if coffee name is not already on the list and is a valid input, it is turned into and object and added to the list
-    if(!isNotInCoffees(newCoffee.value) && isValidInput(newCoffee.value.length)){
+    if(!isNotInCoffees(newCoffee.value) && isValidInput(newCoffee.value)){
         var newId = (coffees.length + 1);
         var addNewCoffee = {id: newId, name: newCoffee.value, roast: newRoast.value};
         coffees.push(addNewCoffee);
@@ -117,11 +117,11 @@ function isNotInCoffees(newCoffeeName) {
 }
 
 //////////Checks to see that the string entered is greater than length 3 and under 21 characters
-function isValidInput(newCoffeeNameLength) {
+function isValidInput(newCoffeeName) {
     var isValid = false;
     //Makes sure users don't put too long of a coffee name and that they enter a string that has at least 3
     //characters and alerts the user if they do
-    if(newCoffeeNameLength <= 21 && newCoffeeNameLength > 3){
+    if(newCoffeeName <= 21 && newCoffeeName > 3 && isNaN(newCoffeeName)){
         isValid = true;
     } else{
         alert('Please choose a valid name that is between 3 and 21 characters');
