@@ -91,7 +91,7 @@ function addCoffee(e) {
 
 function isInCoffees(newCoffeeName) {
     //Makes sure users don't put too long of a coffee name
-    if(newCoffeeName.length <= 21){
+    if(newCoffeeName.length > 21){
         alert('Please choose a name that is under 21 characters');
         return true;
     }
