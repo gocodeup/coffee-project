@@ -50,7 +50,29 @@ function updateCoffees(e) {
     });
     divCoffees.innerHTML = renderCoffees(filteredCoffees);
 }
-
+/////////////////////////////////////////////////////////////
+//This function checks the search box and matches the current input
+// to update the list of coffees displayed
+// function monitorCoffee() {
+//     var coffeeName = new RegExp('^' + coffeeSelection.value.toLowerCase());
+//     var filteredCoffees = [];
+//     var coffeeNameLower;
+//     coffees.forEach(function(coffee) {
+//         coffeeNameLower = coffee.name.toLowerCase();
+//         var coffeeNameLowerArr = coffeeNameLower.split(' ');
+//         for(var i = 0; i < coffeeNameLowerArr.length; i++){
+//             //regex is used to check if the string entered by the user matches the beginning of any words present
+//             // in the coffee name. If so, that coffee object is added to the list
+//             //Added the or for the selectedRoast so that when all is selected
+//             // all roasts pop up
+//             if ((coffee.roast === selectedRoast || selectedRoast === 'all') && (coffeeNameLowerArr[i].search(coffeeName) > -1)) {
+//                 filteredCoffees.push(coffee);
+//                 break;
+//             }
+//         }
+//     });
+//     divCoffees.innerHTML = renderCoffees(filteredCoffees);
+// }
 
 
 ////////////////////////////////////////////////////////////
@@ -58,8 +80,8 @@ function updateCoffees(e) {
 
 function addCoffee(e) {
     e.preventDefault();
-    //if coffee name is not already on the list, it is turned into and object and added to the list
-    if(!isNotInCoffees(newCoffee.value)){
+    //if coffee name is not already on the list and is a valid input, it is turned into and object and added to the list
+    if(!isNotInCoffees(newCoffee.value) && isValidInput(newCoffee.value.length)){
         var newId = (coffees.length + 1);
         var addNewCoffee = {id: newId, name: newCoffee.value, roast: newRoast.value};
         coffees.push(addNewCoffee);
@@ -70,31 +92,28 @@ function addCoffee(e) {
 function isNotInCoffees(newCoffeeName) {
     var isNotInCoffees = false; //default value
 
-    //Check that user enters valid length of input before proceeding
-    if (isValidInput(newCoffeeName.length)) {
-        //Issue: Coffee Names with extra spaces in the middle or at the end were being treated like new coffees
-        //Solution: Take the input, make it lowercase, trim spaces and take out spaces in between using split
+    //Issue: Coffee Names with extra spaces in the middle or at the end were being treated like new coffees
+    //Solution: Take the input, make it lowercase, trim spaces and take out spaces in between using split
 
-        //This then treats French Roast the same as French       Roast so only one French Roast is added to the list
+    //This then treats French Roast the same as French       Roast so only one French Roast is added to the list
 
-        //NOTE: Special characters were also not allowed
-        var coffeeNameForTest = newCoffeeName.toLowerCase().trim();
-        var coffeeNameNoSpaces = coffeeNameForTest.split(/\s*/).join(''); //makes an array of the names and then make them into a string with no spaces
-        var coffeeNameNoSpecialChar = coffeeNameNoSpaces.split(/[,.?\*&\^%$#@!()~`+=[{\]};:'"></]/);
-        //splits where ever there's a special character and returns one string without spaces
+    //NOTE: Special characters were also not allowed
+    var coffeeNameForTest = newCoffeeName.toLowerCase().trim();
+    var coffeeNameNoSpaces = coffeeNameForTest.split(/\s*/).join(''); //makes an array of the names and then make them into a string with no spaces
+    var coffeeNameNoSpecialChar = coffeeNameNoSpaces.split(/[,.?\*&\^%$#@!()~`+=[{\]};:'"></]/);
+    //splits where ever there's a special character and returns one string without spaces
 
-        var coffeeStringForTest = coffeeNameNoSpecialChar.join('');
+    var coffeeStringForTest = coffeeNameNoSpecialChar.join('');
 
-        //checks the array of coffee names against entered input to see if the name
-        // is already on the list
-        for (var i = 0; i < coffees.length; i++) {
-            var coffeeObjName = coffees[i].name.toLowerCase().split(' ').join('');//takes the coffee object name and makes it one lowercase string
-            if (coffeeObjName === coffeeStringForTest) {
-                isNotInCoffees = true;
-            }
+    //checks the array of coffee names against entered input to see if the name
+    // is already on the list
+    for (var i = 0; i < coffees.length; i++) {
+        var coffeeObjName = coffees[i].name.toLowerCase().split(' ').join('');//takes the coffee object name and makes it one lowercase string
+        if (coffeeObjName === coffeeStringForTest) {
+            isNotInCoffees = true;
         }
-        return isNotInCoffees;
     }
+    return isNotInCoffees;
 }
 
 //////////Checks to see that the string entered is greater than length 3 and under 21 characters
