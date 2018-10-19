@@ -90,11 +90,14 @@ function addCoffee(e) {
 }
 
 function isInCoffees(newCoffeeName) {
-    //Makes sure users don't put too long of a coffee name
-    if(newCoffeeName.length > 21){
-        alert('Please choose a name that is under 21 characters');
+    //Makes sure users don't put too long of a coffee name and that they enter a string that has at least 3
+    //characters and alerts the user if they do
+    if(newCoffeeName.length > 21 || newCoffeeName.length <= 3){
+        alert('Please choose a valid name that is under 21 characters');
         return true;
     }
+
+    //Issue:
     var coffeeNameForTest = newCoffeeName.toLowerCase().trim();
 
     //prevents the same name from being repeated even if the two words are separated by a space or special char
