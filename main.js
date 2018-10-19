@@ -88,7 +88,7 @@ function addCoffee(e) {
         divCoffees.innerHTML = renderCoffees(coffees);
     }
 }
-
+///////////////////////////////////////////////////////
 function isNotInCoffees(newCoffeeName) {
     var isNotInCoffees = false; //default value
 
