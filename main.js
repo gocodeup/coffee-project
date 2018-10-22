@@ -110,6 +110,7 @@ var submitCreate = document.querySelector('#submitCreate');
 var submitDelete = document.querySelector('#submitDelete');
 var deleteName = document.querySelector('#coffeeDeleteName');
 
+
 tbody.innerHTML = renderCoffees(JSON.parse(localStorage.getItem('coffee')));
 
 submitButton.addEventListener('click', updateCoffees);
