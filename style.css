@@ -3,15 +3,35 @@ table {
     margin: 15px 0;
 }
 
+body {
+    background: url('/Users/kennethmcinturf/IdeaProjects/codeup-web-exercises/img/coffee.jpg');
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
 td, th {
     border: 1px solid black;
     padding: 5px 10px;
+}
+label{
+    color: #ffc107;
+}
+
+span{
+    text-decoration: green;
+}
+
+.coffees{
+    color: #ffc107;
 }
 
 .roast-selection {
     height: 32px;
     background-color: white;
     border: solid lightgray 1px;
+    color: blue;
 
 }
 
