@@ -1,5 +1,6 @@
 "use strict";
 
+
 function renderCoffee(coffee) {
     var html = '<div class="coffee col-6 mt-2">';
     html += '<span class="fontSizeCoffee">' + coffee.name + '</span>';
@@ -110,6 +111,15 @@ var submitCreate = document.querySelector('#submitCreate');
 var submitDelete = document.querySelector('#submitDelete');
 var deleteName = document.querySelector('#coffeeDeleteName');
 
+// if (localStorage.getItem('coffee') == null){
+//     localStorage.setItem('coffee', coffees)
+// }
+
+function populateStorage() {
+    localStorage.setItem('coffee', JSON.stringify(coffees));
+}
+
+populateStorage();
 
 tbody.innerHTML = renderCoffees(JSON.parse(localStorage.getItem('coffee')));
 
@@ -123,11 +133,7 @@ submitDelete.addEventListener('click', populateStorage);
 submitDelete.addEventListener('click', deleteCoffee);
 
 
-function populateStorage() {
-    localStorage.setItem('coffee', JSON.stringify(coffees));
-}
 
-populateStorage();
 
 
 
@@ -180,6 +186,10 @@ populateStorage();
 // oldItems.push(newItem);
 //
 // localStorage.setItem('itemsArray', JSON.stringify(oldItems));
+
+
+
+
 
 
 

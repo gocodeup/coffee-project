@@ -4,7 +4,7 @@ table {
 }
 
 body {
-    background: url('/Users/kennethmcinturf/IdeaProjects/codeup-web-exercises/img/coffee.jpg');
+    background: url('coffee.jpeg');
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
