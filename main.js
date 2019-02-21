@@ -6,7 +6,7 @@
 function renderCoffee(coffee) {
     var html = '<tr class="coffee">';
     html += '<div class = "container"><div class = "coffee_name"> <h1>' + coffee.name + '</h1> </div>';
-    html += '<div class = "coffee_roast"<p>' + coffee.roast + '</p> </div> </div>';
+    html += '<div class = "coffee_roast"<p>' + "Roast Style: " + coffee.roast + '</p> </div> </div>';
     html += '</tr>';
 
     return html;
@@ -31,7 +31,12 @@ function updateCoffees(e) {
     coffees.forEach(function(coffee) {
         if (coffee.roast === selectedRoast) {
             filteredCoffees.push(coffee);
+        } else if (selectedRoast === "display all") {
+           for (var i = 0; i < (coffees.length); i++) {
+               filteredCoffees.push(coffees[i])
+           }
         }
+
     });
 
     tbody.innerHTML = renderCoffees(filteredCoffees);
@@ -52,8 +57,10 @@ var coffees = [
     {id: 11, name: 'Espresso', roast: 'dark'},
     {id: 12, name: 'Viennese', roast: 'dark'},
     {id: 13, name: 'Italian', roast: 'dark'},
-    {id: 14, name: 'French', roast: 'dark'},
+    {id: 14, name: 'French', roast: 'dark'}
 ];
+
+/*--display all function ---------------------------------------------------------------------------------------- */
 
 
 var tbody = document.querySelector('#coffees');
@@ -65,4 +72,5 @@ var roastSelection = document.querySelector('#roast-selection');
 tbody.innerHTML = renderCoffees(coffees);
 
 submitButton.addEventListener('click', updateCoffees);
+
 
