@@ -8,10 +8,16 @@ td, th {
     padding: 5px 10px;
 }
 
-.coffeeName{
-
-}
 
 .roast {
     color: grey;
+}
+.input{
+    width: 100%;
+    height: 35px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.label{
+    margin-top: 10px;
 }
