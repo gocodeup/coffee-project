@@ -1,23 +1,5 @@
 "use strict"
 
-// function renderCoffee(coffee) {
-//     var html = '<tr class="coffee">';
-//     html += '<td>' + coffee.id + '</td>';
-//     html += '<td>' + coffee.name + '</td>';
-//     html += '<td>' + coffee.roast + '</td>';
-//     html += '</tr>';
-//
-//     return html;
-// }
-
-// function renderCoffees(coffees) {
-//     var html = '';
-//     for(var i = coffees.length - 1; i >= 0; i--) {
-//         html += renderCoffee(coffees[i]);
-//     }
-//     return html;
-// }
-
 function updateCoffees(e) {
     e.preventDefault(); // don't submit the form, we just want to update the data
     var selectedRoast = roastSelection.value;
@@ -105,12 +87,18 @@ function coffeeChoices() {
     }
 }
 
-// function addCoffee(){
-// var userCoffee = document.getElementById("coffeeName2").value;
-// if(document.getElementById("addRoast").value === "light"){
-//     array2.push(userCoffee);
-// }
-//
+function addCoffee() {
+    var userCoffee = document.getElementById("coffeeName2").value;
+    if (document.getElementById("addRoast").value === "light") {
+        array2.push(userCoffee);
+        arrayRoast2.push("light");
+        array0.push(userCoffee);
+        arrayRoast0.push("light");
+        showdisply2.innerHTML = arrayRoast2.join("<br>");
+        showdisply.innerHTML = array2.join("<br>");
+    }
+}
+
 var tbody = document.querySelector('#coffees');
 var submitButton = document.querySelector('#submit');
 var roastSelection = document.querySelector('#roast-selection');
