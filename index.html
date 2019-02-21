@@ -2,33 +2,74 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title></title>
+    <title>LAMPMAN ROASTING CO.</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Coffee!</h1>
 
-    <form>
-        <label for="roast-selection"></label>
-        <select id="roast-selection">
-            <option>light</option>
-            <option>medium</option>
-            <option>dark</option>
-        </select>
-        <input id="submit" type="submit" />
-    </form>
 
-    <table>
-        <thead>
-            <tr>
-                <th>ID</th>
-                <th>NAME</th>
-                <th>ROAST</th>
-            </tr>
-        </thead>
-        <tbody id="coffees"></tbody>
-    </table>
 
+    <div class="container">
+        <div class="row">
+            <h1>LampMan Roast Co.</h1>
+        </div>
+        <div class="row">
+            <div class="col">
+                <table>
+                    <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>NAME</th>
+                        <th>ROAST</th>
+                    </tr>
+                    </thead>
+                    <tbody id="coffees"></tbody>
+                </table>
+            </div>
+            <div class="col">
+                <div class="row">
+                    <form>
+                        <label for="roast-selection">Roast</label>
+                        <select id="roast-selection">
+                            <option>light</option>
+                            <option>medium</option>
+                            <option>dark</option>
+                            <option>all</option>
+                        </select>
+                        <label for="coffee-selection">Coffee Name</label>
+                        <input type="text" id="coffee-selection">
+
+                        <input id="searchSubmit" type="submit">
+                    </form>
+                </div> <!--- end of roast/coffee search --->
+                <div class="row">
+                        <h3>Add a Coffee</h3>
+                    <form>
+                        <label for="newCoffeeRoast">Roast</label>
+                        <select id="newCoffeeRoast">
+                            <option>light</option>
+                            <option>medium</option>
+                            <option>dark</option>
+                            <option>all</option>
+                        </select>
+                        <label for="newCoffeeName">Coffee Name</label>
+                        <input type="text" id="newCoffeeName">
+
+                        <input id="newCoffeeSubmit" type="submit">
+                    </form>
+                </div> <!--- End of Add Coffee --->
+            </div>
+        </div>
+
+
+
+
+
+    </div> <!--- THIS ENDS The Container --->
     <script src="main.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 </body>
 </html>
