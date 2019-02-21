@@ -42,6 +42,20 @@ function updateCoffees(e) {
     tbody.innerHTML = renderCoffees(filteredCoffees);
 }
 
+//Search bar stuff
+
+var userSearch = document.getElementById('search');
+
+console.log(userSearch.value);
+
+document.querySelector('form.search-form').addEventListener('submit', function (e) {
+
+    //prevent the normal submission of the form
+    e.preventDefault();
+
+    console.log(userSearch.value);
+});
+
 // from http://www.ncausa.org/About-Coffee/Coffee-Roasts-Guide
 var coffees = [
     {id: 1, name: 'Light City', roast: 'light'},
