@@ -17,29 +17,54 @@
 <body>
 
     <!-- Navbar -->
-    <nav class="navbar navbar-dark bg-dark expand-md">
+    <nav class="navbar navbar-light bg-light expand-md">
         <div class="container">
             <h1 class="mx-auto">Coffee!</h1>
         </div>
-    </nav>
+    </nav><hr>
 
     <br><br>
 
     <!-- container1 -->
     <div class="cotnainer">
         <div class="row">
-            <div class="col-sm-8 pl-5">
+            <div class="col-sm-6 pl-5">
                <div id="disply"></div>
             </div>
-            <div class="col-sm-4">
+            <div class="col-sm-6">
                 <form>
-                    <label for="roast-selection"></label>
-                    <select id="roast-selection">
-                        <option value="light">light</option>
-                        <option value = "medium">medium</option>
-                        <option value ="dark">dark</option>
-                    </select>
-                    <input onclick="coffeeChoices(this)" id="submit" type="submit" />
+                    <div class="form-group">
+                        <label for="roast-selection">roast</label><br>
+                        <select class="form-contorl custom-select custom-select-md" id="roast-selection">
+                            <option value="light">light</option>
+                            <option value = "medium">medium</option>
+                            <option value ="dark">dark</option>
+                        </select><br>
+                        <label for="coffeeName">Coffee Name</label><br>
+                        <input id="coffeeName" class="form-control">
+                        <input class="btn btn-primary" onclick="coffeeChoices(this)" id="submit" type="submit" /><br><br>
+                        <hr id="hr1">
+                    </div>
+                </form>
+                <form>
+                    <div class="form-group">
+                        <div class="container">
+                            <div class="row">
+                                <div class="mx-auto">
+                                    <h2 class=>Add a Coffee</h2>
+                                </div>
+                            </div>
+                        </div>
+                        <label for="roast-selection">roast</label><br>
+                        <select class="form-contorl custom-select custom-select-md" id="addRoast">
+                            <option value="light">light</option>
+                            <option value = "medium">medium</option>
+                            <option value ="dark">dark</option>
+                        </select><br>
+                        <label for="coffeeName">Name</label><br>
+                        <input id="coffeeName2" class="form-control"><br>
+                        <input class="btn btn-primary" id="submit2" type="submit" /><br><br>
+                    </div>
                 </form>
             </div>
         </div>
