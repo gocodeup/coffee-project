@@ -32,9 +32,7 @@ function updateCoffees(e) {
         if (coffee.roast === selectedRoast) {
             filteredCoffees.push(coffee);
         } else if (selectedRoast === "display all") {
-           for (var i = 0; i < (coffees.length); i++) {
-               filteredCoffees.push(coffees[i])
-           }
+           filteredCoffees = coffees
         }
 
     });
@@ -72,5 +70,7 @@ var roastSelection = document.querySelector('#roast-selection');
 tbody.innerHTML = renderCoffees(coffees);
 
 submitButton.addEventListener('click', updateCoffees);
+
+
 
 
