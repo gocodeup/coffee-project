@@ -8,56 +8,57 @@
 </head>
 <body>
 
-
+<!--top---->
     <div class="container">
         <div class="row">
-            <div class="col"><h1>Coffee!</h1></div>
+            <div class="col text-center"><h1>Coffee!</h1></div>
         </div>
         <div class="row">
             <div class="col"><hr></div>
         </div>
+<!--first-->
 
+
+        <div>
+        <div class="row" id="coffees"><div class="col"></div><div class="col"></div></div>
+        <div class="row" id="coffees"><div class="col"></div><div class="col"></div></div>
+        <div class="row" id="coffees"><div class="col"></div><div class="col"></div></div>
+        <div class="row" id="coffees"><div class="col"></div><div class="col"></div></div>
+        <div class="row" id="coffees"><div class="col"></div><div class="col"></div></div>
+        <div class="row" id="coffees"><div class="col"></div><div class="col"></div></div>
+        <div class="row" id="coffees"><div class="col"></div><div class="col"></div></div>
+        <div class="row" id="coffees"><div class="col"></div><div class="col"></div></div>
+        <div class="row" id="coffees"><div class="col"></div><div class="col"></div></div>
+        <div class="row" id="coffees"><div class="col"></div><div class="col"></div></div>
+        <div class="row" id="coffees"><div class="col"></div><div class="col"></div></div>
+        </div>
+
+
+<!--second-->
         <div class="row">
-            <div class="col-3 bg-info">
-                <div class="row bg-success">r1</div>
-                <div class="row bg-success">r1</div>
-                <div class="row bg-success">r1</div>
-                <div class="row bg-success">r1</div>
-                <div class="row bg-success">r1</div>
-                <div class="row bg-success">r1</div>
-                <div class="row bg-success">r1</div>
-                <div class="row bg-success">r1</div>
-                <div class="row bg-success">r1</div>
-                <div class="row bg-success">r1</div>
-                <div class="row bg-success">r1</div>
-            </div>
-
-            <div class="col-3 bg-info">
-                <div class="row bg-warning">m1</div>
-                <div class="row bg-warning">m1</div>
-                <div class="row bg-warning">m1</div>
-                <div class="row bg-warning">m1</div>
-                <div class="row bg-warning">m1</div>
-                <div class="row bg-warning">m1</div>
-                <div class="row bg-warning">m1</div>
-                <div class="row bg-warning">m1</div>
-                <div class="row bg-warning">m1</div>
-                <div class="row bg-warning">m1</div>
-                <div class="row bg-warning">m1</div>
-            </div>
-
-            <div class="col bg-info">
-                <div class="row bg-primary">l1</div>
-                <div class="row bg-primary">l1</div>
-                <div class="row bg-primary">l1</div>
-                <div class="row bg-primary">l1</div>
-                <div class="row bg-primary">l1</div>
-                <div class="row bg-primary">l1</div>
-                <div class="row bg-primary">l1</div>
-                <div class="row bg-primary">l1</div>
-                <div class="row bg-primary">l1</div>
-                <div class="row bg-primary">l1</div>
-                <div class="row bg-primary">l1</div>
+            <div class="col">
+                <div class="row">Roast</div>
+                <div class="row"> <label for="roast-selection"></label>
+                    <select id="roast-selection">
+                        <option>light</option>
+                        <option>medium</option>
+                        <option>dark</option>
+                        <option>all</option>
+                    </select></div>
+                <div class="row">Coffee Name</div>
+                <div class="row"><input type="text" id=""></div>
+                <div class="row"><button id="submit">Submit</button></div>
+                <div class="row"><hr></div>
+                <div class="row">Add Coffee</div>
+                <div class="row">Roast</div>
+                <div class="row"><select id="roast-addition">
+                    <option>light</option>
+                    <option>medium</option>
+                    <option>dark</option>
+                </select></div>
+                <div class="row">Name</div>
+                <div class="row"><input type="text"></div>
+                <div class="row"><button>Submit</button></div>
             </div>
         </div>
 
@@ -100,9 +101,10 @@
 
 
 
-    <script src="main.js"></script>
+
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="main.js"></script>
 </body>
 </html>
