@@ -1,13 +1,8 @@
-"use strict"
+"use strict";
 
 function renderCoffee(coffee) {
-    // var html = '<tr class="coffee">';
-    // html += '<td>' + coffee.id + '</td>';
-    // html += '<td>' + coffee.name + '</td>';
-    // html += '<td>' + coffee.roast + '</td>';
-    // html += '</tr>';
-
-    var html = '<div class="container">';
+    console.log(coffee);
+    var html = '<div class="coffees">'; /** this is the entire container **/
     html += "<h1>" + coffee.name + "</h1>";
     html += "<p>" + coffee.roast + "</p>";
     html += "</div>";
@@ -27,17 +22,23 @@ function updateCoffees(e) {
     e.preventDefault(); // don't submit the form, we just want to update the data
     var selectedRoast = roastSelection.value;
     var filteredCoffees = [];
-    coffees.forEach(function(coffee) {
-        if (coffee.roast === selectedRoast) {
-            filteredCoffees.push(coffee);
-        }
-    });
+    if(selectedRoast === "all") {
+        filteredCoffees = coffees;
+    }else{
+        coffees.forEach(function(coffee) {
+            if (coffee.roast === selectedRoast) {
+                filteredCoffees.push(coffee);
+            }
+        });
+    } /** else curly**/
+
+
     tbody.innerHTML = renderCoffees(filteredCoffees);
 }
 
 // from http://www.ncausa.org/About-Coffee/Coffee-Roasts-Guide
 var coffees = [
-    {id: 1, name: 'Light City', roast: 'light'},
+    {id: 1, name: 'Light City', roast: 'light', roastAll: "all"},
     {id: 2, name: 'Half City', roast: 'light'},
     {id: 3, name: 'Cinnamon', roast: 'light'},
     {id: 4, name: 'City', roast: 'medium'},
@@ -54,9 +55,13 @@ var coffees = [
 ];
 
 var tbody = document.querySelector('#coffees');
-var submitButton = document.querySelector('#submit');
+var submitButton = document.querySelector('#searchSubmit');
 var roastSelection = document.querySelector('#roast-selection');
+
 
 tbody.innerHTML = renderCoffees(coffees);
 
+console.log(roastSelection.value);
+
 submitButton.addEventListener('click', updateCoffees);
+
