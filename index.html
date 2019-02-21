@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <title></title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
-    <h1>Coffee!</h1>
-
+<body class="display-4">
+    <h1>MEGAN & CARLO'S COVFEFE SELECTOR</h1>
     <form>
         <label for="roast-selection"></label>
-        <select id="roast-selection">
+        <select id="roast-selection" class="dropdown-toggle">
             <option>all</option>
             <option>light</option>
             <option>medium</option>
@@ -21,17 +21,15 @@
         <input id="submit" type="submit" />
     </form>
 
-    <table>
-        <thead>
-            <tr>
-                <th>ID</th>
-                <th>NAME</th>
-                <th>ROAST</th>
-            </tr>
-        </thead>
-        <tbody id="coffees"></tbody>
-    </table>
+    <div class="bg-info display-4 container display-inline-block">
+        <header>
+        <div id="coffees"></div>
 
+        </header>
+    </div>
+
+
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
     <script src="main.js"></script>
 </body>
 </html>
