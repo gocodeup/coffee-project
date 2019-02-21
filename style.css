@@ -9,18 +9,27 @@ td, th {
 }
 
 .coffee_name {
-    border: solid black;
+    border: solid black 1px;
     width: 100%;
+    margin-right: 50px;
+
+
 
 }
 
 .coffee_roast {
-    border: solid black;
+    border: solid black 1px;
     width: 100%;
+    text-align: right;
+    padding-top: 30px;
+    padding-right: 50px;
 
 }
 
 .container {
     display: flex;
     flex-direction: row;
+    text-align: center;
+    text-wrap: none;
+
 }
