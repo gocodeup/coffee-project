@@ -28,14 +28,19 @@
     <!-- container1 -->
     <div class="cotnainer">
         <div class="row">
-            <div class="col-sm-6 pl-5">
+            <div class="col-sm-1">
                <div id="disply"></div>
             </div>
+            <div class="col-sm-1">
+                <div id ='disply2'></div>
+            </div>
+            <div class = "col-sm-4"></div>
             <div class="col-sm-6">
                 <form>
                     <div class="form-group">
                         <label for="roast-selection">roast</label><br>
                         <select class="form-contorl custom-select custom-select-md" id="roast-selection">
+                            <option value="all">all</option>
                             <option value="light">light</option>
                             <option value = "medium">medium</option>
                             <option value ="dark">dark</option>
@@ -55,14 +60,14 @@
                                 </div>
                             </div>
                         </div>
-                        <label for="roast-selection">roast</label><br>
+                        <label for="addRoast">roast</label><br>
                         <select class="form-contorl custom-select custom-select-md" id="addRoast">
                             <option value="light">light</option>
                             <option value = "medium">medium</option>
                             <option value ="dark">dark</option>
                         </select><br>
-                        <label for="coffeeName">Name</label><br>
-                        <input id="coffeeName2" class="form-control"><br>
+                        <label for="coffeeName2">Name</label><br>
+                        <input id="coffeeName2" type="text" class="form-control"><br>
                         <input class="btn btn-primary" id="submit2" type="submit" /><br><br>
                     </div>
                 </form>
