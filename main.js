@@ -2,7 +2,7 @@
 
 function renderCoffee(coffee) {
     var html = '<div class="coffees">'; /** this is the entire container **/
-    html += "<h1>" + coffee.name + "</h1>";
+    html += "<h3>" + coffee.name + "</h3>";
     html += "<p>" + coffee.roast + "</p>";
     html += "</div>";
 
@@ -48,7 +48,7 @@ function updateCoffees(e) {
 
 // from http://www.ncausa.org/About-Coffee/Coffee-Roasts-Guide
 var coffees = [
-    {id: 1, name: 'Light City', roast: 'light', roastAll: "all"},
+    {id: 1, name: 'Light City', roast: 'light'},
     {id: 2, name: 'Half City', roast: 'light'},
     {id: 3, name: 'Cinnamon', roast: 'light'},
     {id: 4, name: 'City', roast: 'medium'},
