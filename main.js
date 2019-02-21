@@ -1,12 +1,24 @@
 "use strict"
 
-function renderCoffee(coffee) {
-    var html = '<tr class="coffee">';
-    html += '<td>' + coffee.id + '</td>';
-    html += '<td>' + coffee.name + '</td>';
-    html += '<td>' + coffee.roast + '</td>';
-    html += '</tr>';
+// var coffeename=document.getElementsByClassName("coffees-name");
+// function renderCoffee(coffee) {
+//     var html = '<tr class="coffee">';
+//      // html += '<td>' + coffee.id + '</td>';
+//     html += '<td>' + coffee.name + '</td>';
+//     html += '<td>' + coffee.roast + '</td>';
+//     html += '</tr>';
+//
+//     return html;
+// }
 
+function renderCoffee(coffee){
+var html='<div class="coffee col-6">';
+    // var html=html+coffee.id;
+    var html=html+'<div id="coffees">'
+    var html=html+'<span>'+coffee.name+'</span>';
+    var html=html+'<span>'+coffee.roast+'</span>';
+    html=html+'</div>';
+    html=html+'</div>';
     return html;
 }
 
@@ -17,7 +29,7 @@ function renderCoffees(coffees) {
     }
     return html;
 }
-
+var lightroast=document.getElementsByClassName()
 function updateCoffees(e) {
     e.preventDefault(); // don't submit the form, we just want to update the data
     var selectedRoast = roastSelection.value;
