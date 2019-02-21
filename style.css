@@ -7,3 +7,42 @@ td, th {
     border: 1px solid black;
     padding: 5px 10px;
 }
+
+input {
+    width: 90%;
+}
+
+hr {
+    margin: 0;
+    padding: 0;
+}
+
+#hr1 {
+    width: 90%;
+}
+
+/* form1 CSS */
+/* ID */
+#submit {
+    margin-top: 1em;
+    width: 90%;
+}
+
+/* selector css */
+#roast-selection {
+    width: 90%;
+}
+
+/* coffee name input */
+#coffeeName {
+    width: 90%;
+}
+
+/* form 2 */
+#addRoast {
+    width: 90%;
+}
+
+#coffeeName2 {
+    width: 90%;
+}
