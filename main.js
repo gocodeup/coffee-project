@@ -1,14 +1,18 @@
 "use strict"
 
+
+/*--Displays the list of search terms to the page ---------------------------------------------------------------------------------------- */
+
 function renderCoffee(coffee) {
     var html = '<tr class="coffee">';
-    html += '<td>' + coffee.id + '</td>';
-    html += '<td>' + coffee.name + '</td>';
-    html += '<td>' + coffee.roast + '</td>';
+    html += '<div class = "container"><div class = "coffee_name"> <h1>' + coffee.name + '</h1> </div>';
+    html += '<div class = "coffee_roast"<p>' + coffee.roast + '</p> </div> </div>';
     html += '</tr>';
 
     return html;
 }
+
+/*--creates a html list of all coffees that match search terms---------------------------------------------------------------------------------------- */
 
 function renderCoffees(coffees) {
     var html = '';
@@ -17,6 +21,8 @@ function renderCoffees(coffees) {
     }
     return html;
 }
+
+/*--Creates an array of the search items---------------------------------------------------------------------------------------- */
 
 function updateCoffees(e) {
     e.preventDefault(); // don't submit the form, we just want to update the data
@@ -27,6 +33,7 @@ function updateCoffees(e) {
             filteredCoffees.push(coffee);
         }
     });
+
     tbody.innerHTML = renderCoffees(filteredCoffees);
 }
 
@@ -52,6 +59,8 @@ var coffees = [
 var tbody = document.querySelector('#coffees');
 var submitButton = document.querySelector('#submit');
 var roastSelection = document.querySelector('#roast-selection');
+
+
 
 tbody.innerHTML = renderCoffees(coffees);
 
