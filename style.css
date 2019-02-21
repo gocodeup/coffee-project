@@ -7,3 +7,20 @@ td, th {
     border: 1px solid black;
     padding: 5px 10px;
 }
+
+.coffee_name {
+    border: solid black;
+    width: 100%;
+
+}
+
+.coffee_roast {
+    border: solid black;
+    width: 100%;
+
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+}

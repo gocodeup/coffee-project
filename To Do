@@ -1,2 +1,34 @@
 ******** TO DO LIST ***************
 
+1. Display each type of coffee inside its own div
+    - div's need to display name and type of roast
+    - hide the id's for internal use only
+
+2. When the page loads, the coffees should be sorted by their ids in ascending
+   order
+
+3. Add functionality to search through the coffees by name, and display only the
+   coffees that match the provided search term (You will need to add an input
+   field to the existing form for this)
+
+4. Add functionality to update the displayed coffee as the user types into the
+   search box, or as soon as they select an option from the select.
+
+   /*---Bonus--------------------------------------------------------------------------------------- */
+
+1. Add an option to select all roasts for roast type
+
+2. Make your name search case insensitive
+
+3. Create another form on the page that has an input for the coffee name, and
+   a select to choose the coffee roast. When the form is submitted, the new
+   cofee should appear on the page. (*Note that any new coffees you add will
+   be lost when you refresh the page, for an extra challenge, research
+
+
+/*--styling---------------------------------------------------------------------------------------- */
+
+4. The page looks pretty plain as it is, and the refactoring we did above to
+   use `div`s for coffees should give us more flexibility in styling. (*Hint:
+   the styling shown in the example below can be achieved purely with bootstrap
+   classes, that is, without custom CSS*)
