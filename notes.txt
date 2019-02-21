@@ -1,0 +1,44 @@
+// Update the html
+
++ Add a title
++ Make style.css to use as a stylesheet
+
+Tables are a little old school, you need to refactor the code so that each coffee is displayed in a div that contains a heading displaying the coffee name, and the type of roast in a paragraph. Don't display the ids, these are only for our application's internal use
+
++ Make div tags for each coffee
++ Make a p tag for the type of roast each coffee is
+
+When the page loads, the coffees should be sorted by their ids in ascending order
+
+Add functionality to search through the coffees by name, and display only the coffees that match the provided search term (You will need to add an input field to the existing form for this)
+
+Classes will be: light, medium, dark
+
++ This is JavaScript
+Get all the divs with class if searching by roast type
+Search name property in coffee array if searching by name
++ Loop
++ Add text input to form
+
+Add functionality to update the displayed coffee as the user types into the search box, or as soon as they select an option from the select.
+
+
+////////////////////////////////////////////////////////////////////////////
+Bonus
+
+Add an option to select all roasts for roast type
+
++ add to select box
+
+Make your name search case insensitive
+
++ .toLowerCase
+
+Style it!
+
+The page looks pretty plain as it is, and the refactoring we did above to use divs for coffees should give us more flexibility in styling. (Hint: the styling shown in the example below can be achieved purely with bootstrap classes, that is, without custom CSS)
+
+
+Allow the user to add new coffees to the page
+
+Create another form on the page that has an input for the coffee name, and a select to choose the coffee roast. When the form is submitted, the new cofee should appear on the page. (Note that any new coffees you add will be lost when you refresh the page, for an extra challenge, research localStorage and see if you can find a way to persist the data)
