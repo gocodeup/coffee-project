@@ -22,12 +22,12 @@ function updateCoffees(e) {
     e.preventDefault(); // don't submit the form, we just want to update the data
     var selectedRoast = roastSelection.value;
     var filteredCoffees = [];
-    coffees.forEach(function(coffee) {
+    coffees.forEach(function (coffee) {
         if (coffee.roast === selectedRoast) {
             filteredCoffees.push(coffee);
         }
     });
-    tbody.innerHTML = renderCoffees(filteredCoffees);
+    // tbody.innerHTML = renderCoffees(filteredCoffees);
 }
 
 // from http://www.ncausa.org/About-Coffee/Coffee-Roasts-Guide
@@ -49,11 +49,41 @@ var coffees = [
 ];
 
 var showdisply = document.getElementById('disply');
-var array1 = [];
-for(var i = 0; i < coffees.length; i++){
+var roastSelectionLight = document.getElementById("light");
 
-    showdisply.innerHTML = coffees[i].name + coffees[i].roast;
+var array1 = [];
+for (var i = 0; i < coffees.length; i++) {
+    array1.push(coffees[i].name + " " + coffees[i].roast);
+    showdisply.innerHTML = array1;
 }
+var array2 = [];
+var array3 = [];
+var array4 = [];
+function coffeeChoices() {
+    if (document.getElementById("roast-selection").value == "undefined") {
+        for(var i = 0; i < coffees.length; i++) {
+            array1.push(coffees[i].name + " " + coffees[i].roast);
+            showdisply.innerHTML = array1;
+        }
+    } else if (document.getElementById("roast-selection").value == "light") {
+        for (var i = 0; i < 3; i++) {
+            array2.push(coffees[i].name + " " + coffees[i].roast);
+            showdisply.innerHTML = array2;
+        }
+    } else if (document.getElementById("roast-selection").value == "medium") {
+        for (i = 3; i < 6; i++) {
+            array3.push(coffees[i].name + " " + coffees[i].roast);
+            showdisply.innerHTML = array3.join(" ");
+        }
+    } else {
+        for (i = 6; i < coffees.length; i++) {
+            array4.push(coffees[i].name + " " + coffees[i].roast);
+            showdisply.innerHTML = array4;
+        }
+    }
+}
+
+console.log();
 
 
 var tbody = document.querySelector('#coffees');
