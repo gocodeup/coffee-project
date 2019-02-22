@@ -3,32 +3,104 @@
 <head>
     <meta charset="UTF-8">
     <title></title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+<div class = "container text-center" >
     <h1>Coffee!</h1>
+    <hr>
+</div>
 
-    <form>
-        <label for="roast-selection"></label>
-        <select id="roast-selection">
-            <option>light</option>
-            <option>medium</option>
-            <option>dark</option>
-        </select>
-        <input id="submit" type="submit" />
-    </form>
 
-    <table>
-        <thead>
-            <tr>
-                <th>ID</th>
-                <th>NAME</th>
-                <th>ROAST</th>
-            </tr>
-        </thead>
-        <tbody id="coffees"></tbody>
-    </table>
+<div class="container">
+    <div class="row">
+        <div class="col-6">
+            <div class="row">
+                <div class="col">
+                    <div class="justify-content-start d-flex flex-row">
+                        <h2>French</h2>
+                        <p class="ml-2 my-auto pt-1 text-muted">dark</p>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="text-left d-inline-flex flex-row"><h2>Italian</h2>
+                        <p class="ml-2 my-auto pt-1 text-muted">dark</p></div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <div class="justify-content-start d-flex flex-row">
+                        <h2>French</h2>
+                        <p class="ml-2 my-auto pt-1 text-muted">dark</p>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="text-left d-inline-flex flex-row"><h2>Italian</h2>
+                        <p class="ml-2 my-auto pt-1 text-muted">dark</p></div>
+                </div>
+            </div>
+        </div>
 
-    <script src="main.js"></script>
+
+        <!--<table border="0">-->
+        <!--<tbody id="coffees"></tbody>-->
+        <!--</table>-->
+        <div class="col-6">
+            <form>
+                <div class="form-group">
+                    <label for="exampleFormControlSelect1">Roast</label>
+                    <select class="form-control" id="exampleFormControlSelect1">
+                        <option>all</option>
+                        <option>light</option>
+                        <option>medium</option>
+                        <option>dark</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="Coffee Search">Coffee Name</label>
+                    <input class="form-control" type="search" aria-label="Search">
+                </div>
+                <button class="btn btn-primary btn-block mt-2 " type="button">Submit</button>
+            </form>
+            <div class="w-100">
+            </div>
+            <hr>
+            <h2 class="text-center">Add a Coffee</h2>
+            <form>
+                <div class="form-group">
+                    <label for="exampleFormControlSelect1">Roast</label>
+                    <select class="form-control" id="exampleFormControlSelect1">
+                        <option>all</option>
+                        <option>light</option>
+                        <option>medium</option>
+                        <option>dark</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="Coffee Search">Name</label>
+                    <input class="form-control" type="search" aria-label="Search">
+                </div>
+                <button class="btn btn-primary btn-block mt-2 " type="button">Submit</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+
+<!--<form>-->
+<!--<label for="roast-selection"></label>-->
+<!--<select id="roast-selection">-->
+<!--<option>light</option>-->
+<!--<option>medium</option>-->
+<!--<option>dark</option>-->
+<!--</select>-->
+<!--<input id="submit" type="submit" />-->
+<!--</form>-->
+
+
+
+<script src="main.js"></script>
 </body>
 </html>
