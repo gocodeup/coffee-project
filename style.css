@@ -1,9 +1,16 @@
-table {
-    border-collapse: collapse;
-    margin: 15px 0;
+
+h3, p{
+    display: inline-block;
+
 }
 
-td, th {
-    border: 1px solid black;
-    padding: 5px 10px;
+p{
+    padding-left: 1em;
+    color: grey;
+}
+
+
+/*Media query this!!!*/
+#coffees {
+    text-align: center;
 }
