@@ -1,7 +1,7 @@
 "use strict"
 
 function renderCoffee(coffee) {
-    var html = '<div class="coffee col">';
+    var html = '<div class="row">';
     // html += '<td>' + coffee.id + '</td>';
     html += '<h3>' + coffee.name + '</h3>';
     html += '<p>' + coffee.roast + '</p>';
@@ -57,3 +57,12 @@ var roastSelection = document.querySelector('#roast-selection');
 tbody.innerHTML = renderCoffees(coffees);
 
 submitButton.addEventListener('click', updateCoffees);
+
+
+var coffeeSearch = document.getElementById("coffeeSearch");
+
+var searchQuery = function(e){
+
+};
+
+coffeeSearch.addEventListener()
