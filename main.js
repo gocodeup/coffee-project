@@ -1,9 +1,9 @@
 "use strict";
 
 function renderCoffee(coffee) {
-    var html = '<div class="coffees">'; /** this is the entire container **/
-    html += "<h3>" + coffee.name + "</h3>";
-    html += "<p>" + coffee.roast + "</p>";
+    var html = '<div class="col-12 col-md-6 p-0">'; /** this is the entire container **/
+    html += '<h3 class="p-0">' + coffee.name + "</h3>";
+    html += '<p class="pr-2">' + coffee.roast + "</p>";
     html += "</div>";
 
     return html;
@@ -80,9 +80,14 @@ function coffeeSearch(e) {
 
     tbody.innerHTML = renderCoffees(coffees);
 
-    submitButton.addEventListener('click', updateCoffees);
-    // roastSelection.addEventListener(, updateCoffees);
+    // submitButton.addEventListener('click', updateCoffees);
+    roastSelection.addEventListener("change", updateCoffees);
     coffeeSelection.addEventListener("keyup", coffeeSearch);
+
+
+
+
+
 
 // function coffeeKeyup() {
 //     var input, filter;
