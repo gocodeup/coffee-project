@@ -8,27 +8,28 @@
 </head>
 <body class="display-4">
     <h1>MEGAN & CARLO'S COVFEFE SELECTOR</h1>
-    <form>
+    <form class="bg-primary">
         <label for="roast-selection"></label>
-        <select id="roast-selection" class="dropdown-toggle">
+        <select id="roast-selection" class="dropdown-toggle bg-secondary">
             <option>all</option>
             <option>light</option>
             <option>medium</option>
             <option>dark</option>
         </select>
-        <input id="coffeesSearch" type="search">
         <label for="coffees"></label>
+        <input id="coffeesSearch" type="search" onkeydown="renderCoffees(coffees)">
         <input id="submit" type="submit" />
-    </form>
 
-    <div class="bg-info display-4 container display-inline-block">
+    </form>
+    <div class="bg-danger display-4 container ">
         <header>
-        <div id="coffees"></div>
+        <div id="coffees" class="bg-warning justify-content"></div>
 
         </header>
     </div>
 
-
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
     <script src="main.js"></script>
 </body>

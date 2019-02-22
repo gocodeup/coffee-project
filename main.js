@@ -30,18 +30,8 @@ function updateCoffees(e) {
     tbody.innerHTML = renderCoffees(filteredCoffees);
 }
 
-// ('#coffeesSearch').keypress(function(e){
-//     if (e.keypress >= 65 && e.keypress <= 90) {
-//        console.log('test');
-//         }
-//
-// });
-// var coffeeName = document.getElementById('coffeesSearch');
-// coffeeName.addEventListener('keyCode',listener, false);
-//     if (e.keypress >= 65 && e.keypress <= 90) {
-//         console.log('test');
-//
-// }
+var coffeeSearch = document.getElementById('coffees');
+var coffeeTag = document.getElementsByTagName('name');
 
 // from http://www.ncausa.org/About-Coffee/Coffee-Roasts-Guide
 var coffees = [
@@ -60,6 +50,8 @@ var coffees = [
     {id: 13, name: 'Italian', roast: 'dark'},
     {id: 14, name: 'French', roast: 'dark'},
 ];
+
+
 
 var tbody = document.querySelector('#coffees');
 var submitButton = document.querySelector('#submit');
