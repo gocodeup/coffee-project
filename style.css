@@ -3,46 +3,39 @@ table {
     margin: 15px 0;
 }
 
+body{
+    background-color: #83624B;
+}
+
 td, th {
     border: 1px solid black;
     padding: 5px 10px;
 }
 
-input {
-    width: 90%;
+.submit {
+    width: 100%;
 }
 
-hr {
-    margin: 0;
-    padding: 0;
+#navbar{
+    background-image: url("img/coffee1.jpg");
+    opacity: 0.5;
+    filter: alpha(opacity=50);
 }
 
-#hr1 {
-    width: 90%;
+#nav-heading{
+    color: black;
+    font-family: 'Coiny', cursive;
+    letter-spacing: 30px;
 }
 
-/* form1 CSS */
-/* ID */
-#submit {
-    margin-top: 1em;
-    width: 90%;
+#coffeeNames{
+    color:purple;
+    font-size: 2em;
+    font-family: 'Felipa', cursive;
 }
 
-/* selector css */
-#roast-selection {
-    width: 90%;
-}
-
-/* coffee name input */
-#coffeeName {
-    width: 90%;
-}
-
-/* form 2 */
-#addRoast {
-    width: 90%;
-}
-
-#coffeeName2 {
-    width: 90%;
+#cofferoast{
+    color: limegreen;
+    font-size: .6em;
+    font-family: 'Coiny', cursive;
 }

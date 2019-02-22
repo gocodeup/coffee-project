@@ -9,78 +9,59 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
           integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
-    <!-- title -->
-    <title></title>
+    <!-- title-->
+    <title>Coffee Project</title>
+
+    <!-- google fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Coiny|Felipa" rel="stylesheet">
 
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+<nav id="navbar" class="navbar expand-sm">
+    <div class="container">
+        <h1 id="nav-heading" class="mx-auto">Coffee!</h1>
+    </div>
+</nav>
 
-    <!-- Navbar -->
-    <nav class="navbar navbar-light bg-light expand-md">
-        <div class="container">
-            <h1 class="mx-auto">Coffee!</h1>
+<br><br>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-8">
+            <div id="coffees" class="row">
+
+            </div>
         </div>
-    </nav><hr>
-
-    <br><br>
-
-    <!-- container1 -->
-    <div class="cotnainer">
-        <div class="row">
-            <div class="col-sm-1">
-               <div id="disply"></div>
-            </div>
-            <div class="col-sm-1">
-                <div id ='disply2'></div>
-            </div>
-            <div class = "col-sm-4"></div>
-            <div class="col-sm-6">
-                <form>
-                    <div class="form-group">
-                        <label for="roast-selection">roast</label><br>
-                        <select class="form-contorl custom-select custom-select-md" id="roast-selection">
-                            <option value="all">all</option>
-                            <option value="light">light</option>
-                            <option value = "medium">medium</option>
-                            <option value ="dark">dark</option>
-                        </select><br>
-                        <label for="coffeeName">Coffee Name</label><br>
-                        <input id="coffeeName" class="form-control">
-                        <input class="btn btn-primary" onclick="coffeeChoices(this)" id="submit" type="submit" /><br><br>
-                        <hr id="hr1">
-                    </div>
-                </form>
-                <!--<form>-->
-                    <div class="form-group">
-                        <div class="container">
-                            <div class="row">
-                                <div class="mx-auto">
-                                    <h2 class=>Add a Coffee</h2>
-                                </div>
-                            </div>
-                        </div>
-                        <label for="addRoast">roast</label><br>
-                        <select class="form-contorl custom-select custom-select-md" id="addRoast">
-                            <option value="light">light</option>
-                            <option value = "medium">medium</option>
-                            <option value ="dark">dark</option>
-                        </select><br>
-                        <label for="coffeeName2">Name</label><br>
-                        <input id="coffeeName2" type="text" class="form-control"><br>
-                        <input onclick="addCoffee()" class="btn btn-primary" id="submit2" type="submit" /><br><br>
-                    </div>
-                <!--</form>-->
-            </div>
+        <div class="col-md-4">
+            <form>
+                <label for="roast-selection">Roast:</label><br>
+                <select class="form-control" id="roast-selection">
+                    <option value="name">All</option>
+                    <option value="light">light</option>
+                    <option>medium</option>
+                    <option>dark</option>
+                </select><br>
+                <label for="roast-selection">Coffee Name:</label><br>
+                <input class="form-control"><br>
+                <input class="submit btn btn-primary" id="submit" type="submit" />
+                <hr>
+                <label for="roast-selection">Roast:</label><br>
+                <select class="form-control" id="roast-selection2">
+                    <option value="light">light</option>
+                    <option>medium</option>
+                    <option>dark</option>
+                </select><br>
+                <label for="coffeeName">Coffee Name:</label><br>
+                <input id="coffeeName" class="form-control"><br>
+                <input class="submit btn btn-primary" id="submit2" type="submit" />
+            </form>
         </div>
     </div>
+</div>
 
-
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-
-    <script src="main.js"></script>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<script src="main.js"></script>
 </body>
-</html>
