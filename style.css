@@ -1,4 +1,3 @@
-
 h3, p{
     display: inline-block;
 
@@ -13,4 +12,7 @@ p{
 /*Media query this!!!*/
 #coffees {
     text-align: center;
+}
+#addCoffee {
+    display: none;
 }
