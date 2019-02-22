@@ -43,7 +43,9 @@ function searchBar(e) {
 }
 
 function addStuff(e) {
-    var newCoffee = {id: (coffees.length + 1), name: add.value,};
+    var newRoast =  roastAdd.value;
+    var newName = add.value;
+    var newCoffee = {id: (coffees.length + 1), name: newName, roast: newRoast};
 
 
 
@@ -71,10 +73,12 @@ var coffees = [
 var tbody = document.querySelector('#coffees');
 var submitButton = document.querySelector('#submit');
 var roastSelection = document.querySelector('#roast-selection');
+var roastAdd = document.querySelector('#roast-add');
 
 var search = document.querySelector('#search');
 
 var add = document.querySelector('#add');
+var addButton = document.querySelector('#addButton');
 
 
 
@@ -84,6 +88,6 @@ submitButton.addEventListener('click', updateCoffees);
 
 search.addEventListener('keyup', searchBar);
 
-add.addEventListener('click', addStuff);
-
+addButton.addEventListener('click', addStuff);
+addButton.addEventListener('click', updateCoffees);
 
