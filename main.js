@@ -43,7 +43,11 @@ function searchBar(e) {
 }
 
 function addStuff(e) {
+    var newCoffee = {id: (coffees.length + 1), name: add.value,};
 
+
+
+    coffees.push(newCoffee);
 }
 
 // from http://www.ncausa.org/About-Coffee/Coffee-Roasts-Guide
@@ -69,6 +73,7 @@ var submitButton = document.querySelector('#submit');
 var roastSelection = document.querySelector('#roast-selection');
 
 var search = document.querySelector('#search');
+
 var add = document.querySelector('#add');
 
 
@@ -79,6 +84,6 @@ submitButton.addEventListener('click', updateCoffees);
 
 search.addEventListener('keyup', searchBar);
 
-add.addEventListener('keyup', addStuff);
+add.addEventListener('click', addStuff);
 
 
