@@ -1,7 +1,7 @@
 "use strict";
 
 function renderCoffee(coffee) {
-    var html = "<div class = 'col-6 coffee'>" + "<div class='justify-content-start d-flex flex-row'>"
+    var html = "<div class = 'col-6 coffee'  style='font-size:1rem;'>" + "<div class='justify-content-start d-flex flex-row'>"
     + '<h2>' +  coffee.name + "</h2>" + "<p class='ml-2 my-auto pt-1 text-muted'>" + coffee.roast + '</p>' + "</div>";
     html += '</div>';
 
