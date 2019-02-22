@@ -1,8 +1,25 @@
 "use strict";
 
+function randomColor() {
+    var randomNum = Math.floor(Math.random() * 4);
+
+    var colors = [
+        "#FF6F61",
+        "#F1EA7F",
+        "#95DEE3",
+        "#EDCDC2"
+    ];
+
+    return colors[randomNum];
+}
+
+function coffeeNameColor(){
+    return '<h3 class="p-0" style="color: ' + randomColor() + '">';
+}
+
 function renderCoffee(coffee) {
     var html = '<div class="col-12 col-md-6 p-0">'; /** this is the entire container **/
-    html += '<h3 class="p-0">' + coffee.name + "</h3>";
+    html += coffeeNameColor() + coffee.name + "</h3>";
     html += '<p class="pr-2">' + coffee.roast + "</p>";
     html += "</div>";
 

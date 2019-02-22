@@ -1,17 +1,49 @@
-h3, p{
-    display: inline-block;
+h1 {
+    color: lightcoral;
+    font-family: "Homemade Apple", sans-serif;
+    padding: 0;
+    margin: 0 auto;
+}
 
+h3, p{
+    color: lightgrey;
+    display: inline-block;
+}
+
+h3 {
+    font-family: "Nanum Brush Script", sans-serif;
+    font-size: 2em;
+    text-transform: uppercase;
 }
 
 p{
     padding-left: 1em;
-    color: grey;
+    color: white;
 }
 
+label {
+    margin: 0 auto;
+    color: white;
+}
+
+#roast-selection {
+    background: transparent;
+    border-radius: 0;
+    color: white;
+}
+
+#coffee-selection {
+    background: transparent;
+    border-radius: 0;
+    color: white;
+}
 
 @media screen {
     body{
+        background-color: black;
+        background-image: url("chalkboard.jpg");
         padding: 0 2em;
+        margin-top: 2em;
     }
     #coffees {
         text-align: center;
