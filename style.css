@@ -9,10 +9,22 @@ p{
 }
 
 
-/*Media query this!!!*/
-#coffees {
-    text-align: center;
+@media screen {
+    body{
+        padding: 0 2em;
+    }
+    #coffees {
+        text-align: center;
+    }
 }
+
+@media (min-width: 768px){
+    #coffees{
+        text-align: left;
+    }
+}
+
+
 #addCoffee {
     display: none;
 }
