@@ -1,4 +1,4 @@
-"use strict"
+"use strict";
 
 function renderCoffee(coffee) {
     var html = "<div class = 'col-6 coffee'>" + "<div class='justify-content-start d-flex flex-row'>"
@@ -31,39 +31,11 @@ function updateCoffees(e) {
 }
 
 function searchBar(e) {
-    var input, filter;
-    input = search.value;
-    filter = input.toUpperCase();
-
-    for (var i = 0; i < coffees.length; i++) {
-        if (coffees[i].name.toUpperCase().indexOf(filter) > -1){
-            console.log();
-        }
-    }
-
-    console.log(searchBar());;
-    // console.log(coffee.name[i].indexOf(input) > -1);
-
-    ///w3 schools stuff
-    // Declare variables
-    // var input, filter, ul, li, a, i, txtValue;
-    // input = document.getElementById('search');
-    // filter = input.value.toUpperCase();
-    // tbody info here
-    // ul = document.getElementById("myUL");
-    // li = ul.getElementsByTagName('li');
-
-    // Loop through all list items, and hide those who don't match the search query
-    // for (i = 0; i < li.length; i++) {
-    //     a = li[i].getElementsByTagName("a")[0];
-    //     txtValue = a.textContent || a.innerText;
-    //     if (txtValue.toUpperCase().indexOf(filter) > -1) {
-    //         li[i].style.display = "";
-    //     } else {
-    //         li[i].style.display = "none";
-    //     }
-    // }
-    /////////
+    var input = search.value.toUpperCase();
+    for(var i = 0; i < coffees.length; i++){
+    if(coffees[i].name.toUpperCase().indexOf(input) === 0){
+        console.log(coffees[i].name);
+    }}
 }
 
 // from http://www.ncausa.org/About-Coffee/Coffee-Roasts-Guide
@@ -96,6 +68,6 @@ tbody.innerHTML = renderCoffees(coffees);
 
 submitButton.addEventListener('click', updateCoffees);
 
-search.addEventListener('keydown', searchBar);
+search.addEventListener('keyup', searchBar);
 
 
