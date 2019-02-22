@@ -16,42 +16,40 @@
 
 <div class="container">
     <div class="row">
-        <div class="col-6">
-            <div class="row">
-                <div class="col">
-                    <div class="justify-content-start d-flex flex-row">
-                        <h2>French</h2>
-                        <p class="ml-2 my-auto pt-1 text-muted">dark</p>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="text-left d-inline-flex flex-row"><h2>Italian</h2>
-                        <p class="ml-2 my-auto pt-1 text-muted">dark</p></div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col">
-                    <div class="justify-content-start d-flex flex-row">
-                        <h2>French</h2>
-                        <p class="ml-2 my-auto pt-1 text-muted">dark</p>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="text-left d-inline-flex flex-row"><h2>Italian</h2>
-                        <p class="ml-2 my-auto pt-1 text-muted">dark</p></div>
-                </div>
-            </div>
+        <div class="col-6" id = "coffees">
+            <!--<div class="row">-->
+                <!--<div class="col">-->
+                    <!--<div class="justify-content-start d-flex flex-row">-->
+                        <!--<h2>French</h2>-->
+                        <!--<p class="ml-2 my-auto pt-1 text-muted">dark</p>-->
+                    <!--</div>-->
+                <!--</div>-->
+                <!--<div class="col">-->
+                    <!--<div class="text-left d-inline-flex flex-row"><h2>Italian</h2>-->
+                        <!--<p class="ml-2 my-auto pt-1 text-muted">dark</p></div>-->
+                <!--</div>-->
+            <!--</div>-->
+            <!--<div class="row">-->
+                <!--<div class="col">-->
+                    <!--<div class="justify-content-start d-flex flex-row">-->
+                        <!--<h2>French</h2>-->
+                        <!--<p class="ml-2 my-auto pt-1 text-muted">dark</p>-->
+                    <!--</div>-->
+                <!--</div>-->
+                <!--<div class="col">-->
+                    <!--<div class="text-left d-inline-flex flex-row"><h2>Italian</h2>-->
+                        <!--<p class="ml-2 my-auto pt-1 text-muted">dark</p></div>-->
+                <!--</div>-->
+            <!--</div>-->
         </div>
 
 
-        <!--<table border="0">-->
-        <!--<tbody id="coffees"></tbody>-->
-        <!--</table>-->
+
         <div class="col-6">
             <form>
                 <div class="form-group">
                     <label for="exampleFormControlSelect1">Roast</label>
-                    <select class="form-control" id="exampleFormControlSelect1">
+                    <select class="form-control" id="roast-selection">
                         <option>all</option>
                         <option>light</option>
                         <option>medium</option>
@@ -60,9 +58,9 @@
                 </div>
                 <div class="form-group">
                     <label for="Coffee Search">Coffee Name</label>
-                    <input class="form-control" type="search" aria-label="Search">
+                    <input class="form-control"  type="search" aria-label="Search">
                 </div>
-                <button class="btn btn-primary btn-block mt-2 " type="button">Submit</button>
+                <button id='submit' class="btn btn-primary btn-block mt-2 " type="button">Submit</button>
             </form>
             <div class="w-100">
             </div>
