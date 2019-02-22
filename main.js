@@ -18,6 +18,34 @@ function renderCoffees(coffees) {
     return html;
 }
 
+// function autoCoffee(coffees) {
+//     // var html = '';
+//     // for(var i = coffees.length - 1; i >= 0; i--) {
+//     //     // html += renderCoffee(coffees[i]);
+//     //     if()
+//     // }
+//     // return html;
+//
+//
+//     }
+//
+// }
+function autoCoffee(e) {
+    var x = document.getElementById("coffeeSearch").value;
+    // document.getElementById("demo").innerHTML = x;
+    for(var i = 0; i<coffees.length; i++){
+        if(coffees[i].name === x) {
+            var html = '<div class="row">';
+            // html += '<td>' + coffee.id + '</td>';
+            html += '<h3>' + coffees.name + '</h3>';
+            html += '<p>' + coffees.roast + '</p>';
+            html += '</div>';
+
+            return html;
+        }
+    }
+}
+
 function updateCoffees(e) {
     e.preventDefault(); // don't submit the form, we just want to update the data
     var selectedRoast = roastSelection.value;
@@ -65,4 +93,4 @@ var searchQuery = function(e){
 
 };
 
-coffeeSearch.addEventListener()
+coffeeSearch.addEventListener('onkeyup', autoCoffee, false)
