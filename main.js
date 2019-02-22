@@ -1,22 +1,21 @@
 "use strict"
 
 function renderCoffee(coffee) {
-    var html = '<tr class="coffee">';
-    html += '<td>' + coffee.id + '</td>';
-    html += '<td>' + coffee.name + '</td>';
-    html += '<td>' + coffee.roast + '</td>';
-    html += '</tr>';
+    var html = "<div class = 'row coffee'>" +
+        "<div class = 'col-6'" + "<div class='justify-content-start d-flex flex-row'>"
+    + '<h2>' +  coffee.name + "</h2>" + "</div>" + "</div>";
+    html += "<p class='ml-2 my-auto pt-1 text-muted'>" + coffee.roast + '</p>';
+    html += '</div>';
 
     return html;
 }
-
-function renderCoffees(coffees) {
-    var html = '';
-    for(var i = coffees.length - 1; i >= 0; i--) {
-        html += renderCoffee(coffees[i]);
-    }
-    return html;
-}
+ function renderCoffees(coffees) {
+     var html = '';
+     for(var i = coffees.length - 1; i >= 0; i--) {
+         html += renderCoffee(coffees[i]);
+     }
+     return html;
+ }
 
 function updateCoffees(e) {
     e.preventDefault(); // don't submit the form, we just want to update the data
@@ -25,6 +24,9 @@ function updateCoffees(e) {
     coffees.forEach(function(coffee) {
         if (coffee.roast === selectedRoast) {
             filteredCoffees.push(coffee);
+        }
+        else if (selectedRoast === 'all'){
+            filteredCoffees = coffees;
         }
     });
     tbody.innerHTML = renderCoffees(filteredCoffees);
@@ -55,3 +57,5 @@ var roastSelection = document.querySelector('#roast-selection');
 tbody.innerHTML = renderCoffees(coffees);
 
 submitButton.addEventListener('click', updateCoffees);
+
+
