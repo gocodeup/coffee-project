@@ -109,7 +109,7 @@ h6 {
 }
 
 .cp-dark-roast:hover {
-    background-color: #dbcc8f;
+    background-color: darkgoldenrod;
 }
 
 .cp-espresso:hover {
@@ -125,6 +125,46 @@ h6 {
     font-weight: bolder;
     text-align: center;
 }
+
+/*CARSON'S CSS'*/
+
+.cp-add-coffee-head {
+    margin-bottom: 20px;
+    padding-top: 0;
+    text-align: center;
+}
+
+.btn {
+    background-image: url("../img/beans.jpeg");
+    background-size: cover;
+}
+
+.labels {
+    font-family: 'Encode Sans Condensed', sans-serif;
+}
+
+.cp-add-btn-l,
+.cp-add-btn-m,
+.cp-add-btn-d,
+.cp-add-btn-e{
+    background: transparent;
+    border: transparent;
+    cursor: pointer;
+    height: auto;
+    width: auto;
+}
+
+img {
+    height: 160px;
+    width: 160px;
+}
+.row mt-5 {
+    align-content: flex-end;
+}
+
+
+
+
 
 
 

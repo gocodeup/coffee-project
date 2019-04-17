@@ -1,4 +1,4 @@
-"use strict"
+"use strict";
 
 function renderCoffee(coffee) {
     var html = '<tr class="coffee">';
@@ -19,7 +19,7 @@ function renderCoffees(coffees) {
 }
 
 function updateCoffees(e) {
-    e.preventDefault(); // don't submit the form, we just want to update the data
+    e.preventDefault();
     var selectedRoast = roastSelection.value;
     var filteredCoffees = [];
     coffees.forEach(function(coffee) {
@@ -29,6 +29,23 @@ function updateCoffees(e) {
     });
     tbody.innerHTML = renderCoffees(filteredCoffees);
 }
+        // CARSON ADD
+// Adds new coffee to coffees[] array, then
+// displays new list of coffees
+function addCoffee(e) {
+    e.preventDefault();
+    var newCoffee = {
+        id: coffees.length + 1,
+        name: nameAdd.value,
+        roast: roastAdd.value
+    };
+
+    coffees.push(newCoffee);
+    divCoffee.innerHTML = renderCoffees(coffees);
+}
+        // CARSON ADD
+
+
 
 // from http://www.ncausa.org/About-Coffee/Coffee-Roasts-Guide
 var coffees = [
@@ -55,3 +72,4 @@ var roastSelection = document.querySelector('#roast-selection');
 tbody.innerHTML = renderCoffees(coffees);
 
 submitButton.addEventListener('click', updateCoffees);
+userSubmit.addEventListener('click', addCoffee);
