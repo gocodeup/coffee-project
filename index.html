@@ -3,32 +3,133 @@
 <head>
     <meta charset="UTF-8">
     <title></title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Fugaz+One|Roboto:400,700,900" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <h1>Coffee!</h1>
 
-    <form>
-        <label for="roast-selection"></label>
-        <select id="roast-selection">
-            <option>light</option>
-            <option>medium</option>
-            <option>dark</option>
-        </select>
-        <input id="submit" type="submit" />
-    </form>
+<!-- Header Section-->
+<header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="#">coffee & things</a>
 
-    <table>
-        <thead>
-            <tr>
-                <th>ID</th>
-                <th>NAME</th>
-                <th>ROAST</th>
-            </tr>
-        </thead>
-        <tbody id="coffees"></tbody>
-    </table>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
 
-    <script src="main.js"></script>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Coffee</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">About</a>
+                    </li>
+                </ul>
+            </div>
+
+        </nav>
+</header>
+
+<!-- Landing -->
+
+
+<div class="cp-main-landing">
+    <div class="cp-landing-container">
+        <img class="cp-landing-logo" src="img/coffee-logo.png" alt="coffee-logo">
+        <h2 class="cp-landing-brand-name">Roasting Company</h2>
+        <h5 class="cp-landing-brand-est">est. 1982</h5>
+        <div class="cp-landing-get-started">
+            <a href="#cp-coffee"> <i class="cp-fas fas fa-arrow-alt-circle-down fa-2x"></i></a>
+        </div>
+    </div>
+</div>
+
+
+<!-- END Landing / Jumbo -->
+
+
+<!-- Coffee  -->
+
+<div id="cp-coffee" class="cp-main-coffee">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm col-md-6 cp-choose-coffees">
+                <div class="cp-light-roast col-md-6">
+                    <h1 class="cp-light-l">L</h1>
+
+                </div>
+
+                <div class="cp-medium-roast col-md-6">
+                    <h1 class="cp-medium-m">M</h1>
+                </div>
+
+                <div class="cp-dark-roast col-md-6">
+                    <h1 class="cp-dark-d">D</h1>
+                </div>
+
+                <div class="cp-espresso col-md-6">
+                    <h1 class="cp-espresso-e">E</h1>
+                </div>
+            </div>
+
+            <div class="col-sm-12 col-md-6 cp-show-coffees">
+
+            </div>
+        </div>
+
+
+
+    </div>
+</div>
+
+
+
+
+<!-- END  Coffee-->
+
+
+<!-- Footer -->
+
+
+<!--    <h1>Coffee!</h1>-->
+
+<!--    <form>-->
+<!--        <label for="roast-selection"></label>-->
+<!--        <select id="roast-selection">-->
+<!--            <option>light</option>-->
+<!--            <option>medium</option>-->
+<!--            <option>dark</option>-->
+<!--        </select>-->
+<!--        <input id="submit" type="submit" />-->
+<!--    </form>-->
+
+<!--    <table>-->
+<!--        <thead>-->
+<!--            <tr>-->
+<!--                <th>ID</th>-->
+<!--                <th>NAME</th>-->
+<!--                <th>ROAST</th>-->
+<!--            </tr>-->
+<!--        </thead>-->
+<!--        <tbody id="coffees"></tbody>-->
+</table>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+<!--    <script src="js/main.js"></script>-->
 </body>
 </html>

@@ -1,0 +1,132 @@
+html {
+    font-family: 'Roboto', sans-serif;
+    color: #fff;
+    margin: 0;
+    scroll-behavior: smooth;
+}
+
+table {
+    border-collapse: collapse;
+    margin: 15px 0;
+}
+
+td, th {
+    border: 1px solid black;
+    padding: 5px 10px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Fugaz One', cursive;
+}
+
+
+/* HEADING / JUMBO / LANDING*/
+
+.cp-main-landing,
+.cp-landing-container,
+.cp-main-coffee{
+    height: 100vh;
+    width: 100vw;
+    margin: 0;
+}
+
+.cp-main-landing {
+    background-color: #fcf8f3;
+}
+
+.cp-main-coffee {
+    background-color: #fff;
+}
+
+.cp-landing-container {
+    width:960px;
+    height: 600px;
+    margin: 0 auto;
+}
+.cp-landing-logo {
+    display: block;
+    height: 300px;
+    width: 300px;
+    padding-top: 2.5em;
+    margin:  auto;
+}
+
+.cp-landing-brand-name {
+    padding-top: 20px;
+    color: #f38181;
+}
+
+.cp-landing-brand-name,
+.cp-landing-brand-est,
+.cp-landing-get-started,
+.cp-get-started,
+.cp-fas {
+    text-align: center;
+    padding-top: 10px;
+}
+
+.cp-fas {
+    color: #f38181;
+    text-align: center;
+}
+
+/* END OF LANDING */
+
+/* CP CHOOSE / SHOW SECTION */
+
+.cp-choose-coffees {
+    background-color: #ececec;
+    height: 100vh;
+    padding: 0;
+    margin: 0;
+}
+
+.cp-light-roast,
+.cp-dark-roast{
+    height: 50%;
+    float: left;
+}
+
+.cp-medium-roast,
+.cp-espresso{
+    height: 50%;
+    float: right;
+}
+
+
+
+.cp-light-roast:hover {
+    background-color: #fff5eb;
+}
+
+.cp-medium-roast:hover {
+    background-color: #f6e0b3;
+}
+
+.cp-dark-roast:hover {
+    background-color: #dbcc8f;
+}
+
+.cp-espresso:hover {
+    background-color: #4e4e4e;
+    color: #fff5eb;
+}
+
+.cp-light-l,
+.cp-medium-m,
+.cp-dark-d,
+.cp-espresso-e {
+    font-size: 15rem;
+    font-weight: bolder;
+    text-align: center;
+}
+
+
+
+/* END OF CHOOSE / SHOW SECTION*/
+
