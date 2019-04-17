@@ -77,7 +77,4 @@ tbody.innerHTML = renderCoffees(coffees);
 
 submitButton.addEventListener('click', addCoffee);
 
-// localStorage.setItem("addCoffee", coffees.push());
-//
-// document.getElementById("result").innerHTML =
-//     localStorage.getItem('addCoffee');
+// sessionStorage.setItem('addCoffee', '');
