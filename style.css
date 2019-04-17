@@ -11,3 +11,8 @@ td, th {
 h1{
     text-align: center;
 }
+
+.adding-coffee{
+    display: flex;
+
+}

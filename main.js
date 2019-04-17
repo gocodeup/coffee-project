@@ -41,7 +41,7 @@ function addCoffee(e) {
     var newCoffee = document.getElementById("add-coffee").value;
     var selectedRoast = document.querySelector('#new-roast-selection').value;
     if (newCoffee === "") {
-        alert("Please input a coffee name!");
+        alert("Please type a coffee name");
     } else {
         coffees.push({
             id: coffees.length + 1,
@@ -67,7 +67,7 @@ var coffees = [
     {id: 11, name: 'Espresso', roast: 'dark'},
     {id: 12, name: 'Viennese', roast: 'dark'},
     {id: 13, name: 'Italian', roast: 'dark'},
-    {id: 14, name: 'French', roast: 'dark'},
+    {id: 14, name: 'French', roast: 'dark'}
 ];
 
 var tbody = document.querySelector('#coffees');
@@ -76,3 +76,8 @@ var submitButton = document.querySelector('#submit');
 tbody.innerHTML = renderCoffees(coffees);
 
 submitButton.addEventListener('click', addCoffee);
+
+// localStorage.setItem("addCoffee", coffees.push());
+//
+// document.getElementById("result").innerHTML =
+//     localStorage.getItem('addCoffee');
