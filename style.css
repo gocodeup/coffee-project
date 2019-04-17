@@ -1,3 +1,26 @@
+.container {
+    height:200px;
+}
+
+div.container {
+    width:451px;
+}
+div.row {
+    height:200px;
+}
+
+h1.position-relative {
+    left:43%;
+    width:600px;
+}
+hr {
+    width:550px;
+}
+
+select {
+    width:400px;
+}
+
 table {
     border-collapse: collapse;
     margin: 15px 0;
@@ -6,4 +29,12 @@ table {
 td, th {
     border: 1px solid black;
     padding: 5px 10px;
+}
+
+div.position-relative {
+    left:33%;
+    width: 400px;
+}
+input.rounded {
+    width:400px;
 }

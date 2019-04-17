@@ -4,20 +4,67 @@
     <meta charset="UTF-8">
     <title></title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
 </head>
 <body>
-    <h1>Coffee!</h1>
 
-    <form>
-        <label for="roast-selection"></label>
-        <select id="roast-selection">
-            <option>light</option>
-            <option>medium</option>
-            <option>dark</option>
+
+
+
+
+<h1 class="position-relative">Coffee!</h1>
+
+<hr>
+<div class="position-relative"><!-- Eliminate the margin around this group-->
+    <p>
+        <strong>Roast</strong>
+        <br>
+        <select name="roast-selection">
+            <option value="Light">Light</option>
+            <option value="Medium">Medium</option>
+            <option value="Dark">Dark</option>
         </select>
-        <input id="submit" type="submit" />
-    </form>
+        <!--<button type="submit">Submit</button>-->
+        <br>
+        <br>
+        <strong>Coffee Name</strong>
+        <br>
+        <input  class ="rounded" type="text" name="email" placeholder="Coffee Name">
+        <br>
+        <button class="btn btn-primary btn-sm btn-block" type="submit">Submit Choice</button>
+    </p>
+</div>
+<hr>
+<div class="position-relative"><!-- Eliminate the margin around this group-->
+    <h2 class="text-center">Add a Coffee</h2>
+    <p>
+        <strong>Roast</strong>
+        <br>
+        <select name="roast-selection">
+            <option value="Light">Light</option>
+            <option value="Medium">Medium</option>
+            <option value="Dark">Dark</option>
+        </select>
+        <!--<button type="submit">Submit</button>-->
+        <br>
+        <br>
+        <strong>Name</strong>
+        <br>
+        <input class ="rounded" type="text" name="email" placeholder="New coffee combination name">
+        <br>
+        <button class="btn btn-primary btn-sm btn-block" type="submit">Submit Choice</button>
+    </p>
+</div>
+<div class="container">
+    <h3 class="text-center">Coffee display</h3>
+    <div class="row">
+        <div class="col text-center">vvvvvv Example for coffee here vvvvvv</div>
+    </div>
+</div>
 
+
+
+<!--
     <table>
         <thead>
             <tr>
@@ -28,7 +75,10 @@
         </thead>
         <tbody id="coffees"></tbody>
     </table>
-
-    <script src="main.js"></script>
+-->
+<script src="main.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
 </body>
 </html>
