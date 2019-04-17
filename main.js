@@ -1,33 +1,55 @@
-"use strict"
+"use strict";
 
 function renderCoffee(coffee) {
-    var html = '<tr class="coffee">';
-    html += '<td>' + coffee.id + '</td>';
-    html += '<td>' + coffee.name + '</td>';
-    html += '<td>' + coffee.roast + '</td>';
-    html += '</tr>';
+
+    var html =  "<div class='coffeelist'>" + "<h3>" + coffee.name + "</h3>" + "<p>" + coffee.roast + "</p>" + "</div>";
 
     return html;
 }
 
 function renderCoffees(coffees) {
     var html = '';
-    for(var i = coffees.length - 1; i >= 0; i--) {
+
+    for(var i = 0 ; i <= coffees.length - 1; i++) {
         html += renderCoffee(coffees[i]);
     }
     return html;
 }
 
-function updateCoffees(e) {
-    e.preventDefault(); // don't submit the form, we just want to update the data
-    var selectedRoast = roastSelection.value;
+function updateCoffees() {
+    var coffeeName = document.getElementById("coffeename").value;
+    var selectedRoast = document.querySelector('#roast-selection').value;
     var filteredCoffees = [];
+
     coffees.forEach(function(coffee) {
         if (coffee.roast === selectedRoast) {
             filteredCoffees.push(coffee);
+        } else if (selectedRoast === "all") {
+            filteredCoffees.push(coffee);
         }
     });
-    tbody.innerHTML = renderCoffees(filteredCoffees);
+
+    var displayedCoffees = filteredCoffees.filter(function (coffee) {
+        return coffee.name.toLowerCase().includes(coffeeName);
+    });
+
+    tbody.innerHTML = renderCoffees(displayedCoffees);
+}
+
+function addCoffee(e) {
+    e.preventDefault();
+    var newCoffee = document.getElementById("add-coffee").value;
+    var selectedRoast = document.querySelector('#new-roast-selection').value;
+    if (newCoffee === "") {
+        alert("Please input a coffee name!");
+    } else {
+        coffees.push({
+            id: coffees.length + 1,
+            name: newCoffee,
+            roast: selectedRoast
+        });
+        updateCoffees();
+    }
 }
 
 // from http://www.ncausa.org/About-Coffee/Coffee-Roasts-Guide
@@ -50,8 +72,7 @@ var coffees = [
 
 var tbody = document.querySelector('#coffees');
 var submitButton = document.querySelector('#submit');
-var roastSelection = document.querySelector('#roast-selection');
 
 tbody.innerHTML = renderCoffees(coffees);
 
-submitButton.addEventListener('click', updateCoffees);
+submitButton.addEventListener('click', addCoffee);
