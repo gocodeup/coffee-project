@@ -1,11 +1,11 @@
 "use strict"
 
 function renderCoffee(coffee) {
-    var html = '<tr class="coffee">';
-    html += '<td>' + coffee.id + '</td>';
-    html += '<td>' + coffee.name + '</td>';
-    html += '<td>' + coffee.roast + '</td>';
-    html += '</tr>';
+    var html = '<div class="coffee">';
+    // html += '<td>' + coffee.id + '</td>';
+    html += '<div>' + coffee.name + " " + '<span class="roastType">' + coffee.roast + '</span>' + '</div>';
+    // html += '<td>' + coffee.roast + '</td>';
+    html += '</div>';
 
     return html;
 }
@@ -17,12 +17,32 @@ function renderCoffees(coffees) {
     }
     return html;
 }
+function myFunction() {
+    var coffeeSearch = document.forms.search.coffeeSearch;
+    var coffeeFilter = coffeeSearch.value.toUpperCase();
+    var coffee3 = [];
+    coffees.forEach(function (value, i) {
+        if(coffees[i].name.toUpperCase().indexOf(coffeeFilter) > -1){
+            coffee3.push(coffees[i]);}
+    });
+    tbody.innerHTML = renderCoffees(coffee3);
+}
+
+// function myFunction(input) {
+//     var coffeeSearch = document.getElementById("coffeeSearch");
+//     var coffeeFilter = coffeeSearch.value.toUpperCase();
+//     if (coffees[input].name.toUpperCase().indexOf(coffeeFilter) > -1){
+//         return true;
+//     } else {
+//         return false;
+//     }
+// }
 
 function updateCoffees(e) {
     e.preventDefault(); // don't submit the form, we just want to update the data
     var selectedRoast = roastSelection.value;
     var filteredCoffees = [];
-    coffees.forEach(function(coffee) {
+    coffees.forEach(function(coffee, i) {console.log(i);
         if (coffee.roast === selectedRoast) {
             filteredCoffees.push(coffee);
         }
@@ -47,7 +67,7 @@ var coffees = [
     {id: 13, name: 'Italian', roast: 'dark'},
     {id: 14, name: 'French', roast: 'dark'},
 ];
-
+console.log(coffees[0].name);
 var tbody = document.querySelector('#coffees');
 var submitButton = document.querySelector('#submit');
 var roastSelection = document.querySelector('#roast-selection');
