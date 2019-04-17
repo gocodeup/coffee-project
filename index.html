@@ -8,6 +8,8 @@
     <link href="https://fonts.googleapis.com/css?family=Fugaz+One|Roboto:400,700,900" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
           integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+    <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.53.1/mapbox-gl.css' rel='stylesheet' />
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -45,7 +47,7 @@
 <div id="cp-top" class="cp-main-landing">
     <div class="cp-landing-container">
         <img class="cp-landing-logo" src="img/coffee-logo.png" alt="coffee-logo">
-        <h2 class="cp-landing-brand-name">Been Roasting Terrible Coffee</h2>
+        <h2 class="cp-landing-brand-name">Been Roastin' Terrible Coffee</h2>
         <h5 class="cp-landing-brand-est">since 1982</h5>
         <div class="cp-landing-get-started">
             <a href="#cp-coffee"> <i class="cp-fas fas fa-arrow-alt-circle-down fa-2x"></i></a>
@@ -64,7 +66,6 @@
             <div class="col-sm col-md-6 cp-choose-coffees">
                 <div class="cp-light-roast col-md-6">
                     <h1 class="cp-light-l">L</h1>
-
                 </div>
 
                 <div class="cp-medium-roast col-md-6">
@@ -104,7 +105,7 @@
     <div class="container-fluid">
         <div class="row">
             <div class="cp-left-side-about col-sm-6">
-                <img class="cp-landing-logo" src="img/coffee-logo.png" alt="coffee-logo">
+                <img class="cp-about-logo" src="img/coffee-logo.png" alt="coffee-logo">
             </div>
 
             <div class="cp-right-side-about col-sm-6">
@@ -119,8 +120,14 @@
                     We continue to source the cheapest, worst coffee in the world, hoping to improve the art and science of brewing, and
                     as it turns out, people love horrible coffee.</p>
             </div>
+            <div id="cd-map" class="cp-mapbox col-sm-12">
+
+            </div>
         </div>
     </div>
+</div>
+<div class="cp-footer-bottom">
+
 </div>
 
 
@@ -145,7 +152,14 @@
 <!--            </tr>-->
 <!--        </thead>-->
 <!--        <tbody id="coffees"></tbody>-->
-</table>
+<!--</table>-->
+
+<!-- Java Script and such -->
+
+<script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.53.1/mapbox-gl.js'></script>
+<script src='js/keys.js'></script>
+<script src='js/mapbox-geocoder-utils.js'></script>
+
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
         integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
         crossorigin="anonymous"></script>

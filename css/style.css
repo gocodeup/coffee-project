@@ -1,8 +1,13 @@
 html {
-    font-family: 'Roboto', sans-serif;
     color: #fff;
     margin: 0;
     scroll-behavior: smooth;
+}
+
+
+body,
+p {
+    font-family: 'Raleway', sans-serif;
 }
 
 table {
@@ -29,7 +34,7 @@ h6 {
 
 .cp-main-landing,
 .cp-landing-container,
-.cp-main-coffee{
+.cp-main-coffee {
     height: 100vh;
     width: 100vw;
     margin: 0;
@@ -39,6 +44,7 @@ h6 {
     font-family: 'Fugaz One', cursive;
     color: #f38181;
 }
+
 .cp-main-landing {
     background-color: #fcf8f3;
 }
@@ -48,16 +54,17 @@ h6 {
 }
 
 .cp-landing-container {
-    width:960px;
+    width: 960px;
     height: 600px;
     margin: 0 auto;
 }
+
 .cp-landing-logo {
     display: block;
     height: 300px;
     width: 300px;
     padding-top: 2.5em;
-    margin:  auto;
+    margin: auto;
 }
 
 .cp-landing-brand-name {
@@ -91,17 +98,16 @@ h6 {
 }
 
 .cp-light-roast,
-.cp-dark-roast{
+.cp-dark-roast {
     height: 50%;
     float: left;
 }
 
 .cp-medium-roast,
-.cp-espresso{
+.cp-espresso {
     height: 50%;
     float: right;
 }
-
 
 
 .cp-light-roast:hover {
@@ -136,24 +142,56 @@ h6 {
 /* ABOUT / FOOTER SECTION */
 
 .cp-footer-about-section {
-    height:  80vh;
+    padding: 0;
+    margin: 0;
 }
 
+.cp-footer-about-section {
+    height: 100vh;
+}
 
 .cp-left-side-about {
-    height: 500px;
     margin: 0 auto;
+    background-image: url("../img/coffee-about2.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
 }
 
+.cp-about-logo {
+    height: 8em;
+    width: 8em;
+}
+
+
+
+/*Test and Remove*/
+
+/*.cp-left-side-about img {*/
+/*    height: 300px;*/
+/*    width: auto;*/
+/*    margin: 0 auto;*/
+/*}*/
 
 .cp-right-side-about {
     background-color: #fcf8f3;
-    height: 500px;
-    text-align: justify-all;
+    height: 100%;
+    text-align: justify;
     margin: 0 auto;
-    padding: 50px;
+    padding: 100px;
+}
+
+.cp-mapbox {
+    background-color: #f38181;
+}
 
 
+/* BOTTOM BOTTOM */
+
+
+.cp-footer-bottom {
+    height: 5vh;
+    background-color: #4e4e4e;
 }
 
 /* END FOOTER SECTION */
