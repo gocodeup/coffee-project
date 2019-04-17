@@ -86,9 +86,19 @@ h6 {
     text-align: center;
 }
 
+
 /* END OF LANDING */
 
 /* CP CHOOSE / SHOW SECTION */
+
+.cp-choose-heading-right-side {
+    text-align: center;
+    padding-top: 25px;
+}
+
+.cp-fas-heart {
+    color: #f38181;
+}
 
 .cp-choose-coffees {
     background-color: #ececec;
@@ -108,7 +118,6 @@ h6 {
     height: 50%;
     float: right;
 }
-
 
 .cp-light-roast:hover {
     background-color: #fff5eb;
@@ -162,16 +171,6 @@ h6 {
     height: 8em;
     width: 8em;
 }
-
-
-
-/*Test and Remove*/
-
-/*.cp-left-side-about img {*/
-/*    height: 300px;*/
-/*    width: auto;*/
-/*    margin: 0 auto;*/
-/*}*/
 
 .cp-right-side-about {
     background-color: #fcf8f3;

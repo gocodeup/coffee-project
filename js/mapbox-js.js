@@ -13,9 +13,6 @@ var map = new mapboxgl.Map({
     zoom: 15.5,
     pitch: 45,
     bearing: -17.6,
-
-
-
 });
 
 
@@ -41,8 +38,6 @@ map.on('load', function() {
         'paint': {
             'fill-extrusion-color': '#aaa',
 
-// use an 'interpolate' expression to add a smooth transition effect to the
-// buildings as the user zooms in
             'fill-extrusion-height': [
                 "interpolate", ["linear"], ["zoom"],
                 15, 0,

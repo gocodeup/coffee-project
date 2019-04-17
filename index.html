@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
           integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
-    <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.53.1/mapbox-gl.css' rel='stylesheet' />
+    <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.53.1/mapbox-gl.css' rel='stylesheet'/>
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -63,27 +63,29 @@
 <div id="cp-coffee" class="cp-main-coffee">
     <div class="container-fluid">
         <div class="row">
-            <div class="col-sm col-md-6 cp-choose-coffees">
-                <div class="cp-light-roast col-md-6">
+            <div id="cp-add-id" class="col-sm col-md-6 cp-choose-coffees">
+                <div id="cp-light" class="cp-light-roast col-md-6">
                     <h1 class="cp-light-l">L</h1>
                 </div>
 
-                <div class="cp-medium-roast col-md-6">
+                <div id="cp-medium" class="cp-medium-roast col-md-6">
                     <h1 class="cp-medium-m">M</h1>
                 </div>
 
-                <div class="cp-dark-roast col-md-6">
+                <div id="cp-dark" class="cp-dark-roast col-md-6">
                     <h1 class="cp-dark-d">D</h1>
                 </div>
 
-                <div class="cp-espresso col-md-6">
+                <div id="cp-espresso" class="cp-espresso col-md-6">
                     <h1 class="cp-espresso-e">E</h1>
                 </div>
             </div>
 
-            <div class="col-sm-12 col-md-6 cp-show-coffees">
-
+            <div id="cp-test-background" class="col-sm-12 col-md-6 cp-show-coffees">
+                <h1 class="cp-choose-heading-right-side">Choose coffee you <i class="cp-fas-heart fas fa-heart"></i></h1>
+                <div id="coffees"></div>
             </div>
+
         </div>
     </div>
 </div>
@@ -116,8 +118,10 @@
                     and no knowledge behind the counter. </p>
 
                 <p>Within a year the first horrible coffee cafe opened in San Antonio. Customer loyalty and appreciation
-                    warranted opening three more cafes and the launch of our own roasting facility, Terrible Coffee & Co.
-                    We continue to source the cheapest, worst coffee in the world, hoping to improve the art and science of brewing, and
+                    warranted opening three more cafes and the launch of our own roasting facility, Terrible Coffee &
+                    Co.
+                    We continue to source the cheapest, worst coffee in the world, hoping to improve the art and science
+                    of brewing, and
                     as it turns out, people love horrible coffee.</p>
             </div>
             <div id="cp-map" class="cp-mapbox col-sm-12"></div>
@@ -129,28 +133,7 @@
 </div>
 
 
-<!--    <h1>Coffee!</h1>-->
 
-<!--    <form>-->
-<!--        <label for="roast-selection"></label>-->
-<!--        <select id="roast-selection">-->
-<!--            <option>light</option>-->
-<!--            <option>medium</option>-->
-<!--            <option>dark</option>-->
-<!--        </select>-->
-<!--        <input id="submit" type="submit" />-->
-<!--    </form>-->
-
-<!--    <table>-->
-<!--        <thead>-->
-<!--            <tr>-->
-<!--                <th>ID</th>-->
-<!--                <th>NAME</th>-->
-<!--                <th>ROAST</th>-->
-<!--            </tr>-->
-<!--        </thead>-->
-<!--        <tbody id="coffees"></tbody>-->
-<!--</table>-->
 
 <!-- Java Script and such -->
 
@@ -158,7 +141,8 @@
 <script src='js/keys.js'></script>
 <script src='js/mapbox-geocoder-utils.js'></script>
 <script src='js/mapbox-js.js'></script>
-
+<script src='js/coffee.js'></script>
+<!--<script src="js/main.js"></script>-->
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
         integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
         crossorigin="anonymous"></script>
@@ -168,6 +152,5 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
         integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
         crossorigin="anonymous"></script>
-<!--    <script src="js/main.js"></script>-->
 </body>
 </html>
