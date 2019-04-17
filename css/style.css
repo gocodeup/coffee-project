@@ -182,7 +182,10 @@ h6 {
 }
 
 .cp-mapbox {
+    height: 331px;
     background-color: #f38181;
+    margin: 0;
+    padding: 0;
 }
 
 
