@@ -35,6 +35,10 @@ h6 {
     margin: 0;
 }
 
+.cp-brand-name {
+    font-family: 'Fugaz One', cursive;
+    color: #f38181;
+}
 .cp-main-landing {
     background-color: #fcf8f3;
 }
@@ -126,7 +130,31 @@ h6 {
     text-align: center;
 }
 
-
-
 /* END OF CHOOSE / SHOW SECTION*/
+
+
+/* ABOUT / FOOTER SECTION */
+
+.cp-footer-about-section {
+    height:  80vh;
+}
+
+
+.cp-left-side-about {
+    height: 500px;
+    margin: 0 auto;
+}
+
+
+.cp-right-side-about {
+    background-color: #fcf8f3;
+    height: 500px;
+    text-align: justify-all;
+    margin: 0 auto;
+    padding: 50px;
+
+
+}
+
+/* END FOOTER SECTION */
 
