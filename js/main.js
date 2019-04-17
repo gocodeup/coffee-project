@@ -65,11 +65,20 @@ var coffees = [
     {id: 14, name: 'French', roast: 'dark'},
 ];
 
+// Coffee search/update
 var tbody = document.querySelector('#coffees');
 var submitButton = document.querySelector('#submit');
 var roastSelection = document.querySelector('#roast-selection');
+var coffeeSearch = document.querySelector('#coffee-search');
+
+// Gets HTML elements related to adding new coffee
+var roastAdd = document.querySelector('#roast-add');
+var nameAdd = document.querySelector('#name-add');
+var userSubmit = document.querySelector('#user-submit');
 
 tbody.innerHTML = renderCoffees(coffees);
 
+// Listeners
 submitButton.addEventListener('click', updateCoffees);
 userSubmit.addEventListener('click', addCoffee);
+roastSelection.addEventListener('change', updateCoffees);

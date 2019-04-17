@@ -152,15 +152,22 @@ h6 {
     cursor: pointer;
     height: auto;
     width: auto;
+    padding: 0;
 }
 
 img {
     height: 160px;
     width: 160px;
+    padding: 0;
+    margin-bottom: 50%;
 }
-.row mt-5 {
-    align-content: flex-end;
+
+.col-md-4 {
+    background: white;
+    border: none;
 }
+
+
 
 
 
