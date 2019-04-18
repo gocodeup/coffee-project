@@ -6,6 +6,12 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
           integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Fugaz+One|Roboto:400,700,900" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+          integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+    <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.53.1/mapbox-gl.css' rel='stylesheet'/>
+
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
 
@@ -14,38 +20,36 @@
 
 <!-- Header Section-->
 <header>
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <a class="navbar-brand" href="#">terrible coffee & company</a>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand cp-brand-name" href="#">TC & Company</a>
 
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-                    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
 
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav mr-auto">
-                    <li class="nav-item active">
-                        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Coffee</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">About</a>
-                    </li>
-                </ul>
-            </div>
-
-        </nav>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#cp-top">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#cp-coffee">Coffee</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#cp-about">About</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
 </header>
 
 <!-- Landing -->
 
-
-<div class="cp-main-landing">
+<div id="cp-top" class="cp-main-landing">
     <div class="cp-landing-container">
         <img class="cp-landing-logo" src="img/coffee-logo.png" alt="coffee-logo">
-        <h2 class="cp-landing-brand-name">Been Roasting Terrible Coffee</h2>
+        <h2 class="cp-landing-brand-name">Been Roastin' Terrible Coffee</h2>
         <h5 class="cp-landing-brand-est">since 1982</h5>
         <div class="cp-landing-get-started">
             <a href="#cp-coffee"> <i class="cp-fas fas fa-arrow-alt-circle-down fa-2x"></i></a>
@@ -53,45 +57,38 @@
     </div>
 </div>
 
-
 <!-- END Landing / Jumbo -->
 
 
 <!-- Coffee  -->
-
 <div id="cp-coffee" class="cp-main-coffee">
     <div class="container-fluid">
         <div class="row">
-            <div class="col-sm col-md-6 cp-choose-coffees">
-                <div class="cp-light-roast col-md-6">
-                    <h1 class="cp-light-l">L</h1>
 
+            <div id="cp-add-id" class="col-sm col-md-6 cp-choose-coffees">
+                <div id="cp-light" class="cp-light-roast col-md-6">
+                    <h1 class="cp-light-l">L</h1>
                 </div>
 
-                <div class="cp-medium-roast col-md-6">
+                <div id="cp-medium" class="cp-medium-roast col-md-6">
                     <h1 class="cp-medium-m">M</h1>
                 </div>
 
-                <div class="cp-dark-roast col-md-6">
+                <div id="cp-dark" class="cp-dark-roast col-md-6">
                     <h1 class="cp-dark-d">D</h1>
                 </div>
 
-                <div class="cp-espresso col-md-6">
+                <div id="cp-espresso" class="cp-espresso col-md-6">
                     <h1 class="cp-espresso-e">E</h1>
                 </div>
             </div>
-
-            <div class="col-sm-12 col-md-6 cp-show-coffees">
-
+            <div id="cp-test-background" class="col-sm-12 col-md-6 cp-show-coffees">
+                <h1 class="cp-choose-heading-right-side">Choose coffee you <i class="cp-fas-heart fas fa-heart"></i></h1>
+                <div id="coffees"></div>
             </div>
         </div>
-
-
-
     </div>
 </div>
-
-
 <!-- END  Coffee-->
 
 
@@ -136,37 +133,45 @@
 
 
 <!-- END ADD Coffee-->
-
-
-
-
 <!-- Footer -->
 
-<!-- Nikho Add Coffee Footer-->
+<div id="cp-about" class="cp-footer-about-section">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="cp-left-side-about col-sm-6">
+                <img class="cp-about-logo" src="img/coffee-logo.png" alt="coffee-logo">
+            </div>
 
+            <div class="cp-right-side-about col-sm-6">
 
-<!--    <h1>Coffee!</h1>-->
+                <p>Like a lot of bad ideas, Terrible Coffee started at a kitchen table. It was 1982 and were hashing out
+                    the notion of opening an obsessively good coffee shop in San Antonio, which needed one. Specialty
+                    coffees were taking off, along with aficionados’ desire for horrible beans, bad brewing technique
+                    and no knowledge behind the counter. </p>
 
-<!--    <form>-->
-<!--        <label for="roast-selection"></label>-->
-<!--        <select id="roast-selection">-->
-<!--            <option>light</option>-->
-<!--            <option>medium</option>-->
-<!--            <option>dark</option>-->
-<!--        </select>-->
-<!--        <input id="submit" type="submit" />-->
-<!--    </form>-->
+                <p>Within a year the first horrible coffee cafe opened in San Antonio. Customer loyalty and appreciation
+                    warranted opening three more cafes and the launch of our own roasting facility, Terrible Coffee &
+                    Co.
+                    We continue to source the cheapest, worst coffee in the world, hoping to improve the art and science
+                    of brewing, and
+                    as it turns out, people love horrible coffee.</p>
+            </div>
+            <div id="cp-map" class="cp-mapbox col-sm-12"></div>
+        </div>
+    </div>
+</div>
+<div class="cp-footer-bottom">
 
-<!--    <table>-->
-<!--        <thead>-->
-<!--            <tr>-->
-<!--                <th>ID</th>-->
-<!--                <th>NAME</th>-->
-<!--                <th>ROAST</th>-->
-<!--            </tr>-->
-<!--        </thead>-->
-<!--        <tbody id="coffees"></tbody>-->
-</table>
+</div>
+
+<!-- Java Script and such -->
+
+<script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.53.1/mapbox-gl.js'></script>
+<script src='js/keys.js'></script>
+<script src='js/mapbox-geocoder-utils.js'></script>
+<script src='js/mapbox-js.js'></script>
+<script src='js/coffee.js'></script>
+<!--<script src="js/main.js"></script>-->
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
         integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
         crossorigin="anonymous"></script>
@@ -177,5 +182,6 @@
         integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
         crossorigin="anonymous"></script>
 <script src="js/main.js"></script>
+
 </body>
 </html>
