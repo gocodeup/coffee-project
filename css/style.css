@@ -200,7 +200,11 @@ p {
     height: 100vh;
 }
 
-
+.coffee-list li {
+    list-style: none;
+    display: inline-block;
+    width: 50%;
+}
 
 
 
