@@ -1,8 +1,8 @@
-let coffId = document.getElementById('coffees');
+let coffId      = document.getElementById('coffees');
 let coffeeLight = document.getElementById('cp-light');
-let coffeeMed = document.getElementById('cp-medium');
-let coffeeDark = document.getElementById('cp-dark');
-let coffeeEss = document.getElementById('cp-espresso');
+let coffeeMed   = document.getElementById('cp-medium');
+let coffeeDark  = document.getElementById('cp-dark');
+let coffeeEss   = document.getElementById('cp-espresso');
 
 
 let originalCoffee = [
@@ -24,10 +24,14 @@ let originalCoffee = [
 
 let coffees = originalCoffee.reverse();
 
-let lightCoffee = coffees.filter(lCoff => lCoff.roast.indexOf('light') > -1);
-let medCoffee = coffees.filter(mCoff => mCoff.roast.indexOf('medium') > -1);
-let darkCoffee = coffees.filter(dCoff => dCoff.roast.indexOf('dark') > -1);
-let essCoffee = coffees.filter(aCoff => JSON.stringify(aCoff.roast));
+let lightCoffee =   coffees.filter(lCoff => lCoff.roast == 'light');
+let medCoffee =     coffees.filter(mCoff => mCoff.roast == 'medium');
+let darkCoffee =    coffees.map((dCoff) => {
+    return dCoff.id + dCoff.name + dCoff.roast;
+});
+
+
+let allCoffees =    coffees.map(coffee => "<p>" + coffee.id + ". " + coffee.name + " " + coffee.roast + "</p>").join('');
 
 let allCoffee = coffees.filter(aCoff => {
     let p = document.createElement('p');
@@ -53,19 +57,17 @@ mouseEventM();
 
 let mouseEventD = () => {
     coffeeDark.addEventListener('mouseenter', function (e) {
-        coffId.innerHTML = JSON.stringify(darkCoffee, undefined, 5);
+        coffId.innerHTML = darkCoffee;
     }, false)
-
 };
 mouseEventD();
 
 let mouseEventE = () => {
-    coffeeEss.addEventListener('mouseenter', function (e) {
-        coffId.innerHTML = essCoffee;
-    }, false)
-};
+    coffeeEss.addEventListener('mouseover', function (e) {
+        coffId.innerHTML = allCoffees;
+    })
+}
 mouseEventE();
-
 
 // Create event lister that takes in value of div it's hovering
 // Create function that takes in event listener and displays the correct coffee based on mouse enter
