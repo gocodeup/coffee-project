@@ -6,8 +6,9 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
           integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Fugaz+One|Roboto:400,700,900" rel="stylesheet">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+
 </head>
 <body>
 
@@ -98,7 +99,44 @@
 
 <!-- Carson Add Coffee-->
 
+<div class="row mt-5 d-flex justify-content-end">
+    <div class="col-12 col-md-4 cp-add-container">
+        <h1 class="cp-add-coffee-head"><u>Add Your Own Coffee</u></h1>
+        <br>
+        <br>
+        <h3 class="cp-add-coffee-head"><u>Type of Roast</u></h3>
+        <br>
+        <br>
+        <label for="roast-add">
+            <select id="roast-add">
+                <option value="light">Light</option>
+                <option value="medium">Medium</option>
+                <option value="dark">Dark</option>
+
+            <!--<button type="button" class="col-md-4 cp-add-btn-l" value="Light"><i class="fa fa-coffee" aria-hidden="true"></i><p> Light Roast</p></button>-->
+
+            <!--<button type="button" class="col-md-4 cp-add-btn-m" value="Medium"><i class="fa fa-coffee" aria-hidden="true"></i><p>Medium Roast</p></button>-->
+
+            <!--<button type="button" class="col-md-4 cp-add-btn-d" value="Dark"><i class="fa fa-coffee" aria-hidden="true"></i><p>Dark Roast</p></button>-->
+
+            <!--<div class="cp-espresso col-md-6">-->
+                <!--<h1 class="cp-espresso-e"><button type="button" class="cp-add-btn-e">E</button></h1>-->
+            <!--</div>-->
+            </select>
+        </label>
+        <br>
+        <br>
+        <h3 class="cp-add-coffee-head"><u>Coffee Name</u></h3>
+        <br>
+        <input type="text" class="input-group mb-3"  id="name-add">
+        <input id="user-submit" class="btn btn-primary btn-md btn-block"  type="submit" />
+    </div>
+
+</div>
+
+
 <!-- END ADD Coffee-->
+
 
 
 
@@ -138,6 +176,6 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
         integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
         crossorigin="anonymous"></script>
-<!--    <script src="js/main.js"></script>-->
+<script src="js/main.js"></script>
 </body>
 </html>
