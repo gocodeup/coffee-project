@@ -17,17 +17,17 @@ function renderCoffees(coffees) {
     }
     return html;
 }
-var coffee3 = function myFunction() {
-    var coffeeSearch = document.forms.search.coffeeSearch;
-    var coffeeFilter = coffeeSearch.value.toUpperCase();
-    var coffee3 = [];
-    coffees.forEach(function (value, i) {
-        if(coffees[i].name.toUpperCase().indexOf(coffeeFilter) > -1){
-            coffee3.push(coffees[i]);}
-    });
-    tbody.innerHTML = renderCoffees(coffee3);
-    return coffee3;
-}
+// var coffee3 = function myFunction() {
+//     var coffeeSearch = document.forms.search.coffeeSearch;
+//     var coffeeFilter = coffeeSearch.value.toUpperCase();
+//     var coffee3 = [];
+//     coffees.forEach(function (value, i) {
+//         if(coffees[i].name.toUpperCase().indexOf(coffeeFilter) > -1){
+//             coffee3.push(coffees[i]);}
+//     });
+//     tbody.innerHTML = renderCoffees(coffee3);
+//     return coffee3;
+// };
 
 // function myFunction(input) {
 //     var coffeeSearch = document.getElementById("coffeeSearch");
@@ -45,13 +45,22 @@ var coffee3 = function myFunction() {
 //     console.log(searchedCoffee)
 // });
 
+var coffeeSearch = document.getElementById("coffeeSearch");
+var coffeeFilter = function(){return coffeeSearch.value.toUpperCase();};
+
 function updateCoffees(e) {
     e.preventDefault(); // don't submit the form, we just want to update the data
     var selectedRoast = roastSelection.value;
+
     var filteredCoffees = [];
-    coffee3().forEach(function(coffee, i) {console.log(i);
-        if (coffee.roast === selectedRoast) {
-            filteredCoffees.push(coffee);
+    coffees.forEach(function(coffee, i) {console.log(i);
+        if (coffee.name.toUpperCase().indexOf(coffeeFilter()) > -1) {
+            if(selectedRoast === "all"){
+                filteredCoffees.push(coffee);
+                console.log(coffee)
+            } else if(coffee.roast === selectedRoast){
+                filteredCoffees.push(coffee);
+            }
         }
     });
     tbody.innerHTML = renderCoffees(filteredCoffees);
@@ -74,11 +83,15 @@ var coffees = [
     {id: 13, name: 'Italian', roast: 'dark'},
     {id: 14, name: 'French', roast: 'dark'},
 ];
+coffees.reverse();
 console.log(coffees[0].name);
 var tbody = document.querySelector('#coffees');
 var submitButton = document.querySelector('#submit');
 var roastSelection = document.querySelector('#roast-selection');
-
+var selectedRoast = document.getElementById("roast-selection");
+var all = document.getElementById("all")
 tbody.innerHTML = renderCoffees(coffees);
 
 submitButton.addEventListener('click', updateCoffees);
+selectedRoast.addEventListener("input", updateCoffees);
+coffeeSearch.addEventListener("input", updateCoffees);
