@@ -1,3 +1,6 @@
+*:focus {outline:none !important}
+
+
 html {
     color: #fff;
     margin: 0;
@@ -128,7 +131,7 @@ h6 {
 }
 
 .cp-dark-roast:hover {
-    background-color: #dbcc8f;
+    background-color: darkgoldenrod;
 }
 
 .cp-espresso:hover {
@@ -147,8 +150,79 @@ h6 {
     margin-top: 15%;
 }
 
-/* END OF CHOOSE / SHOW SECTION*/
 
+/* END OF CHOOSE / SHOW SECTION*/
+=======
+/*CARSON'S CSS'*/
+
+.cp-add-coffee-head {
+    margin-bottom: 20px;
+    padding-top: 0;
+    text-align: center;
+}
+
+.btn {
+    height: 40px;
+    width: 30px;
+}
+
+.input-group {
+    width:  100%;
+}
+
+.labels {
+    font-family: 'Encode Sans Condensed', sans-serif;
+}
+
+.cp-add-btn-l,
+.cp-add-btn-m,
+.cp-add-btn-d,
+.cp-add-btn-e{
+    cursor: pointer;
+    padding: 0;
+    border: none;
+    font-size: 32px;
+    border-radius: 15px;
+    box-shadow: 0 9px #999;
+}
+
+.cp-add-btn-l:active {
+    background-color: #fff5eb;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+}
+
+.cp-add-btn-m:active {
+    background-color: #f6e0b3;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+}
+
+.cp-add-btn-d:active {
+    background-color: darkgoldenrod;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+}
+
+.cp-add-btn-l{
+    background-color: #fff5eb;
+}
+
+.cp-add-btn-m {
+    background-color: #f6e0b3;
+}
+
+.cp-add-btn-d {
+    background-color: darkgoldenrod;
+}
+
+p {
+    font-size: 20px;
+}
+
+.cp-add-container {
+    height: 100vh;
+}
 
 /* ABOUT / FOOTER SECTION */
 
