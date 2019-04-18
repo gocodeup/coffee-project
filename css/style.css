@@ -1,3 +1,6 @@
+*:focus {outline:none !important}
+
+
 html {
     font-family: 'Roboto', sans-serif;
     color: #fff;
@@ -135,8 +138,12 @@ h6 {
 }
 
 .btn {
-    background-image: url("../img/beans.jpeg");
-    background-size: cover;
+    height: 40px;
+    width: 30px;
+}
+
+.input-group {
+    width:  100%;
 }
 
 .labels {
@@ -147,25 +154,52 @@ h6 {
 .cp-add-btn-m,
 .cp-add-btn-d,
 .cp-add-btn-e{
-    background: transparent;
-    border: transparent;
     cursor: pointer;
-    height: auto;
-    width: auto;
     padding: 0;
-}
-
-img {
-    height: 160px;
-    width: 160px;
-    padding: 0;
-    margin-bottom: 50%;
-}
-
-.col-md-4 {
-    background: white;
     border: none;
+    font-size: 32px;
+    border-radius: 15px;
+    box-shadow: 0 9px #999;
 }
+
+.cp-add-btn-l:active {
+    background-color: #fff5eb;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+}
+
+.cp-add-btn-m:active {
+    background-color: #f6e0b3;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+}
+
+.cp-add-btn-d:active {
+    background-color: darkgoldenrod;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+}
+
+.cp-add-btn-l{
+    background-color: #fff5eb;
+}
+
+.cp-add-btn-m {
+    background-color: #f6e0b3;
+}
+
+.cp-add-btn-d {
+    background-color: darkgoldenrod;
+}
+
+p {
+    font-size: 20px;
+}
+
+.cp-add-container {
+    height: 100vh;
+}
+
 
 
 
