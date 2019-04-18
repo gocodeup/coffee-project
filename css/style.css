@@ -143,12 +143,21 @@ h6 {
     font-size: 15rem;
     font-weight: bolder;
     text-align: center;
+    vertical-align: middle;
+    margin-top: 15%;
 }
 
 /* END OF CHOOSE / SHOW SECTION*/
 
 
 /* ABOUT / FOOTER SECTION */
+
+#coffees {
+    font-weight: bold;
+    text-align: center;
+    justify-content: center;
+    padding-top: 20px;
+}
 
 .cp-footer-about-section {
     padding: 0;
@@ -187,9 +196,7 @@ h6 {
     padding: 0;
 }
 
-
 /* BOTTOM BOTTOM */
-
 
 .cp-footer-bottom {
     height: 5vh;
