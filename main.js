@@ -76,5 +76,3 @@ var submitButton = document.querySelector('#submit');
 tbody.innerHTML = renderCoffees(coffees);
 
 submitButton.addEventListener('click', addCoffee);
-
-// sessionStorage.setItem('addCoffee', '');

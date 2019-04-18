@@ -3,48 +3,58 @@
 <head>
     <meta charset="UTF-8">
     <title></title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
-    <h1>Coffee!</h1>
+<body class = "">
+    <div class="mt-3">
+        <h1 class="pt-3, mb-0 display-3">Coffee!</h1>
+    </div>
+        <div class="container-fluid">
+            <div class="d-flex justify-content-between">
+                <form>
+                    <h4 class="text-left">Search for a coffee</h4>
+                    <br>
+                    <div class="mx-.5">
+                        <label for="roast-selection">Roast</label>
+                        <select id="roast-selection" class="bg-white" onChange="updateCoffees()">
+                            <option selected="selected">all</option>
+                            <option>light</option>
+                            <option>medium</option>
+                            <option>dark</option>
+                        </select>
+                        <label for="coffeename"></label>
+                        <input type="text" id="coffeename" class="bg-white" placeholder="Search for a coffee" onkeyup="updateCoffees()">
+                    </div>
+                </form>
 
-    <div>
-
-        <div>
-            <div id="coffees"></div>
-        </div>
-
-        <div>
-            <form>
-                <div class="form-group">
-                    <label for="roast-selection">Roast</label>
-                    <select id="roast-selection" onChange="updateCoffees()">
-                        <option selected="selected">all</option>
-                        <option>light</option>
-                        <option>medium</option>
-                        <option>dark</option>
-                    </select>
-                    <label for="coffeename">Coffee Name</label>
-                    <input type="text" id="coffeename" onkeyup="updateCoffees()">
-                </div>
-            </form>
-
-                <h2>Add a Coffee</h2>
                  <form>
-                     <div>
+                     <h4 class="text-right">Add your own coffee</h4>
+                     <br>
+                     <div class="mx-.5">
                         <label for="new-roast-selection">Roast</label>
-                        <select id="new-roast-selection">
+                        <select id="new-roast-selection" class="bg-white">
                              <option>light</option>
                             <option>medium</option>
                             <option>dark</option>
                         </select>
-                        <label for="add-coffee">Name</label>
-                        <input type="text" id="add-coffee">
-                        <input id="submit" type="submit">
+                        <label for="add-coffee"></label>
+                        <input type="text" class="bg-white" placeholder="Add your own coffee" id="add-coffee">
+                        <input id="submit" class="bg-white text-center" type="submit">
                     </div>
                 </form>
+            </div>
         </div>
-    </div>
+            <div class="container-fluid d-flex align-items-center">
+                <div class="row justify-content-around mx-5">
+                    <div id="coffees" class="col-8"></div>
+                </div>
+            </div>
+
+    <!--JavaScript-->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     <script src="main.js"></script>
 </body>
 </html>

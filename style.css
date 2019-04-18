@@ -1,6 +1,16 @@
+*{
+    font-family: fantasy, Serif;
+    background-color: antiquewhite;
+}
+
 table {
     border-collapse: collapse;
     margin: 15px 0;
+}
+
+p {
+    color: gray;
+    margin-left: 4px;
 }
 
 td, th {
@@ -10,4 +20,27 @@ td, th {
 
 h1{
     text-align: center;
+}
+
+.coffeelist {
+    float: right;
+    width: 165px;
+    margin: 10px;
+}
+
+.coffeelist>h3, p {
+    display: flex;
+}
+
+@media screen and (min-width:1200px) {
+    .coffeelist {
+        float: left;
+        width: 165px;
+        margin: 10px;
+        margin-left: 2.2em;
+    }
+
+    .coffeelist>h3, p {
+        display: flex;
+    }
 }
