@@ -1,23 +1,41 @@
 "use strict"
 
 function renderCoffee(coffee) {
-    var html = '<tr class="coffee">';
-    html += '<td>' + coffee.id + '</td>';
-    html += '<td>' + coffee.name + '</td>';
-    html += '<td>' + coffee.roast + '</td>';
-    html += '</tr>';
+    var html = '<div class="col-md-6">';
+    html += '<h2 class="coffee-name">' + coffee.name + '</h2>';
+    html += '<span>' + coffee.roast + '</span>';
+    html+= '</div class="col">';
 
     return html;
 }
 
 function renderCoffees(coffees) {
     var html = '';
-    for(var i = coffees.length - 1; i >= 0; i--) {
+    for(var i = 0; i <= coffees.length - 1; i++) {
         html += renderCoffee(coffees[i]);
     }
     return html;
 }
 
+//for coffee list filter
+function coffeeSearch(){
+    var input = document.getElementById("coffee-search");
+    var filter = input.value.toLowerCase();
+    var coffeescol = document.getElementsByTagName("coffeescol")
+    for (var  i = 0; i < coffees.length; i++) {
+        coffees = coffeescol[i].getElementsByTagName("coffees") [0];
+        if (coffees) {
+            txtValue  = input.textContent || input.innerText;
+            if (txtValue.toLowerCase().indexOf(filter) > -1) {
+                coffeescol[i].style.display = "";
+            } else {
+                coffeescol[i].style.display = "none";
+            }
+        }
+    }
+}
+
+//for adding coffee
 function updateCoffees(e) {
     e.preventDefault(); // don't submit the form, we just want to update the data
     var selectedRoast = roastSelection.value;
@@ -49,8 +67,8 @@ var coffees = [
 ];
 
 var tbody = document.querySelector('#coffees');
-var submitButton = document.querySelector('#submit');
-var roastSelection = document.querySelector('#roast-selection');
+var submitButton = document.querySelector('submit');
+var roastSelection = document.getElementById('roast-selection');
 
 tbody.innerHTML = renderCoffees(coffees);
 
