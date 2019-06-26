@@ -38,18 +38,31 @@
             <hr>
 
             <div>
-                <h2>Add a coffee:</h2>
-                <form>
-                    <label for="user-roast"></label>
-                    <select id="user-roast">
-                        <option value="light">light</option>
-                        <option value="medium">medium</option>
-                        <option value="dark">dark</option>
-                    </select>
-                    <label for="user-name"></label>
-                    <input id="user-name" type="text">
-                    <div class="row">
-                        <button id="submit2" class="btn" type="submit">Submit</button>
+                <h1>Add A Coffee!</h1>
+
+                <label for="add-coffee-roast-select">Roast</label>
+                <select id="add-coffee-roast-select">
+                    <option value="light">light</option>
+                    <option value="medium">medium</option>
+                    <option value="dark">dark</option>
+                </select>
+
+                <label for="add-coffee-name">Name</label>
+                <input id="add-coffee-name" value="" type="text"/>
+
+                <button id="add-coffee" type="button" onclick="addCoffee()">Submit</button>
+<!--                <h2>Add a coffee:</h2>-->
+<!--                <form>-->
+<!--                    <label for="user-roast"></label>-->
+<!--                    <select id="user-roast">-->
+<!--                        <option value="light">light</option>-->
+<!--                        <option value="medium">medium</option>-->
+<!--                        <option value="dark">dark</option>-->
+<!--                    </select>-->
+<!--                    <label for="coffee-name"></label>-->
+<!--                    <input id="coffee-name" type="text">-->
+<!--                    <div class="row">-->
+<!--                        <button id="submit2" class="btn" type="submit">Submit</button>-->
                     </div>
                 </form>
             </div>
