@@ -6,12 +6,13 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Coffee!</h1>
+    <h1 class="header">Coffee!</h1>
 
-
+    <hr>
+    <main class="boxElement">
     <form>
         <label for="roast-selection"></label>
-        <select oninput="appearDisappear()" id="roast-selection">
+        <select oninput="appearDisappear()" id="roast-selection" class="longButton">
             <option>all</option>
             <option>light</option>
             <option>medium</option>
@@ -28,46 +29,65 @@
     </form>
 
 
-    <h5>Add a coffee</h5>
+    <h1>Add a coffee</h1>
 
-<!--hi peter-->
 
-    <div>
+    <form>
+        <label for="add-roast-selection"><Roast></Roast></label>
+        <select oninput="appearDisappear()" id="add-roast-selection" class="longButton">
+            <option>light</option>
+            <option>medium</option>
+            <option>dark</option>
+        </select>
+    </form>
+
+    <h3><strong>Name</strong></h3>
+    <form>
+        <div class="autocomplete" style="width:300px;">
+            <input id="myInput2" type="text" name="myInput2">
+        </div>
+        <input type="submit">
+    </form>
+
+    <br>
+
+    <div class="rightFloats">
         <div id="typeLight">
             <header class="coffeeType">Light City </header>
-            <p>Light</p> <br>
+            <p class="smText">Light</p> <br>
             <header class="coffeeType">Half City </header>
-            <p>Light</p> <br>
+            <p class="smText">Light</p> <br>
             <header class="coffeeType">Cinnamon </header>
-            <p>Light</p> <br>
+            <p class="smText">Light</p> <br>
         </div>
         <div id="typeMedium">
             <header class="coffeeType">City </header>
-            <p>Medium</p> <br>
+            <p class="smText">Medium</p> <br>
             <header class="coffeeType">American </header>
-            <p>Medium</p> <br>
+            <p class="smText">Medium</p> <br>
             <header class="coffeeType">Breakfast </header>
-            <p>Medium</p> <br>
+            <p class="smText">Medium</p> <br>
         </div>
-        <div id=typeDark'>
+        <div id='typeDark'>
             <header class="coffeeType">High </header>
-            <p>Dark</p> <br>
+            <p class="smText">Dark</p> <br>
             <header class="coffeeType">Continental </header>
-            <p>Dark</p> <br>
+            <p class="smText">Dark</p> <br>
             <header class="coffeeType">New Orleans </header>
-            <p>Dark</p> <br>
+            <p class="smText">Dark</p> <br>
             <header class="coffeeType">European </header>
-            <p>Dark</p> <br>
+            <p class="smText">Dark</p> <br>
             <header class="coffeeType">Espresso </header>
-            <p>Dark</p> <br>
+            <p class="smText">Dark</p> <br>
             <header class="coffeeType">Viennese </header>
-            <p>Dark</p> <br>
+            <p class="smText">Dark</p> <br>
             <header class="coffeeType">Italian </header>
-            <p>Dark</p> <br>
+            <p class="smText">Dark</p> <br>
             <header class="coffeeType">French </header>
-            <p>Dark</p>
+            <p class="smText">Dark</p>
         </div>
     </div>
+    </main>
 
     <script src="main.js"></script>
 </body>
