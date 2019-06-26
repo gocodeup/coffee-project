@@ -30,7 +30,7 @@ var roastSelection = document.querySelector('#roast-selection');
 function renderCoffee(coffee) {
     var html = '<div class="coffee">';
     // html += '' + coffee.id + '';
-    html += '<h2><a href="#">' + coffee.name + '</a></h2>';
+    html += '<h2>' + coffee.name + '</h2>';
     html += '<p>' + coffee.roast + '</p>';
     html += '</div>';
 
@@ -63,7 +63,7 @@ function updateCoffees(e) {
 
 function coffeeSearch (){
     var input, i, a, txtValue;
-    input = document.getElementById('coffee');
+    input = document.getElementById('myInput');
     var filter = input.value.toUpperCase();
 
     for (i = 0; i < coffees.length; i++) {
