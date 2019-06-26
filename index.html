@@ -9,38 +9,48 @@
     <h1>Coffee!</h1>
 
     <hr>
+    <div class="container"></div>
+        <form name="search">
+    <!--        <p class="searchTitle">Roast</p>-->
+            <label for="roast-selection">Roast</label>
+            <select id="roast-selection">
+                <option>all</option>
+                <option>light</option>
+                <option>medium</option>
+                <option>dark</option>
+            </select>
+    <!--        <p class="searchTitle" id="coffee-title">Coffee Name</p>-->
+            <label for="myInput">Coffee Name</label>
+            <input type="text" id="myInput" name="myInput" onkeyup = "coffeeSearch()"/>
 
-    <form name="search">
-<!--        <p class="searchTitle">Roast</p>-->
-        <label for="roast-selection">Roast</label>
-        <select id="roast-selection">
-            <option>all</option>
-            <option>light</option>
-            <option>medium</option>
-            <option>dark</option>
-        </select>
-<!--        <p class="searchTitle" id="coffee-title">Coffee Name</p>-->
-        <label for="myInput">Coffee Name</label>
-        <input type="text" id="myInput" name="myInput" onkeyup = "coffeeSearch()"/>
+            <input id="submit" type="submit"/>
+        </form>
+        <h2>Add a Coffee</h2>
+        <form id="add">
+            <label for="add-roast">Roast</label>
+            <select name="add-roast" id="add-roast">
+                <option>light</option>
+                <option>medium</option>
+                <option>dark</option>
+            </select>
+            <label for="myCoffee">Coffe Name</label>
+            <input type="text" id="myCoffee" name="myCoffee"/>
 
-<<<<<<< HEAD
-        <input id="submit" type="submit"/>
-=======
-        <input id="submit" type="submit" />
->>>>>>> a7cd6b54a935ccfd4eaeb0525e270f7eb1eab1c7
-    </form>
+            <input id="submit" type="submit">
+        </form>
 
-    <table id="coffeeList">
-        <thead>
-<!--        <tdi>-->
-<!--&lt;!&ndash;            <th>ID</th>&ndash;&gt;-->
-<!--            <th>NAME</th>-->
-<!--            <th>ROAST</th>-->
-<!--        </tdi>-->
-        </thead>
-        <tbody id="coffees"></tbody>
-    </table>
+        <table id="coffeeList">
+            <thead>
+    <!--        <tdi>-->
+    <!--&lt;!&ndash;            <th>ID</th>&ndash;&gt;-->
+    <!--            <th>NAME</th>-->
+    <!--            <th>ROAST</th>-->
+    <!--        </tdi>-->
+            </thead>
+            <tbody id="coffees"></tbody>
+        </table>
 
-    <script src="main.js"></script>
+        <script src="main.js"></script>
+    </div>
 </body>
 </html>
