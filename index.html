@@ -8,75 +8,33 @@
 <body>
     <h1>Coffee!</h1>
 
+    <hr>
+
     <form>
-        <p class="searchTitle">Roast</p>
-        <label for="roast-selection"></label>
+<!--        <p class="searchTitle">Roast</p>-->
+        <label for="roast-selection">Roast</label>
         <select id="roast-selection">
             <option>light</option>
             <option>medium</option>
             <option>dark</option>
         </select>
-        <p class="searchTitle" id="coffee-title">Coffee Name</p>
-        <input type="text" id="coffees"><br>
+<!--        <p class="searchTitle" id="coffee-title">Coffee Name</p>-->
+        <label for="coffee">Coffee Name</label>
+        <input type="text" id="coffee" name="coffee">
+
         <input id="submit" type="submit" />
     </form>
 
-        <div id="1">
-            <h2>Light City</h2>
-            <p>Light</p>
-        </div>
-        <div id="2">
-            <h2>Half City</h2>
-            <p>Light</p>
-        </div>
-        <div id="3">
-            <h2>Cinnamon</h2>
-            <p>Light</p>
-        </div>
-        <div id="4">
-            <h2>City</h2>
-            <p>Medium</p>
-        </div>
-        <div id="5">
-            <h2>American</h2>
-            <p>Medium</p>
-        </div>
-        <div id="6">
-            <h2>Breakfast</h2>
-            <p>Medium</p>
-        </div>
-        <div id="7">
-            <h2>High</h2>
-            <p>Dark</p>
-        </div>
-        <div id="8">
-            <h2>Continental</h2>
-            <p>Dark</p>
-        </div>
-        <div id="9">
-            <h2>New Orleans</h2>
-            <p>Dark</p>
-        </div>
-        <div id="10">
-            <h2>European</h2>
-            <p>Dark</p>
-        </div>
-        <div id="11">
-            <h2>Espresso</h2>
-            <p>Dark</p>
-        </div>
-        <div id="12">
-            <h2>Viennese</h2>
-            <p>Dark</p>
-        </div>
-        <div id="13">
-            <h2>Italian</h2>
-            <p>Dark</p>
-        </div>
-        <div id="14">
-            <h2>French</h2>
-            <p>Dark</p>
-        </div>
+    <table>
+        <thead>
+<!--        <tdi>-->
+<!--&lt;!&ndash;            <th>ID</th>&ndash;&gt;-->
+<!--            <th>NAME</th>-->
+<!--            <th>ROAST</th>-->
+<!--        </tdi>-->
+        </thead>
+        <tbody id="coffees"></tbody>
+    </table>
 
     <script src="main.js"></script>
 </body>
