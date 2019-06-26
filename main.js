@@ -1,4 +1,4 @@
-"use strict"
+"use strict";
 
 function renderCoffee(coffee) {
     var html = '<div class="col-md-6">';
@@ -17,23 +17,35 @@ function renderCoffees(coffees) {
     return html;
 }
 
-//for coffee list filter
+// coffees.filter(function(coffeeName){
+//     return coffeeName.match;
+//
+// });
+//
+// for coffee list filter
+
 function coffeeSearch(){
-    var input = document.getElementById("coffee-search");
-    var filter = input.value.toLowerCase();
-    var coffeescol = document.getElementsByTagName("coffeescol")
+    var input = document.getElementById("coffee-search").value;
+    console.log(typeof input);
+    var filter = input.toLowerCase();
+    console.log(filter);
+    var coffeeName = document.getElementsByClassName("coffee-name");
     for (var  i = 0; i < coffees.length; i++) {
-        coffees = coffeescol[i].getElementsByTagName("coffees") [0];
+
         if (coffees) {
-            txtValue  = input.textContent || input.innerText;
+            var txtValue = input.textContent || input.innerText;
             if (txtValue.toLowerCase().indexOf(filter) > -1) {
-                coffeescol[i].style.display = "";
+                coffeeName[i].style.display = "";
             } else {
-                coffeescol[i].style.display = "none";
+                coffeeName[i].style.display = "none";
             }
         }
     }
 }
+
+
+
+
 
 //for adding coffee
 function updateCoffees(e) {
