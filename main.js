@@ -130,3 +130,28 @@ function autocomplete(inp, arr) {
 
 autocomplete(document.getElementById("myInput"), coffeesAuto);
 
+function appearDisappear() {
+    var roastType = document.getElementById('roast-selection');
+
+    if(roastType == 'light') {
+        typeLight.style.display = 'inline-block';
+        typeMedium.style.disply = 'none';
+        typeDark.style.display = 'none';
+    }
+
+    // } else if(roastType == 'medium') {
+    //     typeLight.style.display = 'none';
+    //     typeMedium.style.display = 'inline-block';
+    //     typeDark.style.display = 'none';
+    //
+    // }else if(roastType == 'dark') {
+    //     typeLight.style.display = 'none';
+    //     typeMedium.style.disply = 'none';
+    //     typeDark.style.display = 'inline-block';
+    //
+     else {
+    typeLight.style.display = 'inline-block';
+    typeMedium.style.display = 'inline-block';
+    typeDark.style.display = 'inline-block';
+   }
+}

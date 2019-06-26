@@ -11,13 +11,12 @@
 
     <form>
         <label for="roast-selection"></label>
-        <select id="roast-selection">
+        <select oninput="appearDisappear()" id="roast-selection">
             <option>all</option>
             <option>light</option>
             <option>medium</option>
             <option>dark</option>
         </select>
-        <input id="submit" type="submit" />
     </form>
 
     <h3><strong>Coffee Name</strong></h3>
@@ -31,37 +30,43 @@
 
     <h5>Add a coffee</h5>
 
-
+<!--hi peter-->
 
     <div>
-        <header class="coffeetype">Light City </header>
-        <p>Light</p> <br>
-        <header class="coffeetype">Half City </header>
-        <p>Light</p> <br>
-        <header class="coffeetype">Cinnamon </header>
-        <p>Light</p> <br>
-        <header class="coffeetype">City </header>
-        <p>Medium</p> <br>
-        <header class="coffeetype">American </header>
-        <p>Medium</p> <br>
-        <header class="coffeetype">Breakfast </header>
-        <p>Medium</p> <br>
-        <header class="coffeetype">High </header>
-        <p>Dark</p> <br>
-        <header class="coffeetype">Continental </header>
-        <p>Dark</p> <br>
-        <header class="coffeetype">New Orleans </header>
-        <p>Dark</p> <br>
-        <header class="coffeetype">European </header>
-        <p>Dark</p> <br>
-        <header class="coffeetype">Espresso </header>
-        <p>Dark</p> <br>
-        <header class="coffeetype">Viennese </header>
-        <p>Dark</p> <br>
-        <header class="coffeetype">Italian </header>
-        <p>Dark</p> <br>
-        <header class="coffeetype">French </header>
-        <p>Dark</p>
+        <div id="typeLight">
+            <header class="coffeeType">Light City </header>
+            <p>Light</p> <br>
+            <header class="coffeeType">Half City </header>
+            <p>Light</p> <br>
+            <header class="coffeeType">Cinnamon </header>
+            <p>Light</p> <br>
+        </div>
+        <div id="typeMedium">
+            <header class="coffeeType">City </header>
+            <p>Medium</p> <br>
+            <header class="coffeeType">American </header>
+            <p>Medium</p> <br>
+            <header class="coffeeType">Breakfast </header>
+            <p>Medium</p> <br>
+        </div>
+        <div id=typeDark'>
+            <header class="coffeeType">High </header>
+            <p>Dark</p> <br>
+            <header class="coffeeType">Continental </header>
+            <p>Dark</p> <br>
+            <header class="coffeeType">New Orleans </header>
+            <p>Dark</p> <br>
+            <header class="coffeeType">European </header>
+            <p>Dark</p> <br>
+            <header class="coffeeType">Espresso </header>
+            <p>Dark</p> <br>
+            <header class="coffeeType">Viennese </header>
+            <p>Dark</p> <br>
+            <header class="coffeeType">Italian </header>
+            <p>Dark</p> <br>
+            <header class="coffeeType">French </header>
+            <p>Dark</p>
+        </div>
     </div>
 
     <script src="main.js"></script>
