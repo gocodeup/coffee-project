@@ -131,27 +131,32 @@ function autocomplete(inp, arr) {
 autocomplete(document.getElementById("myInput"), coffeesAuto);
 
 function appearDisappear() {
-    var roastType = document.getElementById('roast-selection');
+    var roastType = document.getElementById('roast-selection').value;
+    switch(roastType) {
 
-    if(roastType == 'light') {
+        case 'light':
         typeLight.style.display = 'inline-block';
-        typeMedium.style.disply = 'none';
+        typeMedium.style.display = 'none';
         typeDark.style.display = 'none';
+        break;
+
+        case 'medium':
+
+        typeLight.style.display = 'none';
+        typeMedium.style.display = 'inline-block';
+        typeDark.style.display = 'none';
+        break;
+
+        case 'dark':
+        typeLight.style.display = 'none';
+        typeMedium.style.display = 'none';
+        typeDark.style.display = 'inline-block';
+        break;
+
+        default:
+        typeLight.style.display = 'block';
+        typeMedium.style.display = 'block';
+        typeDark.style.display = 'inline-block';
     }
 
-    // } else if(roastType == 'medium') {
-    //     typeLight.style.display = 'none';
-    //     typeMedium.style.display = 'inline-block';
-    //     typeDark.style.display = 'none';
-    //
-    // }else if(roastType == 'dark') {
-    //     typeLight.style.display = 'none';
-    //     typeMedium.style.disply = 'none';
-    //     typeDark.style.display = 'inline-block';
-    //
-     else {
-    typeLight.style.display = 'inline-block';
-    typeMedium.style.display = 'inline-block';
-    typeDark.style.display = 'inline-block';
-   }
 }
