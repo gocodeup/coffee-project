@@ -7,7 +7,7 @@
 </head>
 <body>
     <h1>Coffee!</h1>
-<!--    comment-->
+
 
     <form>
         <label for="roast-selection"></label>
@@ -19,8 +19,20 @@
         </select>
         <input id="submit" type="submit" />
     </form>
+
     <h3><strong>Coffee Name</strong></h3>
-    <input type="text">
+    <form autocomplete="on" action="/action_page.php">
+        <div class="autocomplete" style="width:300px;">
+            <input id="myInput" type="text" name="myCoffee">
+        </div>
+        <input type="submit">
+    </form>
+
+
+    <h5>Add a coffee</h5>
+
+
+
     <div>
         <header class="coffeetype">Light City </header>
         <p>Light</p> <br>
