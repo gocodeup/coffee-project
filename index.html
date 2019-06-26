@@ -4,31 +4,56 @@
     <meta charset="UTF-8">
     <title></title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 </head>
 <body>
+<div class="container">
     <h1>Coffee!</h1>
+    <hr/>
 
-    <form>
-        <label for="roast-selection"></label>
-        <select id="roast-selection">
-            <option>light</option>
-            <option>medium</option>
-            <option>dark</option>
-        </select>
-        <input id="submit" type="submit" />
-    </form>
+    <div class="row">
+        <div class="col" id="coffeescol">
+            <div class="row" id="coffees">
+            </div>
+        </div>
 
-    <table>
-        <thead>
-            <tr>
-                <th>ID</th>
-                <th>NAME</th>
-                <th>ROAST</th>
-            </tr>
-        </thead>
-        <tbody id="coffees"></tbody>
-    </table>
+        <div class="col">
+            <h2>Various coffees:</h2>
+            <div class="row justify-content-md-center">
+                <div class="row"></div>
+                <label for="roast-selection"></label>
+                <select id="roast-selection">
+                    <option>all</option>
+                    <option>light</option>
+                    <option>medium</option>
+                    <option>dark</option>
+                </select>
+                <label for="coffee-search"></label>
+                <input id="coffee-search" type="text"/>
+                <button id="submit1" class="btn" type="submit">Submit</button>
+            </div>
+            <hr>
 
+            <div>
+                <h2>Add a coffee:</h2>
+                <form>
+                    <label for="user-roast"></label>
+                    <select id="user-roast">
+                        <option value="light">light</option>
+                        <option value="medium">medium</option>
+                        <option value="dark">dark</option>
+                    </select>
+                    <label for="user-name"></label>
+                    <input id="user-name" type="text">
+                    <div class="row">
+                        <button id="submit2" class="btn" type="submit">Submit</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
     <script src="main.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js" integrity="sha384-xrRywqdh3PHs8keKZN+8zzc5TX0GRTLCcmivcbNJWm2rs5C8PRhcEn3czEjhAO9o" crossorigin="anonymous"></script>
 </body>
 </html>
