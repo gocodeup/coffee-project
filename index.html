@@ -10,7 +10,7 @@
 
     <hr>
 
-    <form>
+    <form name="search">
 <!--        <p class="searchTitle">Roast</p>-->
         <label for="roast-selection">Roast</label>
         <select id="roast-selection">
@@ -20,9 +20,9 @@
         </select>
 <!--        <p class="searchTitle" id="coffee-title">Coffee Name</p>-->
         <label for="coffee">Coffee Name</label>
-        <input type="text" id="coffee" name="coffee">
+        <input type="text" id="coffee" name="coffee"/>
 
-        <input id="submit" type="submit" />
+        <input id="submit" type="submit" onkeyup = "coffeeSearch()" />
     </form>
 
     <table>

@@ -30,14 +30,14 @@ var roastSelection = document.querySelector('#roast-selection');
 function renderCoffee(coffee) {
     var html = '<div class="coffee">';
     // html += '' + coffee.id + '';
-    html += '<h2>' + coffee.name + '</h2>';
+    html += '<h2><a href="#">' + coffee.name + '</a></h2>';
     html += '<p>' + coffee.roast + '</p>';
     html += '</div>';
 
     return html;
 }
 
-
+console.log(coffees);// shows that the list does populate in log
 
 
 function renderCoffees(coffees) {
@@ -60,16 +60,51 @@ function updateCoffees(e) {
     tbody.innerHTML = renderCoffees(filteredCoffees);
 }
 
-function searchCoffees(e) {
-    e.preventDefault();
-    var search = document.form.coffee.value;
-    var filteredCoffees = [];
-    coffees.forEach(function(coffee){
-        if ()
-    })
+
+function coffeeSearch (){
+    var input, i, a, txtValue;
+    input = document.getElementById('coffee');
+    var filter = input.value.toUpperCase();
+
+    for (i = 0; i < coffees.length; i++) {
+        a = coffees[i].getElementById("a") [0];
+        txtValue = a.textContent || a.innerText;
+        if (txtValue.toUpperCase().indexOf(filter) > -1) {
+            coffee[i].style.display = "";
+        } else {
+            coffee[i].style.display = 'none';
+        }
+    }
 }
+
+
+
+// function searchCoffees(e) {
+//     // e.preventDefault();
+//     // var search = document.form.coffee.value;
+//     // function showInput() {
+//         var coffeeSearch = document.getElementById("coffee").value;
+//         console.log(coffeeSearch);
+//     // }
+//     var filteredCoffees = [];
+//     coffees.forEach(function(coffee){
+//         if (coffeeSearch === coffee.name) {
+//             filteredCoffees.push(coffee);
+//         }
+//     });
+//     tbody.innerHTML = renderCoffees(filteredCoffees);
+// }
+
+// var coffeeSearch = document.getElementById('coffee').value;
+// console.log(coffeeSearch);
+//
+// document.getElementById('coffee').value = coffeeSearch;
+//
+// console.log(coffeeSearch);
+
 
 
 tbody.innerHTML = renderCoffees(coffees);
 
 submitButton.addEventListener('click', updateCoffees);
+submitButton.addEventListener('click', coffeeSearch);
