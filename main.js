@@ -21,6 +21,7 @@ var coffees = [
 var tbody = document.querySelector('#coffees');
 var submitButton = document.querySelector('#submit');
 var roastSelection = document.querySelector('#roast-selection');
+var search = document.querySelector("#coffee");
 
 //attempt at displaying input
 
@@ -37,12 +38,12 @@ function renderCoffee(coffee) {
     return html;
 }
 
-console.log(coffees);// shows that the list does populate in log
+
 
 
 function renderCoffees(coffees) {
     var html = '';
-    for(var i = coffees.length - 1; i >= 0; i--) {
+    for(var i = 0; i <= coffees.length - 1;  i++) {
         html += renderCoffee(coffees[i]);
     }
     return html;
@@ -60,22 +61,35 @@ function updateCoffees(e) {
     tbody.innerHTML = renderCoffees(filteredCoffees);
 }
 
+// function showInput() {
+//
+//         console.log(coffeeSearch);
+//         return coffeeSearch;
+//     }
 
-function coffeeSearch (){
-    var input, i, a, txtValue;
-    input = document.getElementById('myInput');
-    var filter = input.value.toUpperCase();
 
-    for (i = 0; i < coffees.length; i++) {
-        a = coffees[i].getElementById("a") [0];
-        txtValue = a.textContent || a.innerText;
-        if (txtValue.toUpperCase().indexOf(filter) > -1) {
-            coffee[i].style.display = "";
-        } else {
-            coffee[i].style.display = 'none';
+function coffeeSearch(e) {
+    e.preventDefault();
+    var coffeeSearch = search.value;
+    var filteredCoffees = [];
+    coffees.forEach(function(coffee){
+        if (coffee.name.toLowerCase().includes(coffeeSearch)) {
+            filteredCoffees.push(coffee);
         }
-    }
+    });
+    tbody.innerHTML = renderCoffees(filteredCoffees)
+
 }
+
+// function coffeeSearch (){
+//     var input, i, a;
+//     input = document.getElementById('coffee');
+//
+//     for (i = 0; i < coffees.length; i++) {
+//         a = coffees[i].getElementById("a") [0];
+//
+//     }
+// }
 
 
 
@@ -107,4 +121,4 @@ function coffeeSearch (){
 tbody.innerHTML = renderCoffees(coffees);
 
 submitButton.addEventListener('click', updateCoffees);
-submitButton.addEventListener('click', coffeeSearch);
+search.addEventListener('keyup', coffeeSearch);
