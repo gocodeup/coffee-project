@@ -1,21 +1,53 @@
-.jumbotron {
-    background: url("img/coffeeshop_header.jpg");
-    background-size: contain;
-
-
-
+body {
+    overflow-y: scroll;
+    overflow-x: hidden;
+    background: #73a1bd;
 }
-
 h1 {
     text-align: center;
 }
 
 h2 {
-    text-align: center;
-}
-h2.coffee-name {
     text-align: left;
+}
 
+h1.jumbotron{
+    transform: translateZ(.25px) scale(.75);
+    transform-origin: 50% 100%;
+}
+
+.ruge {
+    font-family: 'Ruge Boogie', cursive;
+}
+.montez {
+    font-family: 'Montez', cursive;
+}
+.condensed {
+    font-family: 'Open Sans Condensed', sans-serif;
+}
+.apple {
+    font-family: 'Homemade Apple', cursive;
+}
+.navbar {
+    font-size: 1.5em;
+}
+.roast-list {
+    background: url("img/damask.jpg");
+    ackground-repeat: no-repeat;
+    background-attachment: fixed;
+}
+.jumbotron {
+    background: url("img/coffeeshop_header.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    height: 460px;
+    width: 100%;
+    color: ghostwhite;
+    position: relative;
+    padding: 25vh 10%;
+    box-sizing: border-box;
+    box-shadow: 0 -1px 10px rgba(0, 0, 0, .7);
+    transform-style: inherit;
 }
 
 #roast-selection, #new-roast {
