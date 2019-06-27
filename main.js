@@ -19,15 +19,14 @@ var coffees = [
 ];
 
 var tbody = document.querySelector('#coffees');
-var submitButton = document.querySelector('#submit');
+var submitButton = document.querySelector('#submit1');
 var roastSelection = document.querySelector('#roast-selection');
 var search = document.querySelector("#coffee");
+var addButton = document.querySelector('#submit2');
+var addRoast = document.querySelector('#add-roast');
+var addName = document.querySelector('#myCoffee');
 
-//attempt at displaying input
-
-
-
-
+//used to display coffee
 function renderCoffee(coffee) {
     var html = '<div class="coffee">';
     // html += '' + coffee.id + '';
@@ -38,9 +37,7 @@ function renderCoffee(coffee) {
     return html;
 }
 
-
-
-
+//used to display new generated coffees based on searches
 function renderCoffees(coffees) {
     var html = '';
     for(var i = 0; i <= coffees.length - 1;  i++) {
@@ -49,6 +46,7 @@ function renderCoffees(coffees) {
     return html;
 }
 
+//update coffee results based on roast
 function updateCoffees(e) {
     e.preventDefault(); // don't submit the form, we just want to update the data
     var selectedRoast = roastSelection.value;
@@ -67,7 +65,7 @@ function updateCoffees(e) {
 //         return coffeeSearch;
 //     }
 
-
+//updates coffees based on coffee name
 function coffeeSearch(e) {
     e.preventDefault();
     var coffeeSearch = search.value;
@@ -81,44 +79,28 @@ function coffeeSearch(e) {
 
 }
 
-// function coffeeSearch (){
-//     var input, i, a;
-//     input = document.getElementById('coffee');
-//
-//     for (i = 0; i < coffees.length; i++) {
-//         a = coffees[i].getElementById("a") [0];
-//
-//     }
-// }
-
-
-
-// function searchCoffees(e) {
-//     // e.preventDefault();
-//     // var search = document.form.coffee.value;
-//     // function showInput() {
-//         var coffeeSearch = document.getElementById("coffee").value;
-//         console.log(coffeeSearch);
-//     // }
-//     var filteredCoffees = [];
-//     coffees.forEach(function(coffee){
-//         if (coffeeSearch === coffee.name) {
-//             filteredCoffees.push(coffee);
-//         }
-//     });
-//     tbody.innerHTML = renderCoffees(filteredCoffees);
-// }
-
-// var coffeeSearch = document.getElementById('coffee').value;
-// console.log(coffeeSearch);
-//
-// document.getElementById('coffee').value = coffeeSearch;
-//
-// console.log(coffeeSearch);
-
-
 
 tbody.innerHTML = renderCoffees(coffees);
 
+//add a coffee
+function addACoffee (e) {
+    e.preventDefault();
+    var newCoffee = addName.value;
+    var newRoast = addRoast.value;
+    var newId = Number(coffees.length + 1);
+    ;
+    var newCoffeeItem = ({id: newId, name: newCoffee, roast: newRoast});
+    // console.log(newCoffeeList);
+    coffees.push(newCoffeeItem);
+    // console.log(coffees);
+    tbody.innerHTML = renderCoffees(coffees);
+}
+
+// console.log(coffees);
+
+
+
+
 submitButton.addEventListener('click', updateCoffees);
 search.addEventListener('keyup', coffeeSearch);
+addButton.addEventListener('click', addACoffee);
