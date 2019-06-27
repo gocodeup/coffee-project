@@ -62,7 +62,7 @@ var coffees = [
     {id: 11, name: 'Espresso', roast: 'dark'},
     {id: 12, name: 'Viennese', roast: 'dark'},
     {id: 13, name: 'Italian', roast: 'dark'},
-    {id: 14, name: 'French', roast: 'dark'},
+    {id: 14, name: 'French', roast: 'dark'}
 ];
 var coffeesAuto = ["Light City", "Half City", "Cinnamon", "City", "American", "Breakfast", "High", "Continental", "New Orelans", "European", "Espresso", "Viennese", "Italian", "French"];
 
@@ -149,35 +149,20 @@ function autocomplete(inp, arr) {
 
 autocomplete(document.getElementById("myInput"), coffeesAuto);
 
-function appearDisappear() {
-    var roastType = document.getElementById('roast-selection').value;
-    switch(roastType) {
-
-        case 'light':
-        typeLight.style.display = 'inline-block';
-        typeMedium.style.display = 'none';
-        typeDark.style.display = 'none';
-        break;
-
-        case 'medium':
-
-        typeLight.style.display = 'none';
-        typeMedium.style.display = 'inline-block';
-        typeDark.style.display = 'none';
-        break;
-
-        case 'dark':
-        typeLight.style.display = 'none';
-        typeMedium.style.display = 'none';
-        typeDark.style.display = 'inline-block';
-        break;
-
-        default:
-        typeLight.style.display = 'block';
-        typeMedium.style.display = 'block';
-        typeDark.style.display = 'inline-block';
-    }
-
+function switchCoffees() {
+        var html = '';
+    coffees.forEach(function (coffee) {
+        if (coffee.roast === "light") {
+            html += renderCoffee(coffee);
+        }
+        else if (coffee.roast === "medium") {
+            html += renderCoffee(coffee);
+        }
+        // else if (coffee.roast === "dark") {
+        //     html += renderCoffee(coffee);
+        // }
+    });
+        tbody.innerHTML = html;
 }
 
 
