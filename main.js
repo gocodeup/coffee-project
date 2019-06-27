@@ -14,9 +14,9 @@ function renderCoffee(coffee) {
 
 function renderCoffees(coffees) {
     var html = '';
-    for(var i = 0; i <= coffees.length - 1; i++) {
-        html += renderCoffee(coffees[i]);
-    }
+    coffees.forEach(function(coffee) {
+        html += renderCoffee(coffee);
+    });
     return html;
 }
 //put coffee in ascending order
@@ -24,8 +24,9 @@ function renderCoffees(coffees) {
 // var newName = document.querySelector('#new-name');
 
 
-
-function coffeeSearch(){
+//for searching coffee
+function searchRoast(e){
+    e.preventDefault();
     var input = document.getElementById("coffee-search").value;
     console.log(typeof input);
     var filteredCoffee = [];
@@ -41,17 +42,17 @@ function coffeeSearch(){
     tbody.innerHTML = renderCoffees(filteredCoffee);
 }
 
+submitButton.addEventListener('click', searchRoast);
 
 
 
-//for adding coffee
+
+//for selecting roast
 function updateCoffees(e) {
     e.preventDefault(); // don't submit the form, we just want to update the data
     var selectedRoast = roastSelection.value;
     var filteredCoffees = [];
-    // if (selectedRoast === "all"){
-    //
-    // }
+
     coffees.forEach(function(coffee) {
         if (coffee.roast === selectedRoast) {
             filteredCoffees.push(coffee);
@@ -63,7 +64,9 @@ function updateCoffees(e) {
     });
     tbody.innerHTML = renderCoffees(filteredCoffees);
 }
+submitButton.addEventListener('click', updateCoffees);
 
+//for adding new roast/coffee
 var coffeeAdd = document.querySelector('#new-name');
 var roastAdd = document.querySelector('#new-roast');
 var userSubmit = document.querySelector('#new-submit');
@@ -74,7 +77,7 @@ function addCoffee(e) {
     newCoffee.name = coffeeAdd.value;
     newCoffee.roast = roastAdd.value;
     coffees.push(newCoffee);
-    tbody.innerHTML = renderCoffee(coffees)
+    tbody.innerHTML = renderCoffees(coffees)
 }
 userSubmit.addEventListener('click', addCoffee);
 
@@ -101,4 +104,3 @@ var coffees = [
 tbody.innerHTML = renderCoffees(coffees);
 
 
-submitButton.addEventListener('click', coffeeSearch);
