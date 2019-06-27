@@ -18,6 +18,8 @@ var coffees = [
 ];
 var coffeesAuto = ["Light City", "Half City", "Cinnamon", "City", "American", "Breakfast", "High", "Continental", "New Orleans", "European", "Espresso", "Viennese", "Italian", "French"];
 
+var reversed = coffees.reverse();
+
 var tbody = document.querySelector('#coffees');
 
 

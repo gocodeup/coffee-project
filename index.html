@@ -4,40 +4,42 @@
     <meta charset="UTF-8">
     <title></title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
 </head>
 <body>
+
     <h1 class="header">Coffee!</h1>
 
     <hr>
-    <main class="boxElement">
-    <form>
-        <label for="roast-selection"></label>
-        <select onchange="switchCoffees()" id="roast-selection" class="longButton">
-            <option>all</option>
-            <option>light</option>
-            <option>medium</option>
-            <option>dark</option>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6">
+            <form>
+             <label for="roast-selection"></label>
+             <select onchange="switchCoffees()" id="roast-selection" class="longButton">
+            <option>All</option>
+            <option>Light</option>
+            <option>Medium</option>
+            <option>Dark</option>
         </select>
     </form>
 
     <h3><strong>Coffee Name</strong></h3>
-    <form autocomplete="on" action="/action_page.php">
+    <form autocomplete="on" action="http://requestbin.fullcontact.com/1iar1d31">
         <div class="autocomplete" style="width:300px;">
             <input id="myInput" type="text" name="myInput">
         </div>
         <input type="submit">
     </form>
 
-
     <h1>Add a coffee</h1>
-
 
     <form>
         <label for="add-roast-selection"></label>
         <select id="add-roast-selection" class="longButton">
-            <option>light</option>
-            <option>medium</option>
-            <option>dark</option>
+            <option>Light</option>
+            <option>Medium</option>
+            <option>Dark</option>
         </select>
     </form>
 
@@ -45,23 +47,27 @@
     <form>
         <div class="autocomplete" style="width:300px;">
             <input id="myInput2" type="text" name="myInput2">
+              </div>
+             <input type="submit" id="submitButton">
+            </form>
+                <br>
+                  <div class="col-lg-6">
+                      <table>
+                         <thead>
+                         <tr>
+                          <th>NAME</th>
+                         <th>ROAST</th>
+                         </tr>
+                     </thead>
+                  <tbody id="coffees"></tbody>
+                </table>
+             </div>
+            </div>
         </div>
-        <input type="submit" id="submitButton">
-    </form>
-
-    <br>
-
-        <table>
-            <thead>
-            <tr>
-                <th>NAME</th>
-                <th>ROAST</th>
-            </tr>
-            </thead>
-            <tbody id="coffees"></tbody>
-        </table>
-    </main>
-
+    </div>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
     <script src="main.js"></script>
 </body>
 </html>
