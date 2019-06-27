@@ -19,9 +19,7 @@ h1.jumbotron{
 .ruge {
     font-family: 'Ruge Boogie', cursive;
 }
-.montez {
-    font-family: 'Montez', cursive;
-}
+
 .condensed {
     font-family: 'Open Sans Condensed', sans-serif;
 }
@@ -31,6 +29,10 @@ h1.jumbotron{
 .navbar {
     font-size: 1.5em;
 }
+.coffee-name {
+    font-family: 'Courgette', cursive;
+}
+
 .roast-list {
     background: url("img/damask.jpg");
     ackground-repeat: no-repeat;
@@ -54,6 +56,7 @@ h1.jumbotron{
     width: 450px;
     height: 30px;
     margin-left: 6px;
+    background-color: #73a1bd;
 
 }
 
@@ -61,13 +64,14 @@ h1.jumbotron{
     margin: 10px 10px 5px 10px;
     width: 450px;
     height: 30px;
+    background-color: #73a1bd;
 }
 
 #submit, #new-submit {
     margin: 10px;
     width: 450px;
     height: 30px;
-    background-color: #3888CD;
+    background-color: #73a1bd;
 
 }
 
