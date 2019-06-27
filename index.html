@@ -9,49 +9,48 @@
     <h1>Coffee!</h1>
 
     <hr>
-<div class = 'container'>
-    <form name="search">
-<!--        <p class="searchTitle">Roast</p>-->
-        <label for="roast-selection">Roast</label>
-        <select id="roast-selection">
-            <option>all</option>
-            <option>light</option>
-            <option>medium</option>
-            <option>dark</option>
-        </select>
-<!--        <p class="searchTitle" id="coffee-title">Coffee Name</p>-->
-        <label for="coffee">Coffee Name</label>
-        <input type="text" id="coffee" name="coffee" />
-        <input id="submit1" type="submit"/>
+    <div class = 'container'>
+        <form name="search">
+    <!--        <p class="searchTitle">Roast</p>-->
+            <label for="roast-selection">Roast</label>
+            <select id="roast-selection">
+                <option>all</option>
+                <option>light</option>
+                <option>medium</option>
+                <option>dark</option>
+            </select>
+    <!--        <p class="searchTitle" id="coffee-title">Coffee Name</p>-->
+            <label for="coffee">Coffee Name</label>
+            <input type="text" id="coffee" name="coffee" />
+            <input id="submit1" type="submit"/>
 
-    </form>
+        </form>
 
-    <h2>Add a Coffee</h2>
-    <form id="add">
-        <label for="add-roast">Roast</label>
-        <select name="add-roast" id="add-roast">
-            <option>light</option>
-            <option>medium</option>
-            <option>dark</option>
-        </select>
-        <label for="myCoffee">Coffee Name</label>
-        <input type="text" id="myCoffee" name="myCoffee"/>
+        <h2>Add a Coffee</h2>
+        <form id="add">
+            <label for="add-roast">Roast</label>
+            <select name="add-roast" id="add-roast">
+                <option>light</option>
+                <option>medium</option>
+                <option>dark</option>
+            </select>
+            <label for="myCoffee">Coffee Name</label>
+            <input type="text" id="myCoffee" name="myCoffee"/>
 
-        <input id="submit2" type="submit">
-    </form>
+            <input id="submit2" type="submit">
+        </form>
 
-    <table id="coffeeList">
-        <thead>
-<!--        <tdi>-->
-<!--&lt;!&ndash;            <th>ID</th>&ndash;&gt;-->
-<!--            <th>NAME</th>-->
-<!--            <th>ROAST</th>-->
-<!--        </tdi>-->
-        </thead>
-        <tbody id="coffees"></tbody>
-    </table>
-
-    <script src="main.js"></script>
-</div>
+        <table id="coffeeList">
+            <thead>
+    <!--        <tdi>-->
+    <!--&lt;!&ndash;            <th>ID</th>&ndash;&gt;-->
+    <!--            <th>NAME</th>-->
+    <!--            <th>ROAST</th>-->
+    <!--        </tdi>-->
+            </thead>
+            <tbody id="coffees"></tbody>
+        </table>
+    </div>
+<script src="main.js"></script>
 </body>
 </html>
