@@ -1,14 +1,8 @@
-/*table {*/
-/*    border-collapse: collapse;*/
-/*    margin: 15px 0;*/
-/*}*/
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
 
-/*td, th {*/
-/*    border: 1px solid black;*/
-/*    padding: 5px 10px;*/
-/*}*/
-
-* { box-sizing: border-box; }
 body {
     font: 16px Arial;
 }
@@ -70,9 +64,6 @@ input[type=submit] {
  .header {
      text-align: center;
  }
- .boxElement{
-     margin: none;
- }
- .rightFloats{
-     float: right;
- }
+ /*.boxElement{*/
+ /*    margin: none;*/
+ /*}*/
