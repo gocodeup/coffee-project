@@ -28,6 +28,7 @@ h1.jumbotron{
 }
 .navbar {
     font-size: 1.5em;
+    height: 80px;
 }
 .coffee-name {
     font-family: 'Courgette', cursive;
@@ -35,7 +36,7 @@ h1.jumbotron{
 
 .roast-list {
     background: url("img/damask.jpg");
-    ackground-repeat: no-repeat;
+    background-size: auto;
     background-attachment: fixed;
 }
 .jumbotron {
@@ -51,7 +52,25 @@ h1.jumbotron{
     box-shadow: 0 -1px 10px rgba(0, 0, 0, .7);
     transform-style: inherit;
 }
+.our-story {
+    position: relative;
+    box-sizing: border-box;
+    box-shadow: 0 0 2px 1px rgba(0, 0, 0, .7);
+    border: 1px solid black;
+}
 
+.our-story:nth-child(2n) {
+    margin-left: 0;
+    margin-right: auto;
+}
+
+.our-story:nth-child(2n+1) {
+    margin-left: auto;
+    margin-right: 0;
+}
+/*#our-story:before {*/
+/*    transform: translateZ(-1px) scale(2);*/
+/*}*/
 #roast-selection, #new-roast {
     width: 450px;
     height: 30px;
