@@ -1,10 +1,15 @@
+
+
+.header {
+    background-color: #5B2308;
+    color: lightgray;
+}
+
 .container {
+    container: flex;
     height:200px;
 }
 
-div.container {
-    width:451px;
-}
 div.row {
     height:200px;
 }
@@ -18,23 +23,5 @@ hr {
 }
 
 select {
-    width:400px;
-}
-
-table {
-    border-collapse: collapse;
-    margin: 15px 0;
-}
-
-td, th {
-    border: 1px solid black;
-    padding: 5px 10px;
-}
-
-div.position-relative {
-    left:33%;
-    width: 400px;
-}
-input.rounded {
     width:400px;
 }

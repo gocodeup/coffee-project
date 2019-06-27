@@ -4,80 +4,83 @@
     <meta charset="UTF-8">
     <title></title>
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+
+
 </head>
 <body>
 
-
-
-
-
-<h1 class="position-relative">Coffee!</h1>
-
-<hr>
-<div class="position-relative"><!-- Eliminate the margin around this group-->
-    <p>
-        <strong>Roast</strong>
-        <br>
-        <select name="roast-selection">
-            <option value="Light">Light</option>
-            <option value="Medium">Medium</option>
-            <option value="Dark">Dark</option>
-        </select>
-        <!--<button type="submit">Submit</button>-->
-        <br>
-        <br>
-        <strong>Coffee Name</strong>
-        <br>
-        <input  class ="rounded" type="text" name="email" placeholder="Coffee Name">
-        <br>
-        <button class="btn btn-primary btn-sm btn-block" type="submit">Submit Choice</button>
-    </p>
-</div>
-<hr>
-<div class="position-relative"><!-- Eliminate the margin around this group-->
-    <h2 class="text-center">Add a Coffee</h2>
-    <p>
-        <strong>Roast</strong>
-        <br>
-        <select name="roast-selection">
-            <option value="Light">Light</option>
-            <option value="Medium">Medium</option>
-            <option value="Dark">Dark</option>
-        </select>
-        <!--<button type="submit">Submit</button>-->
-        <br>
-        <br>
-        <strong>Name</strong>
-        <br>
-        <input class ="rounded" type="text" name="email" placeholder="New coffee combination name">
-        <br>
-        <button class="btn btn-primary btn-sm btn-block" type="submit">Submit Choice</button>
-    </p>
-</div>
 <div class="container">
-    <h3 class="text-center">Coffee display</h3>
-    <div class="row">
-        <div class="col text-center">vvvvvv Example for coffee here vvvvvv</div>
-    </div>
+
+        <div class="header">
+
+            <h1 class="title">Fancy Coffee Company</h1>
+            <h4 class="slogan">"Our creative name says it all."</h4>
+
+        </div>
+
+    <hr>
+
+    <!--------------------------->
+        <div class="main-2">
+
+
+            <h2 class="text-center">Choose your potion.</h2>
+
+            <div class="row">
+
+        <!----This form selects the roast and submits--------->
+                <form>
+                    <label for="roast-selection"></label>
+                    <select id="roast-selection">
+                        <option>ALL ROASTS</option>
+                        <option>LIGHT ROAST</option>
+                        <option>MEDIUM ROAST</option>
+                        <option>DARK ROAST</option>
+                    </select>
+                    <br>
+
+                    <label for="input-coffee">Already know what you want?</label>
+                    <input type="text" name="input-coffee" id="input-coffee" placeholder="Search coffees...">
+
+                    <input id="submit" type="submit" />
+                </form>
+
+                <!--&lt;!&ndash;&#45;&#45;&#45;&#45;Below is the active search box thingy!-&ndash;&gt;-->
+                <!--<h5 class="whiteText">Coffee Name</h5>-->
+                <!--<div class="input-group input-group-sm mb-3">-->
+                    <!--<input id="searchBox" type="text" placeholder="Search" class="form-control listColor" >-->
+                    <!--<button id="submit" type="button" class="btn btn-primary btn-lg btn-block my-2 p-0">submit</button>-->
+                <!--</div>-->
+
+        <!----This is where the JS populates the coffees based on the selection------>
+
+                <div class="coffee-display-box">
+                    <div id="coffees"></div>
+                </div>
+
+            </div>
+        </div>
+
 </div>
 
 
 
-<!--
-    <table>
-        <thead>
-            <tr>
-                <th>ID</th>
-                <th>NAME</th>
-                <th>ROAST</th>
-            </tr>
-        </thead>
-        <tbody id="coffees"></tbody>
-    </table>
--->
+<!-- 1. Type into the input field and trigger a console.log of "test" for every key that you push.
+    2. console.log everything that's been typed into the box every time you hit a key hint: keyup event type
+    3. filter the array of coffee objects by looping through them and creating a new array of coffee objects that pass whatever tests we've written
+    3b. Our test should be whether or not what has been typed into the search field matches the beginning of what's in the name of the current coffee object we're looking at as we're looping through it.
+    3c. You can use the "starts with" method to get a yes or no value of whether a substring matches another substring.
+    4. Update the coffees with the array of filtered coffee objects]-->
+
+<!--loop through coffees-->
+<!--if (coffee.name.startsWith(inputSearch)) {-->
+    <!--add to the filter coffees array-->
+<!--}-->
+<!--------------------------->
+
+
+
 <script src="main.js"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
 </body>
