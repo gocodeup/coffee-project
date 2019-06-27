@@ -1,5 +1,25 @@
 "use strict";
 
+var coffees = [
+    {id: 1, name: 'Light City', roast: 'Light'},
+    {id: 2, name: 'Half City', roast: 'Light'},
+    {id: 3, name: 'Cinnamon', roast: 'Light'},
+    {id: 4, name: 'City', roast: 'Medium'},
+    {id: 5, name: 'American', roast: 'Medium'},
+    {id: 6, name: 'Breakfast', roast: 'Medium'},
+    {id: 7, name: 'High', roast: 'Dark'},
+    {id: 8, name: 'Continental', roast: 'Dark'},
+    {id: 9, name: 'New Orleans', roast: 'Dark'},
+    {id: 10, name: 'European', roast: 'Dark'},
+    {id: 11, name: 'Espresso', roast: 'Dark'},
+    {id: 12, name: 'Viennese', roast: 'Dark'},
+    {id: 13, name: 'Italian', roast: 'Dark'},
+    {id: 14, name: 'French', roast: 'Dark'}
+];
+var coffeesAuto = ["Light City", "Half City", "Cinnamon", "City", "American", "Breakfast", "High", "Continental", "New Orleans", "European", "Espresso", "Viennese", "Italian", "French"];
+
+var tbody = document.querySelector('#coffees');
+
 
 function addNewCoffee(e) {
     e.preventDefault();
@@ -10,9 +30,15 @@ function addNewCoffee(e) {
         roast: document.getElementById("add-roast-selection").value
     };
     coffees.push(starbucksCoffee);
-}
+};
+
+function addNewCoffeeAuto() {
+    var theNewCoffee = document.getElementById("myInput2").value;
+    coffeesAuto.push(theNewCoffee);
+};
 
 document.getElementById("submitButton").addEventListener("click", addNewCoffee);
+document.getElementById("submitButton").addEventListener("click", addNewCoffeeAuto);
 document.getElementById("submitButton").addEventListener("click", renderAgain);
 
  function renderAgain() {
@@ -24,7 +50,6 @@ function renderCoffee(coffee) {
     html += '<td>' + coffee.name + '</td>';
     html += '<td>' + coffee.roast + '</td>';
     html += '</tr>';
-
     return html;
 }
 
@@ -35,51 +60,7 @@ function renderCoffees(coffees) {
     }
     return html;
 }
-
-// function updateCoffees(e) {
-//     e.preventDefault(); // don't submit the form, we just want to update the data
-//     var selectedRoast = 'add-roast-selection'.value;
-//     var filteredCoffees = [];
-//     coffees.forEach(function(coffee) {
-//         if (coffee.roast === selectedRoast) {
-//             filteredCoffees.push(coffee);
-//         }
-//     });
-//     tbody.innerHTML = renderCoffees(filteredCoffees);
-// }
-
-var coffees = [
-    {id: 1, name: 'Light City', roast: 'light'},
-    {id: 2, name: 'Half City', roast: 'light'},
-    {id: 3, name: 'Cinnamon', roast: 'light'},
-    {id: 4, name: 'City', roast: 'medium'},
-    {id: 5, name: 'American', roast: 'medium'},
-    {id: 6, name: 'Breakfast', roast: 'medium'},
-    {id: 7, name: 'High', roast: 'dark'},
-    {id: 8, name: 'Continental', roast: 'dark'},
-    {id: 9, name: 'New Orleans', roast: 'dark'},
-    {id: 10, name: 'European', roast: 'dark'},
-    {id: 11, name: 'Espresso', roast: 'dark'},
-    {id: 12, name: 'Viennese', roast: 'dark'},
-    {id: 13, name: 'Italian', roast: 'dark'},
-    {id: 14, name: 'French', roast: 'dark'}
-];
-var coffeesAuto = ["Light City", "Half City", "Cinnamon", "City", "American", "Breakfast", "High", "Continental", "New Orelans", "European", "Espresso", "Viennese", "Italian", "French"];
-
-
-var tbody = document.querySelector('#coffees');
-// var submitButton = document.querySelector('#submit');
-// var roastSelection = document.querySelector('#roast-selection');
-//
 tbody.innerHTML = renderCoffees(coffees);
-//
-// submitButton.addEventListener('click', updateCoffees);
-
-
-
-
-
-
 
 function autocomplete(inp, arr) {
     var currentFocus;
@@ -151,18 +132,14 @@ autocomplete(document.getElementById("myInput"), coffeesAuto);
 
 function switchCoffees() {
         var html = '';
+        var filterVal = document.getElementById('roast-selection').value;
+        console.log(filterVal);
     coffees.forEach(function (coffee) {
-        if (coffee.roast === "light") {
+        if (coffee.roast === filterVal) {
             html += renderCoffee(coffee);
         }
-        else if (coffee.roast === "medium") {
-            html += renderCoffee(coffee);
-        }
-        // else if (coffee.roast === "dark") {
-        //     html += renderCoffee(coffee);
-        // }
-    });
         tbody.innerHTML = html;
+    });
 }
 
 
