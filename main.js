@@ -160,3 +160,18 @@ function appearDisappear() {
     }
 
 }
+
+
+
+
+
+function addNewCoffee(e) {
+    e.preventDefault();
+    var theNewCoffee = document.getElementById("myInput2").value;
+    coffees.push(theNewCoffee);
+};
+
+document.getElementById("submitButton").addEventListener("click", addNewCoffee)
+
+
+
