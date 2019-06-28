@@ -37,7 +37,7 @@ function renderMultiCoffees(coffees) {
 function updateCoffees(e) {
     console.log("moo");
     e.preventDefault(); // don't submit the form, we just want to update the data
-    var selectedRoast = roastSelection.value.toLowerCase();
+    var selectedRoast = roastSelection.value.toUpperCase();
     var filteredCoffees = [];
     coffees.forEach(function(coffee) {
         if (coffee.roast === selectedRoast) {
@@ -54,14 +54,14 @@ function updateCoffees(e) {
     function searchCoffees() {
     console.log("moo!");
         var searchRoast = document.getElementById('#input-coffee').value.toUpperCase();
-        // var filteredCoffees = [];
+        var filteredCoffees = [];
         console.log(searchRoast);
-        // coffees.forEach(function(coffee) {
-        //     if (coffee.name.toUpperCase().includes(searchRoast)) {
-        //         filteredCoffees.push(coffee);
-        //         console.log(filteredCoffees);
-        //     }
-        // });
+        coffees.forEach(function(coffee) {
+            if (coffee.name.toUpperCase().includes(searchRoast)) {
+                filteredCoffees.push(coffee);
+                console.log(filteredCoffees);
+            }
+        });
 
     tbody.innerHTML = renderMultiCoffees(filteredCoffees);
 }
@@ -91,3 +91,4 @@ var roastSelection = document.querySelector('#roast-selection');
 tbody.innerHTML = renderMultiCoffees(coffees);
 
 submitButton.addEventListener('click', updateCoffees);
+roastSelection.addEventListener('onchange', updateCoffees);
