@@ -2,26 +2,30 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Coffee!</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css?family=Lobster|Stylish&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class = 'container'>
+<!-- business name-->
+    <div class = "container text-center">
         <div id="head" class="row">
-            <h1>Con-Caffeinate!</h1>
+            <h1 class = "col-12">Con-Caffeinate!</h1>
         </div>
-        <div class="logo"><img id="logo" src="brewbaccascoffee.png" alt="brewbaccathewise">
+        <div>
+            <img class ="logo" src="brewbaccascoffee.png" alt="brewbaccathewise">
         </div>
         <hr>
+<!--        body of page-->
         <div class="row">
             <div class="col">
                 <div class="card">
                     <div class="card-body">
                         <h2 class="card-header">Pick a Coffee!</h2>
                         <form name="search">
-                    <!--        <p class="searchTitle">Roast</p>-->
                             <label for="roast-selection">Roast</label>
                                 <select id="roast-selection">
                                     <option>all</option>
@@ -29,7 +33,6 @@
                                     <option>medium</option>
                                     <option>dark</option>
                                 </select>
-                    <!--        <p class="searchTitle" id="coffee-title">Coffee Name</p>-->
                             <label for="coffee">Coffee Name</label>
                             <input type="text" id="coffee" name="coffee" />
                             <input id="submit1" type="submit"/>
@@ -57,7 +60,8 @@
             </div>
         </div>
         <div id="selected" class="row">
-            <table id="coffeeList">
+            <table style = "width: 100%" id="coffeeList">
+
                 <tbody id="coffees"></tbody>
             </table>
         </div>
@@ -65,6 +69,7 @@
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+
     <script src="main.js"></script>
 </body>
 </html>

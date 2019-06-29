@@ -18,20 +18,29 @@ p {
     color: #FFFADE
 }
 
-img #logo {
-    width: 75px;
+.logo {
+    width: 150px;
     height: auto;
+    position: relative;
 }
 
-div .logo {
-    height: 75px;
-}
+/*div .logo {*/
+/*    height: 75px;*/
+/*}*/
 
 div #selected {
     background-image: url("coffee.jpg");
+    margin: 0;
+    width: 100%;
 }
 
 table {
     border-collapse: collapse;
     margin: 15px 0;
+}
+
+tbody{
+    display: block;
+    height: 300px;
+    overflow: auto;
 }
