@@ -8,41 +8,47 @@
     <link href="https://fonts.googleapis.com/css?family=Courgette|Lobster&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
-    <div class="container-fluid p-0">
-        <div>
-            <nav class="navbar navbar-expand-lg navbar-dark bg-dark px-auto fixed-top condensed py-0 mb-0" >
-                <a class="navbar-brand" href="#">
-                    <img src="img/purrk-olator-border.png" width="75px" height="75px" alt="purrk-olator logo">
-                </a>
-                <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-                    <div class="navbar-nav">
-                        <a class="nav-item nav-link" href="#">Home</a>
-                        <a class="nav-item nav-link" href="#">About Us</a>
-                        <a class="nav-item nav-link" href="#">Roasting Process</a>
-                        <a class="nav-item nav-link" href="#">What's Roasting?</a>
-                    </div>
+<body class="bg-dark">
+<div class="container-fluid p-0">
+    <div>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark px-auto fixed-top condensed py-0 mb-0" >
+            <a class="navbar-brand" href="#">
+                <img src="img/purrk-olator-border.png" width="75px" height="75px" alt="purrk-olator logo">
+            </a>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav">
+                    <a class="nav-item nav-link" href="#">Home</a>
+                    <a class="nav-item nav-link" href="#">About Us</a>
+                    <a class="nav-item nav-link" href="#">Roasting Process</a>
+                    <a class="nav-item nav-link" href="#">What's Roasting?</a>
                 </div>
-            </nav>
-        </div>
-
-            <div class="jumbotron jumbotron-fluid">
-                <h1 class=" px-auto apple">The Best There's Ever Bean™️</h1>
-
-<!--            <hr/>-->
-
-        </div>
-        <div class="row our-story">
-            <div class = "col-6"><h3>Our Story</h3>
-                <p>Americano aromatic, cortado extraction blue mountain crema arabica cortado robust. Acerbic milk, bar, that aroma caffeine medium con panna roast. Cultivar robust pumpkin spice cup robusta pumpkin spice barista. Sweet strong grounds rich eu espresso cultivar café au lait saucer. Percolator beans a robust medium extra organic.</p>
-
-                <p>Bar iced, irish lungo dripper café au lait aroma macchiato trifecta. Arabica flavour spoon robust redeye galão caffeine bar plunger pot decaffeinated siphon. Single origin acerbic, aftertaste, wings, robusta acerbic single shot java ristretto. Java crema id medium, trifecta that doppio iced chicory. Latte decaffeinated single shot robust french press kopi-luwak aromatic sugar kopi-luwak.</p>
             </div>
-        <div class="col-6">
-            cat latte.jpg
-        </div>
+        </nav>
+    </div>
 
-<!--    <hr/>-->
+    <div class="jumbotron jumbotron-fluid">
+        <h1 class="px-auto apple"><img src="img/cat-logo1.png" height="10%" width="10%" alt = "cat logo"> Purrk-olator</h1>
+        <h2 class="px-auto apple">The Best There's Ever Bean™️</h2>
+
+        <!--            <hr/>-->
+
+    </div>
+    <div class="row our-story-block condensed">
+        <div class = "col-5 our-story"><h3>Our Interest Espressoed</h3>
+            <br/>
+            <p>Americano aromatic, cortado extraction blue mountain crema arabica cortado robust. Acerbic milk, bar, that aroma caffeine medium con panna roast. Cultivar robust pumpkin spice cup robusta pumpkin spice barista. Sweet strong grounds rich eu espresso cultivar café au lait saucer. Percolator beans a robust medium extra organic.</p>
+
+            <p>Bar iced, irish lungo dripper café au lait aroma macchiato trifecta. Arabica flavour spoon robust redeye galão caffeine bar plunger pot decaffeinated siphon. Single origin acerbic, aftertaste, wings, robusta acerbic single shot java ristretto. Java crema id medium, trifecta that doppio iced chicory. Latte decaffeinated single shot robust french press kopi-luwak aromatic sugar kopi-luwak.</p>
+        </div>
+        <div class="col-3 our-story-img">
+            <img src="img/coffeeCups.jpeg" alt="cat latte" class="cat-latte">
+        </div>
+        <div class="col-3 our-story-img">
+            <img src="img/cat-latte-art-feat.jpg" alt="cat latte" class="cat-latte">
+        </div>
+    </div>
+
+    <!--    <hr/>-->
 
 
 
@@ -55,7 +61,7 @@
 
 
         <div class="col">
-            <h2>Various coffees:</h2>
+            <h2>Various coffees</h2>
             <div class="row justify-content-md-center">
                 <form>
                     <div class="row"></div>
@@ -77,25 +83,26 @@
 
                 <h2>Add a coffee</h2>
                 <div class="row justify-content-md-center">
-                <form>
-                    <div class="row"></div>
-                    <label for="new-roast"></label>
-                    <select id="new-roast">
-                        <option value="light">light</option>
-                        <option value="medium">medium</option>
-                        <option value="dark">dark</option>
-                    </select>
-                    <label for="new-name"></label>
-                    <input id="new-name" type="text">
+                    <form>
+                        <div class="row"></div>
+                        <label for="new-roast"></label>
+                        <select id="new-roast">
+                            <option value="light">light</option>
+                            <option value="medium">medium</option>
+                            <option value="dark">dark</option>
+                        </select>
+                        <label for="new-name"></label>
+                        <input id="new-name" type="text">
                         <button id="new-submit" class="btn" type="submit">Submit</button>
-                </form>
+                    </form>
+                </div>
             </div>
         </div>
     </div>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="main.js"></script>
 </div>
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-<script src="main.js"></script>
 </body>
 </html>
