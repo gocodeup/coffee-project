@@ -5,15 +5,19 @@ body {
 }
 h1 {
     text-align: center;
+    text-shadow: 3px 3px 3px black;
+    font-size: 48px;
 }
 
 h2 {
     text-align: left;
+    font-family: 'Courgette', cursive;
 }
 
-h1.jumbotron{
-    transform: translateZ(.25px) scale(.75);
-    transform-origin: 50% 100%;
+.jumbotron h2{
+    text-align: center;
+    text-shadow: 3px 3px 3px black;
+    font-size: 16px;
 }
 
 .ruge {
@@ -29,6 +33,10 @@ h1.jumbotron{
 .navbar {
     font-size: 1.5em;
     height: 80px;
+}
+
+.navbar-list {
+    padding: 0 2em;
 }
 .coffee-name {
     font-family: 'Courgette', cursive;
@@ -52,49 +60,84 @@ h1.jumbotron{
     box-shadow: 0 -1px 10px rgba(0, 0, 0, .7);
     transform-style: inherit;
 }
+
+.our-story-block {
+    background-attachment: fixed;
+    transform-style: inherit;
+    color: gainsboro;
+}
 .our-story {
     position: relative;
     box-sizing: border-box;
     box-shadow: 0 0 2px 1px rgba(0, 0, 0, .7);
-    border: 1px solid black;
+    border: 3px ridge aliceblue;
+    margin: 1.5em;
+    padding: 3em;
+    background: rgba(115, 161, 189, .5);
 }
 
-.our-story:nth-child(2n) {
-    margin-left: 0;
-    margin-right: auto;
+.our-story-img {
+    position: relative;
+    box-sizing: border-box;
+    box-shadow: 0 0 2px 1px rgba(0, 0, 0, .7);
+    border: 3px ridge aliceblue;
+    margin: 1.5em .5em;
+    padding: 0;
+    background: rgba(115, 161, 189, .5);
 }
 
-.our-story:nth-child(2n+1) {
-    margin-left: auto;
-    margin-right: 0;
+.cat-latte {
+    display: block;
+    max-width: 95%;
+    max-height: 95%;
+    margin: auto;
+    padding: 15px 0;
 }
-/*#our-story:before {*/
-/*    transform: translateZ(-1px) scale(2);*/
-/*}*/
+
+
+#our-story:before {
+    transform: translateZ(-1px) scale(2);
+}
 #roast-selection, #new-roast {
     width: 450px;
-    height: 30px;
+    height: 35px;
     margin-left: 6px;
-    background-color: #73a1bd;
+    background-color: rgba(115, 161, 189, .7);
+    font-family: 'Courgette', cursive;
 
 }
 
 #coffee-search, #new-name {
     margin: 10px 10px 5px 10px;
     width: 450px;
-    height: 30px;
-    background-color: #73a1bd;
+    height: 35px;
+    background-color: rgba(115, 161, 189, .7);
 }
 
 #submit, #new-submit {
     margin: 10px;
     width: 450px;
-    height: 30px;
-    background-color: #73a1bd;
-
+    height: 35px;
+    background-color: rgba(115, 161, 189, .7);
 }
 
 #new-name {
     width: 450px;
-    height: 30px;
+    height: 35px;
 }
+a:hover {
+    transition: font-size 600ms, color 600ms;
+    font-size: 120%;
+    transition-timing-function: ease-in-out;
+}
+
+#new-submit {
+    font-family: 'Courgette', cursive;
+}
+#submit {
+    font-family: 'Courgette', cursive;
+}
+span {
+    font-family: 'Courgette', cursive;
+}
+
