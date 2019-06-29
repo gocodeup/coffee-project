@@ -2,69 +2,118 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title></title>
-    <link rel="stylesheet" href="style.css">
+    <title>Coffee Project</title>
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+
 </head>
 <body>
+<div class="container">
+    <div class="row-fluid">
+        <h1 class="header col-lg-12 text-center">Hollman, Johnson & Turner Coffee Distributers</h1>
+    </div>
 
-    <h1 class="header">Coffee!</h1>
+    <div class="row" style="margin-bottom: 0.3em">
+        <hr class="col-lg-12">
+    </div>
 
-    <hr>
-    <div class="container">
         <div class="row">
             <div class="col-lg-6">
-            <form>
-             <label for="roast-selection"></label>
-             <select onchange="switchCoffees()" id="roast-selection" class="longButton">
-            <option>All</option>
-            <option>Light</option>
-            <option>Medium</option>
-            <option>Dark</option>
-        </select>
-    </form>
+                <h1 style="margin-bottom: 0.3em">Find a Coffee</h1>
+                <form>
+                    <label for="roast-selection" style="margin-bottom: 0.5em"></label>
+                    <select onchange="switchCoffees()" id="roast-selection" class="longButton" style="width: 408px">
+                        <option>All</option>
+                        <option>Light</option>
+                        <option>Medium</option>
+                        <option>Dark</option>
+                    </select>
+                </form>
 
-    <h3><strong>Coffee Name</strong></h3>
-    <form autocomplete="on" action="http://requestbin.fullcontact.com/1iar1d31">
-        <div class="autocomplete" style="width:300px;">
-            <input id="myInput" type="text" name="myInput">
-        </div>
-        <input type="submit">
-    </form>
+                <h3 style="margin-top: 0.5em"><strong>Coffee Name</strong></h3>
+                <form autocomplete="on" action="http://requestbin.fullcontact.com/1iar1d31" style="margin-left: 5px">
+                    <div class="autocomplete" style="width:300px;">
+                        <input id="myInput" type="text" name="myInput" style="border-radius: 5px; padding: 9px">
+                    </div>
+<!--                <input type="submit">-->
+                    <button type="button" class="btn btn-outline-secondary" style="width: 103.766px; background-color:                                          #7A5F52; color: #B29B8C">Search</button>
+                </form>
 
-    <h1>Add a coffee</h1>
+                <h1 style="margin-top: 0.3em; margin-bottom: 0.3em">Add a coffee</h1>
+                <form>
+                    <label for="add-roast-selection" style="margin-bottom: 0.5em"></label>
+                    <select id="add-roast-selection" class="longButton" style="width: 408px">
+                        <option>Light</option>
+                        <option>Medium</option>
+                        <option>Dark</option>
+                    </select>
+                </form>
 
-    <form>
-        <label for="add-roast-selection"></label>
-        <select id="add-roast-selection" class="longButton">
-            <option>Light</option>
-            <option>Medium</option>
-            <option>Dark</option>
-        </select>
-    </form>
-
-    <h3><strong>Name</strong></h3>
-    <form>
-        <div class="autocomplete" style="width:300px;">
-            <input id="myInput2" type="text" name="myInput2">
-              </div>
-             <input type="submit" id="submitButton">
-            </form>
-                <br>
-                  <div class="col-lg-6">
-                      <table>
-                         <thead>
+                <h3 style="margin-top: 0.5em"><strong>Coffee Name</strong></h3>
+                <form style="margin-left: 5px">
+                    <div class="autocomplete" style="width:300px;">
+                        <input id="myInput2" type="text" name="myInput2" style="border-radius: 5px; padding: 9px">
+                    </div>
+<!--                    <input type="submit" id="submitButton">-->
+                    <button type="button" id="submitButton" class="btn btn-outline-secondary"                                                                   style="background-color:#7a5f52; color: #b29b8c;">Add Coffee</button>
+                </form>
+            </div>
+                <div class="col-lg-6">
+                      <table class="text-center table table-striped table-sm table-dark table-hover">
+                         <thead style="color: #876b61;">
                          <tr>
-                          <th>NAME</th>
-                         <th>ROAST</th>
+                             <th scope="col"><h3>NAME</h3></th>
+                             <th scope="col"><h3>ROAST</h3></th>
                          </tr>
                      </thead>
-                  <tbody id="coffees"></tbody>
+                  <tbody id="coffees" style="color: #dcc5b6;"></tbody>
                 </table>
              </div>
             </div>
+        <div class="row">
+            <hr class="col-lg-12">
         </div>
+        <div class="row">
+            <div class="col-lg-4" style="justify-content: left; text-align: center">
+                <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img class="d-block w-100" src="coffee pics/beans.jpeg" alt="First slide">
+                        </div>
+                        <div class="carousel-item">
+                            <img class="d-block w-100" src="coffee pics/coffee1.jpeg" alt="Second slide">
+                        </div>
+                        <div class="carousel-item">
+                            <img class="d-block w-100" src="coffee pics/espresso.jpeg" alt="Third slide">
+                        </div>
+                        <div class="carousel-item">
+                            <img class="d-block w-100" src="coffee pics/pour.jpeg" alt="Fourth slide">
+                        </div>
+                    </div>
+                    <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
+                    </a>
+                </div>
+            </div>
+            <div class="col-lg-2"></div>
+            <div class="col-lg-6" style="text-align: right; color: #dcdcdc">
+
+                <p>There comes a nice little fluffer. Let your imagination just wonder around when you're doing these things. So often we avoid running water, and running water is a lot of fun. Without washing the brush, I'm gonna go right into some Van Dyke Brown, some Burnt Umber, and a little bit of Sap Green. When things happen - enjoy them. They're little gifts.</p>
+                <p>This is the fun part We'll throw some old gray clouds in here just sneaking around and having fun. They say everything looks better with odd numbers of things. But sometimes I put even numbers—just to upset the critics. We'll have a super time. You can work and carry-on and put lots of little happy things in here. Even trees need a friend. We all need friends.</p>
+
+            </div>
+        </div>
+    <div class="row">
+        <hr class="col-lg-12">
     </div>
+</div>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>

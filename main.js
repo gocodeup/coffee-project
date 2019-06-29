@@ -18,9 +18,11 @@ var coffees = [
 ];
 var coffeesAuto = ["Light City", "Half City", "Cinnamon", "City", "American", "Breakfast", "High", "Continental", "New Orleans", "European", "Espresso", "Viennese", "Italian", "French"];
 
+
 var reversed = coffees.reverse();
 
 var tbody = document.querySelector('#coffees');
+
 
 
 function addNewCoffee(e) {
@@ -62,7 +64,18 @@ function renderCoffees(coffees) {
     }
     return html;
 }
+
 tbody.innerHTML = renderCoffees(coffees);
+
+
+/* this is some code i found that should supposedly alter the list of coffees as the user types out a coffee name. i can't get it to work but it might be something worth playing around with */
+
+// var $coffees = $('#coffees'); $('#myInput').onkeydown(function () {
+//     var re = new RegExp($(this).valueOf(), 'i'); $coffees.show().filter(function () {
+//         return !re.test($(this).test());
+//     })
+// })
+
 
 function autocomplete(inp, arr) {
     var currentFocus;
@@ -143,6 +156,8 @@ function switchCoffees() {
         tbody.innerHTML = html;
     });
 }
+
+
 
 
 

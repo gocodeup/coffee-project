@@ -5,6 +5,9 @@
 
 body {
     font: 16px Arial;
+    width: 100%;
+    height: 100%;
+    background-color: #B29B8C;
 }
 .autocomplete {
     position: relative;
@@ -13,7 +16,7 @@ body {
 input {
     border: 1px solid transparent;
     background-color: #f1f1f1;
-    padding: 10px;
+    padding: 9px;
     font-size: 16px;
 }
 input[type=text] {
@@ -24,9 +27,12 @@ input[type=submit] {
     background-color: DodgerBlue;
     color: #fff;
 }
-
+.d-block {
+    width: 300px;
+    height: 200px;
+}
 .autocomplete-items {
-    position: absolute;
+    /*position: absolute;*/
     border: 1px solid #d4d4d4;
     border-bottom: none;
     border-top: none;
@@ -64,6 +70,10 @@ input[type=submit] {
  .header {
      text-align: center;
  }
- /*.boxElement{*/
- /*    margin: none;*/
- /*}*/
+.boxElement{
+    text-align: center;
+    margin: 0;
+ }
+.container {
+    padding-left: 0;
+}
