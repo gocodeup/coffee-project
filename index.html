@@ -31,17 +31,18 @@
         <!----This form selects the roast and submits--------->
                     <label for="roast-selection"></label>
                 <form>
-                    <select id="roast-selection" onchange="updateCoffees()">
+                    <select id="roast-selection" onchange="filterCoffees()">
                         <option value="ALL ROASTS">ALL ROASTS</option>
                         <option value="LIGHT ROAST">LIGHT ROAST</option>
                         <option value="MEDIUM ROAST">MEDIUM ROAST</option>
                         <option value="DARK ROAST">DARK ROAST</option>
                     </select>
-                    <input id="submit" type="submit" />
+
                     <br>
                     <input type="text" name="input-coffee" id="input-coffee" placeholder="Search coffees...">
 
                 </form>
+
 
                 <p id="display"></p>
                 <!--&lt;!&ndash;&#45;&#45;&#45;&#45;Below is the active search box thingy!-&ndash;&gt;-->

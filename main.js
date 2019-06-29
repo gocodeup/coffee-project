@@ -17,52 +17,23 @@ var coffees = [
     {id: 14, name: 'French', roast: 'DARK ROAST'},
 ];
 
+var filteredCoffees = coffees.slice(0);
 var tbody = document.querySelector('#coffees');
-var submitButton = document.querySelector('#submit');
 var roastSelection = document.querySelector('#roast-selection');
-
 var searchInput = document.getElementById("input-coffee");
 
-let siftedCoffees = [];
+searchInput.addEventListener('keyup', searchCoffees);
 
-// submitButton.addEventListener('click', updateCoffees);
-
-roastSelection.addEventListener('onchange', updateCoffees);
-
+//Initially calls function to render the coffees on page load (Initialize Coffees!)
 tbody.innerHTML = renderMultiCoffees(coffees);
 
-
-searchInput.addEventListener('keydown', function(){
-   console.log("Test");
-});
-
-// var searchInput = document.getElementById("input-coffee");
-
-// searchInput.addEventListener('keyup', searchCoffees);
-//     const key = event.key.toLowerCase();
-//     console.log(key);
-//     siftedCoffees.push(key);
-//     console.log(siftedCoffees)
-//
-// });
-
-// LIVE SEARCH FUNCTION //
-
-    function searchCoffees() {
-        console.log("meow!");
-        var searchString = document.getElementById('input-coffee').value.toUpperCase();
-        var filteredCoffees = [];
-
-        filteredCoffees.forEach(function (coffee) {
-            if (coffee.name.toUpperCase().includes(searchString)) {
-                filteredCoffees.push(coffee);
-                console.log(filteredCoffees);
-            }
-        });
+function renderMultiCoffees(coffees) {
+    var html = '';
+    for (var i = coffees.length - 1; i >= 0; i--) {
+        html += renderCoffee(coffees[i]);
     }
-
-    tbody.innerHTML = renderMultiCoffees(filteredCoffees);
-
+    return html;
+}
 
 function renderCoffee(coffee) {
     var html = '<div class="coffee">';
@@ -73,34 +44,46 @@ function renderCoffee(coffee) {
     return html;
 }
 
-function renderMultiCoffees(coffees) {
-    var html = '';
-    for (var i = coffees.length - 1; i >= 0; i--) {
-        html += renderCoffee(coffees[i]);
-    }
-    return html;
-}
-
 // Drop-down menu roast update:
-function updateCoffees() {
+function filterCoffees() {
     console.log("moose bunnies");
     // e.preventDefault(); // don't submit the form, we just want to update the data
     var selectedRoast = roastSelection.value.toUpperCase();
-    var filteredCoffees = [];
 
     if (selectedRoast === 'ALL ROASTS') {
-        filteredCoffees = coffees;
+        filteredCoffees = coffees.slice(0);
 
         } else {
 
+             filteredCoffees = [];
              coffees.forEach(function(coffee) {
                 if (coffee.roast === selectedRoast) {
                     filteredCoffees.push(coffee);
-                } else {console.log("wookie!")};
+                }
             });
         }
     tbody.innerHTML = renderMultiCoffees(filteredCoffees);
 }
+
+// LIVE, SEARCH FUNCTION! //
+
+    function searchCoffees() {
+        var searchString = document.getElementById('input-coffee').value.toUpperCase();
+        var siftedCoffees = [];
+
+        filteredCoffees.forEach(function (coffee) {
+            if (coffee.name.toUpperCase().includes(searchString)) {
+                siftedCoffees.push(coffee);
+            }
+        });
+
+        tbody.innerHTML = renderMultiCoffees(siftedCoffees);
+    }
+
+
+
+
+
 
 
 
