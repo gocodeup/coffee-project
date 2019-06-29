@@ -29,22 +29,21 @@
             <div class="row">
 
         <!----This form selects the roast and submits--------->
-                <form>
                     <label for="roast-selection"></label>
-                    <select id="roast-selection">
+                <form>
+                    <select id="roast-selection" onchange="updateCoffees()">
                         <option value="ALL ROASTS">ALL ROASTS</option>
                         <option value="LIGHT ROAST">LIGHT ROAST</option>
                         <option value="MEDIUM ROAST">MEDIUM ROAST</option>
                         <option value="DARK ROAST">DARK ROAST</option>
                     </select>
+                    <input id="submit" type="submit" />
                     <br>
-
-                    <label for="input-coffee">Already know what you want?</label>
                     <input type="text" name="input-coffee" id="input-coffee" placeholder="Search coffees...">
 
-                    <input id="submit" type="submit" />
                 </form>
 
+                <p id="display"></p>
                 <!--&lt;!&ndash;&#45;&#45;&#45;&#45;Below is the active search box thingy!-&ndash;&gt;-->
                 <!--<h5 class="whiteText">Coffee Name</h5>-->
                 <!--<div class="input-group input-group-sm mb-3">-->
