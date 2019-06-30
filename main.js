@@ -28,7 +28,7 @@ var addName = document.querySelector('#myCoffee');
 
 //used to display coffee
 function renderCoffee(coffee) {
-    var html = '<div class="coffee">';
+    var html = '<div class="coffee col-4">';
     // html += '' + coffee.id + '';
     html += '<h2>' + coffee.name + '</h2>';
     html += '<p>' + coffee.roast + '</p>';
@@ -59,12 +59,6 @@ function updateCoffees(e) {
     tbody.innerHTML = renderCoffees(filteredCoffees);
 }
 
-// function showInput() {
-//
-//         console.log(coffeeSearch);
-//         return coffeeSearch;
-//     }
-
 //updates coffees based on coffee name
 function coffeeSearch(e) {
     e.preventDefault();
@@ -83,20 +77,70 @@ function coffeeSearch(e) {
 tbody.innerHTML = renderCoffees(coffees);
 
 //add a coffee
-function addACoffee (e) {
-    e.preventDefault();
+var addACoffee = function (e) {
+    e.preventDefault(); //without this an infinite loop occurs
+    var newId = Number(coffees.length + 1);
     var newCoffee = addName.value;
     var newRoast = addRoast.value;
-    var newId = Number(coffees.length + 1);
-    ;
-    var newCoffeeItem = ({id: newId, name: newCoffee, roast: newRoast});
-    // console.log(newCoffeeList);
-    coffees.push(newCoffeeItem);
-    // console.log(coffees);
+    var newCoffeeItem = {id: newId, name: newCoffee, roast: newRoast};
+
+    //used to verify current list of coffees
+    console.log(coffees);
+
+    //used to add new coffee to beginning of coffee list
+    coffees.unshift(newCoffeeItem);
+    console.log(localStorage);
+    console.log(coffees);
+
+    //used to store coffee list to local storage... does store updated list but ONLY within the function
+    localStorage.setItem('coffees', JSON.stringify(coffees));
+
+    //used to gather data from local storage to display... does work in console... ONLY within function.
+    JSON.parse(localStorage.getItem('coffees'));
+
+
+    //used to display current coffee list in HTML
     tbody.innerHTML = renderCoffees(coffees);
-}
+
+    //used to verify list changes in console.
+    console.log(coffees);
+    console.log(localStorage);
+    console.log(JSON.stringify((coffees)));
+
+
+};
+
+
+//used to create a list to update for the HTML outside of the function
+var list = JSON.parse(localStorage.getItem('coffees'));
+console.log(list);
+//
+tbody.innerHTML = renderCoffees(list);
+
+//does not show updated coffee list with added coffee;used to show and track changes
+console.log(coffees);
+console.log(localStorage);
+
+//THUS FAR-- IT WILL STORE NEW ITEMS AND STAY WHEN YOU REFRESH BUT ONCE YOU RESUBMIT IT RESETS AND ONLY STORES THE ITEMS YOU ARE CURRENTLY STORING. WILL CONTINUE TO ALTER FUNCTIONALITY.
+
+
+// tbody.innerHTML = renderCoffees(coffees);
+
+
+
+
+
+// if (typeof(Storage) !== "undefined") {
+//     // Code for localStorage
+//     alert('local storage')
+// } else {
+//     alert('no support')
+//     // No web storage Support.
+// }
 
 // console.log(coffees);
+
+
 
 
 
@@ -104,3 +148,4 @@ function addACoffee (e) {
 submitButton.addEventListener('click', updateCoffees);
 search.addEventListener('keyup', coffeeSearch);
 addButton.addEventListener('click', addACoffee);
+// addButton.addEventListener('click', storedCoffees);

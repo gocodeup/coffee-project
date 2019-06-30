@@ -2,20 +2,32 @@ body {
     background-color: #F4DCB8;
 }
 
+.background{
+    background-image: url('coffee.jpg');
+    background-size: cover;
+}
 
 h1 {
     font-family: 'Lobster', cursive;
-    color: #FFFADE;
+    color: #967259;
+    text-shadow: 2px 2px #FFFADE;
+    font-size: 75px;
 }
 
 h2 {
     font-family: 'Stylish', sans-serif;
-    color: #FFFADE
+    color: #ece0d1;
+    text-shadow: 2px 2px #967259;
+}
+
+h4 {
+    font-family: 'Lobster', cursive;
 }
 
 p {
     font-family: 'Stylish', sans-serif;
-    color: #FFFADE
+    color: #FFFADE;
+    text-shadow: 2px 2px #38220f;
 }
 
 .logo {
@@ -24,15 +36,21 @@ p {
     position: relative;
 }
 
+.cardbackground {
+    background-color: rgba(145, 111, 88, 0.7);
+    border-radius: 10px;
+    margin: 5px;
+}
+
 /*div .logo {*/
 /*    height: 75px;*/
 /*}*/
 
-div #selected {
-    background-image: url("coffee.jpg");
-    margin: 0;
-    width: 100%;
-}
+/*div #selected {*/
+/*    background-image: url("coffee.jpg");*/
+/*    margin: 0;*/
+/*    width: 100%;*/
+/*}*/
 
 table {
     border-collapse: collapse;
@@ -40,7 +58,18 @@ table {
 }
 
 tbody{
-    display: block;
-    height: 300px;
+    display: inline-flex;
+    height: 500px;
     overflow: auto;
+}
+
+.coffeeList{
+    background-image: url("image.png");
+    background-size: cover;
+    border-radius: 30px;
+    margin: 5px;
+}
+#coffeeList{
+    display: block;
+    width: 100%;
 }
