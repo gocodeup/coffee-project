@@ -8,11 +8,13 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
 
+
 </head>
 <body>
 <div class="container">
-    <div class="row-fluid">
-        <h1 class="header col-lg-12 text-center">Hollman, Johnson & Turner Coffee Distributers</h1>
+    <div class="row" style="margin-top: 1.3em">
+        <h1 class="header col-lg-12 text-center" style="text-shadow: #c2c2c2 2px 1px 7px">
+            Hollman, Johnson & Turner Coffee Distributers</h1>
     </div>
 
     <div class="row" style="margin-bottom: 0.3em">
@@ -21,10 +23,10 @@
 
         <div class="row">
             <div class="col-lg-6">
-                <h1 style="margin-bottom: 0.3em">Find a Coffee</h1>
+                <h2 style="margin-bottom: 0.3em">Find a Coffee</h2>
                 <form>
                     <label for="roast-selection" style="margin-bottom: 0.5em"></label>
-                    <select onchange="switchCoffees()" id="roast-selection" class="longButton" style="width: 408px">
+                    <select onchange="switchCoffees()" id="roast-selection" class="longButton" style="width: 408px; height: 34px">
                         <option>All</option>
                         <option>Light</option>
                         <option>Medium</option>
@@ -32,40 +34,42 @@
                     </select>
                 </form>
 
-                <h3 style="margin-top: 0.5em"><strong>Coffee Name</strong></h3>
+                <h3 style="margin-top: 1em">Coffee Name:</h3>
                 <form autocomplete="on" action="http://requestbin.fullcontact.com/1iar1d31" style="margin-left: 5px">
                     <div class="autocomplete" style="width:300px;">
-                        <input id="myInput" type="text" name="myInput" style="border-radius: 5px; padding: 9px">
+                        <input id="myInput" type="text" name="myInput" style="border-radius: 5px; padding: 8px">
                     </div>
 <!--                <input type="submit">-->
-                    <button type="button" class="btn btn-outline-secondary" style="width: 103.766px; background-color:                                          #7A5F52; color: #B29B8C">Search</button>
+                    <button type="button" class="btn btn-outline-secondary" style ="background-color: #7a5f52;
+                        color: #B29B8C">Search</button>
                 </form>
 
-                <h1 style="margin-top: 0.3em; margin-bottom: 0.3em">Add a coffee</h1>
+                <h2 style="margin-top: 1em; margin-bottom: 0.3em">Add a Coffee</h2>
                 <form>
                     <label for="add-roast-selection" style="margin-bottom: 0.5em"></label>
-                    <select id="add-roast-selection" class="longButton" style="width: 408px">
+                    <select id="add-roast-selection" class="longButton" style="width: 408px; height: 34px;">
                         <option>Light</option>
                         <option>Medium</option>
                         <option>Dark</option>
                     </select>
                 </form>
 
-                <h3 style="margin-top: 0.5em"><strong>Coffee Name</strong></h3>
+                <h3 style="margin-top: 1em">Coffee Name:</h3>
                 <form style="margin-left: 5px">
                     <div class="autocomplete" style="width:300px;">
-                        <input id="myInput2" type="text" name="myInput2" style="border-radius: 5px; padding: 9px">
+                        <input id="myInput2" type="text" name="myInput2" style="border-radius: 5px; padding: 8px">
                     </div>
 <!--                    <input type="submit" id="submitButton">-->
-                    <button type="button" id="submitButton" class="btn btn-outline-secondary"                                                                   style="background-color:#7a5f52; color: #b29b8c;">Add Coffee</button>
+                    <button type="button" id="submitButton" class="btn btn-outline-secondary"                                                                   style="background-color:#7a5f52; color: #b29b8c;">Add</button>
                 </form>
             </div>
-                <div class="col-lg-6">
-                      <table class="text-center table table-striped table-sm table-dark table-hover">
+                <div class="col-lg-6" style="margin-top: 0.3em">
+                      <table class="text-center table table-striped table-sm table-dark table-hover" style="box-shadow:
+                      #5a6066 3px 5px">
                          <thead style="color: #876b61;">
                          <tr>
-                             <th scope="col"><h3>NAME</h3></th>
-                             <th scope="col"><h3>ROAST</h3></th>
+                             <th scope="col"><h3 style="margin-top: 0.2em">NAME</h3></th>
+                             <th scope="col"><h3 style="margin-top: 0.2em">ROAST</h3></th>
                          </tr>
                      </thead>
                   <tbody id="coffees" style="color: #dcc5b6;"></tbody>
@@ -103,11 +107,10 @@
                 </div>
             </div>
             <div class="col-lg-2"></div>
-            <div class="col-lg-6" style="text-align: right; color: #dcdcdc">
+            <div class="col-lg-6 col-sm-12" style="text-align: right; color: #dcdcdc">
+                <p>Anytime you learn something your time and energy are not wasted. A thin paint will stick to a thick paint. See. We                   take the corner of the brush and let it play back-and-forth. I'm a water fanatic. I love water. If you didn't have                    baby clouds, you wouldn't have big clouds. Let your heart be your guide. All you have to do is let your imagination                   go wild. We don't have to be committed. We are just playing here.</p>
 
-                <p>There comes a nice little fluffer. Let your imagination just wonder around when you're doing these things. So often we avoid running water, and running water is a lot of fun. Without washing the brush, I'm gonna go right into some Van Dyke Brown, some Burnt Umber, and a little bit of Sap Green. When things happen - enjoy them. They're little gifts.</p>
-                <p>This is the fun part We'll throw some old gray clouds in here just sneaking around and having fun. They say everything looks better with odd numbers of things. But sometimes I put even numbers—just to upset the critics. We'll have a super time. You can work and carry-on and put lots of little happy things in here. Even trees need a friend. We all need friends.</p>
-
+                <p>Isn't it great to do something you can't fail at? We don't need any guidelines or formats. All we need to do is                      just let it flow right out of us. A happy cloud. If we're going to have animals around we all have to be concerned                    about them and take care of them. Just take out whatever you don't want.</p>
             </div>
         </div>
     <div class="row">

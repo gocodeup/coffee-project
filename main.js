@@ -20,10 +20,7 @@ var coffeesAuto = ["Light City", "Half City", "Cinnamon", "City", "American", "B
 
 
 var reversed = coffees.reverse();
-
 var tbody = document.querySelector('#coffees');
-
-
 
 function addNewCoffee(e) {
     e.preventDefault();
