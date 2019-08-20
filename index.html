@@ -22,29 +22,27 @@
 
     <h1>Coffee!</h1>
 
+    <!--    recycled header code-->
     <!--    <div class="col-sm-7 col-md-7 col-lg-7"><h1 class="">Coffee</h1></div>-->
-
-
 </header>
 <main>
     <div>
 
     </div>
 </main>
-<!--<h1>Coffee!</h1>-->
-
 
 <!--customer input-->
 <div id="coffee-menu-input">
-    <form>
+    <form class="dropdown-menu">
         <label for="roast-selection"></label>
         <select id="roast-selection">
             <option>All</option>
-            <option>ligght</option>
+            <option>light</option>
 
             <option>medium</option>
             <option>dark</option>
         </select>
+        <hr>
         <input id="submit" type="submit"/>
     </form>
 </div>
@@ -61,8 +59,10 @@
         <tbody id="coffees"></tbody>
     </table>
 </div>
+
+
 <script src="main.js"></script>
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js">
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
         crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"

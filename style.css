@@ -79,5 +79,11 @@ label {
 }
 
 #coffee-menu-input{
+    display: flex;
+    justify-content: flex-end;
+}
 
+#coffee-menu-output{
+    display: flex;
+    justify-content: flex-start;
 }
