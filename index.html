@@ -1,9 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title></title>
-    <link rel="stylesheet" href="style.css">
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title><!-- TODO: put your title here --></title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <!-- Your custom styles go here -->
 </head>
 <body>
 <h1>Coffee!</h1>
@@ -11,7 +14,7 @@
 <form>
     <label for="roast-selection"></label>
     <select id="roast-selection">
-        <option selected>All</option>
+        <option>all</option>
         <option>light</option>
         <option>medium</option>
         <option>dark</option>
@@ -19,9 +22,33 @@
     <input id="submit" type="submit" />
 </form>
 
-<div class="coffee">
-</div>
+<div id="coffees">
 
+
+</div>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+<!-- Your custom JS goes here -->
 <script src="main.js"></script>
 </body>
 </html>
+
+<!--## TODO-->
+
+<!-- - Update the html-->
+
+<!--Tables are a little old school, you need to refactor the code so that each-->
+<!--coffee is displayed in a `div` that contains a heading displaying the coffee-->
+<!--name, and the type of roast in a paragraph. Don't display the ids, these are-->
+<!--only for our application's internal use-->
+
+<!-- - When the page loads, the coffees should be sorted by their ids in ascending-->
+<!--order-->
+
+<!-- - Add functionality to search through the coffees by name, and display only the-->
+<!--coffees that match the provided search term (You will need to add an input-->
+<!--field to the existing form for this)-->
+
+<!-- - Add functionality to update the displayed coffee as the user types into the-->
+<!--search box, or as soon as they select an option from the select.-->
