@@ -21,6 +21,10 @@ header {
     border-bottom: 0.1em solid #777;
     box-shadow: 0 0 15px #333;
 }
+
+header h1 {
+    text-align: center;
+}
 .main-heading {
     font-size: 6em;
     float: left;
@@ -72,4 +76,8 @@ input[type="text"], textarea, select {
 }
 label {
     font-size: 2em;
+}
+
+#coffee-menu-input{
+
 }
