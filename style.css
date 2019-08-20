@@ -1,3 +1,15 @@
+body>h1{
+    text-align: center;
+    margin:1em 0;
+
+
+}
+
+hr {
+    width: 90%;
+}
+
+
 table {
     border-collapse: collapse;
     margin: 15px 0;
@@ -8,8 +20,10 @@ td, th {
     padding: 5px 10px;
 }
 .grid{
+
+    margin: 0 auto;
     width: 90%;
-    height: 100em;
+    height: 50em;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: .5fr .5fr;
     display: grid;
@@ -21,6 +35,7 @@ td, th {
 
 .coffee-column{
     display:flex ;
+    justify-content: flex-start;
     grid-area:coffee-table-1;
     flex-wrap: wrap;
     border: 3px solid lime ;
@@ -31,7 +46,21 @@ td, th {
 
 
 .coffee-child{
-display: flex;
-flex-wrap: wrap;
+    display: flex;
+    flex-wrap: wrap;
     margin-right: .5em;
+    padding-left: 1em;
+    width: 300px;
+
+
+
 }
+.coffee-child p {
+    position: relative;
+    top: 22px;
+    padding-left: 10px;
+    color: gray;
+}
+
+
+
