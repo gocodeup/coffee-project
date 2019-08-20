@@ -2,33 +2,78 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title></title>
+    <title>Coffee Project</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Coffee!</h1>
+    <div class="container">
+        <h1 class="text-center">Coffee!</h1>
+        <hr>
 
-    <form>
-        <label for="roast-selection"></label>
-        <select id="roast-selection">
-            <option>light</option>
-            <option>medium</option>
-            <option>dark</option>
-        </select>
-        <input id="submit" type="submit" />
-    </form>
+        <div class="row">
+<!--            <table class="col">-->
+<!--                <thead>-->
+<!--                <tr>-->
+<!--                    <th>ID</th>-->
+<!--                    <th>NAME</th>-->
+<!--                    <th>ROAST</th>-->
+<!--                </tr>-->
+<!--                </thead>-->
+<!--                <tbody id="coffees"></tbody>-->
+<!--            </table>-->
 
-    <table>
-        <thead>
-            <tr>
-                <th>ID</th>
-                <th>NAME</th>
-                <th>ROAST</th>
-            </tr>
-        </thead>
-        <tbody id="coffees"></tbody>
-    </table>
+            <div class="box-1 col text-left p-3 ">
+
+                <div class="tbody " id="coffees"></div>
+            </div>
+
+            <div class="box-2 col text-right ">
+                <form>
+                    <!--                dropdown-->
+                    <label class="w-100 small text-left font-weight-bolder" for="roast-selection">Roast</label>
+                    <select class="w-100  form-control-sm" id="roast-selection">
+                        <option>light</option>
+                        <option>medium</option>
+                        <option>dark</option>
+                    </select>
+                    <!--                Text input-->
+                    <div class="form-group ">
+                        <label class=" w-100 small text-left font-weight-bolder" for="usr2">Coffee Name</label>
+                        <input type="text" class="form-control form-control-sm" id="usr2">
+                    </div>
+                    <!--                Submit Button-->
+                    <input class="w-100 btn btn-sm btn-primary btn-block my-3" id="submit" type="submit" />
+                    <hr>
+                    <h3 class="text-center">Add a Coffee</h3>
+                    <!--                dropdown-->
+                    <label class="w-100 small text-left font-weight-bolder" for="roast-selection2">Roast</label>
+                    <select class="w-100  form-control-sm" id="roast-selection2">
+                        <option>light</option>
+                        <option>medium</option>
+                        <option>dark</option>
+                    </select>
+                    <!--                Text input-->
+                    <div class="form-group ">
+                        <label class=" w-100 small text-left font-weight-bolder" for="usr">Name</label>
+                        <input type="text" class="form-control form-control-sm" id="usr">
+                    </div>
+                    <!--                Submit Button-->
+                    <input class="w-100 btn btn-sm btn-primary btn-block my-3" id="submit" type="submit" />
+                </form>
+
+            </div>
+<!--  end of row-->
+        </div>
+    </div>
+
+
 
     <script src="main.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 </body>
 </html>
+
+
