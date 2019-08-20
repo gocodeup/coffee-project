@@ -1,31 +1,64 @@
-table {
-    border-collapse: collapse;
-    margin: 15px 0;
+
+#coffees {
+    display: grid;
+    grid-template-columns: 50% 50%;
+
 }
 
-td, th {
-    border: 1px solid black;
-    padding: 5px 10px;
+.container{
+    max-height: 600px;
+
 }
 
+.coffeeName {
+    font-size: 30px;
+}
+
+.coffeeRoast {
+    font-size: 16px;
+    padding: 5px;
+}
+
+#h1Coffee{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
 .roast1{
     width: 350px;
+    display: flex;
+    justify-content: center;
+    margin-bottom: .5em;
 }
 
 #btn{
-    width: 350px;
+    width: 351px;
+    margin-top: 1em;
 }
 
 #btn2{
-    width: 350px;
+    width: 351px;
+    margin-top: 1em;
 }
 
 
-/*#coffees >p {*/
-/*    display: none;*/
-/*}*/
 
-/*.container {*/
-/*    margin: auto;*/
-/*}*/
+.text-area {
+    width: 350px;
+
+}
+
+#addcoffee {
+    display: flex;
+    justify-content: center;
+}
+
+#forms {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+

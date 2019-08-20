@@ -6,114 +6,62 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 </head>
-<body>
-    <h1 class="text-center">Coffee!</h1>
+<body class="container">
+<div id="h1Coffee" class="row">
+    <h1 class="h1Coffee">Coffee!</h1>
+</div>
     <hr>
-<div class="container">
-    <form class="float-right"> <!---- 1st roast form ----->
-        <p>Roast</p>
+<div class="row">
+<div id="table" class="col">
+    <div id="coffees" class="col"></div>
+</div>
+
+    <div id ="forms" class="col">
+    <form id="form1"> <!---- 1st roast form ----->
+        <strong>Roast</strong>
         <label for="roast-selection"></label>
         <select class="roast1" id="roast-selection">
             <option>light</option>
             <option>medium</option>
             <option>dark</option>
         </select>
-        <p>Coffee Name</p>
-        <input type="text"> <br>
+
+        <strong>Coffee Name</strong>
+        <br>
+        <input class = "text-area" type="text"> <br>
         <button id="btn" class="btn btn-primary" type="submit">Submit</button>
 <!--        <input id="submit" type="submit"/>-->
     </form>
+<br>
+        <hr>
+        <h3 id="addcoffee">Add a Coffee</h3>
+    <form id="form2"> <!---- 2nd roast form ----->
 
-    <form class="float-right"> <!---- 2nd roast form ----->
-        <p>Roast</p>
+        <strong>Roast</strong>
         <label for="roast-selection"></label>
         <select class="roast1"   id="roast-selection2">
             <option>light</option>
             <option>medium</option>
             <option>dark</option>
         </select>
-        <p>Coffee Name</p>
-        <input type="text"> <br>
+
+        <strong>Name</strong>
+        <br>
+        <input class = "text-area" type="text"> <br>
         <button id="btn2" class="btn btn-primary" type="submit">Submit</button>
 <!--        <input id="submit2" type="submit"/>-->
     </form>
-<h1>howdy</h1>
-    <div id="coffees">
-<!--        <p id="id">ID</p>-->
-        <h1>NAME</h1>
-        <p>ROAST</p>
     </div>
-
 </div>
-<!--    <div id="coffee1">-->
-<!--        <h2>Light City</h2>-->
-<!--        <p>light</p>-->
-<!--    </div>-->
-<!--    <div id="coffee2">-->
-<!--        <h2>Half City</h2>-->
-<!--        <p>light</p>-->
-<!--    </div>-->
-<!--    <div id="coffee3">-->
-<!--        <h2>Cinnamon</h2>-->
-<!--        <p>light</p>-->
-<!--    </div>-->
-<!--    <div id="coffee4">-->
-<!--        <h2>City</h2>-->
-<!--        <p>medium</p>-->
-<!--    </div>-->
-<!--    <div id="coffee5">-->
-<!--        <h2>Breakfast</h2>-->
-<!--        <p>medium</p>-->
-<!--    </div>-->
-<!--    <div id="coffee6">-->
-<!--        <h2>American</h2>-->
-<!--        <p>medium</p>-->
-<!--    </div>-->
-<!--    <div id="coffee7">-->
-<!--        <h2>High</h2>-->
-<!--        <p>dark</p>-->
-<!--    </div>-->
-<!--    <div id="coffee8">-->
-<!--        <h2>Continental</h2>-->
-<!--        <p>dark</p>-->
-<!--    </div>-->
-<!--    <div id="coffee9">-->
-<!--        <h2>New Orleans</h2>-->
-<!--        <p>dark</p>-->
-<!--    </div>-->
-<!--    <div id="coffee10">-->
-<!--        <h2>European</h2>-->
-<!--        <p>dark</p>-->
-<!--    </div>-->
-<!--    <div id="coffee11">-->
-<!--        <h2>Espresso</h2>-->
-<!--        <p>dark</p>-->
-<!--    </div>-->
-<!--    <div id="coffee12">-->
-<!--        <h2>Viennese</h2>-->
-<!--        <p>dark</p>-->
-<!--    </div>-->
-<!--    <div id="coffee13">-->
-<!--        <h2>Italian</h2>-->
-<!--        <p>dark</p>-->
-<!--    </div>-->
-<!--    <div id="coffee14">-->
-<!--        <h2>French</h2>-->
-<!--        <p>dark</p>-->
-<!--    </div>-->
 
 
 
-<!--    <table>-->
-<!--        <thead>-->
-<!--            <tr>-->
-<!--                <th>ID</th>-->
-<!--                <th>NAME</th>-->
-<!--                <th>ROAST</th>-->
-<!--            </tr>-->
-<!--        </thead>-->
-<!--        <tbody id="coffees"></tbody>-->
-<!--    </table>-->
+
+
+
+
+
+
 
     <script src="main.js"></script>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
