@@ -51,7 +51,7 @@ var coffees = [
     {id: 4, name: 'City', roast: 'medium'},
     {id: 3, name: 'Cinnamon', roast: 'light'},
     {id: 2, name: 'Half City', roast: 'light'},
-    {id: 1, name: 'Light City', roast: 'light'},
+    {id: 1, name: 'Light City', roast: 'light'}
 ];
 var addCoffee = document.querySelector("#addCoffeeName");
 var coffeeSelector = document.querySelector("#roast-selection");
