@@ -20,3 +20,8 @@ td, th {
     display: flex;
     justify-content: center;
 }
+
+#coffees{
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
