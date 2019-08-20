@@ -1,8 +1,8 @@
-"use strict"
+"use strict";
 
 function renderCoffee(coffee) {
     var html = '<div class="coffee">';
-    html += '<td>' + coffee.id + '</td>';
+    // html += '<td>' + coffee.id + '</td>';
     html += '<h3>' + coffee.name + '</h3>';
     html += '<p>' + coffee.roast + '</p>';
     html += '</div>';
@@ -24,9 +24,13 @@ function updateCoffees(e) {
     var coffeNameInput = coffeeName.value.toLowerCase();
     var filteredCoffees = [];
     coffees.forEach(function(coffee) {
-        if (coffee.roast === selectedRoast) {
+        if(coffee.roast === selectedRoast && coffeNameInput === ''){
             filteredCoffees.push(coffee);
         }
+        if (coffee.roast === selectedRoast && coffee.name.toLowerCase() === coffeNameInput) {
+            filteredCoffees.push(coffee);
+        }
+
     });
     tbody.innerHTML = renderCoffees(filteredCoffees);
 }
