@@ -4,31 +4,74 @@
     <meta charset="UTF-8">
     <title></title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+          integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+
 </head>
-<body>
-<h1>Coffee!</h1>
 
-<form>
-    <label for="roast-selection"></label>
-    <select id="roast-selection">
-        <option>light</option>
-        <option>medium</option>
-        <option>dark</option>
-    </select>
-    <input id="submit" type="submit"/>
-</form>
 
-<div id="table">
-    <div id="thead">
-        <div id="tr">
-            <div id="th-id">ID</div>
-            <div id="th-name">NAME</div>
-            <div id="th-roast">ROAST</div>
-        </div>
+<body class="container">
+
+<!--ROW 1-->
+
+<div class="row header">
+
+    <h1>Coffee!</h1>
+
+</div>
+
+<!--ROW 2-->
+
+<div class="row">
+    <!--LEFT SIDE-->
+
+    <div id="table" class="col">
+        <div id="coffees" class="col"></div>
     </div>
-    <div id="coffees"></div>
+
+
+    <!--RIGHT SIDE-->
+    <div class="col">
+        <form>
+            <label for="roast-selection"></label>
+            <h5>Roast</h5>
+            <select class="mb-1 custom-select" id="roast-selection">
+                <option>light</option>
+                <option>medium</option>
+                <option>dark</option>
+            </select>
+            <h5>Coffee Name</h5>
+            <input class="form-control" type="text" id="searchCoffee" name="searchCoffee"><br>
+            <input class="btn btn-primary btn-lg btn-block" id="submit" type="submit"/>
+        </form>
+
+        <form>
+            <h3 class="mt-4">Add a Coffee</h3>
+            <label for="roast-type"></label>
+            <select class="mb-1 custom-select" id="roast-type">
+                <option>light</option>
+                <option>medium</option>
+                <option>dark</option>
+            </select>
+            <h5>Coffee Name</h5>
+            <input class="form-control" type="text" id="new-coffee" name="new-coffee"><br>
+            <input class="btn btn-primary btn-lg btn-block" id="coffee-submit" type="submit"/>
+        </form>
+
+
+
+    </div>
 </div>
 
 <script src="main.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"
+        integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
+        crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"
+        integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"
+        crossorigin="anonymous"></script>
 </body>
 </html>
