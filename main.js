@@ -16,7 +16,7 @@ function renderCoffees(coffees) {
         html += renderCoffee(coffees[i]);
     }
     return html;
-}
+};
 
 function updateCoffees(e) {
     e.preventDefault(); // don't submit the form, we just want to update the data
