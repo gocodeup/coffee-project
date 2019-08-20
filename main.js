@@ -26,8 +26,8 @@ function updateCoffees(e) {
             filteredCoffees.push(coffee);
         }
     });
-    var selector = getelement
-    tbody.innerHTML = renderCoffees(filteredCoffees);
+    var selector = document.getElementById("coffees");
+    selector.innerHTML = renderCoffees(filteredCoffees);
 }
 
 // from http://www.ncausa.org/About-Coffee/Coffee-Roasts-Guide
@@ -47,11 +47,16 @@ var coffees = [
     {id: 13, name: 'Italian', roast: 'dark'},
     {id: 14, name: 'French', roast: 'dark'},
 ];
-
-var tbody = document.querySelector('#coffees');
+var addCoffee = document.querySelector("#addCoffeeName");
+var coffeeSelector = document.querySelector("#roast-selection");
+var selector = document.querySelector('#coffees');
 var submitButton = document.querySelector('#submit');
 var roastSelection = document.querySelector('#roast-selection');
 
-tbody.innerHTML = renderCoffees(coffees);
+selector.innerHTML = renderCoffees(coffees);
 
 submitButton.addEventListener('click', updateCoffees);
+
+coffeeSelector.addEventListener("change", updateCoffees);
+
+addCoffee.addEventListener("change", updateCoffees);
