@@ -2,9 +2,7 @@
 
 function renderCoffee(coffee) {
     var html = '<div class="coffee">';
-    //html += '<div>' + coffee.id + '</div>';
-    html += '<div>' + '<span class="coffeeName">' + coffee.name + '</span>' + " " + '<span class="coffeeRoast">' + coffee.roast + '</span>' + '</div>';
-    // html += '<div>' + coffee.roast + '</div>';
+    html += '<div>' + '<span class="coffeeName">' + coffee.name + '</span>' + " " + '<span class="text-muted coffeeRoast">' + coffee.roast + '</span>' + '</div>';
     html += '</div>';
 
     return html;
@@ -13,12 +11,10 @@ function renderCoffee(coffee) {
 
 function renderCoffees(coffees) {
     var html = '';
-    // coffees = coffees.sort(compare);
     console.log(coffees);
     for (var i = 0; i < coffees.length; i++) {
         html += renderCoffee(coffees[i]);
     }
-    //console.log(html);
     return html;
 }
 
@@ -35,13 +31,13 @@ function updateCoffees(e) {
             }
         });
     } else {
-
+        coffees.forEach(function (coffee) {
+            if (coffee.roast === selectedRoast && (coffee.name.toLowerCase().indexOf((searchCoffee).toLowerCase()) >= 0)) {
+                filteredCoffees.push(coffee);
+            }
+        });
     }
-    coffees.forEach(function (coffee) {
-        if (coffee.roast === selectedRoast && (coffee.name.toLowerCase().indexOf((searchCoffee).toLowerCase()) >= 0)) {
-            filteredCoffees.push(coffee);
-        }
-    });
+
     tbody.innerHTML = renderCoffees(filteredCoffees);
 }
 
