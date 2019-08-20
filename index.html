@@ -4,31 +4,68 @@
     <meta charset="UTF-8">
     <title></title>
     <link rel="stylesheet" href="style.css">
+    <meta charset="utf-8"/>
+    <meta http-equiv="x-ua-compatible" content="ie=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <title>GA-Coffee</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+          integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
 </head>
+<!--content injection into HTML-->
 <body>
-    <h1>Coffee!</h1>
+<header class="col-lg-12 col-md-12 col-sm-12">
+    <div class="header-image col-sm-5 col-md-5 col-lg-5">
+        <div class="col-lg-2 col-md-2 col-sm-2 col-sm-offset-9 col-md-offset-9 col-lg-offset-9">
 
+        </div>
+    </div>
+<!--    <div class="col-sm-7 col-md-7 col-lg-7"><h1 class="main-heading">Coffee</h1></div>-->
+    <h1>Coffee!</h1>
+</header>
+<main>
+    <div>
+
+    </div>
+</main>
+
+
+
+<!--customer input-->
+<div id="coffee-menu-input">
     <form>
         <label for="roast-selection"></label>
         <select id="roast-selection">
+            <option>all</option>
             <option>light</option>
             <option>medium</option>
             <option>dark</option>
         </select>
-        <input id="submit" type="submit" />
+        <input id="submit" type="submit"/>
     </form>
-
+</div>
+<!--customer output-->
+<div id="coffee-menu-output">
     <table>
         <thead>
-            <tr>
-                <th>ID</th>
-                <th>NAME</th>
-                <th>ROAST</th>
-            </tr>
+        <tr>
+            <th>ID</th>
+            <th>NAME</th>
+            <th>ROAST</th>
+        </tr>
         </thead>
         <tbody id="coffees"></tbody>
     </table>
+</div>
+<script src="main.js"></script>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"
+        integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"
+        crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"
+        integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
+        crossorigin="anonymous"></script>
 
-    <script src="main.js"></script>
 </body>
 </html>
