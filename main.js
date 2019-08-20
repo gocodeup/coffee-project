@@ -3,19 +3,12 @@
 function renderCoffee(coffee) {
     var html = '<div class="coffee">';
     // html += '<td>' + coffee.id + '</td>';
-    html += '<ul>' + coffee.name + '</ul>';
-    html += '<li>' + coffee.roast + '</li>';
+    html += '<h3>' + coffee.name + '</h3>';
+    html += '<p>' + coffee.roast + '</p>';
     html += '</div>';
 
     return html;
-};
-
-
-// var dbidValue = listItems.getAttrabute('data-dbid');
-
-
-
-
+}
 
 
 function renderCoffees(coffees) {
