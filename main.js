@@ -18,7 +18,7 @@ function renderCoffees(coffees) {
 }
 
 function updateCoffees(e) {
-    e.preventDefault(); // don't submit the form, we just want to update the data
+    // e.preventDefault(); // don't submit the form, we just want to update the data
     var selectedRoast = coffeeSelector.value;
     var searchCoffee = document.getElementById('searchCoffeeName').value;
     var filteredCoffees = [];
@@ -33,9 +33,6 @@ function updateCoffees(e) {
     var selector = document.getElementById("coffees");
     selector.innerHTML = renderCoffees(filteredCoffees);
 }
-
-
-
 
 // from http://www.ncausa.org/About-Coffee/Coffee-Roasts-Guide
 var coffees = [
@@ -55,10 +52,20 @@ var coffees = [
     {id: 14, name: 'French', roast: 'dark'},
 ];
 
-
-
 function createCoffee( name, roast) {
     coffees.push( {id: coffees.length + 1, name: name, roast: roast });
+
+}
+
+
+function takeCoffeeInput(event) {
+    event.preventDefault(); // don't submit the form, we just want to update the data
+
+    var roastType =  addRoastType.value;
+    createCoffee(addCoffeeName, roastType);
+    updateCoffees();
+    console.log(coffees);
+
 }
 
 var searchCoffee = document.querySelector("#searchCoffeeName");
@@ -66,14 +73,16 @@ var coffeeSelector = document.querySelector("#roast-selection");
 var selector = document.querySelector('#coffees');
 var submitButton = document.querySelector('#submit');
 var submitButton2 = document.querySelector('#submit2');
-var addCoffeeName = document.querySelector('#add-coffee-name');
+var addRoastType = document.querySelector('#roast-creator');
+// var addCoffeeName = document.querySelector('#new-coffee-name');
 
 selector.innerHTML = renderCoffees(coffees);
 
 submitButton.addEventListener('click', updateCoffees);
 
-// submitButton2.addEventListener('click', );
+submitButton2.addEventListener('click', takeCoffeeInput);
 
 coffeeSelector.addEventListener("change", updateCoffees);
 
 searchCoffee.addEventListener("keyup", updateCoffees);
+
