@@ -61,11 +61,13 @@ function takeCoffeeInput(e) {
     e.preventDefault(); // don't submit the form, we just want to update the data
 
     var roastType =  addRoastType.value;
+    var newCoffeeName = document.getElementById('newCoffeeName').value;
 
+    createCoffee(newCoffeeName, roastType);
 
-    createCoffee('jungle', 'light');
-    console.log(createCoffee());
-
+    var newCoffee = document.getElementById("coffees");
+    newCoffee.innerHTML = renderCoffees(coffees);
+    console.log(newCoffeeName);
 }
 
 var searchCoffee = document.querySelector("#searchCoffeeName");
@@ -74,7 +76,7 @@ var selector = document.querySelector('#coffees');
 var submitButton = document.querySelector('#submit');
 var submitButton2 = document.querySelector('#submit2');
 var addRoastType = document.querySelector('#roast-creator');
-var addCoffeeName = document.querySelector('#new-coffee-name');
+
 
 selector.innerHTML = renderCoffees(coffees);
 
