@@ -54,16 +54,17 @@ var coffees = [
 
 function createCoffee( name, roast) {
     coffees.push( {id: coffees.length + 1, name: name, roast: roast });
-
 }
 
 
-function takeCoffeeInput(event) {
-    event.preventDefault(); // don't submit the form, we just want to update the data
+function takeCoffeeInput(e) {
+    e.preventDefault(); // don't submit the form, we just want to update the data
 
     var roastType =  addRoastType.value;
-    createCoffee(, roastType);
-    console.log(coffees);
+
+
+    createCoffee('jungle', 'light');
+    console.log(createCoffee());
 
 }
 
@@ -73,7 +74,7 @@ var selector = document.querySelector('#coffees');
 var submitButton = document.querySelector('#submit');
 var submitButton2 = document.querySelector('#submit2');
 var addRoastType = document.querySelector('#roast-creator');
-// var addCoffeeName = document.querySelector('#new-coffee-name');
+var addCoffeeName = document.querySelector('#new-coffee-name');
 
 selector.innerHTML = renderCoffees(coffees);
 
