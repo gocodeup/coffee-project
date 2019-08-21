@@ -1,3 +1,19 @@
+body {
+    font-family: 'Indie Flower', cursive;
+    /*font-family: 'Source Code Pro', monospace;*/
+}
+
+h1 {
+    color: #663300;
+    font-weight: bold;
+    font-size: 70px;
+    text-shadow: 5px 5px black, 5px 5px black, 5px 5px black, 5px 5px black;
+}
+
+/*span {*/
+/*    color: white;*/
+/*}*/
+
 table {
     border-collapse: collapse;
     margin: 15px 0;
@@ -10,10 +26,12 @@ td, th {
 
 .coffeeName {
     font-size: 2em;
+    color: #A0522D;
 }
 
 .coffeeRoast {
     font-size: 1em;
+    color: #CD853F;
 }
 
 .header {
@@ -25,3 +43,12 @@ td, th {
     display: grid;
     grid-template-columns: 50% 50%;
 }
+
+.jumbotron {
+    background-image: url("coffee-shop.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 350px;
+}
+
