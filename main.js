@@ -43,8 +43,14 @@ function updateCoffees(e) {
             }
         });
     }
-    console.log('end ');
-    console.log(filteredCoffees);
+
+
+
+
+
+
+
+
     // var tbody = document.getElementById('coffees');
     tbody.innerHTML = renderCoffees(filteredCoffees);
     console.log(searchCoffee);
@@ -72,10 +78,12 @@ coffees.reverse();
 var tbody = document.querySelector('#coffees');
 var submitButton = document.querySelector('#submit1');
 var roastSelection = document.getElementById('roast-selection');
-var searchCoffee = document.getElementById('search-coffee')
+var searchCoffee = document.getElementById('search-coffee');
+
 
 tbody.innerHTML = renderCoffees(coffees);
 
 submitButton.addEventListener('click', updateCoffees);
 roastSelection.addEventListener('change', updateCoffees);
 searchCoffee.addEventListener('input', updateCoffees);
+
