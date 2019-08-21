@@ -12,11 +12,12 @@ function renderCoffee(coffee) {
 
 function renderCoffees(coffees) {
     var html = '';
-    for(var i = coffees.length - 1; i >= 0; i--) {
+    for (var i = coffees.length - 1; i >= 0; i--) {
         html += renderCoffee(coffees[i]);
     }
     return html;
 }
+
 //logic should be similar to the below function on how to filter through coffees as typing in the input
 //to add a new coffee
 function updateCoffees(e) {
@@ -24,24 +25,30 @@ function updateCoffees(e) {
     var selectedRoast = roastSelection.value;
     var filteredCoffees = [];
     var searchCoffee = document.getElementById('search-coffee').value;
-    coffees.forEach(function (coffee) {
-        console.log(selectedRoast);
-        if (coffee.roast === selectedRoast && coffee.name.toLowerCase().includes(searchCoffee.toLowerCase())) {
-            filteredCoffees.push(coffee);
-        }
-    });
-    var tbody = document.getElementById('coffees');
+    console.log(selectedRoast);
+    if (selectedRoast === "all") {
+        coffees.forEach(function (coffee) {
+            if (coffee.name.toLowerCase().includes(searchCoffee.toLowerCase())) {
+
+                filteredCoffees.push(coffee);
+            }
+        });
+        // tbody.innerHTML = renderCoffees(filteredCoffees);
+    } else {
+        console.log('here 2');
+        coffees.forEach(function (coffee) {
+
+            if (coffee.roast === selectedRoast && coffee.name.toLowerCase().includes(searchCoffee.toLowerCase())) {
+                filteredCoffees.push(coffee);
+            }
+        });
+    }
+    console.log('end ');
+    console.log(filteredCoffees);
+    // var tbody = document.getElementById('coffees');
     tbody.innerHTML = renderCoffees(filteredCoffees);
     console.log(searchCoffee);
 }
-
-
-
-
-
-
-
-
 
 
 // from http://www.ncausa.org/About-Coffee/Coffee-Roasts-Guide
