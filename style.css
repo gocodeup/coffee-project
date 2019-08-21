@@ -1,3 +1,4 @@
+
 table {
     border-collapse: collapse;
     margin: 15px 0;
@@ -9,4 +10,12 @@ td, th {
 }
 li{
     list-style:none
+}
+
+h1 {
+    display: flex;
+    justify-content: center;
+}
+hr{
+    width: 80%;
 }

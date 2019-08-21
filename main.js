@@ -20,17 +20,28 @@ function renderCoffees(coffees) {
 }
 
 function updateCoffees(e) {
+    //update condition inside forEach to only be true if current coffee name starts with search term
     e.preventDefault(); // don't submit the form, we just want to update the data
     var selectedRoast = roastSelection.value;
+    var allroast = coffees.roast;
+    var searchTerm = searchField.value;
     var filteredCoffees = [];
-    coffees.forEach(function(coffee) {
-        if (coffee.roast === selectedRoast) {
-            filteredCoffees.push(coffee);
-        }
-    });
+    // console.log(searchTerm);
+    if (selectedRoast === "all") {
+        coffees.forEach(function (coffee) {
+            if (coffee.name.toLowerCase().includes(searchTerm)) {
+                filteredCoffees.push(coffee);
+            }
+        });
+    } else {
+        coffees.forEach(function (coffee) {
+            if (coffee.roast === selectedRoast && coffee.name.toLowerCase().includes(searchTerm)) {
+                filteredCoffees.push(coffee);
+            }
+        });
+    }
     dbody.innerHTML = renderCoffees(filteredCoffees);
 }
-
 // from http://www.ncausa.org/About-Coffee/Coffee-Roasts-Guide
 var coffees = [
     {id: 1, name: 'Light City', roast: 'light'},
@@ -49,14 +60,45 @@ var coffees = [
     {id: 14, name: 'French', roast: 'dark'},
 ];
 
+//steps for search.
+//console.log test everytime we type into the input
+//console.log whats in the text input every time we type in the input
+//
 
+console.log("search");
+var searchField = document.querySelector("#search");
+
+
+searchField.addEventListener("input", updateCoffees);
+
+
+
+
+
+
+function selectName(na) {
+
+    let tempArr = []
+    var temp = na;
+    na = na.charAt(0).toUpperCase();
+    temp = temp.substr(1);
+    na = na + temp
+    console.log(na)
+    coffees.forEach(function(e) {
+        if (e.name.includes(na)) {
+            tempArr.push(e);
+        }
+    });
+    return tempArr;
+
+}
 
 
 
 var dbody = document.querySelector('#coffees');
 var submitButton = document.querySelector('#submit');
 var roastSelection = document.querySelector('#roast-selection');
-
+var allroast = document.querySelector('coffees.roast')
 dbody.innerHTML = renderCoffees(coffees);
 
 submitButton.addEventListener('click', updateCoffees);
