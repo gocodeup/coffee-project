@@ -2,14 +2,15 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title></title>
-    <link rel="stylesheet" href="style.css">
-    <meta charset="utf-8"/>
-    <meta http-equiv="x-ua-compatible" content="ie=edge"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1"/>
-    <title>GA-Coffee</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
-          integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>COFFEE</title>
+    <link href="https://fonts.googleapis.com/css?family=Indie+Flower" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat+Alternates:400,700" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+          integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="CSS/coffee.css">
+
 </head>
 <body>
 <header class="col-lg-12 col-md-12 col-sm-12">
@@ -19,51 +20,61 @@
         </div>
     </div>
     <div class="col-sm-7 col-md-7 col-lg-7"><h1 class="main-heading">Coffee</h1></div>
-
 </header>
 <main>
-    <div>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-6 col-md-6 col-lg-6">
+                <div id="coffees"></div>
+            </div>
+            <div class="col-sm-6 col-md-6 col-lg-6">
+                <form class="top-form">
+                    <div class="form-group">
+                        <label for="roast-selection">Roast</label>
+                        <select id="roast-selection" class="select-color form-control" onchange="updateCoffees(value)">
+                            <option value='all' selected>all</option>
+                            <option value="light">light</option>
+                            <option value="medium">medium</option>
+                            <option value="dark">dark</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="coffee-search">Coffee Name</label>
+                        <input id="coffee-search" class="form-spacing form-control" value='' type="text"
+                               onkeyup="searchCoffees(value)">
+                    </div>
 
+                </form>
+                <form>
+                    <h2 class="add-coffee-title">Add Coffee</h2>
+                    <div class="form-group">
+                        <label for="add-coffee-roast-select">Roast</label>
+                        <select id="add-coffee-roast-select" class="select-color form-control">
+                            <option value="light">light</option>
+                            <option value="medium">medium</option>
+                            <option value="dark">dark</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="add-coffee-name">Name</label>
+                        <input id="add-coffee-name" class="form-control" value='' type="text"
+                               onfocus="showAllCoffees()">
+                    </div>
+
+                    <button id="add-coffee" type="button" class="btn btn-default btn-lg btn-block"
+                            onclick="addCoffee()">Submit
+                    </button>
+
+                </form>
+            </div>
+        </div>
     </div>
 </main>
-<h1>Coffee!</h1>
-
-<!--customer input-->
-<div id="coffee-menu-input">
-    <form>
-        <label for="roast-selection"></label>
-        <select id="roast-selection">
-            <option>All</option>
-            <option>light</option>
-            <option>medium</option>
-            <option>dark</option>
-        </select>
-        <input id="submit" type="submit"/>
-    </form>
-</div>
-<!--customer output-->
-<div id="coffee-menu-output">
-    <table>
-        <thead>
-        <tr>
-            <th>ID</th>
-            <th>NAME</th>
-            <th>ROAST</th>
-        </tr>
-        </thead>
-        <tbody id="coffees"></tbody>
-    </table>
-</div>
-<script src="main.js"></script>
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+<footer></footer>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+        integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
         crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"
-        integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"
-        crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"
-        integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
-        crossorigin="anonymous"></script>
-
+<script src="js/coffee.js"></script>
 </body>
 </html>
