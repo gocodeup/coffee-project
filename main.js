@@ -31,14 +31,16 @@ function updateCoffees(e) {
         }else if(selectedRoast === "All" && coffee.name.toLowerCase().indexOf(coffeNameInput) !== -1) {
             filteredCoffees.push(coffee);
         }
-
-
     });
     tbody.innerHTML = renderCoffees(filteredCoffees);
 }
 
-function addCoffee() {
-
+function addCoffee(e) {
+    e.preventDefault();
+    coffees.push({
+        name: coffeeAddName.value,
+        roast: roastAddSelection.value
+    });
 }
 
 
