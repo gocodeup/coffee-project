@@ -1,14 +1,11 @@
 body>h1{
     text-align: center;
     margin:1em 0;
-
-
 }
 
 hr {
     width: 90%;
 }
-
 
 table {
     border-collapse: collapse;
@@ -19,6 +16,7 @@ td, th {
     border: 1px solid black;
     padding: 5px 10px;
 }
+
 .grid{
 
     margin: 0 auto;
@@ -28,9 +26,8 @@ td, th {
     grid-template-rows: .5fr .5fr;
     display: grid;
     grid-template-areas:
-"coffee-table-1 dropdown-1"
-"coffee-table-1 dropdown-2";
-
+"coffee-table-1 forms1"
+"coffee-table-1 forms2";
 }
 
 .coffee-column{
@@ -38,12 +35,28 @@ td, th {
     justify-content: flex-start;
     grid-area:coffee-table-1;
     flex-wrap: wrap;
-    border: 3px solid lime ;
     max-width: 40em;
-
-
 }
 
+.forms1{
+    grid-area: forms1;
+}
+
+forms2{
+    grid-area: forms2;
+}
+
+label {
+    margin: .8em 0;
+}
+
+label h6{
+    font-weight: bold;
+}
+
+.btn {
+    margin-top: .8em;
+}
 
 .coffee-child{
     display: flex;
@@ -51,10 +64,9 @@ td, th {
     margin-right: .5em;
     padding-left: 1em;
     width: 300px;
-
-
-
+    max-height: 2em;
 }
+
 .coffee-child p {
     position: relative;
     top: 22px;
