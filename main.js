@@ -18,7 +18,7 @@ function renderCoffees(coffees) {
 }
 
 function updateCoffees(e) {
-    // e.preventDefault(); // don't submit the form, we just want to update the data
+    e.preventDefault(); // don't submit the form, we just want to update the data
     var selectedRoast = coffeeSelector.value;
     var searchCoffee = document.getElementById('searchCoffeeName').value;
     var filteredCoffees = [];
@@ -62,8 +62,7 @@ function takeCoffeeInput(event) {
     event.preventDefault(); // don't submit the form, we just want to update the data
 
     var roastType =  addRoastType.value;
-    createCoffee(addCoffeeName, roastType);
-    updateCoffees();
+    createCoffee(, roastType);
     console.log(coffees);
 
 }
