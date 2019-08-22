@@ -12,7 +12,7 @@ function renderCoffee(coffee) {
 
 function renderCoffees(coffees) {
     var html = '';
-    for(var i = coffees.length - 1; i >= 0; i--) {
+    for(var i = 0; i < coffees.length; i++) {
         html += renderCoffee(coffees[i]);
     }
     return html;
@@ -41,6 +41,12 @@ function addCoffee(e) {
         name: coffeeAddName.value,
         roast: roastAddSelection.value
     });
+    var filteredCoffees = [];
+    coffees.forEach(function(coffee) {
+        filteredCoffees.push(coffee)
+    });
+    tbody.innerHTML = renderCoffees(filteredCoffees);
+
 }
 
 
@@ -63,7 +69,7 @@ var coffees = [
     {id: 14, name: 'French', roast: 'dark'},
 ];
 // placeholder for ascending order
-coffees.reverse();
+// coffees.reverse();
 
 var tbody = document.querySelector('#coffees');
 var submitButton = document.querySelector('#submit');
