@@ -7,6 +7,13 @@
 
 }
 
+
+
+.h1Coffee {
+    font-size: 70px;
+
+}
+
 .jumbotron {
     background-image: url("img/coffee.jpg");
     background-position: center center;
@@ -14,13 +21,25 @@
 
 }
 
+
 h1{
     font-family: 'Indie Flower', cursive;
-    color: #647FAE;
-
+    color: #4F535F;
+    position: relative;
+    top: 80px;
+    right: 180px;
 }
+
+
+h3 {
+    font-family: 'Indie Flower', cursive;
+    color: #4F535F;
+}
+
 .container{
     max-height: 600px;
+    position: relative;
+
 
 }
 
@@ -35,8 +54,8 @@ h1{
 
 #h1Coffee{
     display: flex;
-    justify-content: center;
-    align-items: center;
+    justify-content: flex-end;
+
 }
 
 .roast1{
