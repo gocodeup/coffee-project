@@ -6,7 +6,10 @@
 }
 
 .jumbotron {
-    background-image: url("coffee.jpg");
+    background-image: url("img/coffee.jpg");
+    background-size: auto;
+
+
 }
 
 .container{
