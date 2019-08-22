@@ -7,21 +7,11 @@ hr {
     width: 90%;
 }
 
-table {
-    border-collapse: collapse;
-    margin: 15px 0;
-}
-
-td, th {
-    border: 1px solid black;
-    padding: 5px 10px;
-}
 
 .grid{
-
     margin: 0 auto;
     width: 90%;
-    height: 50em;
+    height: 34em;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: .5fr .5fr;
     display: grid;
@@ -31,11 +21,10 @@ td, th {
 }
 
 .coffee-column{
-    display:flex ;
-    justify-content: flex-start;
+    display:grid;
+    grid-template-columns: 50% 50%;
     grid-area:coffee-table-1;
-    flex-wrap: wrap;
-    max-width: 40em;
+
 }
 
 .forms1{
@@ -58,16 +47,8 @@ label h6{
     margin-top: .8em;
 }
 
-.coffee-child{
-    display: flex;
-    flex-wrap: wrap;
-    margin-right: .5em;
-    padding-left: 1em;
-    width: 300px;
-    max-height: 2em;
-}
 
-.coffee-child p {
+.row p {
     position: relative;
     top: 22px;
     padding-left: 10px;
