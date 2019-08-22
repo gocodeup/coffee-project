@@ -95,3 +95,9 @@ h1{
     /*background-size: cover;*/
 }
 
+.roast-out:hover{
+    opacity: .6;
+}
+.text {
+    background-color: lightyellow;
+}

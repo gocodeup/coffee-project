@@ -62,7 +62,7 @@ var coffees = [{
 function renderCoffee(coffee) {
 
     var html = '';
-    html += '<div class="col s6"><h5 class="coffee-name">' + coffee.name;
+    html += '<div class="col s6 roast-out"><h5 class="coffee-name text">' + coffee.name;
     html += ' <small class="coffee-roast">' + coffee.roast + '</small></h5></div>';
     return html;
 }
