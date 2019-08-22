@@ -53,7 +53,7 @@ var coffees = [
 ];
 
 function createCoffee( name, roast) {
-    coffees.push( {id: coffees.length + 1, name: name, roast: roast });
+    coffees.unshift( {id: coffees.length + 1, name: name, roast: roast });
 }
 
 
