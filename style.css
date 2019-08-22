@@ -5,6 +5,10 @@
 
 }
 
+.jumbotron {
+    background-image: url("coffee.jpg");
+}
+
 .container{
     max-height: 600px;
 
