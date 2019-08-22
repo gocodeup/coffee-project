@@ -11,45 +11,50 @@
 
 
 
-    <h1>Coffee!</h1>
+    <h1 class="text-center">Coffee!</h1>
+    <hr>
 
-    <form>
-        <label for="roast-selection"></label>
-        <select id="roast-selection">
-            <option>light</option>
-            <option selected>All</option>
-            <option>medium</option>
-            <option>dark</option>
-        </select>
-        <label for="coffee-name">Coffee Name</label>
-        <input id="coffee-name" type="text">
-        <input id="submit" type="submit" />
-    </form>
+<div class="container">
+    <div class="row">
+        <div class="col-6">
+            <div id="coffees"></div>
+        </div>
 
+        <div class="col-6">
+            <form>
+                <h6 class="mb-1">Roast</h6>
+<!--                <label for="roast-selection"></label>-->
+                <select class="form-control mb-3" id="roast-selection">
+                    <option>light</option>
+                    <option selected>All</option>
+                    <option>medium</option>
+                    <option>dark</option>
+                </select>
+                <h6>Coffee Name</h6>
+<!--                <label for="coffee-name"></label>-->
+                <input class="form-control mb-3" id="coffee-name" type="text">
+                <input class="form-control btn btn-primary" id="submit" type="submit" />
+            </form>
+            <hr>
 
+            <h2 class="text-center ">Add a Coffee</h2>
+            <form>
+                <h6 class="mb-1">Roast</h6>
+<!--                <label for="addRoast-selection"></label>-->
+                <select class="form-control mb-3" id="addRoast-selection">
+                    <option>light</option>
+                    <option>medium</option>
+                    <option>dark</option>
+                </select>
+                <h6>Name</h6>
+<!--                <label for="add-coffeeName">Coffee Name</label>-->
+                <input class="form-control mb-3" id="add-coffeeName" type="text">
+                <input class="form-control btn btn-primary" id="add-submit" type="submit" />
+            </form>
+        </div>
 
-    <div>
-        <h1>Add a Coffee</h1>
-        <form>
-            <label for="addRoast-selection"></label>
-            <select id="addRoast-selection">
-                <option>light</option>
-                <option>medium</option>
-                <option>dark</option>
-            </select>
-            <label for="add-coffeeName">Coffee Name</label>
-            <input id="add-coffeeName" type="text">
-            <input id="add-submit" type="submit" />
-        </form>
     </div>
-
-
-
-
-
-
-
-    <div id="coffees"></div>
+</div>
 
 
 
