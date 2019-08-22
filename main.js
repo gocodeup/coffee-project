@@ -51,7 +51,7 @@ var coffees = [
     {id: 13, name: 'Italian', roast: 'dark'},
     {id: 14, name: 'French', roast: 'dark'},
 ];
-
+coffees.reverse();
 function createCoffee( name, roast) {
     coffees.unshift( {id: coffees.length + 1, name: name, roast: roast });
 }
