@@ -2,16 +2,23 @@
 #coffees {
     display: grid;
     grid-template-columns: 50% 50%;
+    color: #647FAE;
+    font-family: 'Indie Flower', cursive;
 
 }
 
 .jumbotron {
     background-image: url("img/coffee.jpg");
-    background-size: auto;
-
+    background-position: center center;
+    background-size: 100% 200%;
 
 }
 
+h1{
+    font-family: 'Indie Flower', cursive;
+    color: #647FAE;
+
+}
 .container{
     max-height: 600px;
 
