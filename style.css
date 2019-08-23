@@ -24,6 +24,9 @@ header {
     /*height: 1em !important;
     */
 }
+.main-heading_o {
+    opacity: .85;
+}
 
 header img {
     width: 120px;
@@ -100,4 +103,5 @@ h1{
 }
 .text {
     background-color: lightyellow;
+    opacity: .7;
 }
