@@ -6,36 +6,41 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
 <h1>Coffee!</h1>
-<hr>
+
+
 <form>
     <div class="card">
         <div class="card-header">
             <h2>Select Coffee</h2>
             <div class="card-body">
                 <label for="roast-selection"></label>
+                <main>
                 <select id="roast-selection">
                     <option id="allroast">all</option>
                     <option>light</option>
                     <option>medium</option>
                     <option>dark</option>
+
+
+
                 </select>
                 <input placeholder="search coffee" id="search" class="coffee.name" type="text">
                 <input id="submit" type="submit"/>
-
+                </main>
             </div>
         </div>
     </div>
 
-    <div id="coffees">
-        <h3 class='name'>
-            <p class="'roast"></p>
+    <div class = "coff" id="coffees">
+        <h3 class="name">
+            <p class="roast"></p>
         </h3>
     </div>
 </form>
 
-<form>
-</form>
+
     <!--    <table>-->
     <!--        <thead>-->
     <!--            <tr>-->
@@ -48,6 +53,7 @@
     <!--    </table>-->
 
     <script src="./main.js"></script>
+
 
 </body>
 </html>
