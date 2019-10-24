@@ -7,3 +7,10 @@
 /*    border: 1px solid black;*/
 /*    padding: 5px 10px;*/
 /*}*/
+.jumbotron {
+  background-image: url("./img/photo-1447933601403-0c6688de566e.jpeg");
+
+}
+.coffee {
+  width: 47% !important;
+}

@@ -9,20 +9,24 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<nav class="navbar navbar-light bg-secondary">
-    <a class="navbar-brand text-light" href="#">
-        <img src="img/coffeemug2.gif" class="d-inline-block align-top" alt="">
-        Coffee Filler Text
-    </a>
-</nav>
+<div class="jumbotron">
+    <nav class="navbar navbar-light bg-secondary">
+        <a class="navbar-brand text-light" href="#">
+            <img src="img/coffeemug2.gif" class="d-inline-block align-top" alt="">
+            Coffee Filler Text
+        </a>
+    </nav></div>
+
 
 <div class="container">
     <div class="row">
-        <div class="col">
+        <div class="col-sm-4 shadow">
+            <div class="form-group">
             <form>
                 <label for="roast-selection">What's your roast?</label>
-                <select id="roast-selection">
-                    <option value="all">all</option>
+                <select id="roast-selection"
+                class="form-control">
+                    <option>all</option>
                     <option>light</option>
                     <option>medium</option>
                     <option>dark</option>
@@ -30,11 +34,12 @@
 
         <!--        search form added below -->
                 <label for="search">Search for coffee by name:</label>
-                <input type="text" id="search">
+                <input type="text" id="search"
+                class="form-control">
 
 
             </form>
-
+            </div>
         <!--    coffee selection form below-->
 
             <form>
@@ -54,8 +59,8 @@
 
 
     <!--    refactored into a #coffees div where coffee options populate inside-->
-        <div class="col">
-            <div class= "d-flex flex-wrap" id="coffees"></div>
+        <div class="col-sm-8">
+            <div class= "d-flex flex-wrap justify-content-center" id="coffees"></div>
         </div>
     </div>
 </div>
