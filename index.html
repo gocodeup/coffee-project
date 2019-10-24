@@ -16,41 +16,49 @@
     </a>
 </nav>
 
-    <form>
-        <label for="roast-selection"></label>
-        <select id="roast-selection">
-            <option value="all">all</option>
-            <option>light</option>
-            <option>medium</option>
-            <option>dark</option>
-        </select>
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <form>
+                <label for="roast-selection">What's your roast?</label>
+                <select id="roast-selection">
+                    <option value="all">all</option>
+                    <option>light</option>
+                    <option>medium</option>
+                    <option>dark</option>
+                </select>
 
-<!--        search form added below -->
-        <label for="search">Search for coffee by name:</label>
-        <input type="text" id="search">
-        
-        
-    </form>
-
-<!--    coffee selection form below-->
-
-    <form>
-        <label for="newcoffee">Select a roast:</label>
-        <select id="newcoffee">
-            <option value="light">light</option>
-            <option value="medium">medium</option>
-            <option value="dark">dark</option>
-        </select>
-        <label for="coffeename">Name your Coffee:</label>
-        <input id="coffeename" type="text">
-        <input id="submitname" type="submit" />
-    </form>
+        <!--        search form added below -->
+                <label for="search">Search for coffee by name:</label>
+                <input type="text" id="search">
 
 
+            </form>
+
+        <!--    coffee selection form below-->
+
+            <form>
+                <label for="newcoffee">Select a roast:</label>
+                <select id="newcoffee">
+                    <option value="light">light</option>
+                    <option value="medium">medium</option>
+                    <option value="dark">dark</option>
+                </select>
+                <label for="coffeename">Name your Coffee:</label>
+                <input id="coffeename" type="text">
+                <input id="submitname" type="submit" />
+            </form>
+        </div>
 
 
-<!--    refactored into a #coffees div where coffee options populate inside-->
-<div class= "d-flex flex-wrap" id="coffees"></div>
+
+
+    <!--    refactored into a #coffees div where coffee options populate inside-->
+        <div class="col">
+            <div class= "d-flex flex-wrap" id="coffees"></div>
+        </div>
+    </div>
+</div>
 
 <!--bootstrap js -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
