@@ -25,7 +25,9 @@ function updateCoffees(e) {
     coffees.forEach(function(coffee) {
         if (coffee.roast === selectedRoast) {
             filteredCoffees.push(coffee);
-        }else if
+        } else if (roastSelection === document.getElementById("allthecoffee")) {
+            filteredCoffees.push(coffees);
+        }
     });
     tbody.innerHTML = renderCoffees(filteredCoffees);
 }
@@ -63,6 +65,7 @@ var coffees = [
 var tbody = document.querySelector('#coffees');
 var submitButton = document.querySelector('#submit');
 var roastSelection = document.querySelector('#roast-selection');
+// var allCoffee = document.querySelector('#allthecoffee');
 
 coffees = coffees.reverse();
 
