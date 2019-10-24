@@ -48,14 +48,7 @@ function updateCoffees(e) {
         }
 
         filteredCoffees.forEach(function (coffee) {
-            for (var i = 0; i < searched.length; i++) {
-                if (searched[i].toLowerCase() === coffee.name[i].toLowerCase()) {
-                    display = true;
-                } else {
-                    display = false;
-                    break;
-                }
-            }
+            display = coffee.name.toLowerCase().includes(searched.toLowerCase());
             if (display && !already(coffee)) {
                 searchedCoffees.push(coffee);
             }
