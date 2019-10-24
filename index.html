@@ -10,28 +10,52 @@
 
 </head>
 <body>
-<h1 class="text-center">Coffee!</h1>
 
+    <h1 id="coffeeHeader" class="text-center">Coffee!</h1>
+<!--    <div id="headerDiv" class="text-center">-->
+<!--        <img id="headerGif" src="assets/coffeetime.gif">-->
+<!--    </div>-->
+<ul id="forms">
+    <li id="searchForCoffee">
 <form>
-    <label class="mx-0 for=" roast-selection"></label>
+    <label class="mx-0 for=" roast-selection">Search for Coffee</label><br>
     <select id="roast-selection">
         <option>light</option>
         <option>medium</option>
         <option>dark</option>
         <option>all</option>
     </select>
-    <input id="submit" type="submit"/>
-
+    <input class = "btn-primary" id="submit" type="submit"/>
 </form>
-<div class="row" id="coffesearchdiv"><input type="text" id="coffeeSearch" class="input"></div>
+<label>Search for Coffee<input type="text" id="coffeeSearch" class="input" placeholder="Search for Coffee"></label>
 
+    </li>
+    <li id="addACoffee">
+
+    <form>
+        <label class="mx-0 for="addCoffee">Add a Coffee Here</label><br>
+        <select id="addCoffeeRoast">
+            <option>light</option>
+            <option>medium</option>
+            <option>dark</option>
+            <option>all</option>
+        </select>
+        <input id="newCoffeeSubmit" class="btn-primary" type="submit"/>
+
+    </form>
+        <label>Add a Coffee<br><input type="text" id="addCoffeeName" class="input ml-5" placeholder="name your blend..."></label>
+
+    </li>
+</ul>
 <div id="container">
     <div class="spacer"></div>
-        <table id="coffeeoutputtable">
-            <tbody id="coffees"></tbody>
-        </table>
+    <table id="coffeeoutputtable">
+        <tbody id="coffees"></tbody>
+    </table>
     <div class="spacer"></div>
 </div>
+
+
 
 <script src="main.js"></script>
 </body>

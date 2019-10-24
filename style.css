@@ -12,10 +12,11 @@ table {
     border-collapse: collapse;
     margin: 15px 0;
 }
-body>h1{
+body>h1 {
     font-family: 'Yellowtail', cursive;
     font-size: 5em;
     margin-left: -1em;
+    /*z-index: 1;*/
 }
 
 /*td, th {*/
@@ -73,3 +74,36 @@ body>h1{
     background-size: 100% 100%;
     background-repeat: no-repeat;
 }
+
+#forms {
+    width: 55%!important;
+    padding: 0;
+    display: flex;
+    list-style-type: none;
+    justify-content: space-evenly;
+}
+#addACoffee {
+    padding-left: 25px;
+}
+
+/*#headerGif {*/
+/*    height: 250px;*/
+/*    width: 250px;*/
+/*    float: right;*/
+/*    clear: both;*/
+/*    opacity: .5;*/
+/*    margin-left: 90%;*/
+/*    margin-bottom: 90%;*/
+/*    z-index: 10;*/
+
+/*}*/
+
+/*#headerDiv {*/
+/*    position: fixed;*/
+/*    !*margin-right: 0;*!*/
+/*    !*margin-top: 0;*!*/
+/*    margin-left: 83%;*/
+/*    margin-bottom: 90%;*/
+/*    z-index: 10;*/
+
+/*}*/

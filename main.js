@@ -25,7 +25,9 @@ function updateCoffees(e) {
     coffees.forEach(function(coffee) {
         if (coffee.roast === selectedRoast) {
             filteredCoffees.push(coffee);
-        }else if
+        } else if (roastSelection.value === "all") {
+            tbody.innerHTML = renderCoffees(coffees);
+        }
     });
     tbody.innerHTML = renderCoffees(filteredCoffees);
 }
@@ -63,6 +65,8 @@ var coffees = [
 var tbody = document.querySelector('#coffees');
 var submitButton = document.querySelector('#submit');
 var roastSelection = document.querySelector('#roast-selection');
+var addCoffeeButton = document.querySelector('#newCoffeeSubmit');
+
 
 coffees = coffees.reverse();
 
@@ -83,4 +87,20 @@ var searchQuery = function(e){
 };
 
 coffeeSearch.addEventListener("keyup",searchQuery);
+
+function createBrew(e) {
+    e.preventDefault(); // don't submit the form, we just want to update the data
+    var x = document.getElementById("addCoffeeName").value;
+    var y = document.getElementById("addCoffeeRoast").value;
+    if (x.length !== 0) {
+        coffees.push({
+            name: x,
+            roast: y,
+        })
+    } else alert("Please enter a name for your coffee");
+    tbody.innerHTML = renderCoffees(coffees);
+
+}
+
+addCoffeeButton.addEventListener('click', createBrew);
 
