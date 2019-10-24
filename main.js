@@ -23,7 +23,9 @@ function updateCoffees(e) {
     var selectedRoast = roastSelection.value;
     var filteredCoffees = [];
     coffees.forEach(function(coffee) {
-        if (coffee.roast === selectedRoast) {
+        if(selectedRoast === 'all'){
+            filteredCoffees.push(coffee)
+        } else if (coffee.roast === selectedRoast) {
             filteredCoffees.push(coffee);
         }
     });
@@ -35,7 +37,9 @@ function searchCoffees(e) {
     var filteredCoffees = [];
     var value = searchBar.value.toLowerCase();
     coffees.forEach(function(coffee) {
-        if (coffee.roast === selectedRoast && coffee.name.toLowerCase().includes(value)) {
+        if(selectedRoast === 'all' && coffee.name.toLowerCase().includes(value)){
+            filteredCoffees.push(coffee)
+        } else if (coffee.roast === selectedRoast && coffee.name.toLowerCase().includes(value)) {
             filteredCoffees.push(coffee)
         }
     });
