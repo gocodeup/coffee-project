@@ -16,6 +16,11 @@ var coffees = [
     {id: 14, name: 'French', roast: 'dark'},
 ];
 
+function selectAllCoffee(){
+return coffees;
+}
+
+
 function renderCoffee(coffee) {
     var html = '<tr class="coffee">';
     // html += '<td>' + coffee.id + '</td>';
@@ -35,29 +40,39 @@ function renderCoffees(coffees) {
     return html;
 }
 
+
+
 function updateCoffees(e) {
     e.preventDefault(); // don't submit the form, we just want to update the data
-    var selectedRoast = roastSelection.value;
-    console.log(selectedRoast);
+    // tbody.innerHTML = '';
     var filteredCoffees = [];
+    var selectedRoast = roastSelection.value;
+    // var search  = coffeeName.value;
+    console.log(selectedRoast);
     coffees.forEach(function(coffee) {
-        if (coffee.roast === selectedRoast.toLowerCase()) {
-            console.log(coffee.roast);
-            filteredCoffees.push(coffee);
+        if (coffee.roast !== selectedRoast.toLowerCase()) {
+            return coffees;
+        }else{
+            (coffee.roast === selectedRoast.toLowerCase()); {
+                console.log(coffee.roast);
+                filteredCoffees.push(coffee);
+            }
         }
     });
     console.log("Filtered Coffees");
     tbody.innerHTML = renderCoffees(filteredCoffees);
+    console.log(filteredCoffees);
 }
-//searching for a coffee by name
-    //we still need to make search for coffee name case insensitive
+
 function searchCoffee(e) {
     e.preventDefault();
-    var search = coffeeName.value;
-    //1 you search the coffee
     var filteredCoffees = [];
+    var search = coffeeName.value;
+    console.log(search);
+    //1 you search the coffee
+    // var filteredCoffees = [];
     coffees.forEach(function (coffee) {
-        if (coffee.name === search){
+        if (coffee.name.toLowerCase() === search.toLowerCase()){
             filteredCoffees.push(coffee);
         }
     });
@@ -65,6 +80,9 @@ function searchCoffee(e) {
     //display the updated coffees
     tbody.innerHTML = renderCoffees(filteredCoffees);
 }
+//searching for a coffee by name
+    //we still need to make search for coffee name case insensitive
+
 
 
 // from http://www.ncausa.org/About-Coffee/Coffee-Roasts-Guide
@@ -72,8 +90,12 @@ function searchCoffee(e) {
 var tbody = document.querySelector('#coffees');
 var submitButton = document.querySelector('#submit');
 var roastSelection = document.querySelector('#roast-selection');
+//added the search to coffee name//
 var coffeeName = document.querySelector("#coffee-name");
 tbody.innerHTML = renderCoffees(coffees);
 
 submitButton.addEventListener('click', updateCoffees);
-// submitButton.addEventListener('click', searchCoffee);
+submitButton.addEventListener('click', selectAllCoffee);
+
+// keyup event listener searches while you type//
+coffeeName.addEventListener('keyup', searchCoffee);
