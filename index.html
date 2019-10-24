@@ -67,44 +67,59 @@
     </div>
 </div>
 <div class="container">
-
-
-
-
-    <div class="row">
-        <h1>Choose Coffee!</h1>
-        <form>
-            <label for="roast-selection"></label>
-            <select id="roast-selection">
-                <option>light</option>
-                <option>medium</option>
-                <option>dark</option>
-                <option selected>all</option>
-            </select>
-            <label for="coffee-search"></label>
-            <input id="coffee-search" type="text">
-            <input id="submit" type="submit"/>
-        </form>
-    </div>
-    <div class="row">
-        <h1>Add Coffee!</h1>
-        <form>
-            <label for="add-roast"></label>
-            <select id="add-roast">
-                <option>light</option>
-                <option>medium</option>
-                <option>dark</option>
-            </select>
-            <label for="name-coffee"></label>
-            <input id="name-coffee" type="text">
-            <input id="add-coffee" type="submit"/>
-        </form>
-    </div>
-    <div class="row">
-        <div id="coffees">
+    <div class ="row">
+        <div id="coffees" class="col row">
 
         </div>
+
+        <div class="col">
+                    <div class="card">
+                        <div class="card-header">
+                            Search Coffee!
+                        </div>
+                        <div class="card-body">
+                            <div class="form-group">
+                                <label for="roast-selection">Type</label>
+                                <select class="form-control" id="roast-selection">
+                                    <option>light</option>
+                                    <option>medium</option>
+                                    <option>dark</option>
+                                    <option selected>all</option>
+                                </select>
+                            </div>
+                                <label for="coffee-search"></label>
+                                <input id="coffee-search" class="w-75" type="text">
+                                <input id="submit" class="w-25" type="submit"/>
+                        </div>
+                    </div>
+                    <div class="card mt-3">
+                        <div class="card-header">
+                            Add Coffee!
+                        </div>
+                        <div class="card-body">
+                            <div class="form-group">
+                                <label for="add-roast">Type</label>
+                                <select class="form-control" id="add-roast">
+                                    <option>light</option>
+                                    <option>medium</option>
+                                    <option>dark</option>
+                                </select>
+                            </div>
+                            <label for="name-coffee"></label>
+                            <input id="name-coffee" type="text">
+                            <input id="add-coffee" type="submit"/>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
     </div>
+
+
+
+
+
 </div>
 
 <script src="https://code.jquery.com/jquery-2.2.4.min.js"
