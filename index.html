@@ -11,20 +11,37 @@
     <form>
         <label for="roast-selection"></label>
         <select id="roast-selection">
-            <option>light</option>
-            <option>medium</option>
-            <option>dark</option>
+            <option>Light</option>
+            <option>Medium</option>
+            <option>Dark</option>
+            <option>All</option>
         </select>
+        <br>
+        Search for Coffee: <input id ="coffee-name" type="text" name="coffeeName">
         <input id="submit" type="submit" />
+    </form>
+    <br>
+    <form>
+        <h1>Add a Coffee!</h1>
+        <label for="add-coffee"></label>
+        <select id="add-coffee">
+            <option>Light</option>
+            <option>Medium</option>
+            <option>Dark</option>
+        </select>
+        Name: <input type="text" name="coffeeName">
+        <br>
+        <input id="enter" type="submit" />
+
     </form>
 
     <table>
         <thead>
-            <tr>
-                <th>ID</th>
-                <th>NAME</th>
-                <th>ROAST</th>
-            </tr>
+<!--            <tr>-->
+<!--                <th>ID</th>-->
+<!--                <th>NAME</th>-->
+<!--                <th>ROAST</th>-->
+<!--            </tr>-->
         </thead>
         <tbody id="coffees"></tbody>
     </table>
