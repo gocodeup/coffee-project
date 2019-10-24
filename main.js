@@ -49,20 +49,49 @@ function updateCoffees(e) {
     var selectedRoast = roastSelection.value;
     // var search  = coffeeName.value;
     console.log(selectedRoast);
-    coffees.forEach(function(coffee) {
-        if (coffee.roast !== selectedRoast.toLowerCase()) {
-            return coffees;
-        }else{
-            (coffee.roast === selectedRoast.toLowerCase()); {
+
+
+    if(selectedRoast.toLowerCase() === "all"){
+        filteredCoffees = coffees
+    } else{
+        coffees.forEach(function(coffee) {
+            if (coffee.roast === selectedRoast.toLowerCase()){
+                console.log("in the else ");
                 console.log(coffee.roast);
                 filteredCoffees.push(coffee);
             }
-        }
-    });
+        });
+    }
+
     console.log("Filtered Coffees");
     tbody.innerHTML = renderCoffees(filteredCoffees);
     console.log(filteredCoffees);
 }
+
+// function updateCoffees(e) {
+//     e.preventDefault(); // don't submit the form, we just want to update the data
+//     // tbody.innerHTML = '';
+//     var filteredCoffees = [];
+//     var selectedRoast = roastSelection.value;
+//     // var search  = coffeeName.value;
+//     console.log(selectedRoast);
+//     coffees.forEach(function(coffee, index) {
+//         if (coffee.roast !== selectedRoast.toLowerCase()) {
+//             console.log("in first if ");
+//             console.log(index);
+//             return coffees;
+//         }else{
+//             (coffee.roast === selectedRoast.toLowerCase()); {
+//                 console.log("in the else ");
+//                 console.log(coffee.roast);
+//                 filteredCoffees.push(coffee);
+//             }
+//         }
+//     });
+//     console.log("Filtered Coffees");
+//     tbody.innerHTML = renderCoffees(filteredCoffees);
+//     console.log(filteredCoffees);
+// }
 
 function searchCoffee(e) {
     e.preventDefault();
@@ -80,10 +109,6 @@ function searchCoffee(e) {
     //display the updated coffees
     tbody.innerHTML = renderCoffees(filteredCoffees);
 }
-//searching for a coffee by name
-    //we still need to make search for coffee name case insensitive
-
-
 
 // from http://www.ncausa.org/About-Coffee/Coffee-Roasts-Guide
 
