@@ -11,16 +11,32 @@
     <form>
         <label for="roast-selection"></label>
         <select id="roast-selection">
+            <option value="all">all</option>
             <option>light</option>
             <option>medium</option>
             <option>dark</option>
-            <option value="all">all</option>
         </select>
+
+<!--        search form added below -->
         <label for="search">Search for coffee by name:</label>
         <input type="text" id="search">
         
         
-        <input id="submit" type="submit" />
+<!--      old submit button:  <input id="submit" type="submit" />-->
+    </form>
+
+<!--    coffee selection form below-->
+
+    <form>
+        <label for="newcoffee">Select a roast:</label>
+        <select id="newcoffee">
+            <option value="light">light</option>
+            <option value="medium">medium</option>
+            <option value="dark">dark</option>
+        </select>
+        <label for="coffeename">Name your Coffee:</label>
+        <input id="coffeename" type="text">
+        <input id="submitname" type="submit" />
     </form>
 
 
