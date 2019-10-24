@@ -7,3 +7,15 @@ td, th {
     border: 1px solid black;
     padding: 5px 10px;
 }
+
+body {
+    background-color: lightgreen;
+}
+
+.headerImage{
+    max-height: 400px;
+    /*width: 80vw;*/
+    object-fit: contain;
+    background-color: darkgray;
+    /*opacity: 60%;*/
+}

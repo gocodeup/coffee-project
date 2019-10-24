@@ -2,44 +2,113 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title></title>
+    <title>Coffee</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+          integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+            integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+            crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"
+            integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"
+            crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"
+            integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
+            crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="style.css">
+
 
 </head>
 <body>
-<h1>Choose Coffee!</h1>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="#">Coffee Plaza</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
 
-<form>
-    <label for="roast-selection"></label>
-    <select id="roast-selection">
-        <option>light</option>
-        <option>medium</option>
-        <option>dark</option>
-        <option selected>all</option>
-    </select>
-    <label for="coffee-search"></label>
-    <input id="coffee-search" type="text">
-    <input id="submit" type="submit" />
-</form>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+                <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Order online</a>
+            </li>
+            <li class="nav-item active">
+                <a class="nav-link disabled" href="#">Menu<span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+                <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Zip code">
+            </li>
+            <li>
+                <button type="button" class="btn btn-outline-secondary">Search stores near you!</button>
+            </li>
 
-<h1>Add Coffee!</h1>
-<form>
-    <label for="add-roast"></label>
-    <select id="add-roast">
-        <option>light</option>
-        <option>medium</option>
-        <option>dark</option>
-    </select>
-    <label for="name-coffee"></label>
-    <input id="name-coffee" type="text">
-    <input id="add-coffee" type="submit" />
-</form>
 
-<div id="coffees">
+        </ul>
+        <form class="form-inline my-2 my-lg-0">
+            <a class="mr-sm-2 text-secondary"><i class="fa fa-user"></i> Sign Up</a>
 
+            <!--            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">-->
+            <!--            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>-->
+        </form>
+    </div>
+</nav>
+<div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
+    <div class="carousel-inner">
+        <div class="carousel-item active">
+            <img class="d-block w-100 headerImage" src="image/coffe_bg2.jpg" alt="First slide">
+            <div class="carousel-caption d-none d-md-block"><h1></h1></div>
+        </div>
+        <div class="carousel-item">
+            <img class="d-block w-100 headerImage" src="image/caffeine-coffee-800x450.jpg" alt="Second slide">
+        </div>
+        <div class="carousel-item">
+            <img class="d-block w-100 headerImage" src="image/coffe-bg3.jpeg" alt="Third slide">
+        </div>
+    </div>
+</div>
+<div class="container">
+
+
+
+
+    <div class="row">
+        <h1>Choose Coffee!</h1>
+        <form>
+            <label for="roast-selection"></label>
+            <select id="roast-selection">
+                <option>light</option>
+                <option>medium</option>
+                <option>dark</option>
+                <option selected>all</option>
+            </select>
+            <label for="coffee-search"></label>
+            <input id="coffee-search" type="text">
+            <input id="submit" type="submit"/>
+        </form>
+    </div>
+    <div class="row">
+        <h1>Add Coffee!</h1>
+        <form>
+            <label for="add-roast"></label>
+            <select id="add-roast">
+                <option>light</option>
+                <option>medium</option>
+                <option>dark</option>
+            </select>
+            <label for="name-coffee"></label>
+            <input id="name-coffee" type="text">
+            <input id="add-coffee" type="submit"/>
+        </form>
+    </div>
+    <div class="row">
+        <div id="coffees">
+
+        </div>
+    </div>
 </div>
 
-<script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-2.2.4.min.js"
+        integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
 <script src="main.js"></script>
 </body>
 </html>
