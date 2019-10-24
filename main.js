@@ -1,18 +1,24 @@
-"use strict"
+"use strict";
 
 function renderCoffee(coffee) {
-    var html = '<tr class="coffee">';
-    html += '<td>' + coffee.id + '</td>';
-    html += '<td>' + coffee.name + '</td>';
-    html += '<td>' + coffee.roast + '</td>';
-    html += '</tr>';
+    var html = '<div class="coffee">';
+    // html += '<td>' + coffee.id + '</td>';
+    html += '<h3>' + coffee.name + '</h3>';
+    html += '<p>' + coffee.roast + '</p>';
+    html += '</div>';
 
     return html;
 }
 
+function searchBar(coffees) {
+    coffees.forEach(function(coffee) {
+
+    })
+}
+
 function renderCoffees(coffees) {
     var html = '';
-    for(var i = coffees.length - 1; i >= 0; i--) {
+    for(var i = 0; i <= coffees.length - 1; i++) {
         html += renderCoffee(coffees[i]);
     }
     return html;
@@ -28,6 +34,18 @@ function updateCoffees(e) {
         }
     });
     tbody.innerHTML = renderCoffees(filteredCoffees);
+}
+
+
+function searchCoffees(e) {
+    e.preventDefault(); // don't submit the form, we just want to update the data
+    var selectedName = nameSelection;
+    var filterCoffees = [];
+    coffees.forEach(function (coffee) {
+        if (coffee.name === selectedName) {
+            filterCoffees.push(coffee);
+        }
+    });
 }
 
 // from http://www.ncausa.org/About-Coffee/Coffee-Roasts-Guide
@@ -51,6 +69,8 @@ var coffees = [
 var tbody = document.querySelector('#coffees');
 var submitButton = document.querySelector('#submit');
 var roastSelection = document.querySelector('#roast-selection');
+var nameSelection = document.getElementById('name-selection').value;
+
 
 tbody.innerHTML = renderCoffees(coffees);
 
