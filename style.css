@@ -1,9 +1,49 @@
+* {
+    /*margin-left: 2%;*/
+}
+
+body{
+    background-image: url("assets/coffeebackground1.jpeg");
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
 table {
     border-collapse: collapse;
     margin: 15px 0;
+
 }
 
 td, th {
     border: 1px solid black;
     padding: 5px 10px;
+}
+
+.coffeediv {
+    width: 33%;
+    font-family: 'Homemade Apple', cursive;
+
+
+    float: left;
+    /*margin-left: 2%;*/
+}
+
+#coffeeoutputtable{
+    margin-left: 2%;
+    width: 60%;
+}
+
+#coffeeSearch{
+    margin-left: 2%;
+}
+
+#coffesearchdiv{
+    display: inline-block;
+}
+.roastName {
+    padding-left:10px;
+    line-height: 2em;
+    font-family: 'Gochi Hand', cursive;
+    font-size: 1.5em;
+
 }

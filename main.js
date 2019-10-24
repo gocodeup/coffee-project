@@ -1,11 +1,11 @@
 "use strict"
 
 function renderCoffee(coffee) {
-    var html = '<tr class="coffee">';
-    html += '<td>' + coffee.id + '</td>';
-    html += '<td>' + coffee.name + '</td>';
-    html += '<td>' + coffee.roast + '</td>';
-    html += '</tr>';
+    var html = '<div class="row coffeediv">';
+    // html += '<td>' + coffee.id + '</td>';
+    html += '<h3>' + coffee.name + '</h3>';
+    html += '<p class="roastName">' + coffee.roast + '</p>';
+    html += '</div>';
 
     return html;
 }
@@ -55,3 +55,18 @@ var roastSelection = document.querySelector('#roast-selection');
 tbody.innerHTML = renderCoffees(coffees);
 
 submitButton.addEventListener('click', updateCoffees);
+
+
+var searchQuery = function(e){
+    var html = "";
+    for (var i = 0; i < coffees.length; i++ ){
+
+        if (coffees[i].name.toLowerCase().includes(coffeeSearch.value.toLowerCase()) || (coffees[i].roast.toLowerCase().includes(coffeeSearch.value.toLowerCase()))){
+            html = html + renderCoffee(coffees[i]);
+        }
+        tbody.innerHTML = html;
+    }
+};
+
+coffeeSearch.addEventListener("keyup",searchQuery);
+
