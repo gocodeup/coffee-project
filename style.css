@@ -13,10 +13,52 @@ body {
 }
 
 .headerImage{
-    max-height: 400px;
+    max-height: 300px;
+    /*width: 70%;*/
+    /*width: 700px;*/
     /*width: 80vw;*/
-    object-fit: contain;
+    /*object-fit: ;*/
     background-color: darkgray;
-    /*opacity: 60%;*/
+    opacity: .8;
 }
+
+#coffees{
+    /*background-color: white;*/
+    background-image: url("image/minimalistic-coffee-vector-sauna-coffee-cups-simple-background-tea-bag-time-relaxed-fresh-new-hd-wallpaper-jpg.jpg");
+    margin-right: 10px;
+    padding-top: 10px;
+    background-size: contain;
+    border-radius: 5px;
+    border: darkgray solid 5px;
+    /*object-fit: contain;*/
+
+}
+
+.fontChange{
+    /*font-family: 'Courgette', cursive;*/
+    font-family: 'Kaushan Script', cursive;
+}
+
+.caro-block{
+    position: absolute;
+    top: 70px;
+    background-color: lightgray;
+    opacity: .8;
+    color: black;
+    font-family: 'Courgette', cursive;
+    border-radius: 15px;
+    height: 130px;
+}
+
+#coffeeCarousel{
+    background-color: white;
+}
+
+.cardBg{
+    background-image: url("image/pngtree-coffee-simple-coffee-background-image_1727.jpg");
+    object-fit: contain;
+    width: 100%;
+}
+
+
 

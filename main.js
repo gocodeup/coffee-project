@@ -1,7 +1,7 @@
 "use strict";
 
 function renderCoffee(coffee) {
-    var html = '<div class="col-12 col-lg-6">';
+    var html = '<div class="col-12 col-lg-6 col-xl-6 fontChange">';
     html += '<h2 style="display: inline-block">' + coffee.name + '</h2>' + "&nbsp";
     html += '<p style="display: inline-block">' + coffee.roast + '</p>';
     html += '</div>';
@@ -86,6 +86,7 @@ function newCoffee() {
     });
     localStorage.clear();
     localStorage.setItem("coffee", JSON.stringify(coffees));
+    location.reload();
 }
 
 // from http://www.ncausa.org/About-Coffee/Coffee-Roasts-Guide
