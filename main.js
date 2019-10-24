@@ -41,7 +41,6 @@ function renderCoffees(coffees) {
 }
 
 
-
 function updateCoffees(e) {
     e.preventDefault(); // don't submit the form, we just want to update the data
     // tbody.innerHTML = '';
@@ -68,30 +67,6 @@ function updateCoffees(e) {
     console.log(filteredCoffees);
 }
 
-// function updateCoffees(e) {
-//     e.preventDefault(); // don't submit the form, we just want to update the data
-//     // tbody.innerHTML = '';
-//     var filteredCoffees = [];
-//     var selectedRoast = roastSelection.value;
-//     // var search  = coffeeName.value;
-//     console.log(selectedRoast);
-//     coffees.forEach(function(coffee, index) {
-//         if (coffee.roast !== selectedRoast.toLowerCase()) {
-//             console.log("in first if ");
-//             console.log(index);
-//             return coffees;
-//         }else{
-//             (coffee.roast === selectedRoast.toLowerCase()); {
-//                 console.log("in the else ");
-//                 console.log(coffee.roast);
-//                 filteredCoffees.push(coffee);
-//             }
-//         }
-//     });
-//     console.log("Filtered Coffees");
-//     tbody.innerHTML = renderCoffees(filteredCoffees);
-//     console.log(filteredCoffees);
-// }
 
 function searchCoffee(e) {
     e.preventDefault();
