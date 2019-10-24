@@ -29,13 +29,13 @@ function updateCoffees(e) {
     });
     tbody.innerHTML = renderCoffees(filteredCoffees);
 }
-function searchCoffees() {
+function searchCoffees(e) {
+    e.preventDefault(); // don't submit the form, we just want to update the data
     var selectedRoast = roastSelection.value;
     var filteredCoffees = [];
-    var value = searchBar.value
-    
+    var value = searchBar.value.toLowerCase();
     coffees.forEach(function(coffee) {
-        if (coffee.roast === selectedRoast && value.toLowerCase() === coffee.name) {
+        if (coffee.roast === selectedRoast && coffee.name.toLowerCase().includes(value)) {
             filteredCoffees.push(coffee)
         }
     });
@@ -48,7 +48,7 @@ var coffees = [
     {id: 2, name: 'Half City', roast: 'light'},
     {id: 3, name: 'Cinnamon', roast: 'light'},
     {id: 4, name: 'City', roast: 'medium'},
-    {id: 5, ne: 'American', roast: 'medium'},
+    {id: 5, name: 'American', roast: 'medium'},
     {id: 6, name: 'Breakfast', roast: 'medium'},
     {id: 7, name: 'High', roast: 'dark'},
     {id: 8, name: 'Continental', roast: 'dark'},
