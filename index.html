@@ -14,22 +14,31 @@
         <h1 class="display-4 text-center">Coffee!</h1>
     </div>
 
+    <div class="row">
+        <div id="coffees" onload="displayCoffees()" class="col-6 ml-3">
+        </div>
 
-    <form class="autocomplete" autocomplete="off">
-        <label for="roast-selection"></label>
-        <select id="roast-selection">
-            <option>all</option>
-            <option>light</option>
-            <option>medium</option>
-            <option>dark</option>
-        </select>
-        <label for="coffee-name">Coffee</label>
-        <input type="text" name="coffee-name" id="coffee-name" placeholder="enter name or roast">
-        <input id="submit" type="submit" />
-    </form>
+        <div class="col-5">
 
-    <div id="coffees" onload="displayCoffees()">
+            <form class="form-info" autocomplete="off">
+                <div class="info p-2">
+                    <label for="roast-selection" class="mb-3 font-weight-bold">Roast</label>
+                    <select id="roast-selection" class="mb-3">
+                        <option>all</option>
+                        <option>light</option>
+                        <option>medium</option>
+                        <option>dark</option>
+                    </select>
+                    <label for="coffee-name" class="mb-3 font-weight-bold">Coffee</label>
+                    <input type="text" name="coffee-name" id="coffee-name" placeholder="enter name or roast" class="mb-3">
+                    <input id="submit" class="btn-primary" type="submit" />
+                </div>
+            </form>
+        </div>
     </div>
+
+
+
 
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
