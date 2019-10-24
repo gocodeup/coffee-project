@@ -11,17 +11,29 @@ body{
 table {
     border-collapse: collapse;
     margin: 15px 0;
-
+}
+body>h1{
+    font-family: 'Yellowtail', cursive;
+    font-size: 5em;
+    margin-left: -1em;
 }
 
-td, th {
-    border: 1px solid black;
-    padding: 5px 10px;
-}
+/*td, th {*/
+/*    border: 1px solid black;*/
+/*    padding: 5px 10px;*/
+/*}*/
 
+.spacer {
+    height: 25px;
+}
 .coffeediv {
-    width: 33%;
+    width: 52%;
     font-family: 'Homemade Apple', cursive;
+    font-size: 12px;
+    padding-left: 7%;
+    padding-top: 1%;
+    padding-bottom: 3%;
+    color: lightgray;
 
 
     float: left;
@@ -29,16 +41,22 @@ td, th {
 }
 
 #coffeeoutputtable{
-    margin-left: 2%;
-    width: 60%;
+    /*margin-left: 2%;*/
+    width: 100%;
+    height: 50%!important;
+    border-radius: 10px;
 }
 
 #coffeeSearch{
-    margin-left: 2%;
+    margin-left: 12%;
 }
 
 #coffesearchdiv{
     display: inline-block;
+    margin-right: -10%;
+}
+#coffees{
+    padding-left: 2%;
 }
 .roastName {
     padding-left:10px;
@@ -46,4 +64,12 @@ td, th {
     font-family: 'Gochi Hand', cursive;
     font-size: 1.5em;
 
+}
+
+#container{
+    width: 58%;
+    border-radius: 10px;
+    background-image: url("assets/chalkboarder.jpg");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
 }

@@ -4,29 +4,35 @@
     <meta charset="UTF-8">
     <title></title>
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+          integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Gochi+Hand|Homemade+Apple&display=swap" rel="stylesheet">
 
 </head>
 <body>
-    <h1>Coffee!</h1>
+<h1 class="text-center">Coffee!</h1>
 
-    <form>
-        <label class="mx-0 for="roast-selection"></label>
-        <select id="roast-selection">
-            <option>light</option>
-            <option>medium</option>
-            <option>dark</option>
-        </select>
-        <input id="submit" type="submit" />
+<form>
+    <label class="mx-0 for=" roast-selection"></label>
+    <select id="roast-selection">
+        <option>light</option>
+        <option>medium</option>
+        <option>dark</option>
+        <option>all</option>
+    </select>
+    <input id="submit" type="submit"/>
 
-    </form>
-    <div class="row" id="coffesearchdiv"><input type="text" id="coffeeSearch" class="input"></div>
+</form>
+<div class="row" id="coffesearchdiv"><input type="text" id="coffeeSearch" class="input"></div>
 
-    <table id="coffeeoutputtable">
-        <tbody id="coffees"></tbody>
-    </table>
+<div id="container">
+    <div class="spacer"></div>
+        <table id="coffeeoutputtable">
+            <tbody id="coffees"></tbody>
+        </table>
+    <div class="spacer"></div>
+</div>
 
-    <script src="main.js"></script>
+<script src="main.js"></script>
 </body>
 </html>

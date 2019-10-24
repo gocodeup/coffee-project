@@ -25,10 +25,22 @@ function updateCoffees(e) {
     coffees.forEach(function(coffee) {
         if (coffee.roast === selectedRoast) {
             filteredCoffees.push(coffee);
-        }
+        }else if
     });
     tbody.innerHTML = renderCoffees(filteredCoffees);
 }
+
+// function updateCoffees(e) {
+//     e.preventDefault(); // don't submit the form, we just want to update the data
+//     var selectedRoast = roastSelection.value;
+//     var filteredCoffees = [];
+//     coffees.forEach(function(coffee) {
+//         if (coffee.roast === selectedRoast) {
+//             filteredCoffees.push(coffee);
+//         }
+//     });
+//     tbody.innerHTML = renderCoffees(filteredCoffees);
+// }
 
 // from http://www.ncausa.org/About-Coffee/Coffee-Roasts-Guide
 var coffees = [
@@ -51,6 +63,8 @@ var coffees = [
 var tbody = document.querySelector('#coffees');
 var submitButton = document.querySelector('#submit');
 var roastSelection = document.querySelector('#roast-selection');
+
+coffees = coffees.reverse();
 
 tbody.innerHTML = renderCoffees(coffees);
 
