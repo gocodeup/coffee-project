@@ -86,6 +86,8 @@ var newSubmit = document.querySelector("#submit_coffee")
 
 function displayCoffees(){
     tbody.innerHTML = renderCoffees(coffees);
+    var getObject = JSON.parse(localStorage.getItem('newCoffee'));
+    console.log(getObject);
 }
 
 
