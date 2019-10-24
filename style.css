@@ -1,23 +1,20 @@
+*{
+    font-family: 'Noto Serif', serif;
+}
+
 .jumbotron {
     background-image: url("latteart.jpg");
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: contain;
+    background-size: 100%;
     background-position: center;
+    opacity: 90%;
 }
 .jumbotron h1{
-    font-family: Helvetica;
-    color: white;
+    color: orange;
+    display: flex;
+    padding: .45em;
 }
-
-/*table {*/
-/*    border-collapse: collapse;*/
-/*    margin: 15px 0;*/
-/*}*/
-
-/*td, th {*/
-/*    border: 1px solid black;*/
-/*    padding: 5px 0;*/
-/*}*/
 
 #coffees{
     display: flex;
@@ -38,6 +35,11 @@
     background-size: cover;
     background-position: center;
     border: 1px solid black;
+
+}
+
+.adding{
+    background-image: url("window.jpeg");
 
 }
 
@@ -64,49 +66,3 @@
 #coffee-name{
     border-radius: 7%;
 }
-/*!*AUTOCOMPLETE*!*/
-/*.autocomplete {*/
-/*    !*the container must be positioned relative:*!*/
-/*    position: relative;*/
-/*    display: inline-block;*/
-/*}*/
-/*input {*/
-/*    border: 1px solid transparent;*/
-/*    background-color: #f1f1f1;*/
-/*    padding: 10px;*/
-/*    font-size: 16px;*/
-/*}*/
-/*input[type=text] {*/
-/*    background-color: #f1f1f1;*/
-/*    width: 100%;*/
-/*}*/
-/*input[type=submit] {*/
-/*    background-color: DodgerBlue;*/
-/*    color: #fff;*/
-/*}*/
-/*.autocomplete-items {*/
-/*    position: absolute;*/
-/*    border: 1px solid #d4d4d4;*/
-/*    border-bottom: none;*/
-/*    border-top: none;*/
-/*    z-index: 99;*/
-/*    !*position the autocomplete items to be the same width as the container:*!*/
-/*    top: 100%;*/
-/*    left: 0;*/
-/*    right: 0;*/
-/*}*/
-/*.autocomplete-items div {*/
-/*    padding: 10px;*/
-/*    cursor: pointer;*/
-/*    background-color: #fff;*/
-/*    border-bottom: 1px solid #d4d4d4;*/
-/*}*/
-/*.autocomplete-items div:hover {*/
-/*    !*when hovering an item:*!*/
-/*    background-color: #e9e9e9;*/
-/*}*/
-/*.autocomplete-active {*/
-/*    !*when navigating through the items using the arrow keys:*!*/
-/*    background-color: DodgerBlue !important;*/
-/*    color: #ffffff;*/
-/*}*/

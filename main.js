@@ -82,15 +82,33 @@ var tbody = document.querySelector('#coffees');
 var submitButton = document.querySelector('#submit');
 var roastSelection = document.querySelector('#roast-selection');
 var coffeeName = document.querySelector('#coffee-name');
+var newSubmit = document.querySelector("#submit_coffee")
 
+function displayCoffees(){
+    tbody.innerHTML = renderCoffees(coffees);
+}
 
-tbody.innerHTML = renderCoffees(coffees);
 
 
 
 coffeeName.addEventListener('input', autocomplete(document.getElementById("coffee-name"), coffees));
 submitButton.addEventListener('click', updateCoffees);
+newSubmit.addEventListener('click', function (e) {
+    e.preventDefault()
+    let name = document.getElementById("new_coffee").value;
+    let roast = document.getElementById("type_roast").value;
 
+    if(name !== ''){
+        let newCoffee = {
+            id: coffees.length,
+            name: name,
+            roast: roast
+        };
+
+        coffees.push(newCoffee);
+        tbody.innerHTML = renderCoffees(coffees);
+    }
+});
 //AUTOCOMPLETE
 autocomplete(document.getElementById("coffee-name"), coffees);
 
@@ -100,7 +118,9 @@ function autocomplete(inp, arr) {
         var a, b, i, val = this.value;
         /*close any already open lists of autocompleted values*/
         closeAllLists();
-        if (!val) { return false;}
+        if (!val) {
+            return false;
+        }
 
         for (i = 0; i < arr.length; i++) {
 
@@ -114,6 +134,7 @@ function autocomplete(inp, arr) {
                 }
 
                 results.push(indCoffee);
+                localStorage.setItem('newCoffee', JSON.stringify(indCoffee));
             }
 
         }
