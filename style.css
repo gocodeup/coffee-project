@@ -1,3 +1,11 @@
+.jumbotron {
+    background-image: url("coffee-image.jpg");
+}
+.jumbotron h1{
+    font-family: Helvetica;
+    color: white;
+}
+
 table {
     border-collapse: collapse;
     margin: 15px 0;
