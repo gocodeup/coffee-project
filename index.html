@@ -2,24 +2,29 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title></title>
+    <title>Deimos Coffee</title>
 <!--    bootstrap cdn -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 <!--    custom css -->
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<div class="jumbotron">
-    <nav class="navbar navbar-light bg-secondary">
+<div id="topnav" class="jumbotron d-flex justify-content-center align-items-center">
+    <nav id="navback" class="navbar navbar-light bg-secondary w-100">
         <a class="navbar-brand text-light" href="#">
             <img src="img/coffeemug2.gif" class="d-inline-block align-top" alt="">
-            Coffee Filler Text
+           Our beans is means!
         </a>
     </nav></div>
 
+<div class="container-fluid">
+    <div class="card mx-5 mt-5 mb-5"><p class="display-4 text-warning text-center">our beans</p>
+    <p class="text-center">Strong white fair trade aroma and beans cup as extraction. Breve, that trifecta milk lungo and turkish cortado single origin. To go foam, whipped, mazagran chicory decaffeinated roast flavour. Roast, that saucer con panna, sit est café au lait aged macchiato. Cinnamon, to go blue mountain so viennese kopi-luwak instant, turkish froth body strong french press.</p></div>
+</div>
+
 
 <div class="container">
-    <div class="row">
+    <div class="row align-items-start">
         <div class="col-sm-4 shadow">
             <div class="form-group">
             <form>
@@ -41,25 +46,26 @@
             </form>
             </div>
         <!--    coffee selection form below-->
-
-            <form>
-                <label for="newcoffee">Select a roast:</label>
-                <select id="newcoffee">
-                    <option value="light">light</option>
-                    <option value="medium">medium</option>
-                    <option value="dark">dark</option>
-                </select>
-                <label for="coffeename">Name your Coffee:</label>
-                <input id="coffeename" type="text">
-                <input id="submitname" type="submit" />
-            </form>
+            <div class="form-group">
+                <form>
+                    <label for="newcoffee">Select a roast:</label>
+                    <select class="form-control" id="newcoffee">
+                        <option value="light">light</option>
+                        <option value="medium">medium</option>
+                        <option value="dark">dark</option>
+                    </select>
+                    <label for="coffeename">Name your Coffee:</label>
+                    <input class="form-control" id="coffeename" type="text">
+                    <input class="btn btn-secondary mt-2" id="submitname" type="submit" />
+                </form>
+            </div>
         </div>
 
 
 
 
     <!--    refactored into a #coffees div where coffee options populate inside-->
-        <div class="col-sm-8">
+        <div id="coffeecolumn" class="col-sm-8">
             <div class= "d-flex flex-wrap justify-content-center" id="coffees"></div>
         </div>
     </div>

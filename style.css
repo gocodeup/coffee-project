@@ -9,8 +9,17 @@
 /*}*/
 .jumbotron {
   background-image: url("./img/photo-1447933601403-0c6688de566e.jpeg");
+  min-height: 20em !important;
 
 }
 .coffee {
   width: 47% !important;
+}
+
+#topnav {
+  border-radius: 0;
+}
+
+#navback {
+
 }
