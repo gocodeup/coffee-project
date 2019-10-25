@@ -2,28 +2,30 @@
 body{
     height: 100%;
     width: 100%;
-    background-image: url("Coffee-Backgrouns-Images-Download.jpg");
+    background: url(Coffee-Backgrouns-Images-Download.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
     background-size: cover;
     color: saddlebrown;
     font-weight: bolder;
 }
 table{
+    width: 25%;
     background-color: burlywood;
-    margin-left: 600px;
+    margin-left: 38%;
+    text-align: center;
+    opacity: .8;
 
 }
 
 .jumbotron {
-    background: none;
-}
-
-.carousel-inner > .carousel-item > img {
-    width: 50%;
-    height:360px;
-    justify-items: center;
-
+    opacity: .9;
+    margin-bottom: 0;
+    padding: 18px;
 }
 
 
-
-
+.navbar{
+    opacity: .75;
+}
