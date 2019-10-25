@@ -10,4 +10,20 @@ body{
 table{
     background-color: burlywood;
     margin-left: 600px;
+
 }
+
+.jumbotron {
+    background: none;
+}
+
+.carousel-inner > .carousel-item > img {
+    width: 50%;
+    height:360px;
+    justify-items: center;
+
+}
+
+
+
+
