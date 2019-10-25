@@ -27,8 +27,6 @@ var coffeeName = document.querySelector('#coffee-name');
 var newSubmit = document.querySelector("#submit_coffee");
 
 //EVENT LISTENERS
-autocomplete(document.getElementById("coffee-name"), coffees);
-coffeeName.addEventListener('input', autocomplete(coffeeName, coffees));
 submitButton.addEventListener('click', updateCoffees);
 roastSelection.addEventListener('change', updateCoffees); //coffee roast event
 
@@ -47,6 +45,8 @@ newSubmit.addEventListener('click', function (e) {
 
         coffees.push(newCoffee);
 
+        //check if there is information in localStorage, if not create a new one
+        //if there is, retrieve it, added the new one and send it back again
         if(localStorage.getItem('newCoffee') === null) {
             storageArray = [];
         } else {
@@ -57,9 +57,47 @@ newSubmit.addEventListener('click', function (e) {
 
         tbody.innerHTML = renderCoffees(coffees);
 
+        //resets the form after adding the coffee
         document.getElementById("add-form").reset();
 
     }
+});
+
+coffeeName.addEventListener('input', function () {
+
+    let val = this.value;
+    /*erase all items from results array to start over*/
+    closeAllLists();
+
+    if (!val) {
+        tbody.innerHTML = renderCoffees(coffees);
+        return false;
+    }else{
+
+        coffees.forEach(function (coffee) {
+            let name = coffee.name.substr(0, val.length).toUpperCase() == val.toUpperCase();
+            let roast = coffee.roast.substr(0, val.length).toUpperCase() == val.toUpperCase();
+
+            if(name || roast){
+                results.push(coffee);
+            }
+        });
+
+    }
+
+    //display results
+    tbody.innerHTML = renderCoffees(results);
+
+    //erases results array to avoid displaying double
+    closeAllLists();
+
+    //function inside function autocomplete to erase results array
+    function closeAllLists() {
+        for(let x = 0; x < results.length; x++){
+            results.pop();
+        }
+    }
+
 });
 
 //FUNCTIONS
@@ -133,53 +171,3 @@ function displayCoffees(){
     tbody.innerHTML = renderCoffees(coffees);
 }
 
-//function used to autocomplete coffee displays as user types in the
-//input text field.
-function autocomplete(inp, arr) {
-    /*execute a function when someone writes in the text field:*/
-    inp.addEventListener("input", function(e) {
-        console.log(results);
-        let val = this.value;
-        console.log("This is val: " + val);
-        /*erase all items from results array to start over*/
-        closeAllLists();
-
-        if (!val) {
-            tbody.innerHTML = renderCoffees(coffees);
-            return false;
-        }
-
-        //checks every item in the array
-        for (let i = 0; i < arr.length; i++) {
-
-            /*check if the item starts with the same letters as the text field value:*/
-            if (arr[i].name.substr(0, val.length).toUpperCase() == val.toUpperCase()) {
-
-                //creates a coffee object of results
-                let indCoffee = {
-                    id: arr[i].id,
-                    name: arr[i].name,
-                    roast: arr[i].roast
-                };
-
-                //adds them to the results array
-                results.push(indCoffee);
-            }
-
-        }
-        //display results
-        tbody.innerHTML = renderCoffees(results);
-
-        //erases results array to avoid displaying double
-        closeAllLists();
-
-    });
-
-    //function inside function autocomplete to erase results array
-    function closeAllLists() {
-        for(let x = 0; x < results.length; x++){
-            results.pop();
-        }
-    }
-
-}
