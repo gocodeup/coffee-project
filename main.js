@@ -18,7 +18,7 @@ var coffees = [
 
 
 function renderCoffee(coffee) {
-    var html = '<div class=" col-6 coffee card">';
+    var html = '<div class=" col-5 coffee card">';
     // html += '<td>' + coffee.id + '</td>';
     html += '<h4>' + coffee.name + '</h4>';
     html += '<h6>' + coffee.roast + '</h6>';
@@ -66,24 +66,24 @@ function updateCoffees(e) {
 
 //this is a new function I'm making to try and add coffee to the page//
 
-// function addCoffee(e){
-//     e.preventDefault();
-//
-//     var coffeeObject= {
-//         id: "",
-//         name: "",
-//         roast: ""
-//     }
-//
-//     coffeeObject.id = coffees.length + 1;
-//
-//     //these need to be changed so that they grab the value of the input submissions
-//     coffeeObject.name = coffeeName.value;
-//     coffeeObject.roast = enter.value;
-//
-//     coffees.push(coffeeObject);
-//     updateCoffees();
-// }
+function addCoffee(e){
+    e.preventDefault();
+
+    var coffeeObject= {
+        id: "",
+        name: "",
+        roast: ""
+    }
+
+    coffeeObject.id = coffees.length + 1;
+
+    //these need to be changed so that they grab the value of the input submissions
+    coffeeObject.name = coffeeName.value;
+    coffeeObject.roast = enter.value;
+
+    coffees.push(coffeeObject);
+    updateCoffees();
+}
 
 
 
