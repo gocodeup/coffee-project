@@ -6,7 +6,8 @@ body {
 .container{
     display: flex;
     justify-content: center;
-
+    margin-right: 6.2%;
+    background-image: url("Coffee-Stain-Texture.jpg");
 }
 
 .carousel-caption{
@@ -53,3 +54,12 @@ select {
     background-image:url("Coffee-Stain-Texture.jpg");
 
 }
+
+/*div.col-6 {*/
+    /*width: 35%;*/
+/*}*/
+.coffee {
+    margin-right: 5%;
+
+}
+
