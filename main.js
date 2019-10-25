@@ -83,7 +83,7 @@ function newCoffee() {
 }
 
 // from http://www.ncausa.org/About-Coffee/Coffee-Roasts-Guide
-if (localStorage.length === 0) {
+if (localStorage.length === 2) {
     var coffees = [
         {id: 1, name: 'Light City', roast: 'light'},
         {id: 2, name: 'Half City', roast: 'light'},

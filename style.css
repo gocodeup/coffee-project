@@ -12,7 +12,7 @@ body {
     background-color: lightgreen;
 }
 
-.headerImage{
+.headerImage {
     max-height: 300px;
     /*width: 70%;*/
     /*width: 700px;*/
@@ -22,7 +22,7 @@ body {
     opacity: .8;
 }
 
-#coffees{
+#coffees {
     /*background-color: white;*/
     background-image: url("image/minimalistic-coffee-vector-sauna-coffee-cups-simple-background-tea-bag-time-relaxed-fresh-new-hd-wallpaper-jpg.jpg");
     margin-right: 10px;
@@ -34,12 +34,12 @@ body {
 
 }
 
-.fontChange{
+.fontChange {
     /*font-family: 'Courgette', cursive;*/
     font-family: 'Kaushan Script', cursive;
 }
 
-.caro-block{
+.caro-block {
     position: absolute;
     top: 70px;
     background-color: lightgray;
@@ -50,15 +50,19 @@ body {
     height: 130px;
 }
 
-#coffeeCarousel{
+#coffeeCarousel {
     background-color: white;
 }
 
-.cardBg{
+.cardBg {
     background-image: url("image/pngtree-coffee-simple-coffee-background-image_1727.jpg");
     object-fit: contain;
     width: 100%;
 }
 
 
-
+#map {
+    /* the width and height may be set to any size */
+    width: 50%;
+    height: 500px;
+}

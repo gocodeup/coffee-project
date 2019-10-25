@@ -18,6 +18,11 @@
     <link href="https://fonts.googleapis.com/css?family=Courgette|Kaushan+Script&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 
+    <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v1.4.1/mapbox-gl.js'></script>
+    <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v1.4.1/mapbox-gl.css' rel='stylesheet' />
+
+    <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.css' rel='stylesheet' />
+
 
 </head>
 <body>
@@ -57,76 +62,195 @@
     <div class="carousel-inner">
         <div class="carousel-item active">
             <img class="d-block w-100 headerImage" src="image/coffe_bg2.jpg" alt="First slide">
-            <div class="carousel-caption d-none d-md-block caro-block"><h1>WE'RE JUST LIKE STARBUCKS BUT BETTER! BUT IT'S STILL STARBUCKS</h1></div>
+            <div class="carousel-caption d-none d-md-block caro-block"><h1>WE'RE JUST LIKE STARBUCKS BUT BETTER! BUT
+                IT'S STILL STARBUCKS</h1></div>
         </div>
         <div class="carousel-item">
             <img class="d-block w-100 headerImage" src="image/caffeine-coffee-800x450.jpg" alt="Second slide">
-            <div class="carousel-caption d-none d-md-block caro-block"><h1>NOW WITH 300% MORE CAFFEINE. YOU'LL NEVER FEEL MORE ALIVE!</h1></div>
+            <div class="carousel-caption d-none d-md-block caro-block"><h1>NOW WITH 300% MORE CAFFEINE. YOU'LL NEVER
+                FEEL MORE ALIVE!</h1></div>
         </div>
         <div class="carousel-item">
             <img class="d-block w-100 headerImage" src="image/coffe-bg3.jpeg" alt="Third slide">
-            <div class="carousel-caption d-none d-md-block caro-block"><h1>DID YOU KNOW VENTI MEANS LARGE? WELL WE JUST HAVE HUGE A** CUPS INSTEAD!</h1></div>
+            <div class="carousel-caption d-none d-md-block caro-block"><h1>DID YOU KNOW VENTI MEANS LARGE? WELL WE JUST
+                HAVE HUGE A** CUPS INSTEAD!</h1></div>
         </div>
     </div>
 </div>
 <div class="container">
-    <div class ="row">
+    <div class="row">
         <div id="coffees" class="col row">
 
         </div>
 
         <div class="col">
-                    <div class="card">
-                        <div class="card-header">
-                            Search Coffee!
-                        </div>
-                        <div class="card-body cardBg">
-                            <div class="form-group">
-                                <label for="roast-selection" class="text-white">Type</label>
-                                <select class="form-control" id="roast-selection">
-                                    <option>light</option>
-                                    <option>medium</option>
-                                    <option>dark</option>
-                                    <option selected>all</option>
-                                </select>
-                            </div>
-                                <label for="coffee-search"></label>
-                                <input id="coffee-search" class="w-75" type="text">
-                                <input id="submit" class="" type="submit"/>
-                        </div>
+            <div class="card">
+                <div class="card-header">
+                    Search Coffee!
+                </div>
+                <div class="card-body cardBg">
+                    <div class="form-group">
+                        <label for="roast-selection" class="text-white">Type</label>
+                        <select class="form-control" id="roast-selection">
+                            <option>light</option>
+                            <option>medium</option>
+                            <option>dark</option>
+                            <option selected>all</option>
+                        </select>
                     </div>
-                    <div class="card mt-3">
-                        <div class="card-header">
-                            Add Coffee!
-                        </div>
-                        <div class="card-body cardBg">
-                            <div class="form-group">
-                                <label for="add-roast" class="text-white">Type</label>
-                                <select class="form-control" id="add-roast">
-                                    <option>light</option>
-                                    <option>medium</option>
-                                    <option>dark</option>
-                                </select>
-                            </div>
-                            <label for="name-coffee"></label>
-                            <input id="name-coffee" class="w-75" type="text">
-                            <input id="add-coffee" type="submit"/>
-                        </div>
-                    </div>
+                    <label for="coffee-search"></label>
+                    <input id="coffee-search" class="w-75" type="text">
+                    <input id="submit" class="" type="submit"/>
                 </div>
             </div>
-
-
+            <div class="card mt-3">
+                <div class="card-header">
+                    Add Coffee!
+                </div>
+                <div class="card-body cardBg">
+                    <div class="form-group">
+                        <label for="add-roast" class="text-white">Type</label>
+                        <select class="form-control" id="add-roast">
+                            <option>light</option>
+                            <option>medium</option>
+                            <option>dark</option>
+                        </select>
+                    </div>
+                    <label for="name-coffee"></label>
+                    <input id="name-coffee" class="w-75" type="text">
+                    <input id="add-coffee" type="submit"/>
+                </div>
+            </div>
+        </div>
     </div>
 
-
-
-
-
+    <div class="row">
+        <div class="col-12" id="map"></div>
+    </div>
 </div>
 
+
+
+<script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.js'></script>
+<script src="keys.js"></script>
 <script src="https://code.jquery.com/jquery-2.2.4.min.js"
         integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
 <script src="main.js"></script>
+<!-- Mapbox JS -->
+
+<script>
+    function geocode(search, token) {
+        var baseUrl = 'https://api.mapbox.com';
+        var endPoint = '/geocoding/v5/mapbox.places/';
+        return fetch(baseUrl + endPoint + encodeURIComponent(search) + '.json' + "?" + 'access_token=' + token)
+            .then(function (res) {
+                return res.json();
+                // to get all the data from the request, comment out the following three lines...
+            }).then(function (data) {
+                return data.features[0].center;
+            });
+    }
+</script>
+<script>
+    mapboxgl.accessToken = mapboxToken;
+    var map = new mapboxgl.Map({
+        container: 'map',
+        style: 'mapbox://styles/mapbox/streets-v9',
+        zoom: 10,
+        center: [-98.4916, 29.4252]
+    });
+
+    var makerArray = [];
+    var favoriteRestaurants = [{
+        address: "14250 San Pedro Ave, San Antonio, TX 78232",
+        information: "<h3>Alamo Cafe</h3><p>14250 San Pedro Ave, San Antonio, TX 78232</p><p>Fast and simply great food</p>"
+    }, {
+        address: "Mary's, 501 N St Mary's St, San Antonio, TX 78205",
+        information: "<h3>Bill Millers B-B-Q</h3><p>Mary's, 501 N St Mary's St, San Antonio, TX 78205</p><p>Good place to get lunch</p>"
+    }, {
+        address: "15639 W, I-10, San Antonio, TX 78249",
+        information: "<h3>Chuy's</h3><p>15639 W, I-10, San Antonio, TX 78249</p><p>Place to get food on the way home</p>"
+    }];
+
+    favoriteRestaurants.forEach(function (restaurant) {
+        geocode(restaurant.address, mapboxToken).then(function (result) {
+            // console.log(result);
+            // map.setCenter(result);
+            // map.setZoom(20);
+
+            restaurant.marker = new mapboxgl.Marker()
+                .setLngLat(result)
+                .addTo(map);
+
+            makerArray.push(restaurant.marker);
+
+            result.popup = new mapboxgl.Popup()
+                .setHTML(restaurant.information)
+                .addTo(map);
+
+            restaurant.marker.setPopup(result.popup);
+            restaurant.marker.togglePopup();
+
+        });
+    });
+
+    // var btn1 = document.getElementById('setZoom');
+    // btn1.addEventListener('click', setZoom, false);
+
+    function setZoom(event) {
+        var inputtedZoom = document.getElementById("inputZoomNum").value;
+        if (!isNaN(parseInt(inputtedZoom)) && parseInt(inputtedZoom) >= 0 && parseInt(inputtedZoom) <= 24) {
+            map.setZoom(parseInt(inputtedZoom));
+        } else {
+            alert("ERROR: not a proper input!")
+        }
+    }
+
+    // var btn2 = document.getElementById('searchAddress');
+    // btn2.addEventListener('click', addAddressMarker, false);
+
+    function addAddressMarker(event) {
+        var inputtedAddress = document.getElementById("addressInput").value;
+        geocode(inputtedAddress, mapboxToken).then(function (result) {
+            console.log(result);
+            map.setCenter(result);
+            // map.setZoom(20);
+
+            var newMarker = new mapboxgl.Marker()
+                .setLngLat(result)
+                .addTo(map);
+
+            makerArray.push(newMarker);
+
+            var newMarkerPopup = new mapboxgl.Popup()
+                .setHTML("<p>Location Found</p><p>" + inputtedAddress + "</p>")
+                .addTo(map);
+
+            newMarker.setPopup(newMarkerPopup);
+            newMarker.togglePopup();
+
+        });
+        // return inputtedAddress = '';
+    }
+
+    // var btn3 = document.getElementById('hideMarkersBtn');
+    // btn3.addEventListener('click', hideAllMarkers, false);
+
+    function hideAllMarkers(event) {
+        makerArray.forEach(function (mark) {
+            mark.remove();
+        });
+    }
+
+    // var btn4 = document.getElementById('showMarkersBtn');
+    // btn4.addEventListener('click', showAllMarkers, false);
+
+    function showAllMarkers(event) {
+        makerArray.forEach(function (mark) {
+            mark.addTo(map);
+        });
+    }
+
+</script>
 </body>
 </html>
