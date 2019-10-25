@@ -2,7 +2,8 @@
 
 function renderCoffee(coffee) {
     var html = '<div class="card text-center d-flex shadow  mx-1 coffee">';
-    html += '<div>' + coffee.name + " <p>" + coffee.roast + '</p></div>';
+    html += '<div class="font-weight-bold">' + coffee.name +
+        "<p>" + coffee.roast + '</p></div>';
     html += '</div>';
 
     return html;

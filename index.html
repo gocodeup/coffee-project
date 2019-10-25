@@ -5,7 +5,9 @@
     <title>Deimos Coffee</title>
 <!--    bootstrap cdn -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-<!--    custom css -->
+    <link href="https://fonts.googleapis.com/css?family=ZCOOL+XiaoWei&display=swap" rel="stylesheet">
+
+    <!--    custom css -->
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -25,7 +27,7 @@
 
 <!-- carousel added w/ photos -->
 
-    <div id="carouselExampleIndicators" class="carousel slide " data-ride="carousel">
+    <div id="carouselExampleIndicators" class="carousel slide mb-5" data-ride="carousel">
         <ol class="carousel-indicators">
             <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
             <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
@@ -35,20 +37,20 @@
             <div class="carousel-item active ml-auto mr-auto" >
               <div id="c-1"
                    class="d-flex justify-content-center align-items-center">
-                 <div class="h1 text-white">Great Taste</div>
+                 <div class="h1 text-white taste">Great Taste</div>
               </div>
 
             </div>
             <div class="carousel-item">
                 <div id="c-2"
                      class="d-flex justify-content-center align-items-center">
-                    <div class="h1 text-white">Great Taste</div>
+                    <div class="h1 text-white taste">Great Flavor</div>
                 </div>
             </div>
             <div class="carousel-item w-100" >
                 <div id="c-3"
                      class="d-flex justify-content-center align-items-center">
-                    <div class="h1 text-white">Great Taste</div>
+                    <div class="h1 text-white taste">Great Vibes</div>
                 </div>
             </div>
         </div>
@@ -62,13 +64,15 @@
         </a>
     </div>
 
+<p class="display-4 text-warning text-center">our roasts</p>
+
 
 <div class="container">
     <div class="row align-items-start">
         <div class="col-sm-4 shadow">
             <div class="form-group">
             <form>
-                <label for="roast-selection">What's your roast?</label>
+                <label class="padding" for="roast-selection">What's your roast?</label>
                 <select id="roast-selection"
                 class="form-control">
                     <option>all</option>

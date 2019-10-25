@@ -21,6 +21,14 @@
 
 }
 
+.coffee, .taste {
+  font-family: 'ZCOOL XiaoWei', serif;
+
+}
+
+.padding {
+  padding-top: 1em;
+}
 #topnav {
   border-radius: 0;
 }
