@@ -6,7 +6,7 @@ body {
 .container{
     display: flex;
     justify-content: center;
-    margin-right: 6.2%;
+    margin-left: 150px;
     background-image: url("Coffee-Stain-Texture.jpg");
 }
 
@@ -46,6 +46,7 @@ h2 {
 }
 #coffees {
     margin: 30px;
+    margin-left:140px;
 }
 select {
     background-color: burlywood;
