@@ -8,18 +8,24 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Coffee House!</h1>
-
+<nav class="navbar navbar-light bg-light">
+    <a class="navbar-brand">Coffee House!</a>
     <form>
         <label for="roast-selection"></label>
         <select id="roast-selection">
+            <option>None</option>
             <option>light</option>
             <option>medium</option>
             <option>dark</option>
         </select>
         <input id="submit" type="submit" />
     </form>
-        <input id= "search" placeholder="Coffee!" name="search" type="text" />
+    <form class="form-inline">
+        <input id="search" class="form-control mr-sm-2" type="text" placeholder="Coffee!" aria-label="Search">
+    </form>
+</nav>
+
+<!--        <input id= "search" placeholder="Coffee!" name="search" type="text" />-->
 
     <table>
         <thead>
