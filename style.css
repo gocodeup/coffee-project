@@ -17,10 +17,32 @@
 }
 
 .cimg {
-  height: 25em;
+  height: 30em;
+
 }
 
 #topnav {
   border-radius: 0;
+}
+#carouselExampleIndicators {
+  height: 400px;
+}
+#c-1 {
+  background-image: url("./img/pic1.jpg") ;
+  background-size: cover;
+  background-position: center;
+  height: 400px;
+}
+#c-2 {
+  background-image: url("./img/pic2.jpg") ;
+  background-size: cover;
+  background-position-y: 35%;
+  height: 400px;
+}
+#c-3 {
+  background-image: url("./img/pic3.jpeg") ;
+  background-size: cover;
+  background-position: center;
+  height: 400px;
 }
 
