@@ -11,39 +11,45 @@
 </head>
 <body>
 
-    <h1 id="coffeeHeader" class="text-center">Coffee!</h1>
+<h1 id="coffeeHeader" class="text-center">Coffee!</h1>
 <!--    <div id="headerDiv" class="text-center">-->
 <!--        <img id="headerGif" src="assets/coffeetime.gif">-->
 <!--    </div>-->
 <ul id="forms">
     <li id="searchForCoffee">
-<form>
-    <label class="mx-0" for=" roast-selection">Search for Coffee</label><br>
-    <select id="roast-selection">
-        <option>light</option>
-        <option>medium</option>
-        <option>dark</option>
-        <option id="allthecoffee">all</option>
-    </select>
-    <input class = "btn-primary" id="submit" type="submit"/>
-</form>
-<label>Search for Coffee<input type="text" id="coffeeSearch" class="input" placeholder="Search for Coffee"></label>
-
+        <div class="formCard">
+            <form>
+                <label class="mx-0" for="roast-selection">Search by Roast</label><br>
+                <select id="roast-selection">
+                    <option>light</option>
+                    <option>medium</option>
+                    <option>dark</option>
+                    <option id="allthecoffee">all</option>
+                </select>
+                <input class="btn-primary" id="submit" type="submit"/>
+            </form>
+            <label>Search by Name<input type="text" id="coffeeSearch" class="input"
+                                        placeholder="Search for Coffee"></label>
+        </div>
     </li>
     <li id="addACoffee">
+        <div class="formCard">
 
-    <form>
-        <label class="mx-0 for="addCoffee">Add a Coffee Here</label><br>
-        <select id="addCoffeeRoast">
-            <option>light</option>
-            <option>medium</option>
-            <option>dark</option>
-            <option>all</option>
-        </select>
-        <input id="newCoffeeSubmit" class="btn-primary" type="submit"/>
 
-    </form>
-        <label>Add a Coffee<br><input type="text" id="addCoffeeName" class="input ml-5" placeholder="name your blend..."></label>
+            <form>
+                <label class="mx-0" for="addCoffeeRoast">Add a Coffee Here</label><br>
+                <select id="addCoffeeRoast">
+                    <option>light</option>
+                    <option>medium</option>
+                    <option>dark</option>
+                    <option>all</option>
+                </select>
+                <input id="newCoffeeSubmit" class="btn-primary" type="submit"/>
+
+            </form>
+            <label>Add a Coffee<br><input type="text" id="addCoffeeName" class="input ml-5"
+                                          placeholder="name your blend..."></label>
+        </div>
 
     </li>
 </ul>
@@ -54,7 +60,6 @@
     </table>
     <div class="spacer"></div>
 </div>
-
 
 
 <script src="main.js"></script>

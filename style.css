@@ -5,7 +5,7 @@
 body{
     background-image: url("assets/coffeebackground1.jpeg");
     background-size: 100%;
-    background-repeat: no-repeat;
+    background-repeat: repeat-y;
 }
 
 table {
@@ -25,18 +25,22 @@ body>h1 {
 /*}*/
 
 .spacer {
-    height: 25px;
+    height: 1.25rem;
+}
+
+.formCard {
+    border: 5px solid black;
+    border-radius: 5px;
+    background-image: url("assets/plank-texture.jpg");
 }
 .coffeediv {
     width: 52%;
     font-family: 'Homemade Apple', cursive;
     font-size: 12px;
     padding-left: 7%;
-    padding-top: 1%;
+    margin-top: 1%;
     padding-bottom: 3%;
     color: lightgray;
-
-
     float: left;
     /*margin-left: 2%;*/
 }
