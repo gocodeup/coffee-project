@@ -29,9 +29,12 @@ body>h1 {
 }
 
 .formCard {
-    border: 5px solid black;
+    border: 2px solid black;
     border-radius: 5px;
     background-image: url("assets/plank-texture.jpg");
+    padding: 10px;
+    font-size: 1.25em;
+    color: #252525;
 }
 .coffeediv {
     width: 52%;
@@ -88,6 +91,7 @@ body>h1 {
 }
 #addACoffee {
     padding-left: 25px;
+    float: left;
 }
 
 /*#headerGif {*/
