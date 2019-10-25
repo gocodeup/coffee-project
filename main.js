@@ -66,9 +66,25 @@ function updateCoffees(e) {
 
 //this is a new function I'm making to try and add coffee to the page//
 
-function addCoffee(input){
-    
+function addCoffee(e){
+    e.preventDefault();
+
+    var coffeeObject= {
+        id: "",
+        name: "",
+        roast: ""
+    }
+
+    coffeeObject.id = coffees.length + 1;
+
+    //these need to be changed so that they grab the value of the input submissions
+    coffeeObject.name = coffeeName.value;
+    coffeeObject.roast = enter.value;
+
+    coffees.push(coffeeObject);
+    updateCoffees();
 }
+
 
 
 function searchCoffee(e) {

@@ -22,10 +22,12 @@ body {
     margin-bottom: 120px;
     font-family: 'Liu Jian Mao Cao', cursive;
     font-size: 70px;
+    text-shadow: 4px 4px black;
 
 }
 .carouselheader{
     font-size: 100px;
+    /*text-shadow: 10px black;*/
 }
 .bannerimage{
     width: 100%;
