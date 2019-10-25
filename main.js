@@ -18,11 +18,11 @@ var coffees = [
 
 
 function renderCoffee(coffee) {
-    var html = '<tr class="coffee">';
+    var html = '<div class=" col-6 coffee card">';
     // html += '<td>' + coffee.id + '</td>';
     html += '<h1>' + coffee.name + '</h1>';
     html += '<p>' + coffee.roast + '</p>';
-    html += '</tr>';
+    html += '</div>';
 
     return html;
 }
