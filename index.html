@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <title></title>
-    <link href="https://fonts.googleapis.com/css?family=Liu+Jian+Mao+Cao&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Liu+Jian+Mao+Cao%7CPermanent+Marker%7CSatisfy&display=swap" rel="stylesheet">    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=ZCOOL+XiaoWei&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 
 </head>
-<body>
+<body id="custom">
 <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
     <div class="carousel-inner">
         <!--<h1>Ground One</h1>-->
@@ -41,6 +41,7 @@
         <span class="sr-only">Next</span>
     </a>
 </div>
+<br>
 <!--<div class="jumbotron jumbotron-fluid">-->
     <!--<img src="coffeeprojectjumbobackground.jpg" width="100%" height="500px";>-->
 
@@ -48,45 +49,48 @@
         <!--<h1 class="display-4">Fluid jumbotron</h1>-->
     <!--</div>-->
 <!--</div>-->
-
-
-    <form>
-        <label for="roast-selection"></label>
-        <select id="roast-selection">
-            <option>Light</option>
-            <option>Medium</option>
-            <option>Dark</option>
-            <option selected id="selectAllButton">All</option>
-        </select>
-        <br>
-        Search for Coffee: <input id ="coffee-name" type="text" name="coffeeName">
-        <input id="submit" type="submit" />
-    </form>
-    <br>
-    <form>
-        <h1>Add a Coffee!</h1>
-        <label for="add-coffee"></label>
-        <select id="add-coffee">
-            <option>Light</option>
-            <option>Medium</option>
-            <option>Dark</option>
-        </select>
-        Name: <input type="text" name="coffeeName">
-        <br>
-        <input id="enter" type="submit" />
-
-    </form>
-
-    <table>
-        <thead>
-<!--            <tr>-->
-<!--                <th>ID</th>-->
-<!--                <th>NAME</th>-->
-<!--                <th>ROAST</th>-->
-<!--            </tr>-->
-        </thead>
-        <tbody id="coffees"></tbody>
-    </table>
+<div class="card-deck">
+    <div class="card">
+        <img src="organic-coffee.jpg" class="card-img-top, card-coffee" alt="organic-coffee">
+        <div class="card-body">
+            <form>
+                <h2 class="card-title">Search for Coffee</h2>
+                <label for="roast-selection"></label>
+                <select id="roast-selection" class="card-text">
+                    <option>Light</option>
+                    <option>Medium</option>
+                    <option>Dark</option>
+                    <option selected id="selectAllButton">All</option>
+                </select>
+                <br>
+                Search: <input id ="coffee-name" type="text" name="coffeeName" class="card-text">
+                <input id="submit" type="submit" />
+            </form>
+        </div>
+    </div>
+    <div class="card">
+        <img src="add-a-coffee.jpg" class="card-img-top, card-coffee" alt="add-coffee">
+        <div class="card-body">
+            <form>
+                <h2>Add a Coffee!</h2>
+                <label for="add-coffee"></label>
+                <select id="add-coffee">
+                    <option>Light</option>
+                    <option>Medium</option>
+                    <option>Dark</option>
+                </select>
+                <br>
+                Name: <input type="text" name="coffeeName">
+                <input id="enter" type="submit" />
+            </form>
+        </div>
+    </div>
+</div>
+<br>
+<div class = "container">
+    <div class="row" id="coffees">
+    </div>
+</div>
 
     <script src="main.js"></script>
 <!--this is for the bootstrap styling -->

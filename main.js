@@ -18,11 +18,11 @@ var coffees = [
 
 
 function renderCoffee(coffee) {
-    var html = '<tr class="coffee">';
+    var html = '<div class=" col-6 coffee card">';
     // html += '<td>' + coffee.id + '</td>';
-    html += '<h1>' + coffee.name + '</h1>';
-    html += '<p>' + coffee.roast + '</p>';
-    html += '</tr>';
+    html += '<h4>' + coffee.name + '</h4>';
+    html += '<h6>' + coffee.roast + '</h6>';
+    html += '</div>';
 
     return html;
 }
@@ -66,24 +66,24 @@ function updateCoffees(e) {
 
 //this is a new function I'm making to try and add coffee to the page//
 
-function addCoffee(e){
-    e.preventDefault();
-
-    var coffeeObject= {
-        id: "",
-        name: "",
-        roast: ""
-    }
-
-    coffeeObject.id = coffees.length + 1;
-
-    //these need to be changed so that they grab the value of the input submissions
-    coffeeObject.name = coffeeName.value;
-    coffeeObject.roast = enter.value;
-
-    coffees.push(coffeeObject);
-    updateCoffees();
-}
+// function addCoffee(e){
+//     e.preventDefault();
+//
+//     var coffeeObject= {
+//         id: "",
+//         name: "",
+//         roast: ""
+//     }
+//
+//     coffeeObject.id = coffees.length + 1;
+//
+//     //these need to be changed so that they grab the value of the input submissions
+//     coffeeObject.name = coffeeName.value;
+//     coffeeObject.roast = enter.value;
+//
+//     coffees.push(coffeeObject);
+//     updateCoffees();
+// }
 
 
 
@@ -115,7 +115,7 @@ var coffeeName = document.querySelector("#coffee-name");
 tbody.innerHTML = renderCoffees(coffees);
 
 submitButton.addEventListener('click', updateCoffees);
-submitButton.addEventListener('click', selectAllCoffee);
+// submitButton.addEventListener('click', selectAllCoffee);
 
 // keyup event listener searches while you type//
 coffeeName.addEventListener('keyup', searchCoffee);
