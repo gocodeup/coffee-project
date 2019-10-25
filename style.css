@@ -5,15 +5,27 @@
 .jumbotron {
     background-image: url("latteart.jpg");
     background-repeat: no-repeat;
-    background-size: contain;
-    background-size: 100%;
     background-position: center;
+    background-size: cover;
+    padding-top: 15%;
+    padding-bottom: 15%;
     opacity: 90%;
 }
 .jumbotron h1{
-    color: orange;
+    color: orangered;
     display: flex;
-    padding: .45em;
+    /*padding: .45em;*/
+}
+#smHeader {
+    color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    padding-right: 10%;
+    padding-bottom: 5%;
+    opacity: 30%;
+    /*padding: .45em;*/
 }
 
 #coffees{

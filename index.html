@@ -12,7 +12,8 @@
 </head>
 <body onload="displayCoffees()">
     <div class="jumbotron jumbotron-fluid">
-        <h1 class="display-4 text-center">Coffee!</h1>
+        <h1 class="display-4 d-none d-sm-block">Coffee!</h1>
+        <h1 id="smHeader" class="display-4 d-xs-block d-sm-none">Coffee</h1>
     </div>
 
     <div class="row">
@@ -36,7 +37,7 @@
                 </div>
             </form>
 
-            <form class="form-info adding">
+            <form class="form-info adding" id="add-form">
                 <div class="info p-2">
                     <h4>Add Coffee</h4>
                     <label for="type_roast" class="mb-3"></label>

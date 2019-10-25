@@ -34,18 +34,19 @@ roastSelection.addEventListener('change', updateCoffees); //coffee roast event
 
 newSubmit.addEventListener('click', function (e) {
     e.preventDefault();
-    let name = document.getElementById("new_coffee").value;
+    let inputName = document.getElementById("new_coffee").value;
     let roast = document.getElementById("type_roast").value;
     let storageArray;
 
-    if(name !== ''){
+    if(inputName !== ''){
         let newCoffee = {
             id: coffees.length,
-            name: name,
+            name: inputName,
             roast: roast
         };
 
         coffees.push(newCoffee);
+
         if(localStorage.getItem('newCoffee') === null) {
             storageArray = [];
         } else {
@@ -53,7 +54,11 @@ newSubmit.addEventListener('click', function (e) {
         }
         storageArray.push(newCoffee);
         localStorage.setItem('newCoffee', JSON.stringify(storageArray));
+
         tbody.innerHTML = renderCoffees(coffees);
+
+        document.getElementById("add-form").reset();
+
     }
 });
 
