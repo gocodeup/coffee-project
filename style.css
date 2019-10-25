@@ -16,10 +16,11 @@
   width: 47% !important;
 }
 
+.cimg {
+  height: 25em;
+}
+
 #topnav {
   border-radius: 0;
 }
 
-#navback {
-
-}
