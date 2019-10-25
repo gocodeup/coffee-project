@@ -1,9 +1,68 @@
-table {
-    border-collapse: collapse;
-    margin: 15px 0;
+*{
+    font-family: 'Noto Serif', serif;
 }
 
-td, th {
+.jumbotron {
+    background-image: url("latteart.jpg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-size: 100%;
+    background-position: center;
+    opacity: 90%;
+}
+.jumbotron h1{
+    color: orange;
+    display: flex;
+    padding: .45em;
+}
+
+#coffees{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.info{
+    background-color: rgba(255,255,255, 0.3);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.form-info{
+    background-image: url("serving-coffee.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
     border: 1px solid black;
-    padding: 5px 10px;
+
+}
+
+.adding{
+    background-image: url("window.jpeg");
+
+}
+
+.coffees{
+    display: flex;
+    vertical-align: middle;
+    margin-right: 1em;
+}
+
+.coffees h2{
+    margin-right: 0.5em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.coffees p{
+    margin:0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#coffee-name{
+    border-radius: 7%;
 }

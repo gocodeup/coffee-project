@@ -1,34 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title></title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <!-- Your custom styles go here -->
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Noto+Serif:700&display=swap" rel="stylesheet">
 </head>
-<body>
-    <h1>Coffee!</h1>
+<body onload="displayCoffees()">
+    <div class="jumbotron jumbotron-fluid">
+        <h1 class="display-4 text-center">Coffee!</h1>
+    </div>
 
-    <form>
-        <label for="roast-selection"></label>
-        <select id="roast-selection">
-            <option>light</option>
-            <option>medium</option>
-            <option>dark</option>
-        </select>
-        <input id="submit" type="submit" />
-    </form>
+    <div class="row">
+        <div id="coffees" class="col-6 ml-3">
+        </div>
 
-    <table>
-        <thead>
-            <tr>
-                <th>ID</th>
-                <th>NAME</th>
-                <th>ROAST</th>
-            </tr>
-        </thead>
-        <tbody id="coffees"></tbody>
-    </table>
+        <div class="col-5">
 
+            <form class="form-info mb-3" autocomplete="off">
+                <div class="info p-2">
+                    <label for="roast-selection" class="mb-3 font-weight-bold">Roast</label>
+                    <select id="roast-selection" class="mb-3">
+                        <option>all</option>
+                        <option>light</option>
+                        <option>medium</option>
+                        <option>dark</option>
+                    </select>
+                    <label for="coffee-name" class="mb-3 font-weight-bold">Coffee</label>
+                    <input type="text" name="coffee-name" id="coffee-name" placeholder="enter name or roast" class="mb-3">
+                    <input id="submit" class="btn-primary" type="submit" />
+                </div>
+            </form>
+
+            <form class="form-info adding">
+                <div class="info p-2">
+                    <h4>Add Coffee</h4>
+                    <label for="type_roast" class="mb-3"></label>
+                    <select id="type_roast" class="mb-3">
+                        <option value="light">light</option>
+                        <option value="medium">medium</option>
+                        <option value="dark">dark</option>
+                    </select>
+                    <label for="new_coffee" class="mb-3">Name</label>
+                    <input id="new_coffee" name="new_coffee" type="text" placeholder="Enter the name of coffee" class="mb-3">
+                    <input id="submit_coffee" class="btn-primary" type="submit" />
+                </div>
+            </form>
+
+        </div>
+    </div>
+
+
+
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+    <!-- Your custom JS goes here -->
     <script src="main.js"></script>
 </body>
 </html>
