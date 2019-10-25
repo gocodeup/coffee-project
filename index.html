@@ -41,6 +41,7 @@
         <span class="sr-only">Next</span>
     </a>
 </div>
+<br>
 <!--<div class="jumbotron jumbotron-fluid">-->
     <!--<img src="coffeeprojectjumbobackground.jpg" width="100%" height="500px";>-->
 
@@ -48,45 +49,61 @@
         <!--<h1 class="display-4">Fluid jumbotron</h1>-->
     <!--</div>-->
 <!--</div>-->
+<div class="card-deck">
+    <div class="card">
+        <img src="organic-coffee.jpg" class="card-img-top, card-coffee" alt="organic-coffee">
+        <div class="card-body">
+            <form>
+                <h2 class="card-title">Search for Coffee</h2>
+                <label for="roast-selection"></label>
+                <select id="roast-selection" class="card-text">
+                    <option>Light</option>
+                    <option>Medium</option>
+                    <option>Dark</option>
+                    <option selected id="selectAllButton">All</option>
+                </select>
+                <br>
+                Search: <input id ="coffee-name" type="text" name="coffeeName" class="card-text">
+                <input id="submit" type="submit" />
+            </form>
+        </div>
+    </div>
+    <div class="card">
+        <img src="add-a-coffee.jpg" class="card-img-top, card-coffee" alt="add-coffee">
+        <div class="card-body">
+            <form>
+                <h2>Add a Coffee!</h2>
+                <label for="add-coffee"></label>
+                <select id="add-coffee">
+                    <option>Light</option>
+                    <option>Medium</option>
+                    <option>Dark</option>
+                </select>
+                <br>
+                Name: <input type="text" name="coffeeName">
+                <input id="enter" type="submit" />
 
-
-    <form>
-        <label for="roast-selection"></label>
-        <select id="roast-selection">
-            <option>Light</option>
-            <option>Medium</option>
-            <option>Dark</option>
-            <option selected id="selectAllButton">All</option>
-        </select>
-        <br>
-        Search for Coffee: <input id ="coffee-name" type="text" name="coffeeName">
-        <input id="submit" type="submit" />
-    </form>
-    <br>
-    <form>
-        <h1>Add a Coffee!</h1>
-        <label for="add-coffee"></label>
-        <select id="add-coffee">
-            <option>Light</option>
-            <option>Medium</option>
-            <option>Dark</option>
-        </select>
-        Name: <input type="text" name="coffeeName">
-        <br>
-        <input id="enter" type="submit" />
-
-    </form>
-
-    <table>
-        <thead>
+            </form>
+        </div>
+    </div>
+</div>
+<div class="card">
+    <div class="card-body">
+        <div class="row">
+            <tbody id="coffees"></tbody>
+        </div>
+    </div>
+</div>
+<!--    <table>-->
+<!--        <thead>-->
 <!--            <tr>-->
 <!--                <th>ID</th>-->
 <!--                <th>NAME</th>-->
 <!--                <th>ROAST</th>-->
 <!--            </tr>-->
-        </thead>
-        <tbody id="coffees"></tbody>
-    </table>
+<!--        </thead>-->
+<!--        <tbody id="coffees"></tbody>-->
+<!--    </table>-->
 
     <script src="main.js"></script>
 <!--this is for the bootstrap styling -->

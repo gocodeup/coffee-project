@@ -33,3 +33,13 @@ body {
     width: 100%;
     height: 450px;
 }
+.card-coffee {
+    width:100% ;
+    height: 250px;
+}
+h2 {
+    font-family: 'Liu Jian Mao Cao', cursive;
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+}
