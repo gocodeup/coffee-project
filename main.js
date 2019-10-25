@@ -16,10 +16,6 @@ var coffees = [
     {id: 14, name: 'French', roast: 'dark'},
 ];
 
-function selectAllCoffee(){
-return coffees;
-}
-
 
 function renderCoffee(coffee) {
     var html = '<tr class="coffee">';
@@ -39,6 +35,7 @@ function renderCoffees(coffees) {
     console.log(coffees);
     return html;
 }
+
 
 
 function updateCoffees(e) {
@@ -67,6 +64,12 @@ function updateCoffees(e) {
     console.log(filteredCoffees);
 }
 
+//this is a new function I'm making to try and add coffee to the page//
+
+function addCoffee(input){
+    
+}
+
 
 function searchCoffee(e) {
     e.preventDefault();
@@ -84,6 +87,7 @@ function searchCoffee(e) {
     //display the updated coffees
     tbody.innerHTML = renderCoffees(filteredCoffees);
 }
+
 
 // from http://www.ncausa.org/About-Coffee/Coffee-Roasts-Guide
 
