@@ -1,9 +1,4 @@
-h1{
-    margin-top: 50px;
-    text-align: center;
-    color: white;
-    font-weight: bold;
-}
+
 body{
     height: 100%;
     width: 100%;
@@ -13,6 +8,6 @@ body{
     font-weight: bolder;
 }
 table{
-    background-color: whitesmoke;
-    margin-left: 250px;
+    background-color: burlywood;
+    margin-left: 600px;
 }
