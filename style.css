@@ -1,12 +1,3 @@
-table {
-    border-collapse: collapse;
-    margin: 15px 0;
-}
-
-td, th {
-    border: 1px solid black;
-    padding: 5px 10px;
-}
 
 body {
    background-color: tan;
@@ -42,4 +33,23 @@ h2 {
     font-size: 30px;
     font-weight: bold;
     text-align: center;
+}
+#custom h4 {
+    font-family: 'Satisfy', cursive;
+    text-align: center;
+    font-weight: bold;
+}
+#custom h6 {
+    font-family: 'ZCOOL XiaoWei', serif;
+    text-align: center;
+}
+#coffees {
+    margin: 30px;
+}
+select {
+    background-color: burlywood;
+}
+.card-body {
+    background-image:url("Coffee-Stain-Texture.jpg");
+
 }
