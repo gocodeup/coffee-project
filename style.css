@@ -6,14 +6,14 @@ body {
 .container{
     display: flex;
     justify-content: center;
-    margin-left: 150px;
+    margin-left: 15%;
     background-image: url("Coffee-Stain-Texture.jpg");
 }
 
 .carousel-caption{
     margin-bottom: 120px;
     font-family: 'Liu Jian Mao Cao', cursive;
-    font-size: 70px;
+    font-size: 90px;
     text-shadow: 4px 4px black;
 
 }
@@ -26,12 +26,15 @@ body {
     height: 450px;
 }
 .card-coffee {
-    width:100% ;
-    height: 250px;
+    width:70%;
+    height: 300px;
+    margin-top: 30px;
+    margin-left:15%;
+    margin-bottom: 10px;
 }
 h2 {
     font-family: 'Liu Jian Mao Cao', cursive;
-    font-size: 30px;
+    font-size: 43px;
     font-weight: bold;
     text-align: center;
 }
@@ -49,18 +52,40 @@ h2 {
     margin-left:140px;
 }
 select {
-    background-color: burlywood;
+    /*background-color: burlywood;*/
+    font-family: 'ZCOOL XiaoWei', serif;
+    font-weight: bold;
+    font-size: 20px;
+    margin-right: 20px;
+
 }
+
 .card-body {
     background-image:url("Coffee-Stain-Texture.jpg");
 
 }
 
-/*div.col-6 {*/
-    /*width: 35%;*/
-/*}*/
 .coffee {
     margin-right: 5%;
+    margin-bottom: 15px;
+}
+.card-deck {
+    margin-left: 40px;
+    margin-right: 40px;
+}
+.inputFields {
+    font-family: 'ZCOOL XiaoWei', serif;
+   text-align: center;
+    font-size: 18px;
+}
+#submit, #enter{
+    margin-right: 10px;
+    border-radius: 25px;
+    font-size: 18px;
 
 }
+.card-text {
+    border-radius: 15px;
+}
+
 
