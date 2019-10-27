@@ -11,3 +11,45 @@ td, th {
 
 h1
 
+
+body {
+    background-color: #d4debd;
+}
+
+.jumbotron{
+    background-image: url("img/coffee.jpg");
+    text-align: center;
+    background-repeat: no-repeat;
+    align-content: center;
+    background-size: 550px 650px;
+    padding-bottom: 400px;
+
+}
+
+
+
+
+@media screen and (min-width:365px) {
+    body {
+        background-color: #d4debd;
+    }
+
+
+
+
+
+}
+
+
+@media screen and (min-width:700px) {
+body {
+        background-color: #9f95ff;
+    }
+
+.coffee {
+/*visibility:;*/
+}
+
+
+
+}

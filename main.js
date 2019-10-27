@@ -52,12 +52,12 @@ var coffees = [
     {id: 14, name: 'French', roast: 'dark'},
 ];
 
+
 var section = document.querySelector('#coffees');
 var submitButton = document.querySelector('#submit');
 var roastSelection = document.querySelector('#roast-selection');
 var enteredCoffee = document.querySelector('#coffeeEntered');
 var wakeup = document.getElementsByClassName("coffee");
-
 
 
 console.log(wakeup);

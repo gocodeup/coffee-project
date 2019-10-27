@@ -4,9 +4,46 @@
     <meta charset="UTF-8">
     <title></title>
     <link rel="stylesheet" href="style.css">
-</head>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+
 <body>
     <h1>Coffee!</h1>
+
+
+
+<!--    Jumbotron-->
+
+    <div class="jumbotron jumbotron-fluid">
+        <div class="container">
+            <h1 class="display-4"></h1>
+            <p class="lead">This is a modified jumbotron that occupies the entire horizontal space of its parent.</p>
+        </div>
+    </div>
+
+
+<!-- Jumbotron   -->
+
+
+
+<!--Navagaton-->
+
+    <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+        <li class="nav-item">
+            <a class="nav-link active" id="pills-home-tab" data-toggle="pill" href="#pills-home" role="tab" aria-controls="pills-home" aria-selected="true">About</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" id="pills-profile-tab" data-toggle="pill" href="#pills-profile" role="tab" aria-controls="pills-profile" aria-selected="false">Contact Us </a>
+        </li>
+    </ul>
+    <div class="tab-content" id="pills-tabContent">
+        <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">About the coffee shop </div>
+        <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">Address will go here and hours will go here </div>
+        <div class="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab">...</div>
+    </div>
+
+<!--End of Nav-->
 
     <form>
         <label for="roast-selection">Roast</label>
@@ -16,12 +53,46 @@
             <option>medium</option>
             <option>dark</option>
         </select>
-        <input id="submit" type="submit" />
-        <label for="coffeeEntered">Coffee Name</label>
-        <input type="text" name="coffeeEntered" id="coffeeEntered">
+
+
+
+<!--        <input id="submit" type="submit" />-->
+<!--        <label for="coffeeEntered">Coffee Name</label>-->
+<!--        <input type="text" name="coffeeEntered" id="coffeeEntered">-->
     </form>
 
+dafdafdfasd
+
+<!--  bootstrap  search form -->
+
+    <nav class="navbar navbar-light bg-light">
+        <form class="form-inline">
+            <input id="coffeeEntered" name="coffeeEntered" class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+        </form>
+    </nav>
+
+
+
+<!-- end of search form    -->
+
+
+
+
     <main>
+
+
+        <div class="container">
+            <div class="row">
+                <div class="col-6 col-sm-4 ">1</div>
+                <div class="col-6 col-sm-4">2</div>
+                <div class="col-6 col-sm-4">3</div>
+                <div class="col-6 col-sm-4">4</div>
+                <div class="col-6 col-sm-4">5</div>
+                <div class="col-6 col-sm-4">6</div>
+            </div>
+        </div>
+
         <section>
 
         </section>
@@ -29,6 +100,22 @@
 
         </section>
     </main>
+
+
+
+
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+    <!-- Your custom JS goes here -->
+</body>
+
+
+
+
+
+
 
     <script src="main.js"></script>
 </body>
