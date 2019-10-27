@@ -39,51 +39,11 @@ function disableNewCoffeeName(x) {
 }
 
 function updateCoffees(e) {
-    // e.preventDefault(); // don't submit the form, we just want to update the data
-    // var selectedRoast = roastSelection.value;
-    // var searchCoffee = (document.getElementById("coffeeEntered").value).toLowerCase();
-    // var userSearch = new RegExp(searchCoffee, 'gi');
-    // var filteredCoffees = [];
-    // coffees.forEach(function (coffee) {
-    //     if (coffee.roast === selectedRoast && coffee.name.match(userSearch)) {
-    //         filteredCoffees.push(coffee);
-    //     } else if (coffee.roast === "all" || coffee.name.match(userSearch)) {
-    //         filteredCoffees.push(coffee);
-    //     }
-    // });
-    // section.innerHTML = renderCoffees(filteredCoffees);
     e.preventDefault(); // don't submit the form, we just want to update the data
-    var selectedRoast = roastSelection.value;
-    var filteredCoffees = [];
-    // dynamicSelection();
     console.log(coffeeSubmission);
-    // if (selectedRoast === "all") {
-    //     section.innerHTML = renderCoffees(coffees);
-    // } else {
-    //     coffees.forEach(function (coffee) {
-    //         if (coffee.roast === selectedRoast) {
-    //             filteredCoffees.push(coffee);
-    //         }
-    //     });
-    //     section.innerHTML = renderCoffees(filteredCoffees);
-    // }
 }
 
 // Separate function to be called specifically for roast selector
-// var dynamicSelection = function (roastChanged) {
-//     var dynamicRoast = roastSelection.value;
-//     var filteredCoffees = [];
-//     if (dynamicRoast === "all") {
-//         section.innerHTML = renderCoffees(coffees);
-//     } else {
-//         coffees.forEach(function (coffee) {
-//             if (coffee.roast === dynamicRoast) {
-//                 filteredCoffees.push(coffee);
-//             }
-//         });
-//         section.innerHTML = renderCoffees(filteredCoffees);
-//     }
-// };
 var dynamicSelection = function (roastChanged) {
     var dynamicRoast = roastSelection.value;
     var filteredCoffees = [];
