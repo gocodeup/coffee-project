@@ -2,6 +2,9 @@
 /*    border-collapse: collapse;*/
 /*    margin: 15px 0;*/
 /*}*/
+.test {
+    border-left-color: salmon;
+}
 
 /*td, th {*/
 /*    border: 1px solid black;*/

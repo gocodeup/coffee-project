@@ -1,5 +1,6 @@
 "use strict";
 
+// ===== COFFEE SELECTOR FORM =====
 // Catcher for submission
 var coffeeSubmission;
 
@@ -19,6 +20,22 @@ function renderCoffees(coffees) {
         html += renderCoffee(coffees[i]);
     }
     return html;
+}
+
+function disableCoffeeSearch(x) {
+    if (x === "--- Select Roast ---") {
+        enteredCoffee.disabled = true;
+    } else {
+        enteredCoffee.disabled = false;
+    }
+}
+
+function disableNewCoffeeName(x) {
+    if (x === "--- Select Roast ---") {
+        newEnteredCoffee.disabled = true;
+    } else {
+        newEnteredCoffee.disabled = false;
+    }
 }
 
 function updateCoffees(e) {
@@ -72,19 +89,9 @@ var dynamicSelection = function (roastChanged) {
     var filteredCoffees = [];
     var searchCoffee = (document.getElementById("coffeeEntered").value).toLowerCase();
     var userSearch = new RegExp(searchCoffee, 'gi');
-    // if (dynamicRoast === "all") {
-    //     section.innerHTML = renderCoffees(coffees);
-    // } else {
-    //     coffees.forEach(function (coffee) {
-    //         if (coffee.roast === dynamicRoast) {
-    //             filteredCoffees.push(coffee);
-    //         }
-    //     });
-    //     section.innerHTML = renderCoffees(filteredCoffees);
-    // }
     if (enteredCoffee.value === "") {
-        // console.log("it is empty");
-        if (dynamicRoast === "all") {
+        disableCoffeeSearch(dynamicRoast);
+        if (dynamicRoast === "all" || dynamicRoast === "--- Select Roast ---") {
             coffeeSubmission = coffees;
             section.innerHTML = renderCoffees(coffees);
         } else {
@@ -96,7 +103,8 @@ var dynamicSelection = function (roastChanged) {
             coffeeSubmission = filteredCoffees;
             section.innerHTML = renderCoffees(filteredCoffees);
         }
-    } else if (dynamicRoast === "all") {
+    } else if (dynamicRoast === "all" || dynamicRoast === "--- Select Roast ---") {
+        disableCoffeeSearch(dynamicRoast);
         coffees.forEach(function (coffee) {
             if (coffee.name.match(userSearch)) {
                 filteredCoffees.push(coffee);
@@ -127,10 +135,40 @@ var dynamicCoffeeSearch = function (enteredCoffee) {
             filteredCoffees.push(coffee)
         }
     });
-    // console.log(filteredCoffees);
     coffeeSubmission = filteredCoffees;
     section.innerHTML = renderCoffees(filteredCoffees);
 };
+
+// ===== CREATE NEW COFFEE FORM =====
+function submitNewCoffee(e) {
+    // ASK ABOUT INTERNAL STORAGE USING JSON
+    e.preventDefault(); // don't submit the form, we just want to update the data
+    if (newRoastSelection.value === "--- Select Roast ---") {
+        alert("Please select a roast");
+    } else if (newEnteredCoffee.value === "") {
+        alert("Please enter a name");
+    } else {
+        coffeeSubmission.push({
+            id: coffees.length + 1,
+            name: newEnteredCoffee.value,
+            roast: newRoastSelection.value
+        });
+        newRoastSelection.selectedIndex = "0";
+        newEnteredCoffee.value = "";
+        disableNewCoffeeName(newRoastSelection.value);
+        updateCoffees(e);
+        section.innerHTML = renderCoffees(coffeeSubmission);
+    }
+    console.log(coffees.length);
+}
+
+var newCoffeeRoast = function (roast) {
+    disableNewCoffeeName(newRoastSelection.value);
+};
+
+// var newCoffeeName = function (name) {
+//
+// };
 
 // from http://www.ncausa.org/About-Coffee/Coffee-Roasts-Guide
 var coffees = [
@@ -155,12 +193,22 @@ var section = document.querySelector('#coffees');
 var submitButton = document.querySelector('#submit');
 var roastSelection = document.querySelector('#roast-selection');
 var enteredCoffee = document.querySelector('#coffeeEntered');
+var newCoffeeSubmit = document.querySelector('#new-coffee-submit');
+var newRoastSelection = document.querySelector('#new-roast-selection');
+var newEnteredCoffee = document.querySelector('#new-coffee-name');
 
 // Display coffee selection on launch
 section.innerHTML = renderCoffees(coffees);
+// Initialize variable
 coffeeSubmission = coffees;
+// Set inputs to disabled on launch
+enteredCoffee.disabled = true;
+newEnteredCoffee.disabled = true;
 
 // Event listeners
 submitButton.addEventListener('click', updateCoffees);
 roastSelection.addEventListener('change', dynamicSelection);
 enteredCoffee.addEventListener('input', dynamicCoffeeSearch);
+newCoffeeSubmit.addEventListener('click', submitNewCoffee);
+newRoastSelection.addEventListener('change', newCoffeeRoast);
+// newEnteredCoffee.addEventListener('input', newCoffeeName);

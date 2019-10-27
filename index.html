@@ -44,9 +44,10 @@
 
 <form>
     <label for="roast-selection">Roast</label>
-    <!-- Added onchange method to allow dynamic selection change -->
     <select id="roast-selection">
-        <option selected>all</option>
+<!--        <option selected>all</option>-->
+        <option selected>--- Select Roast ---</option>
+        <option>all</option>
         <option>light</option>
         <option>medium</option>
         <option>dark</option>
@@ -54,6 +55,19 @@
     <input id="submit" type="submit"/>
     <label for="coffeeEntered">Coffee Name</label>
     <input type="text" name="coffeeEntered" id="coffeeEntered">
+</form>
+
+<form>
+    <label for="new-roast-selection">Roast</label>
+    <select id="new-roast-selection">
+        <option selected>--- Select Roast ---</option>
+        <option>light</option>
+        <option>medium</option>
+        <option>dark</option>
+    </select>
+    <label for="new-coffee-name">Name</label>
+    <input type="text" name="coffeeEntered" id="new-coffee-name">
+    <input id="new-coffee-submit" type="submit">
 </form>
 
 <!--  BOOTSTRAP SEARCH FORM -->
@@ -78,9 +92,6 @@
     <!--        </div>-->
     <!--    </div>-->
 
-    <section>
-
-    </section>
     <section id="coffees">
 
     </section>
