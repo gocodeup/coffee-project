@@ -5,11 +5,63 @@
     <!--    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">-->
     <title></title>
     <!-- BOOTSTRAP CSS -->
-    <!--    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">-->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
     <!-- CUSTOM CSS -->
     <link rel="stylesheet" href="style.css">
 <body>
-<h1>Coffee!</h1>
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
+
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav">
+            <a class="nav-item nav-link " href="#">Code Cafe<span class="sr-only">(current)</span></a>
+            <a class="nav-item nav-link" href="#">Order Online</a>
+            <a class="nav-item nav-link" href="#">Menu</a>
+            <form class="form-inline">
+                <input class="form-control mr-sm-2" type="search" placeholder="Zip code" aria-label="Search">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search stores near you!</button>
+            </form>
+        </div>
+
+        <div class="navbar-nav ml-auto">
+            <div class="dropdown">
+                <a class="btn dropdown-toggle" style="background-color: transparent" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <i class="fas fa-user"> Sign Up</i>
+                </a>
+
+                <div class="dropdown-menu dropdown-menu-right">
+                    <form class="px-4 py-3">
+                        <div class="form-group">
+                            <label for="exampleDropdownFormEmail1">Email address</label>
+                            <input type="email" class="form-control" id="exampleDropdownFormEmail1" placeholder="email@example.com">
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleDropdownFormPassword1">Password</label>
+                            <input type="password" class="form-control" id="exampleDropdownFormPassword1" placeholder="Password">
+                        </div>
+                        <div class="form-group">
+                            <div class="form-check">
+                                <input type="checkbox" class="form-check-input" id="dropdownCheck">
+                                <label class="form-check-label" for="dropdownCheck">
+                                    Remember me
+                                </label>
+                            </div>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Sign in</button>
+                    </form>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="#">New around here? Sign up</a>
+                    <a class="dropdown-item" href="#">Forgot password?</a>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</nav>
+<h1>Code Cafe!</h1>
 
 <!-- JUMBOTRON -->
 <!--<div class="jumbotron jumbotron-fluid">-->
@@ -42,17 +94,16 @@
 <!--</div>-->
 <!--End of Nav-->
 
-<form>
+<form class="form-inline">
     <label for="roast-selection">Roast</label>
     <select id="roast-selection">
-<!--        <option selected>all</option>-->
         <option selected>--- Select Roast ---</option>
         <option>all</option>
         <option>light</option>
         <option>medium</option>
         <option>dark</option>
     </select>
-    <input id="submit" type="submit"/>
+    <input id="submit" type="submit" class="btn btn-outline-success my-2 my-sm-0"/>
     <label for="coffeeEntered">Coffee Name</label>
     <input type="text" name="coffeeEntered" id="coffeeEntered">
 </form>
@@ -67,7 +118,7 @@
     </select>
     <label for="new-coffee-name">Name</label>
     <input type="text" name="coffeeEntered" id="new-coffee-name">
-    <input id="new-coffee-submit" type="submit">
+    <input id="new-coffee-submit" type="submit" class="btn btn-outline-success my-2 my-sm-0">
 </form>
 
 <!--  BOOTSTRAP SEARCH FORM -->
@@ -81,16 +132,17 @@
 <!-- end of search form    -->
 
 <main>
-    <!--    <div class="container">-->
-    <!--        <div class="row">-->
-    <!--            <div class="col-6 col-sm-4 ">1</div>-->
-    <!--            <div class="col-6 col-sm-4">2</div>-->
-    <!--            <div class="col-6 col-sm-4">3</div>-->
-    <!--            <div class="col-6 col-sm-4">4</div>-->
-    <!--            <div class="col-6 col-sm-4">5</div>-->
-    <!--            <div class="col-6 col-sm-4">6</div>-->
-    <!--        </div>-->
-    <!--    </div>-->
+
+<!--        <div class="container">-->
+<!--            <div class="row">-->
+<!--                <div class="col-6 col-sm-4 ">1</div>-->
+<!--                <div class="col-6 col-sm-4">2</div>-->
+<!--                <div class="col-6 col-sm-4">3</div>-->
+<!--                <div class="col-6 col-sm-4">4</div>-->
+<!--                <div class="col-6 col-sm-4">5</div>-->
+<!--                <div class="col-6 col-sm-4">6</div>-->
+<!--            </div>-->
+<!--        </div>-->
 
     <section id="coffees">
 
@@ -98,15 +150,9 @@
 </main>
 
 <!-- BOOTSTRAP SCRIPTS -->
-<!--<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"-->
-<!--        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"-->
-<!--        crossorigin="anonymous"></script>-->
-<!--<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"-->
-<!--        integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"-->
-<!--        crossorigin="anonymous"></script>-->
-<!--<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"-->
-<!--        integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"-->
-<!--        crossorigin="anonymous"></script>-->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
 <!-- CUSTOM JS -->
 <script src="main.js"></script>
 </body>
