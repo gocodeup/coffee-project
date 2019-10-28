@@ -2,7 +2,6 @@
 
 function renderCoffee(coffee) {
     var html = '<div class="coffee">';
-    // html += '<td>' + coffee.id + '</td>';
     html += '<h3>' + coffee.name + '</h3>';
     html += '<p>' + coffee.roast + '</p>';
     html += '</div>';
@@ -42,7 +41,7 @@ var coffees = [
     {id: 7, name: 'High', roast: 'dark'},
     {id: 8, name: 'Continental', roast: 'dark'},
     {id: 9, name: 'New Orleans', roast: 'dark'},
-    {id: 10, name: 'European', roast: 'dark'},git
+    {id: 10, name: 'European', roast: 'dark'},
     {id: 11, name: 'Espresso', roast: 'dark'},
     {id: 12, name: 'Viennese', roast: 'dark'},
     {id: 13, name: 'Italian', roast: 'dark'},
@@ -52,6 +51,7 @@ var coffees = [
 var tbody = document.querySelector('#coffees');
 var submitButton = document.querySelector('#submit');
 var roastSelection = document.querySelector('#roast-selection');
+
 
 var searchQuery = function(e) {
     var html = '';
@@ -64,8 +64,6 @@ var searchQuery = function(e) {
 };
 
 search.addEventListener("keydown", searchQuery);
-
-
 
 
 tbody.innerHTML = renderCoffees(coffees);
