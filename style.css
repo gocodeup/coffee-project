@@ -29,3 +29,6 @@ table{
 .navbar{
     opacity: .75;
 }
+.lead {
+    margin: 0;
+}
