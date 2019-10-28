@@ -1,39 +1,156 @@
+html{
+    /*background-image: url("img/Coffee-beans-5.jpg");*/
+    /*background-repeat: repeat-x;*/
+}
+
+
 table {
     border-collapse: collapse;
     margin: 15px 0;
 }
 
 td, th {
-    border: 1px solid black;
+    border: 1px solid #edba78;
     padding: 5px 10px;
 }
 
+a:hover{
+    color:white;
+}
 
-h1
+a{
+    color: #c27559;
+}
+
+h1{
+    font-family: 'Lobster Two';
+    font-size: 50px;
+    color: white;
+    padding-bottom: 50px;
+    padding-top: 50px;
+    padding-left: 50px;
+}
+
 
 
 body {
-    background-color: #d4debd;
+    background-color: #f0d94f;
+    /*background-image: url("img/Coffee-beans-5.jpg");*/
+    /*background-repeat: repeat-x;*/
 }
 
-.jumbotron{
-    background-image: url("img/coffee.jpg");
-    text-align: center;
-    background-repeat: no-repeat;
-    align-content: center;
-    background-size: 550px 650px;
-    padding-bottom: 400px;
+/*.jumbotron{*/
+/*    background-image: url("img/pourcoffee.jpeg");*/
+/*    text-align: center;*/
+/*    background-repeat: no-repeat;*/
+/*    align-content: center;*/
+/*    background-size: auto;*/
+/*    padding-bottom: 100px;*/
+/*    font-family: 'Alice';*/
 
+/*}*/
+
+.nav-pills {
+    background-color: #c27559;
+    color: #5c223a
+}
+
+/*Font inisde pills home tab*/
+
+#pills-home-tab{
+    color: #FFFFFF;
+    font-family: 'Alice';
+
+}
+/*End */
+
+/*THIS WILL CHANGE THE COLOR OF NAV PILLS */
+.nav-pills .nav-link.active, .nav-pills .show > .nav-link {
+    background-color: #9cbb9c;
+    font-family: 'Alice';
+}
+/*END */
+
+
+
+/*FONT INSIDE TABS */
+#pills-profile-tab{
+    color: #FFFFFF;
+    font-family: 'Alice';
+
+}
+/*ENDS*/
+
+/*DROP DOWN INFO WHEN ABOUT IS HIT */
+#pills-home {
+    color: #FFFFFF;
+    font-family: 'Alice';
+}
+/*END*/
+
+
+#pills-profile{
+    color: #FFFFFF;
+    font-family: 'Alice';
+}
+
+/*END*/
+
+/*SEARCH BUTTON ON SEARCH FORM*/
+
+.btn-outline-success {
+    background-color: #c27559;
+    color: white;
+    border-color: white;
+    font-family: 'Alice';
+}
+
+/*END */
+
+/*THIS IS FOR THE WHEN YOU INPUT INFORMATION INTO SEARCH BAR */
+
+.form-control{
+    background-color: #9cbb9c;
+
+}
+
+/*END*/
+
+
+
+/*SELECT FORM */
+label{
+    font-family: 'Alice';
+}
+select{
+    font-family: 'Alice';
+    color: #eda531;
+}
+
+/*END*/
+
+/*THIS CHANGES THE COLOR BACKGROUND WHEN YOU SELECT ROAST */
+
+option {
+    background-color: #c27559 !important;
 }
 
 
 
 
-@media screen and (min-width:365px) {
+
+@media screen and (min-width:800px) {
     body {
-        background-color: #d4debd;
+        background-color: #f0d94f;
+        background-image: url("img/coffee1.html");
+    }
+    .jumbotron{
+        display: none;
     }
 
+h1{
+    font-size: 100px;
+}
 
 
 
@@ -41,15 +158,14 @@ body {
 }
 
 
-@media screen and (min-width:700px) {
-body {
-        background-color: #9f95ff;
-    }
+/*@media screen and (min-width:700px) {*/
+/*body {*/
+/*        background-color: #f0d94f;*/
+/*    }*/
 
-.coffee {
-/*visibility:;*/
-}
+/*.coffee {*/
+/*!*visibility:;*!*/
+/*}*/
 
 
 
-}
