@@ -16,6 +16,7 @@ table{
     margin-left: 38%;
     text-align: center;
     opacity: .8;
+    font-family: 'Indie Flower', cursive;
 
 }
 
@@ -23,12 +24,67 @@ table{
     opacity: .9;
     margin-bottom: 0;
     padding: 0px;
+    font-family: 'Indie Flower', cursive;
 }
 
+#logo {
+    position: fixed;
+    right: 30px;
+    top: 7px;
+    opacity: 5;
+}
 
 .navbar{
     opacity: .75;
+    font-family: 'Indie Flower', cursive;
 }
+
+
 .lead {
     margin: 0;
 }
+
+img {
+    border-radius: 70%;
+}
+
+#cup-art {
+    position: fixed;
+    top: 390px;
+    left: 50px;
+    border: solid firebrick 7px;
+    border-radius: 70%;
+}
+
+#cups {
+    position: fixed;
+    top: 270px;
+    left: 750px;
+    border: solid firebrick 7px;
+    border-radius: 70%;
+}
+
+#beans {
+    position: fixed;
+    top: 520px;
+    left: 750px;
+    border: solid firebrick 7px;
+    border-radius: 70%;
+}
+
+#quote1 {
+    position: fixed;
+    top: 250px;
+    left: 20px;
+    color: lightgoldenrodyellow;
+    font-family: 'Abril Fatface', cursive;
+}
+
+#quote2 {
+    position: fixed;
+    top: 600px;
+    left: 20px;
+    color: lightgoldenrodyellow;
+    font-family: 'Abril Fatface', cursive;
+}
+
