@@ -6,6 +6,7 @@
     <title>Coffee House</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Abril+Fatface|Indie+Flower&display=swap" rel="stylesheet">
 </head>
 <body>
 <div class="sticky-top">
@@ -13,6 +14,9 @@
     <div class="container">
         <h1 class="display-4">Welcome to Coffee!</h1>
         <p class="lead">We have lots of coffee, if we don't have it, add it!</p>
+    </div>
+    <div id="logo">
+        <img src="coffee%20logo.jpg" width="90" height="90">
     </div>
 </div>
 
@@ -22,6 +26,7 @@
         <label for="roast-selection"> Select Coffee Roast:</label>&emsp;
         <select id="roast-selection">
             <option value="selected"></option>
+            <option>all</option>
             <option>light</option>
             <option>medium</option>
             <option>dark</option>
@@ -39,6 +44,7 @@
         <label for="roast-add"> Add Coffee Roast:</label>&emsp;
         <select id="roast-add">
             <option></option>
+            <option>all</option>
             <option>light</option>
             <option>medium</option>
             <option>dark</option>
@@ -47,14 +53,33 @@
     </form>
     <form class="form-inline">
         <label for="search"> Add Coffee Name:</label>&emsp;
-        <input id="add" class="form-control mr-sm-2" type="text" placeholder="Add Coffee!" aria-label="Search">
+        <input id="add-roast" class="form-control mr-sm-2" type="text" placeholder="Add Coffee!" aria-label="Search">
     </form>
     <input id="submitted" type="submit" />
 </nav>
 </div>
 
+<span id="cup-art">
+    <img src="coffee1.jpeg" alt="coffee1" width="275" height="183">
+</span>
+
+<div id="quote1">
+    <h2>"A bad day with coffee is <br> better than a good day <br> without it."</h2>
+</div>
+
+<div id="quote2">
+    <h2>"Coffee is a beverage that <br> puts one to sleep when <br> not drank."</h2>
+</div>
 
 
+<span id="cups">
+    <img src="coffee2.jpg" alt="coffee2" width="275" height="183">
+</span>
+
+
+<span id="beans">
+    <img src="coffee3.png" alt="coffee3" width="275" height="183">
+</span>
 
     <table>
 
