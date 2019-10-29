@@ -50,8 +50,8 @@ img {
 
 #cup-art {
     position: fixed;
-    top: 390px;
-    left: 50px;
+    top: 520px;
+    left: 200px;
     border: solid firebrick 7px;
     border-radius: 70%;
 }
@@ -59,7 +59,7 @@ img {
 #cups {
     position: fixed;
     top: 270px;
-    left: 750px;
+    left: 1025px;
     border: solid firebrick 7px;
     border-radius: 70%;
 }
@@ -67,7 +67,7 @@ img {
 #beans {
     position: fixed;
     top: 520px;
-    left: 750px;
+    left: 925px;
     border: solid firebrick 7px;
     border-radius: 70%;
 }
@@ -76,7 +76,8 @@ img {
     position: fixed;
     top: 250px;
     left: 20px;
-    color: lightgoldenrodyellow;
+    color: firebrick;
+    text-shadow: saddlebrown;
     font-family: 'Abril Fatface', cursive;
 }
 
