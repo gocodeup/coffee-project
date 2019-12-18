@@ -71,13 +71,16 @@ searchCoffee.addEventListener('keyup', function(){
     selectedCoffee = searchCoffee.value;
     updateCoffees();
 });
+
 var addCoffeeButton = document.querySelector('#add-coffee-button')
 addCoffeeButton.addEventListener('click', function(){
     var coffeeRoastSelection = document.getElementById('coffee-roast-selection');
     var addCoffeeNameInput = document.getElementById('add-coffee-name-input');
     console.log(createCoffee(addCoffeeNameInput.value, coffeeRoastSelection.value));
+    addCoffeeNameInput.value = '';
     updateCoffees();
 });
+
 coffeeContainer.innerHTML = renderCoffees(coffees);
 console.log(coffees);
 
