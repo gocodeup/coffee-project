@@ -1,5 +1,12 @@
 "use strict"
 
+function createCoffee (inputName, roastType){
+    var newCoffee = {id: coffees.length + 1 , name: inputName, roast: roastType}
+    coffees.push(newCoffee);
+    console.log(coffees);
+}
+
+//above this line are the functions for creating coffee obj
 function renderCoffee(coffee) {
     var html = '<div class="coffee">';
     html += '<h3>' + coffee.name + '</h3>' + '<p>' + coffee.roast + '</p>' ;
@@ -50,7 +57,7 @@ var coffees = [
 var coffeeContainer = document.getElementById('coffee-container');
 var submitButton = document.querySelector('#submit');
 
-var selectedRoast = '';
+var selectedRoast = 'all';
 var roastSelection = document.querySelector('#roast-selection');
 roastSelection.addEventListener('change', function(){
     selectedRoast = roastSelection.value;
@@ -63,7 +70,14 @@ searchCoffee.addEventListener('keyup', function(){
     selectedCoffee = searchCoffee.value;
     updateCoffees();
 });
+var addCoffeeButton = document.querySelector('#add-coffee-button')
+addCoffeeButton.addEventListener('click', function(){
+    var coffeeRoastSelection = document.getElementById('coffee-roast-selection');
+    var addCoffeeNameInput = document.getElementById('add-coffee-name-input');
+    console.log(createCoffee(addCoffeeNameInput.value, coffeeRoastSelection.value));
 
+});
 coffeeContainer.innerHTML = renderCoffees(coffees);
+console.log(coffees);
 
-submitButton.addEventListener('click', updateCoffees);
+// submitButton.addEventListener('click', updateCoffees);
