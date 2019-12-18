@@ -44,16 +44,26 @@ function updateCoffees(e) {
         });
     }
 
-
-
-
     tbody.innerHTML = renderCoffees(filteredCoffees);
     console.log(searchCoffee);
 }
 
+function addCoffee (e) {
+    e.preventDefault();
+    coffees.push({
+        name: addedName.value,
+        roast: addedRoast.value
+    });
+    let filteredCoffees = [];
+    coffees.forEach(function(coffee) {
+        filteredCoffees.push(coffee)
+    });
+    tbody.innerHTML = renderCoffees(filteredCoffees);
+}
+
 
 // from http://www.ncausa.org/About-Coffee/Coffee-Roasts-Guide
-var coffees = [
+let coffees = [
     {id: 1, name: 'Light City', roast: 'light'},
     {id: 2, name: 'Half City', roast: 'light'},
     {id: 3, name: 'Cinnamon', roast: 'light'},
@@ -70,15 +80,20 @@ var coffees = [
     {id: 14, name: 'French', roast: 'dark'},
 ];
 coffees.reverse();
-var tbody = document.querySelector('#coffees');
-var submitButton = document.querySelector('#submit1');
-var roastSelection = document.getElementById('roast-selection');
-var searchCoffee = document.getElementById('search-coffee');
+
+let addedName = document.getElementById('input-name');
+let tbody = document.querySelector('#coffees');
+let addedRoast = document.getElementById('input-roast');
+let submitButton = document.querySelector('#submit1');
+let submitNew = document.querySelector('#submit2');
+let roastSelection = document.getElementById('roast-selection');
+let searchCoffee = document.getElementById('search-coffee');
 
 
 tbody.innerHTML = renderCoffees(coffees);
 
 submitButton.addEventListener('click', updateCoffees);
+submitNew.addEventListener('click', addCoffee);
 roastSelection.addEventListener('change', updateCoffees);
 searchCoffee.addEventListener('input', updateCoffees);
 
