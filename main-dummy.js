@@ -67,7 +67,7 @@ var coffees = [
 ];
 
 //===================================== VARIABLES AND SUBMIT EVENT LISTENER ==========================================//
-var tbody = document.getElementsByTagName('div')[4];
+var tbody = document.getElementsByTagName('div')[3];
 var submitButton = document.querySelector('#submit');
 var roastSelection = document.querySelector('#roast-selection');
 
