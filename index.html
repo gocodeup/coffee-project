@@ -4,203 +4,67 @@
     <meta charset="UTF-8">
     <title></title>
     <link rel="stylesheet" href="style.css">
-
+    <script src="js/main.js"></script>
 </head>
-<style></style>
 <body>
 <header>
     <h1>Coffee!</h1>
 </header>
 
+<form>
+    <label for="roast-selection"></label>
+    <select id="roast-selection" onchange="updateCoffees(value)">
+        <option value="all">all</option>
+        <option value="light">light</option>
+        <option value="medium">medium</option>
+        <option value="dark">dark</option>
+    </select>
+
+    <label for="coffee-search">Coffee Name</label>
+    <input id="coffee-search" value="" type="text" onkeyup="searchCoffees(value)"/>
+
+    <h1>Add A Coffee!</h1>
+
+    <label for="add-coffee-roast-select">Roast</label>
+    <select id="add-coffee-roast-select">
+        <option value="light">light</option>
+        <option value="medium">medium</option>
+        <option value="dark">dark</option>
+    </select>
+
+    <label for="add-coffee-name">Name</label>
+    <input id="add-coffee-name" value="" type="text"/>
+
+    <button id="add-coffee" type="button" onclick="addCoffee()">Submit</button>
+</form>
+
+<!--<table>-->
+<!--<thead>-->
+<!--<tr>-->
+<!--&lt;!&ndash;<th>ID</th>&ndash;&gt;-->
+<!--<th>NAME</th>-->
+<!--<th>ROAST</th>-->
+<!--</tr>-->
+<!--</thead>-->
+<div id="coffees"></div>
+
+<!--</table>-->
+
+<script src="main.js"></script>
+</body>
+</html>
+<!--<head>-->
+<!--    <meta charset="UTF-8">-->
+<!--    <title></title>-->
+<!--    <link rel="stylesheet" href="style.css">-->
+<!--    <script src="js/main.js"></script>-->
+<!--</head>-->
+
+
+
 <!-----In the code below we create the form providing the label and input with a ---->
-    <form>
-        <label for="roast-selection"></label>
-        <select id="roast-selection" onchange="updateCoffees(value)">
-            <option value="all">all</option>
-            <option>light</option>
-            <option>medium</option>
-            <option>dark</option>
-        </select>
-        <label for ="add-coffee-roast-selct">Roast</label>
-        <input id="coffee-search" value="" type="text" onkeyup="searchCoffees(value)"/>
 
-        <h1> Add A Coffee!</h1>
-        <label for="add-coffee-roast-select">Roast</label>
-        <select id="add-coffee-roast-selct">
-            <option value="light">light</option>
-            <option value="medium">medium</option>
-            <option value="dark">dark</option>
-        </select>
-
-        <label for ="add-coffee-name">Name</label>
-        <label for ="add-coffee-name" value="" type=""text/>
-
-        <button id="add-coffee" type="button" onclick="addCoffee()">Submit</button>
-
-    </form>
-
-    <div id="coffees"></div>
-
-    <script>
 
 
 /*In the following code the following array is created to perform the forEach loop within the search bar as the user performs a search*/
 
-
-        var coffees = [
-
-
-
-            {id: 1, name: 'Light City', roast: 'light'},
-            {id: 2, name: 'Half City', roast: 'light'},
-            {id: 3, name: 'Cinnamon', roast: 'light'},
-            {id: 4, name: 'City', roast: 'medium'},
-            {id: 5, name: 'American', roast: 'medium'},
-            {id: 6, name: 'Breakfast', roast: 'medium'},
-            {id: 7, name: 'High', roast: 'dark'},
-            {id: 8, name: 'Continental', roast: 'dark'},
-            {id: 9, name: 'New Orleans', roast: 'dark'},
-            {id: 10, name: 'European', roast: 'dark'},
-            {id: 11, name: 'Espresso', roast: 'dark'},
-            {id: 12, name: 'Veinnese', roast: 'dark'},
-            {id: 13, name: 'Italian', roast: 'dark'},
-            {id: 14, name: 'French', roast: 'dark'},
-
-
-
-
-        ];
-
-        function renderCoffee(Coffee)  {
-
-            var html= '<div class = coffee>';
-
-
-            html += '<div class="coffee-name-font col-6"><h2>' + coffee.name;
-
-
-            html += ' <small class="coffee-roast-font">' + coffee.roast + '</small></h2></div>';
-
-
-            return html;
-
-        }
-
-
-        function renderCoffees(coffees) {
-
-
-            var html = '';
-
-
-            for(var i = coffees.length - 1; i >= 0; i--) {
-             html += renderCoffee(coffees[i]);
-            }
-
-
-            return html;
-        }
-
-
-        function updateCoffees(e) {
-
-            var selectedRoast = roastSelection.value;
-            var filteredCoffees = [];
-
-            if (e === 'all') {
-                coffees.forEach(function (coffee) {
-                    filteredCoffees.push(coffee);
-                })
-            } else coffees.forEach(function(coffee) {
-                if (coffee.roast === selectedRoast){
-                    filteredCoffees.push(coffee);
-                }
-                });
-                tbody.innerHTML = renderCoffees(filteredCoffees);
-        }
-
-
-        function addCoffee() {
-            var coffee = {
-                id: '',
-                name: '',
-                roast: '',
-            };
-            coffee.id = coffees.length + 1;
-            var tempName = document.getElementById('add-coffee-name').value;
-            coffee.name = formatNewCoffee(tempName);
-            coffee.roast = document.getElementById('add-coffee-roast-select').value;
-            coffees.push(coffee);
-            arrangeCoffee();
-            tbody.innerHTML = renderCoffees(coffees);
-        }
-
-        function arrageCoffee() {
-            coffees.sort(function (a, b) {
-                return a.id - b.id
-            });
-            coffees.reverse();
-        }
-
-        function formatNewCoffee(input) {
-            return input.replace(/\b\w/g, function (letter) {
-                return letter.toUpperCase()
-            })
-        }
-
-        coffees.reverse();
-        var tbody = document.querySelector('#coffees');
-        var submitButton = document.querySelector('#submit');
-        var roastSelection = document.querySelector('#roast-selection');
-
-        tbody.innerHTML = renderCoffees(coffee);
-
-        submitButton.addEventListener('click, updateCoffees');
-
-
-        }
-
-    </script>
-
-</body>
-</html>
-
-
-<!--    <div id ="heading"><h1>French</h1> <p>Dark Roast</p></div>-->
-<!--    <div id ="heading"><h1>Italian</h1> <p>Dark Roast</p></div>-->
-<!--    <div id ="heading"><h1>Viennese</h1> <p>Dark Roast</p></div>-->
-<!--    <div id ="heading"><h1>Espresso</h1> <p>Dark Roast</p></div>-->
-<!--    <div id ="heading"><h1>European</h1> <p>Dark Roast</p></div>-->
-<!--    <div id ="heading"><h1>New Orleans</h1> <p>Dark Roast</p></div>-->
-<!--    <div id ="heading"><h1>Continental</h1> <p>Dark Roast</p></div>-->
-<!--    <div id ="heading"><h1>High</h1> <p>Dark Roast</p></div>-->
-<!--    <div id ="heading"><h1>Breakfast</h1> <p>Medium Roast</p></div>-->
-<!--    <div id ="heading"><h1>American</h1> <p>Medium Roast</p></div>-->
-<!--    <div id ="heading"><h1>City</h1> <p>Medium Roast</p></div>-->
-<!--    <div id ="heading"><h1>Cinnamon</h1> <p>Light Roast</p></div>-->
-<!--    <div id ="heading"><h1>Half City</h1> <p>Light Roast</p></div>-->
-<!--    <div id ="heading"><h1>Light City</h1> <p>Light Roast</p></div>-->
-
-
-
-
-
-
-
-<!--    <script src="main.js">-->
-
-
-
-
-
-
-
-
-
-
-
-
-
-    </script>
-</body>
-</html>
