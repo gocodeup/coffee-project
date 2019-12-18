@@ -1,5 +1,6 @@
 "use strict"
 
+//===================================== DISPLAYS COFFEE NAME & ROAST =================================================//
 function renderCoffee(coffee) {
     var html = '<body class="coffee">';
     html += '<div>' + coffee.name + " " + coffee.roast +'</div>';
@@ -8,6 +9,7 @@ function renderCoffee(coffee) {
     return html;
 }
 
+//========================================= SETS COFFEE LIST PER ROAST ===============================================//
 function renderCoffees(coffees) {
     var html = '';
     for(var i = coffees.length - 1; i >= 0; i--) {
@@ -16,6 +18,7 @@ function renderCoffees(coffees) {
     return html;
 }
 
+//===================================== DISPLAYS COFFEE LIST PER SELECTION ===========================================//
 function updateCoffees(e) {
 
     e.preventDefault(); // don't submit the form, we just want to update the data
@@ -44,16 +47,7 @@ function updateCoffees(e) {
 
 }
 
-// function displayAllRoasts() {
-//     var allCoffees = [];
-//     coffees.forEach(function (coffee) {
-//             allCoffees.push(coffee);
-//     });
-//     tbody.innerHTML = renderCoffees(allCoffees);
-// }
-//
-// console.log(displayAllRoasts());
-
+//============================================= COFFEE ARRAY =========================================================//
 // from http://www.ncausa.org/About-Coffee/Coffee-Roasts-Guide
 var coffees = [
     {id: 1, name: 'Light City', roast: 'light'},
@@ -72,49 +66,10 @@ var coffees = [
     {id: 14, name: 'French', roast: 'dark'},
 ];
 
-// =======================function for search bar and array===============================
-
-document.getElementById("searchBtn").addEventListener('search', function() {
-  var formInput = document.getElementById("formInput").value,
-    foundItem = null; //we'll store the matching value here
-
-  // if (formInput === '') {
-  //   alert('You Must Enter A Code Number First.');
-  //   return false;
-  // }
-
-  for (var i = 0; i < coffees.length; i++) {
-    if (coffees[i].code === formInput) {
-      foundItem = coffees[i];
-      break; //we've found a match, no sense to continue
-    }
-  }
-
-  if (foundItem) {
-    return foundItem;
-  } else {
-    return false;
-  }
-
-});
-
-// ======================================================
-
-// var tbody = document.querySelector('#coffees');
-var tbody = document.getElementsByTagName('div')[2];
+//===================================== VARIABLES AND SUBMIT EVENT LISTENER ==========================================//
+var tbody = document.getElementsByTagName('div')[4];
 var submitButton = document.querySelector('#submit');
 var roastSelection = document.querySelector('#roast-selection');
-// var allRoasts = document.querySelector('#all-roasts');
-
-// tbody.innerHTML = renderCoffees(coffees);
-
-// function coffeeNames(){
-//     coffees.forEach(function(coffees){
-//         tbody.innerHTML = coffees.name + coffees.roast;
-//     });
-// }
-
-// coffeeNames(coffees);
 
 submitButton.addEventListener('click', updateCoffees);
 
