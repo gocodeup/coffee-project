@@ -29,7 +29,7 @@ function updateCoffees() {
     var filteredCoffees = [];
     coffees.forEach(function(coffee) {
         if (coffee.roast === selectedRoast || selectedRoast === "all") {
-            if (coffee.name.toLowerCase().includes(selectedCoffee)) {
+            if (coffee.name.toLowerCase().includes(selectedCoffee.toLowerCase())) {
                 filteredCoffees.push(coffee);
             }
         }
