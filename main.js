@@ -10,9 +10,10 @@ function renderCoffee(coffee) {
 
 function renderCoffees(coffees) {
     var html = '';
-    for(var i = coffees.length - 1; i >= 0; i--) {
-        html += renderCoffee(coffees[i]);
-    }
+   coffees.sort((a,b) => {return parseFloat(a.id) - parseFloat(b.id)});
+   coffees.forEach(coffee => {
+       html+=renderCoffee(coffee)
+   });
     return html;
 }
 
@@ -43,7 +44,7 @@ var coffees = [
     {id: 11, name: 'Espresso', roast: 'dark'},
     {id: 12, name: 'Viennese', roast: 'dark'},
     {id: 13, name: 'Italian', roast: 'dark'},
-    {id: 14, name: 'French', roast: 'dark'},
+    {id: 14, name: 'French', roast: 'dark'}
 ];
 
 // var coffeeContainer = document.querySelector('#coffee-container');
