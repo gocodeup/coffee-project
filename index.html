@@ -17,59 +17,29 @@
 </div>
 <div class="container-fluid row">
     <div class="d-flex">
-        <div class="container">
-            <h1>"Filter" Your Coffee!</h1>
-            <div class="container">
-                <div class="input-group">
-                    <input type="text"  name="search-coffee" id="search-coffee" class="form-control" aria-label="Text input with segmented dropdown button" placeholder="Search Coffee Name">
-                    <div class="input-group-append">
-                        <div>
-                            <select class="custom-select" id="roast-selection">
-                                <option>All</option>
-                                <option>Light</option>
-                                <option>Medium</option>
-                                <option>Dark</option>
-                            </select>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-<!--            <label for="roast-selection"></label>-->
-<!--            <select id="roast-selection">-->
-<!--                <option>all</option>-->
-<!--                <option>light</option>-->
-<!--                <option>medium</option>-->
-<!--                <option>dark</option>-->
-<!--            </select>-->
-<!--            <input type="text" name="search-coffee" id="search-coffee"/>-->
-        <div class="container">
-            <h1>Add a Coffee!</h1>
-            <div class="input-group">
-                <input type="text"  name="coffee-name" id="add-coffee-name-input" class="form-control" aria-label="Text input with segmented dropdown button" placeholder="Coffee Name">
-                <div class="input-group-append">
-                    <div>
-                        <select class="custom-select" id="coffee-roast-selection">
-                            <option selected="true" disabled="disabled">Roast</option>
-                            <option>Light</option>
-                            <option>Medium</option>
-                            <option>Dark</option>
-                        </select>
-                    </div>
-                </div>
-            </div>
-<!--            <label for="coffee-roast-selection"></label>-->
-<!--            <select class="custom-select" id="coffee-roast-selection">-->
-<!--                <option selected>Select the roast style.</option>-->
-<!--                <option>light</option>-->
-<!--                <option>medium</option>-->
-<!--                <option>dark</option>-->
-<!--            </select>-->
-<!--            <input type="text" name="coffee-name" id="add-coffee-name-input"/>-->
-            <button id="add-coffee-button" type="submit" value="Submit">Add Coffee</button>
-        </div>
+        <h1>"Filter" Your Coffee!</h1>
+        <label for="roast-selection"></label>
+        <select id="roast-selection">
+            <option>all</option>
+            <option>light</option>
+            <option>medium</option>
+            <option>dark</option>
+        </select>
+        <input type="text" name="search-coffee" id="search-coffee"/>
+        <!--        <input id="submit" type="submit" />-->
+        <h1>Add a Coffee!</h1>
+
+        <label for="coffee-roast-selection"></label>
+        <select id="coffee-roast-selection">
+            <option>light</option>
+            <option>medium</option>
+            <option>dark</option>
+        </select>
+        <input type="text" name="coffee-name" id="add-coffee-name-input"/>
+
+        <button id="add-coffee-button" type="submit" value="Submit">Add Coffee</button>
     </div>
-    <div class="coffee-container container" id="coffee-container"></div>
+    <div class="coffee-container" id="coffee-container"></div>
 </div>
 
 <!--    <table>-->
@@ -86,15 +56,9 @@
 <!-- Custom Javascript -->
 <script src="main.js"></script>
 <!-- Bootstrap CDN -->
-<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
-        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
-        crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
-        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
-        crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
-        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
-        crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
 
 </body>
 </html>
