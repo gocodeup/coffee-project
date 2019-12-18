@@ -23,8 +23,24 @@
         <label for ="add-coffee-roast-selct">Roast</label>
         <input id="coffee-search" value="" type="text" onkeyup="searchCoffees(value)"/>
 
-        <h1> Add A Coffee ? </h1>
+        <h1> Add A Coffee!</h1>
+        <label for="add-coffee-roast-select">Roast</label>
+        <select id="add-coffee-roast-selct">
+            <option value="light">light</option>
+            <option value="medium">medium</option>
+            <option value="dark">dark</option>
+        </select>
+
+        <label for ="add-coffee-name">Name</label>
+        <label for ="add-coffee-name" value="" type=""text/>
+
+        <button id="add-coffee" type="button" onclick="addCoffee()">Submit</button>
+
     </form>
+
+    <div id="coffees"></div>
+
+    <script src="main.js"></script>
 
     <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names..">
 
