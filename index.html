@@ -7,64 +7,29 @@
     <script src="js/main.js"></script>
 </head>
 <body>
-<header>
-    <h1>Coffee!</h1>
-</header>
+<h1>Coffee!</h1>
 
 <form>
     <label for="roast-selection"></label>
-    <select id="roast-selection" onchange="updateCoffees(value)">
-        <option value="all">all</option>
-        <option value="light">light</option>
-        <option value="medium">medium</option>
-        <option value="dark">dark</option>
+    <select id="roast-selection">
+        <option>light</option>
+        <option>medium</option>
+        <option>dark</option>
     </select>
-
-    <label for="coffee-search">Coffee Name</label>
-    <input id="coffee-search" value="" type="text" onkeyup="searchCoffees(value)"/>
-
-    <h1>Add A Coffee!</h1>
-
-    <label for="add-coffee-roast-select">Roast</label>
-    <select id="add-coffee-roast-select">
-        <option value="light">light</option>
-        <option value="medium">medium</option>
-        <option value="dark">dark</option>
-    </select>
-
-    <label for="add-coffee-name">Name</label>
-    <input id="add-coffee-name" value="" type="text"/>
-
-    <button id="add-coffee" type="button" onclick="addCoffee()">Submit</button>
+    <input id="submit" type="submit" />
 </form>
 
-<!--<table>-->
-<!--<thead>-->
-<!--<tr>-->
-<!--&lt;!&ndash;<th>ID</th>&ndash;&gt;-->
-<!--<th>NAME</th>-->
-<!--<th>ROAST</th>-->
-<!--</tr>-->
-<!--</thead>-->
-<div id="coffees"></div>
+<table>
+    <thead>
+    <tr>
+        <th>ID</th>
+        <th>NAME</th>
+        <th>ROAST</th>
+    </tr>
+    </thead>
+    <tbody id="coffees"></tbody>
+</table>
 
-<!--</table>-->
 
-<script src="main.js"></script>
 </body>
 </html>
-<!--<head>-->
-<!--    <meta charset="UTF-8">-->
-<!--    <title></title>-->
-<!--    <link rel="stylesheet" href="style.css">-->
-<!--    <script src="js/main.js"></script>-->
-<!--</head>-->
-
-
-
-<!-----In the code below we create the form providing the label and input with a ---->
-
-
-
-/*In the following code the following array is created to perform the forEach loop within the search bar as the user performs a search*/
-
