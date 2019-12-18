@@ -4,6 +4,7 @@ function createCoffee (inputName, roastType){
     var newCoffee = {id: coffees.length + 1 , name: inputName, roast: roastType}
     coffees.push(newCoffee);
     console.log(coffees);
+    // return coffees
 }
 
 //above this line are the functions for creating coffee obj
@@ -75,7 +76,7 @@ addCoffeeButton.addEventListener('click', function(){
     var coffeeRoastSelection = document.getElementById('coffee-roast-selection');
     var addCoffeeNameInput = document.getElementById('add-coffee-name-input');
     console.log(createCoffee(addCoffeeNameInput.value, coffeeRoastSelection.value));
-
+    updateCoffees();
 });
 coffeeContainer.innerHTML = renderCoffees(coffees);
 console.log(coffees);
