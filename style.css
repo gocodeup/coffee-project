@@ -1,12 +1,21 @@
+body {
+    background-color: lightsalmon;
+}
+
 table {
     border-collapse: collapse;
     margin: 15px 0;
+}
+
+.move {
+
 }
 
 #searchbar {
     width: 30%;
     height: 20px;
 }
+
  #roast-selection {
      color: grey;
  }
@@ -15,3 +24,11 @@ table {
      text-align: right;
      margin-top: 5%;
  }
+
+ .backgroundColor {
+     margin: 0;
+     background-color: grey;
+     height: 100px;
+ }
+
+
