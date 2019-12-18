@@ -1,11 +1,11 @@
 "use strict"
 
 function renderCoffee(coffee) {
-    var html = '<tr class="coffee">';
-    html += '<td>' + coffee.id + '</td>';
-    html += '<td>' + coffee.name + '</td>';
-    html += '<td>' + coffee.roast + '</td>';
-    html += '</tr>';
+    var html = '<ul class="coffee">';
+    html += '<li>' + coffee.id + '</li>';
+    html += '<li>' + coffee.name + '</li>';
+    html += '<li>' + coffee.roast + '</li>';
+    html += '</ul>';
 
     return html;
 }
@@ -47,14 +47,34 @@ var coffees = [
     {id: 13, name: 'Italian', roast: 'dark'},
     {id: 14, name: 'French', roast: 'dark'},
 ];
-coffees.forEach(function(coffee) {
 
-});
+
+// var searchBar = document.forms["coffee1"].querySelector("input");
+// searchBar.addEventListener('keyup',function(i){
+//     var term = i.target.value.toLowerCase();
+//     var coffees = list.getElementsByTagName("<div>");
+//
+// });
+// coffees.forEach(function(addCoffee) {
+//
+// });
+
+// function renderCoffeeList() {
+//     var coffeeString = "";
+//     coffees.forEach(function(coffee) {
+//         coffeeString += "<li>" + coffee + "</li>";
+//     });
+//     document.getElementById("coffeeList").innerHTML = coffeeString;
+// }
+// renderCoffeeList();
+//
+// var submit = document.getElementById("submit");
+// submit.addEventListener("click",coffees);
 
 var tbody = document.querySelector('#coffees');
 var submitButton = document.querySelector('#submit');
 var roastSelection = document.querySelector('#roast-selection');
 
-tbody.innerHTML = renderCoffees(coffees);
+// tbody.innerHTML = renderCoffees(coffees);
 
 submitButton.addEventListener('click', updateCoffees);
