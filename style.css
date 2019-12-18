@@ -1,6 +1,14 @@
+body {
+    background-color: beige;
+}
+
 table {
     border-collapse: collapse;
     margin: 15px 0;
+}
+
+.move {
+
 }
 
 #searchbar {
@@ -15,3 +23,11 @@ table {
      text-align: right;
      margin-top: 5%;
  }
+
+ .backgroundColor {
+     margin: 0;
+     background-color: grey;
+     height: 100px;
+ }
+
+
