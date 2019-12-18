@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <title></title>
     <link rel="stylesheet" href="style.css">
+
 </head>
 <style></style>
 <body>
@@ -11,7 +12,7 @@
     <h1>Coffee!</h1>
 </header>
 
-
+<!-----In the code below we create the form providing the label and input with a ---->
     <form>
         <label for="roast-selection"></label>
         <select id="roast-selection" onchange="updateCoffees(value)">
@@ -40,30 +41,96 @@
 
     <div id="coffees"></div>
 
-    <script src="main.js"></script>
+    <script>
 
-    <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names..">
 
-    <ul id="myUL">
-        <li><a href="#">French</a></li>
-        <li><a href="#">Italian</a></li>
+/*In the following code the following array is created to perform the forEach loop within the search bar as the user performs a search*/
 
-        <li><a href="#">Viennese</a></li>
-        <li><a href="#">Espresso</a></li>
 
-        <li><a href="#">European</a></li>
-        <li><a href="#">New Orleans</a></li>
-        <li><a href="#">Continental</a></li>
-        <li><a href="#">High</a></li>
-        <li><a href="#">Breakfast</a></li>
+        var coffees = [
 
-        <li><a href="#">American</a></li>
-        <li><a href="#">City</a></li>
 
-        <li><a href="#">Cinnamon</a></li>
-        <li><a href="#">Half City</a></li>
-        <li><a href="#">Light City</a></li>
-    </ul>
+
+            {id: 1, name: 'Light City', roast: 'light'},
+            {id: 2, name: 'Half City', roast: 'light'},
+            {id: 3, name: 'Cinnamon', roast: 'light'},
+            {id: 4, name: 'City', roast: 'medium'},
+            {id: 5, name: 'American', roast: 'medium'},
+            {id: 6, name: 'Breakfast', roast: 'medium'},
+            {id: 7, name: 'High', roast: 'dark'},
+            {id: 8, name: 'Continental', roast: 'dark'},
+            {id: 9, name: 'New Orleans', roast: 'dark'},
+            {id: 10, name: 'European', roast: 'dark'},
+            {id: 11, name: 'Espresso', roast: 'dark'},
+            {id: 12, name: 'Veinnese', roast: 'dark'},
+            {id: 13, name: 'Italian', roast: 'dark'},
+            {id: 14, name: 'French', roast: 'dark'},
+
+
+
+
+        ];
+
+        function renderCoffee(Coffee)  {
+
+            var html= '<div class = coffee>';
+
+
+            html += '<div class="coffee-name-font col-6"><h2>' + coffee.name;
+
+
+            html += ' <small class="coffee-roast-font">' + coffee.roast + '</small></h2></div>';
+
+
+            return html;
+
+        }
+
+
+        function renderCoffees(coffees) {
+
+
+            var html = '';
+
+
+            for(var i = coffees.length - 1; i >= 0; i--) {
+             html += renderCoffee(coffees[i]);
+            }
+
+
+            return html;
+        },
+
+
+
+
+
+
+
+
+
+
+
+
+
+        }
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+
+</body>
+</html>
+
+
 <!--    <div id ="heading"><h1>French</h1> <p>Dark Roast</p></div>-->
 <!--    <div id ="heading"><h1>Italian</h1> <p>Dark Roast</p></div>-->
 <!--    <div id ="heading"><h1>Viennese</h1> <p>Dark Roast</p></div>-->
@@ -81,52 +148,13 @@
 
 
 
-<!--    <script>-->
-<!--        function myFunction() {-->
-<!--            // Declare variables-->
-<!--            var input, filter, ul, li, a, i, txtValue;-->
-<!--            input = document.getElementById('myInput');-->
-<!--            filter = input.value.toUpperCase();-->
-<!--            ul = document.getElementById("myUL");-->
-<!--            li = ul.getElementsByTagName('li');-->
-<!--            // Loop through all list items, and hide those who don't match the search query-->
-<!--            for (i = 0; i < li.length; i++) {-->
-<!--                a = li[i].getElementsByTagName("a")[0];-->
-<!--                txtValue = a.textContent || a.innerText;-->
-<!--                if (txtValue.toUpperCase().indexOf(filter) > -1) {-->
-<!--                    li[i].style.display = "";-->
-<!--                } else {-->
-<!--                    li[i].style.display = "none";-->
-<!--                }-->
-<!--            }-->
-<!--        }-->
-<!--    </script>-->
 
 
 
 
+<!--    <script src="main.js">-->
 
-    <script src="main.js">
 
-        function myFunction() {
-            // Declare variables
-            var input, filter, ul, li, a, i, txtValue;
-            input = document.getElementById('myInput');
-            filter = input.value.toUpperCase();
-            ul = document.getElementById("myUL");
-            li = ul.getElementsByTagName('li');
-
-            // Loop through all list items, and hide those who don't match the search query
-            for (i = 0; i < li.length; i++) {
-                a = li[i].getElementsByTagName("a")[0];
-                txtValue = a.textContent || a.innerText;
-                if (txtValue.toUpperCase().indexOf(filter) > -1) {
-                    li[i].style.display = "";
-                } else {
-                    li[i].style.display = "none";
-                }
-            }
-        }
 
 
 
