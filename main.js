@@ -1,7 +1,7 @@
 "use strict"
-
+// dynamically creating HTML for coffees on left side
 function renderCoffee(coffee) {
-    var html = '<div class="coffee">';
+    let html = '<div class="coffee">';
     // html +=  coffee.id;
     html += '<div>' + '<span class="coffeeName">' + coffee.name + '<span class="text-muted coffeeRoast">' + coffee.roast + '</span>' + '</div>';
     html += '</div>';
@@ -9,10 +9,10 @@ function renderCoffee(coffee) {
     return html;
 }
 
-
+// filters through coffees array list then puts them through the renderCoffee function
 function renderCoffees(coffees) {
-    var html = '';
-    for (var i = coffees.length - 1; i >= 0; i--) {
+    let html = '';
+    for (let i = coffees.length - 1; i >= 0; i--) {
         html += renderCoffee(coffees[i]);
     }
     return html;
@@ -22,9 +22,9 @@ function renderCoffees(coffees) {
 //to add a new coffee
 function updateCoffees(e) {
     e.preventDefault(); // don't submit the form, we just want to update the data
-    var selectedRoast = roastSelection.value;
-    var filteredCoffees = [];
-    var searchCoffee = document.getElementById('search-coffee').value;
+    let selectedRoast = roastSelection.value;
+    let filteredCoffees = [];
+    let searchCoffee = document.getElementById('search-coffee').value;
     console.log(selectedRoast);
     if (selectedRoast === "all") {
         coffees.forEach(function (coffee) {
@@ -33,7 +33,7 @@ function updateCoffees(e) {
                 filteredCoffees.push(coffee);
             }
         });
-        // tbody.innerHTML = renderCoffees(filteredCoffees);
+
     } else {
         console.log('here 2');
         coffees.forEach(function (coffee) {
@@ -47,11 +47,6 @@ function updateCoffees(e) {
 
 
 
-
-
-
-
-    // var tbody = document.getElementById('coffees');
     tbody.innerHTML = renderCoffees(filteredCoffees);
     console.log(searchCoffee);
 }
