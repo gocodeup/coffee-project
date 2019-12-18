@@ -1,13 +1,30 @@
-table {
-    border-collapse: collapse;
-    margin: 15px 0;
-}
+/*table {*/
+/*    border-collapse: collapse;*/
+/*    margin: 15px 0;*/
+/*}*/
 
-td, th {
-    border: 1px solid black;
-    padding: 5px 10px;
-}
+/*td, th {*/
+/*    border: 1px solid black;*/
+/*    padding: 5px 10px;*/
+/*}*/
 
 #header {
     background-image: url("img/beans.jpg");
 }
+#custom {
+    /*background-color: #C7B7B2;*/
+    background-color: #94939C;
+}
+input {
+   /*background-color: #94939C;*/
+    background-color: #C7B7B2;
+}
+select {
+    background-color: #C7B7B2;
+}
+button {
+    background-color: #C7B7B2;
+}
+/*#custom .not-a-container {*/
+/*    background-image: url("img/coffee-cup.jpeg");*/
+/*}*/

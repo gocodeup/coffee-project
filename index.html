@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
           integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 </head>
-<body>
+<body id="custom">
 <div class="jumbotron jumbotron-fluid text-light" id="header">
     <div class="container">
         <h1 class="display-4">Coffee</h1>
@@ -27,7 +27,7 @@
             <option>Medium</option>
             <option>Dark</option>
         </select>
-        <input type="text" name="search-coffee" id="search-coffee"/>
+        <input type="text" name="search-coffee" id="search-coffee" placeholder="Search"/>
         <div class="coffee-container" id="coffee-container"></div>
         <!--        <input id="submit" type="submit" />-->
     </div>
@@ -40,7 +40,7 @@
             <option>Medium</option>
             <option>Dark</option>
         </select>
-        <input type="text" name="coffee-name" id="add-coffee-name-input"/>
+        <input type="text" name="coffee-name" id="add-coffee-name-input" placeholder="Coffee Name"/>
 
         <button id="add-coffee-button" type="submit" value="Submit">Add Coffee</button>
     </div>
