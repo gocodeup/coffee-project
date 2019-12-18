@@ -11,35 +11,41 @@
 <body>
 <div class="jumbotron jumbotron-fluid text-light" id="header">
     <div class="container">
-        <h1 class="display-4">Placeholder Coffee</h1>
-        <p class="lead">This is a modified jumbotron that occupies the entire horizontal space of its parent.</p>
+        <h1 class="display-4">Coffee</h1>
+        <p class="lead">Filter and add coffee to our database.</p>
     </div>
 </div>
-<div class="container-fluid row">
-    <div class="d-flex">
+<div class="not-a-container">
+    <div class="row">
+        <div class="col-1"></div>
+    <div class="col-5">
         <h1>"Filter" Your Coffee!</h1>
         <label for="roast-selection"></label>
         <select id="roast-selection">
-            <option>all</option>
-            <option>light</option>
-            <option>medium</option>
-            <option>dark</option>
+            <option>All</option>
+            <option>Light</option>
+            <option>Medium</option>
+            <option>Dark</option>
         </select>
         <input type="text" name="search-coffee" id="search-coffee"/>
+        <div class="coffee-container" id="coffee-container"></div>
         <!--        <input id="submit" type="submit" />-->
+    </div>
+    <div class="col-5">
         <h1>Add a Coffee!</h1>
 
         <label for="coffee-roast-selection"></label>
         <select id="coffee-roast-selection">
-            <option>light</option>
-            <option>medium</option>
-            <option>dark</option>
+            <option>Light</option>
+            <option>Medium</option>
+            <option>Dark</option>
         </select>
         <input type="text" name="coffee-name" id="add-coffee-name-input"/>
 
         <button id="add-coffee-button" type="submit" value="Submit">Add Coffee</button>
     </div>
-    <div class="coffee-container" id="coffee-container"></div>
+        <div class="col-1"></div>
+    </div>
 </div>
 
 <!--    <table>-->
