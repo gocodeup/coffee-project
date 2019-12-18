@@ -1,11 +1,9 @@
 "use strict"
 
 function renderCoffee(coffee) {
-    var html = '<tr class="coffee">';
-    html += '<td>' + coffee.id + '</td>';
-    html += '<td>' + coffee.name + '</td>';
-    html += '<td>' + coffee.roast + '</td>';
-    html += '</tr>';
+    var html = '<div class="coffee">';
+    html += '<h3>' + coffee.name + '</h3>' + '<p>' + coffee.roast + '</p>' ;
+    html += '</div>';
 
     return html;
 }
@@ -27,7 +25,7 @@ function updateCoffees(e) {
             filteredCoffees.push(coffee);
         }
     });
-    tbody.innerHTML = renderCoffees(filteredCoffees);
+    coffeeContainer.innerHTML = renderCoffees(filteredCoffees);
 }
 
 // from http://www.ncausa.org/About-Coffee/Coffee-Roasts-Guide
@@ -48,10 +46,11 @@ var coffees = [
     {id: 14, name: 'French', roast: 'dark'},
 ];
 
-var tbody = document.querySelector('#coffees');
+// var coffeeContainer = document.querySelector('#coffee-container');
+var coffeeContainer = document.getElementById('coffee-container');
 var submitButton = document.querySelector('#submit');
 var roastSelection = document.querySelector('#roast-selection');
 
-tbody.innerHTML = renderCoffees(coffees);
+coffeeContainer.innerHTML = renderCoffees(coffees);
 
 submitButton.addEventListener('click', updateCoffees);
