@@ -7,13 +7,28 @@
 </head>
 <body>
     <h1>Coffee!</h1>
+
+<!--    CUSTOM COFFEE INPUT-->
+    <input type="text" placeholder="Name your coffee!" id="custom-coffee-name"/>
+    <form>
+        <label for="custom-roast-selection"></label>
+        <select id="custom-roast-selection">
+            <option>light</option>
+            <option>medium</option>
+            <option>dark</option>
+        </select>
+    </form>
+    <input class="submit" type="submit" id="custom-submit"/>
+
+<!--SEARCH BAR-->
     <input type="text" placeholder="Search.." id="search-bar" onkeyup="searchCoffees()"/>
     <input class="submit" type="submit" id="search-btn"/>
 
+<!--    ROAST SELECTION-->
     <form>
         <label for="roast-selection"></label>
         <select id="roast-selection">
-<!--            <option>*</option>--> <!--Placeholder for default option -->
+            <option>all</option> default option
             <option>light</option>
             <option>medium</option>
             <option>dark</option>
@@ -21,16 +36,7 @@
     </form>
     <input type="submit" id="roast-submit"/>
 
-<!--    <table>-->
-<!--        <thead>-->
-<!--            <tr>-->
-<!--                <th>ID</th>-->
-<!--                <th>NAME</th>-->
-<!--                <th>ROAST</th>-->
-<!--            </tr>-->
-<!--        </thead>-->
-<!--        <tbody id="coffees"></tbody>-->
-<!--    </table>-->
+
     <ul id="coffee">
 <!--        Coffee name and roast added in renderCoffee()-->
         <div id="coffees"></div>
