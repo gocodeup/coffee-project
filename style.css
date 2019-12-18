@@ -1,13 +1,14 @@
-table {
-    border-collapse: collapse;
-    margin: 15px 0;
+h1, h2 {
+    font-weight: bold;
+    font-family: 'Raleway', sans-serif;
 }
-
-td, th {
-    border: 1px solid black;
-    padding: 5px 10px;
+p {
+    font-style: italic;
+    font-weight: 100;
+    font-family: 'Montserrat', sans-serif;
 }
 
 ul {
     list-style: none;
+    padding-left: 0;
 }

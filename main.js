@@ -51,7 +51,14 @@ function searchCoffees(e) {
 
 // CUSTOM COFFEE LOGIC
 
-
+function addToCoffees() {
+	var customObject={};
+	customObject.id = coffees.length+1;
+	customObject.name = document.getElementById('custom-coffee-name').value;
+	customObject.roast = document.getElementById('custom-roast-selection').value;
+	coffees.push(customObject);
+	document.getElementById('custom-coffee-name').value = '';
+}
 
 // COFFEE LIST
 // from http://www.ncausa.org/About-Coffee/Coffee-Roasts-Guide
@@ -87,4 +94,4 @@ coffeeList.innerHTML = renderCoffees(coffees);
 submitButton.addEventListener('click', updateCoffees);
 searchSubmit.addEventListener('click', searchCoffees);
 userInput.addEventListener("keyup", searchCoffees);
-customSubmit.addEventListener('click', someFunction());
+customSubmit.addEventListener('click', addToCoffees);
