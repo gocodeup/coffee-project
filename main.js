@@ -1,20 +1,19 @@
 "use strict"
 
 function renderCoffee(coffee) {
-    var html = '<tr class="coffee">';
-    html += '<td>' + coffee.id + '</td>';
-    html += '<td>' + coffee.name + '</td>';
-    html += '<td>' + coffee.roast + '</td>';
-    html += '</tr>';
+    var html = '<div class="coffee">';
+    html += '<h3>' + coffee.name + '</h3>' + '<p>' + coffee.roast + '</p>' ;
+    html += '</div>';
 
     return html;
 }
 
 function renderCoffees(coffees) {
     var html = '';
-    for(var i = coffees.length - 1; i >= 0; i--) {
-        html += renderCoffee(coffees[i]);
-    }
+   coffees.sort((a,b) => {return parseFloat(a.id) - parseFloat(b.id)});
+   coffees.forEach(coffee => {
+       html+=renderCoffee(coffee)
+   });
     return html;
 }
 
@@ -27,7 +26,7 @@ function updateCoffees(e) {
             filteredCoffees.push(coffee);
         }
     });
-    tbody.innerHTML = renderCoffees(filteredCoffees);
+    coffeeContainer.innerHTML = renderCoffees(filteredCoffees);
 }
 
 // from http://www.ncausa.org/About-Coffee/Coffee-Roasts-Guide
@@ -45,13 +44,14 @@ var coffees = [
     {id: 11, name: 'Espresso', roast: 'dark'},
     {id: 12, name: 'Viennese', roast: 'dark'},
     {id: 13, name: 'Italian', roast: 'dark'},
-    {id: 14, name: 'French', roast: 'dark'},
+    {id: 14, name: 'French', roast: 'dark'}
 ];
 
-var tbody = document.querySelector('#coffees');
+// var coffeeContainer = document.querySelector('#coffee-container');
+var coffeeContainer = document.getElementById('coffee-container');
 var submitButton = document.querySelector('#submit');
 var roastSelection = document.querySelector('#roast-selection');
 
-tbody.innerHTML = renderCoffees(coffees);
+coffeeContainer.innerHTML = renderCoffees(coffees);
 
 submitButton.addEventListener('click', updateCoffees);
