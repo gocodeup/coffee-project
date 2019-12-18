@@ -17,20 +17,14 @@ function renderCoffees(coffees) {
     return html;
 }
 
-function updateCoffees(e) {
-    e.preventDefault(); // don't submit the form, we just want to update the data
-    var selectedRoast = roastSelection.value;
-    var selectedCoffee = searchCoffee.value;
-    // console.log(selectedCoffee);
-    // console.log(typeof selectedCoffee);
+function updateCoffees() {
     var filteredCoffees = [];
     coffees.forEach(function(coffee) {
         if (coffee.roast === selectedRoast || selectedRoast === "all") {
-            filteredCoffees.push(coffee);
+            if (coffee.name.toLowerCase().includes(selectedCoffee)) {
+                filteredCoffees.push(coffee);
+            }
         }
-        // if (coffee.name.includes(selectedCoffee)) {
-        //     filteredCoffees.push(coffee);
-        // }
     });
     coffeeContainer.innerHTML = renderCoffees(filteredCoffees);
 }
@@ -53,21 +47,21 @@ var coffees = [
     {id: 14, name: 'French', roast: 'dark'}
 ];
 
-// var coffeeContainer = document.querySelector('#coffee-container');
 var coffeeContainer = document.getElementById('coffee-container');
 var submitButton = document.querySelector('#submit');
+
+var selectedRoast = '';
 var roastSelection = document.querySelector('#roast-selection');
+roastSelection.addEventListener('change', function(){
+    selectedRoast = roastSelection.value;
+    updateCoffees();
+});
+
+var selectedCoffee = '';
 var searchCoffee = document.getElementById("search-coffee");
-searchCoffee.addEventListener('change', function(){
-    // var selectedRoast = roastSelection.value;
-    var selectedCoffee = searchCoffee.value;
-    var filteredCoffees = [];
-    coffees.forEach(function(coffee) {
-        if (coffee.name.toLowerCase().includes(selectedCoffee)) {
-            filteredCoffees.push(coffee);
-        };
-    });
-    coffeeContainer.innerHTML = renderCoffees(filteredCoffees);
+searchCoffee.addEventListener('keyup', function(){
+    selectedCoffee = searchCoffee.value;
+    updateCoffees();
 });
 
 coffeeContainer.innerHTML = renderCoffees(coffees);
