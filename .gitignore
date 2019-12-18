@@ -1,0 +1,5 @@
+.idea/*
+*.iml
+.DS_STORE
+js/js-assessment-2-notes.html
+js/keys.js
