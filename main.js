@@ -1,18 +1,28 @@
 "use strict"
 
-function renderCoffee(coffee) {
-    var html = '<tr class="coffee">';
-    html += '<td>' + coffee.id + '</td>';
-    html += '<td>' + coffee.name + '</td>';
-    html += '<td>' + coffee.roast + '</td>';
-    html += '</tr>';
+// function renderCoffee(coffee) {
+//     var html = '<tr class="coffee">';
+//     html += '<td>' + coffee.id + '</td>';
+//     html += '<td>' + coffee.name + '</td>';
+//     html += '<td>' + coffee.roast + '</td>';
+//     html += '</tr>';
+//
+//     return html;
+// }
 
+
+function renderCoffee(coffee) {
+    var html = '<ul id="coffee">';
+    html += '<li><h2>' + coffee.name + '</h2>'
+        + '<p>' + coffee.roast + '</p>' + '</li>';
+    html += '</ul>';
     return html;
 }
 
 function renderCoffees(coffees) {
     var html = '';
-    for(var i = coffees.length - 1; i >= 0; i--) {
+    // for(var i = coffees.length - 1; i >= 0; i--) {
+    for(var i = 0; i < coffees.length; i++) { //switched to increment for ascending order
         html += renderCoffee(coffees[i]);
     }
     return html;
@@ -27,7 +37,8 @@ function updateCoffees(e) {
             filteredCoffees.push(coffee);
         }
     });
-    tbody.innerHTML = renderCoffees(filteredCoffees);
+    // tbody.innerHTML = renderCoffees(filteredCoffees);
+    coffeeList.innerHTML = renderCoffees(filteredCoffees);
 }
 
 // from http://www.ncausa.org/About-Coffee/Coffee-Roasts-Guide
@@ -48,10 +59,33 @@ var coffees = [
     {id: 14, name: 'French', roast: 'dark'},
 ];
 
-var tbody = document.querySelector('#coffees');
-var submitButton = document.querySelector('#submit');
+var coffeeList = document.querySelector('#coffees'); //changed variable name to match ul
+var submitButton = document.querySelector('.submit');
 var roastSelection = document.querySelector('#roast-selection');
+var searchBar = document.querySelector('#search-bar')
 
-tbody.innerHTML = renderCoffees(coffees);
+coffeeList.innerHTML = renderCoffees(coffees);
 
 submitButton.addEventListener('click', updateCoffees);
+
+
+//Start of custom JS
+
+// var coffees = [
+//     {id: 1, name: 'Light City', roast: 'light'},
+//     {id: 2, name: 'Half City', roast: 'light'},
+//     {id: 3, name: 'Cinnamon', roast: 'light'},
+//     {id: 4, name: 'City', roast: 'medium'},
+//     {id: 5, name: 'American', roast: 'medium'},
+//     {id: 6, name: 'Breakfast', roast: 'medium'},
+//     {id: 7, name: 'High', roast: 'dark'},
+//     {id: 8, name: 'Continental', roast: 'dark'},
+//     {id: 9, name: 'New Orleans', roast: 'dark'},
+//     {id: 10, name: 'European', roast: 'dark'},
+//     {id: 11, name: 'Espresso', roast: 'dark'},
+//     {id: 12, name: 'Viennese', roast: 'dark'},
+//     {id: 13, name: 'Italian', roast: 'dark'},
+//     {id: 14, name: 'French', roast: 'dark'},
+// ];
+
+//Sorting coffee by id number
