@@ -19,7 +19,7 @@ function removeCoffee (inputName) {
 //above this line are the functions for creating coffee obj
 function renderCoffee(coffee) {
     var html = '<div class="coffee">';
-    html += '<h3>' + coffee.name + '</h3>' + '<p>' + coffee.roast + '</p>' ;
+    html += '<h3>' + coffee.name + coffee.rating + '</h3>' + '<p>' + coffee.roast + '</p>' ;
     html += '</div>';
 
     return html;
@@ -47,21 +47,22 @@ function updateCoffees() {
 }
 
 // from http://www.ncausa.org/About-Coffee/Coffee-Roasts-Guide
+var oneStar = '<i class="fas fa-star"></i>'
 var coffees = [
-    {id: 1, name: 'Light City', roast: 'Light'},
-    {id: 2, name: 'Half City', roast: 'Light'},
-    {id: 3, name: 'Cinnamon', roast: 'Light'},
-    {id: 4, name: 'City', roast: 'Medium'},
-    {id: 5, name: 'American', roast: 'Medium'},
-    {id: 6, name: 'Breakfast', roast: 'Medium'},
-    {id: 7, name: 'High', roast: 'Dark'},
-    {id: 8, name: 'Continental', roast: 'Dark'},
-    {id: 9, name: 'New Orleans', roast: 'Dark'},
-    {id: 10, name: 'European', roast: 'Dark'},
-    {id: 11, name: 'Espresso', roast: 'Dark'},
-    {id: 12, name: 'Viennese', roast: 'Dark'},
-    {id: 13, name: 'Italian', roast: 'Dark'},
-    {id: 14, name: 'French', roast: 'Dark'}
+    {id: 1, name: 'Light City', roast: 'Light', rating: 2},
+    {id: 2, name: 'Half City', roast: 'Light', rating: 4},
+    {id: 3, name: 'Cinnamon', roast: 'Light', rating: 4},
+    {id: 4, name: 'City', roast: 'Medium', rating: 1},
+    {id: 5, name: 'American', roast: 'Medium', rating: '⭐'},
+    {id: 6, name: 'Breakfast', roast: 'Medium', rating: '⭐'},
+    {id: 7, name: 'High', roast: 'Dark', rating: '⭐'},
+    {id: 8, name: 'Continental', roast: 'Dark', rating: '⭐'},
+    {id: 9, name: 'New Orleans', roast: 'Dark', rating: '⭐'},
+    {id: 10, name: 'European', roast: 'Dark', rating: '⭐'},
+    {id: 11, name: 'Espresso', roast: 'Dark', rating: '⭐'},
+    {id: 12, name: 'Viennese', roast: 'Dark', rating: '⭐'},
+    {id: 13, name: 'Italian', roast: 'Dark', rating: '⭐'},
+    {id: 14, name: 'French', roast: 'Dark', rating: '⭐'}
 ];
 var coffeeContainer = document.getElementById('coffee-container');
 var submitButton = document.querySelector('#submit');
