@@ -17,9 +17,12 @@
 }
 
 .div1 {grid-area: 1 / 1 / 2 / 3;}
-.div2 { grid-area: 2 / 2 / 3 / 3; }
+.div2 { grid-area: 2 / 2 / 3 / 3;
+    text-align: center ;}
 .div3 { grid-area: 3 / 2 / 4 / 3; }
-.div4 { grid-area: 2 / 1 / 4 / 2; }
+.div4 {
+    grid-area: 2 / 1 / 4 / 2;
+}
 
 /*================================================= HEADERS ==========================================================*/
 
@@ -38,6 +41,7 @@
 .hrStyle {
     opacity: 30%;
     color: white;
+    z-index: 1;
 }
 
 /*========================================== DESCRIPTIVE LABEL OPTIONS ===============================================*/
@@ -50,19 +54,51 @@
 
 .selectOptions {
     font-size: 16px;
-    width: 100%;
+    width: 250px;
     background-color:#FFF;
     outline:none;
     border:none;
     box-shadow:none;
+    margin: 15px;
+
 }
 
 /*================================================= SEARCH BAR =======================================================*/
 
 #coffee-filter {
-    width: 100%;
-    font-size: 16px;
+    width: 250px;
+    font-size: 17px;
     border: none;
     padding: 0;
+    margin: 15px;
 }
-
+/*================================================= images ===========================================================*/
+.iconImg {
+    margin-top: 10px;
+    width: 100px;
+    height:100px;
+    background: none;
+    position: absolute;
+    left: 900px;
+    top: 65px;
+    z-index: 2;
+}
+.coffee-header{
+    margin-top: 10px;
+    position: relative;
+    left:360px ;
+    width: 300px;
+    height: 200px;
+    z-index: 3;
+}
+.iconImg2 {
+    margin-top: 10px;
+    width: 100px;
+    height:100px;
+    background: none;
+    position: absolute;
+    right: 900px;
+    top: 65px;
+    /*margin: 0 auto;*/
+    z-index: 2;
+}

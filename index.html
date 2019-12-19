@@ -10,12 +10,13 @@
 <div class="parent">
     <!--============================================== DIV 1 SECTION ====================================================-->
     <div class="div1 box">
-        <h1 class="h1Style">Coffee!</h1>
+        <img src="Coffee_Decorative_Text.png" class="coffee-header" alt="">
+        <img src="coffee-emblem.png" alt="" class="iconImg">
+        <img src="left-coffee-emblem.png" alt="" class="iconImg2">
         <hr class="hrStyle">
     </div>
-
     <!--============================================== DIV 2 SECTION ====================================================-->
-    <div class="div2 box">
+    <div class="div2 box" style=" display: flex; justify-content: center; align-items: center;">
         <form>
             <label for="roast-selection" class="labels">Roast</label>
             <br>
@@ -28,7 +29,7 @@
             <br>
             <label for="coffee-filter" class="labels">Coffee Name</label>
             <br>
-            <input type="text" id="coffee-filter" onkeyup="updateCoffees(roastSelection.value)" placeholder="Search...">
+            <input type="text" id="coffee-filter" class="searchBar" onkeyup="updateCoffees(roastSelection.value)" placeholder="Search...">
             <br>
         </form>
     </div>
