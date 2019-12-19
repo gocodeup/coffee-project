@@ -1,12 +1,13 @@
 "use strict"
 
-function createCoffee (inputName, roastType){
-    var newCoffee = {id: coffees.length + 1 , name: inputName, roast: roastType}
+function createCoffee (inputName, roastType, inputRating){
+    var newCoffee = {id: coffees.length + 1 , name: inputName, roast: roastType, rating: inputRating};
     coffees.push(newCoffee);
     localStorage.setItem("coffees", JSON.stringify(coffees));
     console.log(coffees);
     // return coffees
 }
+
 function removeCoffee (inputName) {
     coffees.forEach(coffee => {
        if (coffee.name.toLowerCase() === inputName.toLowerCase()) {
@@ -17,9 +18,21 @@ function removeCoffee (inputName) {
 }
 
 //above this line are the functions for creating coffee obj
+
+function buildStars(inputCoffee) {
+    var html = '';
+    console.log(inputCoffee.rating);
+    console.log(inputCoffee.id);
+    for(var i=0;i<inputCoffee.rating;i++) {
+        html += '<i class="fas fa-star" style="color: gold"></i>';
+    }
+    console.log(html);
+    return html;
+}
+
 function renderCoffee(coffee) {
     var html = '<div class="coffee">';
-    html += '<h3>' + coffee.name + coffee.rating + '</h3>' + '<p>' + coffee.roast + '</p>' ;
+    html += '<h3>' + coffee.name + ' ' + buildStars(coffee) + '</h3>' + '<p>' + coffee.roast + '</p>' ;
     html += '</div>';
 
     return html;
@@ -47,22 +60,22 @@ function updateCoffees() {
 }
 
 // from http://www.ncausa.org/About-Coffee/Coffee-Roasts-Guide
-var oneStar = '<i class="fas fa-star"></i>'
+
 var coffees = [
     {id: 1, name: 'Light City', roast: 'Light', rating: 2},
     {id: 2, name: 'Half City', roast: 'Light', rating: 4},
     {id: 3, name: 'Cinnamon', roast: 'Light', rating: 4},
     {id: 4, name: 'City', roast: 'Medium', rating: 1},
-    {id: 5, name: 'American', roast: 'Medium', rating: '⭐'},
-    {id: 6, name: 'Breakfast', roast: 'Medium', rating: '⭐'},
-    {id: 7, name: 'High', roast: 'Dark', rating: '⭐'},
-    {id: 8, name: 'Continental', roast: 'Dark', rating: '⭐'},
-    {id: 9, name: 'New Orleans', roast: 'Dark', rating: '⭐'},
-    {id: 10, name: 'European', roast: 'Dark', rating: '⭐'},
-    {id: 11, name: 'Espresso', roast: 'Dark', rating: '⭐'},
-    {id: 12, name: 'Viennese', roast: 'Dark', rating: '⭐'},
-    {id: 13, name: 'Italian', roast: 'Dark', rating: '⭐'},
-    {id: 14, name: 'French', roast: 'Dark', rating: '⭐'}
+    {id: 5, name: 'American', roast: 'Medium', rating: 1},
+    {id: 6, name: 'Breakfast', roast: 'Medium', rating: 3},
+    {id: 7, name: 'High', roast: 'Dark', rating: 1},
+    {id: 8, name: 'Continental', roast: 'Dark', rating: 3},
+    {id: 9, name: 'New Orleans', roast: 'Dark', rating: 5},
+    {id: 10, name: 'European', roast: 'Dark', rating: 2},
+    {id: 11, name: 'Espresso', roast: 'Dark', rating: 1},
+    {id: 12, name: 'Viennese', roast: 'Dark', rating: 4},
+    {id: 13, name: 'Italian', roast: 'Dark', rating: 4},
+    {id: 14, name: 'French', roast: 'Dark', rating: 2}
 ];
 var coffeeContainer = document.getElementById('coffee-container');
 var submitButton = document.querySelector('#submit');
@@ -85,9 +98,10 @@ var addCoffeeButton = document.querySelector('#add-coffee-button')
 addCoffeeButton.addEventListener('click', function(){
     var coffeeRoastSelection = document.getElementById('coffee-roast-selection');
     var addCoffeeNameInput = document.getElementById('add-coffee-name-input');
+    var coffeeRatingSelection = document.getElementById("coffee-rating-selection");
     if (addCoffeeNameInput.value !== '') {
         // console.log(createCoffee(addCoffeeNameInput.value, coffeeRoastSelection.value));
-        createCoffee(addCoffeeNameInput.value, coffeeRoastSelection.value)
+        createCoffee(addCoffeeNameInput.value, coffeeRoastSelection.value, coffeeRatingSelection.value);
         updateCoffees();
     }
     addCoffeeNameInput.value = '';
