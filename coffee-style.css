@@ -1,21 +1,46 @@
 .parent {
     display: grid;
     height: 100vh;
-    width: 100vw;
-    grid-template-columns: repeat(2, 50%);
-    grid-template-rows: 20% repeat(2, 40%);
-    grid-column-gap: 0px;
-    grid-row-gap: 0px;
+    width: 100fr;
+    padding-left: 12em;
+    padding-right: 12em;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: .10fr repeat(2, 1fr);
+    grid-column-gap: 5px;
+    grid-row-gap: 5px;
+    font-family: sans-serif;
 }
-.div1 { grid-area: 1 / 1 / 2 / 3; }
+
+/*This sets a border around the divs to show them.*/
+.box {
+    border: 1px solid black;
+}
+
+.div1 {grid-area: 1 / 1 / 2 / 3;}
 .div2 { grid-area: 2 / 2 / 3 / 3; }
 .div3 { grid-area: 3 / 2 / 4 / 3; }
 .div4 { grid-area: 2 / 1 / 4 / 2; }
 
-/*.nav input[type=text] {*/
-/*    padding: 6px;*/
-/*    width: 400px;*/
-/*    margin-top: 8px;*/
-/*    margin-right: 16px;*/
-/*    font-size: 25px;*/
-/*}*/
+.h2Style {
+    display: flex;
+    justify-content: center;
+}
+
+.h3Style {
+    display: flex;
+    justify-content: center;
+}
+
+.hrStyle {
+    opacity: 30%;
+    color: white;
+}
+
+.labels {
+    font-weight: bold;
+}
+
+.selectOptions {
+    font-size: 16px;
+    width: 100%;
+}

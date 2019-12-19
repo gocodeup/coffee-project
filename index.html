@@ -5,45 +5,52 @@
     <title></title>
     <link rel="stylesheet" href="coffee-style.css">
 </head>
-<body class="parent">
-
-<!--============================================== DIV 1 SECTION ====================================================-->
-    <div class="div1">
-        <h2>Coffee!</h2>
-        <hr>
+<body style="background-image: url('caffeine-coffee-coffee-beans-roasted-585750.jpg');">
+<div class="parent">
+    <!--============================================== DIV 1 SECTION ====================================================-->
+    <div class="div1 box">
+        <h2 class="h2Style">Coffee!</h2>
+        <hr class="hrStyle">
     </div>
 
-<!--============================================== DIV 2 SECTION ====================================================-->
-    <div class="div2">
+    <!--============================================== DIV 2 SECTION ====================================================-->
+    <div class="div2 box">
         <form>
-            <label for="roast-selection"></label>
-            <select id="roast-selection">
+            <label for="roast-selection" class="labels">Roast</label>
+            <br>
+            <select id="roast-selection" class="selectOptions">
                 <option>all</option>
                 <option>light</option>
                 <option>medium</option>
                 <option>dark</option>
             </select>
-            <input id="submit" type="submit" />
+            <br>
+            <label for="coffee-filter" class="labels">Coffee Name</label>
+            <br>
+            <input type="text" id="coffee-filter" onkeyup="updateCoffees(roastSelection.value)" placeholder="Search...">
+            <br>
         </form>
     </div>
 
-<!--============================================== DIV 3 SECTION ====================================================-->
+    <!--============================================== DIV 3 SECTION ====================================================-->
 
-    <div class="div3">
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci aut corporis dignissimos expedita itaque, modi nam officiis quas quod repellat, reprehenderit sapiente totam veritatis. Culpa debitis delectus deserunt quidem recusandae?</p>
+    <div class="div3 box">
+        <hr class="hrStyle">
+        <h3 class="h3Style">Add a Coffee</h3>
     </div>
 
-<!--============================================== DIV 4 SECTION ====================================================-->
+    <!--============================================== DIV 4 SECTION ====================================================-->
 
-    <div id="coffee" class="div4"></div>
+    <div id="coffee" class="div4 box"></div>
 
-<!--============================================== SEARCH BAR SECTION ===============================================-->
-
-
+    <!--============================================== SEARCH BAR SECTION ===============================================-->
 
 
 
-<!--=================================================================================================================-->
-    <script src="main-dummy.js"></script>
+
+
+    <!--=================================================================================================================-->
+</div>
+<script src="main-dummy-for-matt.js"></script>
 </body>
 </html>
