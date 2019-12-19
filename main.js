@@ -4,8 +4,12 @@
 
 function renderCoffee(coffee) {
     var html = '<body class="coffee">';
-    html += '<div>' + '<span style="font-size: x-large" style="font-weight:bold">' + coffee.name + '</span>' + " " + '<span style="color: #FFFFFF">' + coffee.roast + '</span>' +'</div>';
+
+    html += '<div style="display: flex;">' + '<span style="font-size: x-large; font-weight:bold; color: black; text-shadow: 1px 1px 1px black; margin: 5px; line-height: 18px">' + coffee.name + '</span>' + " " + '<span style="color: lightgrey; font-size: medium; text-shadow: 2px 2px 8px black; margin: 5px; line-height: 16px">' + coffee.roast + '</span>' +'</div>';
     html += '</body>';
+
+    // html += '<div style="font-weight:bold; display: flex; justify-content: center">' + '<h1>' + coffee.name + '<h6>' + " " + coffee.roast + '</h6>' + '</h1>' + '</div>';
+    // html += '</body>';
 
     return html;
 }

@@ -8,7 +8,7 @@
     grid-template-rows: .10fr repeat(2, 1fr);
     grid-column-gap: 5px;
     grid-row-gap: 5px;
-    font-family: sans-serif;
+    font-family: 'Arvo', serif;
 }
 
 /*This sets a border around the divs to show them.*/
@@ -21,26 +21,48 @@
 .div3 { grid-area: 3 / 2 / 4 / 3; }
 .div4 { grid-area: 2 / 1 / 4 / 2; }
 
-.h2Style {
+/*================================================= HEADERS ==========================================================*/
+
+.h1Style {
     display: flex;
     justify-content: center;
+    font-family: 'Arvo', serif;
 }
 
 .h3Style {
     display: flex;
     justify-content: center;
 }
+/*============================================ HR (LINE BREAK) =======================================================*/
 
 .hrStyle {
     opacity: 30%;
     color: white;
 }
 
+/*========================================== DESCRIPTIVE LABEL OPTIONS ===============================================*/
+
 .labels {
     font-weight: bold;
 }
 
+/*================================================= DROPDOWN LIST ====================================================*/
+
 .selectOptions {
     font-size: 16px;
     width: 100%;
+    background-color:#FFF;
+    outline:none;
+    border:none;
+    box-shadow:none;
 }
+
+/*================================================= SEARCH BAR =======================================================*/
+
+#coffee-filter {
+    width: 100%;
+    font-size: 16px;
+    border: none;
+    padding: 0;
+}
+
