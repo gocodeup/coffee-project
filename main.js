@@ -3,6 +3,7 @@
 function createCoffee (inputName, roastType){
     var newCoffee = {id: coffees.length + 1 , name: inputName, roast: roastType}
     coffees.push(newCoffee);
+    localStorage.setItem("coffees", JSON.stringify(coffees));
     console.log(coffees);
     // return coffees
 }
@@ -54,7 +55,6 @@ var coffees = [
     {id: 13, name: 'Italian', roast: 'Dark'},
     {id: 14, name: 'French', roast: 'Dark'}
 ];
-
 var coffeeContainer = document.getElementById('coffee-container');
 var submitButton = document.querySelector('#submit');
 
@@ -77,13 +77,22 @@ addCoffeeButton.addEventListener('click', function(){
     var coffeeRoastSelection = document.getElementById('coffee-roast-selection');
     var addCoffeeNameInput = document.getElementById('add-coffee-name-input');
     if (addCoffeeNameInput.value !== '') {
-        console.log(createCoffee(addCoffeeNameInput.value, coffeeRoastSelection.value));
-        updateCoffees();
+        // console.log(createCoffee(addCoffeeNameInput.value, coffeeRoastSelection.value));
+        createCoffee(addCoffeeNameInput.value, coffeeRoastSelection.value)
+        // updateCoffees();
     }
     addCoffeeNameInput.value = '';
 });
 
-coffeeContainer.innerHTML = renderCoffees(coffees);
+if (localStorage.getItem("coffees") !== null) {
+    coffees = localStorage.getItem("coffees");
+    coffees = JSON.parse(coffees);
+    coffeeContainer.innerHTML = renderCoffees(coffees);
+} else {
+    coffeeContainer.innerHTML = renderCoffees(coffees);
+}
+
+
 console.log(coffees);
 
 // submitButton.addEventListener('click', updateCoffees);
