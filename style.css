@@ -46,6 +46,7 @@ select {
 }
 button {
     background-color: #C7B7B2;
+    width: 100%;
 }
 #add-coffee-name-input {
     /*background-color: #94939C;*/
