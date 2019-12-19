@@ -19,8 +19,21 @@
     font-family: 'EB Garamond', serif;
 }
 
-body {
+h3, h4, p {
     font-family: 'Montserrat', sans-serif;
+}
+
+h2 {
+    text-align: center;
+    font-family: 'EB Garamond', serif;
+}
+
+.sub-header {
+    font-size: 42px;
+}
+
+.submit-button {
+    font-size: 20px;
 }
 
 #alamo-coffee {
@@ -35,7 +48,7 @@ body {
 }
 #custom {
     /*background-color: #C7B7B2;*/
-    background-color: #94939C;
+    background-color: var(--beige);
 }
 input {
     /*background-color: #94939C;*/

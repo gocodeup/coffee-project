@@ -24,7 +24,7 @@ function buildStars(inputCoffee) {
     console.log(inputCoffee.rating);
     console.log(inputCoffee.id);
     for(var i=0;i<inputCoffee.rating;i++) {
-        html += '<i class="fas fa-star" style="color: gold"></i>';
+        html += '<i class="fas fa-star" style="color: darkgoldenrod"></i>';
     }
     console.log(html);
     return html;
@@ -32,7 +32,7 @@ function buildStars(inputCoffee) {
 
 function renderCoffee(coffee) {
     var html = '<div class="coffee">';
-    html += '<h3>' + coffee.name + ' ' + buildStars(coffee) + '</h3>' + '<p>' + coffee.roast + '</p>' ;
+    html += '<h4>' + coffee.name + ' ' + buildStars(coffee) + '</h4>' + '<p>' + coffee.roast + '</p>' ;
     html += '</div>';
 
     return html;

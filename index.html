@@ -18,8 +18,8 @@
 </div>
 <div class="container margin-auto">
     <div class="row">
-        <div class="col-4">
-            <h3>"Filter" Your Coffee!</h3>
+        <div class="col-7">
+            <h2 class="sub-header">"Filter" Your Coffee!</h2>
             <div class="input-group row no-gutters">
                 <div class="col-6">
                     <select class="custom-select" id="roast-selection">
@@ -36,16 +36,16 @@
                         <option>Alphabetical</option>
                     </select>
                 </div>
-                <div class="container-fluid col-12">
+                <div class="container-fluid col-12 mb-4">
                     <input type="text" class="form-control" name="search-coffee" id="search-coffee"
                            placeholder="Search"
                            pattern="[a-z]i"/>
                 </div>
             </div>
-            <div class="coffee-container" id="coffee-container"></div>
+            <div class="coffee-container d-flex flex-column flex-nowrap" id="coffee-container"></div>
         </div>
-        <div class="col-4">
-            <h3>Add a Coffee!</h3>
+        <div class="col-5">
+            <h2 class="sub-header">Add a Coffee!</h2>
             <div class="input-group row no-gutters">
                 <div class="col-6">
                     <select class="custom-select" id="coffee-roast-selection">
@@ -68,20 +68,18 @@
                            placeholder="Coffee Name"
                            pattern="[a-z]i"/>
                 </div>
-                <div class="col-12">
-                    <button id="add-coffee-button" type="submit" value="Submit">Add Coffee</button>
+                <div class="col-12 mb-4">
+                    <button id="add-coffee-button" class="submit-button" type="submit" value="Submit">Add Coffee</button>
                 </div>
             </div>
-        </div>
-        <div class="col-4">
-            <h3 class="ml-3">Remove a Coffee.</h3>
-            <div class="container-fluid col-12">
+            <h2 class="sub-header">Remove a Coffee.</h2>
+            <div class="input-group row no-gutters">
                 <input type="text" class="form-control" name="coffee-name" id="remove-coffee-name-input"
                        placeholder="Coffee Name"
                        pattern="[a-z]i"/>
             </div>
-            <div class="col-12">
-                <button id="remove-coffee-button" type="submit" value="Submit">Remove Coffee</button>
+            <div class="input-group row no-gutters mb-4">
+                <button id="remove-coffee-button" class="submit-button"  type="submit" value="Submit">Remove Coffee</button>
             </div>
         </div>
     </div>
