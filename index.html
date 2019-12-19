@@ -42,24 +42,6 @@
                            pattern="[a-z]i"/>
                 </div>
             </div>
-
-
-
-
-
-
-<!--            <select id="roast-selection">-->
-<!--                <option>All</option>-->
-<!--                <option>Light</option>-->
-<!--                <option>Medium</option>-->
-<!--                <option>Dark</option>-->
-<!--            </select>-->
-<!--            <select id="sort-selection">-->
-<!--                <option>ID</option>-->
-<!--                <option>Rating</option>-->
-<!--                <option>Alphabetical</option>-->
-<!--            </select>-->
-<!--            <input type="text" name="search-coffee" id="search-coffee" placeholder="Search"/>-->
             <div class="coffee-container" id="coffee-container"></div>
         </div>
         <div class="col-4">
@@ -92,12 +74,15 @@
             </div>
         </div>
         <div class="col-4">
-            <h3>Remove a Coffee.</h3>
-
-            <label for="coffee-roast-selection"></label>
-            <input type="text" name="coffee-name" id="remove-coffee-name-input" placeholder="Coffee Name"
-                   pattern="[a-z]i"/>
-            <button id="remove-coffee-button" type="submit" value="Submit">Remove Coffee</button>
+            <h3 class="ml-3">Remove a Coffee.</h3>
+            <div class="container-fluid col-12">
+                <input type="text" class="form-control" name="coffee-name" id="remove-coffee-name-input"
+                       placeholder="Coffee Name"
+                       pattern="[a-z]i"/>
+            </div>
+            <div class="col-12">
+                <button id="remove-coffee-button" type="submit" value="Submit">Remove Coffee</button>
+            </div>
         </div>
     </div>
 </div>
