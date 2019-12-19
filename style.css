@@ -11,13 +11,13 @@
     font-family: 'EB Garamond', serif;
 }
 
-.montserrat {
+body {
     font-family: 'Montserrat', sans-serif;
 }
 
 #alamo-coffee {
     font-family: 'EB Garamond', serif;
-    font-size: 90px;
+    font-size: 95px;
     color: #d6b690;
     text-align: center;
 }
