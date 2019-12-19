@@ -1,47 +1,106 @@
 <!DOCTYPE html>
-<html lang="en" xmlns="http://www.w3.org/1999/html">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    ​
     <title></title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
     <link rel="stylesheet" href="style.css">
 </head>
-​
-​
-​
-​
-​
 <body>
-<h1>Coffee!</h1>
-​
-<form>
-    <label for="roast-selection"></label>
-    <select id="roast-selection">
-        <option>light</option>
-        <option>medium</option>
-        <option>dark</option>
-    </select>
-    <input id="submit" type="submit" />
-</form>
-​
-<p id="coffees"></p>
-​
-<input id="search-bar" type="text"
-       name="search-bar" placeholder="Search Coffee..">
-<input id="search-btn" value="search" type="submit" />
-​
+<div class = "container text-center" >
+    <h1>Coffee!</h1>
+    <hr>
+</div>
+
+
+<div class="container">
+    <div class="row">
+        <div id="coffees" class="col-6">
+            <!--<div class="row">-->
+            <!--<div class="col">-->
+            <!--<div class="justify-content-start d-flex flex-row">-->
+            <!--<h2>French</h2>-->
+            <!--<p class="ml-2 my-auto pt-1 text-muted">dark</p>-->
+            <!--</div>-->
+            <!--</div>-->
+            <!--<div class="col">-->
+            <!--<div class="text-left d-inline-flex flex-row"><h2>Italian</h2>-->
+            <!--<p class="ml-2 my-auto pt-1 text-muted">dark</p></div>-->
+            <!--</div>-->
+            <!--</div>-->
+            <!--<div class="row">-->
+            <!--<div class="col">-->
+            <!--<div class="justify-content-start d-flex flex-row">-->
+            <!--<h2>French</h2>-->
+            <!--<p class="ml-2 my-auto pt-1 text-muted">dark</p>-->
+            <!--</div>-->
+            <!--</div>-->
+            <!--<div class="col">-->
+            <!--<div class="text-left d-inline-flex flex-row"><h2>Italian</h2>-->
+            <!--<p class="ml-2 my-auto pt-1 text-muted">dark</p></div>-->
+            <!--</div>-->
+            <!--</div>-->
+        </div>
+
+
+        <!--<table border="0">-->
+        <!--<tbody id="coffees"></tbody>-->
+        <!--</table>-->
+        <div class="col-6">
+            <form>
+                <div class="form-group">
+                    <label for="exampleFormControlSelect1">Roast</label>
+                    <select class="form-control" id="roast-selection">
+                        <option>all</option>
+                        <option>light</option>
+                        <option>medium</option>
+                        <option>dark</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="coffee-search">Coffee Name</label>
+                    <input id="coffee-search" class="form-control" type="text">
+                </div>
+                <button class="btn btn-primary btn-block mt-2 " type="button" id="submit">Submit</button>
+            </form>
+            <div class="w-100">
+            </div>
+            <hr>
+            <h2 class="text-center">Add a Coffee</h2>
+            <form>
+                <div class="form-group">
+                    <label for="exampleFormControlSelect1">Roast</label>
+                    <select class="form-control" id="exampleFormControlSelect1">
+                        <option>all</option>
+                        <option>light</option>
+                        <option>medium</option>
+                        <option>dark</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="coffee_search">Name</label>
+                    <input id="coffee_search" class="form-control" type="search" aria-label="Search">
+                </div>
+                <button class="btn btn-primary btn-block mt-2 " type="button">Submit</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+
+<!--<form>-->
+<!--<label for="roast-selection"></label>-->
+<!--<select id="roast-selection">-->
+<!--<option>light</option>-->
+<!--<option>medium</option>-->
+<!--<option>dark</option>-->
+<!--</select>-->
+<!--<input id="submit" type="submit" />-->
+<!--</form>-->
+
+
+
 <script src="main.js"></script>
-​
-​
-​
-<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 </body>
 </html>
-
-
-
-
