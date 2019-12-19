@@ -7,6 +7,14 @@ function createCoffee (inputName, roastType){
     console.log(coffees);
     // return coffees
 }
+function removeCoffee (inputName) {
+    coffees.forEach(coffee => {
+       if (coffee.name.toLowerCase() === inputName.toLowerCase()) {
+          coffees.splice(coffees.indexOf(coffee), 1);
+       };
+       localStorage.setItem("coffees", JSON.stringify(coffees));
+    });
+}
 
 //above this line are the functions for creating coffee obj
 function renderCoffee(coffee) {
@@ -79,9 +87,20 @@ addCoffeeButton.addEventListener('click', function(){
     if (addCoffeeNameInput.value !== '') {
         // console.log(createCoffee(addCoffeeNameInput.value, coffeeRoastSelection.value));
         createCoffee(addCoffeeNameInput.value, coffeeRoastSelection.value)
-        // updateCoffees();
+        updateCoffees();
     }
     addCoffeeNameInput.value = '';
+});
+var removeCoffeeButton = document.querySelector('#remove-coffee-button')
+removeCoffeeButton.addEventListener('click', function(){
+    // var coffeeRoastSelection = document.getElementById('coffee-roast-selection');
+    var removeCoffeeNameInput = document.getElementById('remove-coffee-name-input');
+    if (removeCoffeeNameInput.value !== '') {
+        // console.log(createCoffee(addCoffeeNameInput.value, coffeeRoastSelection.value));
+        removeCoffee(removeCoffeeNameInput.value)
+        updateCoffees();
+    }
+    removeCoffeeNameInput.value = '';
 });
 
 if (localStorage.getItem("coffees") !== null) {

@@ -18,31 +18,44 @@
 <div class="not-a-container">
     <div class="row">
         <div class="col-1"></div>
-    <div class="col-5">
-        <h1>"Filter" Your Coffee!</h1>
-        <label for="roast-selection"></label>
-        <select id="roast-selection">
-            <option>All</option>
-            <option>Light</option>
-            <option>Medium</option>
-            <option>Dark</option>
-        </select>
-        <input type="text" name="search-coffee" id="search-coffee" placeholder="Search"/>
-        <div class="coffee-container" id="coffee-container"></div>
-    </div>
-    <div class="col-5">
-        <h1>Add a Coffee!</h1>
+        <div class="col-3">
+            <h1>"Filter" Your Coffee!</h1>
+            <label for="roast-selection"></label>
+            <select id="roast-selection">
+                <option>All</option>
+                <option>Light</option>
+                <option>Medium</option>
+                <option>Dark</option>
+            </select>
+            <input type="text" name="search-coffee" id="search-coffee" placeholder="Search"/>
+            <div class="coffee-container" id="coffee-container"></div>
+        </div>
+        <div class="col-3">
+            <h1>Add a Coffee!</h1>
 
-        <label for="coffee-roast-selection"></label>
-        <select id="coffee-roast-selection">
-            <option>Light</option>
-            <option>Medium</option>
-            <option>Dark</option>
-        </select>
-        <input type="text" name="coffee-name" id="add-coffee-name-input" placeholder="Coffee Name" pattern="[a-z]i"/>
-        <button id="add-coffee-button" type="submit" value="Submit">Add Coffee</button>
+            <label for="coffee-roast-selection"></label>
+            <select id="coffee-roast-selection">
+                <option>Light</option>
+                <option>Medium</option>
+                <option>Dark</option>
+            </select>
+            <input type="text" name="coffee-name" id="add-coffee-name-input" placeholder="Coffee Name"
+                   pattern="[a-z]i"/>
+            <button id="add-coffee-button" type="submit" value="Submit">Add Coffee</button>
+        </div>
+        <div class="col-3">
+            <h1>Remove a Coffee.</h1>
 
-    </div>
+            <label for="coffee-roast-selection"></label>
+<!--            <select id="coffee-roast-selection">-->
+<!--                <option>Light</option>-->
+<!--                <option>Medium</option>-->
+<!--                <option>Dark</option>-->
+<!--            </select>-->
+            <input type="text" name="coffee-name" id="remove-coffee-name-input" placeholder="Coffee Name"
+                   pattern="[a-z]i"/>
+            <button id="remove-coffee-button" type="submit" value="Submit">Remove Coffee</button>
+        </div>
         <div class="col-1"></div>
     </div>
 </div>
@@ -50,9 +63,15 @@
 <!-- Custom Javascript -->
 <script src="main.js"></script>
 <!-- Bootstrap CDN -->
-<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
 
 </body>
 </html>
