@@ -56,8 +56,8 @@ function search_coffee() {
 
 // from http://www.ncausa.org/About-Coffee/Coffee-Roasts-Guide
 var coffees = [
-    {id: 1, name: 'National Treasure Light City', roast: 'light', allRoast: "all roast" },
-    {id: 2, name: 'National Treasure 2 Half City', roast: 'light', allRoast: "all roast" },
+    {id: 1, name: 'National Treasure 2 Light City', roast: 'light', allRoast: "all roast" },
+    {id: 2, name: 'National Treasure Half City', roast: 'light', allRoast: "all roast" },
     {id: 3, name: 'Con-Air Cinnamon', roast: 'light', allRoast: "all roast" },
     {id: 4, name: 'Drive Angry City', roast: 'medium', allRoast: "all roast" },
     {id: 5, name: 'Gone in Sixty Seconds American', roast: 'medium', allRoast: "all roast" },
