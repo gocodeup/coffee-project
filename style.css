@@ -1,11 +1,19 @@
+/*body {*/
+/*    background-color: lightsalmon;*/
+/*}*/
+
 body {
-    background-color: lightsalmon;
+    background: url(../coffee-project/img/coffee.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
 }
 
-table {
-    border-collapse: collapse;
-    margin: 15px 0;
-}
+/*table {*/
+/*    border-collapse: collapse;*/
+/*    margin: 15px 0;*/
+/*}*/
 
 .move {
 
@@ -25,10 +33,10 @@ table {
      margin-top: 5%;
  }
 
- .backgroundColor {
-     margin: 0;
-     background-color: grey;
-     height: 100px;
- }
+ /*.backgroundColor {*/
+ /*    margin: 0;*/
+ /*    background-color: grey;*/
+ /*    height: 100px;*/
+ /*}*/
 
 
