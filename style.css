@@ -1,3 +1,11 @@
+:root {
+    --beige: #D6B690;
+    --peach: #E6AA99;
+    --red: #C36160;
+    --white: #FBFAFB;
+    --gray: #879298;
+}
+
 /*table {*/
 /*    border-collapse: collapse;*/
 /*    margin: 15px 0;*/
@@ -18,7 +26,7 @@ body {
 #alamo-coffee {
     font-family: 'EB Garamond', serif;
     font-size: 95px;
-    color: #d6b690;
+    color: var(--beige);
     text-align: center;
 }
 
@@ -30,7 +38,7 @@ body {
     background-color: #94939C;
 }
 input {
-   /*background-color: #94939C;*/
+    /*background-color: #94939C;*/
     background-color: #C7B7B2;
 }
 select {
