@@ -7,6 +7,20 @@
 /*    border: 1px solid black;*/
 /*    padding: 5px 10px;*/
 /*}*/
+.garamond {
+    font-family: 'EB Garamond', serif;
+}
+
+.montserrat {
+    font-family: 'Montserrat', sans-serif;
+}
+
+#alamo-coffee {
+    font-family: 'EB Garamond', serif;
+    font-size: 90px;
+    color: #d6b690;
+    text-align: center;
+}
 
 #header {
     background-image: url("img/beans.jpg");

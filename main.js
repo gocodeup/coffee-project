@@ -42,15 +42,18 @@ function renderCoffees(coffees) {
     var html = '';
     if (selectedSort === "ID") {
         coffees.sort((a, b) => {
-            return parseFloat(a.id) - parseFloat(b.id)
+            return parseFloat(a.id) - parseFloat(b.id);
         });
     } else if (selectedSort === "Rating") {
         coffees.sort((a, b) => {
-            return parseFloat(b.rating) - parseFloat(a.rating)
+            return parseFloat(b.rating) - parseFloat(a.rating);
         });
-    }
-    else {
-        coffees.sort();
+    } else if (selectedSort === "Alphabetical") {
+        coffees.sort((a, b) => {
+            var textA = a.name.toUpperCase();
+            var textB = b.name.toUpperCase();
+            return (textA < textB) ? -1 : (textA > textB) ? 1 : 0;
+        });
     }
     coffees.forEach(coffee => {
         html+=renderCoffee(coffee)
