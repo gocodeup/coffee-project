@@ -7,9 +7,12 @@
     <link href="https://fonts.googleapis.com/css?family=Montserrat|Raleway&display=swap" rel="stylesheet">
 </head>
 <body>
-    <h1>Coffee!</h1>
-
+<div id="main-container"> <!---main container for grid---->
+    <div id="title-div">
+    <h1>Coffeeeeeeeee!</h1>
+    </div>
 <!--    CUSTOM COFFEE INPUT-->
+    <div id="custom-div"><!----custom and search bar div----->
     <input type="text" placeholder="Name your coffee!" id="custom-coffee-name"/>
     <form>
         <label for="custom-roast-selection"></label>
@@ -20,8 +23,9 @@
         </select>
     </form>
     <input class="submit" type="submit" id="custom-submit"/>
-
+    </div>
 <!--SEARCH BAR-->
+    <div id="search-div">
     <input type="text" placeholder="Search.." id="search-bar" onkeyup="searchCoffees()"/>
     <input class="submit" type="submit" id="search-btn"/>
 
@@ -36,13 +40,18 @@
         </select>
     </form>
     <input type="submit" id="roast-submit"/>
+    </div><!----custom and search bar div---->
 
-
+    <div id="coffee-list-div">
     <ul id="coffee">
 <!--        Coffee name and roast added in renderCoffee()-->
         <div id="coffees"></div>
     </ul>
-
+    </div>
+    <div id="coffee-info-div">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est fuga itaque iure mollitia perferendis provident tempore voluptates. Aliquam, dolore, ducimus!</p>
+    </div>
+</div> <!-----main container close for grid----->
     <script src="main.js"></script>
 </body>
 </html>
