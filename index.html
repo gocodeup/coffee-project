@@ -20,28 +20,51 @@
     <div class="row">
         <div class="col-4">
             <h3>"Filter" Your Coffee!</h3>
-            <select id="roast-selection">
-                <option>All</option>
-                <option>Light</option>
-                <option>Medium</option>
-                <option>Dark</option>
-            </select>
-            <select id="sort-selection">
-                <option>ID</option>
-                <option>Rating</option>
-                <option>Alphabetical</option>
-            </select>
-            <input type="text" name="search-coffee" id="search-coffee" placeholder="Search"/>
+            <div class="input-group row no-gutters">
+                <div class="col-6">
+                    <select class="custom-select" id="roast-selection">
+                        <option>All</option>
+                        <option>Light</option>
+                        <option>Medium</option>
+                        <option>Dark</option>
+                    </select>
+                </div>
+                <div class="col-6">
+                    <select class="custom-select" id="sort-selection">
+                        <option>ID</option>
+                        <option>Rating</option>
+                        <option>Alphabetical</option>
+                    </select>
+                </div>
+                <div class="container-fluid col-12">
+                    <input type="text" class="form-control" name="search-coffee" id="search-coffee"
+                           placeholder="Search"
+                           pattern="[a-z]i"/>
+                </div>
+            </div>
+
+
+
+
+
+
+<!--            <select id="roast-selection">-->
+<!--                <option>All</option>-->
+<!--                <option>Light</option>-->
+<!--                <option>Medium</option>-->
+<!--                <option>Dark</option>-->
+<!--            </select>-->
+<!--            <select id="sort-selection">-->
+<!--                <option>ID</option>-->
+<!--                <option>Rating</option>-->
+<!--                <option>Alphabetical</option>-->
+<!--            </select>-->
+<!--            <input type="text" name="search-coffee" id="search-coffee" placeholder="Search"/>-->
             <div class="coffee-container" id="coffee-container"></div>
         </div>
         <div class="col-4">
             <h3>Add a Coffee!</h3>
             <div class="input-group row no-gutters">
-                <div class="container-fluid col-12">
-                    <input type="text" class="form-control" name="coffee-name" id="add-coffee-name-input"
-                           placeholder="Coffee Name"
-                           pattern="[a-z]i"/>
-                </div>
                 <div class="col-6">
                     <select class="custom-select" id="coffee-roast-selection">
                         <option>Light</option>
@@ -57,6 +80,11 @@
                         <option>4</option>
                         <option>5</option>
                     </select>
+                </div>
+                <div class="container-fluid col-12">
+                    <input type="text" class="form-control" name="coffee-name" id="add-coffee-name-input"
+                           placeholder="Coffee Name"
+                           pattern="[a-z]i"/>
                 </div>
                 <div class="col-12">
                     <button id="add-coffee-button" type="submit" value="Submit">Add Coffee</button>
