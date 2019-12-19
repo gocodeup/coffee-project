@@ -1,6 +1,6 @@
 #main-container {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns:  .25fr 1fr;
     grid-template-rows: .07fr .03fr 1fr;
     grid-column-gap: 0px;
     grid-row-gap: 0px;
@@ -11,6 +11,7 @@
 #custom-div {
     display: flex;
     align-content: center;
+    justify-content: flex-end;
     padding: 10px;
     grid-area: 2/2/3/3;
 }
@@ -26,6 +27,7 @@
 #coffee-info-div {
     grid-area: 3/2/4/3;
 }
+
 h1, h2 {
     font-weight: bold;
     font-family: 'Raleway', sans-serif;
