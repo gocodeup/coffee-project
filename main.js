@@ -8,17 +8,17 @@ function createCoffee (inputName, roastType, inputRating){
     // return coffees
 }
 
-function removeCoffee (inputName) {
-    coffees.forEach(coffee => {
-       if (coffee.name.toLowerCase() === inputName.toLowerCase()) {
-          coffees.splice(coffees.indexOf(coffee), 1);
-       };
-       localStorage.setItem("coffees", JSON.stringify(coffees));
-    });
-}
+
 
 //above this line are the functions for creating coffee obj
-
+function removeCoffee (inputName) {
+    coffees.forEach(coffee => {
+        if (coffee.name.toLowerCase() === inputName.toLowerCase()) {
+            coffees.splice(coffees.indexOf(coffee), 1);
+        };
+        localStorage.setItem("coffees", JSON.stringify(coffees));
+    });
+}
 function buildStars(inputCoffee) {
     var html = '';
     console.log(inputCoffee.rating);
@@ -40,7 +40,18 @@ function renderCoffee(coffee) {
 
 function renderCoffees(coffees) {
     var html = '';
-    coffees.sort((a,b) => {return parseFloat(a.id) - parseFloat(b.id)});
+    if (selectedSort === "ID") {
+        coffees.sort((a, b) => {
+            return parseFloat(a.id) - parseFloat(b.id)
+        });
+    } else if (selectedSort === "Rating") {
+        coffees.sort((a, b) => {
+            return parseFloat(b.rating) - parseFloat(a.rating)
+        });
+    }
+    else {
+        coffees.sort();
+    }
     coffees.forEach(coffee => {
         html+=renderCoffee(coffee)
     });
@@ -84,6 +95,14 @@ var selectedRoast = 'All';
 var roastSelection = document.querySelector('#roast-selection');
 roastSelection.addEventListener('change', function(){
     selectedRoast = roastSelection.value;
+    updateCoffees();
+});
+var selectedSort = 'ID';
+var sortSelection = document.querySelector('#sort-selection');
+sortSelection.addEventListener('change', function(){
+    selectedSort = sortSelection.value;
+    console.log(selectedSort);
+    console.log("Listener Works");
     updateCoffees();
 });
 
