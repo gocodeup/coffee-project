@@ -39,6 +39,18 @@ select {
 button {
     background-color: #C7B7B2;
 }
+#add-coffee-name-input {
+    /*background-color: #94939C;*/
+    background-color: #C7B7B2;
+}
+#coffee-roast-selection {
+    /*background-color: #94939C;*/
+    background-color: #C7B7B2;
+}
+#coffee-rating-selection {
+    /*background-color: #94939C;*/
+    background-color: #C7B7B2;
+}
 /*#custom .not-a-container {*/
 /*    background-image: url("img/coffee-cup.jpeg");*/
 /*}*/
