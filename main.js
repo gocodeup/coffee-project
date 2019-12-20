@@ -1,11 +1,13 @@
 "use strict"
 
 function createCoffee (inputName, roastType, inputRating){
-    var newCoffee = {id: coffees.length + 1 , name: inputName, roast: roastType, rating: inputRating};
-    coffees.push(newCoffee);
-    localStorage.setItem("coffees", JSON.stringify(coffees));
-    console.log(coffees);
-    // return coffees
+    if (roastType !== "Roast" || inputRating !== "Rating") {
+        var newCoffee = {id: coffees.length + 1, name: inputName, roast: roastType, rating: inputRating};
+        coffees.push(newCoffee);
+        localStorage.setItem("coffees", JSON.stringify(coffees));
+        console.log(coffees);
+        // return coffees
+    }
 }
 
 
