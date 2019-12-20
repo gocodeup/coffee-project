@@ -45,6 +45,7 @@ h2 {
 
 #header {
     background-image: url("img/beans.jpg");
+    padding: 2.25em;
 }
 #custom {
     /*background-color: #C7B7B2;*/
