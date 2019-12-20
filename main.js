@@ -24,7 +24,7 @@ function buildStars(inputCoffee) {
     console.log(inputCoffee.rating);
     console.log(inputCoffee.id);
     for(var i=0;i<inputCoffee.rating;i++) {
-        html += '<i class="fas fa-star" style="color: darkgoldenrod"></i>';
+        html += '<i class="fas fa-star fa-xs" style="color: darkgoldenrod"></i>';
     }
     console.log(html);
     return html;
