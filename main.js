@@ -32,7 +32,7 @@ function updateCoffees(e) {
 }
 
 function search_coffee() {
-    let input = document.getElementById('searchbar').value
+    let input = document.getElementById('searchbar').value;
     input=input.toLowerCase();
     let x = document.getElementsByClassName('coffee');
     for (var i = 0; i < x.length; i++) {
