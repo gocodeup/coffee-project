@@ -1,42 +1,49 @@
-/*body {*/
-/*    background-color: lightsalmon;*/
-/*}*/
-
 body {
-    background: url(../coffee-project/img/nic-cage-background2.jpg) no-repeat center center fixed;
+    background: url(img/nic-cage-background4.jpg) no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
 }
 
-/*table {*/
-/*    border-collapse: collapse;*/
-/*    margin: 15px 0;*/
-/*}*/
+.rotation {
+    animation: rotation 3s alternate;
+}
 
-.move {
-
+@keyframes rotation {
+    0% {
+        transform: rotate(0deg);
+    }
+    50% {
+        transform: rotate(360deg);
+    }
 }
 
 #searchbar {
     width: 30%;
-    height: 20px;
 }
 
- #roast-selection {
-     color: grey;
- }
 
- form {
-     text-align:center;
-     margin-top: 5%;
- }
+#addCoffees {
+    width: 30%;
+}
 
- /*.backgroundColor {*/
- /*    margin: 0;*/
- /*    background-color: grey;*/
- /*    height: 100px;*/
- /*}*/
+#removeCoffees {
+    width: 30%;
+}
+
+#roast-selection {
+    color: grey;
+}
+
+form {
+    text-align:center;
+    margin-top: 5%;
+}
+
+.color {
+    background-color: #905233;
+}
+
 
 

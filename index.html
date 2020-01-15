@@ -3,36 +3,53 @@
 <head>
     <meta charset="UTF-8">
     <title></title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/coffee-project-practice.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 </head>
 <body>
 <div class="backgroundColor">
-
-<center><h1 class="move border border-primary rounded-pill p-3 mb-2 bg-dark text-white">Nicolas Cage Coffee! How Nic are you today?</h1></center>
+    <center><h1 class="move border border-primary rounded-pill p-3 mb-2 bg-dark text-white">Nicolas Cage Coffee! How Nic are you today?</h1></center>
 </div>
 
 
 <!--<hr>-->
 <div class="container">
-    <div class="card border-0 rounded-pill shadow my-5 bg-info">
+    <div class="card border-0 shadow my-5 bg-info">
         <div class="card-body p-5">
-    <form>
-        <label for="roast-selection"></label>
-        <select id="roast-selection">
-            <option>all roast</option>
-           <option>light</option>
-            <option>medium</option>
-            <option>dark</option>
-        </select>
-        <input id="submit" type="submit" value="Submit Roast"/>
-<!--        <label for="searchbar">Roast</label>-->
-        <input id="searchbar" type="text" name="coffee" onkeyup="search_coffee()" placeholder="Search coffee...">
-    </form>
-<center><p id="coffees"></p></center>
+            <form>
+                <h3 class="mb-3">Select your favorite Nic Roast</h3>
+                <select id="roast-selection">
+                    <option>all roast</option>
+                    <option>light</option>
+                    <option>medium</option>
+                    <option>dark</option>
+                </select>
 
-<p id="coffeeList"></p>
-    <script src="main.js"></script>
+                <!--        <label for="searchbar">Roast</label>-->
+                <input id="searchbar" class="mb-4" type="text" name="coffee" placeholder="Search coffee...">
+                <h3 class="mb-3">Add Roast Here</h3>
+                <select name="roast" class="mb-4" id="roast-selection2">
+                    <option>Roasts</option>
+                    <option>light</option>
+                    <option>medium</option>
+                    <option>dark</option>
+                </select>
+                <select name="rating" id="nicRating">
+                    <option>Nicolas Rating</option>
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option>
+                </select>
+                <input id="addCoffees" class="mb-4" type="text" name="coffee" placeholder="Add Roast">
+                <input id="button" type="button" value="Add Roast">
+                <h3 class="mb-3">Remove Roast</h3>
+                <input class="mb-5" type="text" id="removeCoffees" placeholder="Remove Coffee">
+               <input id="button2" type="button" value="Remove Roast">
+            </form>
+            <div id="coffees"></div>
+            <script src="js/coffee-project-practice.js"></script>
         </div>
     </div>
 </div>
