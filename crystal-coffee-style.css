@@ -1,29 +1,33 @@
-.parent {
-    display: grid;
-    height: 100vh;
-    width: 100fr;
-    padding-left: 12em;
-    padding-right: 12em;
-    grid-template-columns: 50% 50% ;
-    grid-template-rows: 30% 20% 30% ;
-    /*grid-template-columns: repeat(2, 1fr);*/
-    /*grid-template-rows: .10fr repeat(2, 1fr);*/
-    /*grid-column-gap: 5px;*/
-    /*grid-row-gap: 5px;*/
-    font-family: 'Arvo', serif;
+body{
+    background-image: url('caffeine-coffee-coffee-beans-roasted-585750.jpg');"
 }
-/*This sets a border around the divs to show them.*/
-/*.box {*/
-/*    border: 1px solid black;*/
+
+/*.parent {*/
+/*    display: grid;*/
+/*    height: 100vh;*/
+/*    width: 100fr;*/
+/*    padding-left: 12em;*/
+/*    padding-right: 12em;*/
+/*    grid-template-columns: 50% 50% ;*/
+/*    grid-template-rows: 30% 20% 30% ;*/
+/*    !*grid-template-columns: repeat(2, 1fr);*!*/
+/*    !*grid-template-rows: .10fr repeat(2, 1fr);*!*/
+/*    !*grid-column-gap: 5px;*!*/
+/*    !*grid-row-gap: 5px;*!*/
+/*    font-family: 'Arvo', serif;*/
 /*}*/
-.div1 {grid-area: 1 / 1 / 2 / 3;}
-.div2 { grid-area: 2 / 2 / 3 / 3;
-    text-align: center ;}
-.div3 { grid-area: 3 / 2 / 4 / 3;
-    text-align: center ;}
-.div4 {
-    grid-area: 2 / 1 / 4 / 2;
-}
+/*!*This sets a border around the divs to show them.*!*/
+/*!*.box {*!*/
+/*!*    border: 1px solid black;*!*/
+/*!*}*!*/
+/*.div1 {grid-area: 1 / 1 / 2 / 3;}*/
+/*.div2 { grid-area: 2 / 2 / 3 / 3;*/
+/*    text-align: center ;}*/
+/*.div3 { grid-area: 3 / 2 / 4 / 3;*/
+/*    text-align: center ;}*/
+/*.div4 {*/
+/*    grid-area: 2 / 1 / 4 / 2;*/
+/*}*/
 /*================================================= HEADERS ==========================================================*/
 .h1Style {
     display: flex;
@@ -146,4 +150,63 @@
 
 .submit{
     width: 250px;
+}
+
+/*================================================ MEDIA QUERIES =====================================================*/
+
+@media screen and (min-width: 1024px)  {
+    body {
+        /*background-color: brown;*/
+        /*background-image: none;*/
+    }
+
+    .coffee-header {
+        margin-top: 1em;
+        left: 30.1em;
+    }
+
+    hr {
+     width: 60%;
+    }
+
+    .parent {
+        display: grid;
+        /*width: 100%;*/
+        /*height: 100%;*/
+        grid-template-columns: repeat(6, 1fr);
+        grid-template-rows: 39.1% 1fr 1fr 1fr 1fr 1fr;
+        grid-column-gap: 0px;
+        grid-row-gap: 0px;
+    }
+    .div1 { grid-area: 1 / 1 / 2 / 7; }
+    .div2 { grid-area: 2 / 4 / 4 / 6; }
+    .div3 { grid-area: 4 / 4 / 6 / 6; }
+    .div4 { grid-area: 2 / 2 / 6 / 4; }
+
+    /*.parent {*/
+    /*    display: grid;*/
+    /*    grid-template-columns: repeat(6, 1fr);*/
+    /*    grid-template-rows: 25% 1fr 1fr 1fr 1fr 1fr;*/
+    /*    grid-column-gap: 0px;*/
+    /*    grid-row-gap: 0px;*/
+    /*}*/
+    /*.div1 { grid-area: 1 / 1 / 3 / 7; }*/
+    /*.div2 { grid-area: 3 / 4 / 5 / 6; }*/
+    /*.div3 { grid-area: 5 / 4 / 7 / 6; }*/
+    /*.div4 { grid-area: 3 / 2 / 7 / 4; }*/
+
+}
+/* On screens that are 992px or less, set the background color to blue */
+@media screen and (max-width: 992px) {
+    body {
+        background-color: blue;
+        background-image: none;
+    }
+}
+/* On screens that are 600px or less, set the background color to olive */
+@media screen and (max-width: 600px) {
+    body {
+        background-color: olive;
+        background-image: none;
+    }
 }
