@@ -2,7 +2,6 @@
 
 function renderCoffee(coffee) {
     var html = '<tr class="coffee">';
-    html += '<td>' + coffee.id + '</td>';
     html += '<td>' + coffee.name + '</td>';
     html += '<td>' + coffee.roast + '</td>';
     html += '</tr>';
@@ -63,7 +62,7 @@ var coffees = [
 
 var tbody = document.querySelector('#coffees');
 var submitButton = document.querySelector('#submit');
-var roastSelection = document.querySelector('#roast-selection');
+var roastSelection = document.querySelector('#form-control');
 var nameSelection = document.querySelector('#roast-selector');
 tbody.innerHTML = renderCoffees(coffees);
 var submitTwoButton = document.querySelector('#submitTwo');
