@@ -15,21 +15,30 @@
             <option>medium</option>
             <option>dark</option>
         </select>
+        <input type="text" id="coffeeSearch" onkeyup="updateCoffees()" placeholder="search for coffees">
         <input id="submit" type="submit" />
     </form>
 
-    <table>
-        <thead>
-            <tr>
-                <th>ID</th>
-                <th>NAME</th>
-                <th>ROAST</th>
-            </tr>
-        <div>test</div>
-        <div>test 2</div>
-        </thead>
-        <tbody id="coffees"></tbody>
-    </table>
+<!--    (You will need to add an input field to the existing form for this)-->
+
+<!--    <table>-->
+<!--        <thead>-->
+<!--            <tr>-->
+<!--                <th>ID</th>-->
+<!--                <th>NAME</th>-->
+<!--                <th>ROAST</th>-->
+<!--            </tr>-->
+<!--        </thead>-->
+<!--        <tbody id="coffees"></tbody>-->
+<!--    </table>-->
+
+    <div class="table-div">
+        <div class="table-head">
+            <h1>Coffee Name</h1>
+            <p>Type of Roast</p>
+        </div>
+        <div id="coffees"></div>
+    </div>
 
     <script src="main.js"></script>
 </body>
