@@ -69,26 +69,50 @@ var submitTwoButton = document.querySelector('#submitTwo');
 submitTwoButton.addEventListener('click', search);
 submitButton.addEventListener('click', updateCoffees);
 
+coffees.forEach(function (coffee) {
+    document.getElementById('result').innerHTML += coffee.name + "<br><br>" + coffee.roast + "<br><br>"
+});
+
 var result = "";
 
 document.getElementById('searchbar').addEventListener('keydown', function(event) {
-    // document.getElementById('result').innerHTML += drinks[i].name;
+    console.log(result);
+    document.getElementById('result').innerHTML = "";
     var drinks = [];
     var key = event.key.toLowerCase();
     var charList = 'abcdefghijklmnopqrstuvwxyz';
-    if (charList.indexOf(key) === -1) return; charList: "abcdefghijklmnopqrstuvwxyz";
-    result = result + key;
-    console.log(result);
-    coffees.forEach(function (coffee,i) {
-        var compare = coffee.name.toLowerCase();
-        if (compare.search(result) >= 0) {
-            drinks.push(coffee)
+    if ((charList.indexOf(key) === -1) && (event.keyCode !== 8)){
+        return;
+    }
+    if(event.keyCode === 8 && result !== "") {
+        result = result.substring(0, result.length - 1);
+        console.log(result);
+        coffees.forEach(function (coffee) {
+            var compare = coffee.name.toLowerCase();
+            if (compare.search(result) > -1) {
+                drinks.push(coffee)
 
-        }
-    });
-    console.log(drinks);
-    for(var i = 0; i < drinks.length; i++)
-    document.getElementById('result').innerHTML += drinks[i].name + "<br><br>" + drinks[i].roast + "<br><br>";
-    });
+            }
+        });
+        for(var i = 0; i < drinks.length; i++)
+            document.getElementById('result').innerHTML += drinks[i].name + "<br><br>" + drinks[i].roast + "<br><br>";
 
 
+    } else if(charList.indexOf(key) !== -1){
+        result = result + key;
+        coffees.forEach(function (coffee) {
+            var compare = coffee.name.toLowerCase();
+            if (compare.search(result) > -1) {
+                drinks.push(coffee)
+
+            }
+        });
+        for(var i = 0; i < drinks.length; i++)
+            document.getElementById('result').innerHTML += drinks[i].name + "<br><br>" + drinks[i].roast + "<br><br>";
+    } else {
+        coffees.forEach(function (coffee) {
+            document.getElementById('result').innerHTML += coffee.name + "<br><br>" + coffee.roast + "<br><br>"
+        });
+    }
+
+});
