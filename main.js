@@ -1,7 +1,7 @@
 "use strict"
 
 function renderCoffee(coffee) { //put the coffees into a table
-    var html = '<div class="col-4 coffee" id="big-div">'; //define class and table row
+    var html = '<div class="card coffee" id="big-div">'; //define class and table row
     html += '<div class="coffee-data"><a href="#">' + coffee.id + '</a></div>'; // get id
     html += '<div class="coffee-data"><a href="#">' + coffee.name + '</a></div>'; // get name
     html += '<div class="coffee-data"><a href="#">' + coffee.roast + '</a></div>'; // ger roast
