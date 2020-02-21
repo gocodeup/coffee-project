@@ -9,10 +9,10 @@
 <body>
 <!---JUMBOTRON--->
 
-<h1>Euler & Gauss</h1>
+
 <div class="jumbotron jumbotron-fluid">
     <div class="container">
-        <h1 class="display-4">Fluid jumbotron</h1>
+        <h1 class="display-4">Euler & Gauss</h1>
         <p class="lead">This is a modified jumbotron that occupies the entire horizontal space of its parent.</p>
     </div>
 </div>
@@ -22,19 +22,23 @@
 <form>
     <label for="roast-selection"></label>
     <select id="roast-selection">
-        <option>Light</option>
-        <option>Medium</option>
-        <option>Dark</option>
+        <option>light</option>
+        <option>medium</option>
+        <option>dark</option>
     </select>
     <input id="submit" type="submit"/>
 </form>
 
         <!--INPUT-->
         <div class="input-group mb-3">
-            <input type="text" class="form-control" placeholder="Search for Your Roast" aria-describedby="button-addon2">
+            <label>
+                <input type="text" class="form-control" placeholder="Search for Your Roast" aria-describedby="button-addon2">
+            </label>
             <div class="input-group-append">
                 <button class="btn btn-outline-secondary" type="submit" id="submitTwo">Search</button>
             </div>
+        </div>
+
 
 
             <!--END OF INPUT-->
@@ -43,7 +47,7 @@
 <table>
     <thead>
     <tr>
-        <th>NAME</th>
+        <th>Coffee</th>
         <th>ROAST</th>
     </tr>
     </thead>
