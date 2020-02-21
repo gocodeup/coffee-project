@@ -3,32 +3,49 @@
 <head>
     <meta charset="UTF-8">
     <title></title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+          integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Coffee!</h1>
+<div id="backgroundDiv">
+    <!-- Navbar -->
+    <nav class="navbar navbar-dark bg-dark">
+        <form>
+            <label for="roast-selection"></label>
+            <select id="roast-selection">
+                <option>light</option>
+                <option>medium</option>
+                <option>dark</option>
+                <option>All Roast</option>
+            </select>
+            <input id="submit" type="submit"/>
+        </form>
+        <!--    <a class="navbar-brand">Navbar</a>-->
+        <form class="form-inline">
+            <h1>The Coffee Connection</h1>
+            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+        </form>
+    </nav>
+    <!-- End of Navbar -->
 
-    <form>
-        <label for="roast-selection"></label>
-        <select id="roast-selection">
-            <option>light</option>
-            <option>medium</option>
-            <option>dark</option>
-        </select>
-        <input id="submit" type="submit" />
-    </form>
 
-    <table>
-        <thead>
+    <div class="updatedTable">
+        <table class="table table-striped table-dark">
+            <thead>
             <tr>
-                <th>ID</th>
+                <!--                <th>ID</th>-->
                 <th>NAME</th>
                 <th>ROAST</th>
             </tr>
-        </thead>
-        <tbody id="coffees"></tbody>
-    </table>
+            </thead>
+            <tbody id="coffees"></tbody>
+        </table>
+    </div>
+</div>
 
-    <script src="main.js"></script>
+
+<script src="main.js"></script>
 </body>
 </html>

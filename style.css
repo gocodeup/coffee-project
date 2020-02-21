@@ -1,3 +1,6 @@
+body {
+    background-color: #28a745;
+}
 table {
     border-collapse: collapse;
     margin: 15px 0;
@@ -6,4 +9,9 @@ table {
 td, th {
     border: 1px solid black;
     padding: 5px 10px;
+}
+
+h1 {
+    color: #28a745;
+    margin-right: 9em;
 }
