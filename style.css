@@ -1,9 +1,34 @@
 table {
     border-collapse: collapse;
     margin: 15px 0;
+
+
 }
 
 td, th {
     border: 1px solid black;
     padding: 5px 10px;
+}
+thead{
+    display: grid;
+    grid-template-columns: 3% 33% 33%;
+    grid-template-areas:
+            "ID NAME ROAST";
+}
+p{
+    grid-area: ID;
+    display: flex;
+    flex-direction: column;
+}
+
+h4{
+    grid-area: NAME;
+    display: flex;
+    flex-direction: column;
+}
+
+p{
+    grid-area: ROAST;
+    display: flex;
+    flex-direction: column;
 }
