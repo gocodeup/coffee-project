@@ -1,7 +1,7 @@
 "use strict"
 
 function renderCoffee(coffee) {
-    var html = '<tr class="coffee">';;
+    var html = '<tr class="coffee">';
     html += '<td>' + coffee.name + '</td>';
     html += '<td>' + coffee.roast + '</td>';
     html += '</tr>';
@@ -33,13 +33,13 @@ function updateCoffees(e) {
 function updateCoffeesTwo(e) {
     e.preventDefault(); // don't submit the form, we just want to update the data
     var selectedName = nameSelection.value;
-    var filteredCoffees = [];
+    var filteredCoffeesTwo = [];
     coffees.forEach(function(coffee) {
-        if (coffee.name === selectedName) {
-            filteredCoffees.push(coffee);
+        if (coffee.name.toLowerCase() === selectedName.toLowerCase()) {
+            filteredCoffeesTwo.push(coffee);
         }
     });
-    tbody.innerHTML = renderCoffees(filteredCoffees);
+    tbody.innerHTML = renderCoffees(filteredCoffeesTwo);
 }
 
 // from http://www.ncausa.org/About-Coffee/Coffee-Roasts-Guide
@@ -68,3 +68,4 @@ tbody.innerHTML = renderCoffees(coffees);
 var submitTwoButton = document.querySelector('#submitTwo');
 submitTwoButton.addEventListener('click', updateCoffeesTwo);
 submitButton.addEventListener('click', updateCoffees);
+roastSelection.addEventListener('click', updateCoffeesTwo);
