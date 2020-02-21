@@ -1,3 +1,35 @@
-.jumbotron jumbotron-fluid {
+
+.jumbotron {
+    position: relative;
+    padding: 0;
+    background: ;
+    margin-top: 23px;
+    text-align: center;
+    font-size: 20px;
+    font-family: Playfair Display SC;
+    margin-bottom: 0;
+}
+.container{
+    padding: 1px;
+}
+
+.h1{
+    display: flex;
+    text-align:center;
+}
+
+.navbar{
+    display: flex;
+    background-color: lightblue;
+    padding: 1;
+    margin-top: 10px;
+    font-size: 15px;
+    font-family: Playfair Display SC;
+    margin bottom: 0;
+}
+
+#roast-selection{
 
 }
+
+
