@@ -4,31 +4,60 @@
     <meta charset="UTF-8">
     <title></title>
     <link rel="stylesheet" href="style.css">
+    <link href="coffee-project.css">
 </head>
 <body>
-    <h1>Coffee!</h1>
+<!---JUMBOTRON--->
 
-    <form>
-        <label for="roast-selection"></label>
-        <select id="roast-selection">
-            <option>light</option>
-            <option>medium</option>
-            <option>dark</option>
-        </select>
-        <input id="submit" type="submit" />
-    </form>
+<h1>Euler & Gauss</h1>
+<div class="jumbotron jumbotron-fluid">
+    <div class="container">
+        <h1 class="display-4">Fluid jumbotron</h1>
+        <p class="lead">This is a modified jumbotron that occupies the entire horizontal space of its parent.</p>
+    </div>
+</div>
 
-    <table>
-        <thead>
-            <tr>
-                <th>ID</th>
-                <th>NAME</th>
-                <th>ROAST</th>
-            </tr>
-        </thead>
-        <tbody id="coffees"></tbody>
-    </table>
+<!---END JUMBOTRON-->
 
-    <script src="main.js"></script>
+<form>
+    <label for="roast-selection"></label>
+    <select id="roast-selection">
+        <option>Light</option>
+        <option>Medium</option>
+        <option>Dark</option>
+    </select>
+    <input id="submit" type="submit"/>
+</form>
+
+        <!--INPUT-->
+        <div class="input-group mb-3">
+            <input type="text" class="form-control" placeholder="Search for Your Roast" aria-describedby="button-addon2">
+            <div class="input-group-append">
+                <button class="btn btn-outline-secondary" type="submit" id="submitTwo">Search</button>
+            </div>
+
+
+            <!--END OF INPUT-->
+
+
+<table>
+    <thead>
+    <tr>
+        <th>ID</th>
+        <th>NAME</th>
+        <th>ROAST</th>
+    </tr>
+    </thead>
+    <tbody id="coffees"></tbody>
+</table>
+
+<div class="coffee" id="id">
+    <div class="name" id="roast">
+
+    </div>
+</div>
+
+
+<script src="main.js"></script>
 </body>
 </html>
