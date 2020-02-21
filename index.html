@@ -3,55 +3,62 @@
 <head>
     <meta charset="UTF-8">
     <title></title>
+    <link href="https://fonts.googleapis.com/css?family=Tomorrow&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+          integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<h1>Coffee!</h1>
-
-<form>
-    <label for="roast-selection">Select your roast:</label>
-    <select id="roast-selection">
-        <option>all</option>
-        <option>light</option>
-        <option>medium</option>
-        <option>dark</option>
-    </select>
-    <!--    <table>-->
-    <!--        <thead>-->
-    <!--            <tr>-->
-    <!--                <th>ID</th>-->
-    <!--                <th>NAME</th>-->
-    <!--                <th>ROAST</th>-->
-    <!--            </tr>-->
-    <!--        </thead>-->
-    <!--        <tbody id="coffees"></tbody>-->
-    <!--    </table>-->
-
-    <label for="coffeeSearch">Search for your coffee by name:</label>
-    <input type="text" id="coffeeSearch" placeholder="Coffee Name">
-    <input id="submit" type="submit"/>
-</form>
+<div class="org" id="ripleys">Ripley's Coffee</div>
 
 
-<form>
-    <label for="add-roast">Select roast for new coffee:</label>
-    <select id="add-roast">
-        <option>light</option>
-        <option>medium</option>
-        <option>dark</option>
-    </select>
-    <label for="add-coffee-name">Name your roast:</label>
-    <input type="text" id="add-coffee-name"/>
-    <input id="add-roast-submit" type="submit"/>
-
-
-
-
-
-
-</form>
 <!--    <input type="submit" value="Search">-->
-    <div id="coffeeMenu"></div>
+<div class="row main">
+    <div class="col-sm-12 col-med-6 col-lg-4 text-center column"><br>
+        <div class="row" id="coffeeMenu"></div>
+    </div>
+    <div class="col-sm-12 col-med-6 col-lg-4 text-center column">
+
+        <form>
+            <br>
+            <p><strong>Filter coffee by roast</strong></p>
+            <label for="roast-selection">Select your roast:</label><br>
+            <select id="roast-selection">
+                <option>all</option>
+                <option>light</option>
+                <option>medium</option>
+                <option>dark</option>
+            </select><br>
+
+            <label for="coffeeSearch">Search for your coffee by name:</label><br>
+            <input type="text" id="coffeeSearch" placeholder="Coffee Name"><br><br>
+            <input id="submit" type="submit"/><br><br><br>
+        </form>
+
+
+        <form>
+            <p><strong>Add a new coffee</strong></p>
+            <label for="add-roast">Select roast for new coffee:</label><br>
+            <select id="add-roast">
+                <option>light</option>
+                <option>medium</option>
+                <option>dark</option>
+            </select><br>
+            <label for="add-coffee-name">Name your roast:</label><br>
+            <input type="text" id="add-coffee-name"/><br><br>
+            <input id="add-roast-submit" type="submit"/>
+
+
+        </form>
+
+    </div>
+    <div class="col-sm-12 col-lg-4 text-center column">
+        <br><br><br><br>
+        <p>"At Ripley's,</p><br>
+        <p>no one can hear</p><br>
+        <p>milk steam"</p>
+    </div>
+</div>
 
 <!--<div class="coffee" id="coffees"></div>-->
 

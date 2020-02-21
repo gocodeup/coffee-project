@@ -1,3 +1,5 @@
+
+
 table {
     border-collapse: collapse;
     margin: 15px 0;
@@ -11,3 +13,52 @@ td, th {
 .coffeeID {
     display: none;
 }
+
+#ripleys {
+    text-align: center;
+    font-size: 2.2em;
+    background: #af5226;
+    font-family: 'Tomorrow';
+    margin: 0;
+    font-weight: bolder;
+    color: #ffdead;
+
+}
+
+div {
+    background: rgba(225,225,181,.6);
+}
+.row {
+    height: 80vh;
+    margin: 0;
+    background: none;
+
+
+}
+
+body {
+    background-image: url("img/ripleybackground.jpg");
+    background-position: center;
+    background-size: cover;
+    color: #593624;
+    font-family: 'Tomorrow';
+    font-weight: bold;
+
+
+}
+.coffee {
+    background: none;
+}
+input {
+    background: rgba(225,225,181,.9);
+    text-align: center;
+}
+select {
+    background: rgba(225,225,181,.9);
+    text-align: center;
+}
+
+.column{
+    ;
+}
+
