@@ -1,9 +1,36 @@
+body {
+    /*background-color: #28a745;*/
+}
 table {
     border-collapse: collapse;
-    margin: 15px 0;
+    margin: 3em 0;
+    opacity: 40%;
 }
 
 td, th {
     border: 1px solid black;
     padding: 5px 10px;
+    opacity: 100%;
+    color: chartreuse;
+    font-weight: bold;
+}
+
+h1 {
+    color: #28a745;
+    margin-right: 9em;
+    /*font-family: 'Ewert';*/
+    /*font-family: 'Shadows Into Light';*/
+}
+
+.beans {
+    width: 100%;
+    object-fit: cover;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    z-index: -1;
+}
+
+#navbars {
+    opacity: 80%;
 }
