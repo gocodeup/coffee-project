@@ -3,102 +3,120 @@
 <head>
     <meta charset="UTF-8">
     <title></title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/0035cf14f8.js"></script>
+    <link rel="stylesheet" href="css/bootstrap-v4.2.css">
+    <link rel="stylesheet" href="css/custom.css">
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-
-        <a class="navbar-brand" href="#">Coffee World</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav mr-auto">
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Menu</a>
-                </li>
-            </ul>
-
-            <form class="form-inline my-2 my-lg-0" style="margin-right: 2em">
-                <input class="form-control mr-sm-2" type="search" placeholder="Zip Code" aria-label="Search">
-                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search stores near you</button>
-            </form>
-
-
-            <ul class="navbat-nav mr-auto">
-                <button type="button" class="btn btn-outline-primary">Login</button>
-            </ul>
-        </div>
-
-
-    </nav>
-<!--    THIS IS THE JUMBOTRO-->
-    <div class="jumbotron jumbotron-fluid" id="main-jumbotron">
-        <p class="lead">Coffee that will knock you heart out</p>
-        <hr class="my-4">
-        <p>Coffee so good you'll never stop drinking it!</p>
-        <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
+<!---------------------------------------HEADER NAV BAR START-------------------------------------------->
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="#">Coffee World</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+                <a class="navbar-text" href="#">Order online<span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-body" href="#">Menu</a>
+            </li>
+            <li>
+                <form class="form-inline my-2 my-lg-0">
+                    <input class="form-control mr-sm-2" type="search" placeholder="Zip code" aria-label="Search">
+                    <button class="btn btn-light btn-outline-secondary" type="submit">Search stores near you!</button>
+                </form>
+            </li>
+        </ul>
+        <nav>
+            <img src="img/male-placeholder.png" alt="#" id="sign_in_avatar" class="mr-auto"><a href="#"> Sign up</a>
+        </nav>
     </div>
-<!--END OF JUMBOTRON-->
-
-    </div>
-    <div class="container">
-        <h1>Featured Coffee</h1>
-        <div class="col-9 col-md-24">
-            <div class="card shadow p-3 mb-5 bg-white rounded">
-                <div class="card col-3" style="width: 11rem;">
-                    <div class="row">
-                    <img src="img/petland-files/animal1.jpg" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                        <a href="#" class="btn btn-primary">Order Now</a>
-                    </div>
-                </div>
-                <div class="card col-3" style="width: 11rem;">
-                    <img src="img/petland-files/animal1.jpg" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                        <a href="#" class="btn btn-primary">Order Now</a>
-                    </div>
-                </div>
-                <div class="card col-3" style="width: 11rem;">
-                    <img src="img/petland-files/animal1.jpg" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                        <a href="#" class="btn btn-primary">Order Now</a>
-                    </div>
-                </div>
-                </div>
+</nav>
+<!---------------------------------------HEADER NAV BAR END-------------------------------------------->
+<!---------------------------------------JUMBOTRON START-------------------------------------------->
+<div class="container">
+    <div class="d-none d-md-block">
+        <div class="jumbotron jumbotron-fluid">
+            <div id="jumbotron_container">
+                <h1 class="display-4">Welcome to Pizza World!</h1>
             </div>
         </div>
     </div>
+</div>
+<!---------------------------------------JUMBOTRON END-------------------------------------------->
+<!---------------------------------------CARDS START-------------------------------------------->
 
-    <form>
-        <label for="roast-selection"></label>
-        <select id="roast-selection">
-            <option>light</option>
-            <option>medium</option>
-            <option>dark</option>
-        </select>
-        <input id="submit" type="submit" />
-    </form>
+<div class="container">
+    <h1>Featured Pets</h1>
 
-    <table>
-        <thead>
-            <tr>
-                <th>ID</th>
-                <th>NAME</th>
-                <th>ROAST</th>
-            </tr>
-        </thead>
-        <tbody id="coffees"></tbody>
-    </table>
+    <div class="row">
 
-    <script src="main.js"></script>
+        <!--        START OF CARD-->
+        <div class="col-12 col-md-4">
+            <div class="card shadow p-3 mb-5 bg-white rounded">
+                <img src="img/animal1.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Rover</h5>
+                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid amet cumque doloribus eos, iusto nam officiis quisquam temporibus. Aspernatur autem culpa ea fugit iste natus non nostrum possimus rem vel.</p>
+                    <a href="#" class="btn btn-primary">Learn More</a>
+                </div>
+            </div>
+        </div>
+        <!--        END OF CARD-->
+
+        <!--        START OF CARD-->
+        <div class="col-12 col-md-4">
+            <div class="card shadow p-3 mb-5 bg-white rounded">
+                <img src="img/animal1.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Rover</h5>
+                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid amet cumque doloribus eos, iusto nam officiis quisquam temporibus. Aspernatur autem culpa ea fugit iste natus non nostrum possimus rem vel.</p>
+                    <a href="#" class="btn btn-primary">Learn More</a>
+                </div>
+            </div>
+        </div>
+        <!--        END OF CARD-->
+
+        <!--        START OF CARD-->
+        <div class="col-12 col-md-4">
+            <div class="card shadow p-3 mb-5 bg-white rounded">
+                <img src="img/animal1.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Rover</h5>
+                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid amet cumque doloribus eos, iusto nam officiis quisquam temporibus. Aspernatur autem culpa ea fugit iste natus non nostrum possimus rem vel.</p>
+                    <a href="#" class="btn btn-primary">Learn More</a>
+                </div>
+            </div>
+        </div>
+        <!--        END OF CARD-->
+        <!---------------------------------------CARDS END-------------------------------------------->
+
+<form>
+    <label for="roast-selection"></label>
+    <select id="roast-selection">
+        <option>light</option>
+        <option>medium</option>
+        <option>dark</option>
+    </select>
+    <input id="submit" type="submit" />
+</form>
+
+<table>
+    <thead>
+    <tr>
+        <th>ID</th>
+        <th>NAME</th>
+        <th>ROAST</th>
+    </tr>
+    </thead>
+    <tbody id="coffees"></tbody>
+</table>
+
+<script src="js/main.js"></script>
 </body>
 </html>
