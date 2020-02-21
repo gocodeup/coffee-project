@@ -6,25 +6,30 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Coffee!</h1>
+    <h1 class="mainHeader">Coffee!</h1>
 
-    <form>
+    <form name="form1">
         <label for="roast-selection"></label>
         <select id="roast-selection">
             <option>light</option>
             <option>medium</option>
             <option>dark</option>
         </select>
+        <label for="roastType"></label>
+        <input type="search" id="roastType" name="roastType">
         <input id="submit" type="submit" />
     </form>
 
+<!--    <form><input type="search" id="roast-type">-->
+<!--        <input id="submit" type="submit" /></form>-->
+
     <table>
         <thead>
-            <tr>
-                <th>ID</th>
-                <th>NAME</th>
-                <th>ROAST</th>
-            </tr>
+<!--            <tr>-->
+<!--                <th>ID</th>-->
+<!--                <th>NAME</th>-->
+<!--                <th>ROAST</th>-->
+<!--            </tr>-->
         </thead>
         <tbody id="coffees"></tbody>
     </table>
