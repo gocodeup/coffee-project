@@ -2,33 +2,58 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title></title>
+    <title>Coffee Project</title>
+
+    <!--custom css-->
     <link rel="stylesheet" href="style.css">
+
+    <!--bootstrap css-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 </head>
 <body>
     <h1>Coffee!</h1>
 
+
+    <div class="jumbotron jumbotron-fluid">
+        <div class="container">
+            <h1 class="display-4">Fluid jumbotron</h1>
+            <p class="lead">This is a modified jumbotron that occupies the entire horizontal space of its parent.</p>
+        </div>
+    </div>
+
+
+    <div class="container">
+        <div class="card">
+            <div class="row" id="coffees"></div>
+        </div>
+    </div>
+    
+
     <form>
-        <label for="roast-selection"></label>
-        <select id="roast-selection">
+        <select  id="roast-selection">
+            <label for="roast-selection"></label>
+            <option>all</option>
             <option>light</option>
             <option>medium</option>
             <option>dark</option>
+
         </select>
-        <input id="submit" type="submit" />
     </form>
-
-    <table>
-        <thead>
-            <tr>
-                <th>ID</th>
-                <th>NAME</th>
-                <th>ROAST</th>
-            </tr>
-        </thead>
-        <tbody id="coffees"></tbody>
-    </table>
-
+    
+    <!------------The search Input------------>
+    <input type="text" class="form-control" name="x" id="inputSelection" placeholder="Search">
+    
+    <!--custom JS-->
     <script src="main.js"></script>
+
+    <!-- Font Awesome js-->
+    <script src="https://kit.fontawesome.com/bed02793ca.js" crossorigin="anonymous"></script>
+
+    <!--Bootstrap JS-->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+
 </body>
 </html>
