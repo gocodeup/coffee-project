@@ -13,9 +13,9 @@
 // refactor for taking coffes out of table into divs
 
 function renderCoffee(coffee) {
-    var html = '<div class="coffee">';
+    var html = '<div class="coffee col-sm-4 col-md-6">';
     html += '<p class="coffeeID">' + coffee.id + '</p>';
-    html += '<h3><strong>' + coffee.name + '</strong></h3>';
+    html += '<h5><strong>' + coffee.name + '</strong></h5>';
     html += '<p>' + coffee.roast + '</p>';
     html += '</div>';
 
