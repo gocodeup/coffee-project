@@ -1,0 +1,29 @@
+nav a {
+    color: darkgrey;
+}
+
+#sign_in_avatar {
+    height: 1em;
+    width: 1em;
+}
+
+.jumbotron {
+    background-image: linear-gradient(to bottom, rgba(0,0,0,0.0) 0%,rgba(0,0,0,0.0) 100%), url("../img/pizza.png");
+    margin-top: 2em;
+}
+
+#jumbotron-container {
+    padding: 0;
+}
+
+h1 {
+    text-align: center;
+    opacity: 70%;
+    background-color: white;
+}
+
+#shopping_cart {
+    height: 1.3em;
+    width: 1.3em;
+
+}
