@@ -28,22 +28,26 @@
             <!-- Coffee List -->
             <section class="col-8 border-right border-dark" id="coffeeList">
                 <div id="coffeeid" class="row d-flex flex-wrap align-items-end">
-                    <!-- Coffee Selection shows here -->
+            <!-- Coffee Selection shows here -->
                 </div>
             </section>
 
             <!-- Coffee Input -->
             <section class="col-4" id="coffeeInput">
                 <form>
-                    <label for="roast-selection"></label>
-                    <select id="roast-selection">
+                    <label for="roast-selection">Roast Type</label>
+                    <select id="roast-selection" class="custom-select">
+                        <option selected>All</option>
                         <option>light</option>
                         <option>medium</option>
                         <option>dark</option>
                     </select>
-                    <input id="submit" type="submit" />
+                    <label for="coffeeName">Coffee Name</label>
+                    <input id="coffeeName" class="form-control" type="text" placeholder="Default input">
                 </form>
+
             </section>
+
 
             <!-- Coffee Size -->
             <section class="col-12" id="coffeeSizes"></section>
