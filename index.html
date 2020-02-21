@@ -11,23 +11,28 @@
     <form>
         <label for="roast-selection"></label>
         <select id="roast-selection">
-            <option>light</option>
-            <option>medium</option>
-            <option>dark</option>
+            <option class="rselected">light</option>
+            <option class="rselected">medium</option>
+            <option class="rselected" id="droast">dark</option>
+            <option class="rselected" id="allroast">all</option>
         </select>
-        <input id="submit" type="submit" />
+<!--        <input id="submit" type="submit" />-->
     </form>
 
-    <table>
-        <thead>
-            <tr>
-                <th>ID</th>
-                <th>NAME</th>
-                <th>ROAST</th>
-            </tr>
-        </thead>
-        <tbody id="coffees"></tbody>
-    </table>
+
+    <form id="forSearch">
+        <label for="search-box">Find Your Flavor</label>
+        <input type="search" id="search-box" placeholder="Coffee"/>
+        <button typeof="submit" id="search-submit">Search</button>
+    </form>
+
+    <div id="coffees">
+            <div>
+<!--                <th>ID</th>-->
+                <h1>NAME</h1>
+                <p>ROAST</p>
+            </div>
+    </div>
 
     <script src="main.js"></script>
 </body>
