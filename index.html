@@ -8,31 +8,88 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Coffee!</h1>
+    <!-- Main Container Start -->
+    <div class="container">
 
-    <form>
-        <label for="roast-selection"></label>
-        <select id="roast-selection">
-            <option>light</option>
-            <option>medium</option>
-            <option>dark</option>
-        </select>
-        <input id="submit" type="submit" />
-    </form>
+        <!-- Jumbotron Row Start -->
+        <div class="row" id="jumbotron">
 
-    <table>
-        <thead>
-            <tr>
-                <th>ID</th>
-                <th>NAME</th>
-                <th>ROAST</th>
-            </tr>
-        </thead>
-        <tbody id="coffees"></tbody>
-    </table>
-    <div id="coffeeid">
+        </div>
+        <!-- Jumbotron Row End -->
+
+        <!-- Coffee Row Start -->
+        <div class="row border border-dark" id="coffeeRow">
+
+            <!-- Coffee Title -->
+            <section class="col-12 border-bottom border-dark text-center" id="coffeeTitle">
+                <h1>Coffee!</h1>
+            </section>
+
+            <!-- Coffee List -->
+            <section class="col-8 border-right border-dark" id="coffeeList">
+                <div id="coffeeid" class="row d-flex flex-wrap align-items-end">
+                    <!-- Coffee Selection shows here -->
+                </div>
+            </section>
+
+            <!-- Coffee Input -->
+            <section class="col-4" id="coffeeInput">
+                <form>
+                    <label for="roast-selection"></label>
+                    <select id="roast-selection">
+                        <option>light</option>
+                        <option>medium</option>
+                        <option>dark</option>
+                    </select>
+                    <input id="submit" type="submit" />
+                </form>
+            </section>
+
+            <!-- Coffee Size -->
+            <section class="col-12" id="coffeeSizes"></section>
+        </div>
+        <!-- Coffee Row End -->
+
+        <!-- Pasteries Row Start -->
+        <div class="row" id="pasteriesRow">
+
+        </div>
+        <!-- Pasteries Row End -->
+
+        <!-- Dog Treats Row Start -->
+        <div class="row" id="dogTreatsRow">
+
+        </div>
+        <!-- Dog Treats Row End -->
+
+        <!-- Footer Start -->
+        <footer>
+
+        </footer>
+        <!-- Footer End -->
 
     </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     <script src="main.js"></script>
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>

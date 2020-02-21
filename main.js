@@ -1,11 +1,11 @@
 "use strict"
 
 function renderCoffee(coffee) {
-    var html = '<tr class="coffee">';
-    html += '<td>' + coffee.id + '</td>';
-    html += '<td>' + coffee.name + '</td>';
-    html += '<td>' + coffee.roast + '</td>';
-    html += '</tr>';
+    var html = "";
+    html += "<span class='col-5 mx-2 p-0 my-2'>";
+    html += "<h1 class='d-inline-block mr-1'>" + coffee.name + "</h1>";
+    html += "<p class='d-inline-block mr-2'>" + coffee.roast + "</p>";
+    html += "</span>";
 
     return html;
 }
@@ -48,7 +48,7 @@ var coffees = [
     {id: 14, name: 'French', roast: 'dark'},
 ];
 
-var tbody = document.querySelector('#coffees');
+var tbody = document.querySelector('#coffeeid');
 var submitButton = document.querySelector('#submit');
 var roastSelection = document.querySelector('#roast-selection');
 
