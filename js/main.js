@@ -2,10 +2,10 @@
 
 function renderCoffee(coffee) {
     var html = '<tr class="coffee">';
-    html += '<td>' + coffee.id + '</td>';
-    html += '<td>' + coffee.name + '</td>';
-    html += '<td>' + coffee.roast + '</td>';
-    html += '</tr>';
+    html = html + '<td>' + coffee.id + '</td>';
+    html = html +'<td>' + coffee.name + '</td>';
+    html = html + '<td>' + coffee.roast + '</td>';
+    html = html + '</tr>';
 
     return html;
 }
@@ -13,7 +13,7 @@ function renderCoffee(coffee) {
 function renderCoffees(coffees) {
     var html = '';
     for(var i = coffees.length - 1; i >= 0; i--) {
-        html += renderCoffee(coffees[i]);
+        html = html + renderCoffee(coffees[i]);
     }
     return html;
 }
