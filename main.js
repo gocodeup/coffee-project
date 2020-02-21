@@ -48,6 +48,16 @@ var coffees = [
     {id: 14, name: 'French', roast: 'dark'},
 ];
 
+// coffees.forEach(function (x) {
+//     coffees.id.sort(x)
+// });
+// function coffeeSort(coffees) {
+//     var bucket = [];
+//     for (var i = 0; i < coffees.length; i++) {
+//         coffees[i].id.sort()
+//     } bucket.push(coffees[i].sort())
+// }
+
 var tbody = document.querySelector('#coffees');
 var submitButton = document.querySelector('#submit');
 var roastSelection = document.querySelector('#roast-selection');
