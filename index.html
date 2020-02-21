@@ -13,32 +13,41 @@
 <body>
     <h1>Coffee!</h1>
 
-    <form>
-        <label for="roast-selection"></label>
-        <select id="roast-selection">
-            <option>all</option>
-            <option>light</option>
-            <option>medium</option>
-            <option>dark</option>
-        </select>
-        <input type="text" name="inputSelection" placeholder="search" id="inputSelection" >
-        <input id="submit" type="submit" />
-    </form>
+
+    <div class="jumbotron jumbotron-fluid">
+        <div class="container">
+            <h1 class="display-4">Fluid jumbotron</h1>
+            <p class="lead">This is a modified jumbotron that occupies the entire horizontal space of its parent.</p>
+        </div>
+    </div>
 
 
     <div class="container">
         <div class="card">
             <div class="row" id="coffees"></div>
-
         </div>
-
     </div>
+    
 
+    <form>
+        <select  id="roast-selection">
+            <label for="roast-selection"></label>
+            <option>all</option>
+            <option>light</option>
+            <option>medium</option>
+            <option>dark</option>
 
-
-
+        </select>
+    </form>
+    
+    <!------------The search Input------------>
+    <input type="text" class="form-control" name="x" id="inputSelection" placeholder="Search">
+    
     <!--custom JS-->
     <script src="main.js"></script>
+
+    <!-- Font Awesome js-->
+    <script src="https://kit.fontawesome.com/bed02793ca.js" crossorigin="anonymous"></script>
 
     <!--Bootstrap JS-->
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
