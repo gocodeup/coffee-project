@@ -8,8 +8,10 @@ td, th {
     padding: 5px 10px;
 }
 
-.side-nav {
+#card_container{
+    border: 1px solid black;
+}
 
-
-
+#side_nav{
+    border: 1px solid black;
 }
