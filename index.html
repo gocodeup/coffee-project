@@ -4,44 +4,48 @@
     <meta charset="UTF-8">
     <title></title>
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+          integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 </head>
 <body>
-    <h1>Slammin Coffee!</h1>
+<h1>Slammin Coffee!</h1>
 
-    <!--roast selector-->
-    <form>
+<!--roast selector-->
+
+        <thead>
+        <div>
+            <h4 class="name"></h4>
+            <p class="roast"></p>
+        </div>
+        </thead>
+<div class="pageContainer">
+    <form class="rightSide">
         <label for="roast-selection"></label>
         <select id="roast-selection">
             <option>light</option>
             <option>medium</option>
             <option>dark</option>
         </select>
-        <input id="submit" type="submit" />
+        <input id="submit" type="submit"/>
+        <input type="text" id="myInput" placeholder="Search for names.." title="Type in a name">
     </form>
     <!------------------->
 
 
-    <table>
+    <table class="leftSide">
 
-        <thead>
-            <div>
-                <p class="ID">ID</p>
-                <h4 class="name">NAME</h4>
-                <p class="roast">ROAST</p>
-            </div>
-        </thead>
 
         <tbody class="coffee-list" id="coffees">
-        <div>
+        <div class="coffeeNamesDesign">
             <h4 class="coffeeName"></h4>
             <p class="coffeeRoast"></p>
         </div>
         </tbody>
 
     </table>
+</div>
 
-    <script src="main.js"></script>
+<script src="main.js"></script>
 
 </body>
 </html>

@@ -6,13 +6,37 @@
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
+    padding: 8px;
 }
 
 .name {
     background: lightblue;
+    padding: 10px;
 
 }
 
 .roast {
     background: lightcoral;
+    padding: 8px;
 }
+
+
+.coffeeNamesDesign{
+
+}
+
+.pageContainer{
+    display: grid;
+    grid-template-columns: 50% 40%;
+    grid-template-areas:
+                "leftSide rightside";
+
+}
+.leftSide{
+    grid-area: leftSide;
+}
+
+.rightSide{
+    grid-area: rightSide;
+}
+

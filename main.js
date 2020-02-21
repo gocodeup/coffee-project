@@ -56,6 +56,17 @@ var coffees = [
     {id: 14, name: 'French', roast: 'dark'},
 ];
 
+function myFunction() {
+    var bucket = [];
+    var input = document.getElementById("myInput").value.toLowerCase();
+    coffees.forEach(function(coffee) {
+        if (coffee.name.toLowerCase().includes(input)) {
+            bucket.push(coffee)
+        }
+    });
+    tbody.innerHTML = renderCoffees(bucket);
+}
+
 // coffee list
 var tbody = document.querySelector('#coffees');
 
@@ -66,3 +77,7 @@ var roastSelection = document.querySelector('#roast-selection');
 tbody.innerHTML = renderCoffees(coffees);
 
 submitButton.addEventListener('click', updateCoffees);
+
+var textInput = document.querySelector('#myInput');
+
+textInput.addEventListener("keyup", myFunction);
