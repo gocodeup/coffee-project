@@ -1,5 +1,17 @@
 "use strict";
 
+document.getElementById("coffeeName").addEventListener('click', coffeeThing, false);
+function coffeeThing() {
+    document.addEventListener("keyup", updateCoffees, false);
+    document.getElementById("coffeeName").addEventListener("change", removeCoffee, false);
+
+}
+function removeCoffee() {
+    document.removeEventListener("keyup", updateCoffees, false);
+    document.getElementById("coffeeName").removeEventListener("change", removeCoffee, false);
+
+}
+
 function renderCoffee(coffee) {
     var html = "";
     html += "<span class='col-5 mx-2 p-0 my-2'>";
@@ -23,9 +35,12 @@ function updateCoffees(e) {
     e.preventDefault(); // don't submit the form, we just want to update the data
     var selectedRoast = roastSelection.value;
     var filteredCoffees = [];
+    var roast = document.forms.form1.coffeeName.value;
+    console.log("success");
+    console.log(roast);
     // console.log(selectedRoast);
     coffees.forEach(function(coffee) {
-        if (coffee.roast === selectedRoast) {
+        if ((coffee.roast === selectedRoast || selectedRoast === "all" )&& coffee.name.toLowerCase().includes(roast.toLowerCase())) {
             filteredCoffees.push(coffee);
         }
     });
@@ -58,4 +73,3 @@ var roastSelection = document.querySelector('#roast-selection');
 tbody.innerHTML = renderCoffees(coffees);
 
 submitButton.addEventListener('change', updateCoffees);
-
