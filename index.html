@@ -4,7 +4,18 @@
     <meta charset="UTF-8">
     <title></title>
     <link rel="stylesheet" href="style.css">
-    <link href="coffee-project.css">
+
+    <!--CSS Stylesheet-->
+    <link rel="stylesheet" href="coffee-project.css">
+
+    <!--Google Fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans|Playfair+Display+SC:400,700&display=swap" rel="stylesheet">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+          integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+
+
 </head>
 <body>
 <!---JUMBOTRON--->
@@ -13,18 +24,47 @@
 <div class="jumbotron jumbotron-fluid">
     <div class="container">
         <h1 class="display-4">Euler & Gauss</h1>
-        <p class="lead">This is a modified jumbotron that occupies the entire horizontal space of its parent.</p>
+        <p class="lead">Craft Coffee</p>
     </div>
 </div>
 
 <!---END JUMBOTRON-->
 
+<!--NAV BAR-->
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="#">Pick Your Coffee</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="nvbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="navbar-nav">
+            <li class="nav-item active">
+                <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Features</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Pricing</a>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Dropdown link
+                </div>
+
+</nav>
+
+<!--END OF NAV-->
+
+
+
 <form>
     <label for="roast-selection"></label>
     <select id="roast-selection">
-        <option>light</option>
         <option>medium</option>
         <option>dark</option>
+        <option>all</option>
     </select>
     <input id="submit" type="submit"/>
 </form>
@@ -53,6 +93,9 @@
     </thead>
     <tbody id="coffees"></tbody>
 </table>
+
+
+<!---DIV-->
 
 <div id="result"></div>
 

@@ -44,20 +44,20 @@ var search = function updateCoffeesTwo(e) {
 
 // from http://www.ncausa.org/About-Coffee/Coffee-Roasts-Guide
 var coffees = [
-    {id: 1, name: 'Light City', roast: 'light'},
-    {id: 2, name: 'Half City', roast: 'light'},
-    {id: 3, name: 'Cinnamon', roast: 'light'},
-    {id: 4, name: 'City', roast: 'medium'},
-    {id: 5, name: 'American', roast: 'medium'},
-    {id: 6, name: 'Breakfast', roast: 'medium'},
-    {id: 7, name: 'High', roast: 'dark'},
-    {id: 8, name: 'Continental', roast: 'dark'},
-    {id: 9, name: 'New Orleans', roast: 'dark'},
-    {id: 10, name: 'European', roast: 'dark'},
+    {id: 1, name: 'The Greenbelt', roast: 'medium'},
+    {id: 2, name: 'Discovery Green', roast: 'medium'},
+    {id: 3, name: 'New York', roast: 'medium'},
+    {id: 4, name: 'Boulder', roast: 'medium'},
+    {id: 5, name: 'Moab', roast: 'medium'},
+    {id: 6, name: 'The Good Morning', roast: 'medium'},
+    {id: 7, name: 'Poe', roast: 'dark'},
+    {id: 8, name: 'Lovecraft', roast: 'dark'},
+    {id: 9, name: 'The Developer', roast: 'dark'},
+    {id: 10, name: 'Ethiopian', roast: 'dark'},
     {id: 11, name: 'Espresso', roast: 'dark'},
     {id: 12, name: 'Death Roast', roast: 'dark'},
-    {id: 13, name: 'Italian', roast: 'dark'},
-    {id: 14, name: 'French', roast: 'dark'},
+    {id: 13, name: 'Italiano', roast: 'dark'},
+    {id: 14, name: 'Francais', roast: 'dark'},
 ];
 
 var tbody = document.querySelector('#coffees');
@@ -72,10 +72,11 @@ submitButton.addEventListener('click', updateCoffees);
 var result = "";
 
 document.getElementById('searchbar').addEventListener('keydown', function(event) {
+    // document.getElementById('result').innerHTML += drinks[i].name;
     var drinks = [];
     var key = event.key.toLowerCase();
     var charList = 'abcdefghijklmnopqrstuvwxyz';
-    if (charList.indexOf(key) === -1) return;
+    if (charList.indexOf(key) === -1) return; charList: "abcdefghijklmnopqrstuvwxyz";
     result = result + key;
     console.log(result);
     coffees.forEach(function (coffee,i) {
@@ -91,6 +92,3 @@ document.getElementById('searchbar').addEventListener('keydown', function(event)
     });
 
 
-
-
-// nameSelection.addEventListener('click', updateCoffeesTwo);
