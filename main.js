@@ -1,8 +1,10 @@
-"use strict"
+"use strict";
 
+
+//This creates a table of coffee name and roast
 function renderCoffee(coffee) {
     var html = '<tr class="coffee">';
-    html += '<td>' + coffee.id + '</td>';
+    // html += '<td>' + coffee.id + '</td>';
     html += '<td>' + coffee.name + '</td>';
     html += '<td>' + coffee.roast + '</td>';
     html += '</tr>';
@@ -10,6 +12,7 @@ function renderCoffee(coffee) {
     return html;
 }
 
+//This
 function renderCoffees(coffees) {
     var html = '';
     for(var i = coffees.length - 1; i >= 0; i--) {
