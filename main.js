@@ -39,6 +39,7 @@ function renderCoffees(coffees) {
     for(var i = 0; i <= coffees.length - 1; i++) {
         html += renderCoffee(coffees[i]);
     }
+    
     return html;
 }
 
@@ -55,7 +56,7 @@ function updateCoffees(e) {
         }
     });
 
-    tbody.innerHTML = renderCoffees(filteredCoffees);
+    coffeeMenu.innerHTML = renderCoffees(filteredCoffees);
 }
 
 function updateCoffeesByName(e) {
@@ -69,7 +70,7 @@ function updateCoffeesByName(e) {
         }
     });
 
-    tbody.innerHTML = renderCoffees(filteredCoffees);
+    coffeeMenu.innerHTML = renderCoffees(filteredCoffees);
 }
 
 // from http://www.ncausa.org/About-Coffee/Coffee-Roasts-Guide
@@ -90,18 +91,43 @@ var coffees = [
     {id: 14, name: 'French', roast: 'dark'},
 ];
 
-var tbody = document.querySelector('#coffees');
+var coffeeMenu = document.querySelector('#coffeeMenu');
 var submitButton = document.querySelector('#submit');
 var roastSelection = document.querySelector('#roast-selection');
-var coffeeSearch = document.querySelector('#coffeeSearch')
+var coffeeSearch = document.querySelector('#coffeeSearch');
+var addCoffeeButton = document.querySelector("#add-roast-submit");
 
-tbody.innerHTML = renderCoffees(coffees);
+
+coffeeMenu.innerHTML = renderCoffees(coffees);
 
 // submitButton.addEventListener('click', updateCoffees);
 
 roastSelection.addEventListener('change', updateCoffees)
 
 coffeeSearch.addEventListener('input', updateCoffeesByName)
+
+function addCoffee(e){
+    e.preventDefault();
+    var newCoffeeRoast = document.getElementById("add-roast");
+    var newCoffeeName = document.getElementById("add-coffee-name");
+    if (newCoffeeName.value !== "") {
+        var coffeeObj = {
+            id: coffees.length,
+            name: newCoffeeName.value,
+            roast: newCoffeeRoast.value
+        };
+
+            coffees.push(coffeeObj);
+    }
+    roastSelection.value = "all";
+    updateCoffees(e)
+            coffeeMenu.inneHTML = renderCoffees(coffees);
+
+}
+addCoffeeButton.addEventListener('click', addCoffee);
+
+
+
 
 // coffeeSearch = document.addEventListener('input',function(query) {
 //     coffees.foreach(function(coffee){

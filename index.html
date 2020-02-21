@@ -16,7 +16,6 @@
         <option>medium</option>
         <option>dark</option>
     </select>
-
     <!--    <table>-->
     <!--        <thead>-->
     <!--            <tr>-->
@@ -32,9 +31,29 @@
     <input type="text" id="coffeeSearch" placeholder="Coffee Name">
     <input id="submit" type="submit"/>
 </form>
-<!--    <input type="submit" value="Search">-->
 
-<div class="coffee" id="coffees"></div>
+
+<form>
+    <label for="add-roast">Select roast for new coffee:</label>
+    <select id="add-roast">
+        <option>light</option>
+        <option>medium</option>
+        <option>dark</option>
+    </select>
+    <label for="add-coffee-name">Name your roast:</label>
+    <input type="text" id="add-coffee-name"/>
+    <input id="add-roast-submit" type="submit"/>
+
+
+
+
+
+
+</form>
+<!--    <input type="submit" value="Search">-->
+    <div id="coffeeMenu"></div>
+
+<!--<div class="coffee" id="coffees"></div>-->
 
 <script src="main.js"></script>
 </body>
