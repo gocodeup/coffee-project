@@ -8,6 +8,9 @@
     <script src="https://kit.fontawesome.com/0035cf14f8.js"></script>
     <link rel="stylesheet" href="css/bootstrap-v4.2.css">
 
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <!--<link rel="stylesheet" href="css/custom.css">-->
 
 </head>
@@ -29,7 +32,7 @@
             </li>
             <li>
                 <form class="form-inline my-2 my-lg-0">
-                    <input class="form-control mr-sm-2" type="search"  id="myInput" placeholder="Search Coffee" aria-label="Search">
+                    <input class="form-control mr-sm-2" type="search" placeholder="Search Coffee" aria-label="Search">
                     <button class="btn btn-light btn-outline-secondary" type="submit">Find your favorite coffee!</button>
                 </form>
             </li>
@@ -277,44 +280,147 @@
 
         <!------------------------------------- SIDE NAV START--------------------------------------------->
 
-        <form>
-            <label for="roast-selection"></label>
-            <select id="roast-selection">
-                <option>light</option>
-                <option>medium</option>
-                <option>dark</option>
-            </select>
-            <input id="submit" type="submit" />
-        </form>
+<!--        <form>-->
+<!--            <label for="roast-selection"></label>-->
+<!--            <select id="roast-selection">-->
+<!--                <option>light</option>-->
+<!--                <option>medium</option>-->
+<!--                <option>dark</option>-->
+<!--            </select>-->
+<!--            <input id="submit" type="submit" />-->
+<!--        </form>-->
 
-        <table>
-            <thead>
-            <tr>
-                <th>ID</th>
-                <th>NAME</th>
-                <th>ROAST</th>
-            </tr>
-            </thead>
-            <tbody id="coffees"></tbody>
-        </table>
+<!--        <table>-->
+<!--            <thead>-->
+<!--            <tr>-->
+<!--                <th>ID</th>-->
+<!--                <th>NAME</th>-->
+<!--                <th>ROAST</th>-->
+<!--            </tr>-->
+<!--            </thead>-->
+<!--            <tbody id="coffees"></tbody>-->
+<!--        </table>-->
 
-<input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names..">
+<!--<input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names..">-->
 
-<ul id="myUL">
-    <li><a href="#">Adele</a></li>
-    <li><a href="#">Agnes</a></li>
+<!--<ul id="myUL">-->
+<!--    <li><a href="#">Adele</a></li>-->
+<!--    <li><a href="#">Agnes</a></li>-->
 
-    <li><a href="#">Billy</a></li>
-    <li><a href="#">Bob</a></li>
+<!--    <li><a href="#">Billy</a></li>-->
+<!--    <li><a href="#">Bob</a></li>-->
 
-    <li><a href="#">Calvin</a></li>
-    <li><a href="#">Christina</a></li>
-    <li><a href="#">Cindy</a></li>
-</ul>
+<!--    <li><a href="#">Calvin</a></li>-->
+<!--    <li><a href="#">Christina</a></li>-->
+<!--    <li><a href="#">Cindy</a></li>-->
+<!--</ul>-->
+
+
+<input class="form-control" id="myInput" type="text" placeholder="Search..">
+
+
+<table class="table table-bordered table-striped">
+    <thead>
+    <tr>
+        <th>ID</th>
+        <th>NAME</th>
+        <th>ROAST</th>
+    </tr>
+    </thead>
+
+    <tbody id="myTable">
+    <tr>
+        <td>14</td>
+        <td>French</td>
+        <td>dark</td>
+    </tr>
+    <tr>
+        <td>13</td>
+        <td>Italian</td>
+        <td>dark</td>
+    </tr>
+    <tr>
+        <td>12</td>
+        <td>Viennese</td>
+        <td>dark</td>
+    </tr>
+    <tr>
+        <td>11</td>
+        <td>Espresso</td>
+        <td>dark</td>
+    </tr>
+    <tr>
+        <td>10</td>
+        <td>European</td>
+        <td>dark</td>
+    </tr>
+    <tr>
+        <td>9</td>
+        <td>New Orleans</td>
+        <td>dark</td>
+    </tr>
+    <tr>
+        <td>8</td>
+        <td>Continental</td>
+        <td>dark</td>
+    </tr>
+    <tr>
+        <td>7</td>
+        <td>High</td>
+        <td>dark</td>
+    </tr>
+    <tr>
+        <td>6</td>
+        <td>Breakfast</td>
+        <td>medium</td>
+    </tr>
+    <tr>
+        <td>5</td>
+        <td>American</td>
+        <td>medium</td>
+    </tr>
+    <tr>
+        <td>4</td>
+        <td>City</td>
+        <td>medium</td>
+    </tr>
+    <tr>
+        <td>3</td>
+        <td>Cinnamon</td>
+        <td>light</td>
+    </tr>
+    <tr>
+        <td>2</td>
+        <td>Half City</td>
+        <td>light</td>
+    </tr>
+    <tr>
+        <td>1</td>
+        <td>Light City</td>
+        <td>light</td>
+    </tr>
+    </tbody>
+</table>
+
+
 
 <script src="js/main.js"></script>
 <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+
+<script>
+    $(document).ready(function(){
+        $("#myInput").on("keyup", function() {
+            var value = $(this).val().toLowerCase();
+            $("#myTable tr").filter(function() {
+                $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+            });
+        });
+    });
+</script>
+
+
 </body>
 </html>
