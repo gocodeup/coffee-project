@@ -6,52 +6,25 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Coffee!</h1>
+<h1>Coffee!</h1>
 
-    <form>
-        <label for="roast-selection"></label>
-        <select id="roast-selection">
-            <option>light</option>
-            <option>medium</option>
-            <option>dark</option>
-        </select>
-        <input id="submit" type="submit" />
-    </form>
-
-<!--    <div>-->
-<!--        <h1 id="name"></h1>-->
-<!--        <p id="roast"></p>-->
-<!--    </div>-->
-
-    <div id="1"></div>
-    <div id="2"></div>
-    <div id="3"></div>
-    <div id="4"></div>
-    <div id="5"></div>
-    <div id="6"></div>
-    <div id="7"></div>
-    <div id="8"></div>
-    <div id="9"></div>
-    <div id="10"></div>
-    <div id="11"></div>
-    <div id="12"></div>
-    <div id="13"></div>
-    <div id="14"></div>
+<form>
+    <label for="roast-selection"></label>
+    <select id="roast-selection">
+        <option>light</option>
+        <option>medium</option>
+        <option>dark</option>
+    </select>
+    <input id="submit" type="submit"/>
+    <label for="searchCoffee"></label>
+    <input type="text" id="searchCoffee" placeholder="Search Coffee">
+</form>
 
 
+<!--Coffee Render-->
+<div id="coffees"></div>
 
 
-
-    <table>
-        <thead>
-            <tr>
-                <th>NAME</th>
-                <th>ROAST</th>
-            </tr>
-        </thead>
-        <tbody id="coffees"></tbody>
-    </table>
-
-    <script src="main.js"></script>
+<script src="main.js"></script>
 </body>
 </html>
