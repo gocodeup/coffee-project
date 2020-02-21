@@ -1,4 +1,6 @@
-
+#main-header{
+    text-align: center;
+}
 .coffee-list {
     width: 50vw;
     height: 70vh;
@@ -28,6 +30,7 @@
 .pageContainer{
     display: grid;
     grid-template-columns: 50% 40%;
+    grid-template-rows: repeat(7, 100px);
     grid-template-areas:
                 "leftSide rightside";
 
@@ -37,6 +40,14 @@
 }
 
 .rightSide{
-    grid-area: rightSide;
+    grid-area: 1/2/3/-1;
+}
+
+.dropdown1{
+    width: 100px;
+}
+
+.dropdown2{
+    grid-area: 2/2/3/3;
 }
 

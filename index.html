@@ -8,7 +8,7 @@
           integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 </head>
 <body>
-<h1>Slammin Coffee!</h1>
+<h1 id="main-header">Slammin Euro Coffee!</h1>
 
 <!--roast selector-->
 
@@ -19,15 +19,17 @@
         </div>
         </thead>
 <div class="pageContainer">
-    <form class="rightSide">
+    <form>
         <label for="roast-selection"></label>
-        <select id="roast-selection">
+        <!--Roast dropdown-->
+        <select class="form-control form-control-lg dropdown1" id="roast-selection">
             <option>light</option>
             <option>medium</option>
             <option>dark</option>
         </select>
-<!--        <input id="submit" type="submit"/>-->
-        <input type="text" id="myInput" placeholder="Search for names.." title="Type in a name">
+        <!--Coffee Search-->
+        <input class="form-control dropdown2" type="text" id="myInput" placeholder="Search for coffees" title="Type in a name">
+        <input id="submit" type="submit"/>
     </form>
     <!------------------->
 
