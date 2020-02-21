@@ -3,10 +3,10 @@
 // HTML function
 
 function renderCoffee(coffee) {
-    var html = '<div class="coffee">';
+    var html = '';
     // html += '<p>' + coffee.id + '</p>';
-    html += '<h4>' + coffee.name + '</h4>';
-    html += '<p>' + coffee.roast + '</p>';
+    html += '<h4 class="coffeeName">' + coffee.name + '</h4>';
+    html += '<p class="coffeeRoast">' + coffee.roast + '</p>';
     html += '</div>';
 
     return html;

@@ -1,17 +1,18 @@
 table {
     border-collapse: collapse;
     margin: 15px 0;
-
-
 }
 
+
 .coffee {
-    width: 100%;
-    height: 50%;
+    width: 60vw;
+    height: 30%;
     background: lightgrey;
     display: grid;
-    grid-template-columns: 50% 50%;
-    grid-template-rows: repeat(14, 75px);
+    grid-template-columns: 20% 10%;
+    grid-template-rows: repeat(14, 57px);
+    align-items: center;
+    padding-left: 20px;
 }
 
 .name {
