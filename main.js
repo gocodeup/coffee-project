@@ -44,22 +44,14 @@ function updateCoffees(e) {
     coffees.forEach(function (coffee) {
         if (coffee.roast === selectedRoast) {
             filteredCoffees.push(coffee);
-        } else if (selectedRoast === "All Roast"){
+        } else if (selectedRoast === "All Roast") {
             filteredCoffees.push(coffee);
         }
     });
     tbody.innerHTML = renderCoffees(filteredCoffees);
 }
-// function searchCoffee(string) {
-//     string.preventDefault();
-//     var typeCoffee = searchString.value;
-//     var coffeeEntered = [];
-//     coffees.forEach(function (coffee) {
-//         if (coffee.name.toLowerCase() === typeCoffee.toLowerCase()){
-//             coffeeEntered.push(coffee)
-//         }
-//     });
-//     tbody.innerHTML = renderCoffees(coffeeEntered);
+
+
 // from http://www.ncausa.org/About-Coffee/Coffee-Roasts-Guide
 var coffees = [
     {id: 1, name: 'Light City', roast: 'light'},
@@ -81,30 +73,25 @@ coffees.reverse();
 var tbody = document.querySelector('#coffees');
 var submitButton = document.querySelector('#submit');
 var roastSelection = document.querySelector('#roast-selection');
+var searchBox = document.querySelector("#searchBox");
+var searchBoxButton = document.querySelector("#searchBoxButton");
 
 tbody.innerHTML = renderCoffees(coffees);
 
 submitButton.addEventListener('click', updateCoffees);
+searchBoxButton.addEventListener("click", searchCoffee);
+searchBox.addEventListener("input",searchCoffee);
 
-//search bar functionality
-// function myFunction() {
-//     // Declare variables
-//     var input, filter, ul, li, a, i, txtValue;
-//     input = document.getElementById('myInput');
-//     filter = input.value.toUpperCase();
-//     ul = document.getElementById("myUL");
-//     li = ul.getElementsByTagName('li');
-//
-//     // Loop through all list items, and hide those who don't match the search query
-//     for (i = 0; i < li.length; i++) {
-//         a = li[i].getElementsByTagName("a")[0];
-//         txtValue = a.textContent || a.innerText;
-//         if (txtValue.toUpperCase().indexOf(filter) > -1) {
-//             li[i].style.display = "";
-//         } else {
-//             li[i].style.display = "none";
-//         }
-//     }
-// }
+function searchCoffee(string) {
+    string.preventDefault();
+    var typeCoffee = searchBox.value;
+    var coffeeEntered = [];
+    coffees.forEach(function (coffee) {
+        if (coffee.name.toLowerCase() === typeCoffee.toLowerCase()){
+            coffeeEntered.push(coffee)
+        }
+    });
+tbody.innerHTML = renderCoffees(coffeeEntered)}
+
 
 
