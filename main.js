@@ -5,9 +5,10 @@
 function renderCoffee(coffee) {
     var html = '';
     // html += '<p>' + coffee.id + '</p>';
+    html += '<span>';
     html += '<h4 class="coffeeName">' + coffee.name + '</h4>';
     html += '<p class="coffeeRoast">' + coffee.roast + '</p>';
-    html += '</div>';
+    html += '</span>';
 
     return html;
 }
@@ -22,7 +23,7 @@ function renderCoffees(coffees) {
     return html;
 }
 
-// Coffee roaster function
+// Coffee roaster selection
 
 function updateCoffees(e) {
     e.preventDefault(); // don't submit the form, we just want to update the data
@@ -55,9 +56,11 @@ var coffees = [
     {id: 14, name: 'French', roast: 'dark'},
 ];
 
-
+// coffee list
 var tbody = document.querySelector('#coffees');
+
 var submitButton = document.querySelector('#submit');
+
 var roastSelection = document.querySelector('#roast-selection');
 
 tbody.innerHTML = renderCoffees(coffees);

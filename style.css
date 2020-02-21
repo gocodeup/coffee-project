@@ -1,18 +1,11 @@
-table {
-    border-collapse: collapse;
-    margin: 15px 0;
-}
 
-
-.coffee {
-    width: 60vw;
-    height: 30%;
+.coffee-list {
+    width: 50vw;
+    height: 70vh;
     background: lightgrey;
-    display: grid;
-    grid-template-columns: 20% 10%;
-    grid-template-rows: repeat(14, 57px);
-    align-items: center;
-    padding-left: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
 }
 
 .name {
