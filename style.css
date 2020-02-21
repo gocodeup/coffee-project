@@ -5,30 +5,20 @@ table {
 
 }
 
-td, th {
-    border: 1px solid black;
-    padding: 5px 10px;
-}
-thead{
+.coffee {
+    width: 100%;
+    height: 50%;
+    background: lightgrey;
     display: grid;
-    grid-template-columns: 3% 33% 33%;
-    grid-template-areas:
-            "ID NAME ROAST";
-}
-p{
-    grid-area: ID;
-    display: flex;
-    flex-direction: column;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: repeat(14, 75px);
 }
 
-h4{
-    grid-area: NAME;
-    display: flex;
-    flex-direction: column;
+.name {
+    background: lightblue;
+
 }
 
-p{
-    grid-area: ROAST;
-    display: flex;
-    flex-direction: column;
+.roast {
+    background: lightcoral;
 }

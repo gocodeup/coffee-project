@@ -1,8 +1,10 @@
 "use strict";
 
+// HTML function
+
 function renderCoffee(coffee) {
     var html = '<div class="coffee">';
-    html += '<p>' + coffee.id + '</p>';
+    // html += '<p>' + coffee.id + '</p>';
     html += '<h4>' + coffee.name + '</h4>';
     html += '<p>' + coffee.roast + '</p>';
     html += '</div>';
@@ -10,13 +12,17 @@ function renderCoffee(coffee) {
     return html;
 }
 
+// Coffee ID sort list
+
 function renderCoffees(coffees) {
     var html = '';
-    for(var i = coffees.length - 1; i >= 0; i--) {
+    for(var i = 0; i < coffees.length; i++) {
         html += renderCoffee(coffees[i]);
     }
     return html;
 }
+
+// Coffee roaster function
 
 function updateCoffees(e) {
     e.preventDefault(); // don't submit the form, we just want to update the data
@@ -30,6 +36,7 @@ function updateCoffees(e) {
     tbody.innerHTML = renderCoffees(filteredCoffees);
 }
 
+// Coffee Array
 // from http://www.ncausa.org/About-Coffee/Coffee-Roasts-Guide
 var coffees = [
     {id: 1, name: 'Light City', roast: 'light'},
@@ -48,15 +55,6 @@ var coffees = [
     {id: 14, name: 'French', roast: 'dark'},
 ];
 
-// coffees.forEach(function (x) {
-//     coffees.id.sort(x)
-// });
-// function coffeeSort(coffees) {
-//     var bucket = [];
-//     for (var i = 0; i < coffees.length; i++) {
-//         coffees[i].id.sort()
-//     } bucket.push(coffees[i].sort())
-// }
 
 var tbody = document.querySelector('#coffees');
 var submitButton = document.querySelector('#submit');
