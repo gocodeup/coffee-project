@@ -11,7 +11,7 @@ function renderCoffee(coffee) {
 
 function renderCoffees(coffees) {
     var html = '';
-    for(var i = 0; i < coffees.length; i++) {
+    for (var i = 0; i < coffees.length; i++) {
         html += renderCoffee(coffees[i]);
     }
     return html;
@@ -20,34 +20,35 @@ function renderCoffees(coffees) {
 function updateCoffees(e) {
     e.preventDefault(); // don't submit the form, we just want to update the data
     var selectedRoast = roastSelection.value;
-    var allRoasts = coffees;
     var filteredCoffees = [];
-    coffees.forEach(function(coffee) {
+    coffees.forEach(function (coffee) {
         if (coffee.roast === selectedRoast) {
             filteredCoffees.push(coffee);
-        }else if (selectedRoast === "all") {
-            filteredCoffees.push();
+        } else if (selectedRoast === "all") {
+            filteredCoffees.push(coffee);
         }
     });
     tbody.innerHTML = renderCoffees(filteredCoffees);
 }
+
 function searchCoffee(string) {
     string.preventDefault();
     var typeCoffee = searchString.value;
     var coffeeEntered = [];
     coffees.forEach(function (coffee) {
-        if (coffee.name.toLowerCase() === typeCoffee.toLowerCase()){
-        coffeeEntered.push(coffee)
+        if (coffee.name.toLowerCase() === typeCoffee.toLowerCase()) {
+            coffeeEntered.push(coffee)
         }
     });
     tbody.innerHTML = renderCoffees(coffeeEntered);
 }
+
 function activeSearch(string) {
     string.preventDefault();
     var filter = searchString.value.toLowerCase();
     var bucket = [];
     coffees.forEach(function (letter) {
-        if (letter.name.toLowerCase().indexOf(filter) > -1){
+        if (letter.name.toLowerCase().indexOf(filter) > -1) {
             bucket.push(letter);
         }
 
@@ -55,9 +56,25 @@ function activeSearch(string) {
     tbody.innerHTML = renderCoffees(bucket);
 }
 
+function addNewCoffee(input) {
+    input.preventDefault();
+    var newCoffeeEntered = addCoffee.value;
+    var roastSelected = selectRoast.value;
+    var newObj = {
+        id: 15,
+        name: newCoffeeEntered,
+        roast: roastSelected
+    };
 
+    if (submitCoffee) {
+        coffees.push(newObj);
+    }
+    tbody.innerHTML = renderCoffees(coffees);
+    localStorage.setItem('StoreObj', JSON.stringify(newObj));
+    // window.localStorage.setItem("newObj", );
+}
 
-// from http://www.ncausa.org/About-Coffee/Coffee-Roasts-Guide
+// from http://www.ncausaz.org/About-Coffee/Coffee-Roasts-Guide
 var coffees = [
     {id: 1, name: 'Light City', roast: 'light'},
     {id: 2, name: 'Half City', roast: 'light'},
@@ -81,8 +98,9 @@ var tbody = document.querySelector('#coffees');
 var roastSelection = document.querySelector('#roast-selection');
 var searchString = document.querySelector("#search-box");
 var searchEntry = document.querySelector("#search-submit");
-
-
+var addCoffee = document.querySelector('#addCofBox');
+var selectRoast = document.querySelector("#roastSelectAdd");
+var submitCoffee = document.querySelector("#addCof");
 
 tbody.innerHTML = renderCoffees(coffees);
 
@@ -91,5 +109,10 @@ roastSelection.addEventListener('input', updateCoffees);
 searchString.addEventListener('input', searchCoffee);
 
 searchString.addEventListener('input', activeSearch);
+
+submitCoffee.addEventListener('click', addNewCoffee);
+
+
+
 
 
