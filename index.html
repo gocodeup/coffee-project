@@ -4,13 +4,15 @@
     <meta charset="UTF-8">
     <title></title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+          integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 </head>
 <body>
     <h1>Coffee!</h1>
 
     <form>
         <label for="roast-selection"></label>
-        <select id="roast-selection">
+        <select id="roast-selection" class="btn-dark">
             <option class="rselected">light</option>
             <option class="rselected">medium</option>
             <option class="rselected" id="droast">dark</option>
@@ -22,18 +24,20 @@
 
     <form id="forSearch">
         <label for="search-box">Find Your Flavor</label>
-        <input type="search" id="search-box" placeholder="Coffee"/>
-        <button typeof="submit" id="search-submit">Search</button>
+        <input type="search" id="search-box" placeholder="Coffee" />
+        <button typeof="submit" id="search-submit" class="btn-dark">Search</button>
     </form>
 
     <form action="">
+        <label for="addCofBox">Add new flavor</label>
         <input type="text" id="addCofBox" placeholder="Add your coffee">
-        <select name="roastAdd" id="roastSelectAdd">
+        <label for="roastSelectAdd">Add your roast</label>
+        <select name="roastAdd" id="roastSelectAdd" class="btn-dark">
             <option class="rselected">light</option>
             <option class="rselected">medium</option>
             <option class="rselected">dark</option>
         </select>
-        <button type="submit" id="addCof">Add</button>
+        <button type="submit" id="addCof" class="btn-dark">Add</button>
     </form>
 
     <div id="coffees">

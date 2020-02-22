@@ -61,7 +61,7 @@ function addNewCoffee(input) {
     var newCoffeeEntered = addCoffee.value;
     var roastSelected = selectRoast.value;
     var newObj = {
-        id: 15,
+        id: coffees.length + 1,
         name: newCoffeeEntered,
         roast: roastSelected
     };
@@ -69,10 +69,13 @@ function addNewCoffee(input) {
     if (submitCoffee) {
         coffees.push(newObj);
     }
+    localStorage.setItem('coffees', JSON.stringify(coffees));
+    coffeesArray = JSON.parse(localStorage.getItem('coffees'));
     tbody.innerHTML = renderCoffees(coffees);
-    localStorage.setItem('StoreObj', JSON.stringify(newObj));
-    // window.localStorage.setItem("newObj", );
 }
+// localStorage.removeItem('coffees');
+//////
+
 
 // from http://www.ncausaz.org/About-Coffee/Coffee-Roasts-Guide
 var coffees = [
@@ -93,6 +96,7 @@ var coffees = [
 ];
 
 
+
 var tbody = document.querySelector('#coffees');
 // var submitButton = document.querySelector('#droast');
 var roastSelection = document.querySelector('#roast-selection');
@@ -102,7 +106,8 @@ var addCoffee = document.querySelector('#addCofBox');
 var selectRoast = document.querySelector("#roastSelectAdd");
 var submitCoffee = document.querySelector("#addCof");
 
-tbody.innerHTML = renderCoffees(coffees);
+var coffeesArray = localStorage.getItem('coffees') ? tbody.innerHTML = renderCoffees(JSON.parse(localStorage.getItem('coffees'))) : tbody.innerHTML = renderCoffees(coffees);
+console.log(localStorage)
 
 roastSelection.addEventListener('input', updateCoffees);
 
