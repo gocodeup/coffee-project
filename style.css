@@ -1,13 +1,23 @@
-table {
-    border-collapse: collapse;
-    margin: 15px 0;
+
+body {
+    background-color: #e5dbce;
+    color: #452711;
+}
+#jumbotron {
+    height: 80vh;
+    background-image: url("bonding-cold-cozy-dog-374845.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#companyTitle {
+    font-size: 3em;
 }
 
-td, th {
-    border: 1px solid black;
-    padding: 5px 10px;
+#coffeeRow, #pastriesRow, #dogTreatsRow {
+    background-color: #86735d;
 }
-
 #coffeeInput hr {
     border: 4px solid rgba(0,0,0,.1);
 }
+
+
