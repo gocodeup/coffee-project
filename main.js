@@ -40,20 +40,20 @@ function updateCoffees(e) {
 // Coffee Array
 // from http://www.ncausa.org/About-Coffee/Coffee-Roasts-Guide
 var coffees = [
-    {id: 1, name: 'Light City', roast: 'light'},
-    {id: 2, name: 'Half City', roast: 'light'},
-    {id: 3, name: 'Cinnamon', roast: 'light'},
-    {id: 4, name: 'City', roast: 'medium'},
-    {id: 5, name: 'American', roast: 'medium'},
-    {id: 6, name: 'Breakfast', roast: 'medium'},
-    {id: 7, name: 'High', roast: 'dark'},
-    {id: 8, name: 'Continental', roast: 'dark'},
-    {id: 9, name: 'New Orleans', roast: 'dark'},
-    {id: 10, name: 'European', roast: 'dark'},
-    {id: 11, name: 'Espresso', roast: 'dark'},
-    {id: 12, name: 'Viennese', roast: 'dark'},
-    {id: 13, name: 'Italian', roast: 'dark'},
-    {id: 14, name: 'French', roast: 'dark'},
+    {id: 1, name: 'Light City', roast: 'LIGHT'},
+    {id: 2, name: 'Half City', roast: 'LIGHT'},
+    {id: 3, name: 'Cinnamon', roast: 'LIGHT'},
+    {id: 4, name: 'City', roast: 'MEDIUM'},
+    {id: 5, name: 'American', roast: 'MEDIUM'},
+    {id: 6, name: 'Breakfast', roast: 'MEDIUM'},
+    {id: 7, name: 'High', roast: 'DARK'},
+    {id: 8, name: 'Continental', roast: 'DARK'},
+    {id: 9, name: 'New Orleans', roast: 'DARK'},
+    {id: 10, name: 'European', roast: 'DARK'},
+    {id: 11, name: 'Espresso', roast: 'DARK'},
+    {id: 12, name: 'Viennese', roast: 'DARK'},
+    {id: 13, name: 'Italian', roast: 'DARK'},
+    {id: 14, name: 'French', roast: 'DARK'},
 ];
 
 function myFunction() {
