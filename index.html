@@ -2,25 +2,25 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title></title>
+    <title>Coffee Project</title>
     <link rel="stylesheet" href="style.css">
 
     <!--CSS Stylesheet-->
     <link rel="stylesheet" href="coffee-project.css">
 
     <!--Google Fonts-->
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans|Playfair+Display+SC:400,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans|Playfair+Display+SC:400,700&display=swap"
+          rel="stylesheet">
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
           integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
-
-
 </head>
 <body>
+
+
 <!---JUMBOTRON--->
-
-
+    <div class="div1">
 <div class="jumbotron jumbotron-fluid">
     <div class="container">
         <h1 class="display-4">Euler & Gauss</h1>
@@ -30,82 +30,49 @@
 
 <!---END JUMBOTRON-->
 
-<!--NAV BAR-->
-
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <a class="navbar-brand" href="#">Pick Your Coffee</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="nvbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNavDropdown">
-        <ul class="navbar-nav">
-            <li class="nav-item active">
-                <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Features</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Pricing</a>
-            </li>
-            <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    Dropdown link
-                </div>
-
-</nav>
-
-<!--END OF NAV-->
 
 
-
-<form>
-    <label for="roast-selection"></label>
-    <select id="roast-selection">
-        <option>medium</option>
-        <option>dark</option>
-        <option>all</option>
-    </select>
-    <input id="submit" type="submit"/>
-</form>
-
-        <!--INPUT-->
+    <!--INPUT-->
+        <div class="coffeeContainer">
+    <div class="div2 SearchRoast">
         <div class="input-group mb-3">
+            <!--COFFEES AND ROAST SELECTION-->
+            <form>
+                <label for="roast-selection"></label>
+                <h3>What's Your Roast Strength?</h3>
+                <select class="form-control form-control-md dropdown1" id="roast-selection">
+                    <option>medium</option>
+                    <option>dark</option>
+                    <option>all</option>
+                </select>
+                <input id="roastSubmit" type="submit"/>
+            </form>
+
+<div class="artisinalContainer">
             <label>
-                <input type="text" class="form-control" placeholder="Search for Your Roast" id="searchbar" aria-describedby="button-addon2">
-            </label>
-            <div class="input-group-append">
+                <h3>Artisinal Coffee</h3>
+                <input type="text" class="form-control" placeholder="Search for Your Roast" id="searchbar">
                 <button class="btn btn-outline-secondary" type="submit" id="submitTwo">Search</button>
-            </div>
+            </label>
         </div>
-
-
-
+    </div>
             <!--END OF INPUT-->
 
 
-<table>
-    <thead>
-    <tr>
-        <th>Coffee</th>
-        <th>ROAST</th>
-    </tr>
-    </thead>
-    <tbody id="coffees"></tbody>
-</table>
+            <!---DIV 3--->
 
-
-<!---DIV-->
-
-<div id="result"></div>
-
-<div class="coffee" id="id">
-    <div class="name" id="roast">
-
-    </div>
+    <div class="div3">
+    <table>
+        <thead>
+        </thead>
+        <tbody id="coffees"></tbody>
+    </table>
 </div>
 
 
-<script src="main.js"></script>
+    <!---JS SCRIPT-->
+    <script src="main.js"></script>
+    </div>
+        </div>
 </body>
 </html>
