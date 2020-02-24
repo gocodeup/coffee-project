@@ -9,6 +9,7 @@
 </head>
 <body>
 
+
 <!--------------------------JUMBOTRON BEGINS--------------------------->
 <div class="jumbotron jumbotron-fluid m-0" >
     <div class="container text-center ">
@@ -19,14 +20,14 @@
 <!---------------------------JUMBOTRON ENDS----------------------------->
 
 <!----------------------------NAVBAR BEGINS----------------------------->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <nav class="navbar navbar-expand-lg navbar-light">
         <a class="navbar-brand" href="#">Jameson's Java</a>
         <ul class="navbar-nav mr-auto">
 <!--DROPDOWN FOR ROAST-->
-            <li class="nav-item dropdown">
+            <li class="nav-item dropdown d-flex">
                 <form>
                     <label for="roast-selection"></label>
-                    <select id="roast-selection" class="buttons">
+                     <select id="roast-selection" class="buttons m-0 align-middle ">
                         <option class="rselected">light</option>
                         <option class="rselected">medium</option>
                         <option class="rselected">dark</option>
@@ -67,18 +68,29 @@
 <!----------------------------NAVBAR ENDS----------------------------->
 
 
+<div class="row">
 
-
-
-
-
-    <div id="coffees">
-            <div>
-<!--                <th>ID</th>-->
-                <h1>NAME</h1>
-                <p>ROAST</p>
-            </div>
+<div class="card col-6" style="width: 18rem;">
+    <div class="card-body" id="coffees">
+        <div>
+            <!--                <th>ID</th>-->
+            <h1>NAME</h1>
+            <p>ROAST</p>
+        </div>
     </div>
+</div>
+
+
+
+<!--    <div id="coffees">-->
+<!--            <div>-->
+<!--&lt;!&ndash;                <th>ID</th>&ndash;&gt;-->
+<!--                <h1>NAME</h1>-->
+<!--                <p>ROAST</p>-->
+<!--            </div>-->
+<!--    </div>-->
+</div>
+
 
     <script src="main.js"></script>
 
