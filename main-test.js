@@ -35,18 +35,6 @@ function renderCoffees(coffees) {
     return html;
 }
 
-// function updateCoffees(e) {
-//     e.preventDefault(); // don't submit the form, we just want to update the data
-//     var selectedRoast = roastSelection.value;
-//     var filteredCoffees = [];
-//     coffees.forEach(function(coffee) {
-//         if (coffee.roast === selectedRoast) {
-//             filteredCoffees.push(coffee);
-//         }
-//     });
-//     tbody.innerHTML = renderCoffees(filteredCoffees);
-// }
-
 function updateCoffees(e) {
     e.preventDefault(); // don't submit the form, we just want to update the data
     var selectedRoast = roastSelection.value;
@@ -60,8 +48,7 @@ function updateCoffees(e) {
 }
 
 //this function was added to work with user input when searching for coffee by typing into search field.  captures input with "coffee-input" id.
-function chooseCoffee(e) {
-    // console.log(e);  this will show each key input in the console.  not needed for actual functionality
+function chooseCoffee() {
     var html = "";
     for (var i = 0; i < coffees.length; i++) {
         if (coffees[i].name.toLowerCase().includes(document.getElementById("coffee-input").value.toLowerCase())) {
@@ -95,10 +82,7 @@ var submitButton = document.querySelector('#submit');
 var roastSelection = document.querySelector('#roast-selection');
 
 //this auto selects the coffees that show up on page as user types letter at a time
-// document.getElementById("coffee-input").addEventListener("keyup", chooseCoffee);
-
 document.getElementById("coffee-input").addEventListener("keyup", chooseCoffee);
-
 
 tbody.innerHTML = renderCoffees(coffees);
 
