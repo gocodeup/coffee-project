@@ -3,8 +3,10 @@ body {
     background-color: #e5dbce;
     color: #452711;
 }
+
 #jumbotron {
     height: 80vh;
+    max-width: 75vw;
     background-image: url("bonding-cold-cozy-dog-374845.jpg");
     background-repeat: no-repeat;
     background-size: cover;
