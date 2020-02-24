@@ -34,7 +34,7 @@ function updateCoffees(e) {
             }
         });
         tbody.innerHTML = renderCoffees(filteredCoffees); //display the bucket
-    } else { // do it match the all? do this
+    } else if (coffees.roast === " "){ // do it match the all? do this
         tbody.innerHTML = renderCoffees(coffees); //show all coffee items
     }
 
@@ -50,6 +50,8 @@ function updateInputCoffees(e) {
     coffees.forEach(function(coffee) { //
         if(coffee.name.toLowerCase().match(selectedRoast) || coffee.roast.toLowerCase().match(selectedRoast)) {
             filteredCoffees.push(coffee);
+        }else{
+            document.getElementById("error-message").innerHTML = "<img src='img/sad.png'>" + "Whoops, we could not find your roast"; //show error message
         }
     });
     tbody.innerHTML = renderCoffees(filteredCoffees);

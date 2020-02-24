@@ -1,13 +1,14 @@
 *{
     --main-color:#191513;
     --background-color:#E7E6E4;
-    --card-color:#AD8A62;
-    --active-card-color:#4B332A;
-    --secondary-background-color:#796A67;
+    --card-color:#A48A6A;
+    --active-card-color:#7E2913;
+    --secondary-background-color:#CFBDA8;
 }
 
-#foo {
-    color: var(--main-color);
+body {
+    color: var(--background-color);
+    font-family: 'Open Sans', sans-serif;
 }
 
 .container{
@@ -20,31 +21,92 @@
     overflow-x: hidden;
 }
 
-.jumbotron {
-    background-image: url("img/o-COFFEE-facebook.jpg");
-    background-size: cover;
-    width: 100%;
+/*---------------Jumbotron Video---------------*/
+#video-text{
+    position: absolute;
+    z-index: 1;
+    color: var(--background-color);
+}
+
+#header-text{
+    font-size: 5em;
+    font-family: 'Crete Round', serif ;
+}
+
+#header-sub-text{
+    font-size: 2em;
+    font-family: 'Open Sans', sans-serif;
+    padding: 0px;
+}
+
+#bean-img{
+    width: 100px;
     height: auto;
 }
 
-#image {
-    height: 200px;
+div.jumbotron {
+    padding: 0px;
+    margin: 0;
+}
+
+/*---------------Top Navigation---------------*/
+#top-nav{
+    position: sticky;
+    background-color: var(--main-color);
+    color: var(--background-color);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    height: 5%;
+}
+
+#bean-nav-img{
+    height: 5em;
     width: auto;
 }
-.card-img-top img {
+
+a:link{
+    color: var(--background-color);
 }
+
+a:link:hover{
+    color: var(--secondary-background-color);
+}
+
+/*---------------Top Navigation---------------*/
+#section-text{
+    font-size: 3em;
+    font-family: 'Crete Round', serif ;
+    padding-top: 5%;
+}
+
+/*---------------Card Images---------------*/
+#image {
+    height: 300px;
+    width: auto;
+    position: relative;
+    transform: perspective(459px) rotateX(0deg) rotateY(0deg) translateZ(0px);
+}
+
+
+/*---------------Card Container---------------*/
 
 #big-div {
     margin: 3em;
     border: none;
+    border-radius: 5%;
+    background-color: var(--card-color);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
-/*#image:hover {*/
-/*    height: 225px;*/
-/*    width: auto;*/
-/*}*/
-#big-div:hover {
-    height: 225px;
+#big-div:hover{
+    height: 300px;
     width: auto;
+    background-color: var(--active-card-color);
 }
 
+
+/*---------------Bottom Navigation---------------*/
+
+#bottom-nav{
+    /*background-color: var(--active-card-color);*/
+    background-color: var(--main-color);
+}
