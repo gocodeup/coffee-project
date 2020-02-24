@@ -79,7 +79,7 @@ tbody.innerHTML = renderCoffees(coffees);
 
 submitButton.addEventListener('click', updateCoffees);
 searchBoxButton.addEventListener("click", searchCoffee);
-searchBox.addEventListener("input",searchCoffee);
+searchBox.addEventListener("input",updateCoffees);
 
 function searchCoffee(string) {
     string.preventDefault();

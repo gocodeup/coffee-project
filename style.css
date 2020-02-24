@@ -58,8 +58,29 @@ h1 {
     color: #28a745;
     font-family: 'Gelasio';
 }
+.dropSubmit{
+    background-color: transparent;
+    color: #28a745;
+    border: #28a745 solid 1px;
+    border-radius: 10%;
+}
+.dropBack{
+    background-color: transparent;
+    color: #28a745 ;
+    border: none;
+    font-size: 1.5em;
 
-
+#searchBox{
+    background-color: transparent;
+    color: #28a745;
+    border: solid #28a745 1px;
+}
+.dropItems{
+    background-color: transparent;
+    color: #28a745 ;
+    border: none;
+    font-size: 1.5em;
+}
 /*body {*/
 /*    background-color: #28a745;*/
 /*}*/
