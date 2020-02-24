@@ -17,8 +17,10 @@ function test(e){
     let userAdd = {};
     let roast = document.querySelector('#userRoast');
     let name = document.querySelector('#userCoffeeName');
+    let upperName = name.value.replace(name.value[0], name.value[0].toUpperCase());
+    console.log(upperName);
     userAdd.id = (coffees.length) + 1;
-    userAdd.name = name.value;
+    userAdd.name = upperName;
     userAdd.roast = roast.value;
     console.log(userAdd);
     coffees.push(userAdd);
@@ -28,7 +30,7 @@ function test(e){
 
 function renderCoffee(coffee) {
     var html = "";
-    html += "<span class='col-5 mx-2 p-0 my-2'>";
+    html += "<span class='col-5 mx-2 p-0 my-2 animated flipInX'>";
     html += "<h1 class='d-inline-block mr-1'>" + coffee.name + "</h1>";
     html += "<p class='d-inline-block mr-2'>" + coffee.roast + "</p>";
     html += "</span>";
