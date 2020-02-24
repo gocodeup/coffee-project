@@ -1,0 +1,25 @@
+table {
+    border-collapse: collapse;
+    margin: 15px 0;
+}
+
+td, th {
+    border: 1px solid black;
+    padding: 5px 10px;
+}
+.hidden{
+    display: none;
+}
+
+tr{
+    display: none;
+}
+
+.header {
+    padding: 60px;
+    text-align: center;
+    background-image: url("coffee-banner.jpg");
+    background-size: cover;
+    color: white;
+    font-size: 30px;
+}
