@@ -12,6 +12,20 @@ function removeCoffee() {
 
 }
 
+function test(e){
+    e.preventDefault();
+    let userAdd = {};
+    let roast = document.querySelector('#userRoast');
+    let name = document.querySelector('#userCoffeeName');
+    userAdd.id = (coffees.length) + 1;
+    userAdd.name = name.value;
+    userAdd.roast = roast.value;
+    console.log(userAdd);
+    coffees.push(userAdd);
+    tbody.innerHTML = renderCoffees(coffees);
+
+}
+
 function renderCoffee(coffee) {
     var html = "";
     html += "<span class='col-5 mx-2 p-0 my-2'>";
@@ -38,7 +52,7 @@ function updateCoffees(e) {
     var roast = document.forms.form1.coffeeName.value;
     console.log("success");
     console.log(roast);
-    // console.log(selectedRoast);
+    console.log(selectedRoast);
     coffees.forEach(function(coffee) {
         if ((coffee.roast === selectedRoast || selectedRoast === "all" )&& coffee.name.toLowerCase().includes(roast.toLowerCase())) {
             filteredCoffees.push(coffee);
@@ -69,11 +83,11 @@ var coffees = [
 var tbody = document.querySelector('#coffeeid');
 var submitButton = document.getElementById('roast-selection');
 var roastSelection = document.querySelector('#roast-selection');
-var userSubmitCoffee = document.getElementById('userCoffeeSug');
+let userSubmit = document.querySelector('#userCoffeeSug');
 
 
 tbody.innerHTML = renderCoffees(coffees);
 
 submitButton.addEventListener('change', updateCoffees);
-userSubmitCoffee.addEventListener('submit',updateCoffees);
+userSubmit.addEventListener('click',test);
 
