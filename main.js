@@ -69,7 +69,11 @@ var coffees = [
 var tbody = document.querySelector('#coffeeid');
 var submitButton = document.getElementById('roast-selection');
 var roastSelection = document.querySelector('#roast-selection');
+var userSubmitCoffee = document.getElementById('userCoffeeSug');
+
 
 tbody.innerHTML = renderCoffees(coffees);
 
 submitButton.addEventListener('change', updateCoffees);
+userSubmitCoffee.addEventListener('submit',updateCoffees);
+
