@@ -69,12 +69,13 @@ var search =  function updateCoffees(e) {
             (selectedRoast.toLowerCase().search('all') > -1)) {
 
             filteredCoffees.push(coffee);
+            console.log(filteredCoffees);
             document.getElementById('result').innerHTML += coffee.name + "<br><br>" + coffee.roast + "<br><br>"
         }
     });
 
     //propagate the selected roast to our global tracker value
-    desiredRoast=selectedRoast.toLowerCase()
+    desiredRoast=selectedRoast.toLowerCase();
     return filteredCoffees;
 };
 //
@@ -210,23 +211,99 @@ document.getElementById('searchbar').addEventListener('keydown', function(event)
 });
 */
 
+
+var cardContainer;
+let createCoffeeCard = (coffee) => {
+
+    let card = document.createElement('div');
+    card.className = 'card shadow cursor-pointer';
+
+    let cardBody = document.createElement('div');
+    cardBody.className = 'card-body';
+
+    let name = document.createElement('h5');
+    name.innerText = coffee.name;
+    name.className = 'card-name';
+
+    let roast = document.createElement('div');
+    roast.innerText = coffee.roast;
+    roast.className = 'card-roast';
+
+    cardBody.appendChild(name);
+    cardBody.appendChild(roast);
+    card.appendChild(cardBody);
+    cardContainer.appendChild(card);
+};
+
+let initListOfCoffees = () => {
+    if (cardContainer) {
+        document.getElementById('card-container').replaceWith(cardContainer);
+        return;
+    }
+
+    cardContainer = document.getElementById('card-container');
+    coffees.forEach((coffee) => {
+        createCoffeeCard(coffee);
+    });
+};
+initListOfCoffees();
+
+
 document.getElementById('searchbar').addEventListener('keydown', function(event) {
-    //document.getElementById('result').innerHTML = "";
+
     var drinks = [];
     var key = event.key.toLowerCase();
     var charList = 'abcdefghijklmnopqrstuvwxyz';
 
     //if not a valid character do nothing
     if ((charList.indexOf(key) === -1) && (event.keyCode !== 8)) {
+        drinks = coffees;
+        cardContainer = "";
+        let createCoffeeCard = (coffee) => {
+
+            let card = document.createElement('div');
+            card.className = 'card shadow cursor-pointer';
+
+            let cardBody = document.createElement('div');
+            cardBody.className = 'card-body';
+
+            let name = document.createElement('h5');
+            name.innerText = coffee.name;
+            name.className = 'card-name';
+
+            let roast = document.createElement('div');
+            roast.innerText = coffee.roast;
+            roast.className = 'card-roast';
+
+            cardBody.appendChild(name);
+            cardBody.appendChild(roast);
+            card.appendChild(cardBody);
+            cardContainer.appendChild(card);
+        };
+
+        let initListOfCoffees = () => {
+            if (cardContainer) {
+                document.getElementById('card-container').replaceWith(cardContainer);
+                return;
+            }
+
+            cardContainer = document.getElementById('card-container');
+            drinks.forEach((coffee) => {
+                createCoffeeCard(coffee);
+            });
+        };
+        initListOfCoffees();
         return;
     }
 
     //character is valid, so clear values
+    drinks = [];
     document.getElementById('result').innerHTML = "";
 
     //set our desired roast if the user hasn't narrowed their selection
     if(desiredRoast===undefined){
         desiredRoast='all';
+        drinks = coffees;
     }
 
     if((event.keyCode === 8) && (result !== "") && (result.length>0)) {
@@ -239,12 +316,46 @@ document.getElementById('searchbar').addEventListener('keydown', function(event)
             if ((compare.search(result) > -1) ||(result === "")) {
                 //see if the roast type matches
                 if( (coffee.roast.toLowerCase().search(desiredRoast) > -1)||(desiredRoast==='all')) {
+                    drinks.push(coffee);
+                    var cardContainer;
+                    let createCoffeeCard = (coffee) => {
+                        let card = document.createElement('div');
+                        card.className = 'card shadow cursor-pointer';
+
+                        let cardBody = document.createElement('div');
+                        cardBody.className = 'card-body';
+
+                        let name = document.createElement('h5');
+                        name.innerText = coffee.name;
+                        name.className = 'card-name';
+
+                        let roast = document.createElement('div');
+                        roast.innerText = coffee.roast;
+                        roast.className = 'card-roast';
+
+                        cardBody.appendChild(name);
+                        cardBody.appendChild(roast);
+                        card.appendChild(cardBody);
+                        cardContainer.appendChild(card);
+                    };
+
+                    let initListOfCoffees = () => {
+                        if (cardContainer) {
+                            document.getElementById('card-container').replaceWith(cardContainer);
+                            return;
+                        }
+
+                        cardContainer = document.getElementById('card-container');
+                        drinks.forEach((coffee) => {
+                            createCoffeeCard(coffee);
+                        });
+                    };
+                    initListOfCoffees();
                     document.getElementById('result').innerHTML += coffee.name + "<br><br>" + coffee.roast + "<br><br>";
                 }
             }
+            return;
         });
-        //for(var i = 0; i < drinks.length; i++)
-        //    document.getElementById('result').innerHTML += drinks[i].name + "<br><br>" + drinks[i].roast + "<br><br>";
 
 
     } else if(charList.indexOf(key) !== -1){
@@ -256,16 +367,95 @@ document.getElementById('searchbar').addEventListener('keydown', function(event)
             if ((compare.search(result) > -1) ||(result === "")) {
                 //see if the roast type matches
                 if( (coffee.roast.toLowerCase().search(desiredRoast) > -1)||(desiredRoast==='all')) {
+                    drinks.push(coffee);
+                    var cardContainer;
+                    let createCoffeeCard = (coffee) => {
+
+
+                        let card = document.createElement('div');
+                        card.className = 'card shadow cursor-pointer';
+
+                        let cardBody = document.createElement('div');
+                        cardBody.className = 'card-body';
+
+                        let name = document.createElement('h5');
+                        name.innerText = coffee.name;
+                        name.className = 'card-name';
+
+                        let roast = document.createElement('div');
+                        roast.innerText = coffee.roast;
+                        roast.className = 'card-roast';
+
+                        cardBody.appendChild(name);
+                        cardBody.appendChild(roast);
+                        card.appendChild(cardBody);
+                        cardContainer.appendChild(card);
+                    };
+
+                    let initListOfCoffees = () => {
+                        if (cardContainer) {
+                            document.getElementById('card-container').replaceWith(cardContainer);
+                            return;
+                        }
+
+                        cardContainer = document.getElementById('card-container');
+                        drinks.forEach((coffee) => {
+                            createCoffeeCard(coffee);
+                        });
+                    };
+                    initListOfCoffees();
                     document.getElementById('result').innerHTML += coffee.name + "<br><br>" + coffee.roast + "<br><br>";
+                    console.log(cardContainer);
                 }
             }
         });
-
+ return;
     } else {
-        //none of the above occured, such as a backspace to a blank string
+        //none of the above occurred, such as a backspace to a blank string
+        console.log("test");
         coffees.forEach(function (coffee) {
+            var cardContainer;
+            let createCoffeeCard = (coffee) => {
+                let card = document.createElement('div');
+                card.className = 'card shadow cursor-pointer';
+
+                let cardBody = document.createElement('div');
+                cardBody.className = 'card-body';
+
+                let name = document.createElement('h5');
+                name.innerText = coffee.name;
+                name.className = 'card-name';
+
+                let roast = document.createElement('div');
+                roast.innerText = coffee.roast;
+                roast.className = 'card-roast';
+
+                cardBody.appendChild(name);
+                cardBody.appendChild(roast);
+                card.appendChild(cardBody);
+                cardContainer.appendChild(card);
+            };
+
+            let initListOfCoffees = () => {
+                if (cardContainer) {
+                    document.getElementById('card-container').replaceWith(cardContainer);
+                    return;
+                }
+
+                cardContainer = document.getElementById('card-container');
+                drinks.forEach((coffee) => {
+                    createCoffeeCard(coffee);
+                });
+            };
+            initListOfCoffees();
             document.getElementById('result').innerHTML += coffee.name + "<br><br>" + coffee.roast + "<br><br>"
         });
+        return;
     }
-
 });
+
+// Card testing
+
+
+
+
