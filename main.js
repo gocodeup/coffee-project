@@ -1,38 +1,14 @@
 "use strict"
 
-// function renderCoffee(coffee) {
-//     var html = '<tr class="coffee">';
-//     html += '<td>' + coffee.id + '</td>';
-//     html += '<td>' + coffee.name + '</td>';
-//     html += '<td>' + coffee.roast + '</td>';
-//     html += '</tr>';
-//
-//     return html;
-// }
-
-// refactor for taking coffes out of table into divs
-
 function renderCoffee(coffee) {
-    var html = '<div class="coffee col-sm-4 col-md-6">';
+    var html = '<div class="coffee">';
     html += '<p class="coffeeID">' + coffee.id + '</p>';
-    html += '<h5><strong>' + coffee.name + '</strong></h5>';
+    html += '<p class="coffeeName"><strong>' + coffee.name + '</strong></p>';
     html += '<p>' + coffee.roast + '</p>';
     html += '</div>';
 
     return html;
 }
-
-
-
-// function renderCoffees(coffees) {
-//     var html = '';
-//     for(var i = coffees.length - 1; i >= 0; i--) {
-//         html += renderCoffee(coffees[i]);
-//     }
-//     return html;
-// }
-
-//swapped the decrementer to incrementer
 
 function renderCoffees(coffees) {
     var html = '';
