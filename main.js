@@ -55,7 +55,7 @@ var coffees = [
     {id: 13, name: 'Italian', roast: 'DARK'},
     {id: 14, name: 'French', roast: 'DARK'},
 ];
-
+// coffees search
 function myFunction() {
     var bucket = [];
     var input = document.getElementById("myInput").value.toLowerCase();
@@ -78,6 +78,7 @@ tbody.innerHTML = renderCoffees(coffees);
 
 roastSelection.addEventListener('click', updateCoffees);
 
+// Search event Listener
 var textInput = document.querySelector('#myInput');
 
 textInput.addEventListener("keyup", myFunction);

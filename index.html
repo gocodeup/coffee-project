@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title></title>
+    <title>SLAM COFFEE</title>
 
     <link href="https://fonts.googleapis.com/css?family=Odibee+Sans&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
@@ -11,45 +11,46 @@
 </head>
 <body>
 <div class="headlineContainer">
-<!--    <img src="images/angry.jpg" alt="face"  width="100%">-->
+    <img id="image" src="images/angry.jpg" height="200" width="668"/>
+    <!--    <img src="images/angry.jpg" alt="face"  width="100%">-->
     <div id="main-header">SLAM! </div>
     <div class="subMain">COLD COFFEE Co.</div>
+    <h2 class="name">Don't sip it SLAM! it</h2>
 </div>
 
 <!--roast selector-->
 
-<thead>
 <div>
-    <h4 class="name">don't sip it SLAM! it</h4>
+<div>
     <div class="brownLine"></div>
 </div>
-</thead>
+</div>
 <div class="pageContainer">
     <form>
         <label for="roast-selection">CHOOSE YOUR ROAST!</label>
         <!--Roast dropdown-->
-        <select class="form-control form-control-sm dropdown1" id="roast-selection">
+        <select class="form-control form-control-sm dropdown" id="roast-selection">
+            <option>ALL COFFEES</option>
             <option>LIGHT</option>
             <option>MEDIUM</option>
             <option>DARK</option>
-            <option>ALL COFFEES</option>
         </select>
         <br>
         <!--Coffee Search-->
         <input class="form-control dropdown2" type="text" id="myInput" placeholder="Search for coffees"
                title="Type in a name">
         <br>
-        <input id="submit" type="submit"/>
+        <input class="btn btn-success"id="submit" type="submit" value="Submit">
     </form>
     <!------------------->
 
-    <table class="leftSide">
+    <div class="leftSide">
 
-        <tbody class="coffee-list" id="coffees">
+        <div class="coffee-list" id="coffees">
 
-        </tbody>
+        </div>
 
-    </table>
+    </div>
 </div>
 
 <script src="main.js"></script>
