@@ -41,9 +41,10 @@
                 <label for="roast-selection"></label>
                 <h3>What's Your Roast Strength?</h3>
                 <select class="form-control form-control-md dropdown1" id="roast-selection">
-                    <option>medium</option>
-                    <option>dark</option>
-                    <option>all</option>
+                    <option id="roast-light">light</option>
+                    <option id="roast-medium">medium</option>
+                    <option id="roast-dark">dark</option>
+                    <option id="roast-all">all</option>
                 </select>
                 <input id="roastSubmit" type="submit"/>
             </form>
@@ -51,9 +52,9 @@
 <div class="artisinalContainer">
             <label>
                 <h3>Artisinal Coffee</h3>
-                <input type="text" class="form-control" placeholder="Search for Your Roast" id="searchbar">
-                <button class="btn btn-outline-secondary" type="submit" id="submitTwo">Search</button>
-            </label>
+                <input type="text" class="form-control" placeholder="Search for Your Flavor" id="searchbar"></label>
+<!--                <button class="btn btn-outline-secondary" type="submit" id="submitTwo">Search</button>-->
+<!--            </label>-->
         </div>
     </div>
             <!--END OF INPUT-->
@@ -61,13 +62,30 @@
 
             <!---DIV 3--->
 
-    <div class="div3">
-    <table>
-        <thead>
-        </thead>
-        <tbody id="coffees"></tbody>
-    </table>
-</div>
+<div id='card-container'></div>
+
+        <div class="card mt-3" style="width: 18rem;">
+            <div class="card-body">
+                <h5 class="card-title" id="result"></h5>
+                <p class="card-text" id="roast"></p>
+            </div>
+        </div>
+
+<!--        <div class="coffee" id="id">-->
+<!--            <div class="name" id="roast">-->
+
+<!--            </div>-->
+<!--        </div>-->
+
+<!--    <div class="div3">-->
+<!--&lt;!&ndash;    <table>&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;        <thead>&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;        </thead>&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;        <tbody id="coffees"></tbody>&ndash;&gt;-->
+<!--&lt;!&ndash;    </table>&ndash;&gt;-->
+<!--</div>-->
+
+
 
 
     <!---JS SCRIPT-->
