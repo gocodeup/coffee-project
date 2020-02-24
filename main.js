@@ -92,3 +92,8 @@ function searchCoffee(string) {
     });
     tbody.innerHTML = renderCoffees(coffeeEntered)}
 
+    var roasts = [
+        {strenght: light},
+        {strenght: medium},
+        {strength: dark}
+    ];
