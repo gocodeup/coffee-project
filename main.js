@@ -1,10 +1,11 @@
 "use strict"
 
 function renderCoffee(coffee) { //put the coffees into a table
-    var html = '<div class="card coffee" id="big-div">'; //define class and table row
-    html += '<div class="coffee-data"><a href="#">' + coffee.id + '</a></div>'; // get id
-    html += '<div class="coffee-data"><a href="#">' + coffee.name + '</a></div>'; // get name
-    html += '<div class="coffee-data"><a href="#">' + coffee.roast + '</a></div>'; // ger roast
+    var html = '<div class="card coffee card-body d-flex justify-content-center text-center" id="big-div">'; //define class and table row
+    // html += '<div class="coffee-data">' + coffee.id + '</a></div>'; // get id
+    html += '<div class="coffee-data card-img-top">' + coffee.img + '</div>';
+    html += '<div class="coffee-data card-title"> ' + coffee.name + '</div>'; // get name
+    html += '<div class="coffee-data card-text" >' + coffee.roast + '</div>'; // ger roast
     html += '</div>'; // end table row
 
     return html; //return the table to renderCoffee
@@ -58,20 +59,20 @@ function updateInputCoffees(e) {
 
 // from http://www.ncausa.org/About-Coffee/Coffee-Roasts-Guide
 var coffees = [
-    {id: 1, name: 'Light City', roast: 'light'},
-    {id: 2, name: 'Half City', roast: 'light'},
-    {id: 3, name: 'Cinnamon', roast: 'light'},
-    {id: 4, name: 'City', roast: 'medium'},
-    {id: 5, name: 'American', roast: 'medium'},
-    {id: 6, name: 'Breakfast', roast: 'medium'},
-    {id: 7, name: 'High', roast: 'dark'},
-    {id: 8, name: 'Continental', roast: 'dark'},
-    {id: 9, name: 'New Orleans', roast: 'dark'},
-    {id: 10, name: 'European', roast: 'dark'},
-    {id: 11, name: 'Espresso', roast: 'dark'},
-    {id: 12, name: 'Viennese', roast: 'dark'},
-    {id: 13, name: 'Italian', roast: 'dark'},
-    {id: 14, name: 'French', roast: 'dark'},
+    {id: 1, name: 'Light City', roast: 'light', img:'<img src="img/PngItem_3904454.png" id="image" >'},
+    {id: 2, name: 'Half City', roast: 'light', img:'<img src="img/PngItem_3904454.png" id="image">'},
+    {id: 3, name: 'Cinnamon', roast: 'light', img:'<img src="img/PngItem_3904454.png" id="image">'},
+    {id: 4, name: 'City', roast: 'medium', img:'<img src="img/PngItem_3904454.png" id="image">'},
+    {id: 5, name: 'American', roast: 'medium', img:'<img src="img/PngItem_3904454.png" id="image">'},
+    {id: 6, name: 'Breakfast', roast: 'medium', img:'<img src="img/PngItem_3904454.png" id="image">'},
+    {id: 7, name: 'High', roast: 'dark', img:'<img src="img/PngItem_3904454.png" id="image">'},
+    {id: 8, name: 'Continental', roast: 'dark', img:'<img src="img/PngItem_3904454.png" id="image">'},
+    {id: 9, name: 'New Orleans', roast: 'dark', img:'<img src="img/PngItem_3904454.png" id="image">'},
+    {id: 10, name: 'European', roast: 'dark', img:'<img src="img/PngItem_3904454.png" id="image">'},
+    {id: 11, name: 'Espresso', roast: 'dark', img:'<img src="img/PngItem_3904454.png" id="image">'},
+    {id: 12, name: 'Viennese', roast: 'dark', img:'<img src="img/PngItem_3904454.png" id="image">'},
+    {id: 13, name: 'Italian', roast: 'dark', img:'<img src="img/PngItem_3904454.png" id="image">'},
+    {id: 14, name: 'French', roast: 'dark', img:'<img src="img/PngItem_3904454.png" id="image">'},
 ];
 
 var tbody = document.querySelector('#coffees');
