@@ -8,37 +8,69 @@
           integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 </head>
 <body>
-    <h1>Coffee!</h1>
 
-    <form>
-        <label for="roast-selection"></label>
-        <select id="roast-selection" class="btn-dark">
-            <option class="rselected">light</option>
-            <option class="rselected">medium</option>
-            <option class="rselected" id="droast">dark</option>
-            <option class="rselected" id="allroast">all</option>
-        </select>
-<!--        <input id="submit" type="submit" />-->
-    </form>
+<!--------------------------JUMBOTRON BEGINS--------------------------->
+<div class="jumbotron jumbotron-fluid m-0" >
+    <div class="container text-center ">
+        <h1 class="display-4">Jameson's <inline><img src="" alt=""></inline> Java</h1>
+        
+    </div>
+</div>
+<!---------------------------JUMBOTRON ENDS----------------------------->
+
+<!----------------------------NAVBAR BEGINS----------------------------->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">Jameson's Java</a>
+        <ul class="navbar-nav mr-auto">
+<!--DROPDOWN FOR ROAST-->
+            <li class="nav-item dropdown">
+                <form>
+                    <label for="roast-selection"></label>
+                    <select id="roast-selection" class="buttons">
+                        <option class="rselected">light</option>
+                        <option class="rselected">medium</option>
+                        <option class="rselected">dark</option>
+                        <option class="rselected">all</option>
+                    </select>
+                    <!--        <input id="submit" type="submit" />-->
+                </form>
+            </li>
+ <!--DROPDOWN FOR ROAST ENDS-->
+
+ <!--SEARCH FOR COFFEE-->
+            <li>
+                <form class="form-inline d-flex" id="forSearch">
+                    <label for="search-box">Find Your Flavor</label>
+                    <input type="search" id="search-box" placeholder="Coffee" />
+                    <button typeof="submit" id="search-submit" class="buttons">Search</button>
+                </form>
+            </li>
+   <!--SEARCH FOR COFFEE ENDS-->
+
+<!--ADD COFFEE BEGINS-->
+            <li>
+                <form action="">
+                    <label for="addCofBox">Add new flavor</label>
+                    <input type="text" id="addCofBox" placeholder="Add your coffee">
+                    <label for="roastSelectAdd">Add your roast</label>
+                    <select name="roastAdd" id="roastSelectAdd" class="buttons">
+                        <option class="rselected">light</option>
+                        <option class="rselected">medium</option>
+                        <option class="rselected">dark</option>
+                    </select>
+                    <button type="submit" id="addCof" class="buttons">Add</button>
+                </form>
+            </li>
+ <!--ADD COFFEE ENDS-->
+        </ul>
+    </nav>
+<!----------------------------NAVBAR ENDS----------------------------->
 
 
-    <form id="forSearch">
-        <label for="search-box">Find Your Flavor</label>
-        <input type="search" id="search-box" placeholder="Coffee" />
-        <button typeof="submit" id="search-submit" class="btn-dark">Search</button>
-    </form>
 
-    <form action="">
-        <label for="addCofBox">Add new flavor</label>
-        <input type="text" id="addCofBox" placeholder="Add your coffee">
-        <label for="roastSelectAdd">Add your roast</label>
-        <select name="roastAdd" id="roastSelectAdd" class="btn-dark">
-            <option class="rselected">light</option>
-            <option class="rselected">medium</option>
-            <option class="rselected">dark</option>
-        </select>
-        <button type="submit" id="addCof" class="btn-dark">Add</button>
-    </form>
+
+
+
 
     <div id="coffees">
             <div>
@@ -49,5 +81,10 @@
     </div>
 
     <script src="main.js"></script>
+
+
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
 </body>
 </html>
