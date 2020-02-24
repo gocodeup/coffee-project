@@ -1,64 +1,61 @@
+@media screen and (max-width: 500px) {
+    .content {
+        overflow: visible;
+        height: content-box;
+    }
 
-
-table {
-    border-collapse: collapse;
-    margin: 15px 0;
 }
 
-td, th {
+.bgImg {
+    background: url("img/ripleybackground.jpg") no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.content {
+    background: rgba(189, 183, 107, .7);
     border: 1px solid black;
-    padding: 5px 10px;
+    padding: 10px;
+    overflow: scroll;
+    height: 90vh;
+}
+
+.org {
+    height: 15vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: url("img/coffee2.jpeg");
+    border: saddlebrown solid 15px;
+    color: darkkhaki;
+    font: 2.5em bolder;
+    font-family: 'Tomorrow';
 }
 
 .coffeeID {
     display: none;
 }
 
-#ripleys {
-    text-align: center;
-    font-size: 2.2em;
-    background: #af5226;
-    font-family: 'Tomorrow';
-    margin: 0;
-    font-weight: bolder;
-    color: #ffdead;
-
-}
-
-div {
-    background: rgba(225,225,181,.6);
-}
-.row {
-    height: 80vh;
-    margin: 0;
-    background: none;
-
-
-}
 
 body {
-    background-image: url("img/ripleybackground.jpg");
-    background-position: center;
-    background-size: cover;
-    color: #593624;
     font-family: 'Tomorrow';
-    font-weight: bold;
-
-
 }
-.coffee {
-    background: none;
+strong {
+    font-family: 'ZCOOL QingKe HuangYou', bold;
+    font-size: 1.5em;
+    color: #6f4e37;
 }
-input {
-    background: rgba(225,225,181,.9);
+#third {
+    font-size: 2em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+select, input {
+    background-color: rgba(225, 225, 177, .8);
     text-align: center;
 }
-select {
-    background: rgba(225,225,181,.9);
-    text-align: center;
-}
 
-.column{
-    ;
-}
-
+#BDB76B

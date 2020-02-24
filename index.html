@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <title></title>
     <link href="https://fonts.googleapis.com/css?family=Tomorrow&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=ZCOOL+QingKe+HuangYou&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
           integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
@@ -12,55 +13,65 @@
 <div class="org" id="ripleys">Ripley's Coffee</div>
 
 
-<!--    <input type="submit" value="Search">-->
-<div class="row main">
-    <div class="col-sm-12 col-med-6 col-lg-4 text-center column"><br>
-        <div class="row" id="coffeeMenu"></div>
-    </div>
-    <div class="col-sm-12 col-med-6 col-lg-4 text-center column">
+<div class="bgImg">
+    <div class="container">
+        <div class="row pb-3 text-center">
+            <div class="col-sm-12 col-md-6 col-lg-4 pt-3 column">
+                <div class="content container">
+                    <div class="coffeeMenu" id="coffeeMenu"><br></div>
+                </div>
+            </div>
+            <div class="col-sm-12 col-md-6 col-lg-4 pt-3 column">
+                <div class="content container">
+                    <form>
+                        <br>
+                        <p><strong>Filter coffee by roast</strong></p>
+                        <label for="roast-selection">Select your roast:</label><br>
+                        <select id="roast-selection">
+                            <option>all</option>
+                            <option>light</option>
+                            <option>medium</option>
+                            <option>dark</option>
+                        </select><br>
 
-        <form>
-            <br>
-            <p><strong>Filter coffee by roast</strong></p>
-            <label for="roast-selection">Select your roast:</label><br>
-            <select id="roast-selection">
-                <option>all</option>
-                <option>light</option>
-                <option>medium</option>
-                <option>dark</option>
-            </select><br>
-
-            <label for="coffeeSearch">Search for your coffee by name:</label><br>
-            <input type="text" id="coffeeSearch" placeholder="Coffee Name"><br><br>
-            <input id="submit" type="submit"/><br><br><br>
-        </form>
-
-
-        <form>
-            <p><strong>Add a new coffee</strong></p>
-            <label for="add-roast">Select roast for new coffee:</label><br>
-            <select id="add-roast">
-                <option>light</option>
-                <option>medium</option>
-                <option>dark</option>
-            </select><br>
-            <label for="add-coffee-name">Name your roast:</label><br>
-            <input type="text" id="add-coffee-name"/><br><br>
-            <input id="add-roast-submit" type="submit"/>
+                        <label for="coffeeSearch">Search for your coffee by name:</label><br>
+                        <input type="text" id="coffeeSearch" placeholder="Coffee Name"><br><br>
+                        <input id="submit" type="submit"/><br><br><br>
+                    </form>
 
 
-        </form>
+                    <form>
+                        <p><strong>Add a new coffee</strong></p>
+                        <label for="add-roast">Select roast for new coffee:</label><br>
+                        <select id="add-roast">
+                            <option>light</option>
+                            <option>medium</option>
+                            <option>dark</option>
+                        </select><br>
+                        <label for="add-coffee-name">Name your roast:</label><br>
+                        <input type="text" id="add-coffee-name" placeholder="Coffee Name"/><br><br>
+                        <input id="add-roast-submit" type="submit"/>
 
-    </div>
-    <div class="col-sm-12 col-lg-4 text-center column">
-        <br><br><br><br>
-        <p>"At Ripley's,</p><br>
-        <p>no one can hear</p><br>
-        <p>milk steam"</p>
+
+                    </form>
+                </div>
+
+            </div>
+            <div class="col-sm-12 col-md-12 col-lg-4 pt-3 column">
+                <div class="content container" id="third">
+                    <div class="c">
+
+                        <p><strong>"At Ripley's,</strong></p>
+                        <p><strong>no one can hear</strong></p>
+                        <p><strong>milk steam"</strong></p>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
     </div>
 </div>
-
-<!--<div class="coffee" id="coffees"></div>-->
 
 <script src="main.js"></script>
 </body>
