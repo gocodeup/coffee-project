@@ -6,40 +6,39 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Coffee!</h1>
+<h1>Coffee!</h1>
 
-    <form name="coffeeSearch">
-        <label for="roastType"></label>
-        <select id="roastType">
-            <option>light</option>
-            <option>medium</option>
-            <option>dark</option>
-        </select>
-        <input type="text" id="coffeeSearchQuery" name="coffeeSearchQuery" placeholder="search for coffees">
-        <input id="submit" type="submit" />
-    </form>
+<form>
+    <label for="roast-selection"></label>
+    <select id="roast-selection">
+        <option>light</option>
+        <option>medium</option>
+        <option>dark</option>
+    </select>
+    <input id="submit" type="submit" />
+</form>
+<br>
+<form>
+    <label for="coffee-input">Search for coffee</label>
+    <input type="text" id="coffee-input" placeholder="Search for coffee">
+</form>
+<br>
+<div id="coffees">
 
-<!--    (You will need to add an input field to the existing form for this)-->
+</div>
 
-<!--    <table>-->
-<!--        <thead>-->
-<!--            <tr>-->
-<!--                <th>ID</th>-->
-<!--                <th>NAME</th>-->
-<!--                <th>ROAST</th>-->
-<!--            </tr>-->
-<!--        </thead>-->
-<!--        <tbody id="coffees"></tbody>-->
-<!--    </table>-->
+<!--<table>-->
+<!--    <thead>-->
+<!--    <tr>-->
+<!--        <th>ID</th>-->
+<!--        <th>NAME</th>-->
+<!--        <th>ROAST</th>-->
+<!--    </tr>-->
+<!--    </thead>-->
+<!--    <tbody id="coffees"></tbody>-->
+<!--</table>-->
 
-    <div class="table-div">
-        <div class="table-head">
-            <h1>Coffee Name</h1>
-            <p>Type of Roast</p>
-        </div>
-        <div id="coffees"></div>
-    </div>
 
-    <script src="main.js"></script>
+<script src="main.js"></script>
 </body>
 </html>
