@@ -1,39 +1,26 @@
 body {
-    background-color: #28a745;
+    /*background-color: #28a745;*/
 }
-/*Outer Table Styling*/
-
 table {
     border-collapse: collapse;
-    margin: 5em 0;
+    margin: 3em 0;
     opacity: 40%;
-    height: 100%;
 }
-/*Inner Table Styling*/
 
 td, th {
-    /*border: 1px solid black;*/
+    border: 1px solid black;
     padding: 5px 10px;
-    /*opacity: 100%;*/
+    opacity: 100%;
     color: chartreuse;
     font-weight: bold;
 }
 
-.updatedTable {
-    font-family: 'Gelasio';
-}
-
-/*Business Name*/
-
 h1 {
     color: #28a745;
-    margin-left: 14em;
-    /*margin: 1em;*/
+    margin-right: 9em;
+    /*font-family: 'Ewert';*/
     /*font-family: 'Shadows Into Light';*/
-    /*font-family: 'Girassol';*/
-    font-family: 'Gelasio';
 }
-/*Background Video*/
 
 .beans {
     width: 100%;
@@ -44,20 +31,6 @@ h1 {
     z-index: -1;
 }
 
-/*Navbar Styling*/
-
 #navbars {
     opacity: 80%;
-}
-/*Dropdown Menu Styling*/
-
-#navbarDropdown {
-    color: #28a745;
-    font-family: 'Gelasio';
-}
-
-/*Placeholder Styling - Search Bar*/
-
-#input-style {
-    font-family: 'Gelasio';
 }
