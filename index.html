@@ -11,7 +11,6 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 </head>
 <body>
-    <h1>Coffee!</h1>
 
 
     <div class="jumbotron jumbotron-fluid">
@@ -20,14 +19,6 @@
             <p class="lead">This is a modified jumbotron that occupies the entire horizontal space of its parent.</p>
         </div>
     </div>
-
-
-    <div class="container">
-        <div class="card">
-            <div class="row" id="coffees"></div>
-        </div>
-    </div>
-    
 
     <form>
         <select  id="roast-selection">
@@ -39,10 +30,27 @@
 
         </select>
     </form>
-    
+
     <!------------The search Input------------>
     <input type="text" class="form-control" name="x" id="inputSelection" placeholder="Search">
-    
+
+    <div class="container col-8" id="card-container">
+
+
+        <div class="card" id="coffees-card">
+            <div class="row" id="coffees"></div>
+        </div>
+
+
+
+
+
+
+    </div>
+
+
+
+
     <!--custom JS-->
     <script src="main.js"></script>
 
