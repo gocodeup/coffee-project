@@ -23,3 +23,16 @@ tr{
     color: white;
     font-size: 30px;
 }
+
+.footer {
+    padding: 60px;
+    text-align: center;
+    background-image: url("footer-image.jpg");
+    background-size: cover;
+    color: white;
+    font-size: 30px;
+}
+
+#search {
+    width: 15em;
+}
