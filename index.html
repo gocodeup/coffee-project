@@ -6,17 +6,16 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<h1>TEST</h1>
     <h1>Coffee!</h1>
 
-    <form>
-        <label for="roast-selection"></label>
-        <select id="roast-selection">
+    <form name="coffeeSearch">
+        <label for="roastType"></label>
+        <select id="roastType">
             <option>light</option>
             <option>medium</option>
             <option>dark</option>
         </select>
-        <input type="text" id="coffeeSearch" onkeyup="updateCoffees()" placeholder="search for coffees">
+        <input type="text" id="coffeeSearchQuery" name="coffeeSearchQuery" placeholder="search for coffees">
         <input id="submit" type="submit" />
     </form>
 
