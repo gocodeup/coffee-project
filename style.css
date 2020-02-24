@@ -5,9 +5,10 @@ body {
 /*Outer Table Styling*/
 table {
     border-collapse: collapse;
-    margin: 3em 0;
+    margin: 1em 0;
     opacity: 40%;
     height: 100%;
+
 }
 
 /*Inner Table Styling*/
@@ -19,6 +20,9 @@ td, th {
     font-weight: bold;
 }
 .updatedTable {
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
     font-family: 'Gelasio';
 }
 
@@ -64,22 +68,35 @@ h1 {
     border: #28a745 solid 1px;
     border-radius: 10%;
 }
-.dropBack{
+.dropBack {
     background-color: transparent;
-    color: #28a745 ;
+    color: #28a745;
     border: none;
-    font-size: 1.5em;
-
+}
 #searchBox{
     background-color: transparent;
     color: #28a745;
-    border: solid #28a745 1px;
 }
 .dropItems{
     background-color: transparent;
-    color: #28a745 ;
+    color: #28a745;
     border: none;
     font-size: 1.5em;
+}
+#inputBox{
+    background-color: chartreuse;
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
+    opacity: 40%;
+
+
+}
+#inputTextBack{
+    background-color: transparent;
+    color: black;
+    border-radius: 10%;
+    border: none;
 }
 /*body {*/
 /*    background-color: #28a745;*/
