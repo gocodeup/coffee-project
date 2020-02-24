@@ -61,6 +61,7 @@ function updateCoffees(e) {
 
 //this function was added to work with user input when searching for coffee by typing into search field.  captures input with "coffee-input" id.
 function chooseCoffee(e) {
+    e.preventDefault();
     // console.log(e);  this will show each key input in the console.  not needed for actual functionality
     var html = "";
     for (var i = 0; i < coffees.length; i++) {
@@ -103,3 +104,5 @@ document.getElementById("coffee-input").addEventListener("keyup", chooseCoffee);
 tbody.innerHTML = renderCoffees(coffees);
 
 submitButton.addEventListener('click', updateCoffees);
+
+
