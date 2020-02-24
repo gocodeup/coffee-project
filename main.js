@@ -1,11 +1,11 @@
 "use strict"
 
 function renderCoffee(coffee) {
-    var html = '<tr class="coffee">';
-    html += '<td>' + coffee.id + '</td>';
-    html += '<td>' + coffee.name + '</td>';
-    html += '<td>' + coffee.roast + '</td>';
-    html += '</tr>';
+    var html = '<h1 class="coffee">';
+    html += '<div class="hidden">' + coffee.id + '</div>';
+    html += '<h1>' + coffee.name + '</h1>';
+    html += '<p>' + coffee.roast + '</p>';
+    html += '</h1>';
 
     return html;
 }
@@ -15,7 +15,10 @@ function renderCoffees(coffees) {
     for(var i = coffees.length - 1; i >= 0; i--) {
         html += renderCoffee(coffees[i]);
     }
-    return html;
+    var cofe = items.map(function(coffees) {
+        return item['name'];
+    });
+    return cofe;
 }
 
 function updateCoffees(e) {

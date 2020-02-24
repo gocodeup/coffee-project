@@ -1,0 +1,603 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Coffee Project</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/0035cf14f8.js"></script>
+    <link rel="stylesheet" href="css/bootstrap-v4.2.css">
+
+<!--    <link rel="stylesheet" href="css/custom.css">-->
+
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <!--<link rel="stylesheet" href="css/custom.css">-->
+
+</head>
+<body>
+
+<!---------------------------------------JUMBOTRON START-------------------------------------------->
+<div class="container">
+    <div class="d-none d-md-block">
+        <div class="jumbotron jumbotron-fluid">
+            <div id="jumbotron_container">
+                <h1 class="display-4">Welcome to Coffee World!</h1>
+            </div>
+        </div>
+    </div>
+</div>
+<!---------------------------------------JUMBOTRON END-------------------------------------------->
+
+<input class="form-control" id="myInput" type="text" placeholder="Search..">
+
+
+<table class="table table-bordered table-striped">
+
+    <thead>
+    <tr>
+<!--        <th>ID</th>-->
+        <th>NAME</th>
+        <th>ROAST</th>
+    </tr>
+    </thead>
+
+    <tbody id="myTable">
+    <tr>
+<!--        <td>14</td>-->
+        <td>French</td>
+        <td>dark</td>
+    </tr>
+    <tr>
+<!--        <td>13</td>-->
+        <td>Italian</td>
+        <td>dark</td>
+    </tr>
+    <tr>
+<!--&lt;!&ndash;        <td>12</td>&ndash;&gt;-->
+        <td>Viennese</td>
+        <td>dark</td>
+    </tr>
+    <tr>
+<!--        <td>11</td>-->
+        <td>Espresso</td>
+        <td>dark</td>
+    </tr>
+    <tr>
+<!--        <td>10</td>-->
+        <td>European</td>
+        <td>dark</td>
+    </tr>
+    <tr>
+<!--        <td>9</td>-->
+        <td>New Orleans</td>
+        <td>dark</td>
+    </tr>
+    <tr>
+<!--        <td>8</td>-->
+        <td>Continental</td>
+        <td>dark</td>
+    </tr>
+    <tr>
+<!--        <td>7</td>-->
+        <td>High</td>
+        <td>dark</td>
+    </tr>
+    <tr>
+<!--        <td>6</td>-->
+        <td>Breakfast</td>
+        <td>medium</td>
+    </tr>
+    <tr>
+<!--        <td>5</td>-->
+        <td>American</td>
+        <td>medium</td>
+    </tr>
+    <tr>
+<!--        <td>4</td>-->
+        <td>City</td>
+        <td>medium</td>
+    </tr>
+    <tr>
+<!--        <td>3</td>-->
+        <td>Cinnamon</td>
+        <td>light</td>
+    </tr>
+    <tr>
+<!--        <td>2</td>-->
+        <td>Half City</td>
+        <td>light</td>
+    </tr>
+    <tr>
+<!--        <td>1</td>-->
+        <td>Light City</td>
+        <td>light</td>
+    </tr>
+    </tbody>
+</table>
+
+
+
+<script src="js/main.js"></script>
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+
+<script>
+    $(document).ready(function(){
+        $("#myInput").on("keyup", function() {
+            var value = $(this).val().toLowerCase();
+            $("#myTable tr").filter(function() {
+                $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+            });
+        });
+    });
+</script>
+
+
+</body>
+</html>
+
+
+<!-----------------------OLD CODE --------------------------------------------------->
+
+<!---------------------------------------CARDS START-------------------------------------------->
+<!--<div class="container w-100">-->
+<!--    <div class="row">-->
+<!--        <div class="container col-8" id="card_container">-->
+
+
+<!--<div class="container col-8 ml-5">-->
+<!--    <h1>Featured Pets</h1>-->
+
+<!--    <div class="row">-->
+
+<!--        &lt;!&ndash;        START OF CARD&ndash;&gt;-->
+<!--        <div class="col-12 col-md-3">-->
+<!--            <div class="card shadow p-3 mb-5 bg-white rounded w-75 ">-->
+<!--                <img src="img/animal1.jpg" class="card-img-top" alt="...">-->
+<!--                <div class="card-body">-->
+<!--                    <h5 class="card-title">Rover</h5>-->
+<!--                    <p class="card-text">Coffee Ipsum text yo.</p>-->
+<!--                    <a href="#" class="btn btn-primary">Learn More</a>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--        &lt;!&ndash;        END OF CARD&ndash;&gt;-->
+
+<!--        &lt;!&ndash;        START OF CARD&ndash;&gt;-->
+<!--        <div class="col-8 col-md-3">-->
+<!--            <div class="card shadow p-3 mb-5 bg-white rounded w-75">-->
+<!--                <img src="img/animal1.jpg" class="card-img-top" alt="...">-->
+<!--                <div class="card-body">-->
+<!--                    <h5 class="card-title">Rover</h5>-->
+<!--                    <p class="card-text">Coffee Ipsum text yo</p>-->
+<!--                    <a href="#" class="btn btn-primary">Learn More</a>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--        &lt;!&ndash;        END OF CARD&ndash;&gt;-->
+
+<!--        &lt;!&ndash;        START OF CARD&ndash;&gt;-->
+<!--        <div class="col-12 col-md-3">-->
+<!--            <div class="card shadow p-3 mb-5 bg-white rounded w-75">-->
+<!--                <img src="img/animal1.jpg" class="card-img-top" alt="...">-->
+<!--                <div class="card-body">-->
+<!--                    <h5 class="card-title">Rover</h5>-->
+<!--                    <p class="card-text">Coffee Ipsum text yo</p>-->
+<!--                    <a href="#" class="btn btn-primary">Learn More</a>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--        &lt;!&ndash;        END OF CARD&ndash;&gt;-->
+
+<!--        &lt;!&ndash;        START OF CARD&ndash;&gt;-->
+<!--        <div class="col-12 col-md-3">-->
+<!--            <div class="card shadow p-3 mb-5 bg-white rounded w-75">-->
+<!--                <img src="img/animal1.jpg" class="card-img-top" alt="...">-->
+<!--                <div class="card-body">-->
+<!--                    <h5 class="card-title">Rover</h5>-->
+<!--                    <p class="card-text">Coffee Ipsum text yo.</p>-->
+<!--                    <a href="#" class="btn btn-primary">Learn More</a>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--        &lt;!&ndash;        END OF CARD&ndash;&gt;-->
+
+<!--        &lt;!&ndash;        START OF CARD&ndash;&gt;-->
+<!--        <div class="col-12 col-md-3">-->
+<!--            <div class="card shadow p-3 mb-5 bg-white rounded w-75">-->
+<!--                <img src="img/animal1.jpg" class="card-img-top" alt="...">-->
+<!--                <div class="card-body">-->
+<!--                    <h5 class="card-title">Rover</h5>-->
+<!--                    <p class="card-text">Coffee Ipsum text yo.</p>-->
+<!--                    <a href="#" class="btn btn-primary">Learn More</a>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--        &lt;!&ndash;        END OF CARD&ndash;&gt;-->
+
+<!--        &lt;!&ndash;        START OF CARD&ndash;&gt;-->
+<!--        <div class="col-12 col-md-3">-->
+<!--            <div class="card shadow p-3 mb-5 bg-white rounded w-75">-->
+<!--                <img src="img/animal1.jpg" class="card-img-top" alt="...">-->
+<!--                <div class="card-body">-->
+<!--                    <h5 class="card-title">Rover</h5>-->
+<!--                    <p class="card-text">Coffee Ipsum text yo.</p>-->
+<!--                    <a href="#" class="btn btn-primary">Learn More</a>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--        &lt;!&ndash;        END OF CARD&ndash;&gt;-->
+
+<!--        &lt;!&ndash;        START OF CARD&ndash;&gt;-->
+<!--        <div class="col-8 col-md-3">-->
+<!--            <div class="card shadow p-3 mb-5 bg-white rounded w-75">-->
+<!--                <img src="img/animal1.jpg" class="card-img-top" alt="...">-->
+<!--                <div class="card-body">-->
+<!--                    <h5 class="card-title">Rover</h5>-->
+<!--                    <p class="card-text">Coffee Ipsum text yo</p>-->
+<!--                    <a href="#" class="btn btn-primary">Learn More</a>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--        &lt;!&ndash;        END OF CARD&ndash;&gt;-->
+
+<!--        &lt;!&ndash;        START OF CARD&ndash;&gt;-->
+<!--        <div class="col-12 col-md-3">-->
+<!--            <div class="card shadow p-3 mb-5 bg-white rounded w-75">-->
+<!--                <img src="img/animal1.jpg" class="card-img-top" alt="...">-->
+<!--                <div class="card-body">-->
+<!--                    <h5 class="card-title">Rover</h5>-->
+<!--                    <p class="card-text">Coffee Ipsum text yo</p>-->
+<!--                    <a href="#" class="btn btn-primary">Learn More</a>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--        &lt;!&ndash;        END OF CARD&ndash;&gt;-->
+
+<!--        &lt;!&ndash;        START OF CARD&ndash;&gt;-->
+<!--        <div class="col-12 col-md-3">-->
+<!--            <div class="card shadow p-3 mb-5 bg-white rounded w-75">-->
+<!--                <img src="img/animal1.jpg" class="card-img-top" alt="...">-->
+<!--                <div class="card-body">-->
+<!--                    <h5 class="card-title">Rover</h5>-->
+<!--                    <p class="card-text">Coffee Ipsum text yo.</p>-->
+<!--                    <a href="#" class="btn btn-primary">Learn More</a>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--        &lt;!&ndash;        END OF CARD&ndash;&gt;-->
+
+<!--        &lt;!&ndash;        START OF CARD&ndash;&gt;-->
+<!--        <div class="col-12 col-md-3">-->
+<!--            <div class="card shadow p-3 mb-5 bg-white rounded w-75">-->
+<!--                <img src="img/animal1.jpg" class="card-img-top" alt="...">-->
+<!--                <div class="card-body">-->
+<!--                    <h5 class="card-title">Rover</h5>-->
+<!--                    <p class="card-text">Coffee Ipsum text yo.</p>-->
+<!--                    <a href="#" class="btn btn-primary">Learn More</a>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--        &lt;!&ndash;        END OF CARD&ndash;&gt;-->
+
+<!--        &lt;!&ndash;        START OF CARD&ndash;&gt;-->
+<!--        <div class="col-12 col-md-3">-->
+<!--            <div class="card shadow p-3 mb-5 bg-white rounded w-75">-->
+<!--                <img src="img/animal1.jpg" class="card-img-top" alt="...">-->
+<!--                <div class="card-body">-->
+<!--                    <h5 class="card-title">Rover</h5>-->
+<!--                    <p class="card-text">Coffee Ipsum text yo</p>-->
+<!--                    <a href="#" class="btn btn-primary">Learn More</a>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--        &lt;!&ndash;        END OF CARD&ndash;&gt;-->
+
+<!--        &lt;!&ndash;        START OF CARD&ndash;&gt;-->
+<!--        <div class="col-12 col-md-3">-->
+<!--            <div class="card shadow p-3 mb-5 bg-white rounded w-75">-->
+<!--                <img src="img/animal1.jpg" class="card-img-top" alt="...">-->
+<!--                <div class="card-body">-->
+<!--                    <h5 class="card-title">Rover</h5>-->
+<!--                    <p class="card-text">Coffee Ipsum text yo.</p>-->
+<!--                    <a href="#" class="btn btn-primary">Learn More</a>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--        &lt;!&ndash;        END OF CARD&ndash;&gt;-->
+
+<!--        &lt;!&ndash;        START OF CARD&ndash;&gt;-->
+<!--        <div class="col-12 col-md-3">-->
+<!--            <div class="card shadow p-3 mb-5 bg-white rounded w-75">-->
+<!--                <img src="img/animal1.jpg" class="card-img-top" alt="...">-->
+<!--                <div class="card-body">-->
+<!--                    <h5 class="card-title">Rover</h5>-->
+<!--                    <p class="card-text">Coffee Ipsum text yo.</p>-->
+<!--                    <a href="#" class="btn btn-primary">Learn More</a>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--        &lt;!&ndash;        END OF CARD&ndash;&gt;-->
+
+<!--        &lt;!&ndash;        START OF CARD&ndash;&gt;-->
+<!--        <div class="col-12 col-md-3">-->
+<!--            <div class="card shadow p-3 mb-5 bg-white rounded w-75">-->
+<!--                <img src="img/animal1.jpg" class="card-img-top" alt="...">-->
+<!--                <div class="card-body">-->
+<!--                    <h5 class="card-title">Rover</h5>-->
+<!--                    <p class="card-text">Coffee Ipsum text yo.</p>-->
+<!--                    <a href="#" class="btn btn-primary">Learn More</a>-->
+<!--                </div>-->
+<!--            </div>-->
+
+<!--            <div class="container col-4 mr-5">-->
+<!--                <h1>Coffee stuff</h1>-->
+<!--            </div>-->
+
+<!--        </div>-->
+<!--        &lt;!&ndash;        END OF CARD&ndash;&gt;-->
+
+<!--        &lt;!&ndash;-&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;CARDS END&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&ndash;&gt;-->
+
+<!--        &lt;!&ndash;-&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45; SIDE NAV -&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&ndash;&gt;-->
+
+<!--<form>-->
+<!--    <label for="roast-selection"></label>-->
+<!--    <select id="roast-selection">-->
+<!--        <option>light</option>-->
+<!--        <option>medium</option>-->
+<!--        <option>dark</option>-->
+<!--    </select>-->
+<!--    <input id="submit" type="submit" />-->
+<!--</form>-->
+
+<!--<table>-->
+
+<!--&lt;!&ndash;        <h1>Featured Coffees</h1>&ndash;&gt;-->
+
+<!--        <div class="row">-->
+
+<!--        &lt;!&ndash;        START OF CARD&ndash;&gt;-->
+<!--        <div class="col-8 col-md-3">-->
+<!--            <div class="card shadow mb-5 bg-white rounded w-75 ">-->
+<!--                <img src="img/animal1.jpg" class="card-img-top" alt="...">-->
+<!--                <div class="card-body">-->
+<!--                    <h5 class="card-title">Light City</h5>-->
+<!--                    <p class="card-text">Light</p>-->
+<!--                    <a href="#" class="btn btn-primary">Order Now</a>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--        &lt;!&ndash;        END OF CARD&ndash;&gt;-->
+
+<!--        &lt;!&ndash;        START OF CARD&ndash;&gt;-->
+<!--        <div class="col-8 col-md-3">-->
+<!--            <div class="card shadow mb-5 bg-white rounded w-75">-->
+<!--                <img src="img/animal1.jpg" class="card-img-top" alt="...">-->
+<!--                <div class="card-body">-->
+<!--                    <h5 class="card-title">Half City</h5>-->
+<!--                    <p class="card-text">Light</p>-->
+<!--                    <a href="#" class="btn btn-primary">Order Now</a>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--        &lt;!&ndash;        END OF CARD&ndash;&gt;-->
+
+<!--        &lt;!&ndash;        START OF CARD&ndash;&gt;-->
+<!--        <div class="col-8 col-md-3">-->
+<!--            <div class="card shadow mb-5 bg-white rounded w-75">-->
+<!--                <img src="img/animal1.jpg" class="card-img-top" alt="...">-->
+<!--                <div class="card-body">-->
+<!--                    <h5 class="card-title">Cinnamon</h5>-->
+<!--                    <p class="card-text">Light</p>-->
+<!--                    <a href="#" class="btn btn-primary">Order Now</a>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--        &lt;!&ndash;        END OF CARD&ndash;&gt;-->
+
+<!--        &lt;!&ndash;        START OF CARD&ndash;&gt;-->
+<!--        <div class="col-8 col-md-3">-->
+<!--            <div class="card shadow mb-5 bg-white rounded w-75">-->
+<!--                <img src="img/animal1.jpg" class="card-img-top" alt="...">-->
+<!--                <div class="card-body">-->
+<!--                    <h5 class="card-title">City</h5>-->
+<!--                    <p class="card-text">Medium</p>-->
+<!--                    <a href="#" class="btn btn-primary">Order Now</a>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--        &lt;!&ndash;        END OF CARD&ndash;&gt;-->
+
+<!--        &lt;!&ndash;        START OF CARD&ndash;&gt;-->
+<!--        <div class="col-8 col-md-3">-->
+<!--            <div class="card shadow mb-5 bg-white rounded w-75">-->
+<!--                <img src="img/animal1.jpg" class="card-img-top" alt="...">-->
+<!--                <div class="card-body">-->
+<!--                    <h5 class="card-title">American</h5>-->
+<!--                    <p class="card-text">Medium</p>-->
+<!--                    <a href="#" class="btn btn-primary">Order Now</a>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--        &lt;!&ndash;        END OF CARD&ndash;&gt;-->
+
+<!--        &lt;!&ndash;        START OF CARD&ndash;&gt;-->
+<!--        <div class="col-8 col-md-3">-->
+<!--            <div class="card shadow mb-5 bg-white rounded w-75">-->
+<!--                <img src="img/animal1.jpg" class="card-img-top" alt="...">-->
+<!--                <div class="card-body">-->
+<!--                    <h5 class="card-title">Breakfast</h5>-->
+<!--                    <p class="card-text">Medium</p>-->
+
+<!--                    <a href="#" class="btn btn-primary">Order Now</a>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--        &lt;!&ndash;        END OF CARD&ndash;&gt;-->
+
+<!--        &lt;!&ndash;        START OF CARD&ndash;&gt;-->
+
+<!--        <div class="col-8 col-md-3">-->
+<!--            <div class="card shadow mb-5 bg-white rounded w-75">-->
+<!--                <img src="img/animal1.jpg" class="card-img-top" alt="...">-->
+<!--                <div class="card-body">-->
+<!--                    <h5 class="card-title">High</h5>-->
+<!--                    <p class="card-text">Dark</p>-->
+<!--                    <a href="#" class="btn btn-primary">Order Now</a>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--        &lt;!&ndash;        END OF CARD&ndash;&gt;-->
+
+<!--        &lt;!&ndash;        START OF CARD&ndash;&gt;-->
+<!--        <div class="col-8 col-md-3">-->
+<!--            <div class="card shadow mb-5 bg-white rounded w-75">-->
+<!--                <img src="img/animal1.jpg" class="card-img-top" alt="...">-->
+<!--                <div class="card-body">-->
+<!--                    <h5 class="card-title">Continental</h5>-->
+<!--                    <p class="card-text">Dark</p>-->
+<!--                    <a href="#" class="btn btn-primary">Order Now</a>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--        &lt;!&ndash;        END OF CARD&ndash;&gt;-->
+
+<!--        &lt;!&ndash;        START OF CARD&ndash;&gt;-->
+
+<!--        <div class="col-8 col-md-3">-->
+<!--            <div class="card shadow mb-5 bg-white rounded w-75">-->
+<!--                <img src="img/animal1.jpg" class="card-img-top" alt="...">-->
+<!--                <div class="card-body">-->
+<!--                    <h5 class="card-title">New Orleans</h5>-->
+<!--                    <p class="card-text">Dark</p>-->
+
+<!--                    <a href="#" class="btn btn-primary">Order Now</a>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--        &lt;!&ndash;        END OF CARD&ndash;&gt;-->
+
+<!--        &lt;!&ndash;        START OF CARD&ndash;&gt;-->
+<!--        <div class="col-8 col-md-3">-->
+<!--            <div class="card shadow mb-5 bg-white rounded w-75">-->
+<!--                <img src="img/animal1.jpg" class="card-img-top" alt="...">-->
+<!--                <div class="card-body">-->
+<!--                    <h5 class="card-title">European</h5>-->
+<!--                    <p class="card-text">Dark</p>-->
+<!--                    <a href="#" class="btn btn-primary">Order Now</a>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--        &lt;!&ndash;        END OF CARD&ndash;&gt;-->
+
+<!--        &lt;!&ndash;        START OF CARD&ndash;&gt;-->
+<!--        <div class="col-8 col-md-3">-->
+<!--            <div class="card shadow mb-5 bg-white rounded w-75">-->
+<!--                <img src="img/animal1.jpg" class="card-img-top" alt="...">-->
+<!--                <div class="card-body">-->
+<!--                    <h5 class="card-title">Espresso</h5>-->
+<!--                    <p class="card-text">Dark</p>-->
+<!--                    <a href="#" class="btn btn-primary">Order Now</a>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--        &lt;!&ndash;        END OF CARD&ndash;&gt;-->
+
+<!--        &lt;!&ndash;        START OF CARD&ndash;&gt;-->
+<!--        <div class="col-8 col-md-3">-->
+<!--            <div class="card shadow mb-5 bg-white rounded w-75">-->
+<!--                <img src="img/animal1.jpg" class="card-img-top" alt="...">-->
+<!--                <div class="card-body">-->
+<!--                    <h5 class="card-title">Viennese</h5>-->
+<!--                    <p class="card-text">Dark</p>-->
+<!--                    <a href="#" class="btn btn-primary">Order Now</a>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--        &lt;!&ndash;        END OF CARD&ndash;&gt;-->
+
+<!--        &lt;!&ndash;        START OF CARD&ndash;&gt;-->
+<!--        <div class="col-8 col-md-3">-->
+<!--            <div class="card shadow mb-5 bg-white rounded w-75">-->
+<!--                <img src="img/animal1.jpg" class="card-img-top" alt="...">-->
+<!--                <div class="card-body">-->
+<!--                    <h5 class="card-title">Italian</h5>-->
+<!--                    <p class="card-text">Dark</p>-->
+<!--                    <a href="#" class="btn btn-primary">Order Now</a>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--        &lt;!&ndash;        END OF CARD&ndash;&gt;-->
+
+<!--        &lt;!&ndash;        START OF CARD&ndash;&gt;-->
+<!--        <div class="col-8 col-md-3">-->
+<!--            <div class="card shadow mb-5 bg-white rounded w-75">-->
+<!--                <img src="img/animal1.jpg" class="card-img-top" alt="...">-->
+<!--                <div class="card-body">-->
+<!--                    <h5 class="card-title">French</h5>-->
+<!--                    <p class="card-text">Dark</p>-->
+<!--                    <a href="#" class="btn btn-primary">Order Now</a>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--        &lt;!&ndash;        END OF CARD&ndash;&gt;-->
+
+<!--        </div>-->
+<!--    </div>-->
+<!--        <div class="container col-4" id="side_nav">-->
+<!--            <h1>Coffee Stuff</h1>-->
+<!--            <h1>Coffee Stuff</h1>-->
+<!--            <h1>Coffee Stuff</h1>-->
+<!--            <h1>Coffee Stuff</h1>-->
+<!--    </div>-->
+
+<!--</div>-->
+
+<!--</div>-->
+
+<!---------------------------------------CARDS END-------------------------------------------->
+
+<!------------------------------------- SIDE NAV START--------------------------------------------->
+
+<!------------------------------------- SIDE NAV START--------------------------------------------->
+
+<!--        <form>-->
+<!--            <label for="roast-selection"></label>-->
+<!--            <select id="roast-selection">-->
+<!--                <option>light</option>-->
+<!--                <option>medium</option>-->
+<!--                <option>dark</option>-->
+<!--            </select>-->
+<!--            <input id="submit" type="submit" />-->
+<!--        </form>-->
+
+<!--        <table>-->
+<!--            <thead>-->
+<!--            <tr>-->
+<!--                <th>ID</th>-->
+<!--                <th>NAME</th>-->
+<!--                <th>ROAST</th>-->
+<!--            </tr>-->
+<!--            </thead>-->
+<!--            <tbody id="coffees"></tbody>-->
+<!--        </table>-->
+
+<!--<input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names..">-->
+
+<!--<ul id="myUL">-->
+<!--    <li><a href="#">Adele</a></li>-->
+<!--    <li><a href="#">Agnes</a></li>-->
+
+<!--    <li><a href="#">Billy</a></li>-->
+<!--    <li><a href="#">Bob</a></li>-->
+
+<!--    <li><a href="#">Calvin</a></li>-->
+<!--    <li><a href="#">Christina</a></li>-->
+<!--    <li><a href="#">Cindy</a></li>-->
+<!--</ul>-->
