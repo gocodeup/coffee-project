@@ -7,7 +7,25 @@ td, th {
     border: 1px solid black;
     padding: 5px 10px;
 }
+
+/*.container {*/
+/*    background-color: #96b7c8;*/
+/*    width: 100%;*/
+/*}*/
 .buttons {
      background: #956E4B;
 
  }
+
+.jumbotron {
+    /*width: 100%;*/
+    /*display: flex;*/
+    /*filter: brightness(160%);*/
+    background-image: url("img/coffee-beans.jpg");
+    background-size: cover;
+    background-position: center;
+    margin-top: 20px;
+}
+.navbar {
+   background-color: lightblue;
+}
