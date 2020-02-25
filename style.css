@@ -36,3 +36,57 @@ tr{
 #search {
     width: 15em;
 }
+
+.visibility{
+    border: 2px solid black;
+}
+
+.textalignment{
+    text-align: center;
+    font-size: .9em;
+}
+
+.coffee_box{
+    float: right;
+}
+
+.wrapper {
+    position: relative;
+    display: flex;
+    min-width: 100px;
+}
+
+.search-icon {
+    position: absolute;
+    top: 6px;
+    left: 8px;
+    width: 14px;
+}
+
+.clear-icon {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    width: 10px;
+    cursor: pointer;
+<!-- visibility: hidden; -->
+}
+
+.search {
+    border: 1px solid grey;
+    border-radius: 5px;
+    height: 20px;
+    width: 100%;
+    padding: 2px 23px 2px 30px;
+    outline: 0;
+    background-color: #f5f5f5;
+}
+
+.search:hover, .search:focus {
+    border: 1.5px solid #009688;
+    background-color: white;
+}
+
+
+
+
