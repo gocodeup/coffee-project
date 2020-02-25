@@ -1,5 +1,5 @@
 .mainContainer{
-    background: #dee2e4;
+    background: rgba(110, 183, 93, 0.77);
 }
 .headlineContainer{
     background: rgba(241, 241, 241, 0.5);
@@ -121,9 +121,7 @@ form{
 #roast-selection {
     width: 100%;
 }
-#myInput {
 
-}
 #submit {
     width: 100%;
 }
