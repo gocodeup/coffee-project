@@ -1,20 +1,23 @@
-
 .jumbotron {
     position: relative;
-    padding: 0;
-    margin-top: 22px;
+    background-image: url("img/jeremy-yap-jn-HaGWe4yw-unsplash (1).jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background: stretch;
+    background-size: 100%;
+    width: 100%;
+    margin-top: 5%;
     text-align: center;
     font-size: 20px;
     font-family: Playfair Display SC;
-    margin-bottom: 0;
+
 }
 .container{
-    padding: 10px;
+    padding:50px;
 }
 
 .h1 {
     display: flex;
-    text-align: center;
 }
 
 
@@ -147,3 +150,33 @@
 .coffees {
     font-family: Playfair Display SC, serif;
 }
+
+
+.card-body {
+    display: flex;
+
+}
+
+.Coffee {
+    display: flex;
+    background: white;
+}
+
+
+.card{
+    display: flex;
+    background: pink;
+}
+
+.card-text{
+    display:flex;
+    font-family: Playfair Display SC, serif;
+    color: pink;
+}
+
+
+
+
+
+
+
