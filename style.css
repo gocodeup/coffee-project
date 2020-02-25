@@ -51,6 +51,14 @@ blockquote.blockquote.text.center.bg-primary {
     height: 20%;
 }
 
+.coffee-div {
+    display: flex;
+    /*flex-direction: row;*/
+    border: 1px solid black;
+    text-align: center;
+
+}
+
 p {
     font-family: 'Press Start 2P';
     color: white;
@@ -133,7 +141,9 @@ cite {
 
 #coffees {
     margin-left: 42%;
-    flex-direction: row;
+    border: 2px solid maroon;
+
+
 }
 
 
