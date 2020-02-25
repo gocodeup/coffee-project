@@ -42,6 +42,7 @@ function updateCoffees(e) {
 
 }
 
+
 //coffee roast user input selection
 function updateInputCoffees(e) {
     e.preventDefault(); // don't submit the form, we just want to update the data
