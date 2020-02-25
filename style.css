@@ -1,8 +1,8 @@
 .mainContainer{
-    background: grey;
+    background: #dee2e4;
 }
 .headlineContainer{
-    background: rgba(255, 255, 255, .5);
+    background: rgba(241, 241, 241, 0.5);
 }
 
 #main-header{
@@ -36,15 +36,15 @@
 .pageContainer{
     width: 100%;
     display: grid;
-    grid-template-columns: 70% 22%;
+    grid-template-columns: 80% 20%;
     grid-template-areas:
                 "leftSide rightSide";
 }
 
 .coffee-list {
-    width: 68vw;
+    width: 78vw;
     height: 47vh;
-    background: rgba(0, 129, 11, .71);
+    background: ;
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
@@ -103,7 +103,7 @@ p{
 
 }
 form{
-    background: rgba(0, 129, 11, 0.71);
+    background: rgba(222, 226, 228, 0.71);
     font-family: Futura, serif;
     font-size: 14px;
     padding: 4px;
@@ -111,7 +111,6 @@ form{
     width: 230px;
     border-radius: 4px;
     text-align: center;
-
 
 }
 
