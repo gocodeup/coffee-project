@@ -1,3 +1,7 @@
+html {
+    background: #e3c8a3;
+}
+
 table {
     border-collapse: collapse;
     margin: 15px 0;
@@ -6,4 +10,156 @@ table {
 td, th {
     border: 1px solid black;
     padding: 5px 10px;
+}
+/*//////*/
+
+#bg {
+    /*width: 100vw;*/
+    /*height: 100vh;*/
+    /*display: block;*/
+    position: absolute;
+}
+
+#bg::after {
+    content: "";
+    background: no-repeat fixed center url("./img/pngwave.png");
+    opacity: 0.5;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: -1;
+    position: absolute;
+}
+
+blockquote.blockquote.text.center.bg-primary {
+    border-radius: 50%;
+}
+
+.container {
+    /*border: 1px solid black;*/
+    margin-left: 19%;
+    border-radius: 50%;
+}
+
+.mb-0 {
+    font-size: 2em;
+}
+
+#coffeez2 {
+    width: 20%;
+    height: 20%;
+}
+
+.coffee-div {
+    display: flex;
+    /*flex-direction: row;*/
+    border: 1px solid black;
+    text-align: center;
+
+}
+
+p {
+    font-family: 'Press Start 2P';
+    color: white;
+    animation: shifting-text 5s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes shifting-text {
+    0% {
+        transform: translate3d(15px, 0, 0); color: #143d59;
+    }
+    25% {
+        transform: translate3d(0, 0, 20px); color: #143d59;
+    }
+    50% {
+        transform: translate3d(0, 0, 20px); color: #856721;
+    }
+    75% {
+        transform: translate3d(20, 0, 0); color: #856721;
+    }
+    100% {
+        transform: translate3d(15px, 0, 0); color: #143d59;
+    }
+}
+
+cite {
+    color: white;
+    font-family: 'Press Start 2P';
+}
+
+#submit {
+    padding: 25px;
+    width: 100px;
+    border-radius: 15px;
+    margin-left: 43%;
+    margin-top: 2%;
+    font-family: 'Anton';
+
+}
+
+#submit:hover {
+    animation: submit-animation 3s;
+    animation-iteration-count: 1;
+    transition: ease-in-out;
+    transition-delay: 5s;
+}
+
+@keyframes submit-animation {
+    0% {
+        color: white;
+        background: #143d59;
+        -webkit-box-shadow:0 0 3px #d2b6a0;
+    }
+    25% {
+        color: white;
+        background: #143d59;
+        -webkit-box-shadow:0 0 3px #d2b6a0;
+
+    }
+    50% {
+        color: white;
+        background: #856721;
+        -webkit-box-shadow:2px 2px 0 #d9a479; animation-delay: 2s;
+
+    }
+    75% {
+        color: #9e9e9e;
+        background: #856721;
+        -webkit-box-shadow:0 0 3px #d2b6a0;
+
+    }
+    100% {
+        color: black;
+        transform: rotate(360deg); background: #fffefa;
+        -webkit-box-shadow:0 0 1px #d2b6a0;
+    }
+}
+
+
+
+#coffees {
+    margin-left: 42%;
+    border: 2px solid maroon;
+
+
+}
+
+
+
+.row {
+    display: flex;
+}
+
+input#coffee-input {
+    margin-left: 41%;
+}
+
+#coffee-label {
+    margin-left: 38%;
+    font-family: 'Anton';
+    font-size: 1.75em;
+    color: #fff;
+    letter-spacing: 3px;
 }
