@@ -44,29 +44,43 @@
 
     <!------------The card container------------>
     <div class="container col-8" id="card-container">
+
         <!------------The search Options------------>
-        <form class="dr">
-            <select  id="roast-selection">
-                <label for="roast-selection"></label>
-                <option>all</option>
-                <option>light</option>
-                <option>medium</option>
-                <option>dark</option>
+<!--        <form class="dr">-->
+<!--            <select  id="roast-selection">-->
+<!--                <label for="roast-selection"></label>-->
+<!--                <option>all</option>-->
+<!--                <option>light</option>-->
+<!--                <option>medium</option>-->
+<!--                <option>dark</option>-->
 
-            </select>
+<!--            </select>-->
+<!--        </form>-->
+
+        <form>
+            <div class="form-group" >
+                <label for="roast-selection" >Roast Selection:</label>
+                <select class="form-control" id="roast-selection">
+                    <option>All</option>
+                    <option>Light</option>
+                    <option>Medium</option>
+                    <option>Dark</option>
+                </select>
+            </div>
         </form>
-
 
         <!------------The search Input------------>
         <input type="text" class="form-control" name="x" id="inputSelection" placeholder="Search">
 
-        <!------------The card ------------>
+
+        <!------------The cards ------------>
         <div id="coffees-card">
             <div class="row" id="coffees"></div>
         </div>
         <h3 class="text-center" id="error-message"></h3>
 
     </div>
+
 
     <!------------ Footer Navigation ------------>
     <nav class="nav flex-column d-flex justify-content-center" id="bottom-nav">

@@ -16,11 +16,11 @@ body {
 }
 
 /* Style to create scroll bar in dropdown */
-.scrollable-dropdown{
-    height: auto;
-    max-height:400px;  /* Increase / Decrease value as per your need */
-    /*overflow-x: hidden;*/
-}
+/*.scrollable-dropdown{*/
+/*    height: auto;*/
+/*    max-height:400px;  !* Increase / Decrease value as per your need *!*/
+/*    !*overflow-x: hidden;*!*/
+/*}*/
 
 /*---------------Jumbotron Video---------------*/
 #video-text{
@@ -116,13 +116,13 @@ a:link:hover{
 /*---------------Card Container---------------*/
 
 #inputSelection{
-    margin: 5%;
+    margin: 5% 0;
 }
 
 #big-div {
     margin: 3em;
     border: none;
-    background-color: var(--card-color);
+    background-color: var(--background-color);
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 
     transition: transform .2s; /* Animation */
