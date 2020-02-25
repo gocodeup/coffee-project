@@ -4,7 +4,8 @@
 var desiredRoast =undefined;
 var filteredCoffees = [];
 var cardContainer = "";
-
+var sustain = [];
+var drinks = [];
 
 var initListOfCoffees=function(drinks){
     if(drinks===undefined){
@@ -67,8 +68,22 @@ var search =  function updateCoffees(e) {
     //propagate the selected roast to our global tracker value
     desiredRoast=selectedRoast.toLowerCase();
     // alter initial table to desired roast
-    document.getElementById('card-container').innerHTML = null;
-    initListOfCoffees(filteredCoffees);
+    if(result === ""){
+        document.getElementById('card-container').innerHTML = null;
+        initListOfCoffees(filteredCoffees);
+    } else if (result !== "" && desiredRoast === 'all'){
+        document.getElementById('card-container').innerHTML = null;
+        initListOfCoffees(drinks);
+    } else {
+        document.getElementById('card-container').innerHTML = null;
+        initListOfCoffees(sustain);
+    }
+
+
+
+
+
+
 };
 
 
@@ -117,7 +132,8 @@ initListOfCoffees(undefined);
 
 document.getElementById('searchbar').addEventListener('keydown', function(event) {
     // document.getElementById('card-container').innerHTML = null;
-    var drinks = coffees;
+   sustain = [];
+    drinks = coffees;
     var key = event.key.toLowerCase();
     var charList = 'abcdefghijklmnopqrstuvwxyz';
 
@@ -140,6 +156,7 @@ document.getElementById('searchbar').addEventListener('keydown', function(event)
             var compare = coffee.name.toLowerCase();
             //see if any names match the input characters
             if ((compare.search(result) > -1) ||(result === "")) {
+                sustain.push(coffee);
                 //see if the roast type matches
                 if( (coffee.roast.toLowerCase().search(desiredRoast) > -1)||(desiredRoast==='all')) {
                     drinks.push(coffee);
@@ -152,12 +169,14 @@ document.getElementById('searchbar').addEventListener('keydown', function(event)
     } else if(charList.indexOf(key) !== -1){
         //normal situation of legit characters input that aren't backspaces
         document.getElementById('card-container').innerHTML = null;
+        sustain = [];
         drinks = [];
         result = result + key;
         coffees.forEach(function (coffee) {
             var compare = coffee.name.toLowerCase();
             //see if any names match the input characters
             if ((compare.search(result) > -1) ||(result === "")) {
+                sustain.push(coffee);
                 //see if the roast type matches
                 if( (coffee.roast.toLowerCase().search(desiredRoast) > -1)||(desiredRoast==='all')) {
                     drinks.push(coffee);
@@ -167,7 +186,7 @@ document.getElementById('searchbar').addEventListener('keydown', function(event)
         initListOfCoffees(drinks);
 
     } else {
-        //none of the above occured, such as a backspace to a blank string
+        //none of the above occurred, such as a backspace to a blank string
         drinks.forEach(function (coffee) {
             document.getElementById('card-container').innerHTML = null;
             initListOfCoffees(drinks);
@@ -175,3 +194,24 @@ document.getElementById('searchbar').addEventListener('keydown', function(event)
     }
 
 });
+
+
+
+var addCoffee = document.querySelector('#roastAdd');
+addCoffee.addEventListener('click', addToCoffees);
+
+function addToCoffees(e) {
+    e.preventDefault(); // don't submit the form, we just want to update the data
+    var addCoffeeName = document.querySelector('#addbar').value;
+    var addCoffeeRoast = document.querySelector('#roast-add').value;
+    coffees.push({
+        id: coffees.length + 1,
+        name: addCoffeeName,
+        roast: addCoffeeRoast
+    });
+    localStorage.setItem('coffees', JSON.stringify(coffees));
+    document.getElementById('card-container').innerHTML = null;
+    initListOfCoffees(coffees);
+}
+
+

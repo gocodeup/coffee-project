@@ -28,71 +28,67 @@
         </div>
     </div>
 
-<!---END JUMBOTRON-->
+    <!---END JUMBOTRON-->
 
 
     <!--INPUT-->
-        <div class="coffeeContainer">
-    <div class="div2 SearchRoast">
-        <div class="input-group mb-3">
-            <!--COFFEES AND ROAST SELECTION-->
-            <form>
-                <label for="roast-selection"></label>
-                <h3>What's Your Roast Strength?</h3>
-                <select class="form-control form-control-md dropdown1"  id="roast-selection">
-                    <option id="roast-light">light</option>
-                    <option id="roast-medium">medium</option>
-                    <option id="roast-dark">dark</option>
-                    <option id="roast-all">all</option>
-                </select>
-                <input id="roastSubmit" type="submit"/>
-            </form>
+    <div class="coffeeContainer">
+        <div class="div2 SearchRoast">
+            <div class="input-group">
+                <!--COFFEES AND ROAST SELECTION-->
+                <div class="artisinalContainer">
+                    <label>
+                        <h3>Artisinal Coffee</h3>
+                        <input type="text" class="form-control" placeholder="Search for Your Flavor" id="searchbar"></label>
 
-<div class="artisinalContainer">
-            <label>
-                <h3>Artisinal Coffee</h3>
-                <input type="text" class="form-control" placeholder="Search for Your Flavor" id="searchbar"></label>
+                </div>
+                <form>
+                    <label for="roast-selection"></label>
+                    <h3>What's Your Roast Strength?</h3>
+                    <select class="form-control form-control-md dropdown1"  id="roast-selection">
+                        <option id="roast-light">light</option>
+                        <option id="roast-medium">medium</option>
+                        <option id="roast-dark">dark</option>
+                        <option id="roast-all">all</option>
+                    </select>
+                    <input class="roastSubmit" id="roastSubmit" type="submit"/>
+                </form>
 
-</div>
+                <div class="coffeeAdd">
+                    <h3 class="mb-4">Would you like to add a coffee?</h3>
+                    <form>
+                        <label for="roast-selection"></label>
+                        <h3>Roast Strength</h3>
+                        <select class="form-control form-control-md dropdown1"  id="roast-add">
+                            <option id="light">light</option>
+                            <option id="medium">medium</option>
+                            <option id="dark">dark</option>
+                        </select>
+                    </form>
+                    <div class="artisinalContainer">
+                        <label>
+                            <h3>Artisinal Coffee</h3>
+                            <input type="text" class="form-control" placeholder="New Coffee Name Here" id="addbar"></label>
+                        <input class="roastSubmit" id="roastAdd" type="submit"/>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--END OF INPUT-->
+
+
+        <!---DIV 3--->
+
+        <div id='card-container' class="mx-5 my-5 card-rows card-columns mt-5"></div>
+
     </div>
-    </div>
-            <!--END OF INPUT-->
-
-
-            <!---DIV 3--->
-
-<div id='card-container' class="mx-5 my-5 card-rows card-columns mt-5"></div>
-
-<!--        <div class="card-container mb-3" style="max-width: 50rem;">-->
-<!--            <div class="card-body">-->
-<!--&lt;!&ndash;                <h5 class="Coffee" id="result"></h5>&ndash;&gt;-->
-<!--                <p class="card-text" id="roast"></p>-->
-<!--            </div>-->
-<!--        </div>-->
-
-
-
-<!--        <div class="coffee" id="id">-->
-<!--            <div class="name" id="roast">-->
-
-<!--            </div>-->
-<!--        </div>-->
-
-<!--    <div class="div3">-->
-<!--    <table>-->
-<!--&lt;!&ndash;        <thead>&ndash;&gt;-->
-<!--&lt;!&ndash;        </thead>&ndash;&gt;-->
-<!--        <tbody id="coffees"></tbody>-->
-<!--    </table>-->
-<!--</div>-->
-
-</div>
 </div>
 
 
-    <!---JS SCRIPT-->
-    <script src="main.js"></script>
-    </div>
+
+<!---JS SCRIPT-->
+<script src="main.js"></script>
+
 
 </body>
 </html>
