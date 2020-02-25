@@ -2,11 +2,24 @@
     background: rgba(110, 183, 93, 0.77);
 }
 .headlineContainer{
-    background: rgba(241, 241, 241, 0.5);
+    height: 33.5vh;
+    animation: breath alternate-reverse 2s;
+    -webkit-animation: breath alternate-reverse 2s;
+    -moz-animation: breath alternate-reverse 2s;
+    -o-animation: breath alternate-reverse 2s;
+}
+@keyframes breath {
+    50% {
+        opacity:1;
+        transform:  rotate(0deg) scaleX(1) scaleY(1) ;
+    }
+    100% {
+        opacity:0;
+        transform:  rotate(0deg) scaleX(0) scaleY(0) ;
+    }
 }
 
 #main-header{
-    /*height: 250px;*/
 
     text-align: center;
     font-family: 'Odibee Sans', serif ;
@@ -52,6 +65,10 @@
     overflow: auto;
     margin: 10px;
     border-radius: 4px;
+    animation: breath alternate-reverse 2s;
+    -webkit-animation: breath alternate-reverse 2s;
+    -moz-animation: breath alternate-reverse 2s;
+    -o-animation: breath alternate-reverse 2s;
 }
 
 .coffeeName{
@@ -92,6 +109,19 @@ span {
     padding: 2px 3px -20px;
     box-shadow: 0px -1px 5px greenyellow;
     height: 60px;
+    animation: ease-in-out;
+    animation: breath alternate-reverse 2s;
+    -webkit-animation: breath alternate-reverse 2s;
+    -moz-animation: breath alternate-reverse 2s;
+    -o-animation: breath alternate-reverse 2s;
+}
+
+@keyframes mymove {
+    0%   {top: 0px;}
+    25%  {top: 200px;}
+    50%  {top: 100px;}
+    75%  {top: 200px;}
+    100% {top: 0px;}
 }
 
 /*coffee roast type*/
@@ -111,7 +141,10 @@ form{
     width: 230px;
     border-radius: 4px;
     text-align: center;
-
+    animation: breath alternate-reverse 2s;
+    -webkit-animation: breath alternate-reverse 2s;
+    -moz-animation: breath alternate-reverse 2s;
+    -o-animation: breath alternate-reverse 2s;
 }
 
 .dropdown1 {
@@ -132,6 +165,10 @@ form{
     height: 270px;
     z-index: -1;
 
+}
+.input2 {
+    display: flex;
+    align-content: flex-end;
 }
 
 
