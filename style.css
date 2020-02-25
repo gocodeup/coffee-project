@@ -1,3 +1,8 @@
+*{
+    box-sizing: border-box;
+
+}
+
 table {
     border-collapse: collapse;
     margin: 15px 0;
@@ -13,19 +18,44 @@ td, th {
 /*    width: 100%;*/
 /*}*/
 .buttons {
-     background: #956E4B;
+     background: #307473;
 
  }
 
 .jumbotron {
-    /*width: 100%;*/
     /*display: flex;*/
-    /*filter: brightness(160%);*/
-    background-image: url("img/coffee-beans.jpg");
+    background-color: #96b7c8;
+    background-image: url("img/cupNature.jpg");
     background-size: cover;
     background-position: center;
     margin-top: 20px;
+    /*opacity: 6.5;*/
+}
+#logo {
+    width: 200px;
+}
+h1 {
+    color: #2DC2BD;
+    opacity: unset;
+    font-weight: bolder;
 }
 .navbar {
    background-color: lightblue;
+}
+
+
+.card {
+    height: 500px;
+    width: 500px;
+    margin: 85px
+}
+#coffees h1 {
+    font-size: 20px;
+}
+.buttons {
+    height: 30px;
+    margin-right: 1em;
+}
+#addCof {
+    height: 100%;
 }

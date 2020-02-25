@@ -13,7 +13,7 @@
 <!--------------------------JUMBOTRON BEGINS--------------------------->
 <div class="jumbotron jumbotron-fluid m-0" >
     <div class="container text-center ">
-        <h1 class="display-4">Jameson's <inline><img src="" alt=""></inline> Java</h1>
+        <h1 class="display-4">Jameson's <img src="img/jamesonlogo.png" alt="" id="logo"> Java</h1>
         
     </div>
 </div>
@@ -21,13 +21,12 @@
 
 <!----------------------------NAVBAR BEGINS----------------------------->
     <nav class="navbar navbar-expand-lg navbar-light">
-        <a class="navbar-brand" href="#">Jameson's Java</a>
-        <ul class="navbar-nav mr-auto">
+        <ul class="navbar-nav mr-auto d-flex">
 <!--DROPDOWN FOR ROAST-->
-            <li class="nav-item dropdown d-flex">
+            <li class="nav-item dropdown align-middle d-flex">
                 <form>
                     <label for="roast-selection"></label>
-                     <select id="roast-selection" class="buttons m-0 align-middle ">
+                     <select id="roast-selection" class="buttons text-center">
                         <option class="rselected">light</option>
                         <option class="rselected">medium</option>
                         <option class="rselected">dark</option>
@@ -40,9 +39,9 @@
 
  <!--SEARCH FOR COFFEE-->
             <li>
-                <form class="form-inline d-flex" id="forSearch">
-                    <label for="search-box">Find Your Flavor</label>
-                    <input type="search" id="search-box" placeholder="Coffee" />
+                <form class="form-inline" id="forSearch">
+                    <label for="search-box"></label>
+                    <input type="search" id="search-box" placeholder="Enter Flavor" />
                     <button typeof="submit" id="search-submit" class="buttons">Search</button>
                 </form>
             </li>
@@ -51,15 +50,19 @@
 <!--ADD COFFEE BEGINS-->
             <li>
                 <form action="">
-                    <label for="addCofBox">Add new flavor</label>
-                    <input type="text" id="addCofBox" placeholder="Add your coffee">
-                    <label for="roastSelectAdd">Add your roast</label>
+                    <label for="addCofBox"></label>
+                    <input type="text" id="addCofBox" placeholder="Add your own flavor">
+                </form>
+            </li>
+            <li>
+                <form>
+                    <label for="roastSelectAdd">Select Roast</label>
                     <select name="roastAdd" id="roastSelectAdd" class="buttons">
                         <option class="rselected">light</option>
                         <option class="rselected">medium</option>
                         <option class="rselected">dark</option>
                     </select>
-                    <button type="submit" id="addCof" class="buttons">Add</button>
+                    <button type="submit" id="addCof" class="">Add</button>
                 </form>
             </li>
  <!--ADD COFFEE ENDS-->
@@ -67,28 +70,21 @@
     </nav>
 <!----------------------------NAVBAR ENDS----------------------------->
 
-
+<!----------------------------CARD ONE---------------------------->
 <div class="row">
 
-<div class="card col-6" style="width: 18rem;">
-    <div class="card-body" id="coffees">
-        <div>
+<div class="card col-4 row-" style="width: 18rem;">
+    <div class="card-body card-columns text-wrap" id="coffees">
             <!--                <th>ID</th>-->
-            <h1>NAME</h1>
-            <p>ROAST</p>
-        </div>
+        <h1 class="card-title">NAME</h1>
+        <p class="card-text">ROAST</p>
     </div>
 </div>
 
+<!------------------------------CARD TWO----------------------------->
+    <div class="card col-4" ></div>
 
 
-<!--    <div id="coffees">-->
-<!--            <div>-->
-<!--&lt;!&ndash;                <th>ID</th>&ndash;&gt;-->
-<!--                <h1>NAME</h1>-->
-<!--                <p>ROAST</p>-->
-<!--            </div>-->
-<!--    </div>-->
 </div>
 
 
