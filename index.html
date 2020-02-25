@@ -61,9 +61,41 @@
         <input type="text" id="coffee-input" placeholder="Search for coffee">
     </form>
 
-    <div class="coffee-div">
-        <div id="coffees"></div>
+<!--    <div class="coffee-div">-->
+<!--        <div id="coffees"></div>-->
+<!--    </div>-->
+
+    <div class="box d-flex justify-content-center ">
+        <div class="row">
+<!--            <div class="col p-0">-->
+<!--                <div class="container p-0 m-0">-->
+<!--                    <div class="row m-0 p-0">-->
+                        <div
+                                class="col m-1 p-5 d-flex flex-wrap justify-content-center"
+                                id="coffees">
+                        </div>
+<!--                    </div>-->
+<!--                </div>-->
+<!--            </div>-->
+        </div>
     </div>
+
+    <!--Below is code to add new coffee-->
+    <div>
+        <label for="new-coffee">Add the new coffee to this list</label>
+        <input id="new-coffee" placeholder="Enter your new coffee here" type="text">
+        <label>What kind of Roast would you like?
+            <select id="new-roast">
+                <option>Light</option>
+                <option>Medium</option>
+                <option>Dark</option>
+            </select>
+        </label>
+        <input id="submitNewCoffee" type="submit">
+    </div>
+    <!--End of add new coffee-->
+
+
 <!--    <div class="spinner-grow" role="status" id="coffees">-->
 <!--        <span class="sr-only">Loading...</span>-->
 <!--    </div>-->
