@@ -46,14 +46,14 @@ var coffees = [
     {id: 4, name: 'Mid Grade', roast: 'MEDIUM'},
     {id: 5, name: 'SoSoSO..', roast: 'MEDIUM'},
     {id: 6, name: 'Breakfast', roast: 'MEDIUM'},
-    {id: 7, name: 'Xj.HiqqZ', roast: 'DARK'},
+    {id: 7, name: 'Hx.JiqqZ', roast: 'DARK'},
     {id: 8, name: 'Gnarly', roast: 'DARK'},
-    {id: 9, name: 'Etreme', roast: 'DARK'},
+    {id: 9, name: 'X-treme', roast: 'DARK'},
     {id: 10, name: 'Radical', roast: 'DARK'},
     {id: 11, name: 'Capt. Oily', roast: 'DARK'},
     {id: 12, name: 'Aggro', roast: 'DARK'},
     {id: 13, name: 'Kill It w/ Fire', roast: 'DARK'},
-    {id: 14, name: 'Redonkulous', roast: 'DARK'},
+    {id: 14, name: 'RDNKLS', roast: 'DARK'},
 ];
 // coffees search
 function myFunction() {

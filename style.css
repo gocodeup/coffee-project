@@ -1,20 +1,20 @@
-body{
+.mainContainer{
+    background: grey;
 }
 .headlineContainer{
     background: rgba(255, 255, 255, .5);
-
 }
-#main-header{
 
-    height: 230px;
+#main-header{
+    /*height: 250px;*/
+
     text-align: center;
     font-family: 'Odibee Sans', serif ;
     font-size: 160px;
-    padding: 0px;
-    margin-bottom: 20px;
-    color: #3c3c3f;
+    color: black;
     text-shadow: 0px -3px 10px #feff24;
 }
+
 .subMain{
     text-align: center;
     font-family: "Odibee Sans", sans-serif;
@@ -22,32 +22,29 @@ body{
     font-size: 30px;
     text-shadow: 0px 0px 7px black;
     margin-top: -70px;
-
 }
 
 .name {
     height: 60px;
     font-family: Futura, serif;
-    color: #3c3c3f;
+    color: #3c0c3f;
     display: flex;
     justify-content: center;
     align-items: center;
-    padding-bottom: 20px;
-    /*text-shadow: 0px -2*/
-
 }
 
 .pageContainer{
     width: 100%;
     display: grid;
-    grid-template-columns: 72% 20%;
+    grid-template-columns: 70% 22%;
     grid-template-areas:
                 "leftSide rightSide";
 }
+
 .coffee-list {
-    width: 70vw;
-    height: 50vh;
-    background: rgba(0, 129, 11, 0.71);
+    width: 68vw;
+    height: 47vh;
+    background: rgba(0, 129, 11, .71);
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
@@ -64,7 +61,6 @@ body{
     font-size: 20px;
     font-family: Copperplate, serif;
     margin: 5px 2px 0px 2px;
-
 }
 
 .coffeeRoast{
@@ -74,7 +70,6 @@ body{
     font-family: Helvetica, sans-serif;
     text-shadow: 0px -2px 4px whitesmoke;
 }
-
 
 .leftSide{
     grid-area: leftSide;
@@ -91,20 +86,17 @@ span {
     flex-direction: column;
     align-content: center;
     background: whitesmoke;
-    border: brown 0px solid;
+    border: darkgreen 2px solid;
     border-radius: 4px;
     margin: 4px;
     padding: 2px 3px -20px;
-    /*box-shadow: 0px -1px 2px;*/
+    box-shadow: 0px -1px 5px greenyellow;
     height: 60px;
-    display: flex;
-    justify-content: center;
 }
+
 /*coffee roast type*/
 p{
-
     background: whitesmoke;
-    border: brown 0px solid;
     border-radius: 4px 0px 0px 4px;
     display: flex;
     justify-content: center;
@@ -116,7 +108,7 @@ form{
     font-size: 14px;
     padding: 4px;
     margin: 10px;
-    width: 300px;
+    width: 230px;
     border-radius: 4px;
     text-align: center;
 
