@@ -1,6 +1,5 @@
 body{
     background-image: url("coffee-Background.jpg");
-    background-size: cover;
 }
 
 h1{
@@ -37,7 +36,7 @@ tr{ /* Hide table header row*/
 
 #coffees{
     display: flex;
-    /*flex-direction: column;*/
+    flex-direction: column;
     flex-wrap: wrap;
     margin: auto;
     width: 50%;
@@ -49,9 +48,6 @@ tr{ /* Hide table header row*/
     flex-flow: column wrap;
 }
 
-div#coffees{
-    overflow: auto;
-}
 /*#rendered_coffee{*/
 /*    height: 1000px;*/
 /*    width: 50%;*/
