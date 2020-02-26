@@ -75,22 +75,26 @@
 /*Generated card specifications*/
 
 #card-container {
-    width: 250%;
+    width: auto;
+    height: auto;
 }
 
 .card-name {
+    width: 100%;
+    max-width: 90%;
     font-size: 30px;
     font-weight: bold;
-    margin-left: 1em;
+    margin-left: .5em;
     margin-top: 10px;
-    padding-right: -50px;
-    margin-right: -2em;
+    /*padding-right: -50em   ;*/
+    margin-right: .25em;
 }
 
 .card-roast {
+    max-width: 75%;
     font-size: 18px;
-    margin-left: 2.5em;
-    padding-right: -50px;
+    margin-left: 2em;
+    padding-right: -50em;
     margin-right: -2em;
 }
 
@@ -213,9 +217,8 @@
     color: pink;
 }
 
-
-
-
-
-
-
+@media screen and (max-width: 992px) {
+    .card-columns{
+        column-count: 2;
+    }
+}

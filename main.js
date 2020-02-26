@@ -207,14 +207,25 @@ function addToCoffees(e) {
     e.preventDefault(); // don't submit the form, we just want to update the data
     var addCoffeeName = document.querySelector('#addbar').value;
     var addCoffeeRoast = document.querySelector('#roast-add').value;
-    coffees.push({
-        id: coffees.length + 1,
-        name: addCoffeeName,
-        roast: addCoffeeRoast
-    });
-    localStorage.setItem('coffees', JSON.stringify(coffees));
-    document.getElementById('card-container').innerHTML = null;
-    initListOfCoffees(coffees);
+    var charList = 'abcdefghijklmnopqrstuvwxyz1234569*~';
+    for(var i = 0; i < charList.length; i++){
+        var judgment;
+        console.log(addCoffeeName.includes(charList.charAt(i)));
+        if(addCoffeeName.includes(charList.charAt(i)) === true){
+            judgment = true;
+        }
+    }
+    console.log(judgment);
+    if(judgment === true) {
+        coffees.push({
+            id: coffees.length + 1,
+            name: addCoffeeName,
+            roast: addCoffeeRoast
+        });
+        localStorage.setItem('coffees', JSON.stringify(coffees));
+        document.getElementById('card-container').innerHTML = null;
+        initListOfCoffees(coffees);
+    }
 }
 
 
