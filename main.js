@@ -5,14 +5,21 @@
 function renderCoffee(coffee) {
     var html = '';
     // html += '<p>' + coffee.id + '</p>';
-    html += '<span>';
-    html += '<h4 class="coffeeName">' + coffee.name + '</h4>';
-    html += '<p class="coffeeRoast">' + coffee.roast + '</p>';
+    html += '<span class="card-style">';
+    html += '<a class="coffeeName">' + coffee.name + '</a>';
+    html += '<a class="coffeeRoast">' + coffee.roast + '</a>';
     html += '</span>';
 
     return html;
 }
-
+//
+//
+function play() {
+    var slam = new Audio('audio/slam.mp3');
+    slam.play();
+}
+//
+//
 // Coffee ID sort list
 
 function renderCoffees(coffees) {

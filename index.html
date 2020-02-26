@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>SLAM COFFEE</title>
-
+    <source src="audio/slam.mp3" type="audio/mpeg">
     <link href="https://fonts.googleapis.com/css?family=Odibee+Sans&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
@@ -11,8 +11,7 @@
 </head>
 <body class="mainContainer">
 <div class="headlineContainer">
-    <img id="image" src="images/angry.jpg" height="200" width="95%"/>
-    <!--    <img src="images/angry.jpg" alt="face"  width="100%">-->
+    <img id="image" src="images/angry.jpg" class="img-fluid" height="200" width="95%"/>
     <div id="main-header">SLAM! </div>
     <div class="subMain">COLD COFFEE Co.</div>
     <h2 class="name">Don't sip it SLAM! it</h2>
@@ -29,23 +28,25 @@
     <form>
         <label >CHOOSE YOUR ROAST!</label>
         <!--Roast dropdown-->
-        <select class="form-control form-control-sm dropdown" id="roast-selection">
+        <select class="form-control form-control-sm dropdown " id="roast-selection">
             <option>LIGHT</option>
             <option>MEDIUM</option>
             <option>DARK</option>
         </select>
         <br>
         <!--Coffee Search-->
-        <input class="form-control dropdown2" type="text" id="myInput" placeholder="Search for coffees"
+        <input class="form-control dropdown" type="text" id="myInput" placeholder="Search for coffees"
                title="Type in a name">
         <br>
-        <input class="btn btn-success" id="submit" type="submit" value="View All Coffee">
-        <input class="btn btn-success input2" id="submit" type="submit" value="Submit">
+
+       <input data-file='slam' class="btn btn-danger" onclick="document.getElementById('b').play();" id="submit" type="submit" value="SLAM!">
     </form>
+    <audio id='b' src="audio/slam.mp3"preload="auto"></audio>
+    <button onclick="document.getElementById('b').play();">SLAM</button>
     <!------------------->
-
+    <audio id="a" src="audio/slam.mp3"></audio>
     <div class="leftSide">
-
+<!--coffee cards-->
         <div class="coffee-list" id="coffees">
         </div>
 
