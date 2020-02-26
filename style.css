@@ -3,7 +3,7 @@ body{
 }
 
 h1{
-    color: black;
+    color: black''
 }
 
 p {
@@ -49,7 +49,7 @@ tr{ /* Hide table header row*/
 }
 
 /*#rendered_coffee{*/
-/*    height: 1000px;*/
+/*    height: 100px;*/
 /*    width: 50%;*/
 /*    margin: 10px;*/
 /*}*/
