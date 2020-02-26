@@ -1,3 +1,14 @@
+body{
+    background-image: url("coffee-Background.jpg");
+    background-size: cover;
+}
+h1{
+    color: white;
+}
+p{
+    color: white;
+    font-size: 32px;
+}
 table {
     border-collapse: collapse;
     margin: 15px 0;
@@ -10,7 +21,14 @@ td, th {
 .hidden{
     display: none;
 }
-
+#coffees{
+    margin: auto;
+    width: 50%;
+    border: 3px solid yellow;
+    padding: 10px;
+    text-align: center;
+    column-count: 3;
+}
 tr{
     display: none;
 }
