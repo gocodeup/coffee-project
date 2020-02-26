@@ -14,10 +14,6 @@ function renderCoffee(coffee) {
 }
 //
 //
-function play() {
-    var slam = new Audio('audio/slam.mp3');
-    slam.play();
-}
 //
 //
 // Coffee ID sort list
@@ -57,7 +53,7 @@ var coffees = [
     {id: 8, name: 'Gnarly', roast: 'DARK'},
     {id: 9, name: 'X-treme', roast: 'DARK'},
     {id: 10, name: 'Radical', roast: 'DARK'},
-    {id: 11, name: 'Capt. Oily', roast: 'DARK'},
+    {id: 11, name: 'Captain Oily', roast: 'DARK'},
     {id: 12, name: 'Aggro', roast: 'DARK'},
     {id: 13, name: 'Kill It w/ Fire', roast: 'DARK'},
     {id: 14, name: 'RDNKLS', roast: 'DARK'},

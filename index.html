@@ -3,7 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <title>SLAM COFFEE</title>
-    <source src="audio/slam.mp3" type="audio/mpeg">
     <link href="https://fonts.googleapis.com/css?family=Odibee+Sans&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
@@ -12,7 +11,7 @@
 <body class="mainContainer">
 <div class="headlineContainer">
     <img id="image" src="images/angry.jpg" class="img-fluid" height="200" width="95%"/>
-    <div id="main-header">SLAM! </div>
+    <div id="main-header">SLAM!</div>
     <div class="subMain">COLD COFFEE Co.</div>
     <h2 class="name">Don't sip it SLAM! it</h2>
 </div>
@@ -39,12 +38,11 @@
                title="Type in a name">
         <br>
 
-       <input data-file='slam' class="btn btn-danger" onclick="document.getElementById('b').play();" id="submit" type="submit" value="SLAM!">
+       <input class="btn btn-danger" onclick="document.getElementById('b').play();" id="submit" type="submit" value="SLAM!">
     </form>
     <audio id='b' src="audio/slam.mp3"preload="auto"></audio>
-    <button onclick="document.getElementById('b').play();">SLAM</button>
+    <button class="btn btn-danger"id="slam-it" onclick="document.getElementById('b').play();">SLAM!</button>
     <!------------------->
-    <audio id="a" src="audio/slam.mp3"></audio>
     <div class="leftSide">
 <!--coffee cards-->
         <div class="coffee-list" id="coffees">

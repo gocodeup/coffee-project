@@ -19,6 +19,7 @@ background: linear-gradient(90deg, rgba(158, 0, 236,1) 20.25%,rgba(158, 0, 236,1
         transform:  rotate(0deg) scaleX(0) scaleY(0) ;
     }
 }
+/*main header*/
 
 #main-header{
 
@@ -197,13 +198,13 @@ form{
 .dropdown {
     width: 100%;
     border-radius: 50px;
-
+    grid-area: ;
 }
 
 #roast-selection {
     width: 100%;
 }
-
+/*form submit*/
 #submit {
     width: 100%;
     grid-area: ;
@@ -235,6 +236,10 @@ form{
 .input2 {
     display: flex;
     align-content: flex-end;
+}
+#slam-it {
+    border-radius: 50px;
+    filter: brightness(100%);
 }
 
 
