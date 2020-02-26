@@ -95,7 +95,7 @@ background: linear-gradient(90deg, rgba(158, 0, 236,1) 20.25%,rgba(158, 0, 236,1
 }
 .card-style:hover {
     content: '';
-    filter: brightness(200%);
+    filter: brightness(400%);
     animation: glitch 1s infinite linear;
 }
 @keyframes glitch {
