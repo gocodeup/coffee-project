@@ -1,39 +1,65 @@
 body{
     background-image: url("coffee-Background.jpg");
     background-size: cover;
+    height: auto;
 }
+
 h1{
-    color: white;
+    color: black;
 }
-p{
-    color: white;
-    font-size: 32px;
+
+p {
+    color: black;
+    font-size: 22px;
 }
+
+span {
+    font-size: 1.8em;
+}
+
 table {
     border-collapse: collapse;
-    margin: 15px 0;
+    margin: 15px;
+    width: 20%;
 }
 
 td, th {
     border: 1px solid black;
     padding: 5px 10px;
 }
-.hidden{
-    display: none;
-}
-#coffees{
-    margin: auto;
-    width: 50%;
-    border: 3px solid yellow;
-    padding: 10px;
-    text-align: center;
-    column-count: 3;
-}
-tr{
+
+.hidden{ /* Hide coffee IDs*/
     display: none;
 }
 
+tr{ /* Hide table header row*/
+    display: none;
+}
+
+#coffees{
+    height: inherit;
+    margin: auto;
+    width: 50%;
+    border: 3px solid transparent;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 20px;
+    text-align: center;
+    column-count: 3;
+}
+
+div#coffees{
+    overflow: auto;
+}
+/*#rendered_coffee{*/
+/*    height: 1000px;*/
+/*    width: 50%;*/
+/*    margin: 10px;*/
+/*}*/
+/* Banners*/
+
 .header {
+    margin: 0;
     padding: 60px;
     text-align: center;
     background-image: url("coffee-banner.jpg");
@@ -43,6 +69,7 @@ tr{
 }
 
 .footer {
+    margin: 0;
     padding: 60px;
     text-align: center;
     background-image: url("footer-image.jpg");
@@ -51,13 +78,73 @@ tr{
     font-size: 30px;
 }
 
+/* Search bar*/
+
 #search {
-    width: 15em;
+    width: 17em;
 }
 
-.visibility{
-    border: 2px solid black;
+.search {
+    border: 1px solid grey;
+    border-radius: 5px;
+    height: 50px;
+    width: 100%;
+    padding: 2px 28px 2px 5px;
+    outline: 0;
+    background-color: lightgoldenrodyellow;
+    font-size: medium;
 }
+
+.search:hover, .search:focus {
+    border: 2px solid black;
+    background-color: lightgoldenrodyellow;
+}
+
+/* OR Spacing */
+
+.or-spacing{
+    margin: 0 2em 0 2em;
+    color: white;
+}
+
+/* Dropdown menu */
+
+.roast-dropdown {
+    font-size: 18px;
+    border-radius: 5px;
+    height: 50px;
+    width: 16%;
+    padding: 2px 23px 2px 30px;
+    outline: 0;
+    background-color: lightgoldenrodyellow;
+}
+
+.button {
+    background-color: brown;
+    border: 2px solid white;
+    color: white;
+    padding: 7px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 10px;
+    transition-duration: 0.4s;
+}
+
+.button:hover {
+    background-color: white;
+    border: 2px solid white;
+    color: black;
+    padding: 12px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 10px;
+}
+
+/* Coffee display list*/
 
 .textalignment{
     text-align: center;
@@ -65,46 +152,16 @@ tr{
 }
 
 .coffee_box{
-    float: right;
+    text-align: center;
 }
 
-.wrapper {
-    position: relative;
-    display: flex;
-    min-width: 100px;
+.coffee-names {
+    font-family: 'Roboto Mono';
 }
 
-.search-icon {
-    position: absolute;
-    top: 6px;
-    left: 8px;
-    width: 14px;
+.coffee-mug {
+    height: 150px;
+    width: 150px;
 }
-
-.clear-icon {
-    position: absolute;
-    top: 8px;
-    right: 8px;
-    width: 10px;
-    cursor: pointer;
-<!-- visibility: hidden; -->
-}
-
-.search {
-    border: 1px solid grey;
-    border-radius: 5px;
-    height: 20px;
-    width: 100%;
-    padding: 2px 23px 2px 30px;
-    outline: 0;
-    background-color: #f5f5f5;
-}
-
-.search:hover, .search:focus {
-    border: 1.5px solid #009688;
-    background-color: white;
-}
-
-
 
 
