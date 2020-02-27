@@ -10,21 +10,23 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<div class="org" id="ripleys">Ripley's Coffee</div>
-
-
 <div class="bgImg">
+    <div class="org" id="ripleys">RIPLEY'S COFFEE<img src="img/zen-alien-edit.png" alt="at" id="zen"> at HADLEYS HOPE
+        colony
+    </div>
+
+
     <div class="container">
         <div class="row pb-3 text-center">
-            <div class="col-sm-12 col-md-6 col-lg-4 pt-3 column">
-                <div class="content container">
+            <div class="col-sm-12 col-md-6 col-lg-4 py-3 column">
+                <div class="content container bg-gradient">
                     <div class="coffeeMenu" id="coffeeMenu"><br></div>
                 </div>
             </div>
-            <div class="col-sm-12 col-md-6 col-lg-4 pt-3 column">
-                <div class="content container">
+            <div class="col-sm-12 col-md-6 col-lg-4 py-3 column">
+                <div class="content container bg-gradient">
                     <form>
-                        <br>
+                        <br><br>
                         <p><strong>Filter coffee by roast</strong></p>
                         <label for="roast-selection">Select your roast:</label><br>
                         <select id="roast-selection">
@@ -32,11 +34,13 @@
                             <option>light</option>
                             <option>medium</option>
                             <option>dark</option>
-                        </select><br>
+                        </select>
+                        <br>
 
                         <label for="coffeeSearch">Search for your coffee by name:</label><br>
                         <input type="text" id="coffeeSearch" placeholder="Coffee Name"><br><br>
-                        <input id="submit" type="submit"/><br><br><br>
+                        <!--                        <input id="submit" type="submit"/>-->
+                        <br><br><br>
                     </form>
 
 
@@ -57,20 +61,38 @@
                 </div>
 
             </div>
-            <div class="col-sm-12 col-md-12 col-lg-4 pt-3 column">
-                <div class="content container" id="third">
-                    <div class="c">
 
-                        <p><strong>"At Ripley's,</strong></p>
-                        <p><strong>no one can hear</strong></p>
-                        <p><strong>milk steam"</strong></p>
-
-                    </div>
+            <div class="col-sm-12 col-md-12 col-lg-4 py-3 column" id="logo-container">
+                <div class="content content-small">
+                    <br><br>
+                    <p>Now offering 4 sizes!</p>
+                    <p class="sizes">Alieno Abbraccio Viso</p>
+                    <p>4oz Single or Double Shot</p>
+                    <p class="sizes">Alieno Forsennato</p>
+                    <p>12oz Bursting with Flavor</p>
+                    <p class="sizes">Toro Alieno</p>
+                    <p>16oz Put a Charge in your day</p>
+                    <p class="sizes">Regina Aliena</p>
+                    <p>20oz The Mother of All Coffees</p>
+                    <div class="org" id="wl-logo"><img src="img/WY%20logo.png" alt="Weyland Yutani Roasters"
+                                                       class="logo"></div>
                 </div>
-
             </div>
+            <div class="col-12"><div class="content py-3" id="banner">At Ripley's...No one can hear milk steam...</div></div>
+
+            <!--                <div class="content container bg-gradient" id="third">-->
+            <!--                    <div class="c">-->
+
+            <!--                        <p><strong>"At Ripley's,</strong></p>-->
+            <!--                        <p><strong>no one can hear</strong></p>-->
+            <!--                        <p><strong>milk steam"</strong></p>-->
+
+            <!--                    </div>-->
+            <!--                </div>-->
+
         </div>
     </div>
+</div>
 </div>
 
 <script src="main.js"></script>

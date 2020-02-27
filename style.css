@@ -7,7 +7,7 @@
 }
 
 .bgImg {
-    background: url("img/ripleybackground.jpg") no-repeat center center fixed;
+    background: linear-gradient(to top, rgba(119,69,19,.4), rgba(50, 50, 50,1)), url("img/ripleybackground.jpg") no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -15,23 +15,29 @@
 }
 
 .content {
-    background: rgba(189, 183, 107, .7);
+    /*background: linear-gradient(to top, rgba(169, 163, 87, .7), rgba(50, 50, 50, .7)), url("img/coffee2.jpeg");*/
+    background: linear-gradient(to top, rgba(195, 199, 40, .7), rgba(50, 50, 50,.7));
     border: 1px solid black;
     padding: 10px;
     overflow: scroll;
-    height: 90vh;
+    height: 105vh;
 }
 
 .org {
-    height: 15vh;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
-    background: url("img/coffee2.jpeg");
-    border: saddlebrown solid 15px;
-    color: darkkhaki;
+    /*background: linear-gradient(to top, rgba(119,69,19,.3), rgb(50, 50, 50)); !*, url("img/coffee2.jpeg");*!*/
+    /*background: linear-gradient(to top, rgba(169, 163, 87, .5), rgba(50, 50, 50, .5)), url("img/coffee2.jpeg");*/
+    /*border-bottom: saddlebrown solid 15px;*/
+    /*color: darkkhaki;*/
+    /*color: rgb(169, 163, 87);*/
+    color: rgb(195, 199, 40)/*#6f4e37*/;
+    text-shadow: 0px 0px 7px #000;
     font: 2.5em bolder;
-    font-family: 'Tomorrow';
+    font-family: 'Tomorrow', xbold;
+    text-align: center;
 }
 
 .coffeeID {
@@ -41,11 +47,14 @@
 
 body {
     font-family: 'Tomorrow';
+    /*color*/
+    text-shadow: 0px 0px 7px #ccc;
 }
-strong {
-    font-family: 'ZCOOL QingKe HuangYou', bold;
+strong, .sizes {
+    font-family: 'ZCOOL QingKe HuangYou', xbold;
     font-size: 1.5em;
-    color: #6f4e37;
+    color: rgb(169, 163, 87)/*#6f4e37*/;
+    text-shadow: 0px 0px 4px #000;
 }
 #third {
     font-size: 2em;
@@ -54,8 +63,33 @@ strong {
     justify-content: center;
 }
 select, input {
-    background-color: rgba(225, 225, 177, .8);
+    background: linear-gradient(to top, rgba(225, 225, 177, .8), rgba(120, 120, 120, .8));
+    bac
     text-align: center;
 }
+/*#logo-container{*/
+/*    !*display: flex;*!*/
+/*    !*flex-direction: column;*!*/
+/*    !*justify-content: flex-end;*!*/
+/*    !*align-items : flex-end;*!*/
+/*}*/
+.logo {
+    height: 117px;
+    width: 256px;
+    /*border: solid black 1px;*/
+    /*background: linear-gradient(to top, rgba(169, 163, 87, .7), rgba(50, 50, 50, .7)), url("img/coffee2.jpeg");*/
+    /*background: linear-gradient(to top, rgba(195, 199, 40, .6), rgba(50, 50, 50, .7)), url("img/coffee2.jpeg");*/
+    margin: 3px;
 
-#BDB76B
+}
+
+li{
+    list-style: none;
+}
+#zen {
+    width: 60vh;
+    filter: drop-shadow(0px 0px 7px black);
+}
+#banner {
+    height: auto;
+}

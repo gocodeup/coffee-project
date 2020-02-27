@@ -1,4 +1,4 @@
-"use strict"
+"use strict";
 
 function renderCoffee(coffee) {
     var html = '<div class="coffee">';
@@ -12,10 +12,10 @@ function renderCoffee(coffee) {
 
 function renderCoffees(coffees) {
     var html = '';
-    for(var i = 0; i <= coffees.length - 1; i++) {
+    for (var i = 0; i <= coffees.length - 1; i++) {
         html += renderCoffee(coffees[i]);
     }
-    
+
     return html;
 }
 
@@ -23,11 +23,11 @@ function updateCoffees(e) {
     e.preventDefault(); // don't submit the form, we just want to update the data
     var selectedRoast = roastSelection.value;
     var filteredCoffees = [];
-    coffees.forEach(function(coffee) {
+    coffees.forEach(function (coffee) {
 
         if (selectedRoast === 'all') {
             filteredCoffees.push(coffee);
-        }else if (coffee.roast === selectedRoast) {
+        } else if (coffee.roast === selectedRoast) {
             filteredCoffees.push(coffee);
         }
     });
@@ -39,7 +39,7 @@ function updateCoffeesByName(e) {
     e.preventDefault(); // don't submit the form, we just want to update the data
     var qName = coffeeSearch.value;
     var filteredCoffees = [];
-    coffees.forEach(function(coffee) {
+    coffees.forEach(function (coffee) {
         var coffeeLC = coffee.name.toLowerCase();
         if (coffeeLC.includes(qName)) {
             filteredCoffees.push(coffee);
@@ -68,7 +68,6 @@ var coffees = [
 ];
 
 var coffeeMenu = document.querySelector('#coffeeMenu');
-var submitButton = document.querySelector('#submit');
 var roastSelection = document.querySelector('#roast-selection');
 var coffeeSearch = document.querySelector('#coffeeSearch');
 var addCoffeeButton = document.querySelector("#add-roast-submit");
@@ -76,13 +75,11 @@ var addCoffeeButton = document.querySelector("#add-roast-submit");
 
 coffeeMenu.innerHTML = renderCoffees(coffees);
 
-// submitButton.addEventListener('click', updateCoffees);
+roastSelection.addEventListener('change', updateCoffees);
 
-roastSelection.addEventListener('change', updateCoffees)
+coffeeSearch.addEventListener('input', updateCoffeesByName);
 
-coffeeSearch.addEventListener('input', updateCoffeesByName)
-
-function addCoffee(e){
+function addCoffee(e) {
     e.preventDefault();
     var newCoffeeRoast = document.getElementById("add-roast");
     var newCoffeeName = document.getElementById("add-coffee-name");
@@ -93,24 +90,13 @@ function addCoffee(e){
             roast: newCoffeeRoast.value
         };
 
-            coffees.push(coffeeObj);
+        coffees.push(coffeeObj);
     }
     roastSelection.value = "all";
-    updateCoffees(e)
-            coffeeMenu.inneHTML = renderCoffees(coffees);
+    updateCoffees(e);
+    coffeeMenu.inneHTML = renderCoffees(coffees);
 
 }
+
 addCoffeeButton.addEventListener('click', addCoffee);
 
-
-
-
-// coffeeSearch = document.addEventListener('input',function(query) {
-//     coffees.foreach(function(coffee){
-//         if (coffee.name.includes(query)){
-//             // updateCoffees(coffee)
-//
-//         }
-//
-//     })
-// })
