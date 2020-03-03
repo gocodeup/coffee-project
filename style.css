@@ -64,7 +64,6 @@ strong, .sizes {
 }
 select, input {
     background: linear-gradient(to top, rgba(225, 225, 177, .8), rgba(120, 120, 120, .8));
-    bac
     text-align: center;
 }
 /*#logo-container{*/
@@ -74,7 +73,7 @@ select, input {
 /*    !*align-items : flex-end;*!*/
 /*}*/
 .logo {
-    height: 117px;
+    height: 118px;
     width: 256px;
     /*border: solid black 1px;*/
     /*background: linear-gradient(to top, rgba(169, 163, 87, .7), rgba(50, 50, 50, .7)), url("img/coffee2.jpeg");*/
@@ -92,4 +91,24 @@ li{
 }
 #banner {
     height: auto;
+}
+
+.modal-content {
+    background: linear-gradient(to top, rgba(195, 199, 40, .95), rgba(50, 50, 50,.95));
+    /*border: 1px solid black;*/
+}
+
+.modal-header, .modal-footer {
+    border-top: 1px solid rgb(50,50,50);
+    border-bottom: 1px solid rgb(50,50,50);
+}
+
+.logo-small {
+    height: 59px;
+    width: 128px;
+}
+
+.bagImg {
+    width: 512px;
+    height: 384px;
 }
