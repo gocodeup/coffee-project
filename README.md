@@ -6,15 +6,16 @@ improvements to it.
 
 ## Setup
 
+1. Create a Github organization and add your teammate.
 1. Fork this repository (Click on the "Fork" button on the top right of this
-   page)
-1. Clone the forked repository
-1. Open up the html file and check out the existing application
-1. Read through the code and understand the existing code structure
+   page) and select the new organization as a destination.
+1. Clone the forked repository from your organization.
+1. Open up the HTML file and check out the existing application.
+1. Read through the code and understand the existing code structure before you start to build the features.
 
 ## TODO
 
-- Update the html
+- Update the HTML
 
     Tables are a little old school, you need to refactor the code so that each
     coffee is displayed in a `div` that contains a heading displaying the coffee
@@ -41,9 +42,9 @@ improvements to it.
 
     Create another form on the page that has an input for the coffee name, and
     a select to choose the coffee roast. When the form is submitted, the new
-    cofee should appear on the page. (*Note that any new coffees you add will
+    coffee should appear on the page. (*Note that any new coffees you add will
     be lost when you refresh the page, for an extra challenge, research
-    `localStorage` and see if you can find a way to persist the data*)
+    how `localStorage` works and see if you can find a way to persist the data*)
 
 - Style it!
 
