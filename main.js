@@ -1,9 +1,9 @@
 "use strict";
 
 function renderCoffee(coffee) {
-    var html = '<div class="coffee"> <div class="d-flex align-items-baseline col-6">';
+    var html = '<div class="coffee"> <div class="d-flex align-items-baseline  col">';
     html += '<h3>' + coffee.name + '</h3>';
-    html += '<p>' + coffee.roast + '</p>';
+    html += '<p class="ml-2 text-secondary ">' + coffee.roast + '</p>';
     html += '</div></div>';
 
     return html;
@@ -81,6 +81,22 @@ function searchBar() {
         }
     }
 }
+//////////////
 
+var roastSelect = document.getElementById(roast-selection1).value;
 
-console.log(coffees);
+var coffeeName = document.getElementById(coffeeName).value;
+
+function userCoffee(roastSelect, coffeeName){
+    var names = authorName.split(" ");
+    return {
+        title: aTitle,
+        author: {
+            firstName: names[0],
+            lastName: names[1]
+        }
+    };
+}
+
+console.log(roastSelect)
+console.log(coffeeName)
