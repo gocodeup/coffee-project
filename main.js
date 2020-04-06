@@ -69,9 +69,11 @@ var coffees = [
 var tbody = document.querySelector('#coffees');
 var submitButton = document.querySelector('#submit');
 var roastSelection = document.querySelector('#roast-selection');
-var coffeeSearch = document.querySelector('#coffeeNames');
+var coffeeSearch = document.querySelector('#search-bar');
 
 tbody.innerHTML = renderCoffees(coffees);
 
 submitButton.addEventListener('click', updateCoffees);
-coffeeSearch.addEventListener('keyup', )
+coffeeSearch.addEventListener('keyup', console.log);
+
+
