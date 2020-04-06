@@ -27,13 +27,13 @@ function renderCoffees(coffees) {
 
 //Add functionality to search through the coffees by name, and display only the coffees that match the provided search term (You will need to add an input field to the existing form for this)
 function updateCoffees(e) {
-    console.log("update coffee");
+    // console.log("update coffee");
     e.preventDefault(); // don't submit the form, we just want to update the data
     var selectedRoast = roastSelection.value;
-    console.log(selectedRoast);
+    // console.log(selectedRoast);
     var filteredCoffees = [];
     coffees.forEach(function(coffee) {
-        console.log("coffee name input: " + coffeeNameInput.value + " " +  coffee.name );
+        // console.log("coffee name input: " + coffeeNameInput.value + " " +  coffee.name );
           if (selectedRoast === 'all' && coffee.name.toLowerCase().includes(coffeeNameInput.value.toLowerCase()) ) {
             filteredCoffees.push(coffee);
         } else if (coffee.roast === selectedRoast && coffee.name.toLowerCase().includes(coffeeNameInput.value.toLowerCase())) {
@@ -67,6 +67,10 @@ var submitButton = document.querySelector('#submit');
 var roastSelection = document.querySelector('#roast-selection');
 var coffeeNameInput = document.querySelector("#coffee-search");
 
+
 coffeeListElement.innerHTML = renderCoffees(coffees);
 
+
 submitButton.addEventListener('click', updateCoffees);
+roastSelection.addEventListener('input',updateCoffees);
+coffeeNameInput.addEventListener('keyup',updateCoffees);
