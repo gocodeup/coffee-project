@@ -45,6 +45,7 @@ var coffees = [
     {id: 12, name: 'Viennese', roast: 'dark'},
     {id: 13, name: 'Italian', roast: 'dark'},
     {id: 14, name: 'French', roast: 'dark'},
+
 ];
 
 var tbody = document.querySelector('#coffees');
@@ -54,3 +55,30 @@ var roastSelection = document.querySelector('#roast-selection');
 tbody.innerHTML = renderCoffees(coffees);
 
 submitButton.addEventListener('click', updateCoffees);
+
+//////////////////////
+
+function searchBar() {
+
+    var input, filter, tbody, div, txtValue;
+    input = document.getElementById('search');
+    filter = input.value.toUpperCase();
+    tbody = document.getElementById("coffees");
+    div = tbody.getElementsByTagName('div');
+
+
+
+    // Loop through all list items, and hide those who don't match the search query
+    for (i = 0; i < div.length; i++) {
+        // a = li[i].getElementsByTagName("a")[0];
+        // txtValue = a.textContent || a.innerText;
+        if (txtValue.toUpperCase().indexOf(filter) > -1) {
+            div[i].style.display = "";
+        } else {
+            div[i].style.display = "none";
+        }
+    }
+}
+
+
+console.log(coffees);
