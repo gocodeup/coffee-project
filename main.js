@@ -3,12 +3,11 @@
 //
 
 function renderCoffee(coffee) {
-    var html = '<div class="coffee">';
+    var html = '<div class="coffee">' +'<div>' + coffee.name  +" "+  coffee.roast+'</div>';
     // html += '<div>' + coffee.id + '</div>';
-    html += '<div>' + coffee.name + '</div>';
-    html += '<p>' + coffee.roast + '</p>';
-    html += '</div>';
-
+    // html += '<div>' + coffee.name + '</div>'
+    // html += '<p>' + coffee.roast + '</p>';
+    // html += '</div>';
     return html;
 }
 
@@ -59,6 +58,8 @@ var coffees = [
     {id: 13, name: 'Italian', roast: 'dark'},
     {id: 14, name: 'French', roast: 'dark'},
 ];
+
+
 
 var coffeeListElement = document.querySelector('#coffees');
 var submitButton = document.querySelector('#submit');
