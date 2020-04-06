@@ -6,12 +6,17 @@ function renderCoffee(coffee) {
     var html = '<div class="coffee">';
     // html += '<div>' + coffee.id + '</div>';
     html += '<div>' + coffee.name + '</div>';
-    html += '<div>' + coffee.roast + '</div>';
+    html += '<p>' + coffee.roast + '</p>';
     html += '</div>';
 
     return html;
 }
+
+
 //When the page loads, the coffees should be sorted by their ids in ascending order
+
+
+
 function renderCoffees(coffees) {
     var html = '';
     for(var i = 0; i <= coffees.length - 1; i++) {
@@ -22,15 +27,19 @@ function renderCoffees(coffees) {
 
 //Add functionality to search through the coffees by name, and display only the coffees that match the provided search term (You will need to add an input field to the existing form for this)
 function updateCoffees(e) {
+    console.log("update coffee");
     e.preventDefault(); // don't submit the form, we just want to update the data
     var selectedRoast = roastSelection.value;
+    console.log(selectedRoast);
     var filteredCoffees = [];
     coffees.forEach(function(coffee) {
-        if (coffee.roast === selectedRoast) {
+        console.log("coffee name input: " +coffeeNameInput.value +" "+  coffee.name );
+
+        if (coffee.roast === selectedRoast && coffee.name.toLowerCase().includes(coffeeNameInput.value.toLowerCase())) {
             filteredCoffees.push(coffee);
         }
     });
-    tbody.innerHTML = renderCoffees(filteredCoffees);
+    coffeeListElement.innerHTML = renderCoffees(filteredCoffees);
 }
 
 // from http://www.ncausa.org/About-Coffee/Coffee-Roasts-Guide
@@ -51,10 +60,11 @@ var coffees = [
     {id: 14, name: 'French', roast: 'dark'},
 ];
 
-var tbody = document.querySelector('#coffees');
+var coffeeListElement = document.querySelector('#coffees');
 var submitButton = document.querySelector('#submit');
 var roastSelection = document.querySelector('#roast-selection');
+var coffeeNameInput = document.querySelector("#coffee-search");
 
-tbody.innerHTML = renderCoffees(coffees);
+coffeeListElement.innerHTML = renderCoffees(coffees);
 
 submitButton.addEventListener('click', updateCoffees);
