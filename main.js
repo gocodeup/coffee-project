@@ -32,19 +32,17 @@ function updateCoffees(e) {
     var selectedRoast = roastSelection.value;
     console.log(selectedRoast);
     var filteredCoffees = [];
-    var coffeeNameInput = document.querySelector("#coffee-search");
     coffees.forEach(function(coffee) {
         console.log("coffee name input: " + coffeeNameInput.value + " " +  coffee.name );
-        if (selectedRoast === 'all' && coffee.name.toLowerCase().includes(coffeeNameInput.value.toLowerCase()) ) {
+          if (coffee.roast === 'all' && coffee.name.toLowerCase().includes(coffeeNameInput.value.toLowerCase()) ) {
             filteredCoffees.push(coffee);
         } else if (coffee.roast === selectedRoast && coffee.name.toLowerCase().includes(coffeeNameInput.value.toLowerCase())) {
-            filteredCoffees.push(coffee);
-        }
+              filteredCoffees.push(coffee);
+          }
     });
     var coffeeListElement = document.querySelector('#coffees');
     coffeeListElement.innerHTML = renderCoffees(filteredCoffees);
 }
-
 
 // from http://www.ncausa.org/About-Coffee/Coffee-Roasts-Guide
 var coffees = [
