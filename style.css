@@ -1,3 +1,13 @@
+body {
+    background-color: #000;
+    background-repeat: no-repeat;
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(coffee.jpg);
+    background-position: center center absolute;
+    background-attachment: fixed;
+    background-size: cover;
+    font-family: 'Montserrat', sans-serif;
+}
+
 table {
     border-collapse: collapse;
     margin: 15px 0;
