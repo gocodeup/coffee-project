@@ -1,26 +1,5 @@
 "use strict";
 
-// function renderCoffee(coffee) {
-//     var html = '<tr class="coffee">';
-//     html += '<td>' + coffee.id + '</td>';
-//     html += '<td>' + coffee.name + '</td>';
-//     html += '<td>' + coffee.roast + '</td>';
-//     html += '</tr>';
-//
-//     return html;
-// }
-
-// REPLACING TABLE DATA WITH DIVS original code ^^
-
-// function renderCoffee(coffee) {
-//     var html = '<div class="coffee">';
-//     // html += '<div>' + coffee.id + '</div>';
-//     html += '<div><h1>' + coffee.name + '</h1></div>';
-//     html += '<div><p>' + coffee.roast + '</p></div>';
-//     html += '</div>';
-//
-//     return html;
-// }
 
 function renderCoffee(coffee) {
     var html = '<div>';
@@ -31,14 +10,6 @@ function renderCoffee(coffee) {
 
     return html;
 }
-
-// function renderCoffees(coffees) {
-//     var html = '';
-//     for(var i = coffees.length - 1; i >= 0; i--) {
-//         html += renderCoffee(coffees[i]);
-//     }
-//     return html;
-// }
 
 // RENDERING COFFEES IN ASCENDING ORDER BY ID original code ^^
 
@@ -53,19 +24,22 @@ function renderCoffees(coffees) {
 
 // TRYING TO UNDERSTAND FUNCTIONALITY ^^
 
-function updateCoffees(e) {
+ function updateCoffees(e) {
     e.preventDefault(); // don't submit the form, we just want to update the data
     var selectedRoast = roastSelection.value;
     var nameInput = coffeeName.value;
-    // var searchCoffeeName = nameInput.includes(filteredCoffees);
     var filteredCoffees = [];
     coffees.forEach(function(coffee) {
         if (coffee.roast === selectedRoast && coffee.name.toLowerCase().includes(nameInput)) {
             filteredCoffees.push(coffee);
+
         }
+
     });
     coffeeInfo.innerHTML = renderCoffees(filteredCoffees);
 }
+var a = document.getElementById('coffee-name');
+a.addEventListener('keyup', updateCoffees);
 
 // from http://www.ncausa.org/About-Coffee/Coffee-Roasts-Guide
 var coffees = [
