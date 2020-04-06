@@ -20,13 +20,29 @@
         </div>
         <div class="col-6">
             <form>
-                <label for="roast-selection"></label>
+                <h5>Roast</h5>
                 <select id="roast-selection" class="custom-select">
                     <option>light</option>
                     <option>medium</option>
                     <option>dark</option>
                 </select>
-                <input id="submit" type="submit"/>
+                <h5 class="mt-3">Coffee Name</h5>
+                <input type="text" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm">
+                <input id="submit" type="submit" class="btn btn-primary btn-block mt-3"/>
+                <hr>
+            </form>
+
+            <form>
+                <h3 class="d-flex justify-content-center">Add a Coffee</h3>
+                <h5>Roast</h5>
+                <select id="add-roast-selection" class="custom-select">
+                    <option>light</option>
+                    <option>medium</option>
+                    <option>dark</option>
+                </select>
+                <h5 class="mt-3">Name</h5>
+                <input type="text" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm">
+                <input id="add-submit" type="submit" class="btn btn-primary btn-block mt-3"/>
             </form>
         </div>
     </div>
