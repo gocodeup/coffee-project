@@ -18,11 +18,12 @@ header h1 {
 
 .container {
     color: #fff;
+    margin-bottom: 100px;
 }
 
 #coffees p{
     margin-top: 9px;
-    padding-left: 12px;
+    padding-left: px;
     color: #fff;
 }
 
