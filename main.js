@@ -1,35 +1,52 @@
 "use strict"
 
 function renderCoffee(coffee) {
-    var html = '<tr class="coffee">';
-    html += '<td>' + coffee.id + '</td>';
-    html += '<td>' + coffee.name + '</td>';
-    html += '<td>' + coffee.roast + '</td>';
-    html += '</tr>';
+    var html = '<div class="coffee">';
+    html += '<div hidden>' + coffee.id + ' </div>';
+    html += '<div><h1>' + coffee.name + '</h1></div>';
+    html += '<div><p>' + coffee.roast + '</p></div>';
+    html += '</div>';
 
     return html;
 }
 
 
+
 function renderCoffees(coffees) {
     var html = '';
-    for(var i = coffees.length - 1; i >= 0; i--) {
+    for(var i = 0; i < coffees.length; i++) {
         html += renderCoffee(coffees[i]);
     }
     return html;
 }
 
+
+
 function updateCoffees(e) {
     e.preventDefault(); // don't submit the form, we just want to update the data
     var selectedRoast = roastSelection.value;
+    var selectedName = coffeeSearch.value;
     var filteredCoffees = [];
     coffees.forEach(function(coffee) {
-        if (coffee.roast === selectedRoast) {
+        if (coffee.roast === selectedRoast && coffee.name.toLowerCase().includes(selectedName.toLowerCase())) {
+
             filteredCoffees.push(coffee);
         }
     });
     tbody.innerHTML = renderCoffees(filteredCoffees);
 }
+//
+// function updateCoffeesName(e) {
+//     e.preventDefault(); // don't submit the form, we just want to update the data
+//     var coffeeSearches = coffeeSearch.value;
+//     var filteredCoffeeName = [];
+//     coffees.forEach(function(coffee) {
+//         if (coffees.name === coffeeSearches) {
+//             filteredCoffeeName.push(coffee);
+//         }
+//     });
+//     tbody.innerHTML = renderCoffees(filteredCoffeeName);
+// }
 
 // from http://www.ncausa.org/About-Coffee/Coffee-Roasts-Guide
 var coffees = [
@@ -47,13 +64,27 @@ var coffees = [
     {id: 12, name: 'Viennese', roast: 'dark'},
     {id: 13, name: 'Italian', roast: 'dark'},
     {id: 14, name: 'French', roast: 'dark'},
+
 ];
+
+
 
 var tbody = document.querySelector('#coffees');
 var submitButton = document.querySelector('#submit');
 var roastSelection = document.querySelector('#roast-selection');
-
+var coffeeSearch = document.querySelector('#search-bar');
+// var submitSearch = document.querySelector('#search-button');
 tbody.innerHTML = renderCoffees(coffees);
 
 submitButton.addEventListener('click', updateCoffees);
+coffeeSearch.addEventListener('keyup', updateCoffees);
+
+// console.log(submitSearch.value)
+
+
+// Replace console.log in coffeeSearch
+// updateCoffeesName
+
+
+
 

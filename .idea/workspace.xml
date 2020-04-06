@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="930c52b3-b35a-416d-9fa5-4a1e6c87da89" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/style.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,6 +23,13 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="settings.editor.selected.configurable" value="configurable.group.editor" />
   </component>
   <component name="SvnConfiguration">
@@ -36,6 +43,7 @@
       <option name="presentableId" value="Default" />
       <updated>1585943462459</updated>
       <workItem from="1585943468534" duration="2170000" />
+      <workItem from="1586184462579" duration="666000" />
     </task>
     <servers />
   </component>
@@ -47,9 +55,14 @@
       <screen x="0" y="23" width="1440" height="797" />
     </state>
     <state x="0" y="80" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.23.1440.797@0.23.1440.797" timestamp="1585944471300" />
-    <state x="-4" y="144" width="670" height="676" key="search.everywhere.popup" timestamp="1585943957974">
-      <screen x="0" y="23" width="1440" height="797" />
+    <state width="500" height="445" key="SwitcherDM" timestamp="1586200225305">
+      <screen x="0" y="23" width="1440" height="798" />
+    </state>
+    <state width="500" height="445" key="SwitcherDM/0.23.1440.798@0.23.1440.798" timestamp="1586200225305" />
+    <state x="-4" y="144" width="670" height="677" key="search.everywhere.popup" timestamp="1586207909841">
+      <screen x="0" y="23" width="1440" height="798" />
     </state>
     <state x="-4" y="144" width="670" height="676" key="search.everywhere.popup/0.23.1440.797@0.23.1440.797" timestamp="1585943957974" />
+    <state x="-4" y="144" width="670" height="677" key="search.everywhere.popup/0.23.1440.798@0.23.1440.798" timestamp="1586207909841" />
   </component>
 </project>
