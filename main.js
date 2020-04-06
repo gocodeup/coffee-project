@@ -38,6 +38,7 @@ function renderCoffees(coffees) {
     });
     coffeeInfo.innerHTML = renderCoffees(filteredCoffees);
 }
+
 var a = document.getElementById('coffee-name');
 a.addEventListener('keyup', updateCoffees);
 
