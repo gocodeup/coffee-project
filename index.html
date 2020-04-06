@@ -2,28 +2,56 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Coffee</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
+
+    <title>Coffee</title>
 </head>
-<body>
-    <h1>Coffee!</h1>
+<body class="container">
+    <h1 class="col-12 d-flex justify-content-center">Coffee!</h1>
 
     <form>
-        <label for="roast-selection"></label>
-        <select id="roast-selection">
+        <div class="form-group">
+        <label for="roast-selection">Roast</label>
+        <select class="form-control" id="roast-selection">
             <option>all</option>
             <option>light</option>
             <option>medium</option>
             <option>dark</option>
         </select>
-        <input id="search" onkeyup="searchBar()" type="text">
-        <input id="submit" type="submit" />
+            <label for="search">Coffee Name</label>
+        <input id="search" class="form-control" onkeyup="searchBar()" type="text">
+        <input id="submit" class="btn btn-primary" type="submit" />
+        </div>
     </form>
 
-<div>
-        <ul id="coffees"></ul>
+<h1>Add a Coffee</h1>
 
+    <form>
+        <div class="form-group">
+            <label for="roast-selection">Roast</label>
+            <select class="form-control" id="roast-selection1">
+                <option>light</option>
+                <option>medium</option>
+                <option>dark</option>
+            </select>
+            <label for="search">Names</label>
+            <input id="search1" class="form-control" onkeyup="searchBar()" type="text">
+            <input id="submit1" class="btn btn-primary" type="submit" />
+        </div>
+    </form>
+
+
+<div class="container">
+    <div class="row">
+        <div class="col-6">
+            <ul id="coffees"></ul>
+        </div>
+    </div>
 </div>
+
+
 
     <script src="main.js"></script>
 </body>
