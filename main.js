@@ -33,12 +33,12 @@ function updateCoffees(e) {
     console.log(selectedRoast);
     var filteredCoffees = [];
     coffees.forEach(function(coffee) {
-        console.log("coffee name input: " +coffeeNameInput.value +" "+  coffee.name );
-
-        if (coffee.roast === selectedRoast && coffee.name.toLowerCase().includes(coffeeNameInput.value.toLowerCase())) {
+        console.log("coffee name input: " + coffeeNameInput.value + " "+  coffee.name );
+          if (coffee.roast === selectedRoast || coffee.name.toLowerCase().includes(coffeeNameInput.value.toLowerCase())) {
             filteredCoffees.push(coffee);
         }
     });
+
     coffeeListElement.innerHTML = renderCoffees(filteredCoffees);
 }
 
