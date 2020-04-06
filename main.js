@@ -83,20 +83,15 @@ function searchBar() {
 }
 //////////////
 
-var roastSelect = document.getElementById(roast-selection1).value;
 
-var coffeeName = document.getElementById(coffeeName).value;
+document.getElementById("submit1").addEventListener("click", function(event){
+    event.preventDefault();
 
-function userCoffee(roastSelect, coffeeName){
-    var names = authorName.split(" ");
-    return {
-        title: aTitle,
-        author: {
-            firstName: names[0],
-            lastName: names[1]
-        }
-    };
-}
+    var roastSelect = document.getElementById('roast-selection1').value;
 
-console.log(roastSelect)
-console.log(coffeeName)
+    var coffeeName = document.getElementById('coffeeName').value;
+
+    coffees.push({id: coffees.length + 1, name: coffeeName, roast: roastSelect});
+
+    tbody.innerHTML = renderCoffees(coffees);
+});
