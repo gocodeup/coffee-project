@@ -14,7 +14,7 @@ function renderCoffee(coffee) {
 
 function renderCoffees(coffees) {
     var html = '';
-    for(var i = 0; i < coffees.length-1; i++) {
+    for(var i = 0; i < coffees.length; i++) {
         html += renderCoffee(coffees[i]);
     }
     return html;
@@ -25,26 +25,28 @@ function renderCoffees(coffees) {
 function updateCoffees(e) {
     e.preventDefault(); // don't submit the form, we just want to update the data
     var selectedRoast = roastSelection.value;
+    var selectedName = coffeeSearch.value;
     var filteredCoffees = [];
     coffees.forEach(function(coffee) {
-        if (coffee.roast === selectedRoast) {
+        if (coffee.roast === selectedRoast && coffee.name.toLowerCase().includes(selectedName.toLowerCase())) {
+
             filteredCoffees.push(coffee);
         }
     });
     tbody.innerHTML = renderCoffees(filteredCoffees);
 }
-
-function updateCoffeesName(e) {
-    e.preventDefault(); // don't submit the form, we just want to update the data
-    var coffeeSearches = coffeeSearch.value;
-    var filteredCoffeeName = [];
-    coffees.forEach(function(coffee) {
-        if (coffees.name === coffeeSearches) {
-            filteredCoffeeName.push(coffee);
-        }
-    });
-    tbody.innerHTML = renderCoffees(filteredCoffeeName);
-}
+//
+// function updateCoffeesName(e) {
+//     e.preventDefault(); // don't submit the form, we just want to update the data
+//     var coffeeSearches = coffeeSearch.value;
+//     var filteredCoffeeName = [];
+//     coffees.forEach(function(coffee) {
+//         if (coffees.name === coffeeSearches) {
+//             filteredCoffeeName.push(coffee);
+//         }
+//     });
+//     tbody.innerHTML = renderCoffees(filteredCoffeeName);
+// }
 
 // from http://www.ncausa.org/About-Coffee/Coffee-Roasts-Guide
 var coffees = [
@@ -71,13 +73,13 @@ var tbody = document.querySelector('#coffees');
 var submitButton = document.querySelector('#submit');
 var roastSelection = document.querySelector('#roast-selection');
 var coffeeSearch = document.querySelector('#search-bar');
-var submitSearch = document.querySelector('#search-button');
+// var submitSearch = document.querySelector('#search-button');
 tbody.innerHTML = renderCoffees(coffees);
 
 submitButton.addEventListener('click', updateCoffees);
-coffeeSearch.addEventListener('keyup', console.log);
+coffeeSearch.addEventListener('keyup', updateCoffees);
 
-console.log(submitSearch.value)
+// console.log(submitSearch.value)
 
 
 // Replace console.log in coffeeSearch
