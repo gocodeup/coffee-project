@@ -69,9 +69,9 @@ function searchBar() {
 
 
     // Loop through all list items, and hide those who don't match the search query
-    for (i = 0; i < div.length; i++) {
+    for (var i = 0; i < div.length; i++) {
         // a = li[i].getElementsByTagName("a")[0];
-        // txtValue = a.textContent || a.innerText;
+         txtValue = div[i].textContent || div[i].innerText;
         if (txtValue.toUpperCase().indexOf(filter) > -1) {
             div[i].style.display = "";
         } else {
