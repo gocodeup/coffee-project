@@ -3,56 +3,58 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+          integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
 
     <title>Coffee</title>
 </head>
 <body class="container">
-    <h1 class="col-12 d-flex justify-content-center">Coffee!</h1>
-
-    <form>
-        <div class="form-group">
-        <label for="roast-selection">Roast</label>
-        <select class="form-control" id="roast-selection">
-            <option>all</option>
-            <option>light</option>
-            <option>medium</option>
-            <option>dark</option>
-        </select>
-            <label for="search">Coffee Name</label>
-        <input id="search" class="form-control" onkeyup="searchBar()" type="text">
-        <input id="submit" class="btn btn-primary" type="submit" />
-        </div>
-    </form>
-
-<h1>Add a Coffee</h1>
-
-    <form>
-        <div class="form-group">
-            <label for="roast-selection">Roast</label>
-            <select class="form-control" id="roast-selection1">
-                <option>light</option>
-                <option>medium</option>
-                <option>dark</option>
-            </select>
-            <label for="search">Names</label>
-            <input id="search1" class="form-control" onkeyup="searchBar()" type="text">
-            <input id="submit1" class="btn btn-primary" type="submit" />
-        </div>
-    </form>
-
-
+<h1 class="col-12 d-flex justify-content-center">Coffee!</h1>
+<hr>
 <div class="container">
     <div class="row">
         <div class="col-6">
-            <ul id="coffees"></ul>
+            <div>
+                <ul class="d-flex flex-wrap justify-content-between" id="coffees"></ul>
+            </div>
+        </div>
+        <div class="col-6">
+            <form>
+                <div class="form-group">
+                    <label for="roast-selection">Roast</label>
+                    <select class="form-control" id="roast-selection">
+                        <option>all</option>
+                        <option>light</option>
+                        <option>medium</option>
+                        <option>dark</option>
+                    </select>
+                    <label for="search">Coffee Name</label>
+                    <input id="search" class="form-control" onkeyup="searchBar()" type="text">
+                    <input id="submit" class="btn btn-primary w-100 mt-2" type="submit"/>
+                </div>
+            </form>
+            <hr>
+            <h1 class="d-flex justify-content-center">Add a Coffee</h1>
+
+            <form>
+                <div class="form-group">
+                    <label for="roast-selection">Roast</label>
+                    <select class="form-control" id="roast-selection1">
+                        <option>light</option>
+                        <option>medium</option>
+                        <option>dark</option>
+                    </select>
+                    <label for="search">Names</label>
+                    <input id="search1" class="form-control" onkeyup="searchBar()" type="text">
+                    <input id="submit1" class="btn btn-primary w-100 mt-2" type="submit"/>
+                </div>
+            </form>
         </div>
     </div>
 </div>
 
 
-
-    <script src="main.js"></script>
+<script src="main.js"></script>
 </body>
 </html>
