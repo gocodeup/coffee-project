@@ -57,9 +57,10 @@ function updateCoffees(e) {
     e.preventDefault(); // don't submit the form, we just want to update the data
     var selectedRoast = roastSelection.value;
     var nameInput = coffeeName.value;
+    // var searchCoffeeName = nameInput.includes(filteredCoffees);
     var filteredCoffees = [];
     coffees.forEach(function(coffee) {
-        if (coffee.roast === selectedRoast && coffee.name.toLowerCase() === nameInput.toLowerCase()) {
+        if (coffee.roast === selectedRoast && coffee.name.toLowerCase().includes(nameInput)) {
             filteredCoffees.push(coffee);
         }
     });
