@@ -12,11 +12,21 @@
 
 // REPLACING TABLE DATA WITH DIVS original code ^^
 
+// function renderCoffee(coffee) {
+//     var html = '<div class="coffee">';
+//     // html += '<div>' + coffee.id + '</div>';
+//     html += '<div><h1>' + coffee.name + '</h1></div>';
+//     html += '<div><p>' + coffee.roast + '</p></div>';
+//     html += '</div>';
+//
+//     return html;
+// }
+
 function renderCoffee(coffee) {
-    var html = '<div class="coffee">';
+    var html = '<div>';
     // html += '<div>' + coffee.id + '</div>';
-    html += '<div><h1>' + coffee.name + '</h1></div>';
-    html += '<div><p>' + coffee.roast + '</p></div>';
+    html += '<h1 id="coffeeNameHead">' + coffee.name + '</h1>';
+    html += '<p>' + coffee.roast + '</p>';
     html += '</div>';
 
     return html;
@@ -33,31 +43,12 @@ function renderCoffee(coffee) {
 // RENDERING COFFEES IN ASCENDING ORDER BY ID original code ^^
 
 function renderCoffees(coffees) {
-    var html = '';
+    var html = "" ;
+
     for(var i = 0; i <= coffees.length - 1; i++) {
         html += renderCoffee(coffees[i]);
     }
     return html;
-}
-
-function myFunction() {
-    // Declare variables
-    var input, filter, ul, li, a, i, txtValue;
-    input = document.getElementById('myInput');
-    filter = input.value.toUpperCase();
-    ul = document.getElementById("myUL");
-    li = ul.getElementsByTagName('li');
-
-    // Loop through all list items, and hide those who don't match the search query
-    for (i = 0; i < li.length; i++) {
-        a = li[i].getElementsByTagName("a")[0];
-        txtValue = a.textContent || a.innerText;
-        if (txtValue.toUpperCase().indexOf(filter) > -1) {
-            li[i].style.display = "";
-        } else {
-            li[i].style.display = "none";
-        }
-    }
 }
 
 // TRYING TO UNDERSTAND FUNCTIONALITY ^^
@@ -65,9 +56,10 @@ function myFunction() {
 function updateCoffees(e) {
     e.preventDefault(); // don't submit the form, we just want to update the data
     var selectedRoast = roastSelection.value;
+    var nameInput = coffeeName.value;
     var filteredCoffees = [];
     coffees.forEach(function(coffee) {
-        if (coffee.roast === selectedRoast) {
+        if (coffee.roast === selectedRoast && coffee.name.toLowerCase() === nameInput.toLowerCase()) {
             filteredCoffees.push(coffee);
         }
     });
@@ -95,6 +87,7 @@ var coffees = [
 var coffeeInfo = document.querySelector('#coffees');
 var submitButton = document.querySelector('#submit');
 var roastSelection = document.querySelector('#roast-selection');
+var coffeeName = document.querySelector('#coffee-name');
 
 coffeeInfo.innerHTML = renderCoffees(coffees);
 
