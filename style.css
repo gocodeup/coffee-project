@@ -8,18 +8,29 @@ body {
     font-family: 'Montserrat', sans-serif;
 }
 
-table {
-    border-collapse: collapse;
-    margin: 15px 0;
+header h1 {
+    color: #38220f;
+    font-weight: bolder;
+    padding: 0 10px;
+    letter-spacing: 5px;
+    margin-bottom: 100px;
 }
 
-td, th {
-    border: 1px solid black;
-    padding: 5px 10px;
+.container {
+    color: #fff;
 }
 
 #coffees p{
     margin-top: 9px;
-    padding-left: 5px;
-    color: gray;
+    padding-left: 10px;
+    color: #fff;
+}
+
+header h1 {
+    font-size: 3em;
+}
+
+.container .custom-select, .form-control {
+    background: transparent;
+    border: 1px solid #fff;
 }
