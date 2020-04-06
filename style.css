@@ -22,7 +22,7 @@ header h1 {
 
 #coffees p{
     margin-top: 9px;
-    padding-left: 10px;
+    padding-left: 12px;
     color: #fff;
 }
 
@@ -30,7 +30,7 @@ header h1 {
     font-size: 3em;
 }
 
-.container .custom-select, .form-control {
+form .custom-select, form .form-control {
     background: transparent;
     border: 1px solid #fff;
 }

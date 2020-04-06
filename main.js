@@ -44,6 +44,7 @@ function search () {
 
 function addCoffee (e) {
     e.preventDefault();
+    console.log(coffeeAddition);
     coffees.push({name: coffeeAddition.value , roast: roastAddition.value});
     updateCoffees(e);
 }
