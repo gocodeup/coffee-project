@@ -5,26 +5,31 @@ body {
     background-position: center center absolute;
     background-attachment: fixed;
     background-size: cover;
-    font-family: 'Montserrat', sans-serif;
 }
 
 header h1 {
     color: #38220f;
     font-weight: bolder;
     padding: 0 10px;
-    letter-spacing: 5px;
+    letter-spacing: 3px;
     margin-bottom: 100px;
+    font-family: 'Montserrat', sans-serif;
 }
 
 .container {
     color: #fff;
     margin-bottom: 100px;
+    font-family: 'Montserrat', sans-serif;
 }
 
 #coffees p{
-    margin-top: 9px;
+    margin-top: 4px;
     padding-left: px;
     color: #fff;
+}
+
+.coffee p {
+    margin-bottom: 0;
 }
 
 header h1 {
