@@ -47,6 +47,7 @@ function addCoffee (e) {
     console.log(coffeeAddition);
     coffees.push({name: coffeeAddition.value , roast: roastAddition.value});
     updateCoffees(e);
+    this.form.reset();
 }
 
 // from http://www.ncausa.org/About-Coffee/Coffee-Roasts-Guide
