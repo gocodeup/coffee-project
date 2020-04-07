@@ -4,6 +4,7 @@
     <list default="true" id="930c52b3-b35a-416d-9fa5-4a1e6c87da89" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/style.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -60,11 +61,12 @@
       <screen x="0" y="23" width="1440" height="798" />
     </state>
     <state width="500" height="445" key="SwitcherDM/0.23.1440.798@0.23.1440.798" timestamp="1586200225305" />
-    <state x="60" y="-905" width="894" height="897" key="search.everywhere.popup" timestamp="1586276542192">
-      <screen x="-251" y="-1057" width="1920" height="1057" />
+    <state x="233" y="138" width="671" height="680" key="search.everywhere.popup" timestamp="1586279038497">
+      <screen x="0" y="23" width="1440" height="801" />
     </state>
     <state x="60" y="-905" width="894" height="897" key="search.everywhere.popup/0.23.1410.877/-251.-1057.1920.1057@-251.-1057.1920.1057" timestamp="1586276542192" />
     <state x="-4" y="144" width="670" height="676" key="search.everywhere.popup/0.23.1440.797@0.23.1440.797" timestamp="1585943957974" />
     <state x="-4" y="144" width="670" height="677" key="search.everywhere.popup/0.23.1440.798@0.23.1440.798" timestamp="1586207909841" />
+    <state x="233" y="138" width="671" height="680" key="search.everywhere.popup/0.23.1440.801@0.23.1440.801" timestamp="1586279038497" />
   </component>
 </project>

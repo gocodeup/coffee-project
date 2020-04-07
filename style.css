@@ -7,3 +7,26 @@
 /*    border: 1px solid black;*/
 /*    padding: 5px 10px;*/
 /*}*/
+
+body {
+    background-image: url("coffee-background.jpg");
+    background-size: 100%;
+}
+
+.card-header {
+    background-color: #a88a77;
+}
+
+.card-body {
+    background-color: floralwhite;
+}
+
+#main-header {
+    background-color: #251917;
+    color: floralwhite;
+    padding: 30px 10px 30px 10px !important;
+}
+
+tbody {
+    color: floralwhite;
+}
