@@ -83,38 +83,40 @@ function searchBar() {
 }
 //////////////
 
+function showCoffees(){
+    if (localStorage.getItem('coffees') !== null) {
+        var arrayCoffees = JSON.parse(localStorage.getItem('coffees'));
+        tbody.innerHTML = renderCoffees(arrayCoffees);
+        console.log('local');
+        console.log(arrayCoffees);
+    } else{
+        tbody.innerHTML = renderCoffees(coffees);
+        console.log('external');
+    }
+}
+
+
+showCoffees();
 
 document.getElementById("submit1").addEventListener("click", function(event){
+
     event.preventDefault();
-
-
-    function store(){
-        var saveRoast= document.getElementById("roast-selection1");
-        localStorage.setItem("roast-selection1", coffees.value);
-        var saveName= document.getElementById("coffeeName");
-        localStorage.setItem("coffeeName", coffeeName.value);
-
-
-    }
-
 
     var roastSelect = document.getElementById('roast-selection1').value;
 
-
     var coffeeName = document.getElementById('coffeeName').value;
 
-    coffees.push({id: coffees.length + 1, name: coffeeName, roast: roastSelect});
+    var actualCoffeeArray = coffees;
 
-    tbody.innerHTML = renderCoffees(coffees);
+    if (localStorage.getItem('coffees') !== null){
+        actualCoffeeArray = JSON.parse(localStorage.getItem('coffees'));
+    }
 
-/////////////////
+    actualCoffeeArray.push({id: coffees.length + 1, name: coffeeName, roast: roastSelect});
 
+    var stringCoffees = JSON.stringify(actualCoffeeArray);
 
-
-
-
-
-
-
-
+    localStorage.setItem('coffees', stringCoffees);
+    //
+    showCoffees();
 });
