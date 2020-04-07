@@ -1,13 +1,8 @@
 *{
+box-sizing: border-box;
 
 }
 
-.coffee-list{
-    display:flex;
-    flex-wrap: wrap;
-    margin-right: 40px;
-    justify-content: space-between;
-}
 
 .h3{
     color: black
