@@ -1,7 +1,7 @@
 "use strict";
 
 function renderCoffee(coffee) {
-    var html = '<div class="coffee"> <div class="d-flex align-items-baseline  col">';
+    var html = '<div class="coffee w-50"> <div class="d-flex align-items-baseline mb-2 mt-2 col">';
     html += '<h3>' + coffee.name + '</h3>';
     html += '<p class="ml-2 text-secondary ">' + coffee.roast + '</p>';
     html += '</div></div>';
@@ -87,11 +87,34 @@ function searchBar() {
 document.getElementById("submit1").addEventListener("click", function(event){
     event.preventDefault();
 
+
+    function store(){
+        var saveRoast= document.getElementById("roast-selection1");
+        localStorage.setItem("roast-selection1", coffees.value);
+        var saveName= document.getElementById("coffeeName");
+        localStorage.setItem("coffeeName", coffeeName.value);
+
+
+    }
+
+
     var roastSelect = document.getElementById('roast-selection1').value;
+
 
     var coffeeName = document.getElementById('coffeeName').value;
 
     coffees.push({id: coffees.length + 1, name: coffeeName, roast: roastSelect});
 
     tbody.innerHTML = renderCoffees(coffees);
+
+/////////////////
+
+
+
+
+
+
+
+
+
 });
