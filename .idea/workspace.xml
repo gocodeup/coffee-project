@@ -44,7 +44,7 @@
       <updated>1585943462459</updated>
       <workItem from="1585943468534" duration="2170000" />
       <workItem from="1586184462579" duration="666000" />
-      <workItem from="1586265603838" duration="3838000" />
+      <workItem from="1586265603838" duration="7620000" />
     </task>
     <servers />
   </component>
@@ -60,9 +60,10 @@
       <screen x="0" y="23" width="1440" height="798" />
     </state>
     <state width="500" height="445" key="SwitcherDM/0.23.1440.798@0.23.1440.798" timestamp="1586200225305" />
-    <state x="-4" y="144" width="670" height="677" key="search.everywhere.popup" timestamp="1586207909841">
-      <screen x="0" y="23" width="1440" height="798" />
+    <state x="60" y="-905" width="894" height="897" key="search.everywhere.popup" timestamp="1586276542192">
+      <screen x="-251" y="-1057" width="1920" height="1057" />
     </state>
+    <state x="60" y="-905" width="894" height="897" key="search.everywhere.popup/0.23.1410.877/-251.-1057.1920.1057@-251.-1057.1920.1057" timestamp="1586276542192" />
     <state x="-4" y="144" width="670" height="676" key="search.everywhere.popup/0.23.1440.797@0.23.1440.797" timestamp="1585943957974" />
     <state x="-4" y="144" width="670" height="677" key="search.everywhere.popup/0.23.1440.798@0.23.1440.798" timestamp="1586207909841" />
   </component>
