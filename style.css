@@ -11,6 +11,7 @@
 body {
     background-image: url("coffee-background.jpg");
     background-size: 100%;
+    font-family: ‘Roboto’, sans-serif;
 }
 
 .card-header {
@@ -19,6 +20,7 @@ body {
 
 .card-body {
     background-color: floralwhite;
+
 }
 
 #main-header {
@@ -28,5 +30,15 @@ body {
 }
 
 tbody {
+    color: floralwhite;
+
+}
+
+#top-card {
+    margin-top: 30px;
+}
+
+#submit {
+    background-color: #251917;
     color: floralwhite;
 }
