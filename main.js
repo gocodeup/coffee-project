@@ -60,7 +60,7 @@ var coffees = [
     {id: 14, name: 'French', roast: 'dark'},
 ];
 
-
+// function to add new coffee
 function addCoffee(f) {
     // console.log("update coffee");
     f.preventDefault(); // don't submit the form, we just want to update the data
