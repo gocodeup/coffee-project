@@ -16,20 +16,20 @@
     <div class="row">
         <div class="col-6">
             <div>
-                <ul class="d-flex flex-wrap justify-content-between" id="coffees"></ul>
+                <ul class="d-flex flex-wrap " id="coffees"></ul>
             </div>
         </div>
         <div class="col-6">
             <form>
                 <div class="form-group">
-                    <label for="roast-selection">Roast</label>
+                    <label for="roast-selection" class="font-weight-bold">Roast</label>
                     <select class="form-control" id="roast-selection">
                         <option>all</option>
                         <option>light</option>
                         <option>medium</option>
                         <option>dark</option>
                     </select>
-                    <label for="search">Coffee Name</label>
+                    <label for="search" class="font-weight-bold">Coffee Name</label>
                     <input id="search" class="form-control" onkeyup="searchBar()" type="text">
                     <input id="submit" class="btn btn-primary w-100 mt-2" type="submit"/>
                 </div>
@@ -39,15 +39,15 @@
 
             <form>
                 <div class="form-group">
-                    <label for="roast-selection">Roast</label>
+                    <label for="roast-selection" class="font-weight-bold">Roast</label>
                     <select class="form-control" id="roast-selection1">
                         <option>light</option>
                         <option>medium</option>
                         <option>dark</option>
                     </select>
-                    <label for="search">Names</label>
+                    <label for="search" class="font-weight-bold">Names</label>
                     <input id="coffeeName" class="form-control" type="text">
-                    <input id="submit1" class="btn btn-primary w-100 mt-2" type="submit"/>
+                    <input id="submit1" class="btn btn-primary w-100 mt-2" onclick="store()" type="submit"/>
                 </div>
             </form>
         </div>
