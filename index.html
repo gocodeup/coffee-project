@@ -2,49 +2,74 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title></title>
+    <title>Quarantine Caffeine Cafe</title>
+
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="style.css">
+    <link href=“https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap” rel=“stylesheet”>
+
+
 
 </head>
+
 <body>
-<h1>Quarantine Caffeine Cafe</h1>
-<form>
-    <label for="roast-selection"><h3>Roast</h3></label>
-    <select id="roast-selection" class="form-control">
-        <option>light</option>
-        <option>medium</option>
-        <option>dark</option>
-    </select>
+<h1 class="text-center p-3 pb-5" id="main-header">Quarantine Caffeine Cafe</h1>
+<main class="container">
+    <form>
+    <div class="row">
+        <div class="col-sm-6">
+            <table>
 
-    <label for="search-bar"><h3>Search Coffee Name</h3></label>
-    <input id="search-bar" type="search"/>
+                <tbody id="coffees"></tbody>
 
+            </table></div>
+<!--        <div class="row">-->
+        <div class="col-sm-6">
+            <div class="card pb-3" id="top-card">
+                <div class="card-header">
+                    <h3>Roast Options</h3>
+                </div>
+                <div class="card-body">
+                    <label for="roast-selection"><h3>Select Your Roast</h3></label>
+                    <select id="roast-selection" class="form-control">
+                        <option>light</option>
+                        <option>medium</option>
+                        <option>dark</option>
+                    </select>
+                </div>
+            </div>
 
+                <div class="col-sm-14">
+                    <div class="card pb-2 mt-3">
+                        <div class="card-header">
+                            <h3>Coffee Names</h3>
+                        </div>
+                        <div class="card-body">
+                            <div class="form-group">
+                                <label for="search-bar"><h3>Search by Coffee Name</h3></label>
+                                <input type="text" class="form-control" id="search-bar" placeholder="Search">
+                            </div>
+                            <!--    <button type="submit" id="search-button">Search</button>-->
 
-
-
-<!--    <button type="submit" id="search-button">Search</button>-->
-
-<!--    Submit Button-->
-    <input id="submit" type="submit" />
+                            <!--    Submit Button-->
+                            <input id="submit" type="submit" />
+                        </div>
+                    </div>
+                </div>
+<!--            </div>-->
+        </div>
+    </div>
+    </div>
 
 </form>
+</main>
 
-<table>
-<!--    <thead>-->
-<!--    <tr>-->
-<!--        <th>ID</th>-->
-<!--        <th>NAME</th>-->
-<!--        <th>ROAST</th>-->
-<!--    </tr>-->
-<!--    </thead>-->
-    <tbody id="coffees"></tbody>
 
-</table>
 <script src="main.js"></script>
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+
+
 </body>
 </html>
