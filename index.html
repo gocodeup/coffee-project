@@ -20,7 +20,7 @@
         <div class="row">
             <div id="coffeeList" class="col-sm-12 d-flex m-auto">
                 <div class="coffee-list-container container m-auto d-flex ">
-<!--                    COFFEE LIST-->
+<!--                    COFFEE LIST CHANGED TO DIV TO MAKE IT FLOW INTO 2 COLUMNS -->
                     <div class="row col-6 pt-5" id="coffees" style="color: floralwhite"></div>
 
                      <div class="col-sm-6">
@@ -32,6 +32,7 @@
                                 <label for="roast-selection"><h3>Select Your Roast</h3></label>
 
                                 <select id="roast-selection" class="form-control">
+<!--                                    ADDED THE ALL ROAST OPTION-->
                                     <option value="all">all</option>
                                     <option>light</option>
                                     <option>medium</option>
@@ -51,7 +52,6 @@
                                             <label for="search-bar"><h3>Search by Coffee Name</h3></label>
                                             <input type="text" class="form-control" id="search-bar" placeholder="Search">
                                         </div>
-                                        <!--    <button type="submit" id="search-button">Search</button>-->
 
                                         <!--    Submit Button-->
                                         <input id="submit" type="submit" />
@@ -67,6 +67,8 @@
                              </select>
                             <div class="form-group pt-2 pb-3">
                                 <input type="text" class="form-control" id="add-coffee" placeholder="Add Coffee Name">
+<!--                                SECOND SUBMIT BUTTON-->
+                                <button id="submit-btn" type="submit">Submit</button>
                             </div>
                         </div>
                     </div>

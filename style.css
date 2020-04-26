@@ -45,7 +45,13 @@ tbody {
     margin-top: 30px;
 }
 
-#submit {
+#submit{
+    background-color: #251917;
+    color: floralwhite;
+}
+
+button {
+    margin-top: 15px;
     background-color: #251917;
     color: floralwhite;
 }

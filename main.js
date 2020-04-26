@@ -56,16 +56,44 @@ var coffees = [
 ];
 
 
+// ADD YOUR OWN COFFEE FUNCTION
+
+function addCoffees(e) {
+    e.preventDefault(); // don't submit the form, we just want to update the data
+    var selectedRoast = roastSelection.value;
+    var newCoffee = addCoffeeToList.value;
+    var newCoffeeArray = "";
+    coffees.forEach(function(coffee) {
+        console.log(newCoffee)
+        if (coffee.roast === selectedRoast || selectedRoast === 'all' && newCoffee === "string") {
+            console.log(coffee);
+        }
+    });
+    tbody.innerHTML = renderCoffees(newCoffeeArray);
+}
+
+
+
+
 
 var tbody = document.querySelector('#coffees');
 var submitButton = document.querySelector('#submit');
 var roastSelection = document.querySelector('#roast-selection');
 var coffeeSearch = document.querySelector('#search-bar');
-// var submitSearch = document.querySelector('#search-button');
+
+// GRABBING THE ADD COFFEE INPUT AND BUTTON
+var addCoffeeToList = document.querySelector('#add-coffee');
+var addButton = document.getElementById('submit-btn');
+
+
+
 tbody.innerHTML = renderCoffees(coffees);
 
 submitButton.addEventListener('click', updateCoffees);
 coffeeSearch.addEventListener('keyup', updateCoffees);
+// addCoffeeToList.addEventListener('keyup', updateCoffees);
+addButton.addEventListener('click', updateCoffees);
+
 
 
 
