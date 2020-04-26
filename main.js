@@ -1,11 +1,11 @@
 "use strict"
 
 function renderCoffee(coffee) {
-    var html = '<div class="coffee">';
-    html += '<div hidden>' + coffee.id + ' </div>';
-    html += '<div><h1>' + coffee.name + '</h1></div>';
-    html += '<div><p>' + coffee.roast + '</p></div>';
-    html += '</div>';
+    var html = '<div class="coffee h3 p-3 col-6">' + coffee.name + ' '+  '<p class="d-inline-block h6">' + coffee.roast + '</p>' + '</div>'
+    // html += '<div hidden>' + coffee.id + ' </div>';
+    // html += '<div><h1>' + coffee.name + '</h1></div>';
+    // html += '<div><p>' + coffee.roast + '</p></div>';
+    // html += '</div>';
 
     return html;
 }

@@ -14,6 +14,11 @@ body {
     font-family: ‘Roboto’, sans-serif;
 }
 
+.coffee-list-container{
+    height: 150px;
+}
+
+
 .card-header {
     background-color: #a88a77;
 }
