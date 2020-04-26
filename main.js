@@ -67,11 +67,6 @@ tbody.innerHTML = renderCoffees(coffees);
 submitButton.addEventListener('click', updateCoffees);
 coffeeSearch.addEventListener('keyup', updateCoffees);
 
-// console.log(submitSearch.value)
-
-
-// Replace console.log in coffeeSearch
-// updateCoffeesName
 
 
 
