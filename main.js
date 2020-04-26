@@ -58,22 +58,23 @@ var coffees = [
 
 // ADD YOUR OWN COFFEE FUNCTION
 
-function addCoffees(e) {
-    e.preventDefault(); // don't submit the form, we just want to update the data
-    var selectedRoast = roastSelection.value;
-    var newCoffee = addCoffeeToList.value;
-    var newCoffeeArray = "";
-    coffees.forEach(function(coffee) {
-        console.log(newCoffee)
-        if (coffee.roast === selectedRoast || selectedRoast === 'all' && newCoffee === "string") {
-            console.log(coffee);
-        }
-    });
-    tbody.innerHTML = renderCoffees(newCoffeeArray);
+function addCoffees(f) {
+
+    f.preventDefault(); // don't submit the form, we just want to update the data
+
+    var newCoffeeArray =  {
+        id: 0,
+        name: document.querySelector('#add-coffee').value,
+        roast: document.querySelector('#add-roast').value
+    };
+
+    // let newValue = document.querySelector('#coffee-search-add-coffee').value; // need to make into object!
+    coffees.unshift(newCoffeeArray);
+    console.log(coffees);
+    tbody.innerHTML = renderCoffees(coffees)
 }
 
-
-
+// console.log(newCoffeeArray);
 
 
 var tbody = document.querySelector('#coffees');
@@ -82,8 +83,9 @@ var roastSelection = document.querySelector('#roast-selection');
 var coffeeSearch = document.querySelector('#search-bar');
 
 // GRABBING THE ADD COFFEE INPUT AND BUTTON
-var addCoffeeToList = document.querySelector('#add-coffee');
-var addButton = document.getElementById('submit-btn');
+// var addCoffeeToList = document.querySelector('#add-coffee');
+var addButton = document.querySelector('#submit-btn');
+addButton.addEventListener('click', addCoffees);
 
 
 
@@ -92,7 +94,7 @@ tbody.innerHTML = renderCoffees(coffees);
 submitButton.addEventListener('click', updateCoffees);
 coffeeSearch.addEventListener('keyup', updateCoffees);
 // addCoffeeToList.addEventListener('keyup', updateCoffees);
-addButton.addEventListener('click', updateCoffees);
+
 
 
 
