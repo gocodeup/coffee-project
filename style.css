@@ -1,5 +1,11 @@
 *{box-sizing:border-box}
+
+body {
+    font-family: 'Work Sans', sans-serif;
+}
+
 main{
+    width: 100%;
     display: inline-grid;
     grid-template-columns: 50% 50%;
     grid-template-areas:"left right";
@@ -20,13 +26,34 @@ h1 {
 }
 
 form {
-    text-align: right;
     grid-area: right;
+    margin-left: 12.5em;
+    /*display: flex;*/
+    /*flex-direction: column;*/
+    /*align-items: flex-end;*/
+}
+
+p {
+    color: grey;
+    display: inline-block;
+    margin-left: .5em;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+
 }
 
 #roast-selection {
     width:500px;
     height:30px;
+    margin-bottom: 2em;
+}
+
+.coffee-menu {
+    display: inline-block;
+    font-size: 2em;
 }
 
 #coffees{
@@ -36,5 +63,32 @@ form {
 #coffee-name{
     width:500px;
     height:30px;
+    margin-bottom: 2em;
+}
+
+#add-roast-selection {
+    width:500px;
+    height:30px;
+    margin-bottom: 2em;
+}
+
+#add-name {
+    width:500px;
+    height:30px;
+    margin-bottom: 2em;
+}
+
+#submit, #second-submit {
+    width:500px;
+    height:30px;
+    border-radius: 3px;
+    background-color: #008CBA;
+    border: none;
+    color: white;
+    /*padding: 15px 32px;*/
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
 }
 

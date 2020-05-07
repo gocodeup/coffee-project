@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title></title>
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -10,7 +11,7 @@
     <hr>
     <main>
     <form>
-        <label for="roast-selection">Roast</label>
+        <label for="roast-selection" class="roast">Roast</label>
         <br>
         <select id="roast-selection">
             <option>light</option>
@@ -23,24 +24,23 @@
         <input type="text" id="coffee-name" name="coffee-name">
         <br>
         <input id="submit" type="submit" />
-        <hr>
         <h2>Add a Coffee</h2>
-        <label for="roast-selection">Roast</label>
+        <label for="add-roast-selection">Roast</label>
         <br>
-        <select id="roast-selection">
+        <select id="add-roast-selection">
             <option>light</option>
             <option>medium</option>
             <option>dark</option>
         </select>
         <br>
-        <label for="coffee-name">Coffee Name</label>
+        <label for="add-name">Name</label>
         <br>
-        <input type="text" id="coffee-name" name="coffee-name">
+        <input type="text" id="add-name" name="add-name">
         <br>
-        <input id="submit" type="submit" />
+        <input id="second-submit" type="submit" />
     </form>
 
-    <div class="" id="coffees"></div>
+    <div class="container" id="coffees"></div>
     </main>
 <!--    <div class="rTable"-->
 <!--        <div class="rTableHead">-->
