@@ -29,8 +29,9 @@ function updateCoffees(e) {
     e.preventDefault(); // don't submit the form, we just want to update the data
     var selectedRoast = roastSelection.value;
     var filteredCoffees = [];
+    var selectedName = coffeeName.value;
     coffees.forEach(function(coffee) {
-        if (coffee.roast === selectedRoast) {
+        if (coffee.roast === selectedRoast && coffee.name.toLowerCase() === selectedName.toLowerCase()) {
             filteredCoffees.push(coffee);
         }
     });
@@ -58,6 +59,7 @@ var coffees = [
 var tbody = document.querySelector('#coffees');
 var submitButton = document.querySelector('#submit');
 var roastSelection = document.querySelector('#roast-selection');
+var coffeeName = document.querySelector('#coffee-name')
 
 tbody.innerHTML = renderCoffees(coffees);
 
