@@ -1,3 +1,15 @@
+
+* {
+    box-sizing: border-box;
+}
+
+.container {
+    display: inline-grid;
+    grid-template-columns: 1em 1fr 1fr 1em;
+    grid-template-rows: 150px auto;
+    width: 100%;
+}
+
 table {
     border-collapse: collapse;
     margin: 15px 0;
@@ -6,4 +18,27 @@ table {
 td, th {
     border: 1px solid black;
     padding: 5px 10px;
+}
+
+#title {
+    grid-area: 1 / 2 / 2/ 4;
+    text-align: center;
+}
+
+#table {
+    grid-area: 2 / 2 / 3/ 3;
+}
+
+#form {
+    grid-area: 2 / 3 / 3 / 4;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+
+
+select .search {
+
 }
