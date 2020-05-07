@@ -11,36 +11,38 @@
     <form>
         <label for="roast-selection"></label>
         <select id="roast-selection" onchange="updateCoffees(this)">
+            <option>all</option>
             <option>light</option>
             <option>medium</option>
             <option>dark</option>
         </select>
         <label for="cname">Coffee Name:</label>
         <input type="text" id="cname" name="cname" onkeyup="updateCoffees(this)">
-<!--        <input id="submit" type="submit" />-->
     </form>
-
-<!--    <table>-->
-<!--        <thead>-->
-<!--            <tr>-->
-<!--                <th>ID</th>-->
-<!--                <th>NAME</th>-->
-<!--                <th>ROAST</th>-->
-<!--            </tr>-->
-<!--        </thead>-->
-<!--        <tbody id="coffees"></tbody>-->
-<!--    </table>-->
     <div>
         <div id="coffees"></div>
     </div>
+    <form id="form">
+        <label for="coffee-input"></label>
+        <select id="coffee-input">
+            <option>light</option>
+            <option>medium</option>
+            <option>dark</option>
+        </select>
+        <label for="cinputname">Coffee Name:</label>
+        <input type="text" id="cinputname" name="cinputname">
+        <button type="submit" id="coffee-button">Add Coffee</button>
+    </form>
 
     <script src="main.js"></script>
 
 
 
-<!--    Add functionality to search through the coffees by name, and display only the coffees that match the provided search term (You will need to add an input field to the existing form for this)-->
 
-<!--    Add functionality to update the displayed coffee as the user types into the search box, or as soon as they select an option from the select.-->
+<!--    Allow the user to add new coffees to the page-->
+
+<!--    Create another form on the page that has an input for the coffee name, and a select to choose the coffee roast. When the form is submitted, the new coffee should appear on the page. (Note that any new coffees you add will be lost when you refresh the page, for an extra challenge, research how localStorage works and see if you can find a way to persist the data)-->
+
 
 </body>
 </html>
