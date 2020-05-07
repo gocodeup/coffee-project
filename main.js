@@ -1,15 +1,15 @@
-"use strict"
+"use strict";
 
-function renderCoffee(coffee) {
-    var html = '<tr class="coffee">';
-    html += '<td>' + coffee.id + '</td>';
-    html += '<td>' + coffee.name + '</td>';
-    html += '<td>' + coffee.roast + '</td>';
-    html += '</tr>';
-
-    return html;
+//taking array input from 'rendered coffees' and organizing it
+    function renderCoffee(coffee) {
+        var html = '<tr class="coffee">';
+            // html += '<td>' + coffee.id + '</td>';
+            html += '<td>' + coffee.name + '</td>';
+            html += '<td>' + coffee.roast + '</td>';
+        html += '</tr>';
+        return html;
 }
-
+//taking data from coffee array and giving it to 'rendered coffee'
 function renderCoffees(coffees) {
     var html = '';
     for(var i = coffees.length - 1; i >= 0; i--) {
@@ -17,13 +17,13 @@ function renderCoffees(coffees) {
     }
     return html;
 }
-
+//first form
 function updateCoffees(e) {
     e.preventDefault(); // don't submit the form, we just want to update the data
     var selectedRoast = roastSelection.value;
-    var filteredCoffees = [];
+    var filteredCoffees = []; //create empty array to hold the for each return value
     coffees.forEach(function(coffee) {
-        if (coffee.roast === selectedRoast) {
+        if (coffee.name.startsWith(userSearch) && coffee.roast === selectedRoast) {
             filteredCoffees.push(coffee);
         }
     });
@@ -48,10 +48,33 @@ var coffees = [
     {id: 14, name: 'French', roast: 'dark'},
 ];
 
-var tbody = document.querySelector('#coffees');
+//create function that takes live user input and lives return coffee with same name and roast selection
+//need to iterate through coffees array
+//see if coffee array includes user input
+//if includes return the matching output on html
+//need to split coffee name to check letter by letter
+
+// function coffeeNameSplit(){
+//     coffees.forEach(function(coffee){
+//       if(coffee.name.startsWith(userSearch) && updateCoffees()){
+//
+//       }
+//     });
+//
+//     function updateUserSearch(f){
+//
+//     }
+//
+//
+//     return coffeeNameArray;
+// }
+
+var tbody = document.querySelector('#coffees'); // creating tbody variable
 var submitButton = document.querySelector('#submit');
 var roastSelection = document.querySelector('#roast-selection');
 
-tbody.innerHTML = renderCoffees(coffees);
+var userSearch = document.querySelector('#user-search');
 
-submitButton.addEventListener('click', updateCoffees);
+tbody.innerHTML = renderCoffees(coffees); //diplaying the output from the 'rendered coffee & rendered coffees' functions to html table
+
+submitButton.addEventListener('click', updateCoffees); //updates user selection list using the top three functions...
