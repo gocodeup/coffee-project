@@ -25,7 +25,7 @@ function renderCoffee(coffee) {
 //pulling coffee info from renderCoffee function in descending order (from bottom up)
 function renderCoffees(coffees) {
     var html = '';
-    for(var i = coffees.length - 1; i >= 0; i--) {
+    for(var i = 0;  i < coffees.length; i++) {
         html += renderCoffee(coffees[i]);
     }
     return html;
@@ -42,6 +42,17 @@ function updateCoffees(e) {
         }
     });
     tbody.innerHTML = renderCoffees(filteredCoffees);
+}
+
+function searchCoffee(query) {
+    var selectedRoast = query.value;
+    var filteredRoast = [];
+    coffees.forEach(function(coffee) {
+        if (coffee.roast === selectedRoast) {
+            filteredCoffees.push(coffee);
+        }
+    });
+
 }
 
 // from http://www.ncausa.org/About-Coffee/Coffee-Roasts-Guide
