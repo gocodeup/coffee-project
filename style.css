@@ -1,6 +1,8 @@
 table {
     border-collapse: collapse;
     margin: 15px 0;
+    height: auto;
+    width: 50vw;
 
 
 }
@@ -17,3 +19,6 @@ table {
 /*    border: none;*/
 /*    padding: 5px 10px;*/
 /*}*/
+#coffees {
+    column-count: 2;
+}
