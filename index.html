@@ -7,27 +7,51 @@
 </head>
 <body>
     <h1>Coffee!</h1>
-
+    <hr>
+    <main>
     <form>
-        <label for="roast-selection"></label>
+        <label for="roast-selection">Roast</label>
+        <br>
         <select id="roast-selection">
             <option>light</option>
             <option>medium</option>
             <option>dark</option>
         </select>
+        <br>
+        <label for="coffee-name">Coffee Name</label>
+        <br>
+        <input type="text" id="coffee-name" name="coffee-name">
+        <br>
+        <input id="submit" type="submit" />
+        <hr>
+        <h2>Add a Coffee</h2>
+        <label for="roast-selection">Roast</label>
+        <br>
+        <select id="roast-selection">
+            <option>light</option>
+            <option>medium</option>
+            <option>dark</option>
+        </select>
+        <br>
+        <label for="coffee-name">Coffee Name</label>
+        <br>
+        <input type="text" id="coffee-name" name="coffee-name">
+        <br>
         <input id="submit" type="submit" />
     </form>
 
-    <table>
-        <thead>
-            <tr>
-                <th>ID</th>
-                <th>NAME</th>
-                <th>ROAST</th>
-            </tr>
-        </thead>
-        <tbody id="coffees"></tbody>
-    </table>
+    <div class="" id="coffees"></div>
+    </main>
+<!--    <div class="rTable"-->
+<!--        <div class="rTableHead">-->
+<!--            <div class="rTableRow">-->
+<!--                <div class ="rTableHead">ID</div>-->
+<!--                <div class ="rTableHead">NAME</div>-->
+<!--                <div class ="rTableHead">ROAST</div>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--        <div class ="tbody" id="coffees"></div>-->
+<!--    </div>-->
 
     <script src="main.js"></script>
 </body>

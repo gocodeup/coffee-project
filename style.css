@@ -1,3 +1,10 @@
+*{box-sizing:border-box}
+main{
+    display: inline-grid;
+    grid-template-columns: 50% 50%;
+    grid-template-areas:"left right";
+}
+
 table {
     border-collapse: collapse;
     margin: 15px 0;
@@ -7,3 +14,27 @@ td, th {
     border: 1px solid black;
     padding: 5px 10px;
 }
+
+h1 {
+    text-align: center;
+}
+
+form {
+    text-align: right;
+    grid-area: right;
+}
+
+#roast-selection {
+    width:500px;
+    height:30px;
+}
+
+#coffees{
+    grid-area: left;
+}
+
+#coffee-name{
+    width:500px;
+    height:30px;
+}
+
