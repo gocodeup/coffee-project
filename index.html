@@ -3,46 +3,50 @@
 <head>
     <meta charset="UTF-8">
     <title></title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
-    <h1>Coffee!</h1>
-
-    <form>
-        <label for="roast-selection"></label>
-        <select id="roast-selection" onchange="updateCoffees(this)">
-            <option>all</option>
-            <option>light</option>
-            <option>medium</option>
-            <option>dark</option>
-        </select>
-        <label for="cname">Coffee Name:</label>
-        <input type="text" id="cname" name="cname" onkeyup="updateCoffees(this)">
-    </form>
-    <div>
-        <div id="coffees"></div>
+<body class="container">
+    <div id="header-div">
+        <h1 class="text-center p-3 border-bottom border-secondary">Coffee!</h1>
     </div>
-    <form id="form">
-        <label for="coffee-input"></label>
-        <select id="coffee-input">
-            <option>light</option>
-            <option>medium</option>
-            <option>dark</option>
-        </select>
-        <label for="cinputname">Coffee Name:</label>
-        <input type="text" id="cinputname" name="cinputname">
-        <button type="submit" id="coffee-button">Add Coffee</button>
-    </form>
 
+    <div id="search-form">
+        <form>
+            <label for="roast-selection">Roast</label>
+            <select id="roast-selection" onchange="updateCoffees(this)">
+                <option>all</option>
+                <option>light</option>
+                <option>medium</option>
+                <option>dark</option>
+            </select>
+            <label for="cname">Coffee Name</label>
+            <input type="text" id="cname" name="cname" onkeyup="updateCoffees(this)">
+        </form>
+    </div>
+
+    <div id="coffee-section" class="">
+        <div id="coffees" class="d-inline-flex flex-wrap"></div>
+    </div>
+
+    <div id="input-form">
+        <h2 class="text-center">Add a Coffee</h2>
+        <form>
+            <label for="coffee-input"></label>
+            <select id="coffee-input">
+                <option>light</option>
+                <option>medium</option>
+                <option>dark</option>
+            </select>
+            <label for="cinputname">Coffee Name:</label>
+            <input type="text" id="cinputname" name="cinputname">
+            <button type="submit" id="coffee-button">Add Coffee</button>
+        </form>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
     <script src="main.js"></script>
-
-
-
-
-<!--    Allow the user to add new coffees to the page-->
-
-<!--    Create another form on the page that has an input for the coffee name, and a select to choose the coffee roast. When the form is submitted, the new coffee should appear on the page. (Note that any new coffees you add will be lost when you refresh the page, for an extra challenge, research how localStorage works and see if you can find a way to persist the data)-->
-
-
 </body>
 </html>

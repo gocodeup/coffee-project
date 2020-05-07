@@ -1,14 +1,15 @@
 "use strict"
 
+// creates divs for each object in coffees array
 function renderCoffee(coffee) {
-    var html = '<div class="coffee">';
+    var html = '<div class="coffee text-wrap p-1 col-6">';
     html += '<h5>' + coffee.name + '</h5>';
     html += '<p>' + coffee.roast + '</p>';
     html += '</div>';
-
     return html;
 }
 
+// orders divs by id
 function renderCoffees(coffees) {
     var html = '';
     for(var i = 0; i <= coffees.length - 1; i++) {
@@ -17,8 +18,8 @@ function renderCoffees(coffees) {
     return html;
 }
 
-function updateCoffees(e) {
-    // e.preventDefault(); // don't submit the form, we just want to update the data
+// filters coffee by roast and/or text
+function updateCoffees() {
     var selectedRoast = roastSelection.value;
     var filteredCoffees = [];
     coffees.forEach(function(coffee) {
@@ -27,18 +28,6 @@ function updateCoffees(e) {
         }
     });
     tbody.innerHTML = renderCoffees(filteredCoffees);
-}
-
-function addCoffee(name, roast, arr) {
-    var all = "all"
-    var newCoffee = {
-        id: coffees.length + 1,
-        name: name,
-        roast: roast,
-        all: all
-    };
-    arr.push(newCoffee);
-    return arr;
 }
 
 // from http://www.ncausa.org/About-Coffee/Coffee-Roasts-Guide
@@ -59,18 +48,15 @@ var coffees = [
     {id: 14, name: 'French', roast: 'dark', all: "all"},
 ];
 
-var searchBox = document.querySelector("#cname");
-var tbody = document.querySelector('#coffees');
-// var submitButton = document.querySelector('#submit');
-var roastSelection = document.querySelector('#roast-selection');
+var searchBox = document.querySelector("#cname"); // takes value of input on line 20 of html
+var tbody = document.querySelector('#coffees'); // div that functions create html in
+var roastSelection = document.querySelector('#roast-selection'); // takes value of select beginning at line 13 of html
+var newRoastSelection = document.querySelector('#coffee-input') // takes value of select beginning at line 29 of html
+var coffeeTextInput = document.querySelector("#cinputname"); // takes value of input on line 35 of html
 
-var newRoastSelection = document.querySelector('#coffee-input')
-var coffeeTextInput = document.querySelector("#cinputname");
-tbody.innerHTML = renderCoffees(coffees);
+tbody.innerHTML = renderCoffees(coffees); // invokes function above
 
-// submitButton.addEventListener('click', updateCoffees);
-
-// document.querySelector("#coffee-button").addEventListener('click', addCoffee(coffeeTextInput.value, newRoastSelection.value,coffees));
+// function that allows for new entries in the coffees array of objects
 document.querySelector("#coffee-button").addEventListener('click', function (e) {
     e.preventDefault();
     var all = "all"
