@@ -7,7 +7,7 @@ body {
 main{
     width: 100%;
     display: inline-grid;
-    grid-template-columns: 50% 50%;
+    grid-template-columns: 40% 60%;
     grid-template-areas:"left right";
 }
 
@@ -27,7 +27,7 @@ h1 {
 
 form {
     grid-area: right;
-    margin-left: 12.5em;
+    margin-left: 15em;
     /*display: flex;*/
     /*flex-direction: column;*/
     /*align-items: flex-end;*/
@@ -42,7 +42,6 @@ p {
 .container {
     display: flex;
     flex-wrap: wrap;
-
 }
 
 #roast-selection {
@@ -54,10 +53,13 @@ p {
 .coffee-menu {
     display: inline-block;
     font-size: 2em;
+
 }
 
 #coffees{
     grid-area: left;
+    margin-left: 5em;
+
 }
 
 #coffee-name{
@@ -90,5 +92,14 @@ p {
     text-decoration: none;
     display: inline-block;
     font-size: 16px;
+}
+
+.coffee{
+    display:flex;
+    align-items: flex-start;
+    margin-right: 2em;
+    width:230px;
+    height:56px;
+
 }
 
