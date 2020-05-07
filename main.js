@@ -27,11 +27,25 @@ function renderCoffees(coffees) {
 
 function updateCoffees(e) {
     e.preventDefault(); // don't submit the form, we just want to update the data
+    var input, filter, tr, th, i, txtValue;
+    input = document.getElementById("#coffee-name");
+    filter = input.value.toUpperCase();
+    tr = document.getElementById("#myTr");
+    th = th.getElementsByTagName("th");
     var selectedRoast = roastSelection.value;
     var filteredCoffees = [];
     var selectedName = coffeeName.value;
     coffees.forEach(function(coffee) {
-        if (coffee.roast === selectedRoast && coffee.name.toLowerCase() === selectedName.toLowerCase()) {
+        if (coffee.roast === selectedRoast) {
+            for (i = 0; i < th.length; i++) {
+                // a = th[i].getElementsByTagName("a")[0];
+                // txtValue = a.textContent || a.innerText;
+                if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                    th[i].style.display = "";
+                } else {
+                    th[i].style.display = "none";
+                }
+            }
             filteredCoffees.push(coffee);
         }
     });
