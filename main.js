@@ -1,15 +1,28 @@
-"use strict"
+"use strict";
+
+
+//creates a new row with coffee info for table
+// function renderCoffee(coffee) {
+//     var html = '<tr class="coffee">';
+//     html += '<td>' + coffee.id + '</td>';
+//     html += '<td>' + coffee.name + '</td>';
+//     html += '<td>' + coffee.roast + '</td>';
+//     html += '</tr>';
+//
+//     return html;
+// }
 
 function renderCoffee(coffee) {
-    var html = '<tr class="coffee">';
-    html += '<td>' + coffee.id + '</td>';
-    html += '<td>' + coffee.name + '</td>';
-    html += '<td>' + coffee.roast + '</td>';
-    html += '</tr>';
+    var html = '<div class="coffee">';
+    html += '<h3>' + coffee.name + '</h3>';
+    html += '<p>' + coffee.roast + '</p>';
+    html += '</div>';
 
     return html;
 }
 
+
+//pulling coffee info from renderCoffee function in descending order (from bottom up)
 function renderCoffees(coffees) {
     var html = '';
     for(var i = coffees.length - 1; i >= 0; i--) {
@@ -18,6 +31,7 @@ function renderCoffees(coffees) {
     return html;
 }
 
+//add coffee to coffees object
 function updateCoffees(e) {
     e.preventDefault(); // don't submit the form, we just want to update the data
     var selectedRoast = roastSelection.value;
@@ -48,10 +62,22 @@ var coffees = [
     {id: 14, name: 'French', roast: 'dark'},
 ];
 
+//link for table body HTML
 var tbody = document.querySelector('#coffees');
+
+//link for submit button in form
 var submitButton = document.querySelector('#submit');
+
+//link for drop down menu in form
 var roastSelection = document.querySelector('#roast-selection');
 
+//adding all coffee from coffees object into table body in HTML
 tbody.innerHTML = renderCoffees(coffees);
 
+//updates table to show coffee based on form drop down selection ('light' , 'medium' , 'dark')
 submitButton.addEventListener('click', updateCoffees);
+
+
+//Refactor so that coffee info is displayed in a DIV, with a heading displaying the coffee name, and type of roast in a paragraph. Don't display the IDs
+
+//add option to drop down for all coffee
