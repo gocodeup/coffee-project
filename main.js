@@ -44,15 +44,24 @@ function updateCoffees(e) {
     tbody.innerHTML = renderCoffees(filteredCoffees);
 }
 
-function searchCoffee(query) {
-    var selectedRoast = query.value;
-    var filteredRoast = [];
+//this is the input from search bar in form
+const searchBar = document.getElementById("search-bar");
+
+searchBar.addEventListener("keyup", e => {
+    const searchString = e.target.value.toLowerCase();
+    searchCoffee(searchString);
+});
+
+
+function searchCoffee(input) {
+    // e.preventDefault(); // don't submit the form, we just want to update the data
+    var filteredCoffees = [];
     coffees.forEach(function(coffee) {
-        if (coffee.roast === selectedRoast) {
+        if (coffee.name.toLowerCase().includes(input)) {
             filteredCoffees.push(coffee);
         }
     });
-
+    tbody.innerHTML = renderCoffees(filteredCoffees);
 }
 
 // from http://www.ncausa.org/About-Coffee/Coffee-Roasts-Guide
@@ -76,8 +85,11 @@ var coffees = [
 //link for table body HTML
 var tbody = document.querySelector('#coffees');
 
-//link for submit button in form
+//link for submit button in form1
 var submitButton = document.querySelector('#submit');
+
+//link for submit button in form2
+var submitButton2 = document.querySelector('#submit2');
 
 //link for drop down menu in form
 var roastSelection = document.querySelector('#roast-selection');
@@ -87,6 +99,8 @@ tbody.innerHTML = renderCoffees(coffees);
 
 //updates table to show coffee based on form drop down selection ('light' , 'medium' , 'dark')
 submitButton.addEventListener('click', updateCoffees);
+
+submitButton2.addEventListener('click', searchCoffee);
 
 
 //Refactor so that coffee info is displayed in a DIV, with a heading displaying the coffee name, and type of roast in a paragraph. Don't display the IDs
