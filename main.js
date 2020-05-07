@@ -30,14 +30,24 @@ function renderCoffees(coffees) {
 
 function updateCoffees(e) {
     e.preventDefault(); // don't submit the form, we just want to update the data
-    var selectedRoast = roastSelection.value;
     var filteredCoffees = [];
     coffees.forEach(function(coffee) {
-        if (coffee.roast === selectedRoast) {
+        var selectedRoast = roastSelection.value;
+        var selectedName = nameSelection.value.toUpperCase();
+        var coffeeName = coffee.name.toUpperCase();
+        if(selectedRoast === "all")
+            selectedRoast = coffee.roast;
+
+        if(selectedName.length < 1) {
+            selectedName = coffeeName;
+        }
+        // if(coffeeName.indexOf(selectedName) != -1)
+        //     console.log(coffeeName);
+        if (coffee.roast === selectedRoast && coffeeName.indexOf(selectedName) != -1) {
             filteredCoffees.push(coffee);
         }
     });
-    tbody.innerHTML = renderCoffees(filteredCoffees);
+    coffeeDiv.innerHTML = renderCoffees(filteredCoffees);
 }
 
 // from http://www.ncausa.org/About-Coffee/Coffee-Roasts-Guide
@@ -58,10 +68,11 @@ var coffees = [
     {id: 14, name: 'French', roast: 'dark'},
 ];
 
-var tbody = document.querySelector('#coffees');
+var coffeeDiv = document.querySelector('#coffees');
 var submitButton = document.querySelector('#submit');
 var roastSelection = document.querySelector('#roast-selection');
+var nameSelection = document.querySelector('#coffeeSearch');
 
-tbody.innerHTML = renderCoffees(coffees);
+coffeeDiv.innerHTML = renderCoffees(coffees);
 
 submitButton.addEventListener('click', updateCoffees);
