@@ -21,14 +21,17 @@ function renderCoffees(coffees) {
 function updateCoffees(e) {
     e.preventDefault(); // don't submit the form, we just want to update the data
     var selectedRoast = roastSelection.value;
+    // var searchInput = coffee.name.startsWith(userSearch.value);
+    // var coffeeArrLowerCase = coffees.toLowerCase();
     var filteredCoffees = []; //create empty array to hold the for each return value
     coffees.forEach(function(coffee) {
-        if (coffee.name.startsWith(userSearch) && coffee.roast === selectedRoast) {
+        if (coffee.name.startsWith(userSearch.value)  && coffee.roast === selectedRoast) {
             filteredCoffees.push(coffee);
         }
     });
     tbody.innerHTML = renderCoffees(filteredCoffees);
 }
+
 
 // from http://www.ncausa.org/About-Coffee/Coffee-Roasts-Guide
 var coffees = [
@@ -73,8 +76,10 @@ var tbody = document.querySelector('#coffees'); // creating tbody variable
 var submitButton = document.querySelector('#submit');
 var roastSelection = document.querySelector('#roast-selection');
 
+
 var userSearch = document.querySelector('#user-search');
 
 tbody.innerHTML = renderCoffees(coffees); //diplaying the output from the 'rendered coffee & rendered coffees' functions to html table
 
 submitButton.addEventListener('click', updateCoffees); //updates user selection list using the top three functions...
+userSearch.addEventListener('onchange', updateCoffees);
