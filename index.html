@@ -9,10 +9,11 @@
     <div class="container">
     <h1 id="title">Coffee!</h1>
 
+
         <div id="formContainer">
             <form id="form" class="formCard">
-                <label for="roast-selection"></label>
-                <select class="search" id="roast-selection">
+                <label for="roast-selection">Roast</label>
+                <select class="search roast" id="roast-selection">
                     <option>all</option>
                     <option>light</option>
                     <option>medium</option>
@@ -20,16 +21,33 @@
                 </select>
                 <label for="coffeeSearch">Coffee Name</label>
                 <input class="search" id="coffeeSearch" name="search" type="text">
-                <input class="search" id="submit" type="submit" />
+                <input class="search btn" id="submit" type="submit" />
             </form>
+
+            <h2 id="title-add">Add a Coffee</h2>
+            <form id="form2" class="formCard">
+                <label for="roast-selection">Roast</label>
+                <select class="search roast" id="roast-addition">
+                    <option>light</option>
+                    <option>medium</option>
+                    <option>dark</option>
+                </select>
+                <label for="coffee-addition">Name</label>
+                <input class="search" id="coffee-addition" name="search" type="text">
+                <input class="search btn" id="add" type="submit" />
+            </form>
+
         </div>
 
 
 
 
-<div id="coffees"><div>
+    <div id="coffees"></div>
+
+    </div>
+
 
     <script src="main.js"></script>
-    </div>
+
 </body>
 </html>

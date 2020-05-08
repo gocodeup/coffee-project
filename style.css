@@ -22,12 +22,24 @@ td, th {
 
 div .coffee {
     width: 50%;
+    height: 79.88px;
 }
 
 #title {
     grid-area: 1 / 2 / 2/ 4;
     text-align: center;
+    margin-top: 2.8em;
+    padding-bottom: 1.5em;
+    border-bottom: solid 1px #f1f1f1;
 }
+
+#title-add {
+    text-align: center;
+    padding-top: .8em;
+    border-top: solid 1px #f1f1f1;
+}
+
+
 
 #coffees {
     grid-area: 2 / 2 / 3/ 3;
@@ -37,6 +49,7 @@ div .coffee {
 
 #formContainer {
     grid-area: 2 / 3 / 3 / 4;
+    padding-left: 2em;
 }
 
 .formCard {
@@ -48,4 +61,33 @@ div .coffee {
 
 .search {
     width: 100%;
+    margin-bottom: 1em;
+    padding: .8em 0;
+    border-radius: 4px;
+    border: 2px solid #f1f1f1;
+}
+
+.roast {
+    position: relative;
+    width: 100%;
+    margin-bottom: 1em;
+    height: 34.59px;
+    border-radius: 4px;
+    border: 2px solid #f1f1f1;
+    background-color: white;
+}
+
+.btn {
+    margin-top: .5em;
+    background-color: #3D89CB;
+    color: white;
+    padding: 10px 0;
+    border-radius: 4px;
+    transition-duration: 0.4s;
+
+}
+
+.btn:hover {
+    background-color: #4CAF50; /* Green */
+    color: white;
 }
