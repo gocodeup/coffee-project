@@ -1,5 +1,6 @@
 "use strict"
 
+// ---------------DISPLAYS  TABLE------------------
 function renderCoffee(coffee) {
     var html = '<tr class="coffee">';
     html += '<td>' + coffee.id + '</td>';
@@ -9,25 +10,35 @@ function renderCoffee(coffee) {
 
     return html;
 }
-
+// -------------- DISPLAYS CONTENT-----------------=-----
 function renderCoffees(coffees) {
     var html = '';
-    for(var i = coffees.length - 1; i >= 0; i--) {
+    coffees.sort();
+    for(var i = 0 ; i <= coffees.length - 1; i++) {
         html += renderCoffee(coffees[i]);
     }
     return html;
 }
 
+
+
+// ----------------------SEARCH BAR----------------------
 function updateCoffees(e) {
-    e.preventDefault(); // don't submit the form, we just want to update the data
+      e.preventDefault(); // don't submit the form, we just want to update the data
     var selectedRoast = roastSelection.value;
     var filteredCoffees = [];
+    var search = document.getElementById('search');
     coffees.forEach(function(coffee) {
-        if (coffee.roast === selectedRoast) {
+        if (coffee.roast === selectedRoast && coffee.name.includes('<input "search" />')) {
             filteredCoffees.push(coffee);
         }
     });
     tbody.innerHTML = renderCoffees(filteredCoffees);
+    search.addEventListener("keydown", updateCoffees)
+}
+
+function searchCoffees(input) {
+
 }
 
 // from http://www.ncausa.org/About-Coffee/Coffee-Roasts-Guide
