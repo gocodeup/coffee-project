@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <title></title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
 </head>
 <body>
     <div class="container">
@@ -14,7 +15,7 @@
             <form id="form" class="formCard">
                 <label for="roast-selection">Roast</label>
                 <select class="search roast" id="roast-selection">
-                    <option>all</option>
+                    <option id="default-option">all</option>
                     <option>light</option>
                     <option>medium</option>
                     <option>dark</option>
@@ -34,7 +35,7 @@
                 </select>
                 <label for="coffee-addition">Name</label>
                 <input class="search" id="coffee-addition" name="search" type="text">
-                <input class="search btn" id="add" type="submit" />
+                <input class="search btn" id="add-btn" type="submit" />
             </form>
 
         </div>
