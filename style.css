@@ -1,6 +1,8 @@
 table {
     border-collapse: collapse;
     margin: 15px 0;
+    height: auto;
+    width: 50vw;
 
 
 }
@@ -14,6 +16,7 @@ table {
 .mainResults {
     column-count: 2;
 }
+
 
 a#header {
     display: flex;
@@ -62,5 +65,14 @@ select#roast-selection2 {
 
     /* Font settings */
     font-weight: bold;
+}
+
+
+/*td, th {*/
+/*    border: none;*/
+/*    padding: 5px 10px;*/
+/*}*/
+#coffees {
+    column-count: 2;
 }
 

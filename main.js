@@ -1,11 +1,11 @@
 "use strict"
 
 function renderCoffee(coffee) {
-    var html = '<tr class="coffee">';
-    html += '<div id =coffeeId' + coffee.id + '</div>';
+    var html = '<div class="coffee">';
+    html += '<div id="coffeeId">' + coffee.id + '</div>';
     html += '<div>' + coffee.name + '</div>';
     html += '<p>' + coffee.roast + '</p>';
-    html += '</tr>';
+    html += '</div>';
 
     return html;
 }
@@ -29,6 +29,38 @@ function updateCoffees(e) {
     });
     tbody.innerHTML = renderCoffees(filteredCoffees);
 }
+
+function sortData() {
+    // Read table body node.
+    var tableData = document.getElementById('coffeeResults').getElementsByTagName('tbody').item(0);
+
+    // Read table row nodes.
+    var rowData = tableData.getElementsByTagName('tr');
+
+    for(var i = 0; i < rowData.length - 1; i++) {
+        for(var j = 0; j < rowData.length - (i + 1); j++) {
+
+            //Swap row nodes if short condition matches
+            if(parseInt(rowData.item(j).getElementsByTagName('td').item(0).innerHTML) > parseInt(rowData.item(j+1).getElementsByTagName('td').item(0).innerHTML)) {
+                tableData.insertBefore(rowData.item(j+1),rowData.item(j));
+            }
+        }
+    }
+}
+
+// function sortTable (tbody, col, asc) { 
+//     var rows = tbody.rows, 
+//         rlen = rows.length, 
+//         arr = new Array(), 
+//         i, j, cells, clen; 
+    // fill the array with values from the table 
+    // for (i = 0; i < rlen; i++) { 
+    // cells = rows[i].cells; 
+    // clen = cells.length; 
+    // arr[i] = new Array(); 
+    // for (j = 0; j < clen; j++) { 
+    // arr[i][j] = cells[j].innerHTML; 
+    // }
 
 // from http://www.ncausa.org/About-Coffee/Coffee-Roasts-Guide
 var coffees = [
@@ -55,4 +87,12 @@ var roastSelection = document.querySelector('#roast-selection');
 tbody.innerHTML = renderCoffees(coffees);
 
 submitButton.addEventListener('click', updateCoffees);
+
+
+var coffeeName = {coffees};
+    document.getElementById("#coffees").innerHTML = coffees.name;
+
+var coffeeRoast = coffees.roast;
+    document.getElementById("#coffees").innerHTML = coffees.roast;
+
 
