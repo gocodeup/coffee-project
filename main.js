@@ -12,14 +12,35 @@
 //     return html;
 // }
 
+// function renderCoffee(coffee) {
+//     var html = '<div class="coffee d-inline-flex m-2 p-3 flex-column">';
+//     html += '<h3>' + coffee.name + '</h3>';
+//     html += '<p class="d-inline-flex m-3">' + coffee.roast + '</p>';
+//     html += '</div>';
+//
+//     return html;
+// }
+
 function renderCoffee(coffee) {
-    var html = '<div class="coffee">';
-    html += '<h3>' + coffee.name + '</h3>';
-    html += '<p>' + coffee.roast + '</p>';
+    var html = '<div class="card d-inline-flex m-3">';
+    html += '<div class=\'card-header d-flex justify-content-center\'>' + coffee.name + '</div>';
+    html += '<div class="card-body d-flex justify-content-center">' + coffee.roast + '</div>';
     html += '</div>';
 
     return html;
 }
+
+// <div class="card">
+//     <div class="card-header">
+//     Quote
+//     </div>
+//     <div class="card-body">
+//     <blockquote class="blockquote mb-0">
+//     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+// <footer class="blockquote-footer">Someone famous in <cite title="Source Title">Source Title</cite></footer>
+// </blockquote>
+// </div>
+// </div>
 
 
 //pulling coffee info from renderCoffee function in descending order (from bottom up)
@@ -34,10 +55,7 @@ function renderCoffees(coffees) {
 //add coffee to coffees object
 function updateCoffees(e) {
     e.preventDefault(); // don't submit the form, we just want to update the data
-    var selectedRoast = roastSelection.value;
-    console.log("hello");
-    console.log(selectedRoast);
-
+    var selectedRoast = roastSelection.value.toLowerCase();
 
     var filteredCoffees = [];
     coffees.forEach(function(coffee) {
