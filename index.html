@@ -7,20 +7,20 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body class="container">
-    <div id="header-div">
-        <h1 class="text-center p-3 border-bottom border-secondary">Coffee!</h1>
+    <div id="header-div" class="shadow rounded">
+        <h1 class="coffee-header text-center text-white mt-3 mb-3 ml-0 mr-0 p-0 align-items-center">Coffee!</h1>
     </div>
 
     <div id="search-form">
-        <form>
-            <label for="roast-selection">Roast</label>
+        <form class="d-flex flex-column">
+            <label for="roast-selection" class="font-weight-bold">Roast</label>
             <select id="roast-selection" onchange="updateCoffees(this)">
                 <option>all</option>
                 <option>light</option>
                 <option>medium</option>
                 <option>dark</option>
             </select>
-            <label for="cname">Coffee Name</label>
+            <label for="cname" class="mt-2 font-weight-bold">Coffee Name</label>
             <input type="text" id="cname" name="cname" onkeyup="updateCoffees(this)">
         </form>
     </div>
@@ -30,17 +30,17 @@
     </div>
 
     <div id="input-form">
-        <h2 class="text-center">Add a Coffee</h2>
-        <form>
-            <label for="coffee-input"></label>
+        <h2 class="text-center" id="coffee-maker-header">Brew Your Own</h2>
+        <form class="d-flex flex-column">
+            <label for="coffee-input" class="font-weight-bold">Roast</label>
             <select id="coffee-input">
                 <option>light</option>
                 <option>medium</option>
                 <option>dark</option>
             </select>
-            <label for="cinputname">Coffee Name:</label>
+            <label for="cinputname" class="mt-2 font-weight-bold">Coffee Name:</label>
             <input type="text" id="cinputname" name="cinputname">
-            <button type="submit" id="coffee-button">Add Coffee</button>
+            <button type="submit" id="coffee-button" class="btn mt-3 rounded shadow-lg">BREW IT!</button>
         </form>
     </div>
 

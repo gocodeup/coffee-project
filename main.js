@@ -2,9 +2,9 @@
 
 // creates divs for each object in coffees array
 function renderCoffee(coffee) {
-    var html = '<div class="coffee text-wrap p-1 col-6">';
-    html += '<h5>' + coffee.name + '</h5>';
-    html += '<p>' + coffee.roast + '</p>';
+    var html = '<div class="coffee text-wrap p-1 col-6 d-flex inline-flex">';
+    html += '<h5 class="mr-1" id="coffee-name">' + coffee.name + '</h5>';
+    html += '<p class="ml-1" id="coffee-roast">' + coffee.roast + '</p>';
     html += '</div>';
     return html;
 }

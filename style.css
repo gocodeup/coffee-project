@@ -1,13 +1,22 @@
+:root {
+    --main-text-font: 'Roboto', sans-serif;
+}
+
 body {
     display: grid;
     width: 100%;
     height: 100%;
     grid-template-columns: repeat(10, 100px);
     grid-template-rows: repeat(10, 100px);
+    grid-row-gap: 20px;
+    font-family: var(--main-text-font);
 }
 
 #header-div {
     grid-area: 1 / 1 / 1 / 11;
+    background-image: url("img/coffee-beans.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 #search-form {
@@ -15,7 +24,7 @@ body {
 }
 
 #input-form {
-    grid-area: 3 / 6 / 4 / 11;
+    grid-area: 4 / 6 / 5 / 11;
 }
 
 #coffee-section {
@@ -24,3 +33,36 @@ body {
     width: 600px;
 }
 
+.coffee-header {
+    background-color: rgba(128, 128, 128, 0.3);
+    z-index: 1000;
+}
+
+#coffee-button {
+    color: #917369;
+    background-color: #3F3230;
+    border: #845041 solid 2px;
+}
+
+#coffee-name {
+    color: #845041;
+}
+
+#coffee-roast {
+    color: #6F6262;
+}
+#coffee-maker-header {
+    color: #573329;
+}
+
+label {
+    color: #573329;
+}
+
+select {
+    color: #6F6262;
+}
+
+input {
+    color: #845041;
+}
