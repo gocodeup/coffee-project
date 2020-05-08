@@ -6,40 +6,59 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Coffee!</h1>
-
+<h1><a id="header"> Coffee!</a></h1>
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
     <form>
+        <h3>Roast</h3>
         <label for="roast-selection"></label>
         <select id="roast-selection">
             <option>light</option>
             <option>medium</option>
             <option>dark</option>
         </select>
+        <h3>Coffee Name</h3>
+        <input type="text" id="myInput2" placeholder="Have a new coffee idea?">
         <input id="submit" type="submit" />
+
     </form>
 
     <table id="coffeeResults">
-<!--        <thead>-->
-<!--            <tr>-->
-<!--&lt;!&ndash;                <th>ID</th>&ndash;&gt;-->
+        <thead>
+            <tr>
+<!--                <th>ID</th>-->
 <!--                <th></th>-->
 <!--                <th></th>-->
-<!--            </tr>-->
-<!--            <tr>-->
-<!--            <tr>-->
-<!--                <td>-->
+            </tr>
+            <tr>
+            <tr>
+                <td>
 <!--                    <div id="coffeesName">-->
 
-<!--                    </div>-->
-<!--                </td>-->
-<!--            </tr>-->
-<!--        </thead>-->
+                    </div>
+                </td>
+            </tr>
+        </thead>
 
         <tbody id="coffees"></tbody>
-        <div id="mainResults">
-            <div id=“coffees”></div></div>
+<!--        <div id="mainResults">-->
+<!--            <div id=“coffees”></div></div>-->
 
     </table>
+            <div id = "newCoffee">
+            <h3>Roast</h3>
+                <label for="roast-selection"></label>
+                <select id="roast-selection2">
+                    <option>light</option>
+                    <option>medium</option>
+                    <option>dark</option>
+                </select>
+
+                <h3>Name</h3>
+                <input type="text" id="myInput3" placeholder="Have a new coffee idea?">
+                <input id="submitNewCoffee" type="submit" />
+            </div>
 <!--
 <table>
     <thead>
@@ -54,5 +73,9 @@
 -->
 
     <script src="main.js"></script>
+
+        </div>
+    </div>
+</div>
 </body>
 </html>

@@ -5,15 +5,62 @@ table {
 
 }
 
-/*.p {*/
-/*    text-decoration-style: solid;*/
-/*    text-decoration-color: lightgrey;*/
+.container {
+
+}
+
+
 
 .mainResults {
     column-count: 2;
 }
 
-/*td, th {*/
-/*    border: none;*/
-/*    padding: 5px 10px;*/
-/*}*/
+a#header {
+    display: flex;
+    flex: auto;
+    justify-content: center;
+    font-family: sans-serif;
+    font-size: 3em;
+}
+#coffees {
+    display: flex;
+    background-color: goldenrod;
+}
+
+form {
+    display: flex;
+    justify-content: right;
+}
+div#newCoffee {
+    display: flex;
+    justify-content: right;
+}
+select#roast-selection {
+    width: 200px;
+    padding: 10px;
+
+
+    /* Styles */
+    background: white;
+    color: black;
+    outline: none;
+    cursor: pointer;
+
+    /* Font settings */
+    font-weight: bold;
+}
+select#roast-selection2 {
+    width: 200px;
+    padding: 10px;
+
+
+    /* Styles */
+    background: white;
+    color: black;
+    outline: none;
+    cursor: pointer;
+
+    /* Font settings */
+    font-weight: bold;
+}
+
