@@ -5,7 +5,7 @@
 
 .container {
     display: inline-grid;
-    grid-template-columns: 1em 1fr 1fr 1em;
+    grid-template-columns: 10% 40% 40% 10%;
     grid-template-rows: 150px auto;
     width: 100%;
 }
@@ -20,25 +20,32 @@ td, th {
     padding: 5px 10px;
 }
 
+div .coffee {
+    width: 50%;
+}
+
 #title {
     grid-area: 1 / 2 / 2/ 4;
     text-align: center;
 }
 
-#table {
+#coffees {
     grid-area: 2 / 2 / 3/ 3;
+    display: flex;
+    flex-wrap: wrap;
 }
 
-#form {
+#formContainer {
     grid-area: 2 / 3 / 3 / 4;
+}
+
+.formCard {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    align-items: center;
+    align-items: flex-start;
 }
 
-
-
-select .search {
-
+.search {
+    width: 100%;
 }
