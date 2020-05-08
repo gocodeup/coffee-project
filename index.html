@@ -8,39 +8,41 @@
 </head>
 <body>
     <h1>Coffee!</h1>
-    <hr>
+<!--    <hr>-->
     <main>
-    <form>
-        <label for="roast-selection" class="roast">Roast</label>
-        <br>
-        <select id="roast-selection">
-            <option>light</option>
-            <option>medium</option>
-            <option>dark</option>
-        </select>
-        <br>
-        <label for="coffee-name">Coffee Name</label>
-        <br>
-        <input type="text" id="coffee-name" name="coffee-name">
-        <br>
-        <input id="submit" value="Submit" type="submit" />
-        <h2>Add a Coffee</h2>
-        <label for="add-roast-selection">Roast</label>
-        <br>
-        <select id="add-roast-selection">
-            <option>light</option>
-            <option>medium</option>
-            <option>dark</option>
-        </select>
-        <br>
-        <label for="add-name">Name</label>
-        <br>
-        <input type="text" id="add-name" name="add-name">
-        <br>
-        <input id="second-submit" value="Submit" type="submit" />
-    </form>
-
-    <div class="container" id="coffees"></div>
+        <form>
+            <label for="roast-selection" class="roast">Roast</label>
+            <br>
+            <select id="roast-selection">
+                <option>all</option>
+                <option>light</option>
+                <option>medium</option>
+                <option>dark</option>
+            </select>
+            <br>
+            <label for="coffee-name">Coffee Name</label>
+            <br>
+            <input type="text" id="coffee-name" name="coffee-name">
+            <br>
+            <input id="submit" value="Submit" type="submit" />
+            <h2>Add a Coffee</h2>
+            <label for="add-roast-selection">Roast</label>
+            <br>
+            <select id="add-roast-selection">
+                <option>light</option>
+                <option>medium</option>
+                <option>dark</option>
+            </select>
+            <br>
+            <label for="add-name">Name</label>
+            <br>
+            <input type="text" id="add-name" name="add-name">
+            <br>
+            <input id="second-submit" value="Submit" type="submit" />
+        </form>
+        <div class="wrapper">
+            <div class="container" id="coffees"></div>
+        </div>
     </main>
 <!--    <div class="rTable"-->
 <!--        <div class="rTableHead">-->
