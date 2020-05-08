@@ -1,3 +1,10 @@
+/*
+coffees styling
+search bar for new coffee
+search on top needs work right, actually give coffees results
+background if time, jumbotron, behind coffee heading
+*/
+
 body {
 
 }
@@ -10,8 +17,8 @@ main {
     margin: 15px 0;
     height: auto;
     width: 50vw;
-    display: flex;
-    flex-wrap: wrap;
+    /*display: flex;*/
+
 
 }
 
@@ -21,7 +28,7 @@ main {
 }
 
 .container {
-    display: flex;
+    /*display: flex;*/
     width: 50vw;
 
 }
@@ -40,12 +47,7 @@ a#header {
     font-family: sans-serif;
     font-size: 3em;
 }
-#coffees {
-    display: flex;
-    background-color: goldenrod;
-    width: 50vw;
 
-}
 
 form {
     display: flex;
