@@ -32,16 +32,12 @@ hr {
     border: .5px solid lightgrey;
 }
 
-section {
+form {
     grid-area: right;
     background-color: #A37F5B;
-}
-
-form {
-
-    margin-left: 3em;
-
     border-radius: 10px;
+    opacity: .95;
+    margin-left: 3em;
     padding: 1em 0 1em 6em;
     /*display: flex;*/
     /*flex-direction: column;*/
@@ -61,6 +57,7 @@ p {
     /*justify-content: center;*/
     padding-top: 20px;
     padding-left: 30px;
+    opacity: .95;
 }
 
 .container {
