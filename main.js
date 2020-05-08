@@ -13,8 +13,8 @@
 //NEW RENDER COFFEE
 function renderCoffee(coffee) {
     var html = '<div class="coffee" style="display:flex;">';
-    html += '<h1 style="display: flex;">' + coffee.name + '</h1>';
-    html += '<p style="padding-bottom: 11px; padding-left: 10px; display:flex; align-items: flex-end;">' + coffee.roast + '</p>';
+    html += '<h1 class="coffee-title" style="display: flex;">' + coffee.name + '</h1>';
+    html += '<p style="color: #B2B2B2; padding-bottom: 11px; padding-left: 10px; display:flex; align-items: flex-end;">' + coffee.roast + '</p>';
     html += '</div>';
 
     return html;
@@ -29,6 +29,7 @@ function renderCoffees(coffees) {
 }
 
 function updateCoffees(e) {
+    console.log(e);
     e.preventDefault(); // don't submit the form, we just want to update the data
     var filteredCoffees = [];
     coffees.forEach(function(coffee) {
@@ -48,6 +49,28 @@ function updateCoffees(e) {
         }
     });
     coffeeDiv.innerHTML = renderCoffees(filteredCoffees);
+}
+
+function addCoffee(e){
+    e.preventDefault();
+    var addedRoast = roastAddition.value;
+    var addedCoffee = nameAddition.value.toLowerCase();
+
+    addedCoffee = addedCoffee.split(" ");
+
+    addedCoffee.forEach(function(group, ind) {
+        addedCoffee[ind] = group.replace(group.substring(0, 1), group.substring(0, 1).toUpperCase());
+
+    });
+    addedCoffee = addedCoffee.join(" ");
+
+    var coffeeObject = {id: coffees.length + 1, name: addedCoffee, roast: addedRoast};
+    // updateCoffees();
+    coffees.push(coffeeObject);
+    coffeeDiv.innerHTML = renderCoffees(coffees);
+    roastSelection.value = defaultRoast.value;
+    nameSelection.value = "";
+    console.log(coffeeObject)
 }
 
 // from http://www.ncausa.org/About-Coffee/Coffee-Roasts-Guide
@@ -72,7 +95,12 @@ var coffeeDiv = document.querySelector('#coffees');
 var submitButton = document.querySelector('#submit');
 var roastSelection = document.querySelector('#roast-selection');
 var nameSelection = document.querySelector('#coffeeSearch');
+var addButton = document.querySelector('#add-btn');
+var roastAddition = document.querySelector('#roast-addition');
+var nameAddition = document.querySelector('#coffee-addition');
+var defaultRoast = document.querySelector("#default-option");
 
 coffeeDiv.innerHTML = renderCoffees(coffees);
 
+addButton.addEventListener('click', addCoffee)
 submitButton.addEventListener('click', updateCoffees);

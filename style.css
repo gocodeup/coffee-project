@@ -1,12 +1,18 @@
 
 * {
     box-sizing: border-box;
+    /*font-family: 'Roboto', sans-serif;*/
+    font-family: "Helvetica Neue";
+}
+
+body {
+    /*font-family: "Roboto Light";*/
 }
 
 .container {
     display: inline-grid;
     grid-template-columns: 10% 40% 40% 10%;
-    grid-template-rows: 150px auto;
+    grid-template-rows: 100px auto;
     width: 100%;
 }
 
@@ -28,15 +34,15 @@ div .coffee {
 #title {
     grid-area: 1 / 2 / 2/ 4;
     text-align: center;
-    margin-top: 2.8em;
-    padding-bottom: 1.5em;
-    border-bottom: solid 1px #f1f1f1;
+    margin-top: .8em;
+    padding-bottom: 1.8em;
+    border-bottom: solid 1px #F1F1F1;
 }
 
 #title-add {
     text-align: center;
     padding-top: .8em;
-    border-top: solid 1px #f1f1f1;
+    border-top: solid 1px #F1F1F1;
 }
 
 
@@ -45,6 +51,10 @@ div .coffee {
     grid-area: 2 / 2 / 3/ 3;
     display: flex;
     flex-wrap: wrap;
+}
+
+.coffee-title {
+    font-weight: normal;
 }
 
 #formContainer {
@@ -62,19 +72,17 @@ div .coffee {
 .search {
     width: 100%;
     margin-bottom: 1em;
-    padding: .8em 0;
+    padding: .8em;
     border-radius: 4px;
-    border: 2px solid #f1f1f1;
+    border: 1px solid #E0E0E0;
 }
 
 .roast {
     position: relative;
     width: 100%;
-    margin-bottom: 1em;
     height: 34.59px;
-    border-radius: 4px;
-    border: 2px solid #f1f1f1;
     background-color: white;
+    text-align: center;
 }
 
 .btn {
@@ -83,7 +91,9 @@ div .coffee {
     color: white;
     padding: 10px 0;
     border-radius: 4px;
+    border: 0;
     transition-duration: 0.4s;
+    font-size: .8em;
 
 }
 
