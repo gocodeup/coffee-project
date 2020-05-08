@@ -2,7 +2,7 @@
 
 function renderCoffee(coffee) {
     var html = '<div class="coffee">';
-    html += '<div id="coffeeId"> + coffee.id + </div>;
+    html += '<div id="coffeeId">' + coffee.id + '</div>';
     html += '<div>' + coffee.name + '</div>';
     html += '<p>' + coffee.roast + '</p>';
     html += '</div>';
@@ -88,7 +88,6 @@ tbody.innerHTML = renderCoffees(coffees);
 
 submitButton.addEventListener('click', updateCoffees);
 
-sortData(coffees.id);
 
 var coffeeName = {coffees};
     document.getElementById("#coffees").innerHTML = coffees.name;
@@ -96,6 +95,4 @@ var coffeeName = {coffees};
 var coffeeRoast = coffees.roast;
     document.getElementById("#coffees").innerHTML = coffees.roast;
 
-coffeeName.innerHTML = coffees.name;
 
-coffeeRoast.innerHTML = coffees.roast;
