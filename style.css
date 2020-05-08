@@ -1,13 +1,35 @@
-table {
+/*
+coffees styling
+search bar for new coffee
+search on top needs work right, actually give coffees results
+background if time, jumbotron, behind coffee heading
+*/
+
+body {
+
+}
+
+#flexBox {
+    display: flex;
+}
+main {
     border-collapse: collapse;
     margin: 15px 0;
     height: auto;
     width: 50vw;
+    /*display: flex;*/
 
 
 }
 
+.coffeeTable {
+    display: flex;
+    width: 50vw;
+}
+
 .container {
+    /*display: flex;*/
+    width: 50vw;
 
 }
 
@@ -25,14 +47,13 @@ a#header {
     font-family: sans-serif;
     font-size: 3em;
 }
-#coffees {
-    display: flex;
-    background-color: goldenrod;
-}
+
 
 form {
     display: flex;
     justify-content: right;
+    width: 50vw;
+    flex-wrap: wrap;
 }
 div#newCoffee {
     display: flex;
@@ -57,7 +78,7 @@ select#roast-selection2 {
     padding: 10px;
 
 
-    /* Styles */
+     /* Styles */
     background: white;
     color: black;
     outline: none;
@@ -76,3 +97,8 @@ select#roast-selection2 {
     column-count: 2;
 }
 
+.coffeeTable {
+    display: flex;
+    width: 50vw;
+    background-color: yellow;
+}

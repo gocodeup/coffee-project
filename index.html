@@ -6,12 +6,24 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
 <h1><a id="header"> Coffee!</a></h1>
-<div class="container">
-    <div class="row">
-        <div class="col-md-6">
-        </div>
-        <h1> im great</h1>
+<div id="flexBox">
+    <div class="container">
+<!--    <div class="row">-->
+<!--        <div id="coffeeTable">-->
+            <main id="coffees">
+                <heading id="coffeeName">
+                <!--  coffee name  -->
+                </heading>
+                <p id="coffeeRoast">
+                <!--  coffee roast -->
+                </p>
+            </main>
+
+        <!--how to refer an object property within an array-->
+<!--        </div>-->
+    </div>
     <form>
         <h3>Roast</h3>
         <label for="roast-selection"></label>
@@ -23,34 +35,16 @@
         <h3>Coffee Name</h3>
         <input type="text" id="myInput2" placeholder="Have a new coffee idea?">
         <input id="submit" type="submit" />
-
-    </form>
-
-    <table id="coffeeResults">
-
-    <thead></thead>
-        <tbody id="coffees"></tbody>
-<tfoot></tfoot>
-    </table>
-        <div id = "newCoffee"></div>
-            <h3>Roast</h3>
-                <label for="roast-selection"></label>
-                <select id="roast-selection2">
-                    <option>light</option>
-                    <option>medium</option>
-                    <option>dark</option>
-                </select>
-            <tr>
-                <div>
-                    <p>
-
-                    </p>
-                </div>
-            </tr>
+    <div id = "newCoffee">
+        <h3>Roast</h3>
+        <label for="roast-selection"></label>
+        <select id="roast-selection2">
+            <option>light</option>
+            <option>medium</option>
+            <option>dark</option>
+        </select>
     </div>
-
-    </table>
-
+    </form>
 </div>
 <script src = "main.js"></script>
 </body>
