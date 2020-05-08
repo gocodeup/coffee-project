@@ -10,48 +10,56 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
           integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Oswald&display=swap" rel="stylesheet">
 
 
 </head>
 <body>
-<h1 class="d-flex justify-content-center m-3">Coffee!</h1>
+<h1 class="d-flex justify-content-center m-3 display-3 coffee-header">Coffee!</h1>
 <hr>
 <div class="container-fluid">
     <div class="row">
-        <div class="col-6">
-            <form>
+        <div class="col-6 order-last">
+            <div class="container">
+                <form>
+                    <div class="form-group">
+                        <label for="roast-selection"></label>
+                            <select class="form-control m-3" id="roast-selection">
+                                <option id="all">All</option>
+                                <option>Light</option>
+                                <option>Medium</option>
+                                <option>Dark</option>
+                            </select>
+                        <button type="submit" id='submit' class="btn btn-block m-3">Submit</button>
+<!--                        <input id="submit" type="submit"/>-->
+                    </div>
+                </form>
+            </div>
 
-                <label for="roast-selection"></label>
-                <select id="roast-selection">
-                    <option id="all">all</option>
-                    <option>light</option>
-                    <option>medium</option>
-                    <option>dark</option>
-                </select>
-                <input id="submit" type="submit"/>
-            </form>
+<!--            <div class="form-group">-->
+<!--                <label for="exampleFormControlSelect2">Example multiple select</label>-->
+<!--                <select multiple class="form-control" id="exampleFormControlSelect2">-->
+<!--                    <option>1</option>-->
+<!--                    <option>2</option>-->
+<!--                    <option>3</option>-->
+<!--                    <option>4</option>-->
+<!--                    <option>5</option>-->
+<!--                </select>-->
+<!--            </div>-->
 
-            <form>
-                <label for="search-bar">Search Coffee Name Here</label>
-                <input id="search-bar" type="search" placeholder="Search Coffees">
-                <input type="submit" id="submit2">
-            </form>
+            <div class="container">
+                <form>
+                    <div class="form-group">
+                        <label for="search-bar" class="d-flex justify-content-center m-3">Search Coffee Name Here</label>
+                        <input id="search-bar" class="form-control m-3" type="search" placeholder="Search Coffees">
+<!--                        <input type="submit" id="submit2">-->
+                    </div>
+                </form>
+            </div>
         </div>
-
-
-
-        <!--    <table>-->
-        <!--        <thead>-->
-        <!--            <tr>-->
-        <!--                <th>ID</th>-->
-        <!--                <th>NAME</th>-->
-        <!--                <th>ROAST</th>-->
-        <!--            </tr>-->
-        <!--        </thead>-->
-        <!--        <tbody id="coffees"></tbody>-->
-        <!--    </table>-->
-        div
-        <div class="col-3" id="coffees"></div>
+        <div class="col-6 order-first">
+            <div id="coffees" class=""></div>
+        </div>
 
     </div>
 </div>
