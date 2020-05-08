@@ -26,6 +26,12 @@ td, th {
 
 h1 {
     text-align: center;
+    background-color: #A37F5B;
+    width: 200px;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 10px;
+    opacity: .95;
 }
 
 hr {

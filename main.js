@@ -46,7 +46,7 @@ function updateCoffees(e) {
 }
 
 function findCoffee(input){
-    // input.preventDefault(); // don't submit the form, we just want to update the data
+    input.preventDefault(); // don't submit the form, we just want to update the data
     var selectedCoffee = searchCoffee.value.toLowerCase();
     var filteredCoffees = [];
     coffees.forEach(function(coffee) {
@@ -59,12 +59,13 @@ function findCoffee(input){
 
 // ==== Adds a new coffee and roast object =====
 
-function newCoffee() {
+function newCoffee(input) {
+    input.preventDefault();
     var newArr = [];
     var coffeeObj = {
         name: addCoffee.value,
         roast: roastSelectionTwo.value
-    }
+    };
     coffees.push(coffeeObj);
     tbody.innerHTML = renderCoffees(coffees);
 }
@@ -93,15 +94,15 @@ var tbody = document.querySelector('#coffees');
 tbody.innerHTML = renderCoffees(coffees);
 var submitButton = document.querySelector('#submit');
 var roastSelection = document.querySelector('#roast-selection');
-var addCoffee = document.querySelector('#add-name');
 submitButton.addEventListener('click', updateCoffees);
 searchCoffee.addEventListener('keyup', findCoffee);
 
-
+// This section is for adding a new coffee
+var addCoffee = document.querySelector('#add-name');
 var secondSubmitButton = document.getElementById('second-submit');
 var roastSelectionTwo = document.querySelector('#add-roast-selection');
 secondSubmitButton.addEventListener('click', newCoffee);
-
+console.log(coffees);
 // console.log(roastSelection.value);
 
 // console.log(newCoffee('San Antonio', 'Medium', coffees));
