@@ -89,10 +89,33 @@ main.innerHTML = renderCoffees(coffees);
 submitButton.addEventListener('click', updateCoffees);
 
 
-var coffeeName = {coffees};
-    document.getElementById("#coffees").innerHTML = coffees.name;
+// var coffeeName = coffees.name;
+//     document.getElementById("coffees").innerHTML = coffees.name;
+//
+// var coffeeRoast = coffees.roast;
+//     document.getElementById("coffees").innerHTML = coffees.roast;
+/*
+* loop through the list of coffees to build a string of html,
+* then put html whole long string as inner html for element with id of coffees
+* */
 
-var coffeeRoast = coffees.roast;
-    document.getElementById("#coffees").innerHTML = coffees.roast;
+//var output etc coffeesHTML all data going into doc this will be responsible
+//loop cont to concat onto string
+
+var output = '';
+for (var i = 0; i < coffees.length; i++) {
+ // console.log(coffees[i].name + " " + coffees[i].roast);
+    output += '<div>' + coffees[i].name  + '</div>';
+}
+console.log(output);
+document.getElementById('coffees').innerHTML = output;
+
+
+//index reference
+//wrap up to concat
+//at end addTo
+//output var will help concat the HTML string
+
+
 
 
