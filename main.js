@@ -57,7 +57,7 @@ function findCoffee(input){
     tbody.innerHTML = renderCoffees(filteredCoffees);
 }
 
-// ==== Adds a new coffee and roast object
+// ==== Adds a new coffee and roast object =====
 
 function newCoffee() {
     var newArr = [];
