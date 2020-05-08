@@ -35,14 +35,24 @@ function renderCoffees(coffees) {
 function updateCoffees(e) {
     e.preventDefault(); // don't submit the form, we just want to update the data
     var selectedRoast = roastSelection.value;
+    console.log("hello");
+    console.log(selectedRoast);
+
+
     var filteredCoffees = [];
     coffees.forEach(function(coffee) {
         if (coffee.roast === selectedRoast) {
+            filteredCoffees.push(coffee);
+        } else if(selectedRoast === "all") {
             filteredCoffees.push(coffee);
         }
     });
     tbody.innerHTML = renderCoffees(filteredCoffees);
 }
+
+
+// for all coffees to display.
+// document.getElementById("all");
 
 //this is the input from search bar in form
 const searchBar = document.getElementById("search-bar");
