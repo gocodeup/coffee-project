@@ -12,7 +12,7 @@ body {
 .container {
     display: inline-grid;
     grid-template-columns: 10% 40% 40% 10%;
-    grid-template-rows: 100px auto;
+    grid-template-rows: 100px 100px auto;
     width: 100%;
 }
 
@@ -29,6 +29,7 @@ td, th {
 div .coffee {
     width: 50%;
     height: 79.88px;
+
 }
 
 #title {
@@ -51,6 +52,8 @@ div .coffee {
     grid-area: 2 / 2 / 3/ 3;
     display: flex;
     flex-wrap: wrap;
+    flex-direction: row;
+
 }
 
 .coffee-title {

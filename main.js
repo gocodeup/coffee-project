@@ -42,6 +42,9 @@ function updateCoffees(e) {
         if(selectedName.length < 1) {
             selectedName = coffeeName;
         }
+
+
+
         // if(coffeeName.indexOf(selectedName) != -1)
         //     console.log(coffeeName);
         if (coffee.roast === selectedRoast && coffeeName.indexOf(selectedName) != -1) {
@@ -51,8 +54,35 @@ function updateCoffees(e) {
     coffeeDiv.innerHTML = renderCoffees(filteredCoffees);
 }
 
-function addCoffee(e){
-    e.preventDefault();
+
+        //====== LIVE SEARCH CONDITION ======
+// id="myInput" onkeyup="myFunction() - Add this to HTML
+//         function myFunction() {
+//             var input = document.getElementById("myInput");
+//             var filter = input.value.toUpperCase();
+//             for (var i = 0; i < filteredCoffees.length; i++) {
+//                 if (coffee.name.indexOf(filter)) {
+//                     coffeeDiv.innerHTML.style.display = "";
+//                 } else {
+//                     coffeeDiv.innerHTML.style.display = "none";
+//                 }
+//             }
+//         }
+        // selectedName.addEventListener("keyup", e => {
+        //     var searchString = e.target.value;
+        //     // console.log(searchString);
+        //
+        //     const filteredCharacters = coffeeName.filter(character => {
+        //         return (coffeeName.includes(searchString));
+        //     });
+        //     coffeeDiv.innerHTML = renderCoffees(filteredCoffees);
+        // });
+
+        //==========
+
+
+
+function addCoffee(){
     var addedRoast = roastAddition.value;
     var addedCoffee = nameAddition.value.toLowerCase();
 
@@ -71,6 +101,15 @@ function addCoffee(e){
     roastSelection.value = defaultRoast.value;
     nameSelection.value = "";
     console.log(coffeeObject)
+}
+
+function checkForEmpty(e){
+    e.preventDefault();
+    if(nameAddition.value === ""){
+        alert("Must Enter Coffee Name");
+    } else{
+        addCoffee();
+    }
 }
 
 // from http://www.ncausa.org/About-Coffee/Coffee-Roasts-Guide
@@ -102,5 +141,8 @@ var defaultRoast = document.querySelector("#default-option");
 
 coffeeDiv.innerHTML = renderCoffees(coffees);
 
-addButton.addEventListener('click', addCoffee)
-submitButton.addEventListener('click', updateCoffees);
+roastSelection.addEventListener('change', updateCoffees);
+nameSelection.addEventListener('input', updateCoffees);
+addButton.addEventListener('click', checkForEmpty);
+submitButton.addEventListener('click',  updateCoffees );
+
