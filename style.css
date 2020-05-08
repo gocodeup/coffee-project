@@ -34,8 +34,28 @@ form {
 }
 
 .coffee {
-    border: 10px outset slategrey;
+    border: 10px outset #7c5402;
     display: flex;
-    margin-right: 100px;
+    margin-right: 400px;
+    margin-top: 20px;
+}
+
+.roast-name {
+    margin-left: auto;
+}
+.search {
+    width: 94%;
+}
+
+input[type=submit] {
+    width: 27%;
+}
+
+input[type=text] {
+    width: 30%;
+}
+
+.roast-selection{
+    width: 30%;
 }
 

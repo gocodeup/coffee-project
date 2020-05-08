@@ -1,34 +1,34 @@
-"use strict"
+"use strict";
 
 // ---------------DISPLAYS  TABLE------------------
 function renderCoffee(coffee) {
     var html = '<div class="coffee">';
     html += '<p>' + coffee.name + '</p>';
-    html += '<p class="roast-name">' +  coffee.roast + '</p>';
+    html += '<p class="roast-name">' + coffee.roast + '</p>';
     html += '</div>';
 
     return html;
 }
+
 // -------------- DISPLAYS CONTENT-----------------=-----
 function renderCoffees(coffees) {
     var html = '';
     coffees.sort();
-    for(var i = 0 ; i <= coffees.length - 1; i++) {
+    for (var i = 0; i <= coffees.length - 1; i++) {
         html += renderCoffee(coffees[i]);
     }
     return html;
 }
 
 
-
 // ----------------------SEARCH BAR----------------------
 var search = document.getElementById('search');
 
 function updateCoffees(e) {
-      e.preventDefault(); // don't submit the form, we just want to update the data
+    e.preventDefault(); // don't submit the form, we just want to update the data
     var selectedRoast = roastSelection.value;
     var filteredCoffees = [];
-    coffees.forEach(function(coffee) {
+    coffees.forEach(function (coffee) {
         if (coffee.roast === selectedRoast) {
             if (search.value === '') {
                 filteredCoffees.push(coffee);
@@ -39,6 +39,7 @@ function updateCoffees(e) {
     });
     tbody.innerHTML = renderCoffees(filteredCoffees);
 }
+
 search.addEventListener("keyup", updateCoffees);
 
 function searchCoffees(input) {
