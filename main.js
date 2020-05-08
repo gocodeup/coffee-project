@@ -2,11 +2,10 @@
 
 // ---------------DISPLAYS  TABLE------------------
 function renderCoffee(coffee) {
-    var html = '<tr class="coffee">';
-    html += '<td>' + coffee.id + '</td>';
-    html += '<td>' + coffee.name + '</td>';
-    html += '<td>' + coffee.roast + '</td>';
-    html += '</tr>';
+    var html = '<div class="coffee">';
+    html += '<p>' + coffee.name + '</p>';
+    html += '<p>' + coffee.roast + '</p>';
+    html += '</div>';
 
     return html;
 }
@@ -23,19 +22,24 @@ function renderCoffees(coffees) {
 
 
 // ----------------------SEARCH BAR----------------------
+var search = document.getElementById('search');
+
 function updateCoffees(e) {
       e.preventDefault(); // don't submit the form, we just want to update the data
     var selectedRoast = roastSelection.value;
     var filteredCoffees = [];
-    var search = document.getElementById('search');
     coffees.forEach(function(coffee) {
-        if (coffee.roast === selectedRoast && coffee.name.includes('<input "search" />')) {
-            filteredCoffees.push(coffee);
+        if (coffee.roast === selectedRoast) {
+            if (search.value === '') {
+                filteredCoffees.push(coffee);
+            } else if (coffee.name.toLowerCase().includes(search.value.toLowerCase())) {
+                filteredCoffees.push(coffee);
+            }
         }
     });
     tbody.innerHTML = renderCoffees(filteredCoffees);
-    search.addEventListener("keydown", updateCoffees)
 }
+search.addEventListener("keyup", updateCoffees);
 
 function searchCoffees(input) {
 
