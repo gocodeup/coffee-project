@@ -7,3 +7,35 @@ td, th {
     border: 1px solid black;
     padding: 5px 10px;
 }
+
+h1 {
+    font-size: x-large;
+    text-align: center;
+}
+
+form {
+    text-align: right;
+}
+
+.drop {
+    text-align: right;
+}
+
+.chart {
+    padding: 1em;
+}
+
+.search {
+    padding: 2em;
+}
+
+#coffees {
+
+}
+
+.coffee {
+    border: 10px outset slategrey;
+    display: flex;
+    margin-right: 100px;
+}
+
