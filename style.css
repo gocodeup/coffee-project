@@ -2,11 +2,7 @@
 * {
     box-sizing: border-box;
     /*font-family: 'Roboto', sans-serif;*/
-    font-family: "Helvetica Neue";
-}
-
-body {
-    /*font-family: "Roboto Light";*/
+    font-family: "Helvetica Neue", sans-serif;;
 }
 
 .container {

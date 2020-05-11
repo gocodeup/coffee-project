@@ -1,15 +1,5 @@
 "use strict"
 
-// function renderCoffee(coffee) {
-//     var html = '<tr class="coffee">';
-//     html += '<td>' + coffee.id + '</td>';
-//     html += '<td>' + coffee.name + '</td>';
-//     html += '<td>' + coffee.roast + '</td>';
-//     html += '</tr>';
-//
-//     return html;
-// }
-
 //NEW RENDER COFFEE
 function renderCoffee(coffee) {
     var html = '<div class="coffee" style="display:flex;">';
@@ -43,44 +33,12 @@ function updateCoffees(e) {
             selectedName = coffeeName;
         }
 
-
-
-        // if(coffeeName.indexOf(selectedName) != -1)
-        //     console.log(coffeeName);
         if (coffee.roast === selectedRoast && coffeeName.indexOf(selectedName) != -1) {
             filteredCoffees.push(coffee);
         }
     });
     coffeeDiv.innerHTML = renderCoffees(filteredCoffees);
 }
-
-
-        //====== LIVE SEARCH CONDITION ======
-// id="myInput" onkeyup="myFunction() - Add this to HTML
-//         function myFunction() {
-//             var input = document.getElementById("myInput");
-//             var filter = input.value.toUpperCase();
-//             for (var i = 0; i < filteredCoffees.length; i++) {
-//                 if (coffee.name.indexOf(filter)) {
-//                     coffeeDiv.innerHTML.style.display = "";
-//                 } else {
-//                     coffeeDiv.innerHTML.style.display = "none";
-//                 }
-//             }
-//         }
-        // selectedName.addEventListener("keyup", e => {
-        //     var searchString = e.target.value;
-        //     // console.log(searchString);
-        //
-        //     const filteredCharacters = coffeeName.filter(character => {
-        //         return (coffeeName.includes(searchString));
-        //     });
-        //     coffeeDiv.innerHTML = renderCoffees(filteredCoffees);
-        // });
-
-        //==========
-
-
 
 function addCoffee(){
     var addedRoast = roastAddition.value;
@@ -95,12 +53,10 @@ function addCoffee(){
     addedCoffee = addedCoffee.join(" ");
 
     var coffeeObject = {id: coffees.length + 1, name: addedCoffee, roast: addedRoast};
-    // updateCoffees();
     coffees.push(coffeeObject);
     coffeeDiv.innerHTML = renderCoffees(coffees);
     roastSelection.value = defaultRoast.value;
     nameSelection.value = "";
-    console.log(coffeeObject)
 }
 
 function checkForEmpty(e){
@@ -145,4 +101,3 @@ roastSelection.addEventListener('change', updateCoffees);
 nameSelection.addEventListener('input', updateCoffees);
 addButton.addEventListener('click', checkForEmpty);
 submitButton.addEventListener('click',  updateCoffees );
-
