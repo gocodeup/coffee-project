@@ -8,3 +8,79 @@ td, th {
     padding: 5px 10px;
 }
 
+body {
+    background: #000000;
+    color: #ffffff;
+    font-family: Friday13
+}
+
+p {
+    color: #ff0003;
+}
+
+.top-container {
+    height: 200px;
+
+}
+
+#title {
+    color: #ff0003;
+    font-family: "Friday13 Bonus NFI";
+    display: flex;
+    margin-top: 70px;
+    font-size: 100px;
+
+}
+
+.navbar-dark {
+    background:transparent !important;
+    transition:0.75s ease;
+
+
+
+}
+.navbar-dark.scrolled {
+    background: rgba(0, 0, 0, 0.65) !important;
+}
+
+footer {
+    padding: 40px 0 0 0;
+    background: #000000;
+    color: #aaa;
+    text-align: left;
+}
+.footer-left a { color: #ddd; border-bottom: 1px dashed #ddd; }
+.footer-left a:hover, .footer-left a:focus { color: #ddd; border: 0; }
+
+.footer-right {
+    text-align: right;
+}
+
+.footer-right a {
+    margin: 0 6px;
+    font-size: 32px;
+    color: #aaa;
+}
+.footer-right a:hover, .footer-right a:focus { color: #eee; }
+
+.footer-bottom {
+    padding-bottom: 25px;
+    text-align: center;
+}
+
+.footer-bottom a {
+    font-size: 32px;
+    color: #666;
+    line-height: 40px;
+}
+
+/*icons footer*/
+
+.fa-github {
+margin-left: 5px;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+

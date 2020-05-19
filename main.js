@@ -1,9 +1,9 @@
 "use strict";
 
 function renderCoffee(coffee) {
-    var html = '<div class="coffee w-50"> <div class="d-flex align-items-baseline mb-2 mt-2 col">';
+    var html = '<div class="coffee w-50"> <div class="d-flex align-items-baseline mb-2 mt-2 col animate__animated animate__fadeInLeft animate__delay-1s">';
     html += '<h3>' + coffee.name + '</h3>';
-    html += '<p class="ml-2 text-secondary ">' + coffee.roast + '</p>';
+    html += '<p class="ml-2  ">' + coffee.roast + '</p>';
     html += '</div></div>';
 
     return html;
@@ -47,6 +47,7 @@ var coffees = [
     {id: 12, name: 'Viennese', roast: 'dark'},
     {id: 13, name: 'Italian', roast: 'dark'},
     {id: 14, name: 'French', roast: 'dark'},
+    {id: 15, name: 'Scary Brew', roast: "dark"},
 
 ];
 

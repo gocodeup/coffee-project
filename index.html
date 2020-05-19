@@ -6,11 +6,38 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
           integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css"/>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.6/css/all.css">
+    <script src="https://kit.fontawesome.com/72b079ffc0.js" crossorigin="anonymous"></script>
 
     <title>Coffee</title>
 </head>
+
+<!--Nav-->
+
+<nav class="navbar navbar-dark fixed-top navbar-expand-md navbar-no-bg">
+    <div class="container-fluid">
+
+        <div class="collapse navbar-collapse" id="navbarNav">
+
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link scroll-link" href="#carouselExampleControls">Slideshow</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link scroll-link" href="#footer">GitHub</a>
+                </li>
+            </ul>
+        </div>
+
+    </div>
+
+</nav>
+
 <body class="container">
-<h1 class="col-12 d-flex justify-content-center">Coffee!</h1>
+<div class="col-12 d-flex justify-content-center top-container animate__animated animate__jackInTheBox ">
+<h1 id="title">Coffee Shop of Horrors!</h1>
+</div>
 <hr>
 <div class="container">
     <div class="row">
@@ -21,7 +48,7 @@
         </div>
         <div class="col-6">
             <form>
-                <div class="form-group">
+                <div class="form-group animate__animated animate__fadeIn animate__delay-2s">
                     <label for="roast-selection" class="font-weight-bold">Roast</label>
                     <select class="form-control" id="roast-selection">
                         <option>all</option>
@@ -35,10 +62,10 @@
                 </div>
             </form>
             <hr>
-            <h1 class="d-flex justify-content-center">Add a Coffee</h1>
+            <h1 class="d-flex justify-content-center animate__animated animate__fadeIn animate__delay-2s">Add a Coffee</h1>
 
             <form>
-                <div class="form-group">
+                <div class="form-group animate__animated animate__fadeIn animate__delay-2s">
                     <label for="roast-selection" class="font-weight-bold">Roast</label>
                     <select class="form-control" id="roast-selection1">
                         <option>light</option>
@@ -54,7 +81,64 @@
     </div>
 </div>
 
+<div id="carouselExampleControls" class="carousel slide animate__animated animate__fadeInRight animate__delay-3s" data-ride="carousel">
+    <div class="carousel-inner">
+        <div class="carousel-item active">
+            <img class="d-block w-100" src="imgs/Valfre_Halloween_Movie_Playlist_1_large.jpg" alt="First slide">
+        </div>
+        <div class="carousel-item">
+            <img class="d-block w-100" src="imgs/addams-family-1444591932.jpg" alt="Second slide">
+        </div>
+        <div class="carousel-item">
+            <img class="d-block w-100" src="imgs/ghostbusters-logo-on-black.jpg" alt="Third slide">
+        </div>
+    </div>
+    <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+    </a>
+</div>
 
+<!--footer-->
+
+<footer id="footer">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-5 footer-left"></div>
+            <div class="col-md-6 offset-md-1 footer-right">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col footer-bottom">
+                <a class="scroll-link" href="#top"><i class="fas fa-ghost"></i></a>
+                <a href="https://github.com/coffee-project-esai-jacob/coffee-project" target="_blank"><i class="fab fa-github"></i></a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"
+        integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"
+        crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"
+        integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
+        crossorigin="anonymous"></script>
 <script src="main.js"></script>
+
+<script>
+    $(window).scroll(function () {
+        $('nav').toggleClass('scrolled', $(this).scrollTop() > 50);
+    });
+
+
+</script>
 </body>
 </html>
