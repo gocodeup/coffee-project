@@ -47,7 +47,7 @@ function myFunction() {
 }
 
 function addCoffee() {
-    console.log('hello')
+    document.getElementsByClassName('name').innerHTML = document.getElementById("usr").value;
 }
 
 
