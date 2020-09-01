@@ -25,13 +25,41 @@
         </div>
         <div class="col-6">
             <form>
-                <label for="roast-selection"></label>
-                <select id="roast-selection">
-                    <option>light</option>
-                    <option>medium</option>
-                    <option>dark</option>
-                </select>
-                <input id="submit" type="submit"/>
+                <div class="form-group">
+                    <label for="roast-selection">Roast</label>
+                    <select id="roast-selection" class="form-control">
+                        <option>all</option>
+                        <option>light</option>
+                        <option>medium</option>
+                        <option>dark</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="coffeeName">Coffee Name</label>
+                    <input type="text" class="form-control" id="coffeeName">
+                </div>
+                <button id="submit" type="submit" class="btn btn-primary btn-sm btn-block">Submit</button>
+            </form>
+            <hr>
+            <form>
+                <div id="header d-flex justify-content-center">
+                    <h5>Add a Coffee</h5>
+                </div>
+                <div class="form-group">
+                    <label for="roast-selection">Roast</label>
+                    <select id="roast-selection" class="form-control">
+                        <option>all</option>
+                        <option>light</option>
+                        <option>medium</option>
+                        <option>dark</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="nameAdded">Name</label>
+                    <input type="text" class="form-control" id="nameAdded">
+                </div>
+                <button id="submit" type="submit" class="btn btn-primary btn-sm btn-block">Submit</button>
+
             </form>
         </div>
     </div>

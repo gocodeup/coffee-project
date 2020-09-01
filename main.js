@@ -27,6 +27,9 @@ function updateCoffees(e) {                         // THIS CODE SHOULD NOT HAVE
         if (coffee.roast === selectedRoast) {
             filteredCoffees.push(coffee);
         }
+        if (selectedRoast === "all") {
+            filteredCoffees.push(coffee)
+        }
 
     });
     tbody.innerHTML = renderCoffees(filteredCoffees.reverse());
