@@ -1,24 +1,25 @@
 "use strict"
 
-function renderCoffee(coffee) {
-    var html = '<tr class="coffee">';
-    html += '<td>' + coffee.id + '</td>';
-    html += '<td>' + coffee.name + '</td>';
-    html += '<td>' + coffee.roast + '</td>';
-    html += '</tr>';
+function renderCoffee(coffee) {                       // This code creates HTML to display the Coffee Name, Roast and ID
+    var html = '<div class="col-6 coffee">';
+    html += '<h4>' + coffee.name + '</h4>';
+    html += '<p>' + coffee.roast + '</p>';
+    html += '</div>';
 
     return html;
 }
 
-function renderCoffees(coffees) {
-    var html = '';
+function renderCoffees(coffees) {                   // THIS CODE SHOULD NOT HAVE TO CHANGE
+    var html = '';                                  // This code combines the HTML for each coffee created by the
+                                                    // renderCoffee function.
     for(var i = coffees.length - 1; i >= 0; i--) {
         html += renderCoffee(coffees[i]);
     }
     return html;
 }
 
-function updateCoffees(e) {
+function updateCoffees(e) {                         // THIS CODE SHOULD NOT HAVE TO CHANGE
+                                                    // This code filters the array of coffees based on the roast.
     e.preventDefault(); // don't submit the form, we just want to update the data
     var selectedRoast = roastSelection.value;
     var filteredCoffees = [];
@@ -31,8 +32,8 @@ function updateCoffees(e) {
 }
 
 // from http://www.ncausa.org/About-Coffee/Coffee-Roasts-Guide
-var coffees = [
-    {id: 1, name: 'Light City', roast: 'light'},
+var coffees = [                                     // THIS CODE SHOULD NOT HAVE TO CHANGE
+    {id: 1, name: 'Light City', roast: 'light'},    // This is the the array of coffee info
     {id: 2, name: 'Half City', roast: 'light'},
     {id: 3, name: 'Cinnamon', roast: 'light'},
     {id: 4, name: 'City', roast: 'medium'},
@@ -55,3 +56,4 @@ var roastSelection = document.querySelector('#roast-selection');
 tbody.innerHTML = renderCoffees(coffees);
 
 submitButton.addEventListener('click', updateCoffees);
+
