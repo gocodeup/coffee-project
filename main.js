@@ -53,6 +53,26 @@ var coffees = [                                     // THIS CODE SHOULD NOT HAVE
     {id: 14, name: 'French', roast: 'dark'},
 ];
 
+// function addACoffee () {
+//     document.getElementById("nameAdded").innerHTML = document.getElementById(coffees).value
+// }
+
+function addACoffee() {
+    var coffeeName = document.getElementById("nameAdded").value;
+    var coffeeRoast = document.getElementById("roast-selection2").value;
+    var newCoffee = {
+        id: coffees.length + 1,
+        name: coffeeName,
+        roast: coffeeRoast
+    }
+    coffees.push(newCoffee);
+    tbody.innerHTML = renderCoffees(coffees);
+
+}
+
+
+
+
 function mySearchFunction () {
     var searchedCoffees = [];
     var input = document.getElementById("coffeeName");
@@ -70,9 +90,11 @@ function mySearchFunction () {
 
 var tbody = document.querySelector('#coffees');
 var submitButton = document.querySelector('#submit');
+var submitButton2 = document.querySelector("submit2");
 var roastSelection = document.querySelector('#roast-selection');
 
 tbody.innerHTML = renderCoffees(coffees);
 
 submitButton.addEventListener('click', updateCoffees);
+submitButton2.addEventListener('click', addACoffee);
 
