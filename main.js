@@ -53,6 +53,18 @@ var coffees = [                                     // THIS CODE SHOULD NOT HAVE
     {id: 14, name: 'French', roast: 'dark'},
 ];
 
+
+
+var tbody = document.querySelector('#coffees');
+var submitButton = document.querySelector('#submit');
+var submitButton2 = document.querySelector("submit2");
+var roastSelection = document.querySelector('#roast-selection');
+
+tbody.innerHTML = renderCoffees(coffees);
+
+submitButton.addEventListener('click', updateCoffees);
+submitButton2.addEventListener('click', addACoffee);
+
 // function addACoffee () {
 //     document.getElementById("nameAdded").innerHTML = document.getElementById(coffees).value
 // }
@@ -66,6 +78,8 @@ function addACoffee() {
         roast: coffeeRoast
     }
     coffees.push(newCoffee);
+    console.log(coffees);
+    localStorage.setItem('customCoffees', JSON.stringify(coffees));
     tbody.innerHTML = renderCoffees(coffees);
 
 }
@@ -85,16 +99,4 @@ function mySearchFunction () {
     })
     tbody.innerHTML = renderCoffees(searchedCoffees.reverse());
 }
-
-
-
-var tbody = document.querySelector('#coffees');
-var submitButton = document.querySelector('#submit');
-var submitButton2 = document.querySelector("submit2");
-var roastSelection = document.querySelector('#roast-selection');
-
-tbody.innerHTML = renderCoffees(coffees);
-
-submitButton.addEventListener('click', updateCoffees);
-submitButton2.addEventListener('click', addACoffee);
 
