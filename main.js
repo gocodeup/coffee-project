@@ -53,6 +53,21 @@ var coffees = [                                     // THIS CODE SHOULD NOT HAVE
     {id: 14, name: 'French', roast: 'dark'},
 ];
 
+function mySearchFunction () {
+    var searchedCoffees = [];
+    var input = document.getElementById("coffeeName");
+    console.log(input.value);
+    coffees.forEach(function(coffee) {
+        if (coffee.name.toUpperCase().includes(input.value.toUpperCase())) {
+            searchedCoffees.push(coffee);
+            console.log(searchedCoffees);
+        }
+    })
+    tbody.innerHTML = renderCoffees(searchedCoffees.reverse());
+}
+
+
+
 var tbody = document.querySelector('#coffees');
 var submitButton = document.querySelector('#submit');
 var roastSelection = document.querySelector('#roast-selection');
