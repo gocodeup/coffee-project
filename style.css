@@ -7,3 +7,34 @@ td, th {
     border: 1px solid black;
     padding: 5px 10px;
 }
+
+body {
+    background-image: url("https://havacupcoffee.com/wp-content/uploads/2011/08/wood-backgrounds-wallpapers.jpg");
+    background-size: auto;
+}
+
+.container{
+    color: white;
+}
+
+h1 {
+    text-decoration: underline;
+}
+
+form {
+    text-decoration: underline;
+}
+
+.flex-container{
+    display: flex;
+    float: right;
+    align-items: center;
+    margin-right: 25%;
+}
+.coffeePicture{
+}
+
+#texasImage {
+    margin-right: 20px;
+    margin-top: 210px;
+}
