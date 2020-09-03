@@ -57,7 +57,7 @@ var coffees = [                                     // THIS CODE SHOULD NOT HAVE
 
 var tbody = document.querySelector('#coffees');
 var submitButton = document.querySelector('#submit');
-var submitButton2 = document.querySelector("submit2");
+var submitButton2 = document.querySelector("#submit2");
 var roastSelection = document.querySelector('#roast-selection');
 
 tbody.innerHTML = renderCoffees(coffees);
