@@ -25,16 +25,18 @@ form {
     text-decoration: underline;
 }
 
-.flex-container{
+#flex-container{
     display: flex;
     float: right;
     align-items: center;
-    margin-right: 25%;
+    margin-right: 20%;
 }
 .coffeePicture{
 }
 
 .texasImage {
-    margin-right: 20px;
-    margin-top: 210px;
+    margin-top: -300px;
+    position: relative;
+    left: 40%;
+    height: 0;
 }
