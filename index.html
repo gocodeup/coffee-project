@@ -7,48 +7,39 @@
     <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="container">
+<div class="container">
+    <div class="black-overlay"></div>
     <h1 id="title">Coffee!</h1>
+    <div id="formContainer">
+        <form id="form" class="formCard">
+            <label for="roast-selection">Roast</label>
+            <select class="search roast" id="roast-selection">
+                <option id="default-option">all</option>
+                <option>light</option>
+                <option>medium</option>
+                <option>dark</option>
+            </select>
+            <label for="coffeeSearch">Coffee Name</label>
+            <input class="search" id="coffeeSearch" name="search" type="text">
+            <input class="search btn" id="submit" type="submit"/>
+        </form>
 
-
-        <div id="formContainer">
-            <form id="form" class="formCard">
-                <label for="roast-selection">Roast</label>
-                <select class="search roast" id="roast-selection">
-                    <option id="default-option">all</option>
-                    <option>light</option>
-                    <option>medium</option>
-                    <option>dark</option>
-                </select>
-                <label for="coffeeSearch">Coffee Name</label>
-                <input class="search" id="coffeeSearch" name="search" type="text">
-                <input class="search btn" id="submit" type="submit" />
-            </form>
-
-            <h2 id="title-add">Add a Coffee</h2>
-            <form id="form2" class="formCard">
-                <label for="roast-selection">Roast</label>
-                <select class="search roast" id="roast-addition">
-                    <option>light</option>
-                    <option>medium</option>
-                    <option>dark</option>
-                </select>
-                <label for="coffee-addition">Name</label>
-                <input class="search" id="coffee-addition" name="search" type="text">
-                <input class="search btn" id="add-btn" type="submit" />
-            </form>
-
-        </div>
-
-
-
-
-    <div id="coffees"></div>
-
+        <h2 id="title-add">Add a Coffee</h2>
+        <form id="form2" class="formCard">
+            <label for="roast-selection">Roast</label>
+            <select class="search roast" id="roast-addition">
+                <option>light</option>
+                <option>medium</option>
+                <option>dark</option>
+            </select>
+            <label for="coffee-addition">Name</label>
+            <input class="search" id="coffee-addition" name="search" type="text">
+            <input class="search btn" id="add-btn" type="submit"/>
+        </form>
     </div>
-
-
+    <div id="coffees"></div>
     <script src="main.js"></script>
+</div>
 
 </body>
 </html>

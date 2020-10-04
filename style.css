@@ -3,6 +3,25 @@
     box-sizing: border-box;
     /*font-family: 'Roboto', sans-serif;*/
     font-family: "Helvetica Neue", sans-serif;;
+    color: #DC965A;
+    /*background-color: #242325;*/
+    z-index: 2;
+}
+
+body {
+    background-image: url("https://www.seriouseats.com/images/2015/08/20150818-coffee-beans-shutterstock_71813833.jpg");
+    margin: 0;
+}
+
+.black-overlay {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    width: 100vw;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: 1;
+    float: left;
+
 }
 
 .container {
@@ -33,7 +52,7 @@ div .coffee {
     text-align: center;
     margin-top: .8em;
     padding-bottom: 1.8em;
-    border-bottom: solid 1px #F1F1F1;
+    border-bottom: solid 1px sandybrown;
 }
 
 #title-add {
@@ -86,7 +105,7 @@ div .coffee {
 
 .btn {
     margin-top: .5em;
-    background-color: #3D89CB;
+    background-color: #B3B3B3;
     color: white;
     padding: 10px 0;
     border-radius: 4px;
@@ -97,6 +116,6 @@ div .coffee {
 }
 
 .btn:hover {
-    background-color: #4CAF50; /* Green */
+    background-color: #BBB891; /* Green */
     color: white;
 }
