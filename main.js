@@ -55,3 +55,25 @@ var roastSelection = document.querySelector('#roast-selection');
 tbody.innerHTML = renderCoffees(coffees);
 
 submitButton.addEventListener('click', updateCoffees);
+
+var roastAnchors = document.getElementsByClassName("dropdown-item")
+for (let roast of roastAnchors){
+    roast.addEventListener("click", function () {
+        console.log(this);
+        console.log(this.getAttribute("data-roast"));
+        if (this.getAttribute("data-roast") === "all"){
+            // var tbody = document.querySelector('#coffees');
+        //    display all
+        }
+        else if (this.getAttribute("data-roast") === "light"){
+
+            //    display all
+        }
+        else if (this.getAttribute("data-roast") === "medium"){
+            //    display all
+        }
+        else if (this.getAttribute("data-roast") === "dark"){
+            //    display all
+        }
+    })
+}
