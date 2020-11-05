@@ -6,9 +6,14 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Coffee!</h1>
-    <h2>We got this!</h2>
-    <h3>Finally got this</h3>
+    <h1>JAVA-TIME Coffee!</h1>
+
+    <label>What is the date?
+    <input type="month" id="chooseDate">
+
+
+    </label>
+
     <form>
         <label for="roast-selection"></label>
         <select id="roast-selection">
@@ -16,13 +21,15 @@
             <option>medium</option>
             <option>dark</option>
         </select>
+        <label>Coffee Name<input id="coffeeName"></label>
+
         <input id="submit" type="submit" />
     </form>
 
     <table>
         <thead>
             <tr>
-                <th>ID</th>
+<!--                <th>ID</th>-->
                 <th>NAME</th>
                 <th>ROAST</th>
             </tr>
@@ -30,6 +37,7 @@
         <tbody id="coffees"></tbody>
     </table>
 
+    <button id="Espresso">Find Name</button>
     <script src="main.js"></script>
 </body>
 </html>
