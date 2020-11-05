@@ -7,28 +7,44 @@
 </head>
 <body>
     <h1>Coffee!</h1>
+    <div id="forms">
+        <form>
 
-    <form>
-        <label for="roast-selection"></label>
-        <select id="roast-selection">
-            <option>light</option>
-            <option>medium</option>
-            <option>dark</option>
-        </select>
-        <input id="submit" type="submit" />
-    </form>
+            <label for="roast-selection">Roast</label>
+            <select id="roast-selection">
+                <option>light</option>
+                <option>medium</option>
+                <option>dark</option>
+            </select>
+            <label for="roast-selection">Name</label>
+            <input type="text" id="roast-text" name="roast-selection">
+            <input id="submit1" type="submit" />
+        </form>
+        <h2>Add a Coffee</h2>
+        <form>
 
-    <table>
-        <thead>
-            <tr>
-                <th>ID</th>
-                <th>NAME</th>
-                <th>ROAST</th>
-            </tr>
-        </thead>
-        <tbody id="coffees"></tbody>
-    </table>
-
+            <label for="add-roast-selection">Roast</label>
+            <select id="add-roast-selection">
+                <option>light</option>
+                <option>medium</option>
+                <option>dark</option>
+            </select>
+            <label for="roast-selection">Name</label>
+            <input type="text" id="add-roast-text" name="roast-selection">
+            <input id="submit2" type="submit" />
+        </form>
+    </div>
+    <div id="coffee-table">
+        <table>
+            <thead>
+                <tr>
+                    <th>NAME</th>
+                    <th>ROAST</th>
+                </tr>
+            </thead>
+            <tbody id="coffees"></tbody>
+        </table>
+    </div>
     <script src="main.js"></script>
 </body>
 </html>
