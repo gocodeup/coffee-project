@@ -19,3 +19,25 @@ td, th {
 #h1 {
     justify-content: center;
 }
+
+#coffee-col {
+    justify-content: left;
+
+}
+
+h3 {
+    margin: .2em;
+}
+
+#coffees {
+    margin: 1em;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.btn-primary {
+    width: 100%;
+    margin-bottom: 1em;
+}

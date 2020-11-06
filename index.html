@@ -8,44 +8,64 @@
 </head>
 <body>
 
+<!-- Start Container -->
 <div class="container" >
     <div class="row" id="h1">
         <h1>Coffee!</h1>
     </div>
     <hr>
-</div>
 <!--wrapping in row-->
-<div class="row">
-
-
-    <!--    Half row column 2/2-->
-    <!--HTML inside of this container will get overwritten by function without an append-->
-    <div class="col-6">
-        <div id="coffees" class="container">
-        </div>
-    </div>
-
-    <!--    Half row column 1/2-->
-    <div class="col-6">
-    <div class="container">
-            <div class="row">
-                <form>
-                    <label for="roast-selection"></label>
-                    <select id="roast-selection">
-                        <option>light</option>
-                        <option>medium</option>
-                        <option>dark</option>
-                    </select>
-                    <input id="submit" type="submit" />
-                </form>
+    <div class="row">
+        <!--    Half of row column 1/2-->
+        <!--HTML inside of this container will get overwritten by function without an append-->
+        <div class="col-6" id = "coffee-col">
+            <div class="container" id="coffees">
             </div>
         </div>
-    </div>
+
+        <!--    Half of row column 2/2-->
+        <div class="col-6" id="coffee-form">
+
+            <h5>Roast</h5>
+            <div class="form-group">
+                <select class="form-control" id="exampleFormControlSelect1">
+                    <option>Light</option>
+                    <option>Medium</option>
+                    <option>Dark</option>
+                </select>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+
+            <h5>Coffee Name</h5>
+                <div class="row">
+                    <div class="col">
+                        <input type="text" class="form-control" placeholder="">
+                    </div>
+                </div>
+
+            <h1>Add a Coffee</h1>
+            <h5>Roast</h5>
+            <div class="row">
+                <div class="col">
+                    <input type="text" class="form-control" placeholder="">
+                </div>
+            </div>
+
+            <h5>Name</h5>
+            <div class="row">
+                <div class="col">
+                    <input type="text" class="form-control" placeholder="">
+                </div>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+
+        </div>
+        </div>
 
 
-
-
+<!--End Container    -->
 </div>
+
 
 
 
