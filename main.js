@@ -1,12 +1,13 @@
 "use strict"
 
 function renderCoffee(coffee) {
-    var html = '<tr class="coffee">';
-    html += '<td>' + coffee.id + '</td>';
-    html += '<td>' + coffee.name + '</td>';
-    html += '<td>' + coffee.roast + '</td>';
-    html += '</tr>';
+    var html = '<div class="coffee card col-4 ">';
+    html += '<img src="img/card4light.jpg">' + '</>';
+    html += '<strong>' + coffee.name + '</strong>';
+    html += '<p>' + coffee.text + '</p>';
 
+    html += '</div>';
+    console.log(html);
     return html;
 }
 
@@ -29,10 +30,18 @@ function updateCoffees(e) {
     });
     tbody.innerHTML = renderCoffees(filteredCoffees);
 }
+function checkNames (e) {
+    e.preventDefault();
+    var selectedRoast = roastSelection.value;
+    var filteredCoffees = [];
+    coffees.forEach(function (coffee) {
 
+    })
+
+}
 // from http://www.ncausa.org/About-Coffee/Coffee-Roasts-Guide
 var coffees = [
-    {id: 1, name: 'Light City', roast: 'light'},
+    {id: 1, name: 'Light City', roast: 'light', text: "It will make your city lights light up!" },
     {id: 2, name: 'Half City', roast: 'light'},
     {id: 3, name: 'Cinnamon', roast: 'light'},
     {id: 4, name: 'City', roast: 'medium'},
