@@ -13,9 +13,11 @@
         <h1>Coffee!</h1>
     </div>
 
+    <hr>
+
    <div class="container">
         <!--Coffee Table-->
-        <div class="row">
+        <div class="row justify-content-center">
                 <div class="col">
                     <table id="coffee-table">
                         <thead>
@@ -31,8 +33,9 @@
 
                 <!--Dropdown Roast Selection Menu -->
                 <div class="col">
-                    <div class="container d-flex">
+                    <div>
                         <form>
+                            <h6>Roast</h6>
                             <label for="roast-selection"></label>
                             <select id="roast-selection">
                                 <option>light</option>
@@ -41,16 +44,17 @@
                                 <option>all</option>
                             </select>
 
+                            <!--Search Bar for Coffees-->
+                            <h6>Coffee Name</h6>
+                            <input type="text" id="coffee-search" class="d-block" onkeyup="searchFunction()">
+
                             <!--Coffee Submit Button for Dropdown Menu-->
-                            <input id="submit" type="submit" />
+                            <input id="submit" class="d-block" type="submit" />
                         </form>
                     </div>
 
 
-                    <!--Search Bar for Coffees-->
-                    <input type="text" id="coffee-search" onkeyup="searchFunction()">
-
-
+                    <hr>
 
                     <!--STARTING ADD A COFFEE SECTION-->
 
@@ -60,7 +64,7 @@
                     <!--Add a Coffee Form-->
                     <form name="coffeeForm">
                         <!--Dropdown Roast Selection Menu -->
-                        <label for="addRoast"></label>
+                        <label for="addRoast">Roast</label>
                         <select id="addRoast">
                             <option>light</option>
                             <option>medium</option>
