@@ -14,31 +14,54 @@
     <hr>
 
     </header>
-    <label>What is the date?</label>
-    <input type="month" id="chooseDate">
+    <label>What is the date?
+        <input type="month" id="chooseDate">
+    </label>
+    <button id="seasons">Tis the season</button>
+
+    <div class="main">
+        <div class="container">
+            <div class="coffeeType">
+                <h4>Light</h4>
+            </div>
+            <h4 class="cupOfJo1 circle-text" id="lightCoffee"></h4>
+            <p id="eachLight"></p>
+        </div>
+        <div class="container">
+            <div class="coffeeType">
+                <h4>Medium</h4>
+            </div>
+            <h4 class="cupOfJo2 circle-text" id="mediumCoffee"></h4>
+            <p id="eachMedium"></p>
+        </div>
+        <div class="container">
+            <div class="coffeeType">
+                <h4>Dark</h4>
+            </div>
+            <h4 class="cupOfJo3 circle-text" id="darkCoffee"></h4>
+            <p id="eachDark"></p>
+        </div>
+        <div class="container">
+            <div class="coffeeType">
+                <h4>Holiday</h4>
+            </div>
+            <h4 class="cupOfJo4 circle-text" id="holidayCoffee"></h4>
+            <p id="eachHoliday"></p>
+        </div>
+    </div>
+        <hr>
+        <hr>
+
+        <label>Coffee Name<input id="coffeeName"></label>
+
 
     <form>
-        <div class="d-none d-sm-block">
-<!--            <div class="row">-->
-                <div class="d-flex justify-content-center">
-                    <div class="row">
-                        <h4 class="cupOfJo1 align-items-center justify-content-center circle-text">light</h4>
-                        <h4 class="cupOfJo2  align-items-center justify-content-center circle-text">medium</h4>
-                        <h4 class="cupOfJo3 d-flex align-items-center justify-content-center circle-text">dark</h4>
-                        <h4 class="cupOfJo4 d-flex align-items-center justify-content-center circle-text">holiday</h4>
-                        </div>
-                    </div>
-                </div>
-        <hr>
-        <hr>
-
         <label for="roast-selection"></label>
         <select id="roast-selection">
             <option>light</option>
             <option>medium</option>
             <option>dark</option>
         </select>
-        <label>Coffee Name<input id="coffeeName"></label>
 
         <input id="submit" type="submit" />
     </form>

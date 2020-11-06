@@ -87,10 +87,25 @@ td, th, button {
     font-family: 'Bitter', serif;
     color: #654321;
 }
-main {
-    min-height: 100vh;
+.main {
+    display: flex;
+    justify-content: space-evenly;
 }
 
 .coffee-card {
     max-height: 245px;
+}
+.coffeeType{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.coffeeType>h4{
+    margin-bottom: 0;
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
