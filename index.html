@@ -19,11 +19,11 @@
         <!--Coffee Table-->
         <div class="row justify-content-center">
                 <div class="col">
-                    <table id="coffee-table">
+                    <table id="coffee-table" class="table table-borderless">
                         <thead>
                         <tr class="coffee-table-header">
-                            <th>NAME</th>
-                            <th>ROAST</th>
+                            <th class="d-none" scope="col">NAME</th>
+                            <th class="d-none" scope="col">ROAST</th>
                         </tr>
                         </thead>
                         <tbody id="coffees"></tbody>
@@ -36,7 +36,7 @@
                     <div>
                         <form>
                             <div class="form-group">
-                                <label for="roast-selection">Roast</label>
+                                <label for="roast-selection" class="font-weight-bold">Roast</label>
                                 <select class="d-block form-control" id="roast-selection">
                                     <option>light</option>
                                     <option>medium</option>
@@ -47,7 +47,7 @@
 
                             <!--Search Bar for Coffees-->
                             <div class="form-group">
-                                <label for="coffee-search">Coffee Name</label>
+                                <label for="coffee-search" class="font-weight-bold">Coffee Name</label>
                                 <input type="text" id="coffee-search" class="d-block form-control" onkeyup="searchFunction()">
                             </div>
 
@@ -69,7 +69,7 @@
                         <form name="coffeeForm">
                             <div class="form-group">
                                 <!--Dropdown Roast Selection Menu -->
-                                <label for="addRoast">Roast</label>
+                                <label for="addRoast"class="font-weight-bold">Roast</label>
                                 <select class="d-block form-control" id="addRoast">
                                     <option>light</option>
                                     <option>medium</option>
@@ -79,7 +79,7 @@
 
                             <!--Add a Coffee: Name Input-->
                             <div class="form-group">
-                                <label for="coffeeName">Name</label>
+                                <label for="coffeeName" class="font-weight-bold">Name</label>
                                 <input class="d-block form-control" type="text" id="coffeeName">
                             </div>
 
