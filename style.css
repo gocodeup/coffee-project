@@ -23,7 +23,7 @@ body {
     width: 25%;
     height: auto;
 }
-h1, label {
+h1, h3, label {
     display: block;
     text-align: center;
     font-family: 'Bitter', serif;
