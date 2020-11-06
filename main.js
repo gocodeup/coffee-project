@@ -170,28 +170,30 @@ holidayCoffeeCup.addEventListener("mouseleave", function(){
 
 let season = document.getElementById("seasons");
 let chooseDate = document.getElementById("chooseDate");
+var dogLogo = document.getElementById("dogLogo");
 
 season.addEventListener("click", function (){
     season.disabled = true;
     let month = chooseDate.value.substring(5, 7);
     allOfOurCoffees = coffees;
     if(month >= 3 && month <= 5){
-        document.body.style.backgroundColor = "#edf816";
+        // document.body.style.backgroundImage = "";
         springCoffees.forEach((coffee) =>{
             allOfOurCoffees.push(coffee);
         });
     } else if(month >= 6 && month <= 8){
-        document.body.style.backgroundColor = "#48acc5";
+        // document.body.style.backgroundColor = "#48acc5";
         summerCoffees.forEach((coffee) =>{
             allOfOurCoffees.push(coffee);
         });
     } else if(month >= 9 && month <= 11){
-        document.body.style.backgroundColor = "#d47529";
+        document.body.style.backgroundImage = "url('image/fallbackground.jpg')";
+        dogLogo.src = "url('image/falldog.jpg')";
         fallCoffees.forEach((coffee) =>{
             allOfOurCoffees.push(coffee);
         });
     } else if((month > 11 && month < 13) || (month < 3 && month > 0)){
-        document.body.style.backgroundColor = "#64c850";
+        document.body.style.backgroundImage = "url('image/winterbackground.jpg')";
         winterCoffees.forEach((coffee) =>{
             allOfOurCoffees.push(coffee);
         });

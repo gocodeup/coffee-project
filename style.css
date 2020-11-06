@@ -2,9 +2,15 @@ html {
     box-sizing: border-box;
 }
 body {
-    background-image: url("image/royal-sundance-papers-bright-white-linen.jpg");
     font-family: "Bitter", sans-serif;
+    background-image: url("image/royal-sundance-papers-bright-white-linen.jpg");
+    height: 100%;
+    width: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
 }
+
 /*start dog logo*/
 /*img {*/
 /*    justify-items: center;*/

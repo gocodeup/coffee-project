@@ -8,82 +8,82 @@
     <script src="https://kit.fontawesome.com/36f035c426.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <header>
-        <img src="image/doggie.png" class="center">
-        <h1>huskee coffee</h1>
+<header>
+    <img src="image/doggie.png" class="center" id="dogLogo">
+</header>
+    <h1>huskee coffee</h1>
     <hr>
     <hr>
-
-    </header>
-    <div class="dateContainer">
+<div class="dateContainer">
     <label>What is the date?
         <input type="month" id="chooseDate">
     </label>
     <button id="seasons">Tis the season</button>
-    </div>
+</div>
 
-    <div class="main">
-        <div class="container">
-            <div class="coffeeType">
-                <h4>Light</h4>
-            </div>
-            <h4 class="cupOfJo1 circle-text" id="lightCoffee"></h4>
-            <p class="coffeeWord" id="eachLight"></p>
+<div class="main">
+    <div class="container">
+        <div class="coffeeType">
+            <h4>Light</h4>
         </div>
-        <div class="container">
-            <div class="coffeeType">
-                <h4>Medium</h4>
-            </div>
-            <h4 class="cupOfJo2 circle-text" id="mediumCoffee"></h4>
-            <p class="coffeeWord" id="eachMedium"></p>
-        </div>
-        <div class="container">
-            <div class="coffeeType">
-                <h4>Dark</h4>
-            </div>
-            <h4 class="cupOfJo3 circle-text" id="darkCoffee"></h4>
-            <p class="coffeeWord" id="eachDark"></p>
-        </div>
-        <div class="container">
-            <div class="coffeeType">
-                <h4>Holiday</h4>
-            </div>
-            <h4 class="cupOfJo4 circle-text" id="holidayCoffee"></h4>
-            <p class="coffeeWord" id="eachHoliday"></p>
-        </div>
+        <h4 class="cupOfJo1 circle-text" id="lightCoffee"></h4>
+        <p class="coffeeWord" id="eachLight"></p>
     </div>
-        <hr>
-        <hr>
-    <div class="coffeeInput">
-        <label>Coffee Name<input id="coffeeName"></label>
-        <label>
-            Don't see what you're looking for? Let us know here -->
-            <select id="customCoffeeRoast">
-                <option value="light">Light</option>
-                <option value="medium">Medium</option>
-                <option value="dark">Dark</option>
-            </select>
-            <input id="customCoffeeName" placeholder="Custom Coffee!" onfocus="this.value=''">
-        </label>
-        <button id="customCoffeeButton">Add your custom coffee</button>
-    </div>
-    <div class="footer">
-        <div class="companyProduct">
-            <img class="logo" src="image/falldog.jpg">
+    <div class="container">
+        <div class="coffeeType">
+            <h4>Medium</h4>
         </div>
-        <div class="availableCoffeesSpot">
-            <p class="coffeeWord" id="coffeesSpots"></p>
-        </div>
+        <h4 class="cupOfJo2 circle-text" id="mediumCoffee"></h4>
+        <p class="coffeeWord" id="eachMedium"></p>
     </div>
-    <hr>
-    <hr>
-    <div class="followUsArea">
-        <div class="socialMedia">
-            <a href="#"><p><i class="social fab fa-twitter"></i>Follow us on Twitter!</p></a>
-            <a href="#"><p><i class="social fab fa-facebook"></i>Find us on FaceBook!</p></a>
-            <a href="#"><p><i class="social fab fa-instagram"></i>Check out our Instagram</p></a>
+    <div class="container">
+        <div class="coffeeType">
+            <h4>Dark</h4>
         </div>
+        <h4 class="cupOfJo3 circle-text" id="darkCoffee"></h4>
+        <p class="coffeeWord" id="eachDark"></p>
     </div>
-    <script src="main.js"></script>
+    <div class="container">
+        <div class="coffeeType">
+            <h4>Holiday</h4>
+        </div>
+        <h4 class="cupOfJo4 circle-text" id="holidayCoffee"></h4>
+        <p class="coffeeWord" id="eachHoliday"></p>
+    </div>
+</div>
+<hr>
+<hr>
+<div class="coffeeInput">
+    <label>Coffee Name<input id="coffeeName"></label>
+    <label>
+        Don't see what you're looking for? Let us know here -->
+        <select id="customCoffeeRoast">
+            <option value="" disabled selected>Select your Roast</option>
+            <option value="light">Light</option>
+            <option value="medium">Medium</option>
+            <option value="dark">Dark</option>
+        </select>
+        <input id="customCoffeeName" placeholder="Custom Coffee!" onfocus="this.value=''">
+    </label>
+    <button id="customCoffeeButton">Add your custom coffee</button>
+</div>
+<div class="footer">
+    <div class="companyProduct">
+        <img class="logo" src="image/falldog.png">
+    </div>
+    <div class="availableCoffeesSpot">
+        <p class="coffeeWord" id="coffeesSpots"></p>
+    </div>
+</div>
+<hr>
+<hr>
+<div class="followUsArea">
+    <div class="socialMedia">
+        <a href="#"><p><i class="social fab fa-twitter"></i>Follow us on Twitter!</p></a>
+        <a href="#"><p><i class="social fab fa-facebook"></i>Find us on FaceBook!</p></a>
+        <a href="#"><p><i class="social fab fa-instagram"></i>Check out our Instagram</p></a>
+    </div>
+</div>
+<script src="main.js"></script>
 </body>
 </html>
