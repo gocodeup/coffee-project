@@ -108,3 +108,6 @@ var addCoffeeButton = document.querySelector("#submit-new-coffee");
 addCoffeeButton.addEventListener("click", addNewCoffee);
 //***************************
 //Function to add new coffee to the coffee array.
+function addNewCoffee(){
+    var newCoffeeName = document.forms.coffeeName;
+}
