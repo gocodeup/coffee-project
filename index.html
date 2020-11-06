@@ -9,7 +9,7 @@
 
 <body>
     <!--Coffee Header-->
-    <div class="container d-flex justify-content-center">
+    <div class="container d-flex justify-content-center pt-3">
         <h1>Coffee!</h1>
     </div>
 
@@ -35,21 +35,24 @@
                 <div class="col">
                     <div>
                         <form>
-                            <h6>Roast</h6>
-                            <label for="roast-selection"></label>
-                            <select id="roast-selection">
-                                <option>light</option>
-                                <option>medium</option>
-                                <option>dark</option>
-                                <option>all</option>
-                            </select>
+                            <div class="form-group">
+                                <label for="roast-selection">Roast</label>
+                                <select class="d-block form-control" id="roast-selection">
+                                    <option>light</option>
+                                    <option>medium</option>
+                                    <option>dark</option>
+                                    <option>all</option>
+                                </select>
+                            </div>
 
                             <!--Search Bar for Coffees-->
-                            <h6>Coffee Name</h6>
-                            <input type="text" id="coffee-search" class="d-block" onkeyup="searchFunction()">
+                            <div class="form-group">
+                                <label for="coffee-search">Coffee Name</label>
+                                <input type="text" id="coffee-search" class="d-block form-control" onkeyup="searchFunction()">
+                            </div>
 
                             <!--Coffee Submit Button for Dropdown Menu-->
-                            <input id="submit" class="d-block" type="submit" />
+                            <input id="submit" class="d-block form-control btn btn-primary" type="submit" />
                         </form>
                     </div>
 
@@ -59,25 +62,31 @@
                     <!--STARTING ADD A COFFEE SECTION-->
 
                     <!--Add a Coffee Header -->
-                    <h1>Add a Coffee</h1>
+                    <h1 align="center">Add a Coffee</h1>
 
                     <!--Add a Coffee Form-->
-                    <form name="coffeeForm">
-                        <!--Dropdown Roast Selection Menu -->
-                        <label for="addRoast">Roast</label>
-                        <select id="addRoast">
-                            <option>light</option>
-                            <option>medium</option>
-                            <option>dark</option>
-                        </select>
+                    <div>
+                        <form name="coffeeForm">
+                            <div class="form-group">
+                                <!--Dropdown Roast Selection Menu -->
+                                <label for="addRoast">Roast</label>
+                                <select class="d-block form-control" id="addRoast">
+                                    <option>light</option>
+                                    <option>medium</option>
+                                    <option>dark</option>
+                                </select>
+                            </div>
 
-                        <!--Add a Coffee: Name Input-->
-                        <label for="coffeeName">Name</label>
-                        <input type="text" id="coffeeName">
+                            <!--Add a Coffee: Name Input-->
+                            <div class="form-group">
+                                <label for="coffeeName">Name</label>
+                                <input class="d-block form-control" type="text" id="coffeeName">
+                            </div>
 
-                        <!--Submit button for Form -->
-                        <input id="submit-new-coffee" type="submit" />
-                    </form>
+                            <!--Submit button for Form -->
+                            <input class="d-block form-control btn btn-primary" id="submit-new-coffee" type="submit" />
+                        </form>
+                    </div>
                 </div>
         </div>
    </div>
