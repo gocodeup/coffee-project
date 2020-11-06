@@ -14,11 +14,7 @@ function renderCoffee(coffee) {
     return html;
 }
 
-// var listener = function(event){
-//     console.log(document.getElementById("userInput"))
-// }
 
-// document.getElementById("userInput").addEventListener("input", listener);
 
 
 //defines the order of the coffees as rendered in the table
@@ -43,9 +39,60 @@ function updateCoffees(e) {
     //    this looks at the "roast" value from the coffee objects and pushes it into the empty variable if it
     //    matches the entry currently selected in the picklist
     });
-    tbody.innerHTML = renderCoffees(filteredCoffees);
+    divBody.innerHTML = renderCoffees(filteredCoffees);
 //    this takes what has been pushed into the variable and populates it into the table
 }
+
+
+
+
+
+function searchCoffees(e){
+    var selectedRoast = roastSelection.value;
+    var filteredCoffees = [];
+    var searchValue = document.querySelector("#userSearch")
+    var listener = function(event) {
+        function narrowCoffees(str){
+            str = searchValue.value;
+            for(var i = 0;i<coffees.length;i++){
+                if(coffees[i].name.includes(str)){
+                    console.log(i + "returned");
+                } else{
+                    console.log(i + "not returned");
+                }
+            }
+        }
+
+    //    currently this logs the value inside the input field
+    //    we need it to recognize which coffees match the inputted text, and then have those coffees added to the
+    //    filtered coffees array, which can then be rendered in the "table" with the innerHTML function below
+    }
+    searchValue.addEventListener("keyup", listener);
+    divBody.innerHTML = renderCoffees(filteredCoffees);
+//    this takes what has been pushed into the variable and populates it into the table
+}
+
+
+// function narrowCoffees(str){
+//     for(var i = 0;i<coffees.length;i++){
+//         if(coffees[i].name.includes(str)){
+//             console.log(i + "returned");
+//         } else{
+//             console.log(i + "not returned");
+//         }
+//     }
+// }
+
+
+
+// var searchValue = document.querySelector("#userSearch")
+//
+// var listener = function(event){
+//     console.log(searchValue.value);
+//
+// }
+//
+// searchValue.addEventListener("keyup", listener);
 
 //Not sure how to create an input search field for coffees. This will be something to research on stack
 
