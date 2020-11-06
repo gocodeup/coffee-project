@@ -79,6 +79,7 @@ lightCoffeeCup.addEventListener("mouseover", function(){
           theLightCoffees += coffee.name + "\n";
       }
    });
+   allLightCoffees.style.display="inline-block";
    allLightCoffees.innerText = theLightCoffees;
 });
 
@@ -86,18 +87,53 @@ lightCoffeeCup.addEventListener("mouseleave", function(){
     allLightCoffees.style.display = "none";
 });
 
-
-
 var mediumCoffeeCup = document.getElementById("mediumCoffee");
 var allMediumCoffees = document.getElementById("eachMedium");
+mediumCoffeeCup.addEventListener("mouseover", function(){
+    var theMediumCoffees = "";
+    allOfOurCoffees.forEach((coffee) =>{
+        if (coffee.roast === "medium") {
+            theMediumCoffees += coffee.name + "\n";
+        }
+    });
+    allMediumCoffees.style.display="inline-block";
+    allMediumCoffees.innerText = theMediumCoffees;
+});
+mediumCoffeeCup.addEventListener("mouseleave", function() {
+    allMediumCoffees.style.display = "none";
+});
 
 var darkCoffeeCup = document.getElementById("darkCoffee");
 var allDarkCoffees = document.getElementById("eachDark");
-
+darkCoffeeCup.addEventListener("mouseover", function(){
+    var theDarkCoffees = "";
+    allOfOurCoffees.forEach((coffee) => {
+        if (coffee.roast === "dark"){
+            theDarkCoffees += coffee.name + "\n";
+        }
+    });
+    allDarkCoffees.style.display="inline-block";
+    allDarkCoffees.innerText = theDarkCoffees;
+});
+darkCoffeeCup.addEventListener("mouseleave", function(){
+    allDarkCoffees.style.display = "none";
+});
 var holidayCoffeeCup = document.getElementById("holidayCoffee");
 var allHolidayCoffees = document.getElementById("eachHoliday");
+holidayCoffeeCup.addEventListener("mouseover", function() {
+    var theHolidayCoffees = "";
+    allOfOurCoffees.forEach((coffee) => {
+        if (coffee.roast === "holiday"){
+            theHolidayCoffees += coffee.name + "\n";
+        }
+    });
+    allHolidayCoffees.style.display = "inline-block";
+    allHolidayCoffees.innerText = theHolidayCoffees;
+});
 
-
+holidayCoffeeCup.addEventListener("mouseleave", function(){
+   allHolidayCoffees.style.display ="none";
+});
 
 
 
