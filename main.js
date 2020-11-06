@@ -1,17 +1,19 @@
 "use strict"
 
 function renderCoffee(coffee) {
-    var html = '<tr class="coffee">';
-    html += '<td>' + coffee.name + '</td>';
-    html += '<td>' + coffee.roast + '</td>';
-    html += '</tr>';
-
+    var html = `<li class="col-6 list-group-item coffee text-center">
+                <span class="coffee-name text-left">${coffee.name}</span> 
+                <span class="roast-type text-muted pl-5 text-right">${coffee.roast}</span>
+                </li>`;
     return html;
 }
 
 function renderCoffees(coffees) {
     var html = '';
     for(var i = 0; i <= coffees.length - 1;  i++) {
+        if ( (coffees.length / 2) == coffees[i]) {
+            html+= `<div class='w-100'></div>`;
+        }
         html += renderCoffee(coffees[i]);
     }
     return html;
@@ -30,36 +32,27 @@ function updateCoffees(e) {
     tbody.innerHTML = renderCoffees(filteredCoffees);
 }
 
-
 function addCoffee(e) {
-
     e.preventDefault()
-
     coffees.push(
-
         {
-            id: 15,
-            name: "newcoffee",
+            id: coffees.length+1,
+            name: addCoffeeName.value,
             roast: getSelectedOption(addRoastSelection)
-        }
-    )
-
-    updateCoffees(e)
-
+        })
+    updateCoffees(e);
 }
 
 function getSelectedOption(addRoastSelection) {
     var option;
-
     for(var i=0; i<addRoastSelection.options.length; i++){
         option = addRoastSelection.options[i]
-        if(option.selected == true){
+        if(option.selected === true){
             break;
         }
     }
     return option.value;
 }
-
 
 // from http://www.ncausa.org/About-Coffee/Coffee-Roasts-Guide
 var coffees = [
@@ -81,20 +74,15 @@ var coffees = [
 
 //HTML element variables
 var tbody = document.querySelector('#coffees');
+
+
 var roastInputText = document.getElementById('roast-text');
 var submitButton = document.querySelector('#submit');
-
 var roastSelection = document.querySelector('#roast-selection');
 var userTextRoastSelection = document.getElementById("roast-text");
-
 var addRoastSelection = document.getElementById('add-roast-selection');
-
-//callbacks
-var autoComplete = function(event) {
-
-}
+var addCoffeeName = document.getElementById('add-coffee-name');
 
 tbody.innerHTML = renderCoffees(coffees);
 roastInputText.addEventListener("keyup", updateCoffees);
-
 submitButton.addEventListener('click', addCoffee);

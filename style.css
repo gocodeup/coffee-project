@@ -1,47 +1,7 @@
-h1 {
-    text-align: center;
+.coffee-name {
+    font-size: 50px
 }
 
-h2 {
-
-}
-
-table {
-    border-collapse: collapse;
-    margin: 15px 0;
-}
-
-td, th {
-    border: 1px solid black;
-    padding: 5px 10px;
-}
-
-div {
-    display: inline-block;
-
-}
-
-#coffee-table {
-    float: left
-}
-
-#forms {
-    float: right;
-    margin-right: 50px;
-}
-
-#roast-selection {
-    display: block;
-}
-
-#roast-text{
-    display: block;
-}
-
-#add-roast-selection {
-    display: block;
-}
-
-#add-roast-text{
-    display: block;
+.roast-type {
+    font-size: 30px;
 }
