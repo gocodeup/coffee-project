@@ -187,3 +187,6 @@ a{
     width: 80vw;
     margin: auto;
 }
+#coffeeName {
+    padding-left: 1em;
+}

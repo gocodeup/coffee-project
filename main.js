@@ -202,9 +202,25 @@ season.addEventListener("click", function (){
     }
 });
 
-let coffeeName = document.getElementById("coffeeName");
 
+
+let coffeeName = document.getElementById("coffeeName");
+let inHouseCoffee = document.getElementById("inHouseCoffeeRoast");
 let allCoffeesSpot = document.getElementById("coffeesSpots");
+function logMatchingInHouseCoffees(){
+    let allCoffees = "";
+    var inHouse = inHouseCoffee.value;
+
+        allOfOurCoffees.forEach((coffee) => {
+            if (coffee.roast === inHouse) {
+                allCoffees += coffee.name + "\n" + "\n";
+            }
+        });
+
+    allCoffeesSpot.innerText = allCoffees;
+}
+setInterval(logMatchingInHouseCoffees, 250);
+
 function logMatchingCoffees(){
     let allCoffees = "";
     if(coffeeName.value.length > 0) {
@@ -217,8 +233,6 @@ function logMatchingCoffees(){
     allCoffeesSpot.innerText = allCoffees;
 }
 setInterval(logMatchingCoffees, 250);
-
-
 
 
 
