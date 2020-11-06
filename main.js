@@ -39,11 +39,15 @@
     var dark = document.getElementById("dark-btn");
     var medium = document.getElementById("medium-btn");
     var light = document.getElementById("light-btn");
+    var value = document.querySelectorAll(".radio-coffee")
+
+    console.log(renderCoffee(coffees));
+    console.log(value);
 
     function renderCoffee(coffee) {
     var html = '<div class="form-check">';
     //removed Id
-    html += '<input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios" value="option1" checked>';
+    html += '<input class="form-check-input radio-coffee" type="radio" name="exampleRadios" id="coffees" value=' + coffee.name + ">";
     html += '<label class="form-check-label" for="exampleRadios">' + coffee.name + '</label>';
     html += '</div>';
 
@@ -82,6 +86,7 @@ function updateCoffees(e) {
     coffeeBtns[2].innerHTML=renderCoffees(lightBucket);
 
 }
+
 
     dark.addEventListener("click", updateCoffees);
     medium.addEventListener("click", updateCoffees);
