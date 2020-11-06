@@ -1,4 +1,6 @@
+/*ID of H1 applied to parent container*/
 #h1 {
+    padding: 1em;
     justify-content: center;
 }
 
