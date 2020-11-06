@@ -54,80 +54,117 @@
 
 <!--main code begins-->
 <!--Search Section-->
-<div class="search">
-    <h1>Choose your coffee</h1>
-    <div class="dropdown">
-        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            Roast Level
-        </button>
-        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-            <a class="dropdown-item" href="#">Light</a>
-            <a class="dropdown-item" href="#">Medium</a>
-            <a class="dropdown-item" href="#">Dark</a>
-        </div>
-    </div>
-<!--Searchable Dropdown-->
-    <div class="container">
-        <h2>Filterable Dropdown</h2>
-        <p>Open the dropdown menu and type something in the input field to search for dropdown items:</p>
-        <p>Note that we have styled the input field to fit the dropdown items.</p>
-        <div class="dropdown">
-            <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Dropdown Example
-                <span class="caret"></span></button>
-            <ul class="dropdown-menu">
-                <input class="form-control" id="myInput" type="text" placeholder="Search..">
-                <li><a href="#">HTML</a></li>
-                <li><a href="#">CSS</a></li>
-                <li><a href="#">JavaScript</a></li>
-                <li><a href="#">jQuery</a></li>
-                <li><a href="#">Bootstrap</a></li>
-                <li><a href="#">Angular</a></li>
-            </ul>
-        </div>
-    </div>
 
-<!--    <script>-->
-<!--        $(document).ready(function(){-->
-<!--            $("#myInput").on("keyup", function() {-->
-<!--                var value = $(this).val().toLowerCase();-->
-<!--                $(".dropdown-menu li").filter(function() {-->
-<!--                    $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)-->
-<!--                });-->
-<!--            });-->
-<!--        });-->
-<!--    </script>-->
+<div class="container">
+    <div class="row searchbars">
+        <!-- Large button groups (default and split) -->
+        <div class="btn-group">
+            <button class="btn btn-lg dropdown-toggle " style="color: white" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Light Roast
+            </button>
+            <div class="dropdown-menu">
+                <a class="dropdown-item" href="#">Show All Light Roast</a>
+                <a class="dropdown-item" href="#">Light City</a>
+                <a class="dropdown-item" href="#">Half City</a>
+                <a class="dropdown-item" href="#">Cinnamon</a>
+            </div>
+        </div>
+        <div class="btn-group">
+            <button class="btn btn-lg dropdown-toggle " style="color: white" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Medium Roast
+            </button>
+            <div class="dropdown-menu">
+                ...
+            </div>
+        </div>
+        <div class="btn-group">
+            <button class="btn btn-lg dropdown-toggle " style="color: white" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Dark Roast
+            </button>
+            <div class="dropdown-menu">
+                ...
+            </div>
+        </div>
 
-</div>
-</body>
-</html>
+
+
 
 
 
 </div>
+</div>
+
+<hr>
+
+<!--the cards section-->
+<div class="container cards">
+    <div class="card-deck">
+        <div class="card">
+            <img src="img/card4light.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Light City</h5>
+                <p class="card-text">This roast will make you feel like you are on top of the empire state building, with its extravagant taste.</p>
+                <p class="card-text"><small class="text-muted">$8.35 - $12.30 /lb</small></p>
+            </div>
+        </div>
+        <div class="card">
+            <img src="img/card5light.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Half City</h5>
+                <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+                <p class="card-text"><small class="text-muted">$9.15 - $12.70 /lb</small></p>
+            </div>
+        </div>
+        <div class="card">
+            <img src="img/card6light.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Cinnamon</h5>
+                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+                <p class="card-text"><small class="text-muted">$11.15 - $15.30 /lb</small></p>
+            </div>
+        </div>
+    </div>
 
 
 
 
 
-<!--    <form>-->
-<!--        <label for="roast-selection"></label>-->
-<!--        <select id="roast-selection">-->
-<!--            <option>light</option>-->
-<!--            <option>medium</option>-->
-<!--            <option>dark</option>-->
-<!--        </select>-->
-<!--        <input id="submit" type="submit" />-->
-<!--    </form>-->
-<!--    <table>-->
-<!--        <thead>-->
-<!--            <tr>-->
-<!--                <th>ID</th>-->
-<!--                <th>NAME</th>-->
-<!--                <th>ROAST</th>-->
-<!--            </tr>-->
-<!--        </thead>-->
-<!--        <tbody id="coffees"></tbody>-->
-<!--    </table>-->
+
+
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+    <form>
+        <label for="roast-selection"></label>
+        <select id="roast-selection">
+            <option>light</option>
+            <option>medium</option>
+            <option>dark</option>
+        </select>
+        <input id="submit" type="submit" />
+    </form>
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>NAME</th>
+                <th>ROAST</th>
+            </tr>
+        </thead>
+        <tbody id="coffees"></tbody>
+    </table>
 
 
 
