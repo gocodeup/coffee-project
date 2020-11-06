@@ -111,8 +111,8 @@ td, th, button {
     text-align: center;
 }
 .availableCoffeesSpot{
-    width: 100%;
-    border: 3px solid black;
+    width: 50%;
+    height: 100%;
     text-align: center;
     /*margin: auto;*/
     display: flex;
@@ -129,4 +129,22 @@ td, th, button {
     display: flex;
     flex-direction: column;
     justify-content: center;
+}
+.coffeeInput {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 5vh;
+}
+#customCoffeeButton {
+    line-height: 3vh;
+    margin: auto 0;
+}
+.companyProduct {
+    height: 100%;
+    width: 50%
+}
+.footer {
+    height: 50vh;
+    width: 100vw;
 }
