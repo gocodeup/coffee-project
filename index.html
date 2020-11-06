@@ -6,8 +6,10 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+    <!--Coffee Header-->
     <h1>Coffee!</h1>
 
+    <!--Dropdown Roast Selection Menu -->
     <form>
         <label for="roast-selection"></label>
         <select id="roast-selection">
@@ -16,10 +18,38 @@
             <option>dark</option>
             <option>all</option>
         </select>
+
+        <!--Coffee Submit Button for Dropdown Menu-->
         <input id="submit" type="submit" />
     </form>
 
-    <input type="text" id="coffee-search" onkeyup="myFunction()" placeholder="Search for names..">
+    <!--Search Bar for Coffees-->
+    <input type="text" id="coffee-search" onkeyup="searchFunction()">
+
+
+    <!--STARTING ADD A COFFEE SECTION-->
+
+    <!--Add a Coffee Header -->
+    <h1>Add a Coffee</h1>
+
+    <!--Add a Coffee Form-->
+    <form>
+        <!--Dropdown Roast Selection Menu -->
+        <label for="add-roast-selection"></label>
+        <select id="add-roast-selection">
+            <option>light</option>
+            <option>medium</option>
+            <option>dark</option>
+        </select>
+
+        <!--Add a Coffee: Name Input-->
+        <input type="text" id="coffee-name" onkeyup="myFunction()">
+
+        <!--Submit button for Dropdown Roast Selection Menu-->
+        <input id="submit-new-coffee" type="submit" />
+    </form>
+
+
     <div>
         <table id="coffee-table">
             <thead>
