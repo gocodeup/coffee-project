@@ -69,13 +69,12 @@ var submitButton = document.querySelector('#submit');
 var roastSelection = document.querySelector('#roast-selection');
 
 
-//changing the innerHTML of tbody using the function below
+//changing the innerHTML of tbody using the renderCoffees function
 tbody.innerHTML = renderCoffees(coffees);
 
 
 //Event listener for the submitButton(that is what is making the button actually work)
 submitButton.addEventListener('click', updateCoffees);
-
 
 
 //Function for Filter Table(searching through specific data in a table)
@@ -100,17 +99,25 @@ function searchFunction() {
 
 
 
-//**************************
-// variable add coffee button
+//Function to add new coffee to table body
+function addNewCoffee(event){
+    event.preventDefault(); // don't submit the form, we just want to update the data
+    var newCoffeeName = document.forms.coffeeForm.coffeeName;
+    var newCoffeeRoast = document.forms.coffeeForm.addRoast;
+    var userCreatedCoffee = {
+        id: coffees.length + 1,
+        name: newCoffeeName.value,
+        roast: newCoffeeRoast.value
+    };
+    console.log(newCoffeeName);
+    console.log(newCoffeeRoast);
+    coffees.push(userCreatedCoffee);
+    tbody.innerHTML = renderCoffees(coffees);
+}
+
+
+// Variable add coffee button
 var addCoffeeButton = document.querySelector("#submit-new-coffee");
 
 // Event listener for submit new coffee button.
 addCoffeeButton.addEventListener("click", addNewCoffee);
-//***************************
-//Function to add new coffee to the coffee array.
-function addNewCoffee(){
-    var newCoffeeName = document.forms.coffeeForm.coffeeName;
-    console.log(newCoffeeName.value);
-}
-
-// tbody.innerHTML = addNewCoffee(coffees);
