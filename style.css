@@ -8,9 +8,26 @@ td, th {
     padding: 5px 10px;
 }
 body{
-    background-color: saddlebrown;
+    background-color: #6d350d;
+    background-image: url("img/coffee-beans.png");
+    /*height: 100%;*/
+    /*background-position: center;*/
+    /*background-repeat: no-repeat;*/
+    /*background-size: cover;*/
 }
 .coffee{
     color: lightgoldenrodyellow;
+}
+h1{
+    text-align: center;
+    color: lightgoldenrodyellow;
+}
+table{
+    margin: 0;
+    width: 100%;
+}
+.card{
+    background-color: #474444;
+    margin: 1em 1em;
 }
 
