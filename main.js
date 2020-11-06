@@ -57,7 +57,9 @@ var allOfOurCoffees = [
 
 var lightCoffeeCup = document.getElementById("lightCoffee");
 var allLightCoffees = document.getElementById("eachLight");
+var nonLightCoffeeHover = false;
 lightCoffeeCup.addEventListener("mouseover", function(){
+    // nonLightCoffeeHover = false;
    var theLightCoffees = "";
    allOfOurCoffees.forEach((coffee) =>{
       if(coffee.roast === "light"){
@@ -68,8 +70,14 @@ lightCoffeeCup.addEventListener("mouseover", function(){
    allLightCoffees.innerText = theLightCoffees;
 });
 
-lightCoffeeCup.addEventListener("mouseleave", function(){
+function leftLightCoffee () {
     allLightCoffees.style.display = "none";
+}
+lightCoffeeCup.addEventListener("mouseleave", function(){
+    nonLightCoffeeHover = true;
+    if (nonLightCoffeeHover) {
+        setInterval(leftLightCoffee, 2000)
+    }
 });
 
 var mediumCoffeeCup = document.getElementById("mediumCoffee");

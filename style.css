@@ -108,6 +108,7 @@ td, th, button {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    text-align: center;
 }
 .availableCoffeesSpot{
     width: 100%;
@@ -120,4 +121,12 @@ td, th, button {
 }
 #coffeesSpots{
     margin-right: 2em;
+}
+.coffeeWord {
+    font-family: 'Bitter', sans-serif;
+}
+.dateContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
