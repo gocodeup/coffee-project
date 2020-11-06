@@ -18,16 +18,14 @@ function renderCoffees(coffees) {
 }
 
 function updateCoffees(e) {
-    debugger
     e.preventDefault(); // don't submit the form, we just want to update the data
     var selectedRoast = roastSelection.value;
     var selectedUserTextRoast = userTextRoastSelection.value.toLowerCase();
     var filteredCoffees = [];
     coffees.forEach(function(coffee) {
-        if (coffee.roast === selectedRoast && coffee.name.toLowerCase().includes(selectedUserTextRoast)) {
+        if ((coffee.roast === selectedRoast || coffee.roast) && coffee.name.toLowerCase().includes(selectedUserTextRoast)) {
             filteredCoffees.push(coffee);
         }
-
         // left off with adding an else statement to account for 'all' functionality
     });
     tbody.innerHTML = renderCoffees(filteredCoffees);
@@ -51,13 +49,19 @@ var coffees = [
     {id: 14, name: 'French', roast: 'dark'},
 ];
 
+//HTML element variables
 var tbody = document.querySelector('#coffees');
+var roastInputText = document.getElementById('roast-text');
 var submitButton1 = document.querySelector('#submit1');
 var submitButton2 = document.querySelector('#submit2');
 var roastSelection = document.querySelector('#roast-selection');
 var userTextRoastSelection = document.getElementById("roast-text");
 
-tbody.innerHTML = renderCoffees(coffees);
+//callbacks
+var autoComplete = function(event) {
 
-submitButton1.addEventListener('click', updateCoffees);
+}
+
+tbody.innerHTML = renderCoffees(coffees);
+roastInputText.addEventListener("keyup", updateCoffees);
 submitButton2.addEventListener('click', updateCoffees);
