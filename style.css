@@ -1,33 +1,36 @@
-table {
-    border-collapse: collapse;
-    margin: 15px 0;
+
+* {
+    box-sizing: border-box;
 }
 
-td, th {
-    border: 1px solid black;
-    padding: 5px 10px;
+body {
+    background-color: #5de6de;
+    background-image: linear-gradient(315deg, #5de6de 0%, #b58ecc 74%);
 }
-/*.carousel-inner{*/
-/*    height: 250px;*/
-/*}*/
 
 img {
     height: 200px;
+    opacity: .65;
 }
 
 .store {
     position: absolute;
     z-index: 15;
-    color: aqua;
+    color: #ff7700;
+    font-family: "Henny Penny", cursive;
+    top: 8px;
 }
 .lead {
     position: absolute;
     z-index: 15;
-    color: chartreuse;
+    color: #ff9c44;
+    bottom: 0;
+    font-family: "Josephine Sans", sans-serif;
+    font-style: italic;
 }
-#jumbo {
-    background-color: #d5adc8;
-    background-image: linear-gradient(315deg, #d5adc8 0%, #ff8489 74%);
+.jumboCarousel {
+    background-color: #7f53ac;
+    background-image: linear-gradient(315deg, #7f53ac 0%, #647dee 74%);
 }
 
 .color {
@@ -35,8 +38,9 @@ img {
     background-image: linear-gradient(315deg, #5de6de 0%, #b58ecc 74%);
 }
 
+
 .card {
-    width: 18rem;
+    width: 18em;
     margin: auto;
 }
 

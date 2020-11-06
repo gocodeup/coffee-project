@@ -6,6 +6,8 @@
 		  content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <title>Boom! Roasted</title>
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<link href="https://fonts.googleapis.com/css2?family=Henny+Penny&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@1,600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -47,11 +49,11 @@
 <!--ending of navbar-->
 
 <!--beginning of carousel jumbotron-->
-<div class="jumbotron jumbotron-fluid p-2" id="jumbo">
+<div class="jumbotron jumbotron-fluid p-2 jumboCarousel text-center" id="jumbo">
 	<div class="container p-2">
 		<div id="carouselSlides" class="carousel slide" data-ride="carousel">
 			<div class="carousel-inner">
-				<h5 class="display-4 store">Welcome to Boom! Roasted.</h5>
+				<h2 class="store">Welcome to Boom! Roasted.</h2>
 				<p class="lead">A subdivision of the Michael Scott Paper Company.</p>
 				<div class="carousel-item active">
 					<img src="img/pexels-afta-putta-gunawan-683039.jpg" class="d-block w-100" alt="...">
@@ -79,35 +81,14 @@
 	</div>
 </div>
 
-<!--    <form>-->
-<!--        <label for="roast-selection"></label>-->
-<!--        <select id="roast-selection">-->
-<!--            <option>light</option>-->
-<!--            <option>medium</option>-->
-<!--            <option>dark</option>-->
-<!--        </select>-->
-<!--        <input id="submit" type="submit" />-->
-<!--    </form>-->
-
-<!--    <table>-->
-<!--        <thead>-->
-<!-- 		<tr>-->
-<!--&lt;!&ndash; removed Id&ndash;&gt;-->
-<!--                <th>NAME</th>-->
-<!--                <th>ROAST</th>-->
-<!--            </tr>-->
-<!--        </thead>-->
-<!--        <tbody id="coffees"></tbody>-->
-<!--    </table>-->
-
 <!--begin Cards-->
-<div class="container-fluid">
+<div class="container d-flex flex-column">
 	<div class="card coffee-card">
 		<img src="img/pexels-photo-373888.jpeg" class="card-img-top" alt="...">
 		<div class="card-body">
 			<h5 class="card-title roast" id="dark-roast">Dark</h5>
 			<p class="cardDescription">initial description</p>
-			<a class="btn btn-primary select-roast-btn" id="dark-btn">select this roast</a>
+			<a class="btn btn-primary select-roast-btn" id="dark-btn" data-dark>select this roast</a>
 <!--hidden radio-->
 			<div class="container-fluid coffee-select" id="coffees"></div>
 		</div>
@@ -118,7 +99,7 @@
 		<div class="card-body">
 			<h5 class="card-title roast" id="medium-roast">Medium</h5>
 			<p class="cardDescription">initial description</p>
-			<a class="btn btn-primary select-roast-btn" id="medium-btn">select this roast</a>
+			<a class="btn btn-primary select-roast-btn" id="medium-btn" data-medium>select this roast</a>
 			<!--hidden radio-->
 			<div class="container-fluid coffee-select"></div>
 		</div>
@@ -129,7 +110,7 @@
 		<div class="card-body">
 			<h5 class="card-title roast" id="light-roast">Light</h5>
 			<p class="cardDescription">initial description</p>
-			<a class="btn btn-primary select-roast-btn" id="light-btn">select this roast</a>
+			<a class="btn btn-primary select-roast-btn" id="light-btn" data-light>select this roast</a>
 			<!--hidden radio-->
 			<div class="container-fluid coffee-select"></div>
 		</div>
