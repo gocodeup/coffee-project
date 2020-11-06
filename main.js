@@ -1,3 +1,7 @@
+(function () {
+
+
+
 "use strict"
 
 function renderCoffee(coffee) {
@@ -8,6 +12,11 @@ function renderCoffee(coffee) {
     html += '</tr>';
 
     return html;
+}
+
+function renderRoasts(roasts) {
+    //removed Id
+    return '<h5 class="card-title roast">' + roastTypes.roast + '</h5>';
 }
 
 function renderCoffees(coffees) {
@@ -50,11 +59,42 @@ var coffees = [
     {id: 14, name: 'French', roast: 'dark'},
 ];
 
+var roastTypes = [{
+    roast: 'light'
+}, {
+    roast: 'medium'
+}, {
+    roast: 'dark'
+}]
+
 
 var tbody = document.querySelector('#coffees');
-var submitButton = document.querySelector('#submit');
+var roastButton = document.querySelectorAll('.select-roast-btn');
 var roastSelection = document.querySelector('#roast-selection');
+var roastTittle = document.querySelectorAll(".roast");
+var roastCard = document.querySelectorAll(".coffee-card");
+var coffeeBtns = document.querySelectorAll(".coffee-select");
 
-tbody.innerHTML = renderCoffees(coffees);
+function radioToggle() {
+    for (let coffee of coffeeBtns) {
+        console.log(coffee);
+        coffee.classList.toggle("coffee-select");
+    }
+}
 
-submitButton.addEventListener('click', updateCoffees);
+
+    for (let button of roastButton) {
+        button.addEventListener("click", radioToggle);
+    }
+
+
+// submitButton.addEventListener("click", displayCard)
+
+    // tbody.innerHTML = renderCoffees(coffees);
+
+// submitButton.addEventListener('click', )
+
+
+
+
+})();

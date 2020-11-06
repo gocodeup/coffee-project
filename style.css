@@ -7,15 +7,20 @@ td, th {
     border: 1px solid black;
     padding: 5px 10px;
 }
-.carousel-inner{
-    height: 300px;
+/*.carousel-inner{*/
+/*    height: 250px;*/
+/*}*/
+
+img {
+    height: 200px;
 }
-h5{
+
+.store {
     position: absolute;
     z-index: 15;
     color: aqua;
 }
-p{
+.lead {
     position: absolute;
     z-index: 15;
     color: chartreuse;
@@ -23,4 +28,18 @@ p{
 #jumbo {
     background-color: #d5adc8;
     background-image: linear-gradient(315deg, #d5adc8 0%, #ff8489 74%);
+}
+
+.color {
+    background-color: #5de6de;
+    background-image: linear-gradient(315deg, #5de6de 0%, #b58ecc 74%);
+}
+
+.card {
+    width: 18rem;
+    margin: auto;
+}
+
+.coffee-select {
+    display: none;
 }
