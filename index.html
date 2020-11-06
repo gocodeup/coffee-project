@@ -16,6 +16,7 @@
     <form>
         <label for="roast-selection"></label>
         <select id="roast-selection">
+            <option id="all">All Roasts</option>
             <option>light</option>
             <option>medium</option>
             <option>dark</option>
@@ -25,6 +26,27 @@
 
     <input type="text" id="user_coffee">
     <input type="button" value="Submit" id="search">
+
+<div class="container input">
+    <div class="row">
+        <div class="col-12">
+            <form>
+                <label for="roast-creation">Roast Type</label>
+                <select id="roast-creation">
+                    <option>light</option>
+                    <option>medium</option>
+                    <option>dark</option>
+                </select>
+                <input type='text' id='user_create' placeholder="Coffee Name">
+                <input type="button" class="button" id="add" value="Add To List">
+            </form>
+        </div>
+    </div>
+</div>
+
+<div class="container list">
+    <ul id='list'></ul>
+</div>
 
     <table>
         <thead>
