@@ -12,6 +12,10 @@ td, th {
     padding: 1em;
 }
 
-.hide {
-    display: none;
+/*.hide {*/
+/*    display: none;*/
+/*}*/
+
+#h1 {
+    justify-content: center;
 }
