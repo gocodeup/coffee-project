@@ -58,47 +58,22 @@
 <div class="container">
     <div class="row searchbars">
         <!-- Large button groups (default and split) -->
-        <div class="btn-group">
-            <button class="btn btn-lg dropdown-toggle " style="color: white" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Light Roast
-            </button>
-            <div class="dropdown-menu">
-                <a class="dropdown-item" href="#">Show All Light Roast</a>
-                <a class="dropdown-item" href="#">Light City</a>
-                <a class="dropdown-item" href="#">Half City</a>
-                <a class="dropdown-item" href="#">Cinnamon</a>
-            </div>
-        </div>
-        <div class="btn-group">
-            <button class="btn btn-lg dropdown-toggle " style="color: white" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Medium Roast
-            </button>
-            <div class="dropdown-menu">
-                ...
-            </div>
-        </div>
-        <div class="btn-group">
-            <button class="btn btn-lg dropdown-toggle " style="color: white" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Dark Roast
-            </button>
-            <div class="dropdown-menu">
-                ...
-            </div>
-        </div>
-
-
-
-
+        <select class="roast-level custom-select-lg mb-3">
+            <option selected>Choose Your Roast</option>
+            <option value="light1">Light</option>
+            <option value="2">Medium</option>
+            <option value="3">Dark</option>
+        </select>
 
 
 </div>
-</div>
+
 
 <hr>
 
 <!--the cards section-->
 <div class="container cards">
-    <div class="card-deck">
+    <div class="card-deck light1" >
         <div class="card">
             <img src="img/card4light.jpg" class="card-img-top" alt="...">
             <div class="card-body">
@@ -124,15 +99,7 @@
             </div>
         </div>
     </div>
-
-
-
-
-
-
-
-
-
+</div>
 </div>
 
 
