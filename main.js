@@ -26,10 +26,40 @@ function updateCoffees(e) {
         if ((coffee.roast === selectedRoast || coffee.roast) && coffee.name.toLowerCase().includes(selectedUserTextRoast)) {
             filteredCoffees.push(coffee);
         }
-        // left off with adding an else statement to account for 'all' functionality
     });
     tbody.innerHTML = renderCoffees(filteredCoffees);
 }
+
+
+function addCoffee(e) {
+
+    e.preventDefault()
+
+    coffees.push(
+
+        {
+            id: 15,
+            name: "newcoffee",
+            roast: getSelectedOption(addRoastSelection)
+        }
+    )
+
+    updateCoffees(e)
+
+}
+
+function getSelectedOption(addRoastSelection) {
+    var option;
+
+    for(var i=0; i<addRoastSelection.options.length; i++){
+        option = addRoastSelection.options[i]
+        if(option.selected == true){
+            break;
+        }
+    }
+    return option.value;
+}
+
 
 // from http://www.ncausa.org/About-Coffee/Coffee-Roasts-Guide
 var coffees = [
@@ -52,10 +82,12 @@ var coffees = [
 //HTML element variables
 var tbody = document.querySelector('#coffees');
 var roastInputText = document.getElementById('roast-text');
-var submitButton1 = document.querySelector('#submit1');
-var submitButton2 = document.querySelector('#submit2');
+var submitButton = document.querySelector('#submit');
+
 var roastSelection = document.querySelector('#roast-selection');
 var userTextRoastSelection = document.getElementById("roast-text");
+
+var addRoastSelection = document.getElementById('add-roast-selection');
 
 //callbacks
 var autoComplete = function(event) {
@@ -64,4 +96,5 @@ var autoComplete = function(event) {
 
 tbody.innerHTML = renderCoffees(coffees);
 roastInputText.addEventListener("keyup", updateCoffees);
-submitButton2.addEventListener('click', updateCoffees);
+
+submitButton.addEventListener('click', addCoffee);
