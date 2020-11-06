@@ -28,10 +28,8 @@ function updateCoffees(e) {
     var selectedRoast = roastSelection.value;
     var filteredCoffees = [];
     coffees.forEach(function(coffee) {
-        if (coffee.roast === selectedRoast) {
+        if (coffee.roast === selectedRoast || selectedRoast === "all") {
             filteredCoffees.push(coffee);
-        }else if(){
-            coffees;
         }
 
     });
@@ -83,7 +81,7 @@ submitButton.addEventListener('click', updateCoffees);
 
 
 //Function for Filter Table(searching through specific data in a table)
-function myFunction() {
+function searchFunction() {
     var input, filter, table, tr, td, i, txtValue;
     input = document.getElementById("coffee-search");
     filter = input.value.toUpperCase();
