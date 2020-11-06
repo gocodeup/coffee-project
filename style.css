@@ -3,6 +3,7 @@ html {
 }
 body {
     background-image: url("image/royal-sundance-papers-bright-white-linen.jpg");
+    font-family: "Bitter", sans-serif;
 }
 /*start dog logo*/
 /*img {*/
@@ -141,10 +142,42 @@ td, th, button {
     margin: auto 0;
 }
 .companyProduct {
-    height: 100%;
+    height: 65%;
     width: 50%
 }
 .footer {
-    height: 50vh;
-    width: 100vw;
+    height: 40vh;
+    width: 80vw;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+}
+.logo{
+    max-width: 100%;
+    max-height: 100%;
+}
+.social{
+    color: aliceblue;
+    background-color: #654321;
+    margin-right: .5em;
+}
+.socialMedia{
+    color: #654321;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-radius: 200px;
+    width: 65%;
+    height: 35%;
+    margin: auto;
+    padding: 1em;
+}
+a{
+    text-decoration: none;
+    color: #654321;
+}
+.followUsArea{
+    height: 10vh;
+    width: 80vw;
+    margin: auto;
 }

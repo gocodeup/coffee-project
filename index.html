@@ -5,6 +5,7 @@
     <title></title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Bitter:wght@500&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/36f035c426.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <header>
@@ -57,17 +58,30 @@
         <label>Coffee Name<input id="coffeeName"></label>
         <label>
             Don't see what you're looking for? Let us know here -->
-            <input id="customCoffee" placeholder="Your choice!">
+            <select id="customCoffeeRoast">
+                <option value="light">Light</option>
+                <option value="medium">Medium</option>
+                <option value="dark">Dark</option>
+            </select>
+            <input id="customCoffeeName" placeholder="Custom Coffee!" onfocus="this.value=''">
         </label>
         <button id="customCoffeeButton">Add your custom coffee</button>
     </div>
     <div class="footer">
+        <div class="companyProduct">
+            <img class="logo" src="image/falldog.jpg">
+        </div>
         <div class="availableCoffeesSpot">
             <p class="coffeeWord" id="coffeesSpots"></p>
         </div>
-
-        <div class="companyProduct">
-            <img src="image/falldog.jpg">
+    </div>
+    <hr>
+    <hr>
+    <div class="followUsArea">
+        <div class="socialMedia">
+            <a href="#"><p><i class="social fab fa-twitter"></i>Follow us on Twitter!</p></a>
+            <a href="#"><p><i class="social fab fa-facebook"></i>Find us on FaceBook!</p></a>
+            <a href="#"><p><i class="social fab fa-instagram"></i>Check out our Instagram</p></a>
         </div>
     </div>
     <script src="main.js"></script>
