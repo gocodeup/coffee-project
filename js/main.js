@@ -21,7 +21,8 @@ function renderCoffees(coffees) {
     return html;
 }
 
-//updating the table of coffees on the page
+//Updating table of coffees based on roast type selected from drop down menu.
+//Add an option to select all roasts for roast type
 function updateCoffees(e) {
     e.preventDefault(); // don't submit the form, we just want to update the data
     var selectedRoast = roastSelection.value;
@@ -29,7 +30,10 @@ function updateCoffees(e) {
     coffees.forEach(function(coffee) {
         if (coffee.roast === selectedRoast) {
             filteredCoffees.push(coffee);
+        }else if(){
+            coffees;
         }
+
     });
     tbody.innerHTML = renderCoffees(filteredCoffees);
 }
