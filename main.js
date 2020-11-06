@@ -30,36 +30,31 @@ function updateCoffees(e) {
     tbody.innerHTML = renderCoffees(filteredCoffees);
 }
 
-
 function addCoffee(e) {
-
     e.preventDefault()
-
     coffees.push(
-
         {
-            id: 15,
-            name: "newcoffee",
+            id: coffees.length+1,
+            name: addCoffeeName.value,
             roast: getSelectedOption(addRoastSelection)
-        }
-    )
-
-    updateCoffees(e)
-
+        })
+    updateCoffees(e);
 }
 
 function getSelectedOption(addRoastSelection) {
     var option;
-
     for(var i=0; i<addRoastSelection.options.length; i++){
         option = addRoastSelection.options[i]
-        if(option.selected == true){
+        if(option.selected === true){
             break;
         }
     }
     return option.value;
 }
 
+function idAutoIncrement(coffees) {
+    return coffees.length
+}
 
 // from http://www.ncausa.org/About-Coffee/Coffee-Roasts-Guide
 var coffees = [
@@ -83,18 +78,11 @@ var coffees = [
 var tbody = document.querySelector('#coffees');
 var roastInputText = document.getElementById('roast-text');
 var submitButton = document.querySelector('#submit');
-
 var roastSelection = document.querySelector('#roast-selection');
 var userTextRoastSelection = document.getElementById("roast-text");
-
 var addRoastSelection = document.getElementById('add-roast-selection');
-
-//callbacks
-var autoComplete = function(event) {
-
-}
+var addCoffeeName = document.getElementById('add-coffee-name');
 
 tbody.innerHTML = renderCoffees(coffees);
 roastInputText.addEventListener("keyup", updateCoffees);
-
 submitButton.addEventListener('click', addCoffee);
