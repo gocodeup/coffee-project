@@ -18,6 +18,7 @@ function renderCoffees(coffees) {
 }
 
 function updateCoffees(e) {
+    debugger
     e.preventDefault(); // don't submit the form, we just want to update the data
     var selectedRoast = roastSelection.value;
     var selectedUserTextRoast = userTextRoastSelection.value.toLowerCase();
@@ -26,6 +27,8 @@ function updateCoffees(e) {
         if (coffee.roast === selectedRoast && coffee.name.toLowerCase().includes(selectedUserTextRoast)) {
             filteredCoffees.push(coffee);
         }
+
+        // left off with adding an else statement to account for 'all' functionality
     });
     tbody.innerHTML = renderCoffees(filteredCoffees);
 }
