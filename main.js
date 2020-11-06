@@ -4,19 +4,55 @@
 
 "use strict"
 
-function renderCoffee(coffee) {
-    var html = '<tr class="coffee">';
+
+
+// from http://www.ncausa.org/About-Coffee/Coffee-Roasts-Guide
+    var coffees = [
+        {id: 1, name: 'Light City', roast: 'light'},
+        {id: 2, name: 'Half City', roast: 'light'},
+        {id: 3, name: 'Cinnamon', roast: 'light'},
+        {id: 4, name: 'City', roast: 'medium'},
+        {id: 5, name: 'American', roast: 'medium'},
+        {id: 6, name: 'Breakfast', roast: 'medium'},
+        {id: 7, name: 'High', roast: 'dark'},
+        {id: 8, name: 'Continental', roast: 'dark'},
+        {id: 9, name: 'New Orleans', roast: 'dark'},
+        {id: 10, name: 'European', roast: 'dark'},
+        {id: 11, name: 'Espresso', roast: 'dark'},
+        {id: 12, name: 'Viennese', roast: 'dark'},
+        {id: 13, name: 'Italian', roast: 'dark'},
+        {id: 14, name: 'French', roast: 'dark'},
+    ];
+
+    var roastTypes = [{
+        roast: 'light'
+    }, {
+        roast: 'medium'
+    }, {
+        roast: 'dark'
+    }]
+
+
+    // var tbody = document.querySelector('#coffees');
+    var roastButton = document.querySelectorAll('.select-roast-btn');
+    var roastSelection = document.querySelector('#roast-selection');
+    var roastTittle = document.querySelectorAll(".roast");
+    var roastCard = document.querySelectorAll(".coffee-card");
+    var coffeeBtns = document.querySelectorAll(".coffee-select");
+    var dark = document.getElementById("dark-btn");
+    var medium = document.getElementById("medium-btn");
+    var light = document.getElementById("light-btn");
+
+    console.log(coffeeBtns);
+
+    function renderCoffee(coffee) {
+    var html = '<div class="form-check">';
     //removed Id
-    html += '<td>' + coffee.name + '</td>';
-    html += '<td>' + coffee.roast + '</td>';
-    html += '</tr>';
+    html += '<input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios" value="option1" checked>';
+    html += '<label class="form-check-label" for="exampleRadios">' + coffee.name + '</label>';
+    html += '</div>';
 
     return html;
-}
-
-function renderRoasts(roasts) {
-    //removed Id
-    return '<h5 class="card-title roast">' + roastTypes.roast + '</h5>';
 }
 
 function renderCoffees(coffees) {
@@ -31,70 +67,27 @@ function renderCoffees(coffees) {
 
 function updateCoffees(e) {
     e.preventDefault(); // don't submit the form, we just want to update the data
-    var selectedRoast = roastSelection.value;
     var filteredCoffees = [];
     coffees.forEach(function(coffee) {
-        if (coffee.roast === selectedRoast) {
             filteredCoffees.push(coffee);
-        }
+
     });
-    tbody.innerHTML = renderCoffees(filteredCoffees);
+    for (let coffee of coffeeBtns) {
+        coffee.innerHTML=renderCoffees(filteredCoffees);
+    }
 }
 
-// from http://www.ncausa.org/About-Coffee/Coffee-Roasts-Guide
-var coffees = [
-    {id: 1, name: 'Light City', roast: 'light'},
-    {id: 2, name: 'Half City', roast: 'light'},
-    {id: 3, name: 'Cinnamon', roast: 'light'},
-    {id: 4, name: 'City', roast: 'medium'},
-    {id: 5, name: 'American', roast: 'medium'},
-    {id: 6, name: 'Breakfast', roast: 'medium'},
-    {id: 7, name: 'High', roast: 'dark'},
-    {id: 8, name: 'Continental', roast: 'dark'},
-    {id: 9, name: 'New Orleans', roast: 'dark'},
-    {id: 10, name: 'European', roast: 'dark'},
-    {id: 11, name: 'Espresso', roast: 'dark'},
-    {id: 12, name: 'Viennese', roast: 'dark'},
-    {id: 13, name: 'Italian', roast: 'dark'},
-    {id: 14, name: 'French', roast: 'dark'},
-];
-
-var roastTypes = [{
-    roast: 'light'
-}, {
-    roast: 'medium'
-}, {
-    roast: 'dark'
-}]
-
-
-var tbody = document.querySelector('#coffees');
-var roastButton = document.querySelectorAll('.select-roast-btn');
-var roastSelection = document.querySelector('#roast-selection');
-var roastTittle = document.querySelectorAll(".roast");
-var roastCard = document.querySelectorAll(".coffee-card");
-var coffeeBtns = document.querySelectorAll(".coffee-select");
-var dark = document.getElementById("dark-btn");
-var medium = document.getElementById("medium-btn");
-var light = document.getElementById("light-btn");
-
-    console.log(coffeeBtns);
-
-//     function radioToggle() {
-//     for (let coffee of coffeeBtns) {
-//
-//     }
-// }
-
+    dark.addEventListener("click", updateCoffees);
+    medium.addEventListener("click", updateCoffees);
+    light.addEventListener("click", updateCoffees);
     dark.onclick = () => {
         coffeeBtns[0].classList.toggle("coffee-select")
     }
-
-    dark.onclick = () => {
+    medium.onclick = () => {
         coffeeBtns[1].classList.toggle("coffee-select")
     }
 
-    dark.onclick = () => {
+    light.onclick = () => {
         coffeeBtns[2].classList.toggle("coffee-select")
     }
     // for (let button of roastButton) {
@@ -122,11 +115,11 @@ var light = document.getElementById("light-btn");
 
 // submitButton.addEventListener("click", displayCard)
 
-    // tbody.innerHTML = renderCoffees(coffees);
+    // renderCoffees(coffees);
 
 // submitButton.addEventListener('click', )
-
-
-
+//
+//     coffeeBtns[0].innerHTML = renderCoffees(filteredCoffees);
+//
 
 })();
