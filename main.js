@@ -74,18 +74,50 @@ var roastSelection = document.querySelector('#roast-selection');
 var roastTittle = document.querySelectorAll(".roast");
 var roastCard = document.querySelectorAll(".coffee-card");
 var coffeeBtns = document.querySelectorAll(".coffee-select");
+var dark = document.getElementById("dark-btn");
+var medium = document.getElementById("medium-btn");
+var light = document.getElementById("light-btn");
 
-function radioToggle() {
-    for (let coffee of coffeeBtns) {
-        console.log(coffee);
-        coffee.classList.toggle("coffee-select");
+    console.log(coffeeBtns);
+
+//     function radioToggle() {
+//     for (let coffee of coffeeBtns) {
+//
+//     }
+// }
+
+    dark.onclick = () => {
+        coffeeBtns[0].classList.toggle("coffee-select")
     }
-}
 
-
-    for (let button of roastButton) {
-        button.addEventListener("click", radioToggle);
+    dark.onclick = () => {
+        coffeeBtns[1].classList.toggle("coffee-select")
     }
+
+    dark.onclick = () => {
+        coffeeBtns[2].classList.toggle("coffee-select")
+    }
+    // for (let button of roastButton) {
+    //     button.addEventListener("click", () => {
+    //         switch (button) {
+    //             case dark:
+    //                 coffeeBtns[0].classList.toggle("coffee-select");
+    //                 break;
+    //         }
+    //         switch (button) {
+    //             case medium:
+    //                 coffeeBtns[1].classList.toggle("coffee-select");
+    //                 break;
+    //         }
+    //         switch (button) {
+    //             case light:
+    //                 coffeeBtns[2].classList.toggle("coffee-select");
+    //                 break;
+    //         }
+    //
+    //     });
+    //
+    // }
 
 
 // submitButton.addEventListener("click", displayCard)
