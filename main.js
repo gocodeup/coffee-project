@@ -2,8 +2,8 @@
 
 function renderCoffee(coffee) {
     var html = `<li class="col-6 list-group-item coffee text-center">
-                <span class="coffee-name text-left">${coffee.name}</span> 
-                <span class="roast-type text-muted pl-5 text-right">${coffee.roast}</span>
+                <div class="coffee-name text-center">${coffee.name}</div> 
+                <div class="roast-type text-muted text-center">${coffee.roast}</div>
                 </li>`;
     return html;
 }

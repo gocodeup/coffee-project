@@ -1,7 +1,63 @@
+*{
+
+    font-family: Arvo, serif;
+}
+
 .coffee-name {
     font-size: 50px
 }
 
-.roast-type {
+.roast-type{
+    display: block;
+    text-align: center;
     font-size: 30px;
+}
+
+h2{
+    font-size: 3.5rem;
+}
+
+#roast-selection{
+    width: 38%;
+    vertical-align: super;
+}
+
+#roast-text{
+    width: 38%;
+    vertical-align: super;
+
+}
+
+.addCoffeeBtn{
+    justify-content: center;
+    width: auto;
+    vertical-align: super;
+    padding-left: 15px;
+}
+
+#leftForm{
+    height: 65px;
+}
+
+#rightForm{
+    height: 65px;
+}
+
+#add-coffee-name{
+    width: 38%;
+    vertical-align: super;
+    margin-right: 15px;
+    horiz-align: right;
+}
+
+#add-roast-selection{
+    width: 38%;
+    vertical-align: super;
+}
+
+label{
+    font-size: 35px;
+    margin-bottom: 0 !important;
+    margin-left: 0;
+
 }
