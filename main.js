@@ -31,12 +31,36 @@ function updateCoffees(e) {
 }
 
 function updateCoffeesNew() {
-    var selectedCoffee = input.value;
+    var selectedCoffee = input.value.toUpperCase();
     var filteredCoffees = [];
     coffees.forEach(function(coffee) {
-        if ((coffee.name.toUpperCase() === selectedCoffee.toUpperCase()) || (coffee.name.toLowerCase() === selectedCoffee.toLowerCase())) {
+        if (coffee.name.toUpperCase() === selectedCoffee) {
             filteredCoffees.push(coffee);
         }
+    });
+    tbody.innerHTML = renderCoffees(filteredCoffees);
+}
+
+function updateCoffeesKey() {
+    var selectedCoffee = input.value.toLowerCase();
+    var selectedCoffeeArray = selectedCoffee.split("");
+    var filteredCoffees = [];
+    coffees.forEach(function(coffee) {
+        var lower = coffee.name.toLowerCase();
+        var coffeeArray = lower.split("")
+        for(var i = 0; i < selectedCoffeeArray; i++) {
+            if (coffeeArray.includes(selectedCoffeeArray[i])) {
+                // if (!(filteredCoffees.includes(coffee))) {
+                    filteredCoffees.push(coffee);
+                // }
+            }
+        }
+        // } if (coffeeArray.includes(selectedCoffee)) {
+        //     filteredCoffees.push(coffee);
+        // }
+    console.log(coffeeArray)
+    console.log(selectedCoffee)
+    console.log(filteredCoffees)
     });
     tbody.innerHTML = renderCoffees(filteredCoffees);
 }
@@ -69,5 +93,6 @@ tbody.innerHTML = renderCoffees(coffees);
 
 inputButton.addEventListener('click', updateCoffeesNew)
 submitButton.addEventListener('click', updateCoffees);
+input.addEventListener('input', updateCoffeesKey)
 
 
