@@ -57,5 +57,12 @@ tbody.innerHTML = renderCoffees(coffees);
 submitButton.addEventListener('click', updateCoffees);
 
 
+const selectElement = document.querySelector('.roast-level');
+
+selectElement.addEventListener('change', (event) => {
+    const result = document.querySelector('.light1');
+    result.textContent = `You like ${event.target.value}`;
+});
+
 //Search Dropdown begins
 
