@@ -109,3 +109,15 @@ td, th, button {
     justify-content: center;
     align-items: center;
 }
+.availableCoffeesSpot{
+    width: 100%;
+    border: 3px solid black;
+    text-align: center;
+    /*margin: auto;*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#coffeesSpots{
+    margin-right: 2em;
+}

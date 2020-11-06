@@ -52,22 +52,7 @@ var allOfOurCoffees = [
     {id: 11, name: 'Espresso', roast: 'dark'},
     {id: 12, name: 'Viennese', roast: 'dark'},
     {id: 13, name: 'Italian', roast: 'dark'},
-    {id: 14, name: 'French', roast: 'dark'},
-    {id: 15, name: 'GingerBread', roast: 'holiday'},
-    {id: 16, name: 'PepperMint', roast: 'holiday'},
-    {id: 17, name: 'Eggnog', roast: 'holiday'},
-    {id: 18, name: 'Sugar Cookie', roast: 'holiday'},
-    {id: 19, name: 'Chestnut', roast: 'holiday'},
-    {id: 20, name: 'Irish creme', roast: 'holiday'},
-    {id: 21, name: 'Green matcha', roast: 'holiday'},
-    {id: 22, name: 'Mint', roast: 'holiday'},
-    {id: 23, name: 'Hibiscus', roast: 'holiday'},
-    {id: 24, name: 'Lavender', roast: 'holiday'},
-    {id: 25, name: 'Pumpkin Spice', roast: 'holiday'},
-    {id: 26, name: 'Maple', roast: 'holiday'},
-    {id: 27, name: 'Chai', roast: 'holiday'},
-    {id: 28, name: 'Apple cider', roast: 'holiday'},
-    {id: 29, name: 'Caramel', roast: 'holiday'}
+    {id: 14, name: 'French', roast: 'dark'}
 ]
 
 var lightCoffeeCup = document.getElementById("lightCoffee");
@@ -160,51 +145,52 @@ holidayCoffeeCup.addEventListener("mouseleave", function(){
 
 
 
-// let season = document.getElementById("seasons");
-// let chooseDate = document.getElementById("chooseDate");
-//
-// season.addEventListener("click", function (){
-//     let month = chooseDate.value.substring(5, 7);
-//     // season.disabled = true;
-//     coffees = coffees.splice(0, 14);
-//     if(month >= 3 && month <= 5){
-//         document.body.style.backgroundColor = "#edf816";
-//         springCoffees.forEach((coffee) =>{
-//             coffees.push(coffee);
-//         });
-//     } else if(month >= 6 && month <= 8){
-//         document.body.style.backgroundColor = "#48acc5";
-//         summerCoffees.forEach((coffee) =>{
-//             coffees.push(coffee);
-//         });
-//     } else if(month >= 9 && month <= 11){
-//         document.body.style.backgroundColor = "#d47529";
-//         fallCoffees.forEach((coffee) =>{
-//             coffees.push(coffee);
-//         });
-//     } else if((month > 11 && month < 13) || (month < 3 && month > 0)){
-//         document.body.style.backgroundColor = "#64c850";
-//         winterCoffees.forEach((coffee) =>{
-//             coffees.push(coffee);
-//         });
-//     } else if(month === ""){
-//         console.log("no input");
-//     }
-// });
-//
-// let coffeeName = document.getElementById("coffeeName");
+let season = document.getElementById("seasons");
+let chooseDate = document.getElementById("chooseDate");
 
-// let allCoffeesSpot = document.getElementById("coffeesSpots");
-// function logMatchingCoffees(){
-//     let allCoffees = "";
-//     coffees.forEach((coffee) =>{
-//         if(coffee.name.toLowerCase().includes(coffeeName.value.toLowerCase())){
-//             allCoffees+=coffee.name + "\n";
-//         }
-//     });
-//     allCoffeesSpot.innerText = allCoffees;
-// }
-// setInterval(logMatchingCoffees, 250);
+season.addEventListener("click", function (){
+    let month = chooseDate.value.substring(5, 7);
+    allOfOurCoffees = coffees;
+    if(month >= 3 && month <= 5){
+        document.body.style.backgroundColor = "#edf816";
+        springCoffees.forEach((coffee) =>{
+            allOfOurCoffees.push(coffee);
+        });
+    } else if(month >= 6 && month <= 8){
+        document.body.style.backgroundColor = "#48acc5";
+        summerCoffees.forEach((coffee) =>{
+            allOfOurCoffees.push(coffee);
+        });
+    } else if(month >= 9 && month <= 11){
+        document.body.style.backgroundColor = "#d47529";
+        fallCoffees.forEach((coffee) =>{
+            allOfOurCoffees.push(coffee);
+        });
+    } else if((month > 11 && month < 13) || (month < 3 && month > 0)){
+        document.body.style.backgroundColor = "#64c850";
+        winterCoffees.forEach((coffee) =>{
+            allOfOurCoffees.push(coffee);
+        });
+    } else if(month === ""){
+        console.log("no input");
+    }
+});
+
+let coffeeName = document.getElementById("coffeeName");
+
+let allCoffeesSpot = document.getElementById("coffeesSpots");
+function logMatchingCoffees(){
+    let allCoffees = "";
+    if(coffeeName.value.length > 0) {
+        allOfOurCoffees.forEach((coffee) => {
+            if (coffee.name.toLowerCase().includes(coffeeName.value.toLowerCase())) {
+                allCoffees += coffee.name + "\n" + "\n";
+            }
+        });
+    }
+    allCoffeesSpot.innerText = allCoffees;
+}
+setInterval(logMatchingCoffees, 250);
 
 
 
