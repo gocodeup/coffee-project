@@ -80,6 +80,9 @@ submitButton.addEventListener('click', updateCoffees);
 
 
 
+
+
+
 //Function for Filter Table(searching through specific data in a table)
 function searchFunction() {
     var input, filter, table, tr, td, i, txtValue;
@@ -99,3 +102,17 @@ function searchFunction() {
         }
     }
 }
+//**************************
+// variable add coffee button
+var addCoffeeButton = document.querySelector("#submit-new-coffee");
+
+// Event listener for submit new coffee button.
+addCoffeeButton.addEventListener("click", addNewCoffee);
+//***************************
+//Function to add new coffee to the coffee array.
+function addNewCoffee(roast, name){
+
+
+}
+
+
