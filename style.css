@@ -21,13 +21,14 @@ form {
 
 .divTableHeading {
     display: flex;
-    justify-content: center;
+    align-content: center;
+    text-align: center;
     margin-bottom: 1.5em;
 }
 
 .divTableRow {
     display: flex;
-    /*flex-direction: row;*/
+    flex-direction: column;
     justify-content: center;
     width: 100%
 }
@@ -46,11 +47,13 @@ form {
 
 .coffee-select{
     /*border: 2px solid #654321;*/
+    width: 50%;
     border: 2px solid white;
     padding: 1em;
     margin: 1em;
-    /*color: #654321;*/
-    color: white;
+    color: black;
+    font-weight: bold;
+    background-color: white;
 
 }
 
@@ -60,13 +63,52 @@ form {
     margin: 3px;
 }
 
-.roast-info{
+.info{
     /*color: #654321;*/
     color: white;
     display:flex;
-    flex-direction: row;
-    align-items: flex-end;
+    flex-wrap:nowrap;
+    /*flex-direction: row;*/
+    align-self: center;
 }
+
+.choose-coffee{
+    display: flex;
+    justify-content: center;
+}
+
+
+
+
+
+@media screen and (min-width: 768px){
+    .divTable{
+        display:flex;
+        flex-wrap: wrap;
+    }
+
+    .divTableRow{
+        width: 25%;
+        margin: 0em;
+    }
+
+    .divTableHeading{
+        display: none;
+    }
+
+    .fas{
+
+    }
+
+    .coffee-pic{
+        display:flex;
+        justify-content: center;
+        /*mix-blend-mode: multiply;*/
+        width:20%;
+        height:20%;
+    }
+}
+
 
 
 
