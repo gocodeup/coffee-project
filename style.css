@@ -3,11 +3,16 @@
     box-sizing: border-box;
 }
 
-body {
+.coffee-card-container {
     background-color: #5de6de;
     background-image: linear-gradient(315deg, #5de6de 0%, #b58ecc 74%);
 }
-
+body{
+    /*background-color: #7f5a83;*/
+    /*background-image: linear-gradient(315deg, #7f5a83 0%, #0d324d 74%);*/
+    background-color: #5de6de;
+    background-image: linear-gradient(-315deg, #5de6de 0%, #b58ecc 74%);
+}
 img {
     height: 200px;
     opacity: .65;
@@ -23,21 +28,24 @@ img {
 .lead {
     position: absolute;
     z-index: 15;
-    color: #ff9c44;
+    color: #de8a3d;
     bottom: 0;
     font-family: "Josephine Sans", sans-serif;
     font-style: italic;
 }
 .jumboCarousel {
-    background-color: #7f53ac;
-    background-image: linear-gradient(315deg, #7f53ac 0%, #647dee 74%);
-}
-
-.color {
     background-color: #5de6de;
     background-image: linear-gradient(315deg, #5de6de 0%, #b58ecc 74%);
 }
 
+.color {
+    background-color: #5de6de;
+    background-image: linear-gradient(-315deg, #5de6de 0%, #b58ecc 74%);
+}
+#nav-boom{
+    color: #ff8400;
+    font-family: "Henny Penny", cursive;
+}
 
 .card {
     width: 18em;
@@ -46,4 +54,7 @@ img {
 
 .coffee-select {
     display: none;
+}
+.add-to-cart-btn{
+    float: right;
 }

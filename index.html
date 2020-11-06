@@ -15,7 +15,7 @@
 <!--adding Navbar-->
 <!--beginning of navbar-->
 <nav class="navbar navbar-expand-lg navbar-light color">
-	<a class="navbar-brand" href="#">Boom! Roasted!</a>
+	<a class="navbar-brand" id="nav-boom" href="#">Boom! Roasted!</a>
 	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 		<span class="navbar-toggler-icon"></span>
 	</button>
@@ -26,17 +26,28 @@
 				<a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
 			</li>
 			<li class="nav-item">
-				<a class="nav-link" href="#">Link</a>
+				<a class="nav-link" href="#">About</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" href="#">Contact</a>
 			</li>
 			<li class="nav-item dropdown">
 				<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-					Dropdown
+					Locations
 				</a>
 				<div class="dropdown-menu" aria-labelledby="navbarDropdown">
-					<a class="dropdown-item" href="#">Action</a>
-					<a class="dropdown-item" href="#">Another action</a>
+					<h4>Inside Texas</h4>
 					<div class="dropdown-divider"></div>
-					<a class="dropdown-item" href="#">Something else here</a>
+					<a class="dropdown-item" href="#">Riverwalk</a>
+					<a class="dropdown-item" href="#">Thousand Oaks</a>
+					<a class="dropdown-item" href="#">Austin</a>
+					<div class="dropdown-divider"></div>
+					<h4>Outside of Texas</h4>
+					<div class="dropdown-divider"></div>
+					<a class="dropdown-item" href="#">Orlando</a>
+					<a class="dropdown-item" href="#">Seattle</a>
+					<a class="dropdown-item" href="#">San Francisco</a>
+					<div class="dropdown-divider"></div>
 				</div>
 			</li>
 		</ul>
@@ -82,8 +93,8 @@
 </div>
 
 <!--begin Cards-->
-<div class="container d-flex flex-column">
-	<div class="card coffee-card">
+<div class="container-fluid d-flex flex-wrap coffee-card-container">
+	<div class="card mt-2 coffee-card bg-transparent">
 		<img src="img/pexels-photo-373888.jpeg" class="card-img-top" alt="...">
 		<div class="card-body">
 			<h5 class="card-title roast" id="dark-roast">Dark</h5>
@@ -91,10 +102,11 @@
 			<a class="btn btn-primary select-roast-btn" id="dark-btn" data-dark>select this roast</a>
 <!--hidden radio-->
 			<div class="container-fluid coffee-select" id="coffees"></div>
+			<a class="btn btn-primary add-to-cart-btn" id="cart-btn-1" data-cart>Add to Cart</a>
 		</div>
 	</div>
 
-	<div class="card mt-2 coffee-card">
+	<div class="card mt-2 coffee-card bg-transparent">
 		<img src="img/pexels-photo-373888.jpeg" class="card-img-top" alt="...">
 		<div class="card-body">
 			<h5 class="card-title roast" id="medium-roast">Medium</h5>
@@ -102,10 +114,11 @@
 			<a class="btn btn-primary select-roast-btn" id="medium-btn" data-medium>select this roast</a>
 			<!--hidden radio-->
 			<div class="container-fluid coffee-select"></div>
+			<a class="btn btn-primary add-to-cart-btn" id="cart-btn-1" data-cart>Add to Cart</a>
 		</div>
 	</div>
 
-	<div class="card mt-2 coffee-card">
+	<div class="card mt-2 coffee-card bg-transparent">
 		<img src="img/pexels-photo-373888.jpeg" class="card-img-top" alt="...">
 		<div class="card-body">
 			<h5 class="card-title roast" id="light-roast">Light</h5>
@@ -113,6 +126,7 @@
 			<a class="btn btn-primary select-roast-btn" id="light-btn" data-light>select this roast</a>
 			<!--hidden radio-->
 			<div class="container-fluid coffee-select"></div>
+			<a class="btn btn-primary add-to-cart-btn" id="cart-btn-1" data-cart>Add to Cart</a>
 		</div>
 	</div>
 </div>
