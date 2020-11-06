@@ -1,3 +1,8 @@
+body {
+    /*background-image: url("img/white-wood-coffee-cups.jpg");*/
+    background-color: #654321;
+}
+
 .coffee-info {
     display: flex;
     flex-direction: column;
@@ -6,6 +11,8 @@
 
 h1 {
     text-align: center;
+    /*color: #654321;*/
+    color: white;
 }
 
 form {
@@ -38,19 +45,28 @@ form {
 }
 
 .coffee-select{
-    border: 2px solid #654321;
+    /*border: 2px solid #654321;*/
+    border: 2px solid white;
     padding: 1em;
     margin: 1em;
+    /*color: #654321;*/
+    color: white;
+
 }
 
 .name-info{
-    color: #654321;
+    /*color: #654321;*/
+    color: white;
     margin: 3px;
 }
 
 .roast-info{
-    color: gray;
+    /*color: #654321;*/
+    color: white;
     display:flex;
     flex-direction: row;
     align-items: flex-end;
 }
+
+
+
