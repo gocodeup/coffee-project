@@ -7,8 +7,8 @@ function renderCoffee(coffee) {
     //will most likely get rid of this line since readme says no IDs
     //To create divs we can switch table parameters used here to divs instead
 
-    html += '<h3 id="name">' + coffee.name + '</h3>';
-    html += '<p id="roast">' + coffee.roast + '</p>';
+    html += '<h3 id="name" class="info name-info">' + coffee.name + '</h3>';
+    html += '<p id="roast" class="info roast-info">' + coffee.roast + '</p>';
     html += '</div>';
 
     return html;
@@ -33,11 +33,11 @@ function updateCoffees(e) {
     //selectedRoast is pulling the values from the html in the form with inner id roastSelection
     var filteredCoffees = [];
     coffees.forEach(function(coffee) {
-        if (coffee.roast === selectedRoast && coffee.name.includes(searchValue.value)) {
+        if (coffee.roast === selectedRoast && coffee.name.toLowerCase().includes(searchValue.value.toLowerCase())) {
+            filteredCoffees.push(coffee);
+        }   else if(selectedRoast === "all" && coffee.name.toLowerCase().includes(searchValue.value.toLowerCase())){
             filteredCoffees.push(coffee);
         }
-    //    this looks at the "roast" value from the coffee objects and pushes it into the empty variable if it
-    //    matches the entry currently selected in the picklist
     });
     divBody.innerHTML = renderCoffees(filteredCoffees);
 //    this takes what has been pushed into the variable and populates it into the table

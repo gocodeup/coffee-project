@@ -15,26 +15,42 @@ form {
 .divTableHeading {
     display: flex;
     justify-content: center;
+    margin-bottom: 1.5em;
 }
 
 .divTableRow {
     display: flex;
-    justify-content: space-between;
-    width: 60%;
-}
-
-#name {
-    display: flex;
-    align-items: center;
-}
-
-#roast {
-
+    /*flex-direction: row;*/
+    justify-content: center;
+    width: 100%
 }
 
 .divTableBody {
     display: flex;
     justify-content: center;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
+    flex-wrap: wrap;
+}
+
+.divTableHead{
+    display: none;
+}
+
+.coffee-select{
+    border: 2px solid #654321;
+    padding: 1em;
+    margin: 1em;
+}
+
+.name-info{
+    color: #654321;
+    margin: 3px;
+}
+
+.roast-info{
+    color: gray;
+    display:flex;
+    flex-direction: row;
+    align-items: flex-end;
 }
