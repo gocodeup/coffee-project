@@ -3,7 +3,6 @@
 //displaying the table on the page
 function renderCoffee(coffee) {
     var html = '<tr class="coffee">';
-    // html += '<td>' + coffee.id + '</td>';
     html += '<td>' + coffee.name + '</td>';
     html += '<td>' + coffee.roast + '</td>';
     html += '</tr>';
@@ -66,7 +65,6 @@ var tbody = document.querySelector('#coffees');
 var submitButton = document.querySelector('#submit');
 
 
-
 //is assigning the content related to the id of #roast-selection to the roastSelection variable
 var roastSelection = document.querySelector('#roast-selection');
 
@@ -77,9 +75,6 @@ tbody.innerHTML = renderCoffees(coffees);
 
 //Event listener for the submitButton(that is what is making the button actually work)
 submitButton.addEventListener('click', updateCoffees);
-
-
-
 
 
 
@@ -102,6 +97,9 @@ function searchFunction() {
         }
     }
 }
+
+
+
 //**************************
 // variable add coffee button
 var addCoffeeButton = document.querySelector("#submit-new-coffee");
@@ -110,9 +108,3 @@ var addCoffeeButton = document.querySelector("#submit-new-coffee");
 addCoffeeButton.addEventListener("click", addNewCoffee);
 //***************************
 //Function to add new coffee to the coffee array.
-function addNewCoffee(roast, name){
-
-
-}
-
-
