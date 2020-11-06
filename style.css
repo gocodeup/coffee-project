@@ -25,8 +25,12 @@ td, th {
 
 }
 
-h3 {
-    margin: .2em;
+h2 {
+    padding-top: .5em;
+}
+
+h3  {
+    justify-content: left;
 }
 
 #coffees {
@@ -40,4 +44,8 @@ h3 {
 .btn-primary {
     width: 100%;
     margin-bottom: 1em;
+}
+
+.coffee {
+    width: 50%;
 }
