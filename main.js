@@ -2,23 +2,23 @@
 
 //creates the table populated by coffees. Uses js coffees object to make table programatically
 function renderCoffee(coffee) {
-    var html = '<tr class="coffee">';
-    html += '<td>' + coffee.id + '</td>';
+    var html = '<div class="divTableRow">';
+    // html += '<td>' + coffee.id + '</td>';
     //will most likely get rid of this line since readme says no IDs
     //To create divs we can switch table parameters used here to divs instead
 
-    html += '<td>' + coffee.name + '</td>';
-    html += '<td>' + coffee.roast + '</td>';
-    html += '</tr>';
+    html += '<h3 id="name">' + coffee.name + '</h3>';
+    html += '<p id="roast">' + coffee.roast + '</p>';
+    html += '</div>';
 
     return html;
 }
 
-var listener = function(event){
-    console.log(document.getElementById("userInput"))
-}
+// var listener = function(event){
+//     console.log(document.getElementById("userInput"))
+// }
 
-document.getElementById("userInput").addEventListener("input", listener);
+// document.getElementById("userInput").addEventListener("input", listener);
 
 
 //defines the order of the coffees as rendered in the table
@@ -67,10 +67,10 @@ var coffees = [
     {id: 14, name: 'French', roast: 'dark'},
 ];
 
-var tbody = document.querySelector('#coffees');
+var divBody = document.querySelector('#coffees');
 var submitButton = document.querySelector('#submit');
 var roastSelection = document.querySelector('#roast-selection');
 
-tbody.innerHTML = renderCoffees(coffees);
+divBody.innerHTML = renderCoffees(coffees);
 
 submitButton.addEventListener('click', updateCoffees);

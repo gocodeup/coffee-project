@@ -9,7 +9,7 @@
 <body>
     <h1>Coffee!</h1>
 
-    <input id="userSearch">
+<!--    <input id="userSearch">-->
 
     <form>
         <label for="roast-selection"></label>
@@ -21,16 +21,31 @@
         <input id="submit" type="submit" />
     </form>
 
-    <table>
-        <thead>
-            <tr>
-                <th>ID</th>
-                <th>NAME</th>
-                <th>ROAST</th>
-            </tr>
-        </thead>
-        <tbody id="coffees"></tbody>
-    </table>
+
+
+    <div class="divTable">
+        <div class="divTableHeading">
+            <div class="divTableRow">
+<!--                <div class="divTableHead">ID</div>-->
+                <div class="divTableHead" id="name">NAME</div>
+                <div class="divTableHead" id="roast">ROAST</div>
+            </div>
+        </div>
+        <div class="divTableBody" id="coffees"></div>
+    </div>
+
+
+
+<!--    <table>-->
+<!--        <thead>-->
+<!--            <tr>-->
+<!--                <th>ID</th>-->
+<!--                <th>NAME</th>-->
+<!--                <th>ROAST</th>-->
+<!--            </tr>-->
+<!--        </thead>-->
+<!--        <tbody id="coffees"></tbody>-->
+<!--    </table>-->
 
     <script src="main.js"></script>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
