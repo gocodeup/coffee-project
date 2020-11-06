@@ -1,28 +1,5 @@
-table {
-    border-collapse: collapse;
-    margin: 15px 0;
-}
-
-td, th {
-    border: 1px solid black;
-    padding: 5px 10px;
-}
-
-.coffee-name {
-    padding: 1em;
-}
-
-/*.hide {*/
-/*    display: none;*/
-/*}*/
-
 #h1 {
     justify-content: center;
-}
-
-#coffee-col {
-    justify-content: left;
-
 }
 
 h2 {
@@ -31,6 +8,11 @@ h2 {
 
 h3  {
     justify-content: left;
+}
+
+#list {
+    justify-content: left;
+
 }
 
 #coffees {
@@ -43,9 +25,11 @@ h3  {
 
 .btn-primary {
     width: 100%;
+    margin-top: 1em;
     margin-bottom: 1em;
 }
 
+/*class created in main.js line 3*/
 .coffee {
     width: 50%;
 }
