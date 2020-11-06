@@ -18,29 +18,19 @@
         <input id="submit" type="submit" />
     </form>
 
-<!--    <table>-->
-<!--        <thead>-->
-<!--            <tr>-->
-<!--                <th>ID</th>-->
-<!--                <th>NAME</th>-->
-<!--                <th>ROAST</th>-->
-<!--            </tr>-->
-<!--        </thead>-->
-<!--        <tbody id="coffees"></tbody>-->
-<!--    </table>-->
-    <section>
-        <div class="container">
-            <div class="row">
-                <div class="col-6">
-                    <h1>Light City</h1>
-                    <p>light</p>
-                </div>
-                <div class="col-6">
-                    <h1>Half City</h1>
-                </div>
-            </div>
-        </div>
-    </section>
+    <input type="text" id="coffee-search" onkeyup="myFunction()" placeholder="Search for names..">
+    <div>
+        <table id="coffee-table">
+            <thead>
+                <tr class="coffee-table-header">
+<!--                    <th>ID</th>-->
+                    <th>NAME</th>
+                    <th>ROAST</th>
+                </tr>
+            </thead>
+            <tbody id="coffees"></tbody>
+        </table>
+    </div>
 
     <script src="js/main.js"></script>
 </body>
