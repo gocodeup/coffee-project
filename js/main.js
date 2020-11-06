@@ -109,5 +109,8 @@ addCoffeeButton.addEventListener("click", addNewCoffee);
 //***************************
 //Function to add new coffee to the coffee array.
 function addNewCoffee(){
-    var newCoffeeName = document.forms.coffeeName;
+    var newCoffeeName = document.forms.coffeeForm.coffeeName;
+    console.log(newCoffeeName.value);
 }
+
+// tbody.innerHTML = addNewCoffee(coffees);
