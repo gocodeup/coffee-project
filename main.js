@@ -33,7 +33,7 @@ function updateCoffees(e) {
     //selectedRoast is pulling the values from the html in the form with inner id roastSelection
     var filteredCoffees = [];
     coffees.forEach(function(coffee) {
-        if (coffee.roast === selectedRoast) {
+        if (coffee.roast === selectedRoast && coffee.name.includes(searchValue.value)) {
             filteredCoffees.push(coffee);
         }
     //    this looks at the "roast" value from the coffee objects and pushes it into the empty variable if it
@@ -44,33 +44,33 @@ function updateCoffees(e) {
 }
 
 
+var searchValue = document.querySelector("#userSearch")
 
 
-
-function searchCoffees(e){
-    var selectedRoast = roastSelection.value;
-    var filteredCoffees = [];
-    var searchValue = document.querySelector("#userSearch")
-    var listener = function(event) {
-        function narrowCoffees(str){
-            str = searchValue.value;
-            for(var i = 0;i<coffees.length;i++){
-                if(coffees[i].name.includes(str)){
-                    console.log(i + "returned");
-                } else{
-                    console.log(i + "not returned");
-                }
-            }
-        }
-
-    //    currently this logs the value inside the input field
-    //    we need it to recognize which coffees match the inputted text, and then have those coffees added to the
-    //    filtered coffees array, which can then be rendered in the "table" with the innerHTML function below
-    }
-    searchValue.addEventListener("keyup", listener);
-    divBody.innerHTML = renderCoffees(filteredCoffees);
-//    this takes what has been pushed into the variable and populates it into the table
-}
+// function searchCoffees(){
+//     // var selectedRoast = roastSelection.value;
+//     var filteredCoffees = [];
+//
+//     var listener = function(event) {
+//         function narrowCoffees(str){
+//             str = searchValue.value;
+//             for(var i = 0;i<coffees.length;i++){
+//                 if(coffees[i].name.includes(str)){
+//                     console.log(i + "returned");
+//                 } else{
+//                     console.log(i + "not returned");
+//                 }
+//             }
+//         }
+//
+//     //    currently this logs the value inside the input field
+//     //    we need it to recognize which coffees match the inputted text, and then have those coffees added to the
+//     //    filtered coffees array, which can then be rendered in the "table" with the innerHTML function below
+//     }
+//     searchValue.addEventListener("keyup", listener);
+//     divBody.innerHTML = renderCoffees(filteredCoffees);
+// //    this takes what has been pushed into the variable and populates it into the table
+// }
 
 
 // function narrowCoffees(str){
@@ -115,9 +115,10 @@ var coffees = [
 ];
 
 var divBody = document.querySelector('#coffees');
-var submitButton = document.querySelector('#submit');
 var roastSelection = document.querySelector('#roast-selection');
 
 divBody.innerHTML = renderCoffees(coffees);
 
-submitButton.addEventListener('click', updateCoffees);
+roastSelection.addEventListener('change', updateCoffees);
+searchValue.addEventListener('keyup' , updateCoffees);
+// searchCoffees();
