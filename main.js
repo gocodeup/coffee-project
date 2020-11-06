@@ -42,6 +42,9 @@
     var dark = document.getElementById("dark-btn");
     var medium = document.getElementById("medium-btn");
     var light = document.getElementById("light-btn");
+    var roastTitle1 = document.getElementById("dark-roast");
+    var roastTitle2 = document.getElementById("medium-roast");
+    var roastTitle3 = document.getElementById("light-roast");
 
     console.log(coffeeBtns);
 
@@ -67,14 +70,31 @@ function renderCoffees(coffees) {
 
 function updateCoffees(e) {
     e.preventDefault(); // don't submit the form, we just want to update the data
-    var filteredCoffees = [];
+    var darkBucket = [];
+    var mediumBucket = [];
+    var lightBucket = [];
     coffees.forEach(function(coffee) {
-            filteredCoffees.push(coffee);
+        switch (coffee.roast) {
+            case "dark":
+                darkBucket.push(coffee);
+                break;
+            case "medium":
+                mediumBucket.push(coffee);
+                break;
+            case "light":
+                lightBucket.push(coffee);
+                break;
+        }
 
     });
-    for (let coffee of coffeeBtns) {
-        coffee.innerHTML=renderCoffees(filteredCoffees);
-    }
+    coffeeBtns[0].innerHTML=renderCoffees(darkBucket);
+    coffeeBtns[1].innerHTML=renderCoffees(mediumBucket);
+    coffeeBtns[2].innerHTML=renderCoffees(lightBucket);
+
+    console.log(darkBucket);
+    console.log(mediumBucket);
+    console.log(lightBucket);
+    // console.log(roastTitle1.innerText === "dark");
 }
 
     dark.addEventListener("click", updateCoffees);
