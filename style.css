@@ -1,10 +1,3 @@
-h1 {
-    text-align: center;
-}
-
-h2 {
-
-}
 
 table {
     border-collapse: collapse;
@@ -16,36 +9,36 @@ td, th {
     padding: 5px 10px;
 }
 
-div {
-    display: inline-block;
+/*div {*/
+/*    display: inline-block;*/
 
-}
+/*}*/
 
-#coffee-table {
-    float: left
-}
+/*#coffee-table {*/
+/*    float: left*/
+/*}*/
 
-#forms {
-    float: right;
-    margin-right: 50px;
-}
+/*#forms {*/
+/*    float: right;*/
+/*    margin-right: 50px;*/
+/*}*/
 
-#roast-selection {
-    display: block;
-}
+/*#roast-selection {*/
+/*    display: block;*/
+/*}*/
 
-#roast-text{
-    display: block;
-}
+/*#roast-text{*/
+/*    display: block;*/
+/*}*/
 
-#add-roast-selection {
-    display: block;
-}
+/*#add-roast-selection {*/
+/*    display: block;*/
+/*}*/
 
-#add-roast-text{
-    display: block;
-}
+/*#add-roast-text{*/
+/*    display: block;*/
+/*}*/
 
-#add-coffee-name {
-    display: block;
-}
+/*#add-coffee-name {*/
+/*    display: block;*/
+/*}*/
