@@ -1,16 +1,96 @@
+html {
+    box-sizing: border-box;
+}
+body {
+    background-image: url("image/royal-sundance-papers-bright-white-linen.jpg");
+}
+/*start dog logo*/
+/*img {*/
+/*    justify-items: center;*/
+/*}*/
+.center {
+    display: block;
+    margin-top: 2em;
+    margin-left: auto;
+    margin-right: auto;
+    width: 25%;
+    height: auto;
+}
+h1, label {
+    display: block;
+    text-align: center;
+    font-family: 'Bitter', serif;
+    color: #654321;
+    justify-content: center;
+    text-decoration: underline;
+    text-align: center;
+}
+hr {
+    background-color: #654321;
+    border: solid 1px #654321;
+    height: .25em !important;
+}
+/*Cup of Java Circles*/
+
+
+#roast-selection {
+    color: #140b08;
+    font-family: 'Bitter', serif;
+    /*background: #140b08;*/
+    /*align-items: center;*/
+    /*border-radius: 100%;*/
+    /*line-height: normal;*/
+}
+.cups {
+    display: inline-block;
+}
+.cupOfJo1 {
+    border: 8px solid #847f7d;
+    border-inline-color: #654321;
+    background-color: #a06e39;
+    border-radius: 50%;
+    height:75px;
+    width:75px;
+}
+.cupOfJo2 {
+    border: 8px solid #847f7d;
+    border-inline-color: #432822;
+    background-color: #432822;
+    border-radius: 50%;
+    height:75px;
+    width:75px;
+}
+.cupOfJo3 {
+    border: 8px solid #847f7d;
+    border-inline-color: #654321;
+    background-color: #140b08;
+    border-radius: 50%;
+    height:75px;
+    width:75px;
+}
+.cupOfJo4 {
+    border: 8px solid #847f7d;
+    border-inline-color: #654321;
+    background-color: #432822;
+    border-radius: 50%;
+    height:75px;
+    width:75px;
+}
 table {
     border-collapse: collapse;
     margin: 15px 0;
 }
 
-td, th {
+td, th, button {
     border: 1px solid black;
     padding: 5px 10px;
+    font-family: 'Bitter', serif;
+    color: #654321;
+}
+main {
+    min-height: 100vh;
 }
 
-body {
-    background-color: #fff;
-}
-date {
-
+.coffee-card {
+    max-height: 245px;
 }
