@@ -11,3 +11,7 @@ td, th {
 .coffee-name {
     padding: 1em;
 }
+
+.hide {
+    display: none;
+}
