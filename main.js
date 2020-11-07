@@ -60,8 +60,8 @@ var allOfOurCoffees = [
 
 
 function renderCoffee(coffee) {
-    var html = '<div class="coffee" style="display: flex; flex-direction: column; flex-wrap: wrap; width: 200px; height: 30px; justify-content: space-around; align-items: center">';
-    html += '<h2>' + coffee.name + '</h2>';
+    var html = '<div class="coffee" style="display: flex; flex-direction: column; flex-wrap: wrap; width: 200px; height: 22px; justify-content: space-around; align-items: center">';
+    html += '<h3>' + coffee.name + '</h3>';
     html += '<p>' + coffee.roast + '</p>';
     html += '</div>';
 
@@ -259,13 +259,14 @@ function logMatchingInHouseRoasts() {
     allOfOurCoffees.forEach(function(coffee) {
         if (coffee.roast === selectedRoast) {
             filteredCoffees.push(coffee);
+        } else if(selectedRoast === "all"){
+            filteredCoffees.push(coffee);
         }
     });
     allCoffeesSpot.innerHTML = renderCoffees(filteredCoffees);
 }
 inHouseCoffee.addEventListener("change", logMatchingInHouseRoasts);
 //==========ROAST SELECTIONS============//
-
 
 
 //=========COFFEE SEARCH=========//

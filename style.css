@@ -161,7 +161,7 @@ button:hover{
     width: 50%
 }
 .footer {
-    height: 40vh;
+    height: 50vh;
     width: 80vw;
     margin: auto;
     display: flex;
@@ -187,7 +187,7 @@ button:hover{
     justify-content: space-around;
     align-items: center;
     border-radius: 200px;
-    width: 65%;
+    width: 85%;
     height: 35%;
     margin: auto;
     padding: 1em;
