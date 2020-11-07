@@ -94,6 +94,9 @@ td, th, button {
     font-family: 'Bitter', serif;
     color: #654321;
 }
+button:hover{
+    cursor: pointer;
+}
 .main {
     display: flex;
     justify-content: space-evenly;
