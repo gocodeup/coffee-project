@@ -1,7 +1,7 @@
 "use strict"
 
 function renderCoffee(coffee) {
-    var html = `<li class="col-6 col-md-3 list-group-item coffee text-center">
+    var html = `<li class="col-6 col-lg-4 list-group-item coffee text-center">
                 <div class="coffee-name text-center">${coffee.name}</div> 
                 <div class="roast-type text-muted text-center">${coffee.roast}</div>
                 </li>`;
@@ -34,13 +34,29 @@ function updateCoffees(e) {
 
 function addCoffee(e) {
     e.preventDefault()
-    coffees.push(
-        {
-            id: coffees.length+1,
-            name: addCoffeeName.value,
-            roast: getSelectedOption(addRoastSelection)
-        })
-    updateCoffees(e);
+    //check if input text is blank
+    if (addCoffeeName.value.trim() == '') {
+        //logic to avoid validation message duplication
+        if (document.querySelector('.validation-text')) {
+            document.querySelector('.validation-text').remove();
+        }
+        //create validation message
+        var newLi = document.createElement('p');
+        newLi.className = 'validation-text';
+        var newLiText = document.createTextNode('Name cannot be blank.');
+        newLi.appendChild(newLiText);
+        rightForm.append(newLi);
+        //otherwise add coffee to list
+    } else {
+        document.querySelector('.validation-text').remove();
+        coffees.push(
+            {
+                id: coffees.length + 1,
+                name: addCoffeeName.value,
+                roast: getSelectedOption(addRoastSelection)
+            })
+        updateCoffees(e);
+    }
 }
 
 function getSelectedOption(addRoastSelection) {
@@ -82,6 +98,7 @@ var roastSelection = document.querySelector('#roast-selection');
 var userTextRoastSelection = document.getElementById("roast-text");
 var addRoastSelection = document.getElementById('add-roast-selection');
 var addCoffeeName = document.getElementById('add-coffee-name');
+var rightForm = document.getElementById('right-form');
 
 tbody.innerHTML = renderCoffees(coffees);
 roastInputText.addEventListener("keyup", updateCoffees);
