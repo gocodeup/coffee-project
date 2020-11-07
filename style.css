@@ -136,6 +136,12 @@ td, th, button {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    width: 33%;
+    margin: auto;
+}
+#seasons{
+    max-width: 75%;
+    margin: auto;
 }
 .coffeeInput {
     display: flex;
@@ -189,4 +195,7 @@ a{
 }
 #coffeeName {
     padding-left: 1em;
+}
+#fillerSubmit{
+    display: none;
 }

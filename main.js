@@ -54,7 +54,13 @@ var allOfOurCoffees = [
     {id: 13, name: 'Italian', roast: 'dark'},
     {id: 14, name: 'French', roast: 'dark'}
 ]
+//=========THE COFFEES=========//
 
+
+
+
+
+//===========CUP HOVERS AND ADDING THE COFFEES TO THEM============//
 var lightCoffeeCup = document.getElementById("lightCoffee");
 var allLightCoffees = document.getElementById("eachLight");
 lightCoffeeCup.addEventListener("mouseover", function(){
@@ -73,7 +79,7 @@ function leftLightCoffee () {
 }
 
 lightCoffeeCup.addEventListener("mouseleave", function(){
-    setTimeout(leftLightCoffee, 500);
+    setTimeout(leftLightCoffee, 750);
 });
 
 var mediumCoffeeCup = document.getElementById("mediumCoffee");
@@ -93,7 +99,7 @@ function leftMediumCoffee(){
 }
 
 mediumCoffeeCup.addEventListener("mouseleave", function() {
-    setTimeout(leftMediumCoffee, 500);
+    setTimeout(leftMediumCoffee, 750);
 });
 
 
@@ -116,7 +122,7 @@ function leftDarkCoffee(){
 }
 
 darkCoffeeCup.addEventListener("mouseleave", function(){
-    setTimeout(leftDarkCoffee, 500);
+    setTimeout(leftDarkCoffee, 750);
 });
 
 
@@ -140,8 +146,9 @@ function leftHolidayCoffee() {
 }
 
 holidayCoffeeCup.addEventListener("mouseleave", function(){
-   setTimeout(leftHolidayCoffee, 500);
+   setTimeout(leftHolidayCoffee, 750);
 });
+//===========CUP HOVERS AND ADDING THE COFFEES TO THEM============//
 
 
 
@@ -165,9 +172,7 @@ holidayCoffeeCup.addEventListener("mouseleave", function(){
 
 
 
-
-
-
+//==========APPLY SEASON CHANGES============//
 let season = document.getElementById("seasons");
 let chooseDate = document.getElementById("chooseDate");
 var dogLogo = document.getElementById("dogLogo");
@@ -177,23 +182,26 @@ season.addEventListener("click", function (){
     let month = chooseDate.value.substring(5, 7);
     allOfOurCoffees = coffees;
     if(month >= 3 && month <= 5){
-        // document.body.style.backgroundImage = "";
+        document.body.style.backgroundImage = "url('image/stpatricksdaylogo.png')";
+        dogLogo.src = "image/stpatricksdog.png";
         springCoffees.forEach((coffee) =>{
             allOfOurCoffees.push(coffee);
         });
     } else if(month >= 6 && month <= 8){
-        // document.body.style.backgroundColor = "#48acc5";
+        // document.body.style.backgroundImage = "url('image/stpatricksdaylogo.png')";
+        // dogLogo.src = "image/stpatricksdog.png";
         summerCoffees.forEach((coffee) =>{
             allOfOurCoffees.push(coffee);
         });
     } else if(month >= 9 && month <= 11){
         document.body.style.backgroundImage = "url('image/fallbackground.jpg')";
-        dogLogo.src = "url('image/falldog.jpg')";
+        dogLogo.src = "image/falldog.png";
         fallCoffees.forEach((coffee) =>{
             allOfOurCoffees.push(coffee);
         });
     } else if((month > 11 && month < 13) || (month < 3 && month > 0)){
         document.body.style.backgroundImage = "url('image/winterbackground.jpg')";
+        dogLogo.src = "image/santadog.png";
         winterCoffees.forEach((coffee) =>{
             allOfOurCoffees.push(coffee);
         });
@@ -201,42 +209,68 @@ season.addEventListener("click", function (){
         console.log("no input");
     }
 });
+//==========APPLY SEASON CHANGES============//
+
+
+
+
+
+
+
+
+
+
 
 
 
 let coffeeName = document.getElementById("coffeeName");
 let inHouseCoffee = document.getElementById("inHouseCoffeeRoast");
-let allCoffeesSpot = document.getElementById("coffeesSpots");
+// let coffeeNameAsHeading = document.getElementById("coffeeNameHeading");
+let allCoffeesSpot = document.getElementById("coffeeRoasts");
+
 function logMatchingInHouseCoffees(){
     let allCoffees = "";
+    let filteredCoffeeSelection = [];
     var inHouse = inHouseCoffee.value;
-
         allOfOurCoffees.forEach((coffee) => {
             if (coffee.roast === inHouse) {
-                allCoffees += coffee.name + "\n" + "\n";
+                filteredCoffeeSelection.push(coffee.name);
             }
         });
-
+    filteredCoffeeSelection.forEach((coffee) => {
+        allCoffees += coffee + "\n" + "\n";
+        });
     allCoffeesSpot.innerText = allCoffees;
 }
-setInterval(logMatchingInHouseCoffees, 250);
+setInterval(logMatchingInHouseCoffees, 500);
+
 
 function logMatchingCoffees(){
     let allCoffees = "";
     if(coffeeName.value.length > 0) {
         allOfOurCoffees.forEach((coffee) => {
             if (coffee.name.toLowerCase().includes(coffeeName.value.toLowerCase())) {
-                allCoffees += coffee.name + "\n" + "\n";
+                allCoffees += coffee.name + " " + coffee.roast + "\n" + "\n";
+                // renderCoffee(coffee);
             }
         });
+        allCoffeesSpot.innerText = allCoffees;
     }
-    allCoffeesSpot.innerText = allCoffees;
 }
-setInterval(logMatchingCoffees, 250);
+// coffeeName.addEventListener("input", logMatchingCoffees);
+setInterval(logMatchingCoffees, 500);
 
 
 
 
+
+
+
+
+
+
+
+//--------ADD CUSTOM COFFEE----------//
 var customRoast = document.getElementById("customCoffeeRoast");
 var customName = document.getElementById("customCoffeeName");
 var addCustom = document.getElementById("customCoffeeButton");
@@ -253,6 +287,7 @@ addCustom.addEventListener("click", function (){
 
     allOfOurCoffees.push(newCoffee);
 });
+//--------ADD CUSTOM COFFEE----------//
 
 
 
@@ -264,53 +299,40 @@ addCustom.addEventListener("click", function (){
 
 
 
+function renderCoffee(coffee) {
+    var html = '<div class="coffee">';
+    html += '<h5>' + coffee.name + '</h5>';
+    html += '<p>' + coffee.roast + '</p>';
+    html += '</div>';
+
+    return html;
+}
+
+function renderCoffees(coffees) {
+    var html = '';
+    for(var i = coffees.length - 1; i >= 0; i--) {
+        html += renderCoffee(coffees[i]);
+    }
+    return html;
+}
+
+function updateCoffees(e) {
+    e.preventDefault(); // don't submit the form, we just want to update the data
+    var selectedRoast = inHouseCoffee.value;
+    var filteredCoffees = [];
+    coffees.forEach(function(coffee) {
+        if (coffee.roast === selectedRoast) {
+            filteredCoffees.push(coffee);
+        }
+    });
+    allCoffeesSpot.innerHTML = renderCoffees(filteredCoffees);
+}
+var fakeButton = document.getElementById("fillerSubmit");
+fakeButton.addEventListener("click", updateCoffees);
 
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// function renderCoffee(coffee) {
-//     var html = '<tr class="coffee">';
-//     // html += '<td>' + coffee.id + '</td>';
-//     html += '<td>' + coffee.name + '</td>';
-//     html += '<td>' + coffee.roast + '</td>';
-//     html += '</tr>';
-//
-//     return html;
-// }
-//
-// function renderCoffees(coffees) {
-//     var html = '';
-//     for(var i = coffees.length - 1; i >= 0; i--) {
-//         html += renderCoffee(coffees[i]);
-//     }
-//     return html;
-// }
-//
-// function updateCoffees(e) {
-//     e.preventDefault(); // don't submit the form, we just want to update the data
-//     var selectedRoast = roastSelection.value;
-//     var filteredCoffees = [];
-//     coffees.forEach(function(coffee) {
-//         if (coffee.roast === selectedRoast) {
-//             filteredCoffees.push(coffee);
-//         }
-//     });
-//     tbody.innerHTML = renderCoffees(filteredCoffees);
-// }
 //
 // // from http://www.ncausa.org/About-Coffee/Coffee-Roasts-Guide
 //

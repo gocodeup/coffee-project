@@ -12,7 +12,7 @@
     <img src="image/doggie.png" class="center" id="dogLogo">
 </header>
     <h1>huskee coffee</h1>
-    <h3>600 Navarro St #600, San Antonio, TX 78205</h3>
+<a href="#" target="_blank"><h3>600 Navarro St #600, San Antonio, TX 78205</h3></a>
     <hr>
     <hr>
 <div class="dateContainer">
@@ -55,13 +55,18 @@
 <hr>
 <hr>
 <div class="coffeeInput">
-    <select id="inHouseCoffeeRoast">
-        <option value="" disabled selected>Select your Roast</option>
-        <option value="light">Light</option>
-        <option value="medium">Medium</option>
-        <option value="dark">Dark</option>
-    </select>
-    <label>Coffee Name        <input id="coffeeName"></label>
+    <label>
+        Pick the Roast
+        <select id="inHouseCoffeeRoast">
+            <option value="" disabled selected>Select your Roast</option>
+            <option value="light">Light</option>
+            <option value="medium">Medium</option>
+            <option value="dark">Dark</option>
+        </select>
+    </label>
+    <button id="fillerSubmit">-</button>
+    <label>Find your Coffee
+        <input id="coffeeName"></label>
     <label>
         Don't see what you're looking for? Let us know here -->
         <select id="customCoffeeRoast">
@@ -79,7 +84,8 @@
         <img class="logo" src="image/falldog.png">
     </div>
     <div class="availableCoffeesSpot">
-        <p class="coffeeWord" id="coffeesSpots"></p>
+        <h5 id="coffeeNameHeading"></h5>
+        <p class="coffeeWord" id="coffeeRoasts"></p>
     </div>
 </div>
 <hr>
@@ -88,7 +94,7 @@
     <div class="socialMedia">
         <a href="https://twitter.com/CoffeeHuskee" target="_blank"><p><i class="social fab fa-twitter"></i>Follow us on Twitter!</p></a>
         <a href="https://www.facebook.com/huskee.coffee.7/" target="_blank"><p><i class="social fab fa-facebook"></i>Find us on FaceBook!</p></a>
-        <a href="https://www.instagram.com/huskeecoffee/" target="_blank"><p><i class="social fab fa-instagram"></i>Check out our Instagram</p></a>
+        <a href="https://www.instagram.com/huskeecoffee/" target="_blank"><p><i class="social fab fa-instagram"></i>Check out our Instagram!</p></a>
     </div>
 </div>
 <script src="main.js"></script>
