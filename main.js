@@ -278,6 +278,8 @@ function logMatchingCoffees(){
             }
         });
         allCoffeesSpot.innerHTML = renderCoffees(allCoffees);
+    } else {
+        allCoffeesSpot.innerHTML = renderCoffees(filteredCoffees);
     }
 }
 coffeeName.addEventListener("input", logMatchingCoffees);
