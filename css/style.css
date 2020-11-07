@@ -13,11 +13,11 @@ td {
     display: inline-block;
     border: none !important;
     text-align: left;
-
 }
 
 td:nth-child(1){
     font-size: 2em;
+    padding: 0px 12px;
 }
 
 td:nth-child(2){
@@ -30,4 +30,3 @@ td:nth-child(2){
 .table td{
     vertical-align: baseline !important;
 }
-
