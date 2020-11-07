@@ -1,9 +1,7 @@
 (function () {
 
 
-
-"use strict"
-
+    "use strict"
 
 
 // from http://www.ncausa.org/About-Coffee/Coffee-Roasts-Guide
@@ -24,86 +22,77 @@
         {id: 14, name: 'French', roast: 'dark'},
     ];
 
-    var roastTypes = [{
-        roast: 'light'
-    }, {
-        roast: 'medium'
-    }, {
-        roast: 'dark'
-    }]
-
-
-    // var tbody = document.querySelector('#coffees');
-    var roastCard = document.querySelectorAll(".coffee-card");
     var coffeeBtns = document.querySelectorAll(".coffee-select");
     var dark = document.getElementById("dark-btn");
     var medium = document.getElementById("medium-btn");
     var light = document.getElementById("light-btn");
-    var value = document.querySelectorAll(".radio-coffee")
-
-    // coffees.forEach((coffee) => {
-    //     if (renderCoffee(coffee).substr(133, coffee.name.length) === 'Cinnamon') {
-    //     console.log(renderCoffee(coffee).substr(133, coffee.name.length));
-    //     }
-    // })
-    // console.log(value);
+    var coffeeCart = document.querySelector("#cart");
+    var cartBtn = document.querySelectorAll(".add-to-cart-btn");
 
     function renderCoffee(coffee) {
-    var html = '<div class="form-check coffee-btn">';
-    //removed Id
-    html += '<input class="form-check-input radio-coffee" type="radio" name="exampleRadios" value=' + coffee.name + ">";
-    html += '<label class="form-check-label" for="exampleRadios">' + coffee.name + '</label>';
-    html += '</div>';
+        var html = '<div class="form-check coffee-btn">';
+        //removed Id
+        html += '<input class="form-check-input radio-coffee" type="radio" name="exampleRadios"' + " value=" + coffee.name.split(" ").join("-") + '>';
+        html += '<label class="form-check-label" for="exampleRadios">' + coffee.name + '</label>';
+        html += '</div>';
         return html;
-}
-    // coffees.forEach((coffee) => {
-    //     renderCoffee(coffee);
-    //     console.log(document.getElementById("testId"));
-    // })
-    function renderCoffees(coffees) {
-    var html = '';
-    for(var i = 0; i <= coffees.length -1; i++) {
-        html += renderCoffee(coffees[i]);
-
     }
 
-    return html;
-}
+    function renderCart(item) {
+        return '<option value="test">' + item + '</option>';
+    }
 
-function updateCoffees(e) {
-    e.preventDefault(); // don't submit the form, we just want to update the data
-    var darkBucket = [];
-    var mediumBucket = [];
-    var lightBucket = [];
-    var cartBucket = [];
-    coffees.forEach(function(coffee) {
-        switch (coffee.roast) {
-            case "dark":
-                darkBucket.push(coffee);
-                break;
-            case "medium":
-                mediumBucket.push(coffee);
-                break;
-            case "light":
-                lightBucket.push(coffee);
-                break;
+    function renderCoffees(coffees) {
+        var html = '';
+        for (var i = 0; i <= coffees.length - 1; i++) {
+            html += renderCoffee(coffees[i]);
+
         }
 
-    });
-    coffeeBtns[0].innerHTML=renderCoffees(darkBucket);
-    coffeeBtns[1].innerHTML=renderCoffees(mediumBucket);
-    coffeeBtns[2].innerHTML=renderCoffees(lightBucket);
-
-    var input = document.querySelectorAll(".radio-coffee");
-    for (let i = 0; i < input.length; i++) {
-        input[i].addEventListener("click", () => {
-            console.log(input[i].value);
-        })
-        // console.log(input[i].value);
+        return html;
     }
 
-}
+    function updateCoffees(e) {
+        e.preventDefault(); // don't submit the form, we just want to update the data
+        var darkBucket = [];
+        var mediumBucket = [];
+        var lightBucket = [];
+        coffees.forEach(function (coffee) {
+            switch (coffee.roast) {
+                case "dark":
+                    darkBucket.push(coffee);
+                    break;
+                case "medium":
+                    mediumBucket.push(coffee);
+                    break;
+                case "light":
+                    lightBucket.push(coffee);
+                    break;
+            }
+        });
+        coffeeBtns[0].innerHTML = renderCoffees(darkBucket);
+        coffeeBtns[1].innerHTML = renderCoffees(mediumBucket);
+        coffeeBtns[2].innerHTML = renderCoffees(lightBucket);
 
+        var input = document.querySelectorAll(".radio-coffee");
+        addToCart(input);
+    }
+
+    // console.log(renderCoffees(coffees));
+
+    function addToCart(items) {
+
+        for (let button of cartBtn) {
+            button.addEventListener("click", () => {
+                for (let i = 0; i < items.length; i++) {
+                    if (items[i].checked) {
+                        console.log(items[i].value)
+                        coffeeCart.innerHTML += renderCart(items[i].value.split("-").join(" "))
+                    }
+                }
+            })
+        }
+    }
 
     dark.addEventListener("click", updateCoffees);
     medium.addEventListener("click", updateCoffees);

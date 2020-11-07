@@ -95,42 +95,47 @@
 <!--begin Cards-->
 <div class="container-fluid d-flex flex-wrap coffee-card-container">
 	<div class="card mt-2 coffee-card bg-transparent">
-		<img src="img/pexels-photo-373888.jpeg" class="card-img-top" alt="...">
+		<img src="img/pexels-photo-373888.jpeg" class="card-img-top rost-img" alt="...">
 		<div class="card-body">
 			<h5 class="card-title roast" id="dark-roast">Dark</h5>
 			<p class="cardDescription">Dark roast coffee is a dark brown color and often has an oily surface. These coffees have a low acidity, heavy body, and tend to reveal deeper, darker flavors.</p>
 			<a class="btn btn-primary select-roast-btn" id="dark-btn" data-dark>Select Dark Roast</a>
 <!--hidden radio-->
 			<div class="container-fluid coffee-select" id="coffees"></div>
-			<a class="btn btn-primary add-to-cart-btn" id="cart-btn-1" data-cart>Add to Cart</a>
+			<button class="btn btn-primary add-to-cart-btn" id="cart-btn-1" data-cart>Add to Cart</button>
 		</div>
 	</div>
 
 	<div class="card mt-2 coffee-card bg-transparent">
-		<img src="img/pexels-photo-373888.jpeg" class="card-img-top" alt="...">
+		<img src="img/pexels-photo-373888.jpeg" class="card-img-top " alt="...">
 		<div class="card-body">
 			<h5 class="card-title roast" id="medium-roast">Medium</h5>
 			<p class="cardDescription">Medium roast coffee is a brown color and rarely has an oily surface. These coffees have a medium acidity and body, as well as a rounded flavor profile.</p>
-			<a class="btn btn-primary select-roast-btn" id="medium-btn" data-medium>Select Medium Roast</a>
+			<a class="btn btn-primary select-roast-btn" id="medium-btn">Select Medium Roast</a>
 			<!--hidden radio-->
 			<div class="container-fluid coffee-select"></div>
-			<a class="btn btn-primary add-to-cart-btn" id="cart-btn-3" data-cart>Add to Cart</a>
+			<button class="btn btn-primary add-to-cart-btn" id="cart-btn-3">Add to Cart</button>
 		</div>
 	</div>
 
 	<div class="card mt-2 coffee-card bg-transparent">
-		<img src="img/pexels-photo-373888.jpeg" class="card-img-top" alt="...">
+		<img src="img/pexels-photo-373888.jpeg" class="card-img-top roast-img" alt="...">
 		<div class="card-body">
 			<h5 class="card-title roast" id="light-roast">Light</h5>
 			<p class="cardDescription">Light roast coffee is a light brown color and has no oil on the surface of the beans. These coffees typically have a crisp acidity, a mellow body, and bright flavors.</p>
 			<a class="btn btn-primary select-roast-btn" id="light-btn" data-light>Select Light Roast</a>
 			<!--hidden radio-->
 			<div class="container-fluid coffee-select"></div>
-			<a class="btn btn-primary add-to-cart-btn" id="cart-btn-2" data-cart>Add to Cart</a>
+			<button class="btn btn-primary add-to-cart-btn" id="cart-btn-2" data-cart>Add to Cart</button>
 		</div>
 	</div>
+
+<!--begin Cart-->
+	<label for="cart"></label>
+	<select id="cart"></select>
 </div>
 <!--end cards-->
+
 	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
 	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
