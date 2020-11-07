@@ -58,6 +58,14 @@ td, th {
     justify-content: space-between;
 
     }
+
+#roast-selection {
+    background-color: #cfac74;
+}
+#submit {
+    background-color: #cfac74;
+}
+
 .btn-group {
     background-color: #946d0e ;
 
@@ -68,4 +76,8 @@ td, th {
 
 
 
-
+#myInput {
+    float: right;
+    margin: 5px;
+    background-color: #cfac74;
+}
