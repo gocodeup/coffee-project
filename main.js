@@ -312,6 +312,7 @@ addCustom.addEventListener("click", function (){
     newCoffee.roast = roastChoice;
 
     allOfOurCoffees.push(newCoffee);
+    coffees.push(newCoffee);
 });
 //--------ADD CUSTOM COFFEE----------//
 
