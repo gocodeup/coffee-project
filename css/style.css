@@ -1,7 +1,9 @@
-/*table {*/
-/*    border-collapse: collapse;*/
-/*    margin: 15px 0;*/
-/*}*/
+table {
+    display: flex;
+    flex-wrap: wrap;
+    /*border-collapse: collapse;*/
+    /*margin: 15px 0;*/
+}
 
 /*td, th {*/
 /*    border: 1px solid black;*/
@@ -10,4 +12,20 @@
 
 td {
     display: inline-block;
+    border: none !important;
+    flex-wrap: wrap;
+    align-items: flex-end;
+    vertical-align: top;
+}
+td:nth-child(1){
+    font-size: 2em;
+    /*vertical-align: bottom;*/
+}
+
+td:nth-child(2){
+    color: darkgrey;
+    /*flex-wrap: wrap;*/
+    /*align-content: flex-end;*/
+    /*vertical-align: bottom;*/
+    height: 72px;
 }
