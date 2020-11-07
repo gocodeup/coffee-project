@@ -250,12 +250,12 @@ season.addEventListener("click", function (){
 let coffeeName = document.getElementById("coffeeName");
 let inHouseCoffee = document.getElementById("inHouseCoffeeRoast");
 let allCoffeesSpot = document.getElementById("coffeeRoasts");
-
+let filteredCoffees = [];
 //==========ROAST SELECTIONS============//
 function logMatchingInHouseRoasts() {
     // e.preventDefault(); // don't submit the form, we just want to update the data
+    filteredCoffees = [];
     var selectedRoast = inHouseCoffee.value;
-    var filteredCoffees = [];
     allOfOurCoffees.forEach(function(coffee) {
         if (coffee.roast === selectedRoast) {
             filteredCoffees.push(coffee);
@@ -268,12 +268,11 @@ inHouseCoffee.addEventListener("change", logMatchingInHouseRoasts);
 
 
 
-
 //=========COFFEE SEARCH=========//
 function logMatchingCoffees(){
     let allCoffees = [];
     if(coffeeName.value.length > 0) {
-        allOfOurCoffees.forEach((coffee) => {
+        filteredCoffees.forEach((coffee) => {
             if (coffee.name.toLowerCase().includes(coffeeName.value.toLowerCase())) {
                 allCoffees.push(coffee);
             }
@@ -316,44 +315,6 @@ addCustom.addEventListener("click", function (){
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-//=========TRYING TO GET THE SEARCH COFFEE TO USE THE NEWLY FILTERED SELECTION=========//
-// function logMatchingCoffees(arr){
-//     let allCoffees = [];
-//     if(coffeeName.value.length > 0) {
-//         arr.forEach((coffee) => {
-//             if (coffee.name.toLowerCase().includes(coffeeName.value.toLowerCase())) {
-//                 allCoffees.push(coffee);
-//             }
-//         });
-//         return renderCoffees(allCoffees);
-//     }
-// }
-//
-// function updateCoffees(e) {
-//     e.preventDefault(); // don't submit the form, we just want to update the data
-//     var selectedRoast = inHouseCoffee.value;
-//     var filteredCoffees = [];
-//     allOfOurCoffees.forEach(function(coffee) {
-//         if (coffee.roast === selectedRoast) {
-//             filteredCoffees.push(coffee);
-//         }
-//     });
-//     allCoffeesSpot.innerHTML = logMatchingCoffees(filteredCoffees);
-// }
-//=========TRYING TO GET THE SEARCH COFFEE TO USE THE NEWLY FILTERED SELECTION=========//
 
 
 
