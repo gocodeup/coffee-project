@@ -19,7 +19,7 @@ body{
     /*background-image: linear-gradient(315deg, #772f1a 0%, #f2a65a 74%);*/
     background-color: moccasin;
 }
-img {
+img:not(.roast-img) {
     height: 200px;
     opacity: .65;
 }
