@@ -41,24 +41,32 @@
     var light = document.getElementById("light-btn");
     var value = document.querySelectorAll(".radio-coffee")
 
-    console.log(renderCoffee(coffees));
-    console.log(value);
+    // coffees.forEach((coffee) => {
+    //     if (renderCoffee(coffee).substr(133, coffee.name.length) === 'Cinnamon') {
+    //     console.log(renderCoffee(coffee).substr(133, coffee.name.length));
+    //     }
+    // })
+    // console.log(value);
 
     function renderCoffee(coffee) {
-    var html = '<div class="form-check">';
+    var html = '<div class="form-check coffee-btn">';
     //removed Id
-    html += '<input class="form-check-input radio-coffee" type="radio" name="exampleRadios" id="coffees" value=' + coffee.name + ">";
+    html += '<input class="form-check-input radio-coffee" type="radio" name="exampleRadios" value=' + coffee.name + ">";
     html += '<label class="form-check-label" for="exampleRadios">' + coffee.name + '</label>';
     html += '</div>';
-
-    return html;
+        return html;
 }
-
-function renderCoffees(coffees) {
+    // coffees.forEach((coffee) => {
+    //     renderCoffee(coffee);
+    //     console.log(document.getElementById("testId"));
+    // })
+    function renderCoffees(coffees) {
     var html = '';
     for(var i = 0; i <= coffees.length -1; i++) {
         html += renderCoffee(coffees[i]);
+
     }
+
     return html;
 }
 
@@ -67,6 +75,7 @@ function updateCoffees(e) {
     var darkBucket = [];
     var mediumBucket = [];
     var lightBucket = [];
+    var cartBucket = [];
     coffees.forEach(function(coffee) {
         switch (coffee.roast) {
             case "dark":
@@ -85,12 +94,21 @@ function updateCoffees(e) {
     coffeeBtns[1].innerHTML=renderCoffees(mediumBucket);
     coffeeBtns[2].innerHTML=renderCoffees(lightBucket);
 
+    var input = document.querySelectorAll(".radio-coffee");
+    for (let i = 0; i < input.length; i++) {
+        input[i].addEventListener("click", () => {
+            console.log(input[i].value);
+        })
+        // console.log(input[i].value);
+    }
+
 }
 
 
     dark.addEventListener("click", updateCoffees);
     medium.addEventListener("click", updateCoffees);
     light.addEventListener("click", updateCoffees);
+
     dark.onclick = () => {
         coffeeBtns[0].classList.toggle("coffee-select")
     }
