@@ -272,6 +272,9 @@ inHouseCoffee.addEventListener("change", logMatchingInHouseRoasts);
 //=========COFFEE SEARCH=========//
 function logMatchingCoffees(){
     let allCoffees = [];
+    if(filteredCoffees.length < 1){
+        filteredCoffees = allOfOurCoffees;
+    }
     if(coffeeName.value.length > 0) {
         filteredCoffees.forEach((coffee) => {
             if (coffee.name.toLowerCase().includes(coffeeName.value.toLowerCase())) {
