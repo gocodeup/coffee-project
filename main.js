@@ -1,4 +1,5 @@
 "use strict"
+var myInput = document.getElementById("myInput")
 
 function renderCoffee(coffee) {
     var html = '<div class="coffee card col-4 ">';
@@ -7,13 +8,16 @@ function renderCoffee(coffee) {
     html += '<p>' + coffee.text + '</p>';
 
     html += '</div>';
-    console.log(html);
+    // console.log(html);
     return html;
 }
+
+var inputValue = myInput.value
 
 function renderCoffees(coffees) {
     var html = '';
     for(var i = coffees.length - 1; i >= 0; i--) {
+
         html += renderCoffee(coffees[i]);
     }
     return html;
@@ -30,15 +34,26 @@ function updateCoffees(e) {
     });
     tbody.innerHTML = renderCoffees(filteredCoffees);
 }
-function checkNames (e) {
-    e.preventDefault();
-    var selectedRoast = roastSelection.value;
-    var filteredCoffees = [];
-    coffees.forEach(function (coffee) {
 
+myInput.addEventListener("input", checkNames)
+
+
+function checkNames (e) {
+    // e.preventDefault();
+    var selectedRoast = inputValue;
+    // console.log(typeof selectedRoast)
+    // var filteredCoffees = [];
+    coffees.forEach(function (coffee) {
+        if(coffee.name.startsWith(myInput.value) && myInput.value !== ""){
+           tbody.innerHTML = renderCoffee(coffee)
+        }
     })
 
 }
+// setInterval(checkNames, 2000)
+
+
+
 // from http://www.ncausa.org/About-Coffee/Coffee-Roasts-Guide
 var coffees = [
     {id: 1, name: 'Light City', roast: 'light', text: "It will make your city lights light up!" },
@@ -68,10 +83,13 @@ submitButton.addEventListener('click', updateCoffees);
 
 const selectElement = document.querySelector('.roast-level');
 
-selectElement.addEventListener('change', (event) => {
-    const result = document.querySelector('.light1');
-    result.textContent = `You like ${event.target.value}`;
-});
+// selectElement.addEventListener('change', (event) => {
+//     const result = document.querySelector('.light1');
+//     result.textContent = `You like ${event.target.value}`;
+// });
+
+
+
 
 //Search Dropdown begins
 
