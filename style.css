@@ -3,6 +3,14 @@
     font-family: Arvo, serif;
 }
 
+body {
+    background-color: #faf0be !important;
+}
+
+#coffees > li {
+    background-color: #faf0be !important;
+}
+
 .coffee-name {
     font-size: 50px
 }
@@ -11,6 +19,9 @@
     display: block;
     text-align: center;
     font-size: 30px;
+}
+h1 {
+   color: #faf0be !important;
 }
 
 h2{
@@ -61,3 +72,9 @@ label{
     margin-left: 0;
 
 }
+
+.jumbotron {
+    background-image: url("img/jumbotron_coffee.jpg");
+    background-repeat: repeat-x;
+}
+
