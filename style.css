@@ -7,8 +7,7 @@
 .coffee-card-container {
     /*background-color: #5de6de;*/
     /*background-image: linear-gradient(315deg, #5de6de 0%, #b58ecc 74%);*/
-    background-color: #772f1a;
-    background-image: linear-gradient(315deg, #772f1a 0%, #f2a65a 74%);
+    background-color: moccasin;
     display: flex;
     flex-wrap: wrap;
 
@@ -64,16 +63,23 @@ img:not(.roast-img) {
     color: white;
 }
 .card {
+    background-color: #772f1a;
+    background-image: linear-gradient(315deg, #772f1a 0%, #f2a65a 74%);
     flex-basis: 18rem;
     margin: auto;
+    border: 2px solid #772f1a;
+    box-shadow: 3px 3px 6px 3px #772f1a;
 }
 .coffee-select {
     display: none;
 }
 .add-to-cart-btn{
     float: right;
+    background-color: transparent;
+    border-color: white;
+    color: white;
 }
-.btn-primary{
+.select-roast-btn{
     background-color: transparent;
     border-color: white;
     color: white;
@@ -82,13 +88,34 @@ img:not(.roast-img) {
     border-color: white;
     color: white;
 }
-
 #searchBar {
     width: 18em;
 }
-
-@media screen and (min-width: 768px) {
-    .card {
-        flex-basis: 33%;
-    }
+.select-roast-btn:hover {
+    background-color: #772f1a;
+    border-color: white;
+}
+.select-roast-btn:focus{
+    background-color: #f2a65a;
+    border-color: white;
+}
+.add-to-cart-btn:hover {
+    background-color: #772f1a;
+    border-color: white;
+}
+.add-to-cart-btn:focus{
+    background-color: #f2a65a;
+    border-color: white;
+}
+.fa-shopping-cart{
+    font-size: xx-large;
+}
+a{
+    color: black;
+}
+a:hover{
+    color: #772f1a;
+}
+a:active{
+    color: #f2a65a;
 }
