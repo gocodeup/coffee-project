@@ -114,7 +114,7 @@
 			<p class="cardDescription">Dark roast coffee is a dark brown color and often has an oily surface. These coffees have a low acidity, heavy body, and tend to reveal deeper, darker flavors.</p>
 			<a class="btn select-roast-btn" id="dark-btn" >Select Dark Roast</a>
 <!--hidden radio-->
-			<div class="container-fluid coffee-select" id="coffees"></div>
+			<div class="container-fluid coffee-select text-left" id="coffees"></div>
 <!--			<button class="btn add-to-cart-btn" id="cart-btn-1">Add to Cart</button>-->
 		</div>
 	</div>
@@ -126,7 +126,7 @@
 			<p class="cardDescription">Medium roast coffee is a brown color and rarely has an oily surface. These coffees have a medium acidity and body, as well as a rounded flavor profile.</p>
 			<a class="btn select-roast-btn" id="medium-btn">Select Medium Roast</a>
 			<!--hidden radio-->
-			<div class="container-fluid coffee-select"></div>
+			<div class="container-fluid coffee-select text-left"></div>
 <!--			<button class="btn add-to-cart-btn" id="cart-btn-3">Add to Cart</button>-->
 		</div>
 	</div>
@@ -138,16 +138,28 @@
 			<p class="cardDescription">Light roast coffee is a light brown color and has no oil on the surface of the beans. These coffees have a crisp acidity, a mellow body, and bright flavors.</p>
 			<a class="btn select-roast-btn" id="light-btn">Select Light Roast</a>
 			<!--hidden radio-->
-			<div class="container-fluid coffee-select"></div>
+			<div class="container-fluid coffee-select text-left"></div>
 <!--			<button class="btn add-to-cart-btn" id="cart-btn-2" data-cart>Add to Cart</button>-->
 		</div>
 	</div>
 </div>
 	<br>
+
+	<div class="modal fade" id="quantity" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+		<div class="modal-dialog modal-dialog-centered" role="document">
+			<div class="modal-content">
+				<label for="userQty" id="qty">Quantity: </label>
+				<div class="modal-body">
+					<input type="text" id="userQty">
+					<button class="btn add-to-cart-btn" id="cart-btn" data-cart>Add to Cart</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
 	<!--begin Cart-->
 	<label for="cart"><a href="#"><i class="fas fa-shopping-cart"></i></a></label>
 	<select id="cart"></select>
-	<button class="btn add-to-cart-btn" id="cart-btn" data-cart>Add to Cart</button>
 <!--end cards-->
 </main>
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>

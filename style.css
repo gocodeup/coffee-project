@@ -74,8 +74,8 @@ img:not(.roast-img) {
     display: none;
 }
 .add-to-cart-btn{
-    float: right;
-    background-color: transparent;
+    /*float: right;*/
+    background-color: #772f1a;
     border-color: white;
     color: white;
 }
@@ -118,4 +118,8 @@ a:hover{
 }
 a:active{
     color: #f2a65a;
+}
+
+#qty::before {
+    content: "hello"
 }
