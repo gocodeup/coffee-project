@@ -95,23 +95,31 @@
 <div class="container text-center">
 	<label for="searchBar"></label>
 	<input type="text" id="searchBar">
+	<label for="roastSelect"></label>
+	<select name="roastSelect" id="roastSelect">
+		<option>Dark</option>
+		<option>Medium</option>
+		<option>Light</option>
+		<option>All Roasts</option>
+	</select>
 </div>
 	<div class="search-container"></div>
+
 <!--begin Cards-->
 <div class="container-fluid coffee-card-container">
-	<div class="card mt-2 coffee-card bg-transparent">
+	<div class="card mt-2 coffee-card bg-transparent" data-roast="dark">
 		<img src="img/pexels-photo-373888.jpeg" class="card-img-top roast-img" alt="...">
 		<div class="card-body">
 			<h5 class="card-title roast" id="dark-roast">Dark</h5>
 			<p class="cardDescription">Dark roast coffee is a dark brown color and often has an oily surface. These coffees have a low acidity, heavy body, and tend to reveal deeper, darker flavors.</p>
-			<a class="btn select-roast-btn" id="dark-btn" data-dark>Select Dark Roast</a>
+			<a class="btn select-roast-btn" id="dark-btn" >Select Dark Roast</a>
 <!--hidden radio-->
 			<div class="container-fluid coffee-select" id="coffees"></div>
-			<button class="btn add-to-cart-btn" id="cart-btn-1" data-cart>Add to Cart</button>
+<!--			<button class="btn add-to-cart-btn" id="cart-btn-1">Add to Cart</button>-->
 		</div>
 	</div>
 
-	<div class="card mt-2 coffee-card bg-transparent">
+	<div class="card mt-2 coffee-card bg-transparent" data-roast="medium">
 		<img src="img/pexels-photo-373888.jpeg" class="card-img-top roast-img" alt="...">
 		<div class="card-body">
 			<h5 class="card-title roast" id="medium-roast">Medium</h5>
@@ -119,19 +127,19 @@
 			<a class="btn select-roast-btn" id="medium-btn">Select Medium Roast</a>
 			<!--hidden radio-->
 			<div class="container-fluid coffee-select"></div>
-			<button class="btn add-to-cart-btn" id="cart-btn-3">Add to Cart</button>
+<!--			<button class="btn add-to-cart-btn" id="cart-btn-3">Add to Cart</button>-->
 		</div>
 	</div>
 
-	<div class="card mt-2 coffee-card bg-transparent">
+	<div class="card mt-2 coffee-card bg-transparent" data-roast="light">
 		<img src="img/pexels-photo-373888.jpeg" class="card-img-top roast-img" alt="...">
 		<div class="card-body">
 			<h5 class="card-title roast" id="light-roast">Light</h5>
 			<p class="cardDescription">Light roast coffee is a light brown color and has no oil on the surface of the beans. These coffees have a crisp acidity, a mellow body, and bright flavors.</p>
-			<a class="btn select-roast-btn" id="light-btn" data-light>Select Light Roast</a>
+			<a class="btn select-roast-btn" id="light-btn">Select Light Roast</a>
 			<!--hidden radio-->
 			<div class="container-fluid coffee-select"></div>
-			<button class="btn add-to-cart-btn" id="cart-btn-2" data-cart>Add to Cart</button>
+<!--			<button class="btn add-to-cart-btn" id="cart-btn-2" data-cart>Add to Cart</button>-->
 		</div>
 	</div>
 </div>
@@ -139,6 +147,7 @@
 	<!--begin Cart-->
 	<label for="cart"><a href="#"><i class="fas fa-shopping-cart"></i></a></label>
 	<select id="cart"></select>
+	<button class="btn add-to-cart-btn" id="cart-btn" data-cart>Add to Cart</button>
 <!--end cards-->
 </main>
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
