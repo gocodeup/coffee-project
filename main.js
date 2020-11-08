@@ -58,19 +58,19 @@ function checkNames (e) {
 // from http://www.ncausa.org/About-Coffee/Coffee-Roasts-Guide
 var coffees = [
     {id: 1, name: 'Light City', roast: 'light', text: "It will make your city lights light up!", upperName: 'LIGHT CITY' },
-    {id: 2, name: 'Half City', roast: 'light', upperName: 'HALF CITY'},
-    {id: 3, name: 'Cinnamon', roast: 'light', upperName: 'CINNAMON'},
-    {id: 4, name: 'City', roast: 'medium', upperName: 'CITY'},
-    {id: 5, name: 'American', roast: 'medium', upperName: 'AMERICAN'},
-    {id: 6, name: 'Breakfast', roast: 'medium', upperName: 'BREAKFAST'},
-    {id: 7, name: 'High', roast: 'dark', upperName: 'HIGH'},
-    {id: 8, name: 'Continental', roast: 'dark', upperName: 'CONTINENTAL'},
-    {id: 9, name: 'New Orleans', roast: 'dark', upperName: 'NEW ORLEANS'},
-    {id: 10, name: 'European', roast: 'dark', upperName: 'EUROPEAN'},
-    {id: 11, name: 'Espresso', roast: 'dark', upperName: 'ESPRESSO'},
-    {id: 12, name: 'Viennese', roast: 'dark', upperName: 'VIENNESE'},
-    {id: 13, name: 'Italian', roast: 'dark', upperName: 'ITALIAN'},
-    {id: 14, name: 'French', roast: 'dark', upperName: 'FRENCH'},
+    {id: 2, name: 'Half City', roast: 'light', upperName: 'HALF CITY', text: "The Morning cup of coffee has an exhilaration about it which the cheering influence of the afternoon or evening cup of tea cannot be expected to reproduce." },
+    {id: 3, name: 'Cinnamon', roast: 'light', upperName: 'CINNAMON', text:"I believe humans get a lot done, not because we're smart, but because we have thumbs so we can make coffee." },
+    {id: 4, name: 'City', roast: 'medium', upperName: 'CITY', text: "It is inhumane, in my opinion, to force people who genuinely have a medical need for coffee to wait in line behind people who apparently view it as some kind of recreational activity."},
+    {id: 5, name: 'American', roast: 'medium', upperName: 'AMERICAN', text: "Humanity runs on coffee"},
+    {id: 6, name: 'Breakfast', roast: 'medium', upperName: 'BREAKFAST', text: "Everyone should believe in something. I believe I will have another coffee."},
+    {id: 7, name: 'High', roast: 'dark', upperName: 'HIGH', text: "Coffee first. Schemes later"},
+    {id: 8, name: 'Continental', roast: 'dark', upperName: 'CONTINENTAL', text: "The most dangerous drinking game is seeing how long I can go without coffee."},
+    {id: 9, name: 'New Orleans', roast: 'dark', upperName: 'NEW ORLEANS', text: "It's amazing how the world begins to change through the eys of a cup of coffee."},
+    {id: 10, name: 'European', roast: 'dark', upperName: 'EUROPEAN', text: "I want someone to look at me the way I look at coffee."},
+    {id: 11, name: 'Espresso', roast: 'dark', upperName: 'ESPRESSO',text:"when life gives you lemons, trade them for coffee." },
+    {id: 12, name: 'Viennese', roast: 'dark', upperName: 'VIENNESE', text: "Coffee is a hug in a mug"},
+    {id: 13, name: 'Italian', roast: 'dark', upperName: 'ITALIAN', text: "Decaf coffee only works if you throw it at people"},
+    {id: 14, name: 'French', roast: 'dark', upperName: 'FRENCH', text: "If I were a wizard, I'm pretty sure my Patronus would be coffee."},
 ];
 
 var tbody = document.querySelector('#coffees');
