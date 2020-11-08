@@ -4,7 +4,7 @@ var myInput = document.getElementById("myInput")
 function renderCoffee(coffee) {
     var html = '<div class="coffee card col-lg-4 col-md-6 col-xsm-12">';
     html += '<img src="img/card4light.jpg">' + '</>';
-    html += '<strong>' + coffee.name + '</strong>';
+    html += '<strong class="text-center">' + coffee.name + '</strong>';
     html += '<p>' + coffee.text + '</p>';
 
     html += '</div>';
