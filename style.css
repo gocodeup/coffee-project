@@ -23,21 +23,20 @@ body{
 
 }
 img:not(.roast-img) {
-    height: 200px;
-    opacity: .65;
+    height: 250px;
+    opacity: .75;
+    object-fit: cover;
 }
 
 .store {
-    position: absolute;
-    z-index: 15;
-    color: #ffffff;
+    text-align: center;
+    color: #772f1a;
     font-family: "Henny Penny", cursive;
     top: 8px;
 }
 .lead {
-    position: absolute;
-    z-index: 15;
-    color: #fdfdfd;
+    text-align: center;
+    color: #772f1a;
     bottom: 0;
     font-family: "Josephine Sans", sans-serif;
     font-style: italic;
@@ -121,5 +120,9 @@ a:active{
 }
 
 #qty::before {
-    content: "hello"
+    content: "Input your "
+}
+.modal-content{
+    background-color: #772f1a;
+    background-image: linear-gradient(315deg, #772f1a 0%, #f2a65a 74%);
 }

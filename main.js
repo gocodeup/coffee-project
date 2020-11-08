@@ -126,7 +126,7 @@
         if (lowercaseSearch !== "") {
             for (const coffee of searchedCoffees) {
                 if (coffee.value.toLowerCase().startsWith(lowercaseSearch)) {
-                        // searchContainer.innerHTML = ""
+                        searchContainer.innerHTML = ""
                         searchContainer.innerHTML += '<input type="radio"' + ' name="coffeeButtons" class="searchedCoffee"' + ' value=' + coffee.value + " checked>" + coffee.value;
                 }
             }
