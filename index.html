@@ -12,14 +12,13 @@
 </head>
 <body>
 
-<!--adding Navbar-->
-<!--beginning of navbar-->
+<!--Beginning of Navbar-->
 <nav class="navbar navbar-expand-lg navbar-light color">
 	<a class="navbar-brand" id="nav-boom" href="#">Boom! Roasted!</a>
 	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 		<span class="navbar-toggler-icon"></span>
 	</button>
-
+<!--Navbar Content-->
 	<div class="collapse navbar-collapse" id="navbarSupportedContent">
 		<ul class="navbar-nav mr-auto">
 			<li class="nav-item active">
@@ -57,9 +56,9 @@
 		</form>
 	</div>
 </nav>
-<!--ending of navbar-->
+<!--End of Navbar/Beginning of Main Container-->
 <main class="container text-center">
-<!--beginning of carousel jumbotron-->
+<!--Beginning of Carousel Jumbotron-->
 <div class="jumbotron jumbotron-fluid p-2 jumboCarousel text-center" id="jumbo">
 	<div class="container p-2 ">
 		<div id="carouselSlides" class="carousel slide" data-ride="carousel">
@@ -72,26 +71,19 @@
 				<div class="carousel-item">
 					<img src="img/pexels-afta-putta-gunawan-683039.jpg" class="d-block w-100" alt="...">
 				</div>
-				<!--		<div class="carousel-item">-->
-				<!--			<img src="img/pexels-lina-kivaka-1813466.jpg" class="d-block w-100" alt="...">-->
-				<!--		</div>-->
 				<div class="carousel-item">
 					<img src="img/pexels-photo-374147.jpeg" class="d-block w-100" alt="...">
 				</div>
 				<div class="carousel-item">
 					<img src="img/pexels-photo-131058.jpeg" class="d-block w-100" alt="...">
 				</div>
-<!--				<div class="carousel-item">-->
-<!--					<img src="img/pexels-photo-373888.jpeg" class="d-block w-100" alt="...">-->
-<!--				</div>-->
-<!--				<div class="carousel-item">-->
-<!--					<img src="img/pexels-photo-585752.jpeg" class="d-block w-100" alt="...">-->
-<!--				</div>-->
 			</div>
 		</div>
 	</div>
 </div>
+<!--End of Carousel Jumbotron-->
 
+<!--Beginning of Container for Search Bar-->
 <div class="container text-center">
 	<label for="searchBar"></label>
 	<input type="text" id="searchBar">
@@ -104,47 +96,45 @@
 	</select>
 </div>
 	<div class="search-container"></div>
+<!--End of Container for Search Bar-->
 
-<!--begin Cards-->
+<!--Begin Container for Cards-->
 <div class="container-fluid coffee-card-container">
+	<!--Card #1 - Dark-->
 	<div class="card mt-2 coffee-card bg-transparent" data-roast="dark">
 		<img src="img/pexels-photo-darkroast.jpeg" class="card-img-top roast-img" alt="...">
 		<div class="card-body">
 			<h5 class="card-title roast" id="dark-roast">Dark</h5>
 			<p class="cardDescription">Dark roast coffee is a dark brown color and often has an oily surface. These coffees have a low acidity, heavy body, and tend to reveal deeper, darker flavors.</p>
 			<a class="btn select-roast-btn" id="dark-btn" >Select Dark Roast</a>
-<!--hidden radio-->
 			<div class="container-fluid coffee-select text-left" id="coffees"></div>
-<!--			<button class="btn add-to-cart-btn" id="cart-btn-1">Add to Cart</button>-->
 		</div>
 	</div>
-
+	<!--Card #2 - Medium-->
 	<div class="card mt-2 coffee-card bg-transparent" data-roast="medium">
 		<img src="img/pexels-photo-mediumroast.jpeg" class="card-img-top roast-img" alt="...">
 		<div class="card-body">
 			<h5 class="card-title roast" id="medium-roast">Medium</h5>
 			<p class="cardDescription">Medium roast coffee is a brown color and rarely has an oily surface. These coffees have a medium acidity and body, as well as a rounded flavor profile.</p>
 			<a class="btn select-roast-btn" id="medium-btn">Select Medium Roast</a>
-			<!--hidden radio-->
 			<div class="container-fluid coffee-select text-left"></div>
-<!--			<button class="btn add-to-cart-btn" id="cart-btn-3">Add to Cart</button>-->
 		</div>
 	</div>
-
+	<!--Card #3 -Light-->
 	<div class="card mt-2 coffee-card bg-transparent" data-roast="light">
 		<img src="img/pexels-photo-lightroast.jpeg" class="card-img-top roast-img" alt="...">
 		<div class="card-body">
 			<h5 class="card-title roast" id="light-roast">Light</h5>
 			<p class="cardDescription">Light roast coffee is a light brown color and has no oil on the surface of the beans. These coffees have a crisp acidity, a mellow body, and bright flavors.</p>
 			<a class="btn select-roast-btn" id="light-btn">Select Light Roast</a>
-			<!--hidden radio-->
 			<div class="container-fluid coffee-select text-left"></div>
-<!--			<button class="btn add-to-cart-btn" id="cart-btn-2" data-cart>Add to Cart</button>-->
 		</div>
 	</div>
 </div>
 	<br>
+<!--End Container for Cards-->
 
+<!--Begin Modal For Ordering-->
 	<div class="modal fade" id="quantity" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
 		<div class="modal-dialog modal-dialog-centered" role="document">
 			<div class="modal-content">
@@ -154,10 +144,10 @@
 				<div class="modal-body d-flex flex-column">
 					<label for="size" id="sizeLabel">Select Size: </label>
 					<select name="sizeSelect" id="size" class="mb-3">
-						<option>Slept 8-10 hrs</option>
-						<option>Slept 5-7 hrs</option>
-						<option>Slept 0-4 hrs</option>
-						<option>What Even Is Sleep?</option>
+						<option>Slept 8-10 hrs (Small)</option>
+						<option>Slept 5-7 hrs (Medium)</option>
+						<option>Slept 0-4 hrs (Large)</option>
+						<option>What Even Is Sleep? (X-Large)</option>
 					</select>
 					<label for="additionalComments">Special Instructions</label>
 					<textarea name="additionalComments" id="additionalComments" cols="30" rows="5"></textarea>
@@ -166,12 +156,18 @@
 			</div>
 		</div>
 	</div>
+<!--End Modal for Ordering-->
 
-	<!--begin Cart-->
+<!--Begin Cart-->
 	<label for="cart"><a href="#" id="checkout"><i class="fas fa-shopping-cart"></i></a></label>
 	<select id="cart"></select>
-<!--end cards-->
+<!--End Cart-->
 </main>
+<!--End of Main Container-->
+
+
+
+<!--Required Script-->
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
