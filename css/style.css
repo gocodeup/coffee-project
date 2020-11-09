@@ -1,10 +1,3 @@
-:root {
-    --button-color: #3A311D;
-}
-.btn {
-    /*background-color: var(--button-color);*/
-}
-
 .jumbotron {
     background-image: linear-gradient(to bottom, rgba(0,0,0,0.6) 0%,rgba(0,0,0,0.6) 100%), url("../img/coffee-mug.jpg");
     background-size: cover;
