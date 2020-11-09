@@ -37,8 +37,12 @@
     var cardAttr = cards[0].getAttribute("class");
     var userQty = document.getElementById("userQty");
     var modalSelector = '#quantity';
+    var size = document.querySelector("#size");
+    var checkout = document.querySelector("#checkout");
+    var coffeeName = document.querySelector("#coffeeName");
     cartBtn.style.display = "none";
 
+    //set individual html structure
     function renderCoffee(coffee) {
         var html = '<div class="form-check coffee-btn">';
         //removed Id
@@ -48,20 +52,25 @@
         return html;
     }
 
+
+    //set options
     function renderCart(item) {
         return '<option value="test" class="coffee">' + item + '</option>';
     }
 
+
+    //set html to array passed into function
     function renderCoffees(coffees) {
         var html = '';
         for (var i = 0; i <= coffees.length - 1; i++) {
             html += renderCoffee(coffees[i]);
 
         }
-
         return html;
     }
 
+
+    //function passed into the event listener as a callback to show the coffees
     function updateCoffees(e) {
         e.preventDefault(); // don't submit the form, we just want to update the data
         var darkBucket = [];
@@ -85,7 +94,6 @@
         coffeeBtns[2].innerHTML = renderCoffees(lightBucket);
 
         var input = document.querySelectorAll(".radio-coffee");
-
         addToCart(input);
         searchCoffees(input);
         displayCart(input);
@@ -95,16 +103,14 @@
         userQty.addEventListener("input", ()=> {
             if (!isNaN(userQty.value)) {
                 cartBtn.style.display = "inline-block";
-                console.log("is a number");
             } else {
                 cartBtn.style.display = "none";
-                console.log("is not a number");
             }
         })
             cartBtn.addEventListener("click", () => {
                 for (const item of items) {
                     if (item.checked && userQty.value.length > 0) {
-                        coffeeCart.innerHTML += renderCart(item.value.split("-").join(" ") + " Qty " + userQty.value);
+                        coffeeCart.innerHTML += renderCart(item.value.split("-").join(" ") + ", Qty " + userQty.value + ", size: " + size.value);
                         $(modalSelector).modal('hide');
                     }
 
@@ -117,8 +123,23 @@
             for (const item of items) {
                 item.addEventListener("click", () => {
                     $(modalSelector).modal('show');
+                        if (item.checked) {
+                            coffeeName.innerText = "selected: " + item.value;
+                        }
                 })
+
+
             }
+    }
+
+    function roasts(coffees) {
+        var roastBucket = [];
+        coffees.forEach((coffee) => {
+            if (roastBucket.indexOf(coffee.roast) === -1) {
+                roastBucket.unshift(coffee.roast);
+            }
+        });
+        return roastBucket;
     }
 
     function searchCoffees(searchedCoffees) {
@@ -127,22 +148,29 @@
             for (const coffee of searchedCoffees) {
                 if (coffee.value.toLowerCase().startsWith(lowercaseSearch)) {
                         searchContainer.innerHTML = ""
-                        searchContainer.innerHTML += '<input type="radio"' + ' name="coffeeButtons" class="searchedCoffee"' + ' value=' + coffee.value + " checked>" + coffee.value;
+                        searchContainer.innerHTML = '<input type="radio"' + ' name="coffeeButtons" class="searchedCoffee"' + ' value=' + coffee.value + " checked>" + coffee.value;
                 }
             }
-
             searchContainer.style.display = "inline-block";
             cardContainer.setAttribute("class", "d-none");
+
+            coffees.forEach((coffee) => {
+                if (coffee.roast.startsWith(lowercaseSearch)) {
+                    searchContainer.innerHTML += '<input type="radio"' + ' name="coffeeButtons"' + ' value=' + coffee.roast + " checked>" + coffee.name;
+                }
+            });
         } else {
             searchContainer.innerHTML = "";
             searchContainer.style.display = "none";
             cardContainer.setAttribute("class", cardContainerAttr);
         }
-        var searched = document.querySelectorAll(".searchedCoffee");
 
-        for (const found of searched) {
-            console.log(found.value.toLowerCase().startsWith(lowercaseSearch));
-        }
+
+        // var searched = document.querySelectorAll(".searchedCoffee");
+        //
+        // for (const found of searched) {
+        //     console.log(found.value.toLowerCase().startsWith(lowercaseSearch));
+        // }
 
     }
 

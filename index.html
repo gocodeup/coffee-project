@@ -148,17 +148,27 @@
 	<div class="modal fade" id="quantity" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
 		<div class="modal-dialog modal-dialog-centered" role="document">
 			<div class="modal-content">
+				<h2 id="coffeeName"></h2>
 				<label for="userQty" id="qty">Quantity: </label>
-				<div class="modal-body">
-					<input type="text" id="userQty">
-					<button class="btn add-to-cart-btn" id="cart-btn" data-cart>Add to Cart</button>
+				<input type="text" id="userQty">
+				<div class="modal-body d-flex flex-column">
+					<label for="size" id="sizeLabel">Select Size: </label>
+					<select name="sizeSelect" id="size" class="mb-3">
+						<option>Slept 8-10 hrs</option>
+						<option>Slept 5-7 hrs</option>
+						<option>Slept 0-4 hrs</option>
+						<option>What Even Is Sleep?</option>
+					</select>
+					<label for="additionalComments">Special Instructions</label>
+					<textarea name="additionalComments" id="additionalComments" cols="30" rows="5"></textarea>
+					<button class="btn add-to-cart-btn align-self-end mt-3" id="cart-btn">Add to Cart</button>
 				</div>
 			</div>
 		</div>
 	</div>
 
 	<!--begin Cart-->
-	<label for="cart"><a href="#"><i class="fas fa-shopping-cart"></i></a></label>
+	<label for="cart"><a href="#" id="checkout"><i class="fas fa-shopping-cart"></i></a></label>
 	<select id="cart"></select>
 <!--end cards-->
 </main>
