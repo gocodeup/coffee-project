@@ -2,9 +2,9 @@
 
 //displaying the table on the page
 function renderCoffee(coffee) {
-    var html = '<div class="coffee w-50">';
-    html += '<h4 class="coffee-name d-inline-block mr-2">' + coffee.name + '</h4>';
-    html += '<p class="coffee-roast d-inline-block text-secondary">' + coffee.roast + '</p>';
+    var html = '<div class="tr coffee w-50">';
+    html += '<h4 class="td coffee-name d-inline-block mr-2">' + coffee.name + '</h4>';
+    html += '<p class="td coffee-roast d-inline-block text-secondary">' + coffee.roast + '</p>';
     html += '</div>';
 
     return html;
