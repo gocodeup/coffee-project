@@ -56,6 +56,14 @@
     }
 
 
+    function sortCoffees(coffee){
+        var html = '<label for="exampleRadios">';
+        html += '<input class="form-check-input radio-coffee" type="radio" name="exampleRadios"' + " value=" + coffee.split(" ").join("-") + ">";
+        html += '</label>';
+        return html;
+    }
+
+
     //set options
     function renderCart(item) {
         return '<option value="test" class="coffee">' + item + '</option>';
@@ -98,7 +106,7 @@
 
         var input = document.querySelectorAll(".radio-coffee");
         addToCart(input);
-        searchCoffees(input);
+        searchCoffees(coffees);
         displayCart(input);
     }
 
@@ -119,17 +127,14 @@
 
                 }
                 for (const purchases of coffeeCart) {
-                    if (finalPurchase.innerHTML.includes(purchases.innerText)) {
+                    if (finalPurchase.innerText !== (purchases.innerText)) {
                         finalPurchase.innerHTML += '<br>' + purchases.innerText;
                     }
                 }
                 checkout.onclick = () => {
                     $('#purchased').modal('show');
                 }
-
-
             })
-
     }
 
     function displayCart(items) {
@@ -140,8 +145,6 @@
                             coffeeName.innerText = "selected: " + item.value;
                         }
                 })
-
-
             }
     }
 
@@ -160,16 +163,21 @@
         if (lowercaseSearch !== "") {
             searchContainer.innerHTML = "";
             for (const coffee of searchedCoffees) {
-                if (coffee.value.toLowerCase().includes(lowercaseSearch)) {
-                        searchContainer.innerHTML += '<input type="radio"' + ' name="coffeeButtons" class="searchedCoffee"' + ' value=' + coffee.value + " checked>" + coffee.value;
+                if (coffee.name.toLowerCase().includes(lowercaseSearch)) {
+                        searchContainer.innerHTML += '<input type="radio"' + ' name="coffeeButtons" class="searchedCoffee"' + ' value=' + coffee.name + ">" + coffee.name;
                 }
+            }
+            var anotherCoffeeSearchButton = document.querySelectorAll(".searchedCoffee")
+            for (let i = 0; i < anotherCoffeeSearchButton.length; i++) {
+                anotherCoffeeSearchButton[i].addEventListener("click", function(){
+                    $(modalSelector).modal('show');
+                });
             }
             searchContainer.style.display = "inline-block";
             cardContainer.setAttribute("class", "d-none");
-
             coffees.forEach((coffee) => {
                 if (coffee.roast.startsWith(lowercaseSearch)) {
-                    searchContainer.innerHTML += '<input type="radio"' + ' name="coffeeButtons"' + ' value=' + coffee.roast + " checked>" + coffee.name;
+                    searchContainer.innerHTML += '<input type="radio"' + ' name="coffeeButtons"' + ' value=' + coffee.roast + coffee.name + ">";
                 }
             });
         } else {
@@ -216,9 +224,7 @@
         userEmail.innerHTML = emailInput.value;
         }
     }
-
     gif.onclick = () => {
         $('#gif').modal('show');
     }
-
 })();
