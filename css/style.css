@@ -1,40 +1,14 @@
-/*table {*/
-/*    !*border-collapse: collapse;*!*/
-/*    !*margin: 15px 0;*!*/
-/*    !*display: flex;*!*/
-/*}*/
+:root {
+    --button-blue: #3174c0;
+}
+.btn {
+    background-color: var(--button-blue);
+}
 
-/*td, th {*/
-/*    !*border: 1px solid black;*!*/
-/*    !*padding: 5px 10px;*!*/
-/*}*/
-
-/*div.td {*/
-/*    display: inline-block;*/
-/*    border: none !important;*/
-/*    text-align: left;*/
-/*}*/
-
-/*div.coffee {*/
-/*    vertical-align: baseline !important;*/
-/*}*/
-
-/*h1.coffee-name{*/
-/*    font-size: 2em;*/
-/*    padding: 0px 12px;*/
-/*}*/
-
-/*p.coffee-roast{*/
-/*    color: darkgrey;*/
-/*    vertical-align: bottom;*/
-/*    height: 72px;*/
-/*    padding-left: 0px;*/
-/*}*/
-
-/*h1.coffee-name {*/
-/*    display: inline-block;*/
-/*}*/
-
-/*p.coffee-roast {*/
-/*    display: inline-block;*/
-/*}*/
+.jumbotron {
+    background-image: linear-gradient(to bottom, rgba(0,0,0,0.6) 0%,rgba(0,0,0,0.6) 100%), url("../img/coffee-mug.jpg");
+    background-size: cover;
+    background-position: center;
+    height: 40vh;
+    color: white;
+}

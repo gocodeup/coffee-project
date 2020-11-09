@@ -8,10 +8,14 @@
 </head>
 
 <body>
-    <!--Coffee Header-->
-    <div class="container d-flex justify-content-center pt-3">
-        <h1>Coffee!</h1>
+    <!--Coffee Header JumboTron-->
+    <div class="jumbotron jumbotron-fluid">
+        <div class="container justify-content-center">
+            <h1 class="display-4 text-center">Coffee!</h1>
+            <p class="lead text-center">Come one! Come all! Enjoy a delicious coffee from our wide variety of choices! You won't regret it!</p>
+        </div>
     </div>
+
 
     <hr>
 
@@ -20,20 +24,11 @@
         <div class="row justify-content-center">
             <div class="col d-flex flex-wrap">
                 <div id="coffee-table" class="table table-borderless">
-                    <div class="thead">
-                    <div class="coffee-table-header tr">
-                        <h1 class="d-none" scope="col">NAME</h1>
-                        <h1 class="d-none" scope="col">ROAST</h1>
-                    </div>
-                    </div>
+                    <h1 class="d-none">NAME</h1>
+                    <h1 class="d-none">ROAST</h1>
                     <div class="tbody d-flex flex-wrap" id="coffees"></div>
                 </div>
             </div>
-
-
-
-
-
 
         <!--Dropdown Roast Selection Menu -->
             <div class="col">
@@ -59,7 +54,6 @@
                         <input id="submit" class="d-block form-control btn btn-primary" type="submit" />
                     </form>
                 </div>
-
 
                 <hr>
 
