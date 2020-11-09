@@ -19,6 +19,10 @@ form {
     text-align: center;
 }
 
+button {
+    justify-content: center;
+}
+
 .divTableHeading {
     display: flex;
     align-content: center;
@@ -54,6 +58,8 @@ form {
     color: black;
     font-weight: bold;
     background-color: white;
+    display: flex;
+    flex-direction: column;
 
 }
 
@@ -108,6 +114,8 @@ form {
         height:20%;
     }
 }
+
+
 
 
 
