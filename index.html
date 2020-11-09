@@ -51,8 +51,8 @@
 			</li>
 		</ul>
 		<form class="form-inline my-2 my-lg-0">
-			<input class="form-control mr-sm-2" type="search" placeholder="Your E-mail Address" aria-label="Search">
-			<button class="btn btn-outline-success my-2 my-sm-0" id="search-btn" type="submit">Subscribe to Newsletter!</button>
+			<input class="form-control mr-sm-2" type="email" placeholder="Your E-mail Address" aria-label="Search" id="emailInput">
+			<button class="btn-outline-success my-2 my-sm-0" id="subscribe" type="submit">Subscribe to Newsletter!</button>
 		</form>
 	</div>
 </nav>
@@ -158,14 +158,70 @@
 	</div>
 <!--End Modal for Ordering-->
 
+<!-- begin modal for email-->
+	<div class="modal fade" id="newsletter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+		<div class="modal-dialog modal-dialog-centered" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<div class="modal-body">
+					<h5 class="modal-title" id="exampleModalCenterTitle">An Email Has Been Sent To</h5>
+					<p id="userEmail"></p>
+				</div>
+			</div>
+		</div>
+	</div>
+<!--end modal for email-->
+
+<!--begin checkout modal-->
+	<div class="modal fade" id="purchased" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+		<div class="modal-dialog modal-dialog-centered" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<div class="modal-body">
+					<h5 class="modal-title" id="bought">You Bought: </h5>
+					<p id="itemsBought"></p>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-secondary" data-dismiss="modal" id="purchaseBtn">Complete Purchase</button>
+				</div>
+			</div>
+		</div>
+	</div>
+<!--end checkout modal-->
+
+<!--begin meme-->
+	<div class="modal fade" id="gif" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header text-center">
+					<h5 class="modal-title" id="exampleModalLabel">Your Order Has Been Placed</h5>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<div class="modal-body">
+					<img src="img/boom-roasted-checkout.gif" alt="">
+				</div>
+			</div>
+		</div>
+	</div>
+<!--end meme-->
+
+
 <!--Begin Cart-->
-	<label for="cart"><a href="#" id="checkout"><i class="fas fa-shopping-cart"></i></a></label>
+	<label for="cart"><a id="checkout"><i class="fas fa-shopping-cart"></i></a></label>
 	<select id="cart"></select>
 <!--End Cart-->
 </main>
 <!--End of Main Container-->
-
-
 
 <!--Required Script-->
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>

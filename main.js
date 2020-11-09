@@ -1,8 +1,6 @@
 (function () {
 
-
     "use strict"
-
 
 // from http://www.ncausa.org/About-Coffee/Coffee-Roasts-Guide
     var coffees = [
@@ -40,6 +38,11 @@
     var size = document.querySelector("#size");
     var checkout = document.querySelector("#checkout");
     var coffeeName = document.querySelector("#coffeeName");
+    var userEmail = document.querySelector("#userEmail");
+    var subscribeBtn = document.querySelector("#subscribe");
+    var emailInput = document.querySelector("#emailInput");
+    var finalPurchase = document.querySelector("#itemsBought");
+    var gif = document.querySelector("#purchaseBtn");
     cartBtn.style.display = "none";
 
     //set individual html structure
@@ -115,6 +118,16 @@
                     }
 
                 }
+                for (const purchases of coffeeCart) {
+                    if (finalPurchase.innerHTML.includes(purchases.innerText)) {
+                        finalPurchase.innerHTML += '<br>' + purchases.innerText;
+                    }
+                }
+                checkout.onclick = () => {
+                    $('#purchased').modal('show');
+                }
+
+
             })
 
     }
@@ -145,10 +158,10 @@
     function searchCoffees(searchedCoffees) {
         var lowercaseSearch = searchCoffee.value.toLowerCase()
         if (lowercaseSearch !== "") {
+            searchContainer.innerHTML = "";
             for (const coffee of searchedCoffees) {
-                if (coffee.value.toLowerCase().startsWith(lowercaseSearch)) {
-                        searchContainer.innerHTML = ""
-                        searchContainer.innerHTML = '<input type="radio"' + ' name="coffeeButtons" class="searchedCoffee"' + ' value=' + coffee.value + " checked>" + coffee.value;
+                if (coffee.value.toLowerCase().includes(lowercaseSearch)) {
+                        searchContainer.innerHTML += '<input type="radio"' + ' name="coffeeButtons" class="searchedCoffee"' + ' value=' + coffee.value + " checked>" + coffee.value;
                 }
             }
             searchContainer.style.display = "inline-block";
@@ -164,14 +177,6 @@
             searchContainer.style.display = "none";
             cardContainer.setAttribute("class", cardContainerAttr);
         }
-
-
-        // var searched = document.querySelectorAll(".searchedCoffee");
-        //
-        // for (const found of searched) {
-        //     console.log(found.value.toLowerCase().startsWith(lowercaseSearch));
-        // }
-
     }
 
     function selectRoasts() {
@@ -205,5 +210,15 @@
         coffeeBtns[2].classList.toggle("coffee-select");
     }
 
+    subscribeBtn.onclick = () => {
+        if (emailInput.value.includes("@")){
+        $('#newsletter').modal('show');
+        userEmail.innerHTML = emailInput.value;
+        }
+    }
+
+    gif.onclick = () => {
+        $('#gif').modal('show');
+    }
 
 })();
