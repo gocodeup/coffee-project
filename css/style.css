@@ -1,8 +1,8 @@
 :root {
-    --button-blue: #3174c0;
+    --button-color: #3A311D;
 }
 .btn {
-    background-color: var(--button-blue);
+    /*background-color: var(--button-color);*/
 }
 
 .jumbotron {
