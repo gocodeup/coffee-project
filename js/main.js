@@ -2,10 +2,10 @@
 
 //displaying the table on the page
 function renderCoffee(coffee) {
-    var html = '<tr class="coffee">';
-    html += '<td>' + coffee.name + '</td>';
-    html += '<td>' + coffee.roast + '</td>';
-    html += '</tr>';
+    var html = '<div class="coffee">';
+    html += '<h1>' + coffee.name + '</h1>';
+    html += '<p>' + coffee.roast + '</p>';
+    html += '</div>';
 
     return html;
 }
@@ -83,9 +83,9 @@ function searchFunction() {
     input = document.getElementById("coffee-search");
     filter = input.value.toUpperCase();
     table = document.getElementById("coffee-table");
-    tr = table.getElementsByTagName("tr");
+    tr = table.getElementsByClassName("tr");
     for (i = 0; i < tr.length; i++) {
-        td = tr[i].getElementsByTagName("td")[0];
+        td = tr[i].getElementsByClassName("td")[0];
         if (td) {
             txtValue = td.textContent || td.innerText;
             if (txtValue.toUpperCase().indexOf(filter) > -1) {
