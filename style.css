@@ -1,5 +1,5 @@
 body {
-    /*background-image: url("img/white-wood-coffee-cups.jpg");*/
+    /*background-image: url("img/coffee-beans.jpg");*/
     background-color: #654321;
 }
 
@@ -12,7 +12,7 @@ body {
 h1 {
     text-align: center;
     /*color: #654321;*/
-    color: white;
+    color: bisque;
 }
 
 form {
@@ -34,7 +34,10 @@ button {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    width: 100%
+    /*margin: 20px;*/
+    /*background-color: bisque;*/
+    /*border-left: 40px  solid rgba(100,100,100,0.0);*/
+    width: 50%
 }
 
 .divTableBody {
@@ -52,12 +55,13 @@ button {
 .coffee-select{
     /*border: 2px solid #654321;*/
     width: 50%;
-    border: 2px solid white;
+    border: 2px solid bisque;
+    border-radius: 40px;
     padding: 1em;
     margin: 1em;
     color: black;
     font-weight: bold;
-    background-color: white;
+    background-color: bisque;
     display: flex;
     flex-direction: column;
 
@@ -71,7 +75,7 @@ button {
 
 .info{
     /*color: #654321;*/
-    color: white;
+    color: bisque;
     display:flex;
     flex-wrap:nowrap;
     /*flex-direction: row;*/
@@ -83,8 +87,29 @@ button {
     justify-content: center;
 }
 
+.coffee-add{
+    display:flex;
+    justify-content: center;
+}
 
+#roast-creation{
+    margin:.5em;
+}
 
+#roast-selection{
+    margin:.5em;
+}
+
+img{
+    display:none;
+}
+
+h3{
+    color: bisque;
+}
+p{
+    color: bisque;
+}
 
 
 @media screen and (min-width: 768px){
@@ -112,6 +137,10 @@ button {
         /*mix-blend-mode: multiply;*/
         width:20%;
         height:20%;
+    }
+
+    img{
+        display: inline;
     }
 }
 

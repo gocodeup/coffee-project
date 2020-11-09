@@ -63,6 +63,8 @@ function addCoffee(e) {
 var newCoffee = document.querySelector("#userAdd")
 var addedRoast = document.querySelector("#roast-creation")
 document.querySelector("#submitButton").addEventListener('click', addCoffee)
+document.querySelector("#submitButton").addEventListener('click', updateCoffees)
+// document.querySelector("#submitButton").addEventListener('click', renderCoffees)
 // function searchCoffees(){
 //     // var selectedRoast = roastSelection.value;
 //     var filteredCoffees = [];
@@ -139,5 +141,7 @@ newCoffee.addEventListener('submit', addCoffee);
 addedRoast.addEventListener('submit', addCoffee);
 roastSelection.addEventListener('change', updateCoffees);
 searchValue.addEventListener('keyup' , updateCoffees);
+// addedRoast.addEventListener("submit", renderCoffee)
+// addedRoast.addEventListener("submit", renderCoffees)
 // searchCoffees();
 // addCoffee(newCoffee.value, addedRoast.value);
