@@ -123,14 +123,18 @@
                     if (item.checked && userQty.value.length > 0) {
                         coffeeCart.innerHTML += renderCart(item.value.split("-").join(" ") + ", Qty " + userQty.value + ", size: " + size.value);
                         $(modalSelector).modal('hide');
+                        if (item.checked) {
+                            finalPurchase.innerHTML = "";
+                            for (const purchases of coffeeCart) {
+                                        finalPurchase.innerHTML += '<br>' + purchases.innerText;
+                                    }
+                                }
+                        item.checked = false;
+
                     }
 
                 }
-                for (const purchases of coffeeCart) {
-                    if (finalPurchase.innerText !== (purchases.innerText)) {
-                        finalPurchase.innerHTML += '<br>' + purchases.innerText;
-                    }
-                }
+
                 checkout.onclick = () => {
                     $('#purchased').modal('show');
                 }
