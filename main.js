@@ -56,12 +56,12 @@
     }
 
 
-    function sortCoffees(coffee){
-        var html = '<label for="exampleRadios">';
-        html += '<input class="form-check-input radio-coffee" type="radio" name="exampleRadios"' + " value=" + coffee.split(" ").join("-") + ">";
-        html += '</label>';
-        return html;
-    }
+    // function sortCoffees(coffee){
+    //     var html = '<label for="exampleRadios">';
+    //     html += '<input class="form-check-input radio-coffee" type="radio" name="exampleRadios"' + " value=" + coffee.split(" ").join("-") + ">";
+    //     html += '</label>';
+    //     return html;
+    // }
 
 
     //set options
@@ -148,16 +148,6 @@
             }
     }
 
-    function roasts(coffees) {
-        var roastBucket = [];
-        coffees.forEach((coffee) => {
-            if (roastBucket.indexOf(coffee.roast) === -1) {
-                roastBucket.unshift(coffee.roast);
-            }
-        });
-        return roastBucket;
-    }
-
     function searchCoffees(searchedCoffees) {
         var lowercaseSearch = searchCoffee.value.toLowerCase()
         if (lowercaseSearch !== "") {
@@ -218,7 +208,8 @@
         coffeeBtns[2].classList.toggle("coffee-select");
     }
 
-    subscribeBtn.onclick = () => {
+    subscribeBtn.onclick = (e) => {
+        e.preventDefault();
         if (emailInput.value.includes("@")){
         $('#newsletter').modal('show');
         userEmail.innerHTML = emailInput.value;
