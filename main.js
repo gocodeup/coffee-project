@@ -18,7 +18,7 @@ function renderCoffees(coffees) {
 }
 
 function updateCoffees(e) {
-    e.preventDefault(); // don't submit the form, we just want to update the data
+    // e.preventDefault(); // don't submit the form, we just want to update the data
     var selectedRoast = roastSelection.value;
     var filteredCoffees = [];
     coffees.forEach(function(coffee) {
@@ -26,20 +26,24 @@ function updateCoffees(e) {
             filteredCoffees.push(coffee);
         }
     });
+    if (selectedRoast==="all"){
+        filteredCoffees=[...coffees];
+    }
+
     div.innerHTML = renderCoffees(filteredCoffees);
 }
 
-// function searchCoffeeNames(e) {
-//     e.preventDefault(); // don't submit the form, we just want to update the data
-//     var selectedRoast = roastSelection.value;
-//     var filteredCoffees = [];
-//     coffees.forEach(function(coffee) {
-//         if (coffee.roast === selectedRoast && coffee.name.indexOf(coffeeSearch.value) !== -1) {
-//             filteredCoffees.push(coffee);
-//         }
-//     });
-//     div.innerHTML = renderCoffees(filteredCoffees);
-// }
+function searchCoffeeNames(e) {
+    //e.preventDefault(); // don't submit the form, we just want to update the data
+    var selectedRoast = roastSelection.value;
+    var filteredCoffees = [];
+    coffees.forEach(function(coffee) {
+        if ((coffee.roast === selectedRoast || selectedRoast==="all")&& coffee.name.indexOf(coffeeSearch.value) !== -1) {
+            filteredCoffees.push(coffee);
+        }
+    });
+    div.innerHTML = renderCoffees(filteredCoffees);
+}
 
 // from http://www.ncausa.org/About-Coffee/Coffee-Roasts-Guide
 var coffees = [
@@ -64,11 +68,16 @@ var submitButton = document.querySelector('#submit');
 var roastSelection = document.querySelector('#roast-selection');
 var coffeeSearch = document.forms.coffeeFilterSearch.TextInput
 var input = document.querySelector(".form-select")
-
-
-
+var search = document.querySelector(".form-control")
 
 div.innerHTML = renderCoffees(coffees);
 
-submitButton.addEventListener('click', searchCoffeeNames);
-input.addEventListener("change", updateCoffees);
+//submitButton.addEventListener('click', searchCoffeeNames);
+input.addEventListener("change", function(){
+    roastSelection=document.querySelector('#roast-selection');
+    updateCoffees()
+});
+
+search.addEventListener("change", function() {
+    searchCoffeeNames()
+})
