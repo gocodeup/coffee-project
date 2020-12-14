@@ -30,6 +30,24 @@ function updateCoffees(e) {
     tbody.innerHTML = renderCoffees(filteredCoffees);
 }
 
+//add a new coffee
+function addCoffee(e) {
+    e.preventDefault(); // don't submit the form, we just want to update the data
+    var newCoffee = generateCoffee()
+    coffees.push(newCoffee);
+    tbody.innerHTML = renderCoffees(coffees);
+}
+
+//generates coffee object to add to table. ID based on list length.
+function generateCoffee() {
+    //user input name
+    var name = userCoffeeInput.value
+    var id = coffees.length + 1
+    var roast = addRoastSelection.value
+
+    return {id: id, name:name, roast:roast}
+}
+
 // from http://www.ncausa.org/About-Coffee/Coffee-Roasts-Guide
 var coffees = [
     {id: 1, name: 'Light City', roast: 'light'},
@@ -49,9 +67,15 @@ var coffees = [
 ];
 
 var tbody = document.querySelector('#coffees');
-var submitButton = document.querySelector('#submit');
-var roastSelection = document.querySelector('#roast-selection');
-
 tbody.innerHTML = renderCoffees(coffees);
 
+//search
+var submitButton = document.querySelector('#submit');
 submitButton.addEventListener('click', updateCoffees);
+var roastSelection = document.querySelector('#roast-selection');
+
+//add
+var userCoffeeInput = document.querySelector('#user-coffee-input');
+var addRoastSelection = document.querySelector('#add-roast-selection');
+var addButton = document.querySelector('#addCoffee');
+addButton.addEventListener('click', addCoffee);
