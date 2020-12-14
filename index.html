@@ -25,9 +25,9 @@
 <div class="row">
 <div class="col-6 order-2">
     <form name="coffee">
-       <div> <label for="roast-selection">Roast</label>
-        <select class="form-select col-12" aria-label="Select a Roast" id="roast-selection">
-            <option>all</option>
+       <div> <label for="roast-selection">Roast</label><br>
+        <select class="form-select custom-select col-6" aria-label="Select a Roast" id="roast-selection">
+            <option selected>all</option>
             <option>light</option>
             <option>medium</option>
             <option>dark</option>
@@ -35,8 +35,23 @@
 
        </div>
         <label >Coffee Name</label>
-        <input class="form-control" id="search" type="text" placeholder="Search" aria-label="Search">
-        <input class="btn btn-primary col-12 my-2" id="submit" type="submit"/>
+        <input class="form-control" id="search" type="text" placeholder="Search Coffees" aria-label="Search">
+        <button class="btn btn-primary col-12 my-2" id="submit" type="submit">Search for a Coffee</button>
+
+    </form>
+    <form name="userAdd">
+        <div> <label for="roast-selection">Roast</label><br>
+        <select class="form-select custom-select col-6" id="addRoast" aria-label="Select a Roast">
+
+            <option selected>light</option>
+            <option>medium</option>
+            <option>dark</option>
+        </select>
+
+    </div>
+        <label>Coffee Name</label>
+        <input class="form-control" id="addText" type="text" placeholder="Add a Coffee" aria-label="Search">
+        <button class="btn btn-primary col-12 my-2" id="addButton" type="submit">Add a Coffee!</button>
     </form>
 </div>
 <div class="col-6 order-1">

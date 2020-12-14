@@ -20,6 +20,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="67759dc8-ead9-43d0-a8ac-6fad0dae7c7b" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_14-Dec-20_11_22_AM__Default_Changelist_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_14-Dec-20_11_22_AM__Default_Changelist_.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/main.js" afterDir="false" />
@@ -111,9 +112,9 @@
       <screen x="0" y="25" width="2560" height="1415" />
     </state>
     <state x="1201" y="127" width="1259" height="1215" key="com.intellij.history.integration.ui.views.FileHistoryDialog/2560.385.1920.1055/0.25.2560.1415@0.25.2560.1415" timestamp="1607975354179" />
-    <state x="2659" y="239" key="git4idea.branch.GitSmartOperationDialog" timestamp="1607966573458">
+    <state x="2659" y="239" key="git4idea.branch.GitSmartOperationDialog" timestamp="1607981882942">
       <screen x="1920" y="6" width="1920" height="1040" />
     </state>
-    <state x="2659" y="239" key="git4idea.branch.GitSmartOperationDialog/1920.6.1920.1040/0.0.1920.1040@1920.6.1920.1040" timestamp="1607966573458" />
+    <state x="2659" y="239" key="git4idea.branch.GitSmartOperationDialog/1920.6.1920.1040/0.0.1920.1040@1920.6.1920.1040" timestamp="1607981882942" />
   </component>
 </project>
