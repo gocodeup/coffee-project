@@ -7,36 +7,37 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
 </head>
 <body class="container">
-    <h1 class="d-flex justify-content-center">Coffee!</h1>
-    <hr>
-    <div class="row">
-        <div class="col-6 container">
-            <section class="row" id="coffees"></section>
-        </div>
-        <form name="coffeeFilterSearch" id="coffeeFilterSearch " class="col-6">
-            <fieldset class="active">
-                <div class="mb-3">
-                    <label for="roast-selection" class="form-label"></label>
-                    <select name="form-select" id="roast-selection" class="form-select">
-                        <option>light</option>
-                        <option>medium</option>
-                        <option>dark</option>
-                    </select>
-                </div>
-                <div class="mb-3">
-                    <label for="TextInput" class="form-label">Coffee Name</label>
-                    <input name="TextInput" type="text" id="TextInput" class="form-control" placeholder="input">
-                </div>
+<h1 class="d-flex justify-content-center">Coffee!</h1>
+<hr>
+<div class="row">
+    <div class="col-6 container">
+        <section class="row" id="coffees"></section>
+    </div>
+    <form name="coffeeFilterSearch" id="coffeeFilterSearch " class="col-6">
+        <fieldset class="active">
+            <div class="mb-3">
+                <label for="roast-selection" class="form-label"></label>
+                <select name="form-select" id="roast-selection" class="form-select">
+                    <option>all</option>
+                    <option>light</option>
+                    <option>medium</option>
+                    <option>dark</option>
+                </select>
+            </div>
+            <div class="mb-3">
+                <label for="TextInput" class="form-label">Coffee Name</label>
+                <input name="TextInput" type="text" id="TextInput" class="form-control" placeholder="input">
+            </div>
 
-                <div>
-                    <button type="submit" class="btn btn-primary" id="submit">Submit</button>
-                </div>
+            <div>
+                <button type="submit" class="btn btn-primary" id="submit">Submit</button>
+            </div>
         </fieldset>
     </form>
-    </div>
+</div>
 
-    <script src="main.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js" integrity="sha384-q2kxQ16AaE6UbzuKqyBE9/u/KzioAlnx2maXQHiDX9d4/zp8Ok3f+M7DPm+Ib6IU" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.min.js" integrity="sha384-pQQkAEnwaBkjpqZ8RU1fF1AKtTcHJwFl3pblpTlHXybJjHpMYo79HY3hIi4NKxyj" crossorigin="anonymous"></script>
+<script src="main.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js" integrity="sha384-q2kxQ16AaE6UbzuKqyBE9/u/KzioAlnx2maXQHiDX9d4/zp8Ok3f+M7DPm+Ib6IU" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.min.js" integrity="sha384-pQQkAEnwaBkjpqZ8RU1fF1AKtTcHJwFl3pblpTlHXybJjHpMYo79HY3hIi4NKxyj" crossorigin="anonymous"></script>
 </body>
 </html>
