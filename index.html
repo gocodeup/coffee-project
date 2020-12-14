@@ -23,13 +23,7 @@
         <!--Table Column-->
         <div class="col-sm">
             <table>
-                <thead>
-                <tr>
-                    <th>ID</th>
-                    <th>NAME</th>
-                    <th>ROAST</th>
-                </tr>
-                </thead>
+				<div class=""></div>
                 <tbody id="coffees"></tbody>
             </table>
         </div>
@@ -39,7 +33,7 @@
             <div class="container">
                 <div class="col-sm">
                     <!--Roast Selection-->
-                    <form>
+                    <form >
                         <div class="form-group">
                             <label for="roast-selection">Roast</label>
                             <select class="form-control" id="roast-selection">
@@ -51,7 +45,7 @@
                             <!--Coffee Name Input Field-->
                             <div class="form-group">
                                 <label>Coffee Name</label>
-                                <input type="text" class="form-control" onekeyup="filterFunc" placeholder="Search here...." id="filter">
+                                <input type="text" class="form-control" placeholder="Search here...." id="filter">
                             </div>
                             <!--Submit Button For Searching Coffee-->
                             <input class="btn btn-primary btn-block" id="submit" type="submit"/>
