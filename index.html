@@ -13,10 +13,11 @@
     <div class="col-6 container">
         <section class="row" id="coffees"></section>
     </div>
-    <form name="coffeeFilterSearch" id="coffeeFilterSearch " class="col-6">
+    <div class="col-6">
+    <form name="coffeeFilterSearch" id="coffeeFilterSearch">
         <fieldset class="active">
             <div class="mb-3">
-                <label for="roast-selection" class="form-label"></label>
+                <label for="roast-selection" class="form-label">Roast</label>
                 <select name="form-select" id="roast-selection" class="form-select">
                     <option>all</option>
                     <option>light</option>
@@ -34,6 +35,28 @@
             </div>
         </fieldset>
     </form>
+    <h1 class="d-flex justify-content-center">Add a Coffee!</h1>
+    <form name="addCoffee" id="addCoffee">
+        <fieldset class="active">
+            <div class="mb-3">
+                <label for="userRoastSelection" class="form-label">Roast</label>
+                <select name="form-select" id="userRoastSelection" class="form-select">
+                    <option>light</option>
+                    <option>medium</option>
+                    <option>dark</option>
+                </select>
+            </div>
+            <div class="mb-3">
+                <label for="TextInput" class="form-label">Name</label>
+                <input name="TextInput" type="text" id="TextInput" class="form-control" placeholder="input">
+            </div>
+
+            <div>
+                <button type="submit" class="btn btn-primary" id="submitCoffee">Submit</button>
+            </div>
+        </fieldset>
+    </form>
+    </div>
 </div>
 
 <script src="main.js"></script>
