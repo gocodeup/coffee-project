@@ -54,3 +54,25 @@ var roastSelection = document.querySelector('#roast-selection');
 tbody.innerHTML = renderCoffees(coffees);
 
 submitButton.addEventListener('click', updateCoffees);
+
+// Todo 3
+// Target submit button
+let searchButton = document.querySelector('#searchButton')
+
+// Target input field value
+let searchValue = document.querySelector('#search-input')
+
+function updateSearch(e) {
+    e.preventDefault(); // don't submit the form, we just want to update the data
+    var searchTerm = searchValue.value;
+    var filteredCoffees = [];
+    coffees.forEach(function(coffee) {
+        if (coffee.name.includes(searchTerm)) {
+            filteredCoffees.push(coffee);
+        }
+    });
+    tbody.innerHTML = renderCoffees(filteredCoffees);
+}
+// Make new function that is similar to update, but with new parameters
+
+searchButton.addEventListener('click', updateSearch)
