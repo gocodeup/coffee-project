@@ -48,6 +48,11 @@ var coffees = [
 	{id: 14, name: 'French', roast: 'dark'},
 ];
 
+function addCoffee(id, name, roast) {
+
+	coffees.push({id, name, roast})
+}
+
 var tbody = document.querySelector('#coffees');
 var submitButton = document.querySelector('#submit');
 var roastSelection = document.querySelector('#roast-selection');

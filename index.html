@@ -2,32 +2,56 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title></title>
+	<title>JJ's Coffee House</title>
 	<link rel="stylesheet" href="style.css">
 </head>
 <body>
-<h1>Coffee!</h1>
+<h1 id="main-head">Coffee!</h1>
+<hr>
 
-<form>
-	<label for="roast-selection"></label>
+<table id="coffee-list">
+	<div>
+		<thead>
+		<tr>
+			<th>ID</th>
+			<th>NAME</th>
+			<th>ROAST</th>
+		</tr>
+		</thead>
+	</div>
+	<div>
+		<tbody id="coffees"></tbody>
+	</div>
+</table>
+
+<form id="search-coffee">
+	<label for="roast-selection">Roast</label>
 	<select id="roast-selection">
 		<option>light</option>
 		<option>medium</option>
 		<option>dark</option>
 	</select>
+	<br>
+	<label for="coffee-name">Name</label>
+	<br>
+	<input id="coffee-name" type="text">
 	<input id="submit" type="submit" />
 </form>
 
-<table>
-	<thead>
-	<tr>
-		<th>ID</th>
-		<th>NAME</th>
-		<th>ROAST</th>
-	</tr>
-	</thead>
-	<tbody id="coffees"></tbody>
-</table>
+
+<form id="add-coffee">
+	<label for="new-roast">Roast</label>
+	<select id="new-roast">
+		<option>light</option>
+		<option>medium</option>
+		<option>dark</option>
+	</select>
+	<br>
+	<label for="new-name">Name</label>
+	<br>
+	<input id="new-name" type="text">
+	<input id="submit2" type="submit" />
+</form>
 
 <script src="main.js"></script>
 </body>
