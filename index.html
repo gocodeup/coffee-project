@@ -10,36 +10,27 @@
     <h1 class="d-flex justify-content-center">Coffee!</h1>
     <hr>
     <div class="row">
+        <div class="col-6 container">
+            <section class="row" id="coffees"></section>
+        </div>
+        <form name="coffeeFilterSearch" id="coffeeFilterSearch " class="col-6">
+            <fieldset class="active">
+                <div class="mb-3">
+                    <label for="roast-selection" class="form-label"></label>
+                    <select name="form-select" id="roast-selection" class="form-select">
+                        <option>light</option>
+                        <option>medium</option>
+                        <option>dark</option>
+                    </select>
+                </div>
+                <div class="mb-3">
+                    <label for="TextInput" class="form-label">Coffee Name</label>
+                    <input name="TextInput" type="text" id="TextInput" class="form-control" placeholder="input">
+                </div>
 
-   <!-- <form class="form-inline justify-content-end">-->
-<!--        <label for="roast-selection"></label>-->
-<!--        <select id="roast-selection">-->
-<!--            <option>light</option>-->
-<!--            <option>medium</option>-->
-<!--            <option>dark</option>-->
-<!--        </select>-->
-<!--        <input id="submit" type="submit" />-->
- <!--   </form>  -->
-    <div class="col-6 container">
-        <section class="row" id="coffees"></section>
-    </div>
-    <form class="col-6">
-        <fieldset class="active">
-            <div class="mb-3">
-                <label for="roast-selection" class="form-label"></label>
-                <select id="roast-selection" class="form-select">
-                    <option>light</option>
-                    <option>medium</option>
-                    <option>dark</option>
-                </select>
-            </div>
-            <div class="mb-3">
-                <label for="TextInput" class="form-label">Coffee Name</label>
-                <input type="text" id="TextInput" class="form-control" placeholder="input">
-            </div>
-
-
-            <button type="submit" class="btn btn-primary">Submit</button>
+                <div>
+                    <button type="submit" class="btn btn-primary" id="submit">Submit</button>
+                </div>
         </fieldset>
     </form>
     </div>
