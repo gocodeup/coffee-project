@@ -76,3 +76,35 @@ function updateSearch(e) {
 // Make new function that is similar to update, but with new parameters
 
 searchButton.addEventListener('click', updateSearch)
+
+// TODO 4
+// add event listener to the keystrokes input
+
+function updateKey() {
+
+    var searchTerm = searchValue.value;
+    var filteredCoffees = [];
+    coffees.forEach(function(coffee) {
+        if (coffee.name.includes(searchTerm)) {
+            filteredCoffees.push(coffee);
+        }
+    });
+    tbody.innerHTML = renderCoffees(filteredCoffees);
+}
+
+searchValue.addEventListener('keyup', updateKey)
+
+
+function updateOption() {
+
+    var selectedRoast = roastSelection.value;
+    var filteredCoffees = [];
+    coffees.forEach(function(coffee) {
+        if (coffee.roast === selectedRoast) {
+            filteredCoffees.push(coffee);
+        }
+    });
+    tbody.innerHTML = renderCoffees(filteredCoffees);
+}
+
+roastSelection.addEventListener('change', updateOption)
