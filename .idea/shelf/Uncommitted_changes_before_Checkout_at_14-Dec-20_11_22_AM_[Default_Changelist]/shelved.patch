@@ -1,0 +1,133 @@
+Index: index.html
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><!DOCTYPE html>\r\n<html lang=\"en\">\r\n<head>\r\n    <meta charset=\"UTF-8\">\r\n    <title></title>\r\n    <link rel=\"stylesheet\" href=\"style.css\">\r\n</head>\r\n<body>\r\n    <h1>Coffee!</h1>\r\n\r\n    <form>\r\n        <label for=\"roast-selection\"></label>\r\n        <select id=\"roast-selection\">\r\n            <option>light</option>\r\n            <option>medium</option>\r\n            <option>dark</option>\r\n        </select>\r\n        <input id=\"submit\" type=\"submit\" />\r\n    </form>\r\n\r\n    <table>\r\n        <thead>\r\n            <tr>\r\n                <th>ID</th>\r\n                <th>NAME</th>\r\n                <th>ROAST</th>\r\n            </tr>\r\n        </thead>\r\n        <tbody id=\"coffees\"></tbody>\r\n    </table>\r\n\r\n    <script src=\"main.js\"></script>\r\n</body>\r\n</html>\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- index.html	(revision 0995e2d3ab4f2d610ec4d305d4af74c889e08799)
++++ index.html	(date 1607960106582)
+@@ -1,8 +1,15 @@
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+-    <meta charset="UTF-8">
+-    <title></title>
++    <!-- Required meta tags -->
++    <meta charset="utf-8">
++    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
++
++    <!-- Bootstrap CSS -->
++    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
++
++    <!--    Optional CSS - any custom CSS needs to go here so that it overwrites bootstrap-->
++    <title>Coffee</title>
+     <link rel="stylesheet" href="style.css">
+ </head>
+ <body>
+@@ -28,7 +35,13 @@
+         </thead>
+         <tbody id="coffees"></tbody>
+     </table>
+-
++    <!-- Optional JavaScript -->
++    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
++    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
++    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
++    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
++    <!--Font Awesome, for icons - although not necessary to use bootstrap.-->
++    <script src="https://kit.fontawesome.com/d97a27eb03.js" crossorigin="anonymous"></script>
+     <script src="main.js"></script>
+ </body>
+ </html>
+Index: .gitignore
+===================================================================
+--- .gitignore	(date 1607960106679)
++++ .gitignore	(date 1607960106679)
+@@ -0,0 +1,4 @@
++.idea/*
++*.iml
++.DS_STORE
++js/keys.js
+\ No newline at end of file
+Index: .idea/coffee-project.iml
+===================================================================
+--- .idea/coffee-project.iml	(date 1607959624041)
++++ .idea/coffee-project.iml	(date 1607959624041)
+@@ -0,0 +1,9 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<module type="JAVA_MODULE" version="4">
++  <component name="NewModuleRootManager" inherit-compiler-output="true">
++    <exclude-output />
++    <content url="file://$MODULE_DIR$" />
++    <orderEntry type="inheritedJdk" />
++    <orderEntry type="sourceFolder" forTests="false" />
++  </component>
++</module>
+\ No newline at end of file
+Index: .idea/misc.xml
+===================================================================
+--- .idea/misc.xml	(date 1607959624408)
++++ .idea/misc.xml	(date 1607959624408)
+@@ -0,0 +1,6 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<project version="4">
++  <component name="ProjectRootManager">
++    <output url="file://$PROJECT_DIR$/out" />
++  </component>
++</project>
+\ No newline at end of file
+Index: .idea/codestream.xml
+===================================================================
+--- .idea/codestream.xml	(date 1607959624538)
++++ .idea/codestream.xml	(date 1607959624538)
+@@ -0,0 +1,7 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<project version="4">
++  <component name="CodeStream">
++    <option name="teamId" value="5fb6cabfb991800804775a7b" />
++    <option name="webViewContext" value="{&quot;chatProviderAccess&quot;:&quot;strict&quot;,&quot;currentTeamId&quot;:&quot;5fb6cabfb991800804775a7b&quot;,&quot;currentStreamId&quot;:&quot;&quot;,&quot;pullRequestCheckoutBranch&quot;:false,&quot;isRepositioning&quot;:false,&quot;panelStack&quot;:[&quot;landing-redirect&quot;],&quot;hasFocus&quot;:false,&quot;channelFilter&quot;:&quot;all&quot;,&quot;channelsMuteAll&quot;:false,&quot;codemarkFileFilter&quot;:&quot;all&quot;,&quot;codemarkTypeFilter&quot;:&quot;all&quot;,&quot;codemarkTagFilter&quot;:&quot;all&quot;,&quot;codemarkBranchFilter&quot;:&quot;all&quot;,&quot;codemarkAuthorFilter&quot;:&quot;all&quot;,&quot;codemarksFileViewStyle&quot;:&quot;inline&quot;,&quot;codemarksShowArchived&quot;:false,&quot;codemarksShowResolved&quot;:false,&quot;codemarksWrapComments&quot;:false,&quot;showFeedbackSmiley&quot;:true,&quot;route&quot;:{&quot;name&quot;:&quot;login&quot;,&quot;params&quot;:{}},&quot;spatialViewShowPRComments&quot;:false}" />
++  </component>
++</project>
+\ No newline at end of file
+Index: .idea/vcs.xml
+===================================================================
+--- .idea/vcs.xml	(date 1607959624658)
++++ .idea/vcs.xml	(date 1607959624658)
+@@ -0,0 +1,6 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<project version="4">
++  <component name="VcsDirectoryMappings">
++    <mapping directory="" vcs="Git" />
++  </component>
++</project>
+\ No newline at end of file
+Index: .idea/modules.xml
+===================================================================
+--- .idea/modules.xml	(date 1607959624774)
++++ .idea/modules.xml	(date 1607959624774)
+@@ -0,0 +1,8 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<project version="4">
++  <component name="ProjectModuleManager">
++    <modules>
++      <module fileurl="file://$PROJECT_DIR$/.idea/coffee-project.iml" filepath="$PROJECT_DIR$/.idea/coffee-project.iml" />
++    </modules>
++  </component>
++</project>
+\ No newline at end of file
+Index: .idea/.gitignore
+===================================================================
+--- .idea/.gitignore	(date 1607959626099)
++++ .idea/.gitignore	(date 1607959626099)
+@@ -0,0 +1,10 @@
++# Default ignored files
++/shelf/
++/workspace.xml
++# CodeStream ignored files
++/../../coffee-project\.idea/codestream.xml
++# Datasource local storage ignored files
++/../../../../:\Idea Projects\coffee-project\.idea/dataSources/
++/dataSources.local.xml
++# Editor-based HTTP Client requests
++/httpRequests/

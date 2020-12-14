@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="67759dc8-ead9-43d0-a8ac-6fad0dae7c7b" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/codestream.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/coffee-project.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/main.js" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="ted-driving" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1leZa1nUsVHbHHAOtCTAcsDiC1G" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.Code with Me" />
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="67759dc8-ead9-43d0-a8ac-6fad0dae7c7b" name="Default Changelist" comment="" />
+      <created>1607959576902</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1607959576902</updated>
+      <workItem from="1607959578229" duration="2006000" />
+      <workItem from="1607961604340" duration="190000" />
+      <workItem from="1607961825908" duration="1592000" />
+      <workItem from="1607966769128" duration="3670000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="2481" y="128" key="#Plugins" timestamp="1607961783161">
+      <screen x="1920" y="6" width="1920" height="1040" />
+    </state>
+    <state x="2481" y="128" key="#Plugins/1920.6.1920.1040/0.0.1920.1040@1920.6.1920.1040" timestamp="1607961783161" />
+    <state x="2104" y="92" key="MergeDialog" timestamp="1607966621572">
+      <screen x="1920" y="6" width="1920" height="1040" />
+    </state>
+    <state x="2104" y="92" key="MergeDialog/1920.6.1920.1040/0.0.1920.1040@1920.6.1920.1040" timestamp="1607966621572" />
+    <state x="2390" y="132" key="SettingsEditor" timestamp="1607961958809">
+      <screen x="1920" y="6" width="1920" height="1040" />
+    </state>
+    <state x="2390" y="132" key="SettingsEditor/1920.6.1920.1040/0.0.1920.1040@1920.6.1920.1040" timestamp="1607961958809" />
+    <state x="2659" y="239" key="git4idea.branch.GitSmartOperationDialog" timestamp="1607966573458">
+      <screen x="1920" y="6" width="1920" height="1040" />
+    </state>
+    <state x="2659" y="239" key="git4idea.branch.GitSmartOperationDialog/1920.6.1920.1040/0.0.1920.1040@1920.6.1920.1040" timestamp="1607966573458" />
+  </component>
+</project>

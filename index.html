@@ -22,32 +22,33 @@
     </div>
 </div>
 <hr>
-
-<div class="col-6">
+<div class="row">
+<div class="col-6 order-2">
     <form>
        <div> <label for="roast-selection">Roast</label>
-        <select class="form-select" aria-label="Select a Roast" id="roast-selection">
+        <select class="form-select col-12" aria-label="Select a Roast" id="roast-selection">
             <option>light</option>
             <option>medium</option>
             <option>dark</option>
         </select>
-        <input id="submit" type="submit"/>
+
        </div>
         <label>Coffee Name</label>
         <input class="form-control" type="text" placeholder="Search" aria-label="Search">
+        <input class="btn btn-primary col-12 my-2" id="submit" type="submit"/>
     </form>
 </div>
-<div>
+<div class="col-6 order-1">
     <div>
-        <div>
-            <div>ID</div>
-            <div>NAME</div>
-            <div>ROAST</div>
+        <div class="row">
+            <div class="d-none">ID</div>
+            <div class="col-6 text-right d-none">NAME</div>
+            <div class="col-6 d-none">ROAST</div>
         </div>
     </div>
-    <div id="coffees"></div>
+    <div class="m-2 row align-items-end" id="coffees"></div>
 </div>
-
+</div>
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
         crossorigin="anonymous"></script>
