@@ -30,3 +30,8 @@ input[type=text] {
 select{
 	width: 65%;
 }
+
+#user-interface {
+	width: 40%;
+	float: right;
+}

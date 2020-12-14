@@ -49,14 +49,19 @@ var coffees = [
 ];
 
 function addCoffee(id, name, roast) {
-
+	id = coffees.length
+	name = document.getElementById('new-name')
+	roast = document.getElementById('new-roast')
 	coffees.push({id, name, roast})
 }
 
 var tbody = document.querySelector('#coffees');
-var submitButton = document.querySelector('#submit');
+var submitButton1 = document.querySelector('#submit1');
+var submitButton2 = document.querySelector('#submit2');
 var roastSelection = document.querySelector('#roast-selection');
 
 tbody.innerHTML = renderCoffees(coffees);
 
-submitButton.addEventListener('click', updateCoffees);
+submitButton1.addEventListener('click', updateCoffees);
+
+submitButton2.addEventListener('click', addCoffee);

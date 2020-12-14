@@ -3,6 +3,9 @@
 <head>
 	<meta charset="UTF-8">
 	<title>JJ's Coffee House</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+		  integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+	<script src="https://kit.fontawesome.com/10517977d2.js" crossorigin="anonymous"></script>
 	<link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -24,38 +27,86 @@
 	</div>
 </table>
 
-<form class="navbar" id="search-coffee">
-	<label for="roast-selection">Roast</label>
-	<br>
-	<select id="roast-selection">
-		<option>light</option>
-		<option>medium</option>
-		<option>dark</option>
-	</select>
-	<br>
-	<label  for="coffee-name">Name</label>
-	<br>
-	<input  id="coffee-name" type="text">
-	<br>
-	<input id="submit" type="submit" />
-</form>
+<div id="user-interface">
+	<div class="main-card card select">
+		<p class="card-header bg-primary text-light">Find Your Flavor</p>
+
+		<div class="card m-3 list-group">
+			<span class="list-group-item bg-light" >Select Roast</span>
 
 
-<form class="navbar" id="add-coffee">
-	<label for="new-roast">Roast</label>
-	<br>
-	<select id="new-roast">
-		<option>light</option>
-		<option>medium</option>
-		<option>dark</option>
-	</select>
-	<br>
-	<label for="new-name">Name</label>
-	<br>
-	<input id="new-name" type="text">
-	<br>
-	<input id="submit2" type="submit" />
-</form>
+			<div class="card-body mb-3">
+				<select class="form-control" name="search-roast" id="roast-selection">
+					<option value="default" disabled selected>....</option>
+					<option value="light">Light</option>
+					<option value="medium">Medium</option>
+					<option value="dark">Dark</option>
+				</select>
+			</div>
+
+		</div>
+
+		<div class="card m-3 list-group">
+
+			<span class="list-group-item bg-light">Enter Name</span>
+			<div class="card-body list-group-item">
+				<input class="form-control" id="search-name" type="text">
+			</div>
+
+			<div class="card-footer bg-light d-flex flex-row-reverse">
+				<button class="btn btn-primary form-control" type="submit" id="submit1">
+					Submit
+					<!--				<i class="fas fa-angle-right"></i>-->
+				</button>
+			</div>
+		</div>
+	</div>
+
+
+
+	<div class="main-card card select">
+		<p class="card-header bg-primary text-light">Add your own!</p>
+
+		<div class="card m-3 list-group">
+			<span class="list-group-item bg-light" >Select Roast</span>
+
+
+			<div class="card-body mb-3">
+				<select class="form-control" name="new-roast" id="new-roast">
+					<option value="default" disabled selected>....</option>
+					<option value="light">Light</option>
+					<option value="medium">Medium</option>
+					<option value="dark">Dark</option>
+				</select>
+			</div>
+
+		</div>
+
+		<div class="card m-3 list-group">
+
+			<span class="list-group-item bg-light">Enter Name</span>
+			<div class="card-body list-group-item">
+				<input class="form-control" id="new-name" type="text">
+			</div>
+
+			<div class="card-footer bg-light d-flex flex-row-reverse">
+				<button class="btn btn-primary form-control" type="submit" id="submit2">
+					Submit
+					<!--				<i class="fas fa-angle-right"></i>-->
+				</button>
+			</div>
+		</div>
+	</div>
+</div>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+		integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+		crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"
+		integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"
+		crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"
+		integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
+		crossorigin="anonymous"></script>
 
 <script src="main.js"></script>
 </body>
