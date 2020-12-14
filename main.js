@@ -10,6 +10,28 @@ function renderCoffee(coffee) {
     return html;
 }
 
+// filter function
+
+function filterFunc() {
+    var input, filter, ul, li, a, i, txtValue;
+    input = document.getElementById("myInput");
+    filter = input.value.toUpperCase();
+    ul = document.getElementById("myUL");
+    li = ul.getElementsByTagName("li");
+    for (i = 0; i < li.length; i++) {
+        a = li[i].getElementsByTagName("a")[0];
+        txtValue = a.textContent || a.innerText;
+        if (txtValue.toUpperCase().indexOf(filter) > -1) {
+            li[i].style.display = "";
+        } else {
+            li[i].style.display = "none";
+        }
+    }
+}
+
+// End of the filter function
+
+
 function renderCoffees(coffees) {
     var html = '';
     for(var i = coffees.length - 1; i >= 0; i--) {
@@ -49,6 +71,9 @@ function generateCoffee() {
 }
 
 // from http://www.ncausa.org/About-Coffee/Coffee-Roasts-Guide
+
+// An array for the coffee filter list
+
 var coffees = [
     {id: 1, name: 'Light City', roast: 'light'},
     {id: 2, name: 'Half City', roast: 'light'},
