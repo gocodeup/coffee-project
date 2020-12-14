@@ -11,3 +11,22 @@ td, th {
 #main-head {
 	text-align: center;
 }
+.navbar{
+	border: 2px solid #cf5c3f;
+	overflow: auto;
+	border-radius: 2px;
+	-moz-border-radius: 2px;
+	-webkit-border-radius: 2px;;
+	justify-content: right;
+}
+input[type=text] {
+	background-color: #f1f1f1;
+	width: 50%;
+}
+#coffee-list{
+	float: left;
+	width: 60%;
+}
+select{
+	width: 65%;
+}
