@@ -12,11 +12,18 @@ function renderCoffee(coffee) {
 
 function renderCoffees(coffees) {
     var html = '';
-    for(var i = coffees.length - 1; i >= 0; i--) {
+    for(var i = 0; i <= coffees.length - 1; i++) {
         html += renderCoffee(coffees[i]);
     }
     return html;
 }
+
+/*Attempted to change the function renderCoffees to be ordered in ascending order based on id:
+First edit: added i++ (result: removed all the data about the coffee
+Second edit: rearranged the for loop
+
+ */
+
 
 function updateCoffees(e) {
     e.preventDefault(); // don't submit the form, we just want to update the data
