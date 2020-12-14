@@ -7,3 +7,14 @@ td, th {
     border: 1px solid black;
     padding: 5px 10px;
 }
+
+.coffee {
+    display: flex;
+    padding: 10px;
+}
+
+.coffee p,
+.coffee h4 {
+    margin: 0;
+    padding: 5px;
+}
