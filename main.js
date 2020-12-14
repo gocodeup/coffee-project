@@ -81,10 +81,10 @@ let searchValue = document.querySelector('#search-input')
 
 function updateSearch(e) {
     e.preventDefault(); // don't submit the form, we just want to update the data
-    var searchTerm = searchValue.value;
+    var searchTerm = searchValue.value.toLowerCase();
     var filteredCoffees = [];
     coffees.forEach(function(coffee) {
-        if (coffee.name.includes(searchTerm)) {
+        if (coffee.name.toLowerCase().includes(searchTerm)) {
             filteredCoffees.push(coffee);
         }
     });
@@ -99,10 +99,10 @@ searchButton.addEventListener('click', updateSearch)
 
 function updateKey() {
 
-    var searchTerm = searchValue.value;
+    var searchTerm = searchValue.value.toLowerCase();
     var filteredCoffees = [];
     coffees.forEach(function(coffee) {
-        if (coffee.name.includes(searchTerm)) {
+        if (coffee.name.toLowerCase().includes(searchTerm)) {
             filteredCoffees.push(coffee);
         }
     });
