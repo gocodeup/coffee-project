@@ -117,3 +117,22 @@ function updateOption() {
 roastSelection.addEventListener('change', updateOption)
 
 // localStorage.setItem('coffees', coffees)
+
+// BONUS
+let newButton = document.querySelector("#newButton")
+
+let newCoffee = (e) => {
+    e.preventDefault()
+    let name = document.getElementById('coffee')
+    let roast = document.getElementById('roast')
+    let newCoffee = {
+        id: coffees.length + 1,
+        name: name.value,
+        roast: roast.value
+    }
+    console.log(newCoffee)
+    // coffees.push(newCoffee)
+    // localStorage.setItem('coffees', coffees)
+}
+
+newButton.addEventListener('click', newCoffee)
