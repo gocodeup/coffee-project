@@ -1,34 +1,149 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title></title>
-    <link rel="stylesheet" href="style.css">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Coffee Shop</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="/style.css">
+    <!--    <script src="js/coffeProject.js"></script>-->
 </head>
 <body>
-    <h1>Coffee!</h1>
+<container>
+    <h1 class="text-center mt-1">Coffee!</h1>
+    <div class="row">
+        <div class="ml-4 col-6 col-sm-6 col-md-6 col-lg-6">
+            <div id="coffeeholder" class="row">
 
-    <form>
-        <label for="roast-selection"></label>
-        <select id="roast-selection">
-            <option>light</option>
-            <option>medium</option>
-            <option>dark</option>
-        </select>
-        <input id="submit" type="submit" />
-    </form>
+            </div>
+        </div>
+        <div class="col-5 ol-sm-5 col-md-5 col-lg-5 mr-1">
+            <form name="searchCoffee" id="searchCoffee">
+                <div>
+                    <label name="roastSelection" for="roastSelection">Roast</label>
+                    <div>
+                        <select name="roastSelection" class="form-control" id="roastSelection">
+                            <option value="all">all</option>
+                            <option value="light">light</option>
+                            <option value="medium">medium</option>
+                            <option value="dark">dark</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="coffee-name">Coffee Name</label>
+                    <input type="text" class="form-control" name="coffee-name" id="coffee-name">
+                </div>
+                <button type="submit" id="searchbtn" class="btn btn-primary btn-md btn-block">Submit</button>
+            </form>
+            <form id="addcoffee" name="addcoffee" class="mt-5">
+                <div class="form-group">
+                    <label for="addroast">Add a Coffee</label>
+                    <div>
+                        <select class="form-control" id="addroast">
+                            <option value="light">light</option>
+                            <option value="medium">medium</option>
+                            <option value="dark">dark</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="addname">Name</label>
+                    <input type="text" class="form-control" name="addname" id="addname">
+                </div>
+                <button type="submit" id="btn2" class="btn btn-primary btn-md btn-block">Submit</button>
+            </form>
+        </div>
+    </div>
+</container>
+<script>
+    (function(){
+        var coffees = [
+            {id: 1, name: 'Light City', roast: 'light'},
+            {id: 2, name: 'Half City', roast: 'light'},
+            {id: 3, name: 'Cinnamon', roast: 'light'},
+            {id: 4, name: 'City', roast: 'medium'},
+            {id: 5, name: 'American', roast: 'medium'},
+            {id: 6, name: 'Breakfast', roast: 'medium'},
+            {id: 7, name: 'High', roast: 'dark'},
+            {id: 8, name: 'Continental', roast: 'dark'},
+            {id: 9, name: 'New Orleans', roast: 'dark'},
+            {id: 10, name: 'European', roast: 'dark'},
+            {id: 11, name: 'Espresso', roast: 'dark'},
+            {id: 12, name: 'Viennese', roast: 'dark'},
+            {id: 13, name: 'Italian', roast: 'dark'},
+            {id: 14, name: 'French', roast: 'dark'},
+        ];
+        coffees.forEach(function(coffee){
+            var owndiv = document.createElement('div');
+            var h4 = document.createElement('h4');
+            var small = document.createElement('small');
+            owndiv.setAttribute("class","col-sm-6 col-md-6 col-lg-6");
+            small.setAttribute("class","text-muted");
+            h4.innerHTML = coffee.name;
+            owndiv.appendChild(h4);
+            small.innerHTML = " "+coffee.roast;
+            h4.appendChild(small);
+            var app = document.querySelector('#coffeeholder');
+            app.appendChild(owndiv);
+        });
 
-    <table>
-        <thead>
-            <tr>
-                <th>ID</th>
-                <th>NAME</th>
-                <th>ROAST</th>
-            </tr>
-        </thead>
-        <tbody id="coffees"></tbody>
-    </table>
+        const addForm = document.forms['addcoffee'];
+        var listener = function(e){
+            e.preventDefault();
+            const value = addForm.querySelector('input[type="text"]').value;
+            const smvalue = document.forms['addcoffee']['addroast'].value;
+            console.log(smvalue)
+            //create element
+            const div = document.createElement('div');
+            const h4 = document.createElement('h4');
+            const small = document.createElement('small');
+            //append to dom
+            small.setAttribute("class","text-muted");
+            div.setAttribute("class", "col-sm-6 col-md-6 col-lg-6")
+            h4.innerHTML = value;
+            div.appendChild(h4);
+            small.innerHTML = " "+smvalue;
+            h4.appendChild(small);
+            app = document.querySelector('#coffeeholder');
+            app.appendChild(div);
+        }
+        //creates button to add new coffee
+        document.getElementById('btn2').addEventListener('click',listener);
 
-    <script src="main.js"></script>
+
+        const list = document.querySelector('#coffeeholder');
+        const searchList = e =>{
+            const term = e.target.value.toLowerCase();
+            const coffees = list.getElementsByTagName('h4');
+            const roastChoice = document.forms['searchCoffee']['roastSelection'].value.toLowerCase();
+            const coffeeArr = Array.from(coffees)
+            console.log(typeof(coffeeArr[0].firstElementChild.innerHTML))
+            Array.from(coffees).forEach(function(coffee){
+                const name = coffee.innerHTML;
+                const roastType = coffee.firstElementChild.innerHTML.toLowerCase();
+                if((roastChoice === 'light')&& name.toLowerCase().indexOf(term)!==-1 && roastType.toLowerCase().indexOf('light')!==-1){
+                    coffee.style.display = 'block';
+                }
+                else if((roastChoice === 'medium')&& name.toLowerCase().indexOf(term)!==-1 && roastType.toLowerCase().indexOf('medium')!==-1){
+                    coffee.style.display = 'block';
+                }else if((roastChoice === 'dark')&& name.toLowerCase().indexOf(term)!==-1 && roastType.toLowerCase().indexOf('dark')!==-1){
+                    coffee.style.display = 'block';
+                }else if((roastChoice === 'all')&& name.toLowerCase().indexOf(term)!==-1){
+                    coffee.style.display = 'block';
+                }else{
+                    coffee.style.display = 'none';
+                }
+            })
+        }
+        document.getElementById('roastSelection').addEventListener('change', searchList);
+        document.getElementById('coffee-name').addEventListener('keyup', searchList);
+
+    })();
+</script>
 </body>
 </html>
