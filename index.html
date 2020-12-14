@@ -8,32 +8,41 @@
 </head>
 <body class="container">
     <h1 class="d-flex justify-content-center">Coffee!</h1>
+    <hr>
+    <div class="row">
 
-    <form class="form-inline justify-content-end">
-        <label for="roast-selection"></label>
-        <select id="roast-selection">
-            <option>light</option>
-            <option>medium</option>
-            <option>dark</option>
-        </select>
-        <input id="submit" type="submit" />
-    </form>
-    <div class="container">
-        <div class="row" id="coffees"></div>
+   <!-- <form class="form-inline justify-content-end">-->
+<!--        <label for="roast-selection"></label>-->
+<!--        <select id="roast-selection">-->
+<!--            <option>light</option>-->
+<!--            <option>medium</option>-->
+<!--            <option>dark</option>-->
+<!--        </select>-->
+<!--        <input id="submit" type="submit" />-->
+ <!--   </form>  -->
+    <div class="col-6 container">
+        <section class="row" id="coffees"></section>
     </div>
-<!--    <div>-->
-<!--        <table class="table table-borderless">-->
-<!--            <div class="table-responsive">-->
-<!--                <thead>-->
-<!--                    <tr>-->
-<!--                        <th>NAME</th>-->
-<!--                        <th>ROAST</th>-->
-<!--                    </tr>-->
-<!--                </thead>-->
-<!--                <tbody id="coffees"></tbody>-->
-<!--            </div>-->
-<!--        </table>-->
-<!--    </div>-->
+    <form class="col-6">
+        <fieldset class="active">
+            <div class="mb-3">
+                <label for="roast-selection" class="form-label"></label>
+                <select id="roast-selection" class="form-select">
+                    <option>light</option>
+                    <option>medium</option>
+                    <option>dark</option>
+                </select>
+            </div>
+            <div class="mb-3">
+                <label for="TextInput" class="form-label">Coffee Name</label>
+                <input type="text" id="TextInput" class="form-control" placeholder="input">
+            </div>
+
+
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </fieldset>
+    </form>
+    </div>
 
     <script src="main.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js" integrity="sha384-q2kxQ16AaE6UbzuKqyBE9/u/KzioAlnx2maXQHiDX9d4/zp8Ok3f+M7DPm+Ib6IU" crossorigin="anonymous"></script>
