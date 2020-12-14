@@ -1,10 +1,10 @@
 "use strict"
 
 function renderCoffee(coffee) {
-    var html = '<tr class="coffee">';
-    html += '<td>' + coffee.id + '</td>';
-    html += '<td>' + coffee.name + '</td>';
-    html += '<td>' + coffee.roast + '</td>';
+    var html = '<div class="coffee">';
+    html += '<div class="col d-none"> ' + coffee.id + '</div>';
+    html += '<h2>' + coffee.name + '</h2>';
+    html += '<p>' + coffee.roast + '</p>';
     html += '</tr>';
 
     return html;
@@ -55,3 +55,8 @@ var roastSelection = document.querySelector('#roast-selection');
 tbody.innerHTML = renderCoffees(coffees);
 
 submitButton.addEventListener('click', updateCoffees);
+
+var myDropdown = document.getElementById('coffeeDataList')
+myDropdown.addEventListener('show.bs.dropdown', function () {
+    // do something...
+})
