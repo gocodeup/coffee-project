@@ -1,9 +1,35 @@
-table {
-    border-collapse: collapse;
-    margin: 15px 0;
+h1 {
+    /*background-image: url("../pc_img/coffee_top.jpg");*/
+    font-family: "Nunito", sans-serif;
+    background-size: cover;
+    color: navajowhite;
+}
+/*.bg{*/
+/*    background-image: url("img/coffee_background.jpg");*/
+/*    filter: brightness(50%);*/
+/*    background-repeat: no-repeat;*/
+/*    background-size: cover;*/
+/*}*/
+body {
+    background-image: url("img/coffee_background.jpg");
+    /*filter: brightness(50%);*/
+    font-family: "Nunito", sans-serif;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
 }
 
-td, th {
-    border: 1px solid black;
-    padding: 5px 10px;
+h4{
+    color: black;
+}
+
+h4>small{
+    color: black;
+}
+
+label{
+    color: black;
+}
+img {
+    filter: brightness(50%);
 }
