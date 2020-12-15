@@ -7,3 +7,30 @@ td, th {
     border: 1px solid black;
     padding: 5px 10px;
 }
+
+#searchcoffee{
+ border-left: transparent;
+    border-right: transparent;
+    border-top: transparent;
+    background-color: transparent;
+}
+#addcoffee{
+    border-bottom: transparent;
+    border-left: transparent;
+    border-right: transparent;
+    border-top: transparent;
+    background-color: transparent;
+}
+button{
+    width: 100%;
+    background-color: #3d89cb;
+    color: white;
+
+}
+h3{
+
+}
+.coffee{
+    display: flex;
+    width: 50%;
+}
