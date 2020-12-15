@@ -17,14 +17,14 @@
     /*box-sizing: border-box;*/
 }
 
-/*.bodyBackground {*/
-/*    background-image: url("img/img2.jpg");*/
-/*    background-repeat: no-repeat;*/
-/*    background-size: cover;*/
-/*}*/
+.bodyBackground {
+    background-image: url("img/img2.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
 .secondColumn {
 
-    margin-right:25px;
+    /*margin-right:25px;*/
     padding:50px;
 }
 
