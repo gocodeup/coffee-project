@@ -5,34 +5,9 @@
     <title>Coffee Project</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
           integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
-    <h1>Coffee!</h1>
-
-    <form>
-        <label for="roast-selection"></label>
-        <select id="roast-selection">
-            <option>light</option>
-            <option>medium</option>
-            <option>dark</option>
-        </select>
-        <label for="coffeeDataList" class="form-label">Datalist example</label>
-        <input class="form-control"  id="coffeeDataList" placeholder="Type to search...">
-   <button type="submit" id="submit">Search</button>
-    </form>
-<div class="coffee">
-
-                <div class="visually-hidden">ID
-                </div>
-                <h2>NAME</h2>
-                <p>ROAST</p>
-
-        <div id="coffees"></div>
-
-
-
 <div class="jumbotron">
     <h1>Coffee!</h1>
     <div class="row">
@@ -52,9 +27,10 @@
                     <option>light</option>
                     <option>medium</option>
                     <option>dark</option>
+                    <option>All</option>
                 </select>
-                <label for="coffeeDataList" class="form-label">Coffee Roast Selection</label>
-                <input class="form-control" id="coffeeDataList" placeholder="Type to search..."name="searchText"> <br>
+                <label for="name-selection" class="form-label">Coffee Roast Selection</label>
+                <input class="form-control" id="name-selection" placeholder="Type to search..."name="searchText"> <br>
                 <button type="submit" id="submit">Search</button>
             </form>
         </div>
