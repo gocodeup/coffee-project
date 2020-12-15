@@ -14,23 +14,24 @@
     <div class="row">
         <div class="col">
             <div class="coffee row">
-                <!--                <div>ID</div>-->
-                <!--                <div class="col">NAME</div>-->
-                <!--                <div class="col">ROAST</div>-->
+                <!--                                <div>ID</div>-->
+                <!--                                <div class="col">NAME</div>-->
+                <!--                                <div class="col">ROAST</div>-->
                 <div class="col" id="coffees"></div>
             </div>
         </div>
         <div class="container-fluid col">
-            <form>
+            <form name="coffeeSearch">
                 <label for="roast-selection"></label>
                 <select id="roast-selection">
                     <option selected> Select Roast</option>
-                    <option>light</option>
-                    <option>medium</option>
-                    <option>dark</option>
+                    <option>Light</option>
+                    <option>Medium</option>
+                    <option>Dark</option>
+                    <option>All</option>
                 </select>
-                <label for="coffeeDataList" class="form-label">Coffee Roast Selection</label>
-                <input class="form-control" id="coffeeDataList" placeholder="Type to search..."> <br>
+                <label for="name-selection" class="form-label">Coffee Roast Selection</label>
+                <input class="form-control" id="name-selection" placeholder="Type to search..."name="searchText"> <br>
                 <button type="submit" id="submit">Search</button>
             </form>
         </div>
@@ -47,5 +48,4 @@
         crossorigin="anonymous"></script>
 <script src="main.js"></script>
 </body>
-
 </html>

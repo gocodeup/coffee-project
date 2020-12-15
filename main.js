@@ -1,6 +1,5 @@
 "use strict"
 
-
 function renderCoffee(coffee) {
     var html = '<div class="coffee">';
     html += '<div class="col d-none"> ' + coffee.id + '</div>';
@@ -42,11 +41,11 @@ function updateCoffees(e) {
 
 
     coffees.forEach(function (coffee ) {
-         if(coffee.name.toLowerCase() === searchText.toLowerCase()){
-             finalCoffee.push(coffee);
-             console.log(finalCoffee);
-             //console.log(coffee.name);
-         }
+        if(coffee.name.toLowerCase() === searchText.toLowerCase()){
+            finalCoffee.push(coffee);
+            console.log(finalCoffee);
+            //console.log(coffee.name);
+        }
     });
 
     if (finalCoffee.length >= 1)   {
@@ -55,7 +54,7 @@ function updateCoffees(e) {
         coffeeSearch.innerHTML = renderCoffees(filteredCoffees);
     }
 
-  //renderCoffee(finalCoffee);
+    //renderCoffee(finalCoffee);
 }
 for(var i = 0; i <= 10; i++) {
     console.log(i);
@@ -107,4 +106,5 @@ coffeeNameSelection.addEventListener('keyup',updateCoffees);
 // myDropdown.addEventListener('show.bs.dropdown', function () {
 //     // do something...
 // })
+
 
