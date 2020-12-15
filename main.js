@@ -28,8 +28,7 @@ function updateCoffees(e) {
 
 
     coffees.forEach(function(coffee) {
-        if ((coffee.roast === selectedRoast) ||
-            (selectedRoast === "All")) {
+        if (coffee.roast === selectedRoast || selectedRoast === 'All') {
             filteredCoffees.push(coffee);
         }
     });
@@ -41,7 +40,7 @@ function updateCoffees(e) {
 
 
     coffees.forEach(function (coffee ) {
-        if(coffee.name.toLowerCase() === searchText.toLowerCase()){
+        if(coffee.name.toLowerCase() == searchText.toLowerCase()){
             finalCoffee.push(coffee);
             console.log(finalCoffee);
             //console.log(coffee.name);
@@ -106,5 +105,6 @@ coffeeNameSelection.addEventListener('keyup',updateCoffees);
 // myDropdown.addEventListener('show.bs.dropdown', function () {
 //     // do something...
 // })
+
 
 
