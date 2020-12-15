@@ -68,7 +68,7 @@ function addedCoffee(name, roast) {
 
 }
 
-// from http://www.ncausa.org/About-Coffee/Coffee-Roasts-Guide
+// from http://www.ncausa.org/About-Coffee/Coffee-Roasts-Guide.
 var coffees = [
     {id: 1, name: 'Light City', roast: 'light'},
     {id: 2, name: 'Half City', roast: 'light'},
