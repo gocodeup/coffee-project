@@ -99,6 +99,5 @@ search.addEventListener("input", function() {
 
 coffeeSubmit.addEventListener("click", function() {
     var name = document.forms.addCoffee.TextInput.value
-    console.log(document.forms.addCoffee.TextInput.value)
     addedCoffee(name, userRoastSelection)
 })
