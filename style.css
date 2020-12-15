@@ -1,9 +1,33 @@
-table {
-    border-collapse: collapse;
-    margin: 15px 0;
+/*table {*/
+/*    border-collapse: collapse;*/
+/*    margin: 15px 0;*/
+/*}*/
+
+/*td, th {*/
+/*    border: 1px solid black;*/
+/*    padding: 5px 10px;*/
+/*}*/
+
+
+.secondContainer {
+    /*background-color: red;*/
+    /*!*text-indent: 100px;*!*/
+    /*margin: 0px;*/
+    /*padding: 0px;*/
+    /*box-sizing: border-box;*/
 }
 
-td, th {
-    border: 1px solid black;
-    padding: 5px 10px;
+.bodyBackground {
+    background-image: url("img/img2.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.secondColumn {
+
+    margin-right:25px;
+    padding:50px;
+}
+
+table {
+   margin:50px;
 }

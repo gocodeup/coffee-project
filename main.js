@@ -1,7 +1,7 @@
 "use strict"
 
 function renderCoffee(coffee) {
-    var html = '<div class="coffee">';
+    var html = '<div class="col-6 coffee">';
     html += '<h2>' + coffee.name + '</h2>';
     html += '<p>' + coffee.roast + '</p>';
     html += '</div>';
@@ -36,7 +36,7 @@ function updateCoffees(e) {
         }
     });
 
-                 kk
+    
     var morefilteredCoffee = [];
 
     coffees.forEach(function(coffee) {
@@ -48,7 +48,7 @@ function updateCoffees(e) {
             console.log(coffee.name.toLowerCase() + " was found");
         }
 
-it
+
     });
 
     if (morefilteredCoffee.length >= 1)   {
@@ -107,9 +107,9 @@ submitButton.addEventListener('click', updateCoffees);
 var roastSelection = document.querySelector('#roast-selection');
 var moreFilteredCoffee = "";
 var coffeeSearch =document.querySelector("#filter");
-coffeeSearch.addEventListener('input', function(e) {
-
-})
+// coffeeSearch.addEventListener('input', function(e) {
+//
+// })
 // coffeeSearch.addEventListener('keyup', function () {
 //     moreFilteredCoffee = coffeeSearch.value;
 //     console.log(moreFilteredCoffee)
