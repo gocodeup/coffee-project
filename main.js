@@ -10,6 +10,54 @@ function renderCoffee(coffee) {
 	return html;
 }
 
+function renderCoffee(coffee) {
+	var roast = coffee.roast.toLowerCase()
+	console.log('')
+	console.log(roast)
+	var html = '<tr class="coffee">';
+
+	if (roast === 'light') {
+		console.log('expected: light')
+		console.log('actual: ' + roast)
+
+		html += '<td style="color: peru">' + coffee.name + '</td>';
+		html += '<td style="color: peru">' + coffee.roast + '</td>';
+		html += '</tr>';
+
+		return html;
+	}
+	else if (roast === 'medium') {
+		console.log('expected: medium')
+		console.log('actual: ' + roast)
+
+		html += '<td style="color: saddlebrown">' + coffee.name + '</td>';
+		html += '<td style="color: saddlebrown">' + coffee.roast + '</td>';
+		html += '</tr>';
+
+		return html;
+	}
+	else if (roast === 'dark') {
+		console.log('expected: dark')
+		console.log('actual: ' + roast)
+
+		html += '<td style="color: #271813">' + coffee.name + '</td>';
+		html += '<td style="color: #271813">' + coffee.roast + '</td>';
+		html += '</tr>';
+
+		return html;
+	}
+	else {
+		console.log('expected: default')
+		console.log('actual: ' + roast)
+
+		html += '<td style="color: grey">' + coffee.name + '</td>';
+		html += '<td style="color: grey">' + coffee.roast + '</td>';
+		html += '</tr>';
+
+		return html;
+	}
+}
+
 function renderCoffees(coffees) {
 	var html = '';
 	for(var i = coffees.length - 1; i >= 0; i--) {
@@ -64,6 +112,56 @@ function addCoffee(e) {
 	console.log(coffees)
 	tbody.innerHTML = renderCoffees(coffees.sort());
 }
+
+// function knln(coffee) {
+// 	var roast = coffee.roast.toLowerCase()
+// 	console.log('')
+// 	console.log(roast)
+// 	var html = '<tr class="coffee">';
+//
+// 	if (roast === 'light') {
+// 		console.log('expected: light')
+// 		console.log('actual: ' + roast)
+//
+// 		html += '<td style="color: black">' + coffee.name + '</td>';
+// 		html += '<td style="color: peru">' + coffee.roast + '</td>';
+// 		html += '</tr>';
+//
+// 		return html;
+// 	}
+// 	else if (roast === 'medium') {
+// 		console.log('expected: medium')
+// 		console.log('actual: ' + roast)
+//
+// 		html += '<td style="color: black">' + coffee.name + '</td>';
+// 		html += '<td style="color: saddlebrown">' + coffee.roast + '</td>';
+// 		html += '</tr>';
+//
+// 		return html;
+// 	}
+// 	else if (roast === 'dark') {
+// 		console.log('expected: dark')
+// 		console.log('actual: ' + roast)
+//
+// 		html += '<td style="color: black">' + coffee.name + '</td>';
+// 		html += '<td style="color: #271813">' + coffee.roast + '</td>';
+// 		html += '</tr>';
+//
+// 		return html;
+// 	}
+// 	else {
+// 		console.log('expected: default')
+// 		console.log('actual: ' + roast)
+//
+// 		html += '<td style="color: grey">' + coffee.name + '</td>';
+// 		html += '<td style="color: grey">' + coffee.roast + '</td>';
+// 		html += '</tr>';
+//
+// 		return html;
+// 	}
+// }
+
+
 
 var tbody = document.querySelector('#coffees');
 var submitButton1 = document.querySelector('#submit1');
