@@ -46,12 +46,13 @@ function searchCoffeeNames(e) {
 }
 
 function addedCoffee(name, roast) {
+    //name.preventDefault(); // don't submit the form, we just want to update the data
     var html = '<div class="row col-6 coffee">';
     html += '<h1>' + name + '</h1>';
     html += '<p>' + roast + '</p>';
     html += '</div>';
-
-    return div.html += html;
+    div.innerHTML+=html
+   return div.innerHTML
 }
 
 // from http://www.ncausa.org/About-Coffee/Coffee-Roasts-Guide
@@ -78,8 +79,8 @@ var roastSelection = document.querySelector('#roast-selection');
 var coffeeSearch = document.forms.coffeeFilterSearch.TextInput
 var input = document.querySelector(".form-select")
 var search = document.querySelector(".form-control")
-var name = document.forms.addCoffee.TextInput
-var userRoastSelection = document.querySelector('#userRoastSelection');
+
+var userRoastSelection = document.querySelector('#userRoastSelection').value;
 var coffeeSubmit = document.querySelector('#submitCoffee');
 
 div.innerHTML = renderCoffees(coffees);
@@ -94,6 +95,8 @@ search.addEventListener("change", function() {
     searchCoffeeNames()
 });
 
-coffeeSubmit.addEventListener("change", function() {
+coffeeSubmit.addEventListener("click", function() {
+    var name = document.forms.addCoffee.TextInput.value
+    console.log(document.forms.addCoffee.TextInput.value)
     addedCoffee(name, userRoastSelection)
 })
