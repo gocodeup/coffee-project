@@ -1,19 +1,17 @@
 "use strict"
 
 function renderCoffee(coffee) {
-    var html = '<div class="coffee row col-12 col-md-6 align-items-end my-2">';
+    var html = '<div class="coffee row col-12 col-md-6 flex-md-column flex-xxl-row my-2">';
     html += '<div class="d-none">' + coffee.id + '</div>';
-    html += '<div class=""> <h4 class="m-0">' + coffee.name + '</h4></div>';
-    html += '<div class=""><p class="m-0 text-muted">' + coffee.roast + '</p></div>';
+    html += '<div class=""> <h4 class="m-0 col-md-12 col-xxl-0">' + coffee.name + '</h4></div>';
+    html += '<div class=""><p class="m-0 col-md-12 col-xxl-0 text-muted">' + coffee.roast + '</p></div>';
     html += '</div>';
 
     return html;
 }
 
 function renderCoffees(coffees) {
-    coffees.sort(function(a, b) {
-        return b.id - a.id;
-    })
+    coffees.sort(function(a, b) {return b.id - a.id;})
     var html = '';
     for(var i = coffees.length - 1; i >= 0; i--) {
         html += renderCoffee(coffees[i]);
@@ -77,13 +75,15 @@ function searchCoffees(e) {
 function addCoffee(e) {
     e.preventDefault(); // don't submit the form, we just want to update the data
     var coffee = {}
-    coffee.id = coffee.length+1
+    coffee.id = coffees.length+1
     coffee.name = addCoffeeText.value
     coffee.roast = addCoffeeRoast.value
-    coffees.push(coffee)
+    localStorage.setItem(coffee.id,JSON.stringify(coffee));
+    coffees.push(coffee);
 
     tbody.innerHTML = renderCoffees(coffees);
 }
+
 
 
 // from http://www.ncausa.org/About-Coffee/Coffee-Roasts-Guide
@@ -104,7 +104,12 @@ var coffees = [
     {id: 14, name: 'French', roast: 'dark'},
 ];
 
-
+if (localStorage.length > 0) {
+    for (var i = 1; i <= localStorage.length; i++) {
+        var retrieved = JSON.parse(localStorage.getItem(coffees.length + 1));
+        coffees.push(retrieved);
+    }
+}
 
 var tbody = document.querySelector('#coffees');
 var submitButton = document.getElementById("search");
@@ -114,6 +119,8 @@ var coffeeSearch = document.querySelector('#search');
 var addButton = document.getElementById("addButton")
 var addCoffeeText = document.getElementById("addText")
 var addCoffeeRoast = document.getElementById("addRoast")
+// localStorage.setItem(var coffeesLocal{})
+
 
 tbody.innerHTML = renderCoffees(coffees);
 
