@@ -21,16 +21,17 @@ function renderCoffees(coffees) {
 function updateCoffees(e) {
 	e.preventDefault(); // don't submit the form, we just want to update the data
 	var selectedRoast = roastSelection.value;
-	console.log(selectedRoast)
+	console.log("Selected Roast: " + selectedRoast)
+	var searchCoffee = document.forms.searchForm.search.value
+	searchCoffee = searchCoffee.toString().toLowerCase()
+	console.log("Search: " + searchCoffee)
+
 	var filteredCoffees = [];
 	coffees.forEach(function(coffee) {
-		if ('all' === roastSelection.value) {
+		var checkCoffee = coffee.name.toString().toLowerCase()
+		if ((checkCoffee.includes(searchCoffee)) && ((coffee.roast === selectedRoast) || ('all' === selectedRoast))) {
 			filteredCoffees.push(coffee);
 		}
-		if (coffee.roast === selectedRoast) {
-			filteredCoffees.push(coffee);
-		}
-
 	});
 	tbody.innerHTML = renderCoffees(filteredCoffees);
 }
@@ -53,25 +54,30 @@ var coffees = [
 	{id: 14, name: 'French', roast: 'dark'},
 ];
 
-function addCoffee(coffee) {
+function addCoffee(e) {
+	e.preventDefault();
 	var id = coffees.length + 1
 	var name = document.getElementById('new-name').value
 	var roast = document.getElementById('new-roast').value
-	coffees.push({id, name, roast})
+	coffees.unshift({id, name, roast})
 	console.log({id, name, roast})
 	console.log(coffees)
-	tbody.innerHTML = renderCoffees(coffees);
+	tbody.innerHTML = renderCoffees(coffees.sort());
 }
 
 var tbody = document.querySelector('#coffees');
 var submitButton1 = document.querySelector('#submit1');
 var submitButton2 = document.querySelector('#submit2');
 var roastSelection = document.querySelector('#roast-selection');
+var liveRefresh1 = document.querySelector('#roast-selection')
+var liveRefresh2 = document.querySelector('#search')
 
-tbody.innerHTML = renderCoffees(coffees);
+tbody.innerHTML = renderCoffees(coffees.reverse());
 
 submitButton1.addEventListener('click', updateCoffees);
 
-// submitButton2.addEventListener('click', renderCoffees);
-
 submitButton2.addEventListener('click', addCoffee);
+
+liveRefresh1.addEventListener('change', updateCoffees)
+
+liveRefresh2.addEventListener('input', updateCoffees)
