@@ -1,9 +1,36 @@
-table {
-    border-collapse: collapse;
-    margin: 15px 0;
+.jumbotron-fluid {
+    background-image: linear-gradient(
+            rgba(0, 0, 0, 0.7),
+            rgba(0, 0, 0, 0.7)
+    ),url("coffee.jpg");
+    background-position: center;
+    background-size: cover;
 }
 
-td, th {
-    border: 1px solid black;
-    padding: 5px 10px;
+.cover {
+    /*max-width: 1200px;*/
+    background-image: linear-gradient(
+            rgba(255, 255, 255, 0.7),
+            rgba(255, 255, 255, 0.7)
+    ),url("coffee2.jpg");
+    background-repeat: repeat;
+    background-position: center;
+    background-size: 100%;
+    }
+
+.btn {
+    background-color: #38383a;
+    border-color: #38383a;
+}
+
+.btn-dark:hover, .btn-dark:active, .btn-dark:focus. .btn-dark:visited {
+    background-color: #060503;
+    border-color: #060503;
+}
+
+.coffeeness {
+    position: inline;
+    top: 300px;
+    width: 100%;
+    object-fit: cover;
 }

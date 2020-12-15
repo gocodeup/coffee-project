@@ -1,7 +1,7 @@
 "use strict"
 
 function renderCoffee(coffee) {
-    var html = '<div class="coffee row col-6 align-items-end my-2">';
+    var html = '<div class="coffee row col-12 col-md-6 align-items-end my-2">';
     html += '<div class="d-none">' + coffee.id + '</div>';
     html += '<div class=""> <h4 class="m-0">' + coffee.name + '</h4></div>';
     html += '<div class=""><p class="m-0 text-muted">' + coffee.roast + '</p></div>';
@@ -110,7 +110,7 @@ var tbody = document.querySelector('#coffees');
 var submitButton = document.getElementById("search");
 var roastSelection = document.querySelector('#roast-selection');
 var coffeeSearch = document.querySelector('#search');
-var searchButton = document.getElementById("coffeeSearchButton")
+// var searchButton = document.getElementById("coffeeSearchButton") this element was not used because we cross-linked the search function and the roast selection function
 var addButton = document.getElementById("addButton")
 var addCoffeeText = document.getElementById("addText")
 var addCoffeeRoast = document.getElementById("addRoast")

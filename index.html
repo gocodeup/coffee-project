@@ -12,21 +12,26 @@
     <title>COFFEE SHOP</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
           integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+
     <!-- Your custom css styles go here -->
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-<div class="container">
-    <div class="row">
-        <h1 class="col col-12 d-flex justify-content-center" style="width: 100%;">Coffee!</h1>
+<div class="jumbotron jumbotron-fluid my-0">
+    <div class="container">
+        <h1 class="display-4 text-white text-center">Coffee</h1>
+        <p class="lead text-white">Fair trade raised, artisinally roasted, expertly prepared.</p>
     </div>
 </div>
+<div class="cover">
+<div class="container">
 <hr>
-<div class="row">
-<div class="col-6 order-2">
+<div class="row m-2 p-2">
+<div class="col-12 col-md-6 p-2 m-2 p-md-0 m-md-0 order-2">
     <form name="coffee">
        <div> <label for="roast-selection">Roast</label><br>
-        <select class="form-select custom-select col-6" aria-label="Select a Roast" id="roast-selection">
+        <select class="form-select custom-select col-12 col-md-6" aria-label="Select a Roast" id="roast-selection">
             <option selected>all</option>
             <option>light</option>
             <option>medium</option>
@@ -36,12 +41,11 @@
        </div>
         <label >Coffee Name</label>
         <input class="form-control" id="search" type="text" placeholder="Search Coffees" aria-label="Search">
-        <button class="btn btn-primary col-12 my-2" id="submit" type="submit">Search for a Coffee</button>
-
+        <button class="btn btn-dark col-12 my-2" id="submit">Search for a Coffee</button>
     </form>
     <form name="userAdd">
         <div> <label for="roast-selection">Roast</label><br>
-        <select class="form-select custom-select col-6" id="addRoast" aria-label="Select a Roast">
+        <select class="form-select custom-select col-12 col-md-6" id="addRoast" aria-label="Select a Roast">
 
             <option selected>light</option>
             <option>medium</option>
@@ -51,20 +55,20 @@
     </div>
         <label>Coffee Name</label>
         <input class="form-control" id="addText" type="text" placeholder="Add a Coffee" aria-label="Search">
-        <button class="btn btn-primary col-12 my-2" id="addButton" type="submit">Add a Coffee!</button>
+        <button class="btn btn-dark col-12 my-2" id="addButton" type="submit">Add a Coffee!</button>
     </form>
 </div>
-<div class="col-6 order-1">
-    <div>
-        <div class="row">
-            <div class="d-none">ID</div>
-            <div class="col-6 text-right d-none">NAME</div>
-            <div class="col-6 d-none">ROAST</div>
-        </div>
-    </div>
-    <div class="m-2 row align-items-end p-4" id="coffees"></div>
+<div class="col-12 col-md-6 order-1">
+    <div class="m-2 row justify-content-between align-items-end p-4" id="coffees"></div>
 </div>
 </div>
+</div>
+ <div class="d-none d-lg-flex">   <video autoplay muted loop class="coffeeness">
+        <source src="coffeecoffeecoffee.webm">
+       </video>
+ </div>
+</div>
+
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
         crossorigin="anonymous"></script>
@@ -76,6 +80,6 @@
         crossorigin="anonymous"></script>
 <!-- Your custom JS goes here -->
 <script src="main.js"></script>
-</div>
+
 </body>
 </html>
