@@ -6,10 +6,14 @@ table {
 td, th {
 	border: 1px solid black;
 	padding: 5px 10px;
+	background-color: #f1f1f1;
+	color: saddlebrown;
 }
 
 #main-head {
 	text-align: center;
+	background-color: #f1f1f1;
+	color: saddlebrown;
 }
 .navbar{
 	border: 2px solid #cf5c3f;
@@ -19,6 +23,9 @@ td, th {
 	-webkit-border-radius: 2px;;
 	justify-content: right;
 }
+
+
+
 input[type=text] {
 	background-color: #f1f1f1;
 	width: 50%;
