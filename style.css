@@ -19,6 +19,8 @@ td, th {
     transition: transform 0.75s ease;
     border: 2px solid black;
     margin: 5px 10px;
+    background: #e6f5ff;
+    color: black;
 }
 
 
@@ -39,6 +41,17 @@ td, th {
     display: flex;
     justify-content: space-evenly;
     flex-wrap: wrap;
+
+    background: #454140;
+    color: white;
+}
+
+#menus {
+    background: #95AFBA;
+}
+
+#head {
+    background: #e6f5ff;
 }
 
 h4 {
