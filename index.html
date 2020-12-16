@@ -12,52 +12,54 @@
     <h1>Coffee!</h1>
     <hr>
     <div class="row">
-        <div class="col-6">
-            <div class="card-body coffee row">
+        <div class="col-12 col-md-12 col-lg-6">
+            <div class="card-body coffee">
                 <!--                                <div>ID</div>-->
                 <!--                                <div class="col">NAME</div>-->
                 <!--                                <div class="col">ROAST</div>-->
-                <div class="col" id="coffees"></div>
+                <div class="col-count" id="coffees"></div>
+
             </div>
         </div>
-        <div class="container-fluid col">
+        <div class="container-fluid col-12 col-md-12 col-lg-6">
             <div class="card" id="searchcoffee">
                 <div class="card-body">
-            <form name="coffeeSearch">
-                <label for="roast-selection"></label>
-                <select id="roast-selection">
-                    <option selected> Select Roast</option>
-                    <option>light</option>
-                    <option>medium</option>
-                    <option>dark</option>
-                    <option>All</option>
-                </select>
-                <label for="name-selection" class="form-label">Coffee Roast Selection</label>
-                <input class="form-control" id="name-selection" placeholder="Type to search..."name="searchText"> <br>
-                <button type="submit" id="submit">Search</button>
-            </form>
+                    <form name="coffeeSearch">
+                        <label for="roast-selection" class="label-name">Roast</label><br>
+                        <select id="roast-selection">
+                            <option selected> Select Roast</option>
+                            <option>light</option>
+                            <option>medium</option>
+                            <option>dark</option>
+                            <option>All</option>
+                        </select><br>
+                        <label for="name-selection" class="label-name" id="label">Coffee Name</label>
+                        <input class="form-control" id="name-selection" placeholder="Type to search..."
+                               name="searchText"> <br>
+                        <button type="submit" id="submit">Search</button>
+                    </form>
+                </div>
             </div>
-            </div>
-            <div class="card" id="addcoffee">
-                <div class="card-body">
-            <form name="coffeeSearch">
-                <label for="add-roast"></label>
-                <select id="add-roast">
-                    <option selected> Select Roast</option>
-                    <option>light</option>
-                    <option>medium</option>
-                    <option>dark</option>
-                </select>
-                <label for="name-selection" class="form-label">Coffee Roast Selection</label>
-                <input class="form-control" id="name-add" placeholder="Type to search..."name="addText"> <br>
-                <button type="submit" id="sumbitadd">Add</button>
-            </form>
-            </div>
-            </div>
-        </div>
-        <div class="container-fluid col-6">
 
+            <div class="card" id="addcoffee">
+                <h4>Add a Coffee</h4>
+                <div class="card-body">
+                    <form name="coffeeSearch">
+                        <label for="add-roast" class="label-name">Roast</label><br>
+                        <select id="add-roast">
+                            <option selected> Select Roast</option>
+                            <option>light</option>
+                            <option>medium</option>
+                            <option>dark</option>
+                        </select><br>
+                        <label for="name-selection" class="label-name">Name</label>
+                        <input class="form-control" id="name-add" placeholder="Type to search..." name="addText"> <br>
+                        <button type="submit" id="sumbitadd">Add</button>
+                    </form>
+                </div>
+            </div>
         </div>
+
     </div>
 </div>
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
