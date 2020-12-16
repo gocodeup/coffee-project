@@ -62,14 +62,18 @@ for(var i = 0; i <= 10; i++) {
 
 function addCoffee(e){
     e.preventDefault();
+
     var newCoffeeObj = {
         id: coffees.length +1,
         name:document.querySelector('#name-add').value,
         roast: document.querySelector('#add-roast').value.toLowerCase()
     }
+
+    alert("Grinding coffee!!");
     coffees.push(newCoffeeObj);
     renderCoffees(coffees);
 }
+
 // if(selectedCoffeeName == filteredCoffee.name){
 //     finalCoffee.push(filteredCoffee);
 // }
@@ -115,20 +119,11 @@ submitButton.addEventListener('click', updateCoffees);
 coffeeNameSelection.addEventListener('keyup',updateCoffees);
 submitNewCoffee.addEventListener('click', addCoffee)
 
-submitNewCoffee.addEventListener('click', addCoffee)
+
 //
 // var myDropdown = document.getElementById('coffeeDataList')
 // myDropdown.addEventListener('show.bs.dropdown', function () {
 //     // do something...
 // })
 
-function addCoffee(e){
-    e.preventDefault();
-    var newCoffeeObj = {
-        id: coffees.length +1,
-        name:document.querySelector('#name-add').value,
-        roast: document.querySelector('#add-roast').value.toLowerCase()
-    }
-    coffees.push(newCoffeeObj);
-    renderCoffees(coffees);
-}
+

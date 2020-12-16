@@ -25,11 +25,16 @@ button{
 h1, h4{
     text-align: center;
     margin: 5px;
+    font-family: 'Fredericka the Great', cursive;
+}
+h1{
+    font-size: 5rem;
 }
 
 .label-name{
     font-weight: bold;
     margin: 5px;
+    font-family: 'Fredericka the Great', cursive;
 }
 .coffee{
     display: flex;
@@ -49,8 +54,9 @@ h1, h4{
     column-count: 2;
     column-gap: 80px;
     /*padding: 40px;*/
+    font-family: 'Fredericka the Great', cursive;
 }
 .jumbotron{
     background-image:  url("images/coffee-2.jpg");
-    height: 58rem;
+    height: 73rem;
 }
