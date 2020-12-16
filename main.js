@@ -100,6 +100,7 @@ var coffees = [
     {id: 13, name: 'Italian', roast: 'dark'},
     {id: 14, name: 'French', roast: 'dark'},
 ];
+
 var addCoffees=document.querySelector('#add-roast');
 var coffeeSearch = document.querySelector('#coffees');
 var submitButton = document.querySelector('#submit');
@@ -113,12 +114,21 @@ coffeeSearch.innerHTML = renderCoffees(coffees);
 submitButton.addEventListener('click', updateCoffees);
 coffeeNameSelection.addEventListener('keyup',updateCoffees);
 submitNewCoffee.addEventListener('click', addCoffee)
+
+submitNewCoffee.addEventListener('click', addCoffee)
 //
 // var myDropdown = document.getElementById('coffeeDataList')
 // myDropdown.addEventListener('show.bs.dropdown', function () {
 //     // do something...
 // })
 
-
-
-// styles
+function addCoffee(e){
+    e.preventDefault();
+    var newCoffeeObj = {
+        id: coffees.length +1,
+        name:document.querySelector('#name-add').value,
+        roast: document.querySelector('#add-roast').value.toLowerCase()
+    }
+    coffees.push(newCoffeeObj);
+    renderCoffees(coffees);
+}
