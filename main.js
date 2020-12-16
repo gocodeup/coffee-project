@@ -84,7 +84,12 @@ function addCoffee(e) {
     tbody.innerHTML = renderCoffees(coffees);
 }
 
+function removeCoffees() {
+    localStorage.clear()
+    for (var i = 0; coffees.length > 14; i++) {coffees.shift()}
 
+    tbody.innerHTML = renderCoffees(coffees);
+}
 
 // from http://www.ncausa.org/About-Coffee/Coffee-Roasts-Guide
 var coffees = [
@@ -119,7 +124,8 @@ var coffeeSearch = document.querySelector('#search');
 var addButton = document.getElementById("addButton")
 var addCoffeeText = document.getElementById("addText")
 var addCoffeeRoast = document.getElementById("addRoast")
-// localStorage.setItem(var coffeesLocal{})
+var removeButton = document.getElementById("removeButton")
+
 
 
 tbody.innerHTML = renderCoffees(coffees);
@@ -129,3 +135,4 @@ coffeeSearch.addEventListener('keyup', searchCoffees);
 // searchButton.addEventListener('click', searchCoffees)
 roastSelection.addEventListener('change', updateCoffees);
 addButton.addEventListener('click', addCoffee);
+removeButton.addEventListener('click', removeCoffees)
