@@ -2,10 +2,17 @@
 function coffeSelection() {
     var selectedRoast = roastSelection.value;
    var filteredCoffees = [];
+   if (selectedRoast === 'all') {
+       filteredCoffees = coffees
+   } else {
     coffees.forEach(function(coffee) {
         if (coffee.roast === selectedRoast) {
             filteredCoffees.push(coffee);
         }
+    });
+   }
+   filteredCoffees.sort(function (b,a){
+       return a.id - b.id;
     });
     menu.innerHTML = renderCoffees(filteredCoffees);
 }
