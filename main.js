@@ -1,20 +1,28 @@
 "use strict"
-
-function newtable(form){
-    var form = document.getElementsByClassName('roast-selection')
-    if(document.getElementById('lightroast')){
-        coffees.findIndex( )
-    }
-    console.log(form);
+function coffeSelection() {
+    var selectedRoast = roastSelection.value;
+   var filteredCoffees = [];
+    coffees.forEach(function(coffee) {
+        if (coffee.roast === selectedRoast) {
+            filteredCoffees.push(coffee);
+        }
+    });
+    menu.innerHTML = renderCoffees(filteredCoffees);
 }
-newtable();
+// function newtable(form){
+//     var form = document.getElementsByClassName('roast-selection')
+//     if(document.getElementById('lightroast')){
+//         coffees.findIndex( )
+//     }
+//     console.log(form);
+// }
+// newtable();
 
 function renderCoffee(coffee) {
-    var html = '<tr class="coffee">';
-    html += '<td>' + coffee.id + '</td>';
-    html += '<td>' + coffee.name + '</td>';
-    html += '<td>' + coffee.roast + '</td>';
-    html += '</tr>';
+    var html = '<div class="coffee">';
+    html += '<h5>' + coffee.name + '</h5>';
+    html += '<p>' + coffee.roast + '</p>';
+    html += '</div>';
 
     return html;
 }
@@ -36,7 +44,7 @@ function updateCoffees(e) {
             filteredCoffees.push(coffee);
         }
     });
-    tbody.innerHTML = renderCoffees(filteredCoffees);
+    menu.innerHTML = renderCoffees(filteredCoffees);
 }
 
 // from http://www.ncausa.org/About-Coffee/Coffee-Roasts-Guide
@@ -57,10 +65,14 @@ var coffees = [
     {id: 14, name: 'French', roast: 'dark'},
 ];
 
-var tbody = document.querySelector('#coffees');
+var menu = document.querySelector('#coffees');
 var submitButton = document.querySelector('#submit');
 var roastSelection = document.querySelector('#roast-selection');
 
-tbody.innerHTML = renderCoffees(coffees);
+
+roastSelection.addEventListener("change", coffeSelection);
+
+
+menu.innerHTML = renderCoffees(coffees);
 
 submitButton.addEventListener('click', updateCoffees);
