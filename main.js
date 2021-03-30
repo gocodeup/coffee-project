@@ -16,14 +16,14 @@ function coffeSelection() {
     });
     menu.innerHTML = renderCoffees(filteredCoffees);
 }
-// function newtable(form){
-//     var form = document.getElementsByClassName('roast-selection')
-//     if(document.getElementById('lightroast')){
-//         coffees.findIndex( )
-//     }
-//     console.log(form);
-// }
-// newtable();
+
+function autoType(){
+
+    var selectionInput = coffees.filter(letter => {
+        return letter.roast[0] === coffeeAdder[0];
+    });
+    console.log(selectionInput); // [{name: "Nepal", continent: "Asia"}]
+}
 
 function renderCoffee(coffee) {
     var html = '<div class="coffee">';
@@ -47,7 +47,7 @@ function updateCoffees(e) {
     var selectedRoast = roastSelection.value;
     var filteredCoffees = [];
     coffees.forEach(function(coffee) {
-        if (coffee.roast === selectedRoast) {
+        if (coffee.roast[0] === selectedRoast[0]) {
             filteredCoffees.push(coffee);
         }
     });
@@ -75,11 +75,11 @@ var coffees = [
 var menu = document.querySelector('#coffees');
 var submitButton = document.querySelector('#submit');
 var roastSelection = document.querySelector('#roast-selection');
-
+var coffeeAdder = document.querySelector('#addCoffee');
 
 roastSelection.addEventListener("change", coffeSelection);
-
+coffeeAdder.addEventListener('input', autoType);
 
 menu.innerHTML = renderCoffees(coffees);
 
-submitButton.addEventListener('click', updateCoffees);
+// submitButton.addEventListener('click', updateCoffees);
