@@ -4,30 +4,55 @@
     <meta charset="UTF-8">
     <title></title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 </head>
 <body>
-    <h1>Coffee!</h1>
+    <h1 class="header">Coffee!</h1>
 
-    <form>
-        <label for="roast-selection"></label>
-        <select id="roast-selection">
-            <option>light</option>
-            <option>medium</option>
-            <option>dark</option>
-        </select>
-        <input id="submit" type="submit" />
-    </form>
+    <div class="container">
+        <div class="container-fluid drink-boys">
 
-    <table>
-        <thead>
-            <tr>
-                <th>ID</th>
-                <th>NAME</th>
-                <th>ROAST</th>
-            </tr>
-        </thead>
-        <tbody id="coffees"></tbody>
-    </table>
+            <div id="coffees"></div>
+
+        </div>
+        <div class="search-boys">
+            <form>
+                <div class="form-group">
+                    <label for="roast-selection">Roast</label>
+                    <select class="form-control" id="roast-selection">
+                        <option>all</option>
+                        <option>light</option>
+                        <option>medium</option>
+                        <option>dark</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="name-selection">Coffee Name</label>
+                    <input type="text" class="form-control" id="name-selection">
+                    <input type="submit" id="submit" value="Submit Query" class="btn btn-dark">
+                </div>
+            </form>
+            <h1>Add a Coffee</h1>
+            <form>
+                <div class="form-group">
+                    <label for="exampleFormControlSelect2">Roast</label>
+                    <select class="form-control" id="exampleFormControlSelect2">
+                        <option>Light</option>
+                        <option>Medium</option>
+                        <option>Dark</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="exampleFormControlInput1">Coffee Name</label>
+                    <input type="text" class="form-control" id="exampleFormControlInput2">
+                    <button type="button" class="btn btn-dark">Submit Query</button>
+                </div>
+            </form>
+        </div>
+    </div>
 
     <script src="main.js"></script>
 </body>

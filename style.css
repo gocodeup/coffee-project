@@ -1,3 +1,7 @@
+body {
+    background-color: navajowhite;
+}
+
 table {
     border-collapse: collapse;
     margin: 15px 0;
@@ -6,4 +10,44 @@ table {
 td, th {
     border: 1px solid black;
     padding: 5px 10px;
+}
+
+.container {
+    display: flex;
+}
+
+.form-group {
+    margin: 3em;
+    width: 40vw;
+}
+
+.drink-boys  {
+    flex-flow: row wrap;
+    border-style: none;
+}
+
+.search-boys {
+    flex-direction: column;
+}
+
+.header {
+    text-align: center;
+}
+
+.coffee-column {
+    flex-flow: row wrap;
+}
+
+.card {
+    text-align: center;
+    border-color: white;
+    width: 12em;
+    height: 6em;
+    padding-top: 1em;
+}
+
+#coffees {
+    display: flex;
+    flex-wrap: wrap;
+    border: none;
 }
