@@ -16,6 +16,10 @@ function coffeSelection() {
     });
     menu.innerHTML = renderCoffees(filteredCoffees);
 }
+
+
+
+
 // function newtable(form){
 //     var form = document.getElementsByClassName('roast-selection')
 //     if(document.getElementById('lightroast')){
@@ -76,9 +80,14 @@ var menu = document.querySelector('#coffees');
 var submitButton = document.querySelector('#submit');
 var roastSelection = document.querySelector('#roast-selection');
 
+var coffeename = document.querySelector('#coffeename')
 
+const filterItems = (letters) => {
+    return coffees.filter(coffee => name.indexOf(letters) > -1);
+}
+
+console.log(filterItems('ia')); // ["Victoria", "Olivia"]
 roastSelection.addEventListener("change", coffeSelection);
-
 
 menu.innerHTML = renderCoffees(coffees);
 
