@@ -14,18 +14,17 @@ body {
     background-attachment: fixed;
     background-size: cover;
     font-family: 'Recursive', sans-serif !important;
-    margin: auto;
-    padding: 10px;
+    display: flex;
 }
 
 
-h1 {
-    background: white;
+h1, h3 {
+    background-color: white;
+}
+img {
+    margin: 20px
 }
 
-p{
-  justify-content: center;
-}
 
 
 
