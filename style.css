@@ -1,5 +1,22 @@
+.page-wrap {
+    background-image: url("https://www.runescape.com/img/rsp777/bg2.jpg");
+    background-position-x: center;
+    background-position-y: top;
+    background-size: initial;
+    background-repeat-x: no-repeat;
+    background-repeat-y: repeat;
+    background-attachment: initial;
+    background-origin: initial;
+    background-clip: initial;
+    background-color: initial;
+    margin: 0 auto;
+    overflow-y: hidden;
+    padding: 0 50px;
+    width: 815px;
+}
+
 body {
-    background-color: navajowhite;
+    background: black;
 }
 
 table {
@@ -34,6 +51,10 @@ td, th {
     text-align: center;
 }
 
+.new-coffee {
+    padding-left: 1.4em;
+}
+
 .coffee-column {
     flex-flow: row wrap;
 }
@@ -50,4 +71,8 @@ td, th {
     display: flex;
     flex-wrap: wrap;
     border: none;
+}
+
+.btn {
+    margin: 1em 0;
 }

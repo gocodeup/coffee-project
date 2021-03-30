@@ -9,7 +9,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 </head>
-<body>
+<body class="page-wrap">
     <h1 class="header">Coffee!</h1>
 
     <div class="container">
@@ -35,20 +35,20 @@
                     <input type="submit" id="submit" value="Submit Query" class="btn btn-dark">
                 </div>
             </form>
-            <h1>Add a Coffee</h1>
+            <h1 class="new-coffee">Add a Coffee</h1>
             <form>
                 <div class="form-group">
-                    <label for="exampleFormControlSelect2">Roast</label>
-                    <select class="form-control" id="exampleFormControlSelect2">
+                    <label for="new-roast">Roast</label>
+                    <select class="form-control" id="new-roast">
                         <option>Light</option>
                         <option>Medium</option>
                         <option>Dark</option>
                     </select>
                 </div>
                 <div class="form-group">
-                    <label for="exampleFormControlInput1">Coffee Name</label>
-                    <input type="text" class="form-control" id="exampleFormControlInput2">
-                    <button type="button" class="btn btn-dark">Submit Query</button>
+                    <label for="new-name">Coffee Name</label>
+                    <input type="text" class="form-control" id="new-name">
+                    <input type="submit" id="new-submit" value="Submit Drink" class="btn btn-dark">
                 </div>
             </form>
         </div>
