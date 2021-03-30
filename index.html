@@ -11,17 +11,34 @@
     <div class="container row justify-content-center mx-auto">
     <h1 class="text-center col-12 mx-auto p-6">Coffee!</h1>
     <main>
-        <form class="col mx-auto p-">
-            <fieldset class="width-80">
-                <div class
-                    <label for="roast-selection"></label>
-                    <select id="roast-selection">
+
+            <h3>What do you know about the roast?</h3>
+            <p>As coffee roasts get darker, they lose the origin flavors of the beans and take on more flavor from the roasting process. ... Lighter roasts have more acidity than darker roasts. Light roasted beans are dry, while darker roasts develop oil on the bean surface. The caffeine level decreases as the roast gets darker.</p>
+            <form class="col mx-auto p-3">
+<!--                <label for="input-roast"></label>-->
+                <h5>Select a type of roast: </h5>
+                    <label for="input-roast"></label>
+                    <select id="input-roast">
                         <option>light</option>
                         <option>medium</option>
                         <option>dark</option>
                     </select>
-            <input id="submit" type="submit" />
-            </fieldset>
+            <h5>Pick your brew:</h5>
+            <input id="input-roast" type="text" placeholder="coffee name"/>
+            <input id="input-submit" type="submit" value="Add Brew"/>
+        </form>
+        <form class="col mx-auto p-3">
+<!--            <label for="input-roast"></label>-->
+            <h5>Where's my roast?</h5>
+            <label for="roast-selection"></label>
+            <select id="roast-selection">
+                <option>light</option>
+                <option>medium</option>
+                <option>dark</option>
+            </select>
+            <h5>Pick your brew:</h5>
+            <input id="input-roast" type="text" placeholder="coffee name"/>
+            <input id="input-submit" type="submit" value="Add Brew"/>
         </form>
     </main>
 
