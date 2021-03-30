@@ -1,5 +1,14 @@
 "use strict"
 
+function newtable(form){
+    var form = document.getElementsByClassName('roast-selection')
+    if(document.getElementById('lightroast')){
+        coffees.findIndex( )
+    }
+    console.log(form);
+}
+newtable();
+
 function renderCoffee(coffee) {
     var html = '<tr class="coffee">';
     html += '<td>' + coffee.id + '</td>';
