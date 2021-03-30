@@ -4,10 +4,22 @@
     <meta charset="UTF-8">
     <title></title>
     <link rel="stylesheet" href="style.css">
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
 </head>
 <body>
     <h1>Coffee!</h1>
 <h1>Roland & Tim</h1>
+
+    <div class="dropdown">
     <form>
         <label for="roast-selection"></label>
         <select id="roast-selection">
@@ -17,6 +29,31 @@
         </select>
         <input id="submit" type="submit" />
     </form>
+    </div>
+
+    <div class="dropdown">
+        <button class="btn btn-secondary dropdown-toggle" type="button" id="roast-selection" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Dropdown button
+        </button>
+        <div class="roast-selection" aria-labelledby="dropdownMenuButton">
+                <option>light</option>
+                <option>medium</option>
+                <option>dark</option>
+        </div>
+    </div>
+
+<!--    <form>-->
+<!--        <div class="form-group">-->
+<!--            <label for="exampleInputEmail1">Roast</label>-->
+<!--            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">-->
+<!--            <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>-->
+<!--        </div>-->
+<!--        <div class="form-group">-->
+<!--            <label for="exampleInputPassword1">Password</label>-->
+<!--            <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">-->
+<!--        </div>-->
+<!--        <button type="submit" class="btn btn-primary">Submit</button>-->
+<!--    </form>-->
 
     <table>
         <thead>
