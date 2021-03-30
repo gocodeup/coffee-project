@@ -8,27 +8,32 @@
 </head>
 <body>
     <h1>Coffee!</h1>
-
-    <form>
+    <div class="form-control">
+    <form class="coffee-search-form">
         <label for="roast-selection"></label>
         <select id="roast-selection">
+            <option>all</option>
             <option>light</option>
             <option>medium</option>
             <option>dark</option>
         </select>
+        <input id= "search-bar" class=" mr-sm-2 w-50 " type="search" placeholder="coffee keywords" aria-label="Search">
         <button class="btn btn-outline-success my-2 my-sm-0" id="submit" type="submit"> Submit</button>
-
-            <input id= "search-bar" class="form-control mr-sm-2 w-50 " type="search" placeholder="Search" aria-label="Search">
-
-
     </form>
-
-    <div id="coffees">
-
+    <h2>Add a Mother Fucking Coffee</h2>
+    <form class="add-coffee">
+        <label for="coffee-strength"></label>
+        <select id="coffee-strength">
+            <option class="roast-type">light</option>
+            <option class="roast-type">medium</option>
+            <option class="roast-type">dark</option>
+        </select>
+        <input id= "coffee-name" class="mr-sm-2 w-50 " type="search" placeholder="place name of coffee here" aria-label="Search">
+        <button class="btn btn-outline-success my-2 my-sm-0" id="add-coffee-submit" type="submit">Submit</button>
+    </form>
     </div>
+    <div id="coffees"></div>
 
-    <script src="main.js">
-
-    </script>
+    <script src="main.js"></script>
 </body>
 </html>
