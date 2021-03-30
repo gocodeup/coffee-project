@@ -4,10 +4,14 @@
     <meta charset="UTF-8">
     <title></title>
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap" rel="stylesheet">
+
 </head>
 
 <body>
+    <header> </header>
     <div class="container row justify-content-center mx-auto">
     <h1 class="text-center col-12 mx-auto p-6">Coffee!</h1>
     <main>
@@ -15,20 +19,21 @@
             <h3>What do you know about the roast?</h3>
             <p>As coffee roasts get darker, they lose the origin flavors of the beans and take on more flavor from the roasting process. ... Lighter roasts have more acidity than darker roasts. Light roasted beans are dry, while darker roasts develop oil on the bean surface. The caffeine level decreases as the roast gets darker.</p>
             <form class="col mx-auto p-3">
-<!--                <label for="input-roast"></label>-->
+                <label for="input-roast"></label>
                 <h5>Select a type of roast: </h5>
-                    <label for="input-roast"></label>
-                    <select id="input-roast">
+                    <label for="type-roast"></label>
+                    <select id="type-roast">
                         <option>light</option>
                         <option>medium</option>
                         <option>dark</option>
+                        <option>all</option>
                     </select>
             <h5>Pick your brew:</h5>
             <input id="input-roast" type="text" placeholder="coffee name"/>
             <input id="input-submit" type="submit" value="Add Brew"/>
         </form>
+
         <form class="col mx-auto p-3">
-<!--            <label for="input-roast"></label>-->
             <h5>Where's my roast?</h5>
             <label for="roast-selection"></label>
             <select id="roast-selection">
@@ -36,25 +41,11 @@
                 <option>medium</option>
                 <option>dark</option>
             </select>
-            <h5>Pick your brew:</h5>
-            <input id="input-roast" type="text" placeholder="coffee name"/>
-            <input id="input-submit" type="submit" value="Add Brew"/>
+            <input id="submit" type="submit"/>
+            <input id="search_input" type="text" placeholder="search"/>
         </form>
     </main>
-
-<!--        <form action="#">-->
-<!--            <fieldset class="width-80">-->
-<!--                <div class="form-group">-->
-<!--                    <label for="username" class="form-label">Username</label>-->
-<!--                    <input type="text" id="username" name="username" class="form-control">-->
-<!--                </div>-->
-<!--                <div class="form-group">-->
-<!--                    <label for="password" class="form-label">Password</label>-->
-<!--                    <input type="password" id="password" name="password" class="form-control">-->
-<!--                </div>-->
-<!--                <button class="btn btn-block">Login</button>-->
-<!--            </fieldset>-->
-
+    </div>
     <table>
         <thead>
             <tr>
