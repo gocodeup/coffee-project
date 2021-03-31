@@ -6,40 +6,36 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Coffee!</h1>
+    <h1>Gitana Coffee Co.</h1>
 
     <form>
         <label for="roast-selection"></label>
         <select id="roast-selection">
+            <option>Click to choose coffee</option>
             <option>light</option>
             <option>medium</option>
             <option>dark</option>
         </select>
-        <input id="submit" type="submit" />
+        <input id="submit" type="submit"/>
     </form>
-    <form name="coffeeSearch">
+    <form>
         <div>
-            <label for="searchInput">Search Coffee By Name</label>
-            <input id="searchInput" name="searchInput" type="text">
-        </div>
-        <div>
-            <input type="submit" id="submitSearch">
+            <label for="searchName">Search Coffee By Name</label>
+            <input id="searchName" name="searchName" type="text">
+<!--        </div>-->
+<!--        <div>-->
+            <input type="submit" id="submit-name" name="search">
         </div>
     </form>
 
-<!--        <table>-->
-<!--            <thead>-->
-<!--                <tr>-->
-<!--                    <th>ID</th>-->
-<!--                    <th>NAME</th>-->
-<!--                    <th>ROAST</th>-->
-<!--                </tr>-->
-<!--            </thead>-->
-<!--            <tbody id="coffees"></tbody>-->
-<!--        </table>-->
-<div id="coffees">
+    <div id="coffees">
+        <div>
+            <div id="name">NAME</div>
+            <div id="roast">ROAST</div>
+        </div>
+<!--        <tbody id="coffees"></tbody>-->
+    </div>
 
-</div>
     <script src="main.js"></script>
 </body>
 </html>
