@@ -24,7 +24,8 @@ function autoType(){
         filteredCoffees = coffees;
     }else {
         for(var i = 0; i < coffees.length; i++) {
-            if((coffees[i].name[0]).toLowerCase() === (coffeeSearch.value[0]).toLowerCase()){
+            if(coffees[i].name.toUpperCase().includes(coffeeSearch.value.toUpperCase())){
+            // if((coffees[i].name[0]).toLowerCase() === (coffeeSearch.value[0]).toLowerCase()){
                 filteredCoffees.push(coffees[i]);
             }
         }
@@ -34,7 +35,10 @@ function autoType(){
     });
     menu.innerHTML = renderCoffees(filteredCoffees);
 }
-
+ // function clearRefresh(){
+ //    localStorage.clear();
+ //    location.reload();
+ // }
 
 function renderCoffee(coffee) {
     var html = '<div class="coffee col-12 col-sm-4 d-flex">';
