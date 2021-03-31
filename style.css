@@ -8,24 +8,24 @@ td, th {
     padding: 5px 10px;
 }
 
+
+
 body {
     background-image: url('https://cupitol.com/wp-content/uploads/2019/01/coffee-roasts.jpg');
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
     font-family: 'Recursive', sans-serif !important;
-    margin: auto;
-    padding: 10px;
+    /*display: flex;*/
 }
 
 
-h1 {
-background-color: white;
-}
 
-p{
-  justify-content: center;
-}
+h1, h3 {
+    background-color: white;
+    margin-top: 20px;
+
+
 
 
 
