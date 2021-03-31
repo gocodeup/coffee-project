@@ -37,6 +37,20 @@ function updateCoffees(e) {
         }
     });
     tbody.innerHTML = renderCoffees(filteredCoffees);
+
+}
+
+function updateCoffees1(e) {
+    e.preventDefault(); // don't submit the form, we just want to update the data
+    var selectedRoast = roastSelection1.value;
+    var filteredCoffees = [];
+    coffees.forEach(function (coffee) {
+        if (coffee.roast === selectedRoast) {
+            filteredCoffees.push(coffee);
+        }
+    });
+    tbody1.innerHTML = renderCoffees(filteredCoffees);
+
 }
 
 
@@ -74,13 +88,39 @@ function coffeeLoop(event) {
         }
     }
     tbody.innerHTML = renderCoffees(filteredCoffeeNames);
+    tbody1.innerHTML = renderCoffees(filteredCoffeeNames);
+}
+
+var searchBar1 = document.querySelector('#search1');
+
+function coffeeLoop1(event) {
+    event.preventDefault(); // don't submit the form, we just want to update the data
+    //keeps page from refreshing after submitting (by default)
+    var coffeeSearch = searchBar1.value.toLowerCase();
+    var filteredCoffeeNames = [];
+    for (var i = 0; i < coffees.length; i++) {
+        var coffeeName = coffees[i].name;
+        if (coffeeName.toLowerCase().indexOf(coffeeSearch) >= 0) {
+            //happy path, indexOf will return number above or equal to 0 if the typed input exists in any of the coffee names
+            filteredCoffeeNames.push(coffees[i]);
+            //pushes coffee names into filteredCoffeeNames is condition is met
+        }
+    }
+    tbody.innerHTML = renderCoffees(filteredCoffeeNames);
+    tbody1.innerHTML = renderCoffees(filteredCoffeeNames);
 }
 
 var tbody = document.querySelector('#coffees');
 var submitButton = document.querySelector('#submit');
 var roastSelection = document.querySelector('#roast-selection');
 
+var tbody1 = document.querySelector('#coffees1');
+var submitButton1 = document.querySelector('#submit1');
+var roastSelection1 = document.querySelector('#roast-selection1');
+
 tbody.innerHTML = renderCoffees(coffees);
 
 submitButton.addEventListener('click', updateCoffees);
+submitButton1.addEventListener('click', updateCoffees1);
 searchBar.addEventListener('keyup', coffeeLoop);
+searchBar1.addEventListener('keyup', coffeeLoop1);

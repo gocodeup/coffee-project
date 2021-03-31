@@ -12,14 +12,17 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
           integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
+<!--    fontawesome-->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Train+One&display=swap" rel="stylesheet">
     <title>Coffee Cup</title>
 
     <link rel="stylesheet" href="style.css">
 </head>
 <body class=" mr-5 ml-5">
 <div class="container">
-    <div class="row justify-content-center mt-2 mb-2">
-        <h1>Coffee!</h1>
+    <div class="row title justify-content-center mt-2 mb-2">
+        <h1 class="font">Bootleg StarBucks!</h1>
     </div>
 </div>
 
@@ -36,11 +39,29 @@
                 <option>medium</option>
                 <option>dark</option>
             </select>
-            <label for="search">Coffee Search</label>
+            <label for="search">Coffee Name</label>
             <input id="search" type="text" placeholder="search" class="fill">
-            <input id="submit" type="submit" class="fill btn btn-primary"/>
+            <input id="submit" type="submit" class="fill button btn btn-primary"/>
+            <hr>
+        </form>
+
+
+        <h1 class="text-center font">Add a Coffee</h1>
+
+        <form>
+            <label for="roast-selection">Roast</label>
+            <select id="roast-selection1" class="fill">
+                <option>light</option>
+                <option>medium</option>
+                <option>dark</option>
+            </select>
+            <label for="search">Name</label>
+            <input id="search1" type="text" placeholder="search" class="fill">
+            <input id="submit1" type="submit" class="fill button btn btn-primary"/>
         </form>
     </div>
+
+
 </div>
 
 

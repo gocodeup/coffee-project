@@ -18,10 +18,36 @@ td, th {
     /*margin-right: 1px;*/
 }
 
+.title {
+    background-color: #00704A;
+    border-radius: 15px;
+
+}
+
+.title .font {
+    font-size: 100px;
+}
+
+.font {
+    font-family: "Train One", sans-serif;
+}
+
 p {
     font-weight: bold;
     color: grey;
     margin-left: .5em;
+}
+
+
+
+.searchBox {
+    display: flex;
+    /*background-color: white;*/
+    /*opacity: .8;*/
+    background: rgba(255,255,255,.8);
+    padding: 1em;
+    border: 2px solid #00704A;
+    border-radius: 15px;
 }
 
 .search {
@@ -29,18 +55,31 @@ p {
     /*position: absolute;*/
     width:50%;
     flex-direction: column;
-}
+    /*background-color: blue;*/
 
-.searchBox {
-    display: flex;
 }
 
 .fill {
     width: 100%;
     padding: .2em;
     margin-bottom: 1em;
+    background-color: white;
+
+}
+
+.button {
+    background-color: #00704A;
+
+}
+.button:hover {
+    background-color: darkgreen;
 }
 
 label {
     font-weight: bold;
+}
+
+body {
+    background-image: url("img/mike-kenneally-TD4DBagg2wE-unsplash.jpg");
+    background-size: contain;
 }
