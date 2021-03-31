@@ -2,8 +2,8 @@
 
 function coffeSelection() {
     var selectedRoast = roastSelection.value;
-   var filteredCoffees = [];
-   if (selectedRoast === 'all') {
+    var filteredCoffees = [];
+    if (selectedRoast === 'all') {
        filteredCoffees = coffees;
    } else {
     coffees.forEach(function(coffee) {
@@ -16,16 +16,15 @@ function coffeSelection() {
        return a.id - b.id;
     });
     menu.innerHTML = renderCoffees(filteredCoffees);
-   //  renderCoffees(filteredCoffees);
 }
-
+//****************** needs to be refactored to work as a search for those letter pairs
 function autoType(){
     var filteredCoffees = [];
-    if (coffeeAdder.value === ""){
+    if (coffeeSearch.value === ""){
         filteredCoffees = coffees;
     }else {
         for(var i = 0; i < coffees.length; i++) {
-            if((coffees[i].name[0]).toLowerCase() === (coffeeAdder.value[0]).toLowerCase()){
+            if((coffees[i].name[0]).toLowerCase() === (coffeeSearch.value[0]).toLowerCase()){
                 filteredCoffees.push(coffees[i]);
             }
         }
@@ -34,12 +33,11 @@ function autoType(){
         return a.id - b.id;
     });
     menu.innerHTML = renderCoffees(filteredCoffees);
-    // renderCoffees(filteredCoffees);
 }
 
 
 function renderCoffee(coffee) {
-    var html = '<div class="coffee d-flex ">';
+    var html = '<div class="coffee col-12 col-sm-4 d-flex">';
     html += '<h5 class="mx-2 d-flex align-content-center">' + coffee.name + '</h5>';
     html += '<p>' + coffee.roast + '</p>';
     html += '</div>';
@@ -48,9 +46,6 @@ function renderCoffee(coffee) {
 
 
 function renderCoffees(coffees) {
-    // coffees.sort(function (b,a){
-    //     return a.id - b.id;
-    // });
     var html = '';
     for(var i = coffees.length - 1; i >= 0; i--) {
         html += renderCoffee(coffees[i]);
@@ -98,15 +93,18 @@ else {
 }
 var id = coffees.length;
 
+//***************  DISPLAY **************
 var menu = document.querySelector('#coffees');
-var submitButton = document.querySelector('#submit');
+//***************  COFFEE SELECTION **************
 var roastSelection = document.querySelector('#roast-selection');
+var coffeeSearch = document.querySelector('#searchCoffee');
+//***************  ADDING COFFEES **************
 var roastSelection2 = document.querySelector('#roast-selection2');
-var coffeeAdder = document.querySelector('#addCoffee');
-var extraCoffee = document.querySelector('#extraCoffee');
+var extraCoffee = document.querySelector('#addCoffee');
+var submitButton = document.querySelector('#submit');
 
 menu.innerHTML = renderCoffees(coffees);
 
-submitButton.addEventListener('click', updateCoffees);
 roastSelection.addEventListener("change", coffeSelection);
-coffeeAdder.addEventListener('input', autoType);
+coffeeSearch.addEventListener('input', autoType);
+submitButton.addEventListener('click', updateCoffees);

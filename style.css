@@ -15,8 +15,15 @@ body{
     background-image: url("coffeebeans-resized.png");
 }
 h5 {
-    font-size: 15px;
+    font-size: 20px;
 }
 p {
-    font-size: 12px;
+    font-size: 15px;
 }
+header{
+    color: white;
+}
+
+
+/*!************** media query for xs, sm , md, lg seperately*/
+/*/!***************** change font sizes*/
