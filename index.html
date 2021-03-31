@@ -25,22 +25,24 @@
 
 <hr>
 
-<div class="coffee">
-        <div id="coffees"></div>
-</div>
-<div>
-    <form>
-        <label for="roast-selection"></label>
-        <select id="roast-selection">
-            <option>light</option>
-            <option>medium</option>
-            <option>dark</option>
-        </select>
-        <input id="search" type="text" placeholder="search">
-        <input id="submit" type="submit"/>
+<div class="searchBox">
+    <div id="coffees" class="coffee"></div>
 
-    </form>
+    <div class="search">
+        <form>
+            <label for="roast-selection">Roast</label>
+            <select id="roast-selection" class="fill">
+                <option>light</option>
+                <option>medium</option>
+                <option>dark</option>
+            </select>
+            <label for="search">Coffee Search</label>
+            <input id="search" type="text" placeholder="search" class="fill">
+            <input id="submit" type="submit" class="fill btn btn-primary"/>
+        </form>
+    </div>
 </div>
+
 
 
 <!--<table>-->
@@ -59,7 +61,6 @@
 <!--<div>ID</div>-->
 <!--<div>NAME</div>-->
 <!--<div>ROAST</div>-->
-
 
 
 <!-- Optional JavaScript -->

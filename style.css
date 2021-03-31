@@ -10,5 +10,37 @@ td, th {
 
 .coffee {
     display: flex;
+    flex-wrap: wrap;
+    width: 50%;
+    padding: .5em;
+    align-items: baseline;
+    /*justify-content: space-between;*/
+    /*margin-right: 1px;*/
+}
 
+p {
+    font-weight: bold;
+    color: grey;
+    margin-left: .5em;
+}
+
+.search {
+    display: flex;
+    /*position: absolute;*/
+    width:50%;
+    flex-direction: column;
+}
+
+.searchBox {
+    display: flex;
+}
+
+.fill {
+    width: 100%;
+    padding: .2em;
+    margin-bottom: 1em;
+}
+
+label {
+    font-weight: bold;
 }

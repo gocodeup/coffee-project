@@ -21,9 +21,9 @@ function renderCoffees(coffees) {
     // for(var i = coffees.length -1; i >= 0; i--) {
     //     html += renderCoffee(coffees[i]);
     // }
-    for(var i = 0; i < coffees.length; i++) {
-          html += renderCoffee(coffees[i]);
-         }
+    for (var i = 0; i < coffees.length; i++) {
+        html += renderCoffee(coffees[i]);
+    }
     return html;
 }
 
@@ -31,14 +31,13 @@ function updateCoffees(e) {
     e.preventDefault(); // don't submit the form, we just want to update the data
     var selectedRoast = roastSelection.value;
     var filteredCoffees = [];
-    coffees.forEach(function(coffee) {
+    coffees.forEach(function (coffee) {
         if (coffee.roast === selectedRoast) {
             filteredCoffees.push(coffee);
         }
     });
     tbody.innerHTML = renderCoffees(filteredCoffees);
 }
-
 
 
 // from http://www.ncausa.org/About-Coffee/Coffee-Roasts-Guide
@@ -60,22 +59,21 @@ var coffees = [
 ];
 
 var searchBar = document.querySelector('#search');
-function coffeeLoop (e){
-    e.preventDefault(); // don't submit the form, we just want to update the data
+
+function coffeeLoop(event) {
+    event.preventDefault(); // don't submit the form, we just want to update the data
+    //keeps page from refreshing after submitting (by default)
     var coffeeSearch = searchBar.value.toLowerCase();
     var filteredCoffeeNames = [];
-    for(var i = 0; i < coffees.length; i++){
+    for (var i = 0; i < coffees.length; i++) {
         var coffeeName = coffees[i].name;
-        if(coffeeName.toLowerCase().indexOf(coffeeSearch) >= 0) {
+        if (coffeeName.toLowerCase().indexOf(coffeeSearch) >= 0) {
+            //happy path, indexOf will return number above or equal to 0 if the typed input exists in any of the coffee names
             filteredCoffeeNames.push(coffees[i]);
+            //pushes coffee names into filteredCoffeeNames is condition is met
         }
-    // coffees.forEach(function(coffee) {
-    //     var coffeeName = coffees.name;
-    //     if(coffeeName.toLowerCase() === coffeeSearch) {
-    //         filteredCoffeeNames.push(coffees);
-        }
-    // });
-        tbody.innerHTML = renderCoffees(filteredCoffeeNames);
+    }
+    tbody.innerHTML = renderCoffees(filteredCoffeeNames);
 }
 
 var tbody = document.querySelector('#coffees');
@@ -85,4 +83,4 @@ var roastSelection = document.querySelector('#roast-selection');
 tbody.innerHTML = renderCoffees(coffees);
 
 submitButton.addEventListener('click', updateCoffees);
-searchBar.addEventListener('keyup', coffeeLoop)
+searchBar.addEventListener('keyup', coffeeLoop);
