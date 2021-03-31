@@ -18,6 +18,17 @@ function renderCoffee(coffee) {
 
     return html;
 }
+*/
+
+function renderCoffee(coffee) {
+    var html = '<div class="coffee">';
+    html += '<p>' + coffee.id + '</p>';
+    html += '<p>' + coffee.name + '</p>';
+    html += '<p>' + coffee.roast + '</p>';
+    html += '</div>';
+
+    return html;
+}
 
 function renderCoffees(coffees) {
     var html = '';
