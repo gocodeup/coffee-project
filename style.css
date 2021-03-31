@@ -8,5 +8,72 @@ td, th {
     padding: 5px 10px;
 }
 .coffee {
-    margin: 20px;
+    margin: 5px;
+    word-wrap: break-word;
 }
+
+.btn-clear {
+    margin-top: 1em;
+}
+
+
+body{
+    background-image: url("");
+    font-family: 'Oswald', sans-serif;
+    background-size: auto;
+    /*background-color: #FCA73F;*/
+    background: linear-gradient(to top, #E6712E, #FCA73F);
+}
+
+}
+
+header {
+}
+
+h1 {
+    display: flex;
+    justify-content: center;
+    height: 3.5em;
+    align-items: center;
+    color:#734022;
+    /*color:#E68145;*/
+    font-weight: bold;
+    transform: rotate(-04deg);
+    text-shadow: 1px 1px lightgray;
+    font-family: 'Dela Gothic One', cursive;
+}
+.imgheader {
+    width: 100vw;
+    position:center;
+}
+h5 {
+    font-size: 20px;
+}
+p {
+    font-size: 18px;
+}
+header{
+    color: white;
+}
+
+.card {
+    -webkit-box-shadow: 3px 3px 2px -1px rgba(158,158,158,0.95);
+    box-shadow: 3px 3px 2px -1px rgba(158,158,158,0.95);
+}
+
+
+/*!************** media query for xs, sm , md, lg seperately*/
+
+
+
+@media screen and (min-width: 576px) {
+    p {font-size:12px;
+    } /*1rem = 16px*/
+
+    .coffee {
+        word-wrap: break-word;
+    }
+}
+
+
+/*/!***************** change font sizes*/

@@ -1,6 +1,11 @@
 <html lang="en">
 <head>
+    <!-- FONTS -->
     <meta charset="UTF-8">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&display=swap" rel="stylesheet">
     <!--    META TAG FOR RESPONSIVE-->
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title></title>
@@ -10,22 +15,23 @@
 </head>
 <body class="mx-3">
 <header class="text-center">
-    <h1>Coffee!</h1>
+    <img src="imageedit_2_4713469980.jpg" class="imgheader">
+    <h1>Chemistry Coffee!<span class="oi oi-beaker"></span></h1>
     <hr>
 </header>
 <main>
-    <!--**************  DISPLAY SCREEN **************-->
+
     <div class="row d-flex justify-content-center">
-        <div class="col-6 d-flex justify-content-center">
+        <!--**************  DISPLAY SCREEN **************-->
+        <div class="col-6 d-flex justify-content-start">
             <div class="card w-100">
-                <menu id="coffees" class="d-flex flex-wrap"></menu>
+                <menu id="coffees" class="row d-flex flex-wrap justify-content-around mt-3 p-0"></menu>
             </div>
         </div>
-        <div class="col-6 d-flex justify-content-center flex-column">
-
-            <!--**************  COFFE SELECTION **************-->
+        <!--**************  COFFEE SELECTION **************-->
+        <div class="col-6 d-flex justify-content-start flex-column">
             <div class="card p-2">
-                <form class="mb-5">
+                <form class="mb-2">
                     <label for="roast-selection" class="form-label">Roast</label>
                     <select class="custom-select form-control custom-select-lg mb-3" id="roast-selection">
                         <option selected value="all" id="allroast">All</option>
@@ -34,15 +40,15 @@
                         <option value="dark" id="darkroast">dark</option>
                     </select>
                     <div class="mb-3">
-                        <label for="addCoffee" class="form-label">Coffee Name</label>
-                        <input type="text" class="form-control" id="addCoffee">
+                        <label for="searchCoffee" class="form-label">Coffee Name</label>
+                        <input type="text" class="form-control" id="searchCoffee">
                     </div>
                     <button type="submit" class="btn btn-primary w-100">Submit</button>
                 </form>
                 <hr>
                 <!--********** ADDING COFFEES  *************-->
                 <h5 class="text-center">Add a Coffee</h5>
-                <form class="mt-5">
+                <form class="mt-2">
                     <div class="mb-3">
                         <label for="roast-selection2" class="form-label">Roast</label>
                         <select id='roast-selection2' class="custom-select form-control custom-select-lg mb-3">
@@ -53,10 +59,12 @@
                         </select>
                     </div>
                     <div class="mb-3">
-                        <label for="extraCoffee" class="form-label">Coffee Name</label>
-                        <input type="text" class="form-control" id="extraCoffee">
+                        <label for="addCoffee" class="form-label">Coffee Name</label>
+                        <input type="text" class="form-control" id="addCoffee">
                     </div>
                     <button type="submit" id="submit" class="btn btn-primary w-100">Submit</button>
+
+                    <button type="submit" id="clear" class="btn btn-primary btn-clear w-100" >Clear</button>
                 </form>
             </div>
         </div>
