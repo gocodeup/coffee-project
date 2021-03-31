@@ -8,5 +8,15 @@ td, th {
     padding: 5px 10px;
 }
 .coffee {
-    margin: 20px;
+    margin: 5px;
+}
+
+body{
+    background-image: url("coffeebeans-resized.png");
+}
+h5 {
+    font-size: 15px;
+}
+p {
+    font-size: 12px;
 }
