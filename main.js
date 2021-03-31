@@ -32,7 +32,7 @@ function renderCoffee(coffee) {
 
 function renderCoffees(coffees) {
     var html = '';
-    for(var i = 0; i < 14; i++) {
+    for(var i = coffees.length - 1; i >= 0; i--) {
         html += renderCoffee(coffees[i]);
     }
     return html;
@@ -44,7 +44,7 @@ function updateCoffees(e) {
     var namedRoast = nameSelection.value;
     var filteredCoffees = [];
     coffees.forEach(function(coffee) {
-        if (coffee.roast === selectedRoast || coffee.name ===namedRoast) {
+        if (coffee.roast === selectedRoast && coffee.name === namedRoast) {
             filteredCoffees.push(coffee);
         }
         /* (coffee.name  */
