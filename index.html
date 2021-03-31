@@ -12,17 +12,20 @@
 <body>
 <header>
     <div class="container row justify-content-center mx-auto">
-    <h1 class="text-center col-12 mx-auto p-6">Coffee!</h1>
+    <h1 class="text-center col-12 mx-auto p-6" ><strong>Coffee!</strong></h1>
     </div>
 </header>
 
-<main>
+
 
             <h3>What do you know about the roast?</h3>
             <p>As coffee roasts get darker, they lose the origin flavors of the beans and take on more flavor from the roasting process. ... Lighter roasts have more acidity than darker roasts. Light roasted beans are dry, while darker roasts develop oil on the bean surface. The caffeine level decreases as the roast gets darker.</p>
+<main >
             <form class="col mx-auto p-3">
+                <h4>Select a type of roast: </h4>
+                <hr>
+                <h5>Pick your brew:</h5>
                 <label for="input-roast"></label>
-                <h5>Select a type of roast: </h5>
                     <label for="type-roast"></label>
                     <select id="type-roast">
                         <option>light</option>
@@ -30,7 +33,6 @@
                         <option>dark</option>
                         <option>all</option>
                     </select>
-            <h5>Pick your brew:</h5>
             <input id="input-roast" type="text" placeholder="coffee name"/>
             <input id="input-submit" type="submit" value="Add Brew"/>
         </form>

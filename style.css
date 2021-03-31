@@ -22,11 +22,29 @@ body {
 
 
 h1, h3 {
-    background-color: white;
+    background-image: url('https://miro.medium.com/max/1838/1*o1hSbX4jV3hbsiMIF02qTg.jpeg');
     margin-top: 20px;
+    height: 60px;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    color: beige !important;
+}
 
+h4 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
-
+main {
+    border: solid 2px;
+    padding: 0;
+    width: 70%;
+    display: flex;
+    align-items: center;
+}
 
 
 
