@@ -9,84 +9,56 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body class="mx-3">
-<!--<h1>Coffee!</h1>-->
-<!--<h1>Roland</h1>-->
-<!--<form>-->
-<!--    <label for="roast-selection"></label>-->
-<!--    <select id="roast-selection">-->
-<!--        <option>light</option>-->
-<!--        <option>medium</option>-->
-<!--        <option>dark</option>-->
-<!--    </select>-->
-<!--    <input id="submit" type="submit" />-->
-<!--</form>-->
 <header class="text-center">
     <h1>Coffee!</h1>
     <hr>
 </header>
 <main>
-
-<!--**************  DISPLAY SCREEN **************-->
-
+    <!--**************  DISPLAY SCREEN **************-->
     <div class="row d-flex justify-content-center">
         <div class="col-6 d-flex justify-content-center">
             <div class="card w-100">
                 <menu id="coffees" class="d-flex flex-wrap"></menu>
             </div>
         </div>
-
         <div class="col-6 d-flex justify-content-center flex-column">
 
-<!--**************  COFFE SELECTION **************-->
+            <!--**************  COFFE SELECTION **************-->
             <div class="card p-2">
                 <form class="mb-5">
-                <label for="roast-selection" class="form-label">Roast</label>
-                <select class="custom-select form-control custom-select-lg mb-3" id="roast-selection">
-                    <option selected value="all" id="allroast">All</option>
-                    <option value="light" id="lightroast">light</option>
-                    <option value="medium" id="mediumroast">medium</option>
-                    <option value="dark" id="darkroast">dark</option>
-                </select>
-
-
+                    <label for="roast-selection" class="form-label">Roast</label>
+                    <select class="custom-select form-control custom-select-lg mb-3" id="roast-selection">
+                        <option selected value="all" id="allroast">All</option>
+                        <option value="light" id="lightroast">light</option>
+                        <option value="medium" id="mediumroast">medium</option>
+                        <option value="dark" id="darkroast">dark</option>
+                    </select>
                     <div class="mb-3">
-                        <label for="test" class="form-label">Coffee Name</label>
-                        <input type="text" class="form-control" id="test">
-                    </div>
-                    <button type="submit" id="coffeename" class="btn btn-primary w-100">Submit</button>
-                </form>
-
-                <hr>
-    <!--********** ADDING COFFEES  *************-->
-                <h5 class="text-center">Add a Coffee</h5>
-
-                <form class="mt-5">
-                    <div class="mb-3">
-                        <label for="test" class="form-label">Roast</label>
-                        <select class="custom-select form-control custom-select-lg mb-3">
-                            <!--                <option selected>Open this select menu</option>-->
-                            <option value="1">light</option>
-                            <option value="2">medium</option>
-                            <option value="3">dark</option>
-                        </select>
-                    </div>
-
-                    <div class="mb-3">
-                        <label for="test3" class="form-label">Coffee Name</label>
-                        <input type="text" class="form-control" id="test3">
+                        <label for="addCoffee" class="form-label">Coffee Name</label>
+                        <input type="text" class="form-control" id="addCoffee">
                     </div>
                     <button type="submit" class="btn btn-primary w-100">Submit</button>
                 </form>
+                <hr>
+                <!--********** ADDING COFFEES  *************-->
+                <h5 class="text-center">Add a Coffee</h5>
+                <form class="mt-5">
+                    <div class="mb-3">
+                        <label for="roast-selection2" class="form-label">Roast</label>
+                        <select id='roast-selection2' class="custom-select form-control custom-select-lg mb-3">
+                            <!--                <option selected>Open this select menu</option>-->
+                            <option value="light">light</option>
+                            <option value="medium">medium</option>
+                            <option value="dark">dark</option>
+                        </select>
+                    </div>
+                    <div class="mb-3">
+                        <label for="extraCoffee" class="form-label">Coffee Name</label>
+                        <input type="text" class="form-control" id="extraCoffee">
+                    </div>
+                    <button type="submit" id="submit" class="btn btn-primary w-100">Submit</button>
+                </form>
             </div>
-            <!--    <form>-->
-            <!--        <label for="roast-selection"></label>-->
-            <!--        <select id="roast-selection">-->
-            <!--            <option>light</option>-->
-            <!--            <option>medium</option>-->
-            <!--            <option>dark</option>-->
-            <!--        </select>-->
-            <!--        <input id="submit" type="submit" />-->
-            <!--    </form>-->
         </div>
     </div>
 </main>
