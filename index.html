@@ -9,48 +9,53 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 </head>
-<body class="page-wrap">
-    <h1 class="header">Coffee!</h1>
-
-    <div class="container">
-        <div class="container-fluid drink-boys">
-
-            <div id="coffees"></div>
-
+<body>
+    <div class="page-wrap">
+        <div class="jumbotron jumbotron-fluid">
+            <div class="container">
+                <h1 class="display-3 text-align-center">Coffee!</h1>
         </div>
-        <div class="search-boys">
-            <form>
-                <div class="form-group">
-                    <label for="roast-selection">Roast</label>
-                    <select class="form-control" id="roast-selection">
-                        <option>all</option>
-                        <option>light</option>
-                        <option>medium</option>
-                        <option>dark</option>
-                    </select>
-                </div>
-                <div class="form-group">
-                    <label for="name-selection">Coffee Name</label>
-                    <input type="text" class="form-control" id="name-selection">
-                    <input type="submit" id="submit" value="Submit Query" class="btn btn-dark">
-                </div>
-            </form>
-            <h1 class="new-coffee">Add a Coffee</h1>
-            <form>
-                <div class="form-group">
-                    <label for="new-roast">Roast</label>
-                    <select class="form-control" id="new-roast">
-                        <option>Light</option>
-                        <option>Medium</option>
-                        <option>Dark</option>
-                    </select>
-                </div>
-                <div class="form-group">
-                    <label for="new-name">Coffee Name</label>
-                    <input type="text" class="form-control" id="new-name">
-                    <input type="submit" id="new-submit" value="Submit Drink" class="btn btn-dark">
-                </div>
-            </form>
+
+        <div class="container">
+            <div class="container-fluid drink-boys">
+
+                <div id="coffees"></div>
+
+            </div>
+            <div class="search-boys">
+                <form>
+                    <div class="form-group">
+                        <label for="roast-selection">Roast</label>
+                        <select class="form-control" id="roast-selection">
+                            <option>all</option>
+                            <option>light</option>
+                            <option>medium</option>
+                            <option>dark</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="name-selection">Coffee Name</label>
+                        <input type="text" class="form-control" id="name-selection">
+                        <input type="submit" id="submit" value="Submit Query" class="btn btn-dark">
+                    </div>
+                </form>
+                <h1 class="new-coffee">Add a Coffee</h1>
+                <form>
+                    <div class="form-group">
+                        <label for="new-roast">Roast</label>
+                        <select class="form-control" id="new-roast">
+                            <option>Light</option>
+                            <option>Medium</option>
+                            <option>Dark</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="new-name">Coffee Name</label>
+                        <input type="text" class="form-control" id="new-name">
+                        <input type="submit" id="new-submit" value="Submit Drink" class="btn btn-dark">
+                    </div>
+                </form>
+            </div>
         </div>
     </div>
 
