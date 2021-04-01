@@ -24,8 +24,10 @@ h1 {
     font-size: 80px !important;
 }
 
+
 h1, h3 {
     background-image: url('https://miro.medium.com/max/1838/1*o1hSbX4jV3hbsiMIF02qTg.jpeg');
+<<<<<<< HEAD
     margin-top: 20px;
     height: 90px;
     width: 100%;
@@ -47,9 +49,30 @@ p {
 }
 img {
     margin: 20px
+=======
+    margin-top: 20px;
+    height: 60px;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    color: beige !important;
+>>>>>>> 0dbc3ecc4994c037f1184b550c37190c489f1c64
 }
 
+h4 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
+main {
+    border: solid 2px;
+    padding: 0;
+    width: 70%;
+    display: flex;
+    align-items: center;
+}
 
 
 
