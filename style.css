@@ -1,5 +1,5 @@
 .page-wrap {
-
+    background: navajowhite;
 }
 
 table {
@@ -43,6 +43,8 @@ td, th {
 }
 
 .card {
+    font-family: 'Cormorant Garamond', serif;
+    background: navajowhite !important;
     text-align: center;
     border-color: white;
     width: 12em;
@@ -59,13 +61,22 @@ td, th {
 .btn {
     margin: 1em 0;
 }
-.jumboHeader {
+.jumbotron {
     background-image: url("photo-1518800383600-44551b3c739c.jpeg");
+    width: 100vw;
     display: flex;
     justify-content: center;
     align-items: center;
     background-repeat: no-repeat;
     background-size: cover;
+}
+
+.jumboHeader {
+    justify-content: center;
+    font-family: 'Pacifico', cursive;
+    color: darkslategrey;
+    text-shadow: -2px 2px 3px slategrey;
+
 }
 .jumbotron .container {
     position: relative;
