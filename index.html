@@ -2,25 +2,26 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Gitana</title>
+    <title>Gitana Coffee Co.</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <h1>Gitana Coffee Co.</h1>
-
+    <div class="container">
     <form>
         <label for="roast-selection"></label>
-        <select id="roast-selection">
-            <option>Click to choose coffee</option>
+        <select  class="form-control col-sm-3" id="roast-selection">
+            <option>List by Roast Preference</option>
             <option>light</option>
             <option>medium</option>
             <option>dark</option>
         </select>
         <input id="submit" type="submit"/>
     </form>
+    </div>
     <form>
-        <div>
+        <div class="container">
             <label for="searchName">Search Coffee By Name</label>
             <input id="searchName" name="searchName" type="text">
 <!--        </div>-->
@@ -29,7 +30,7 @@
         </div>
     </form>
 
-    <div id="coffees">
+    <div class="container" id="coffees">
 
             <div id="name">NAME</div>
             <div id="roast">ROAST</div>
