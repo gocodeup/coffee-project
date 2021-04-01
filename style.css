@@ -37,7 +37,9 @@ div.container, h3 {
 }
 
 div.article {
-    
+    display: flex;
+    margin-top: 20px;
+    padding: 20px;
 }
 
 h4 {
