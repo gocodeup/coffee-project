@@ -59,3 +59,15 @@ td, th {
 .btn {
     margin: 1em 0;
 }
+.jumboHeader {
+    background-image: url("photo-1518800383600-44551b3c739c.jpeg");
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.jumbotron .container {
+    position: relative;
+
+}
