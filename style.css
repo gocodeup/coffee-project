@@ -17,12 +17,33 @@ body {
     background-size: cover;
     font-family: 'Recursive', sans-serif !important;
     /*display: flex;*/
+    width: 100%;
 }
 
+h1 {
+    font-size: 80px !important;
+}
 
 h1, h3 {
-    background-color: white;
+    background-image: url('https://miro.medium.com/max/1838/1*o1hSbX4jV3hbsiMIF02qTg.jpeg');
     margin-top: 20px;
+    height: 90px;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    color: beige !important;
+}
+h2 p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    padding-top: 20px;
+
+}
+p {
+
 }
 img {
     margin: 20px
