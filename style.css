@@ -8,28 +8,36 @@ td, th {
     padding: 5px 10px;
 }
 
-
-
 body {
     background-image: url('https://cupitol.com/wp-content/uploads/2019/01/coffee-roasts.jpg');
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
+    background-blend-mode: normal;
+
     font-family: 'Recursive', sans-serif !important;
     /*display: flex;*/
+    width: 100%;
+    position: absolute;
 }
 
+h1 {
+    font-size: 80px !important;
+}
 
-
-h1, h3 {
+div.container, h3 {
     background-image: url('https://miro.medium.com/max/1838/1*o1hSbX4jV3hbsiMIF02qTg.jpeg');
     margin-top: 20px;
-    height: 60px;
+    height: 90px;
     width: 100%;
     align-items: center;
     justify-content: center;
     display: flex;
     color: beige !important;
+}
+
+div.article {
+    
 }
 
 h4 {
@@ -39,20 +47,26 @@ h4 {
 }
 
 main {
-    border: solid 2px;
-    padding: 0;
-    width: 70%;
+    border: solid 4px;
+    padding: 20px;
+    margin: 20px;
+    width: 500px;
     display: flex;
-    align-items: center;
+    background: url("https://www.thespruce.com/thmb/3su6qICbxVOtTaAVsHqi67Fxe-Y=/400x300/filters:no_upscale():max_bytes(150000):strip_icc()/GettyImages-1185801737-b01b2d69958f4cd6bb41bc8f4ba254a9.jpg");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    /*justify-content: center;*/
+    /*align-items: center;*/
 }
-
-
-
-
-
-
-
-
+img {
+    height: 280px;
+    width: 350px;
+    margin: 2em;
+}
+.img-2 {
+    display: flex;
+    margin-left: 3em;
+}
 table {
     background: #F6EAE4;
 }
