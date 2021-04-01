@@ -36,6 +36,11 @@ td, th {
 
 .new-coffee {
     padding-left: 1.4em;
+    padding-top: 1em;
+    font-family: 'Pacifico', cursive;
+    color: darkslategrey;
+    text-shadow: -2px 2px 3px slategrey;
+
 }
 
 .coffee-column {
