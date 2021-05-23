@@ -1,5 +1,5 @@
 .page-wrap {
-
+    background: navajowhite;
 }
 
 table {
@@ -36,6 +36,11 @@ td, th {
 
 .new-coffee {
     padding-left: 1.4em;
+    padding-top: 1em;
+    font-family: 'Pacifico', cursive;
+    color: darkslategrey;
+    text-shadow: -2px 2px 3px slategrey;
+
 }
 
 .coffee-column {
@@ -43,6 +48,8 @@ td, th {
 }
 
 .card {
+    font-family: 'Cormorant Garamond', serif;
+    background: navajowhite !important;
     text-align: center;
     border-color: white;
     width: 12em;
@@ -59,14 +66,33 @@ td, th {
 .btn {
     margin: 1em 0;
 }
+<<<<<<< HEAD
 
 .jumbotron {
     position: relative;
+=======
+.jumbotron {
+>>>>>>> 97a0bdcb3395176ac967192ca543529fd4f0780a
     background-image: url("photo-1518800383600-44551b3c739c.jpeg");
+    width: 100vw;
     display: flex;
     justify-content: center;
     align-items: center;
     background-repeat: no-repeat;
     background-size: cover;
+<<<<<<< HEAD
+=======
+}
+
+.jumboHeader {
+    justify-content: center;
+    font-family: 'Pacifico', cursive;
+    color: darkslategrey;
+    text-shadow: -2px 2px 3px slategrey;
+
+}
+.jumbotron .container {
+    position: relative;
+>>>>>>> 97a0bdcb3395176ac967192ca543529fd4f0780a
 
 }
