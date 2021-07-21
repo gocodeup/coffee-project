@@ -14,8 +14,6 @@ td, th {
     width: 50%;
     padding: .5em;
     align-items: baseline;
-    /*justify-content: space-between;*/
-    /*margin-right: 1px;*/
 }
 
 .title {
@@ -42,21 +40,16 @@ p {
 
 .searchBox {
     display: flex;
-    /*background-color: white;*/
-    /*opacity: .8;*/
     background: rgba(255,255,255,.8);
     padding: 1em;
     border: 2px solid #00704A;
     border-radius: 15px;
 }
 
-.search {
+div.forms {
     display: flex;
-    /*position: absolute;*/
     width:50%;
     flex-direction: column;
-    /*background-color: blue;*/
-
 }
 
 .fill {
@@ -69,7 +62,6 @@ p {
 
 .button {
     background-color: #00704A;
-
 }
 .button:hover {
     background-color: darkgreen;
