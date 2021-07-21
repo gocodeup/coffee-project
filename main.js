@@ -18,8 +18,8 @@ function renderCoffees(coffees) {
     return html;
 }
 
-function updateCoffees(e) {
-    e.preventDefault(); // don't submit the form, we just want to update the data
+function updateCoffees(e) { //updates renderCoffees to just show the ones matching the submitted roast
+    e.preventDefault();
     var selectedRoast = roastSearch.value;
     var filteredCoffees = [];
     coffees.forEach(function (coffee) {
@@ -50,7 +50,7 @@ var coffees = [
 ];
 
 function coffeeLoop(e) {
-    e.preventDefault(); // don't submit the form, we just want to update the data
+    e.preventDefault(); // updates renderCoffees as we type
     //keeps page from refreshing after submitting (by default)
     var coffeeSearch = searchBar.value.toLowerCase();
     var filteredCoffeeNames = [];
@@ -59,7 +59,7 @@ function coffeeLoop(e) {
         if (coffeeName.toLowerCase().indexOf(coffeeSearch) >= 0) {
             //happy path, indexOf will return number above or equal to 0 if the typed input exists in any of the coffee names
             filteredCoffeeNames.push(coffees[i]);
-            //pushes coffee names into filteredCoffeeNames is condition is met
+            //pushes coffee names into filteredCoffeeNames if condition is met
         }
     }
     tbody.innerHTML = renderCoffees(filteredCoffeeNames);
