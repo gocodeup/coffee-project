@@ -2,10 +2,10 @@
 
 function renderCoffee(coffee) {
     var html = '<tr class="coffee">';
-    html += '<td>' + coffee.id + '</td>';
-    html += '<td>' + coffee.name + '</td>';
-    html += '<td>' + coffee.roast + '</td>';
-    html += '</tr>';
+    html += '<div>' + '<h1>' + coffee.name + '</h1>' + '<p>' +  coffee.roast + "</p>" + '</div>';
+    // html += '<td>' + coffee.name + '</td>';
+    // html += '<td>' + coffee.roast + '</td>';
+    // html += '</tr>';
 
     return html;
 }
