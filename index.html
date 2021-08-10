@@ -3,32 +3,56 @@
 <head>
     <meta charset="UTF-8">
     <title></title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB"
+          crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
-    <h1>Coffee!</h1>
+    <body>
+        <header>
+            <h1>Coffee!</h1>
+        </header>
 
-    <form>
-        <label for="roast-selection"></label>
-        <select id="roast-selection">
-            <option>light</option>
-            <option>medium</option>
-            <option>dark</option>
-        </select>
-        <input id="submit" type="submit" />
-    </form>
+    <hr>
+        <div class="container">
+            <form>
 
-    <table>
-        <thead>
-            <tr>
-                <th>ID</th>
-                <th>NAME</th>
-                <th>ROAST</th>
-            </tr>
-        </thead>
-        <tbody id="coffees"></tbody>
-    </table>
+                <div class="form-group">
+                    <label for="gender">Roast Selection</label>
+                    <select class="form-control" id="gender">
+                        <option>All</option>
+                        <option>Light</option>
+                        <option>Medium</option>
+                        <option>Dark</option>
+                    </select>
+                </div>
+            <div class="form-group">
+                <label for="name">Coffee</label>
+                <input class="form-control" type="text" id="name" placeholder="Enter name">
+            </div>
+                <button class="btn btn-dark btn-block" type="button">Submit</button>
+            </form>
+        <hr>
 
-    <script src="main.js"></script>
-</body>
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>NAME</th>
+                    <th>ROAST</th>
+                </tr>
+            </thead>
+            <tbody id="coffees"></tbody>
+        </table>
+        </div>
+
+
+
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+                crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+                crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T"
+                crossorigin="anonymous"></script>
+        <script src="main.js"></script>
+    </body>
 </html>
