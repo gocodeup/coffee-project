@@ -4,12 +4,11 @@
 
 
 function renderCoffee(coffee) {
-    var html = '<tr class="coffee">';
-    html += '<td>' + coffee.id + '</td>';
+    var html = '<div class="coffee">';
+    html += '<div>' + coffee.id + '</div>';
     html += '<h1>' + coffee.name + '</h1>';
     html += '<p>' + coffee.roast + '</p>';
-    html += '</tr>';
-
+    html += '</div>';
     return html;
 }
 
@@ -58,3 +57,5 @@ var roastSelection = document.querySelector('#roast-selection');
 tbody.innerHTML = renderCoffees(coffees);
 
 submitButton.addEventListener('click', updateCoffees);
+
+

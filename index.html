@@ -11,39 +11,40 @@
         <header>
             <h1>Coffee!</h1>
         </header>
-
     <hr>
         <div class="container">
-            <form>
-
-                <div class="form-group">
-                    <label for="gender">Roast Selection</label>
-                    <select class="form-control" id="gender">
-                        <option>All</option>
-                        <option>Light</option>
-                        <option>Medium</option>
-                        <option>Dark</option>
-                    </select>
-                </div>
             <div class="form-group">
-                <label for="name">Coffee</label>
-                <input class="form-control" type="text" id="name" placeholder="Enter name">
+                <form id="search-form">
+                    <label for="roast-selection">Roast Selection</label>
+                        <select id="roast-selection" class="form-control">
+                            <option>all</option>
+                            <option>light</option>
+                            <option>medium</option>
+                            <option>dark</option>
+                        </select>
+                    <div class="form-group">
+                        <label>Coffee</label>
+                        <input class="form-control" type="text" id="name" >
+                    </div>
+                    <button class="btn btn-dark btn-block" type="submit" id="submit">Submit</button>
+                </form>
             </div>
-                <button class="btn btn-dark btn-block" type="button">Submit</button>
-            </form>
-        <hr>
-
-        <table>
-            <thead>
-                <tr>
-                    <th>ID</th>
-                    <th>NAME</th>
-                    <th>ROAST</th>
-                </tr>
-            </thead>
-            <tbody id="coffees"></tbody>
-        </table>
         </div>
+    <hr>
+        <div id="coffees">
+            <h1>NAME</h1>
+            <p>ROAST</p>
+        </div>
+
+
+
+
+
+
+
+
+
+
 
 
 
