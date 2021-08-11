@@ -8,33 +8,38 @@
     <link rel="stylesheet" href="style.css">
 </head>
     <body>
-        <header>
+        <header class="jumbotron jumbotron-fluid text-center">
             <h1>Coffee!</h1>
         </header>
     <hr>
+        <br>
         <div class="container">
             <div class="form-group">
                 <form id="search-form">
                     <label for="roast-selection">Roast Selection</label>
                         <select id="roast-selection" class="form-control">
-                            <option>all</option>
-                            <option>light</option>
-                            <option>medium</option>
-                            <option>dark</option>
+                            <option value="all">all</option>
+                            <option value="light">light</option>
+                            <option value="medium">medium</option>
+                            <option value="dark">dark</option>
                         </select>
                     <div class="form-group">
                         <label>Coffee</label>
-                        <input class="form-control" type="text" id="name" >
+                        <input class="form-control" type="text" id="searchBar" >
                     </div>
                     <button class="btn btn-dark btn-block" type="submit" id="submit">Submit</button>
                 </form>
             </div>
         </div>
     <hr>
-        <div id="coffees">
-            <h1>NAME</h1>
-            <p>ROAST</p>
+        <br>
+        <div class="container align-baseline">
+            <div id="coffees">
+                <h1>NAME</h1>
+                <p class="d-inline lead">ROAST</p>
+            </div>
         </div>
+
 
 
 

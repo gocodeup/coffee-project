@@ -1,15 +1,12 @@
 "use strict"
-// var hideList = document.getElementById("hide");
-// hideList = document.style.display = "none";
-
 
 function renderCoffee(coffee) {
-    var html = '<div class="coffee">';
-    html += '<div>' + coffee.id + '</div>';
-    html += '<h1>' + coffee.name + '</h1>';
-    html += '<p>' + coffee.roast + '</p>';
-    html += '</div>';
-    return html;
+    return ` <div class="coffee">
+                    <div style="display: none">${coffee.id}</div>
+                    <h1>${coffee.name}</h1>
+                     <p>${coffee.roast}</p>
+              </div> 
+    `;
 }
 
 function renderCoffees(coffees) {
@@ -17,6 +14,7 @@ function renderCoffees(coffees) {
     for(var i = coffees.length - 1; i >= 0; i--) {
         html += renderCoffee(coffees[i]);
     }
+
     return html;
 }
 
@@ -50,11 +48,41 @@ var coffees = [
     {id: 14, name: 'French', roast: 'dark'},
 ];
 
-var tbody = document.querySelector('#coffees');
-var submitButton = document.querySelector('#submit');
-var roastSelection = document.querySelector('#roast-selection');
 
-tbody.innerHTML = renderCoffees(coffees);
+
+
+
+///  WINDOW LOAD EVENT ////
+var tbody = document.querySelector('#coffees');
+
+window.addEventListener('load', (e) => {
+    tbody.innerHTML = renderCoffees(coffees);
+})
+
+//// ALL ROAST SELECTION OPTION ////
+var roastSelection = document.getElementById('roast-selection');
+roastSelection.addEventListener('change', (e) => {
+
+
+    return renderCoffees()
+});
+
+////   FILTERED COFFEE INPUT   ///
+ const coffeeNameInput = document.getElementById('searchBar');
+
+ coffeeNameInput.addEventListener('keyup', function() {
+   const search = coffeeNameInput.value;
+   const filteredNames = coffees.filter(coffee => {
+      return coffee.name.includes(search) || coffee.roast.includes(search)
+   });
+
+     tbody.innerHTML = renderCoffees(filteredNames);
+});
+
+
+
+
+var submitButton = document.querySelector('#submit');
 
 submitButton.addEventListener('click', updateCoffees);
 
