@@ -43,8 +43,10 @@ function addCoffee(e){
         name: addNameSelection.value,
         roast: addRoastSelection.value,
     };
+    console.log(newCoffee);
     coffees.push(newCoffee);
-    updateCoffees();
+    console.log(coffees);
+    updateCoffees(e);
     renderCoffees(coffees);
 }
 // from http://www.ncausa.org/About-Coffee/Coffee-Roasts-Guide
