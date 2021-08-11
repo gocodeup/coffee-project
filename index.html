@@ -3,14 +3,16 @@
 <head>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
     <meta charset="UTF-8">
-    <title></title>
+    <title>Coffee Project</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+<div class="container">
+    <div class="row">
     <h1 class="text-center">Coffee!</h1>
-    <div class="container row d-flex">
-    <div class="col-4">
-    <form>
+    <hr>
+    <div class="col-6 order-2 row">
+        <form class="col-12 row">
         <label for="roast-selection"></label>
         <select id="roast-selection">
             <option>light</option>
@@ -20,8 +22,7 @@
         <input id="submit" type="submit" />
     </form>
     </div>
-    <div class="container row">
-    <div class="col-8">
+    <div class="col-6 order-1">
     <table class="">
         <thead>
            <tr class="">
@@ -32,6 +33,7 @@
         </thead>
         <tbody id="coffees"></tbody>
     </table>
+    </div>
     </div>
 </div>
 </div>
