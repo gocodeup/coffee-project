@@ -1,32 +1,64 @@
 "use strict"
 
 function renderCoffee(coffee) {
-    var html = '<tr class="coffee">';
-    html += '<td>' + coffee.id + '</td>';
-    html += '<td>' + coffee.name + '</td>';
-    html += '<td>' + coffee.roast + '</td>';
-    html += '</tr>';
+    var cinnamonColor = '';
+    var lightRoastBG = '';
+    if(coffee.roast === 'light'){
+        lightRoastBG = 'bg-warning';
+    }
+    var mediumRoastBG = '';
+    if(coffee.roast === 'medium'){
+        mediumRoastBG = 'bg-info';
+    }
+    var darkRoastBG = '';
+    if(coffee.roast === 'dark'){
+        darkRoastBG = 'bg-secondary';
+    }
+    // if (coffee.name === 'Cinnamon'){
+    //     cinnamonColor = 'text-danger'
+    // }
+   return `<div class="d-flex flex-column border border-secondary rounded-bottom" style="width: 10rem; margin: 1rem;">
+        <img src="img/coffee-cup.jpeg" class="card-img-top"  alt="${coffee.name}">
+            <div class="card-body ${lightRoastBG} ${mediumRoastBG} ${darkRoastBG}">
+                <h5 class="card-title ${cinnamonColor}"> ${coffee.name} </h5>
+                <p class="card-text">${coffee.roast} </p>
+            </div>
+            </div>`
+    // var html = '<tr class="coffee">';
+    // html += '<td>' + coffee.id + '</td>';
+    // html += '<td>' + coffee.name + '</td>';
+    // html += '<td>' + coffee.roast + '</td>';
+    // html += '</tr>';
 
-    return html;
+    // return html;
 }
+
+
 
 function renderCoffees(coffees) {
-    var html = '';
-    for(var i = coffees.length - 1; i >= 0; i--) {
-        html += renderCoffee(coffees[i]);
-    }
-    return html;
+    return coffees.reduce((coffeeHTML, coffee) => coffeeHTML.concat(renderCoffee(coffee)), '' )
 }
+    // return selectedCoffees
+
+    // var html = '';
+    // for(var i = coffees.length - 1; i >= 0; i--) {
+    //     html += renderCoffee(coffees[i]);
+    // }
+    // debugger
+    // return html;
+
 
 function updateCoffees(e) {
     e.preventDefault(); // don't submit the form, we just want to update the data
     var selectedRoast = roastSelection.value;
-    var filteredCoffees = [];
-    coffees.forEach(function(coffee) {
-        if (coffee.roast === selectedRoast) {
-            filteredCoffees.push(coffee);
-        }
-    });
+    var filteredCoffees = coffees.filter(coffee => coffee.roast === selectedRoast);
+
+
+    // coffees.forEach(function(coffee) {
+    //     if (coffee.roast === selectedRoast) {
+    //         filteredCoffees.push(coffee);
+    //     }
+    // });
     tbody.innerHTML = renderCoffees(filteredCoffees);
 }
 
