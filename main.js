@@ -2,8 +2,9 @@
 
 function renderCoffee(coffee) {
     var html = '';
+
     //Render an h1 inside a div instead tr
-    html += '<div>' + '<h1>' + coffee.name + '</h1>' + '<p>' +  coffee.roast + "</p>" + '</div>';
+    html += '<div class="col-6"><h1>' + coffee.name + '</h1><p>' +  coffee.roast + '</p></div>';
 
     return html;
 }
