@@ -48,6 +48,8 @@ var coffees = [
     {id: 14, name: 'French', roast: 'dark'},
 ];
 
+coffees.reverse()
+
 var tbody = document.querySelector('#coffees');
 var submitButton = document.querySelector('#submit');
 var roastSelection = document.querySelector('#roast-selection');
