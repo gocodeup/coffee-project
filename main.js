@@ -48,7 +48,11 @@ var coffees = [
     {id: 14, name: 'French', roast: 'dark'},
 ];
 
-coffees.reverse()
+coffees.reverse();
+
+var hideList = document.getElementById('hide').style.display = 'none';
+
+// // hideList.style.display = 'none';
 
 var tbody = document.querySelector('#coffees');
 var submitButton = document.querySelector('#submit');
