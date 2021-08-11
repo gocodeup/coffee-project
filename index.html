@@ -1,13 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
     <meta charset="UTF-8">
     <title></title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Coffee!</h1>
-
+    <h1 class="text-center">Coffee!</h1>
+    <div class="container row d-flex">
+    <div class="col-4">
     <form>
         <label for="roast-selection"></label>
         <select id="roast-selection">
@@ -17,18 +19,23 @@
         </select>
         <input id="submit" type="submit" />
     </form>
-
-    <table>
+    </div>
+    <div class="container row">
+    <div class="col-8">
+    <table class="">
         <thead>
-            <tr>
-                <th>ID</th>
-                <th>NAME</th>
-                <th>ROAST</th>
-            </tr>
+           <tr class="">
+                <th class="">ID</th>
+              <th>NAME</th>
+             <th>ROAST</th>
+          </tr>
         </thead>
         <tbody id="coffees"></tbody>
     </table>
-
+    </div>
+</div>
+</div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
     <script src="main.js"></script>
 </body>
 </html>
