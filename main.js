@@ -1,11 +1,8 @@
 "use strict"
-// var hideList = document.getElementById("hide");
-// hideList = document.style.display = "none";
-
 
 function renderCoffee(coffee) {
     return ` <div class="coffee">
-                        ${coffee.id}
+                    <div style="display: none">${coffee.id}</div>
                     <h1>${coffee.name}</h1>
                      <p>${coffee.roast}</p>
               </div> 
@@ -51,19 +48,30 @@ var coffees = [
     {id: 14, name: 'French', roast: 'dark'},
 ];
 
+
+
+
+
+///  WINDOW LOAD EVENT ////
 var tbody = document.querySelector('#coffees');
 
+window.addEventListener('load', (e) => {
+    tbody.innerHTML = renderCoffees(coffees);
+})
+
+//// ALL ROAST SELECTION OPTION ////
+var roastSelection = document.getElementById('roast-selection');
+roastSelection.addEventListener('change', (e) => {
 
 
-
+    return renderCoffees()
+});
 
 ////   FILTERED COFFEE INPUT   ///
-
  const coffeeNameInput = document.getElementById('searchBar');
 
  coffeeNameInput.addEventListener('keyup', function() {
    const search = coffeeNameInput.value;
-
    const filteredNames = coffees.filter(coffee => {
       return coffee.name.includes(search) || coffee.roast.includes(search)
    });
@@ -74,13 +82,7 @@ var tbody = document.querySelector('#coffees');
 
 
 
-
-
-
 var submitButton = document.querySelector('#submit');
-
-var roastSelection = document.querySelector('#roast-selection');
-
 
 submitButton.addEventListener('click', updateCoffees);
 
