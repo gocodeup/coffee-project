@@ -24,25 +24,35 @@ function renderCoffees(coffees) {
         var selectedName = nameSelection.value.toLowerCase();
         var filteredCoffees = [];
         coffees.forEach(function (coffee) {
-            //If selected roast is all, and no search name, display all
-            if (selectedRoast === "all" && selectedName === "") {
-                filteredCoffees.push(coffee)
+            if (selectedRoast === 'all' && selectedName === '') {
+                filteredCoffees.push(coffee);
+            } else if (selectedRoast === 'all' && coffee.name.toLowerCase().includes(selectedName)) {
+                filteredCoffees.push(coffee);
+            } else if (selectedRoast === coffee.roast && coffee.name.toLowerCase().includes(selectedName)) {
+                filteredCoffees.push(coffee);
             }
-            //If the selected roast is all, display matched names
-            if (selectedRoast === "all" && coffee.name.toLowerCase() === selectedName) {
-                filteredCoffees.push(coffee)
-            }
-            //Checks if the name and roast match search selections
-            if (coffee.roast === selectedRoast && coffee.name.toLowerCase() === selectedName) {
-                filteredCoffees.push(coffee)
-            }
-            //if name is blank, display selected roast
-            if (selectedName === "" && coffee.roast === selectedRoast) {
-                filteredCoffees.push(coffee)
-            }
-        });
+        })
         divBody.innerHTML = renderCoffees(filteredCoffees);
     }
+
+        //     //If selected roast is all, and no search name, display all
+        //     if (selectedRoast === "all" && selectedName === "") {
+        //         filteredCoffees.push(coffee)
+        //     }
+        //     //If the selected roast is all, display matched names
+        //     if (selectedRoast === "all" && coffee.name.toLowerCase().includes(selectedName)) {
+        //         filteredCoffees.push(coffee)
+        //     }
+        //     //Checks if the name and roast match search selections
+        //     if (coffee.roast === selectedRoast && coffee.name.toLowerCase().includes(selectedName)) {
+        //         filteredCoffees.push(coffee)
+        //     }
+        //     //if name is blank, display selected roast
+        //     // if (selectedName === "" && coffee.roast === selectedRoast) {
+        //     //     filteredCoffees.push(coffee)
+        //     // }
+        // });
+        // divBody.innerHTML = renderCoffees(filteredCoffees);
 // from http://www.ncausa.org/About-Coffee/Coffee-Roasts-Guide
 var coffees = [
     {id: 1, name: 'Light City', roast: 'light'},
@@ -70,3 +80,5 @@ var nameSelection = document.querySelector('#coffee-name');
 divBody.innerHTML = renderCoffees(coffees);
 
 submitButton.addEventListener('click', updateCoffees);
+roastSelection.addEventListener('change', updateCoffees);
+nameSelection.addEventListener('keyup', updateCoffees);
