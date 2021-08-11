@@ -2,12 +2,24 @@
 
 function renderCoffee(coffee) {
     var cinnamonColor = '';
+    var lightRoastBG = '';
+    if(coffee.roast === 'light'){
+        lightRoastBG = 'bg-warning';
+    }
+    var mediumRoastBG = '';
+    if(coffee.roast === 'medium'){
+        mediumRoastBG = 'bg-info';
+    }
+    var darkRoastBG = '';
+    if(coffee.roast === 'dark'){
+        darkRoastBG = 'bg-secondary';
+    }
     // if (coffee.name === 'Cinnamon'){
     //     cinnamonColor = 'text-danger'
     // }
-   return `<div class="d-flex flex-column border border-secondary rounded-bottom" style="width: 10rem; margin: 2rem;">
-        <img src="..." class="card-img-top" alt="${coffee.name}">
-            <div class="card-body">
+   return `<div class="d-flex flex-column border border-secondary rounded-bottom" style="width: 10rem; margin: 1rem;">
+        <img src="img/coffee-cup.jpeg" class="card-img-top"  alt="${coffee.name}">
+            <div class="card-body ${lightRoastBG} ${mediumRoastBG} ${darkRoastBG}">
                 <h5 class="card-title ${cinnamonColor}"> ${coffee.name} </h5>
                 <p class="card-text">${coffee.roast} </p>
             </div>
