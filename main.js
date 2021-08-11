@@ -19,17 +19,33 @@ function renderCoffees(coffees) {
 function updateCoffees(e) {
     e.preventDefault(); // don't submit the form, we just want to update the data
     var selectedRoast = roastSelection.value;
-    var coffeeName = allCoffees.value;
     var filteredCoffees = [];
-    coffees.forEach(function(coffee) {
-        if (coffee.roast === selectedRoast) {
-            filteredCoffees.push(coffee);
-        } else if(coffee.name === coffeeName) {
-            filteredCoffees.push(coffee.name);
-        }
-    });
-    body.innerHTML = renderCoffees(filteredCoffees);
+    if (selectedRoast === 'all') {
+        body.innerHTML = renderCoffees(coffees)
+    } else {
+        coffees.forEach(function (coffee) {
+            if (coffee.roast === selectedRoast) {
+                filteredCoffees.push(coffee);
+            }
+        });
+        body.innerHTML = renderCoffees(filteredCoffees);
+    }
 }
+
+function searchCoffee(e) {
+    e.preventDefault(); // don't submit the form, we just want to update the data
+    var searchCoffee = coffeeSearch.value;
+    var filteredCoffees = [];
+
+        coffees.forEach(function (coffee) {
+            if (coffee.name.toLowerCase().substring(0, searchCoffee.length) === searchCoffee) {
+                filteredCoffees.push(coffee);
+            }
+        });
+        body.innerHTML = renderCoffees(filteredCoffees);
+
+}
+
 
 // from http://www.ncausa.org/About-Coffee/Coffee-Roasts-Guide
 var coffees = [
@@ -52,12 +68,13 @@ var coffees = [
 var body = document.querySelector('#coffees');
 var submitButton = document.querySelector('#submit');
 var roastSelection = document.querySelector('#roast-selection');
-var allCoffees = document.querySelector('#all-coffees')
+var coffeeSearch = document.querySelector('#coffeeSearch');
 
 body.innerHTML = renderCoffees(coffees);
 
-submitButton.addEventListener('click', updateCoffees);
+roastSelection.addEventListener('change', updateCoffees);
 
-input.oninput = function() {
-    result
-}
+coffeeSearch.addEventListener('keyup', searchCoffee);
+// input.oninput = function() {
+//     result
+// }
