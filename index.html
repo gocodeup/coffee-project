@@ -13,21 +13,25 @@
     <h1 class="text-center">Coffee!</h1>
     <hr>
     <div class="col-6 order-2 row">
-        <form class="col-12 row">
-        <label for="roast-selection"></label>
-        <select id="roast-selection">
+        <form class="col-12">
+        <label class="" for="roast-selection">Roast</label>
+            <br>
+        <select class="w-100 mt-2" id="roast-selection">
             <option>light</option>
             <option>medium</option>
             <option>dark</option>
         </select>
-        <input id="submit" type="submit" />
+            <br>
+            <label for="search">Coffee Name</label>
+            <input id="search" class="w-100 mt-2" type="text" placeholder="Pick your Poison">
+        <input class="w-100 mt-2 bg-primary" id="submit" type="submit" />
     </form>
     </div>
     <div class="col-6 order-1">
-    <table class="">
-        <thead>
+    <table class="" style="border: none">
+        <thead class="" style="border: none">
            <tr class="">
-                <th class="">ID</th>
+                <th class="d-none">ID</th>
               <th>NAME</th>
              <th>ROAST</th>
           </tr>
