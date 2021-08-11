@@ -2,8 +2,6 @@
 
 function renderCoffee(coffee) {
     var html = '';
-
-    //Render an h1 inside a div instead tr
     html += '<div class="col-6"><h1>' + coffee.name + '</h1><p>' +  coffee.roast + '</p></div>';
 
     return html;
@@ -31,8 +29,7 @@ function updateCoffees(e) {
         } else if (selectedRoast === coffee.roast && coffee.name.toLowerCase().includes(selectedName)) {
             filteredCoffees.push(coffee);
         }
-    })
-    console.log(coffees);
+    });
     divBody.innerHTML = renderCoffees(filteredCoffees);
 }
 
@@ -43,11 +40,10 @@ function addCoffee(e){
         name: addNameSelection.value,
         roast: addRoastSelection.value,
     };
-    console.log(newCoffee);
+    if (/\S/.test(newCoffee.name)){
     coffees.push(newCoffee);
-    console.log(coffees);
     updateCoffees(e);
-    renderCoffees(coffees);
+    }
 }
 // from http://www.ncausa.org/About-Coffee/Coffee-Roasts-Guide
 var coffees = [
