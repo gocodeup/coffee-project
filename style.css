@@ -7,3 +7,26 @@ td, th {
     border: 1px solid black;
     padding: 5px 10px;
 }
+
+/*.search-box{*/
+/*    position: absolute;*/
+/*    bottom: 90%;*/
+/*    left: 70%;*/
+/*    transform: translate(-50%, -50%);*/
+/*    background: #e84118;*/
+/*    height: 40px;*/
+/*    border-radius: 40px;*/
+/*    padding: 10px;*/
+/*}*/
+
+/*.search-btn {*/
+/*    color: #e84118;*/
+/*    float: right;*/
+/*    width: 40px;*/
+/*    height: 40px;*/
+/*    border-radius: 50%;*/
+/*    background: #2f3640;*/
+/*    display: flex;*/
+/*    justify-content: center;*/
+/*    align-items: center;*/
+/*}*/
