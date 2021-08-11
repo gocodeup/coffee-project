@@ -21,29 +21,30 @@ function renderCoffees(coffees) {
 function updateCoffees(e) {
     e.preventDefault(); // don't submit the form, we just want to update the data
     var selectedRoast = roastSelection.value;
+    var searchCoffees = searchBar.value;
     var filteredCoffees = [];
     coffees.forEach(function(coffee) {
-        if (coffee.roast === selectedRoast) {
+        if (coffee.roast === selectedRoast && coffee.name.toLowerCase.indexOf(searchCoffees) !== -1) {
             filteredCoffees.push(coffee);
         }
     });
     div.innerHTML = renderCoffees(filteredCoffees);
 }
 
-function searchCoffees() {
-    let input = document.getElementById('search-btn').value
-    input=input.toLowerCase();
-    let x = document.getElementsByClassName('coffee');
-
-    for (var i = 0; i < x.length; i++) {
-        if (!x[i].innerHTML.toLowerCase().includes(input)) {
-            x[i].style.display="none";
-        }
-        else {
-            x[i].style.display="div";
-        }
-    }
-}
+// function searchCoffees() {
+//     let input = document.getElementById('search-btn').value
+//     input=input.toLowerCase();
+//     let x = document.getElementsByClassName('coffee');
+//
+//     for (var i = 0; i < x.length; i++) {
+//         if (!x[i].innerHTML.toLowerCase().includes(input)) {
+//             x[i].style.display="none";
+//         }
+//         else {
+//             x[i].style.display="div";
+//         }
+//     }
+// }
 
 // from http://www.ncausa.org/About-Coffee/Coffee-Roasts-Guide
 var coffees = [
@@ -78,5 +79,5 @@ var searchBar = document.querySelector('#search-Bar');
 div.innerHTML = renderCoffees(coffees);
 
 // searchButton.addEventListener("click", searchCoffees);
-searchBar.addEventListener('keyup', updateCoffees);
+searchBar.addEventListener('input', updateCoffees);
 submitButton.addEventListener('click', updateCoffees);
