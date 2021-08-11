@@ -18,41 +18,35 @@ function renderCoffees(coffees) {
         return html;
     }
 
-    function updateCoffees(e) {
-        e.preventDefault(); // don't submit the form, we just want to update the data
-        var selectedRoast = roastSelection.value;
-        var selectedName = nameSelection.value.toLowerCase();
-        var filteredCoffees = [];
-        coffees.forEach(function (coffee) {
-            if (selectedRoast === 'all' && selectedName === '') {
-                filteredCoffees.push(coffee);
-            } else if (selectedRoast === 'all' && coffee.name.toLowerCase().includes(selectedName)) {
-                filteredCoffees.push(coffee);
-            } else if (selectedRoast === coffee.roast && coffee.name.toLowerCase().includes(selectedName)) {
-                filteredCoffees.push(coffee);
-            }
-        })
-        divBody.innerHTML = renderCoffees(filteredCoffees);
-    }
+function updateCoffees(e) {
+    e.preventDefault(); // don't submit the form, we just want to update the data
+    var selectedRoast = roastSelection.value;
+    var selectedName = nameSelection.value.toLowerCase();
+    var filteredCoffees = [];
+    coffees.forEach(function (coffee) {
+        if (selectedRoast === 'all' && selectedName === '') {
+            filteredCoffees.push(coffee);
+        } else if (selectedRoast === 'all' && coffee.name.toLowerCase().includes(selectedName)) {
+            filteredCoffees.push(coffee);
+        } else if (selectedRoast === coffee.roast && coffee.name.toLowerCase().includes(selectedName)) {
+            filteredCoffees.push(coffee);
+        }
+    })
+    console.log(coffees);
+    divBody.innerHTML = renderCoffees(filteredCoffees);
+}
 
-        //     //If selected roast is all, and no search name, display all
-        //     if (selectedRoast === "all" && selectedName === "") {
-        //         filteredCoffees.push(coffee)
-        //     }
-        //     //If the selected roast is all, display matched names
-        //     if (selectedRoast === "all" && coffee.name.toLowerCase().includes(selectedName)) {
-        //         filteredCoffees.push(coffee)
-        //     }
-        //     //Checks if the name and roast match search selections
-        //     if (coffee.roast === selectedRoast && coffee.name.toLowerCase().includes(selectedName)) {
-        //         filteredCoffees.push(coffee)
-        //     }
-        //     //if name is blank, display selected roast
-        //     // if (selectedName === "" && coffee.roast === selectedRoast) {
-        //     //     filteredCoffees.push(coffee)
-        //     // }
-        // });
-        // divBody.innerHTML = renderCoffees(filteredCoffees);
+function addCoffee(e){
+    e.preventDefault();
+    var newCoffee = {
+        id: coffees.length + 1,
+        name: addNameSelection.value,
+        roast: addRoastSelection.value,
+    };
+    coffees.push(newCoffee);
+    updateCoffees();
+    renderCoffees(coffees);
+}
 // from http://www.ncausa.org/About-Coffee/Coffee-Roasts-Guide
 var coffees = [
     {id: 1, name: 'Light City', roast: 'light'},
@@ -70,15 +64,23 @@ var coffees = [
     {id: 13, name: 'Italian', roast: 'dark'},
     {id: 14, name: 'French', roast: 'dark'},
 ];
-//Change tbody to div body
+
 var divBody = document.querySelector('#coffees');
+// searching for coffee
 var submitButton = document.querySelector('#submit');
 var roastSelection = document.querySelector('#roast-selection');
-//Added name selection search to the form
 var nameSelection = document.querySelector('#coffee-name');
 
-divBody.innerHTML = renderCoffees(coffees);
+// add a coffee
+var addSubmitButton = document.querySelector('#add-submit');
+var addRoastSelection = document.querySelector('#add-coffee-roast');
+var addNameSelection = document.querySelector('#add-coffee-name');
 
 submitButton.addEventListener('click', updateCoffees);
 roastSelection.addEventListener('change', updateCoffees);
 nameSelection.addEventListener('keyup', updateCoffees);
+
+addSubmitButton.addEventListener("click", addCoffee);
+
+// initialization function
+divBody.innerHTML = renderCoffees(coffees);

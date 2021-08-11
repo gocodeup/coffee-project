@@ -21,7 +21,8 @@
             </div>
         </div>
         <div class="col-6">
-            <form>
+            <form class="text-center">
+                <h1>Search for coffee</h1>
                 <label for="roast-selection"></label>
                 <select id="roast-selection">
                     <!--Added option for all roasts-->
@@ -33,6 +34,20 @@
                 <input id="coffee-name" placeholder="Enter coffee name..." type="text" />
                 <label for="coffee-name"></label>
                 <input id="submit" type="submit" />
+            </form>
+            <br>
+            <form class="text-center">
+                <h1>Add a coffee</h1>
+                <label for="add-coffee-roast"></label>
+                <select id="add-coffee-roast">
+                    <!--Added option for all roasts-->
+                    <option>light</option>
+                    <option>medium</option>
+                    <option>dark</option>
+                </select>
+                <input id="add-coffee-name" placeholder="Name of your coffee..." type="text" />
+                <label for="add-coffee-name"></label>
+                <input id="add-submit" type="submit" />
             </form>
         </div>
     </div>
