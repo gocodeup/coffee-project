@@ -29,16 +29,20 @@ function updateCoffees(e) {
             filteredCoffees.push(coffee);
         }
     });
-    tbody.innerHTML = renderCoffees(filteredCoffees);
+    if(selectedRoast === "all"){
+        tbody.innerHTML = renderCoffees(coffees);
+        return undefined;
+    }
+        tbody.innerHTML = renderCoffees(filteredCoffees);
 }
 
 //****Working on the search events****
 
-function searchBarListener(){
+function searchBarListener(){ //called onInput by the html for the search bar
     let search= document.getElementById("coffeeSearch").value;
-    console.log(search)
+    //console.log(search) //confirms that it's working
     var searchCoffees = []
-    coffees.forEach(function(coffee){
+    coffees.forEach(function(coffee){ //this uses indexOf to search not for an index but simply whether
         if (coffee.name.toLowerCase().indexOf(search.toLowerCase()) !== -1 || coffee.roast === search.toLowerCase()){
             searchCoffees.push(coffee)
         }
@@ -47,7 +51,7 @@ function searchBarListener(){
     tbody.innerHTML = renderCoffees(searchCoffees);
 }
 
-// document.getElementById("coffeeSearch").addEventListener("inputs", searchBarListener);
+
 
 
 
@@ -74,9 +78,12 @@ var coffees = [
 ];
 
 var tbody = document.querySelector('#coffees');
-var submitButton = document.querySelector('#submit');
+//var submitButton = document.querySelector('#submit');
 var roastSelection = document.querySelector('#roast-selection');
 
  tbody.innerHTML = renderCoffees(coffees);
 
-submitButton.addEventListener('click', updateCoffees);
+document.getElementById("coffeeSearch").addEventListener("inputs", searchBarListener);
+
+//submitButton.addEventListener('click', updateCoffees);
+roastSelection.addEventListener('input', updateCoffees);
