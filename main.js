@@ -44,7 +44,7 @@ function renderCoffee(coffee) {
 
 
 function renderCoffees(coffees) {
-    return coffees.reduce((coffeeHTML, coffee) => coffeeHTML.concat(renderCoffee(coffee)), '' )
+    // return coffees.reduce((coffeeHTML, coffee) => coffeeHTML.concat(renderCoffee(coffee)), '' )
 }
     // return selectedCoffees
 
