@@ -9,21 +9,47 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
+<main class="container">
+
+
+<!--Added background image-->
+<div class="bg-photo" style="background-image: url('img/coffee-display.jpeg');"></div>
+
+
 <!--Added background video-->
 <video autoplay muted loop id="theCoffee">
     <source src="img/coffee_video.mp4" type="video/mp4">
 </video>
-    <h1>Coffee!</h1>
 
+    <h1>Coffee!</h1>
+    <div>
         <form>
+            <h3>Roast</h3>
             <label for="roast-selection"></label>
             <select id="roast-selection">
                 <option>light</option>
                 <option>medium</option>
                 <option>dark</option>
             </select>
-            <input id="submit" type="submit"/>
+
         </form>
+<!--     <input id="submit" type="submit"/>-->
+    </div>
+<br>
+<!--    <div>-->
+<!--    <form>-->
+<!--        <label for="roast-selection"></label>-->
+<!--        <select id="roast-selection">-->
+<!--            <option>light</option>-->
+<!--            <option>medium</option>-->
+<!--            <option>dark</option>-->
+<!--        </select>-->
+<!--        <input id="submit" type="submit"/>-->
+<!--    </form>-->
+<!--    </div>-->
+<!--<div class="container-cards col-8 col-xl-12 ">-->
+<!--    <div class="cards row ">-->
 
 
 
@@ -31,13 +57,74 @@
 
 
 
+<h3>Coffee Name</h3>
+    <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search By Coffee Name">
+    <input id="submit" type="submit"/>
 
-<div id="coffees" class="d-flex flex-wrap flex-row justify-content-evenly w-100"></div>
+    <table class="" id="myTable">
+        <tr class="header">
+            <th style="width:60%;">Name</th>
+            <th style="width:40%;">Roast</th>
+        </tr>
+        <tr>
+            <td>Light City</td>
+            <td>light</td>
+        </tr>
+        <tr>
+            <td>Half City</td>
+            <td>light</td>
+        </tr>
+        <tr>
+            <td>Cinnamon</td>
+            <td>light</td>
+        </tr>
+        <tr>
+            <td>City</td>
+            <td>medium</td>
+        </tr>
+        <tr>
+            <td>American</td>
+            <td>medium</td>
+        </tr>
+        <tr>
+            <td>Breakfast</td>
+            <td>medium</td>
+        </tr>
+        <tr>
+            <td>High</td>
+            <td>dark</td>
+        </tr>
+        <tr>
+            <td>Continental</td>
+            <td>dark</td>
+        </tr>
+        <tr>
+            <td>New Orleans</td>
+            <td>dark</td>
+        </tr>
+        <tr>
+            <td>European</td>
+            <td>dark</td>
+        </tr>
+        <tr>
+            <td>Esspresso</td>
+            <td>dark</td>
+        </tr>
+        <tr>
+            <td>Viennese</td>
+            <td>dark</td>
+        </tr>
+        <tr>
+            <td>Italian</td>
+            <td>dark</td>
+        </tr>
+        <tr>
+            <td>French</td>
+            <td>dark</td>
+        </tr>
+    </table>
 
-
-
-
-
+    <div id="coffees" class="d-flex flex-wrap flex-row justify-content-evenly w-100"></div>
 
 
 
@@ -54,6 +141,9 @@
         integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF"
         crossorigin="anonymous"></script>
 <script src="main.js"></script>
+
+</div>
+</main>
 
 </body>
 </html>

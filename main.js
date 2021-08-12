@@ -17,13 +17,21 @@ function renderCoffee(coffee) {
     // if (coffee.name === 'Cinnamon'){
     //     cinnamonColor = 'text-danger'
     // }
-   return `<div class="d-flex flex-column border border-secondary rounded-bottom" style="width: 10rem; margin: 1rem;">
+
+
+   return `<div class="d-flex flex-column border border-secondary rounded-bottom" style="width: 10rem; margin: 2rem;">
+<!--<div class="card-shape">-->
         <img src="img/coffee-cup.jpeg" class="card-img-top"  alt="${coffee.name}">
-            <div class="card-body ${lightRoastBG} ${mediumRoastBG} ${darkRoastBG}">
-                <h5 class="card-title ${cinnamonColor}"> ${coffee.name} </h5>
-                <p class="card-text">${coffee.roast} </p>
-            </div>
-            </div>`
+<!--                <div class="container-cards">-->
+<!--                    <div class="cards row ">-->
+                <div class="card-body ${lightRoastBG} ${mediumRoastBG} ${darkRoastBG}">
+                    <h5 class="card-title ${cinnamonColor}"> ${coffee.name} </h5>
+                    <p class="card-text">${coffee.roast} </p>
+                </div>
+                    </div>
+                </div>
+           </div> 
+           </div>`
     // var html = '<tr class="coffee">';
     // html += '<td>' + coffee.id + '</td>';
     // html += '<td>' + coffee.name + '</td>';
@@ -36,7 +44,7 @@ function renderCoffee(coffee) {
 
 
 function renderCoffees(coffees) {
-    return coffees.reduce((coffeeHTML, coffee) => coffeeHTML.concat(renderCoffee(coffee)), '' )
+    // return coffees.reduce((coffeeHTML, coffee) => coffeeHTML.concat(renderCoffee(coffee)), '' )
 }
     // return selectedCoffees
 
@@ -80,6 +88,8 @@ var coffees = [
     {id: 14, name: 'French', roast: 'dark'},
 ];
 
+// console.log(coffees[0].name)
+
 var tbody = document.querySelector('#coffees');
 var submitButton = document.querySelector('#submit');
 var roastSelection = document.querySelector('#roast-selection');
@@ -87,3 +97,50 @@ var roastSelection = document.querySelector('#roast-selection');
 tbody.innerHTML = renderCoffees(coffees);
 
 submitButton.addEventListener('click', updateCoffees);
+
+
+
+
+
+
+coffees.forEach(function (coffee, index){
+    console.log(coffees.name + coffees.roast)
+})
+
+
+function createCoffee (nameOfCoffee, roastAdded){
+    this.name = title;
+    this.roast = roastAdded;
+
+}
+var newCoffee = new createCoffee('Nachos', 'Light')
+
+
+console.log(newCoffee('Nachos', 'light'))
+
+
+
+
+
+
+    function myFunction() {
+    // Declare variables
+    var input, filter, table, tr, td, i, txtValue;
+    input = document.getElementById("myInput");
+    filter = input.value.toUpperCase();
+    table = document.getElementById("myTable");
+    tr = table.getElementsByTagName("tr");
+
+    // Loop through all table rows, and hide those who don't match the search query
+    for (i = 0; i < tr.length; i++) {
+    td = tr[i].getElementsByTagName("td")[0];
+    if (td) {
+    txtValue = td.textContent || td.innerText;
+    if (txtValue.toUpperCase().indexOf(filter) > -1) {
+    tr[i].style.display = "";
+} else {
+    tr[i].style.display = "none";
+}
+}
+}
+}
