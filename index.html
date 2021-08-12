@@ -3,46 +3,61 @@
 <head>
     <meta charset="UTF-8">
     <title></title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Coffee!</h1>
+    <div class="container">
+        <div class="row d-flex justify-content-center">
+            <h1>Coffee!</h1>
+        </div>
+        <hr>
+        <div class="row">
 
-    <form>
-        <label for="roast-selection"></label>
-        <select id="roast-selection">
-            <option>all</option>
-            <option>light</option>
-            <option>medium</option>
-            <option>dark</option>
-        </select>
-        <input id="submit" type="submit" />
-        <br>
-        <h3>Coffee Name</h3>
-        <input id="coffeeSearch" type="search" name="coffeeName" oninput="searchBarListener()">
-    </form>
-    <form>
-        <h3>Add A Coffee</h3>
-        <label for="new-coffee-roast-selection">Roast</label>
-        <select id="new-coffee-roast-selection">
-            <option>light</option>
-            <option>medium</option>
-            <option>dark</option>
-        </select>
-        <br>
-        <label for="new-coffee-name">Coffee Name</label>
-        <br>
-        <input id="new-coffee-name" type="search" name="coffeeName" oninput="searchBarListener()">
-        <br>
-<!--        <input id="new-submit" type="submit" />-->
-        <button type="button" id="new-submit">Submit</button>
-    </form>
-
-    <table>
-
-        <tbody id="coffees"></tbody>
-    </table>
-
+            <div class="col-6">
+                <form>
+                    <label for="roast-selection"></label>
+                    <select id="roast-selection" class="dropdown">
+                        <option>all</option>
+                        <option>light</option>
+                        <option>medium</option>
+                        <option>dark</option>
+                    </select>
+                    <input id="submit" type="submit" class="btn btn-primary"/>
+                    <br>
+                    <h3>Coffee Name</h3>
+                    <input id="coffeeSearch" type="search" name="coffeeName" oninput="searchBarListener()">
+                </form>
+                <form>
+                    <h3>Add A Coffee</h3>
+                    <label for="new-coffee-roast-selection">Roast</label>
+                    <br>
+                    <select id="new-coffee-roast-selection">
+                        <option>light</option>
+                        <option>medium</option>
+                        <option>dark</option>
+                    </select>
+                    <br>
+                    <label for="new-coffee-name">Coffee Name</label>
+                    <br>
+                    <input id="new-coffee-name" type="search" name="coffeeName" oninput="searchBarListener()">
+                    <br>
+            <!--        <input id="new-submit" type="submit" />-->
+                    <button type="button" id="new-submit" class="btn btn-primary">Submit</button>
+                </form>
+            </div>
+            <div class="col-6">
+                <table>
+<!--                    <thead>-->
+<!--                        <tr></tr>-->
+<!--                    </thead>-->
+                    <tbody id="coffees" class="row d-flex flex-wrap justify-content-around"></tbody>
+                </table>
+            </div>
+        </div>
+    </div>
     <script src="main.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
 </body>
 </html>

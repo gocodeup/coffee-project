@@ -7,3 +7,21 @@ td, th {
     border: 1px solid black;
     padding: 5px 10px;
 }
+
+button, input, select {
+    width: 90%;
+}
+p {
+    display: inline;
+    color: gray;
+}
+
+.coffee{
+    font-weight: bold;
+    font-size: 1.75rem;
+}
+
+.roast{
+    font-weight: normal;
+    font-size: 1rem;
+}
