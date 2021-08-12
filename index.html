@@ -3,35 +3,41 @@
 <head>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
     <meta charset="UTF-8">
-    <title></title>
+    <title>Coffee Project</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+<div class="container">
+    <div class="row">
     <h1 class="text-center">Coffee!</h1>
-    <div class="container row d-flex">
-    <div class="col-4">
-    <form>
-        <label for="roast-selection"></label>
-        <select id="roast-selection">
+    <hr>
+    <div class="col-5 order-2 row">
+        <form class="col-12">
+        <label class="" for="roast-selection">Roast</label>
+            <br>
+        <select class="w-100 mt-2" id="roast-selection">
             <option>light</option>
             <option>medium</option>
             <option>dark</option>
         </select>
-        <input id="submit" type="submit" />
+            <br>
+            <label for="search">Coffee Name</label>
+            <input id="search" class="w-100 mt-2" type="text" placeholder="Pick your Poison">
+        <input class="w-100 mt-2 bg-primary" id="submit" type="submit" />
     </form>
     </div>
-    <div class="container row">
-    <div class="col-8">
-    <table class="">
-        <thead>
-           <tr class="">
-                <th class="">ID</th>
+    <div class="col-7 order-1">
+    <table class="" style="border: none; display: flex; justify-content: center;">
+        <thead class="d-none" style="border: none;">
+           <tr class="" >
+                <th class="d-none">ID</th>
               <th>NAME</th>
              <th>ROAST</th>
           </tr>
         </thead>
-        <tbody id="coffees"></tbody>
+        <tbody id="coffees" class="d-inline-flex flex-wrap" style="display: flex; flex"></tbody>
     </table>
+    </div>
     </div>
 </div>
 </div>
