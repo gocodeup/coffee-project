@@ -17,6 +17,14 @@ function renderCoffees(coffees) {
     return html;
 }
 
+// let searchCoffee = document.getElementById('search-coffee');
+// searchCoffee.addEventListener('keypress', function(){
+// let instantText = document.getElementById('instant-text').innerHTML;
+//
+//     return instantText
+// })
+
+
 function updateCoffees(e) {
     e.preventDefault(); // don't submit the form, we just want to update the data
     var selectedRoast = roastSelection.value;
@@ -29,7 +37,7 @@ function updateCoffees(e) {
     tbody.innerHTML = renderCoffees(filteredCoffees);
 }
 
-// document.getElementById("coffee-name").innerHTML = coffees.name
+
 
 // from http://www.ncausa.org/About-Coffee/Coffee-Roasts-Guide
 var coffees = [
