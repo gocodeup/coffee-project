@@ -8,28 +8,32 @@
 </head>
 <body>
     <div class="container">
-        <div class="row d-flex justify-content-center">
+        <div class="row d-flex justify-content-around">
             <h1>Coffee!</h1>
         </div>
         <hr>
         <div class="row">
 
             <div class="col-6">
-                <form>
-                    <label for="roast-selection"></label>
+                <form class = 'mb-2'>
+                    <label for="roast-selection">Roast</label>
                     <select id="roast-selection" class="dropdown">
                         <option>all</option>
                         <option>light</option>
                         <option>medium</option>
                         <option>dark</option>
                     </select>
-                    <input id="submit" type="submit" class="btn btn-primary"/>
+<!--                    <input id="submit" type="submit" class="btn btn-primary"/>-->
                     <br>
                     <h3>Coffee Name</h3>
                     <input id="coffeeSearch" type="search" name="coffeeName" oninput="searchBarListener()">
+                    <input id="submit" type="submit" class="btn btn-primary mt-2"/>
                 </form>
+                <hr>
                 <form>
-                    <h3>Add A Coffee</h3>
+                    <div class = "d-flex justify-content-center">
+                        <h3>Add A Coffee</h3>
+                    </div>
                     <label for="new-coffee-roast-selection">Roast</label>
                     <br>
                     <select id="new-coffee-roast-selection">
@@ -43,7 +47,7 @@
                     <input id="new-coffee-name" type="search" name="coffeeName" oninput="searchBarListener()">
                     <br>
             <!--        <input id="new-submit" type="submit" />-->
-                    <button type="button" id="new-submit" class="btn btn-primary">Submit</button>
+                    <button type="button" id="new-submit" class="btn btn-primary mt-2">Submit</button>
                 </form>
             </div>
             <div class="col-6">
@@ -51,7 +55,7 @@
 <!--                    <thead>-->
 <!--                        <tr></tr>-->
 <!--                    </thead>-->
-                    <tbody id="coffees" class="row d-flex flex-wrap justify-content-around"></tbody>
+                    <tbody id="coffees" class="row d-flex flex-wrap justify-content-start"></tbody>
                 </table>
             </div>
         </div>
