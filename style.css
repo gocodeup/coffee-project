@@ -7,3 +7,21 @@ td, th {
     border: 1px solid black;
     padding: 5px 10px;
 }
+
+.card {
+    border: white;
+}
+
+p {
+    font-size: 1.3em;
+    border: white;
+    color: gray;
+}
+
+.card-header {
+    border: white;
+    background-color: white;
+}
+
+#submitAlso {
+}

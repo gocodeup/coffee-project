@@ -1,9 +1,9 @@
 "use strict"
 
 function renderCoffee(coffee) {
-    var html = '<div class="coffee card">';
+    var html = '<div class="coffee card col-6 p-2">';
     html += '<div class="id d-none">' + coffee.id + '</div>';
-    html += '<h5 class="card-header">' + coffee.name + '</h5>';
+    html += '<h4 class="card-header p-0">' + coffee.name + '</h4>';
     html += '<p class="card-text">' + coffee.roast + '</p>';
     html += '</div>';
 
@@ -23,14 +23,20 @@ function updateCoffees(e) {
     var selectedRoast = roastSelection.value;
     var selectedCoffee = coffeeSelection.value;
     var filteredCoffees = [];
-    coffees.forEach(function(coffee) {
-        if (coffee.roast === selectedRoast && coffee.name.toLowerCase().indexOf(selectedCoffee)!== -1) {
-            filteredCoffees.push(coffee);
-        } if (roastSelection.value === '') {
-            filteredCoffees.push(coffee.roast);
-        }
+    if (selectedRoast === 'All') {
+        coffees.forEach(function (coffee){
+            if(coffee.name.toLowerCase().indexOf(selectedCoffee)!== -1){
+                filteredCoffees.push(coffee);
+            }
+        });
+    } else {
+        coffees.forEach(function (coffee) {
+            if (coffee.roast === selectedRoast && coffee.name.toLowerCase().indexOf(selectedCoffee) !== -1) {
+                filteredCoffees.push(coffee);
+            }
 
-    });
+        });
+    }
     tbody.innerHTML = renderCoffees(filteredCoffees);
 }
 
@@ -41,12 +47,13 @@ function addCoffee(x) {
         name: newCoffee.value,
         roast: anotherRoast.value,
     }
-    return coffees.push(creatCoffee);
+    coffees.push(creatCoffee);
+    tbody.innerHTML = renderCoffees(coffees);
 }
 
 // from http://www.ncausa.org/About-Coffee/Coffee-Roasts-Guide
 var coffees = [
-    {id: 1, name: 'Light City', roast: 'light'},
+    {id: 1, name: 'Light City', roast: 'light', filter:'all'},
     {id: 2, name: 'Half City', roast: 'light'},
     {id: 3, name: 'Cinnamon', roast: 'light'},
     {id: 4, name: 'City', roast: 'medium'},
@@ -61,6 +68,7 @@ var coffees = [
     {id: 13, name: 'Italian', roast: 'dark'},
     {id: 14, name: 'French', roast: 'dark'},
 ];
+coffees.reverse();
 
 var tbody = document.querySelector('#coffees');
 var submitButton = document.querySelector('#submit');
@@ -74,5 +82,5 @@ tbody.innerHTML = renderCoffees(coffees);
 
 submitButton.addEventListener('click', updateCoffees);
 submitTwo.addEventListener('click', addCoffee);
-coffeeSelection.addEventListener('input', updateCoffees)
-roastSelection.addEventListener('input', updateCoffees)
+coffeeSelection.addEventListener('input', updateCoffees);
+roastSelection.addEventListener('input', updateCoffees);
