@@ -8,3 +8,8 @@ td, th {
     padding: 5px 10px;
 }
 
+p {
+    margin-bottom: 0;
+    color: darkgrey;
+}
+
