@@ -1,10 +1,34 @@
 .header {
     text-align: center;
+    font-weight: 500;
 }
 
-/*h2 {*/
-/*    text-align: center;*/
-/*}*/
+h2 {
+    text-align: center;
+    font-size: 2.5em;
+}
+
+body {
+    padding: 50px;
+}
+
+hr {
+    padding: 0.50em;
+}
+
+hr.space {
+    margin-top: 30px;
+}
+
+
+label {
+    font-weight: bold;
+}
+
+.btn {
+    width: inherit;
+    margin-top: 8px;
+}
 
 table {
     border-collapse: collapse;
@@ -15,3 +39,6 @@ td, th {
     border: 1px solid black;
     padding: 5px 10px;
 }
+
+/*test*/
+/*test*/
