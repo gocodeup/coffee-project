@@ -13,20 +13,18 @@
 <main class="container">
 
 
-<!--Added background image-->
-<div class="bg-photo" style="background-image: url('img/coffee-display.jpeg');"></div>
 
 
-<h1>Coffee!</h1>
-        <label for="search">Search</label>
-        <input id="search" type="search">
+
+
+
 
 
 
 <!--Added background video-->
-<video autoplay muted loop id="theCoffee">
-    <source src="img/coffee_video.mp4" type="video/mp4">
-</video>
+<!--<video autoplay muted loop id="theCoffee">-->
+<!--    <source src="img/coffee_video.mp4" type="video/mp4">-->
+<!--</video>-->
 
     <h1>Coffee!</h1>
     <div>
@@ -40,20 +38,10 @@
             </select>
 
         </form>
-<!--     <input id="submit" type="submit"/>-->
+
     </div>
 <br>
-<!--    <div>-->
-<!--    <form>-->
-<!--        <label for="roast-selection"></label>-->
-<!--        <select id="roast-selection">-->
-<!--            <option>light</option>-->
-<!--            <option>medium</option>-->
-<!--            <option>dark</option>-->
-<!--        </select>-->
-<!--        <input id="submit" type="submit"/>-->
-<!--    </form>-->
-<!--    </div>-->
+
 <!--<div class="container-cards col-8 col-xl-12 ">-->
 <!--    <div class="cards row ">-->
 
@@ -67,7 +55,7 @@
     <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search By Coffee Name">
     <input id="submit" type="submit"/>
 
-    <table class="" id="myTable">
+    <table class="coffeeList" id="myTable" >
         <tr class="header">
             <th style="width:60%;">Name</th>
             <th style="width:40%;">Roast</th>
@@ -129,8 +117,20 @@
             <td>dark</td>
         </tr>
     </table>
+        <div>
+            <form>
+                <h3>Roast</h3>
+                <label for="roast-selection"></label>
+                <select id="new-coffee-roast-selection">
+                    <option>light</option>
+                    <option>medium</option>
+                    <option>dark</option>
+                </select>
 
-    <div id="coffees" class="d-flex flex-wrap flex-row justify-content-evenly w-100"></div>
+            </form>
+            <input id="new-coffee-submit" type="submit"/>
+        </div>
+<!--    <div id="coffees" class="d-flex flex-wrap flex-row justify-content-evenly w-100"></div>-->
 
 
 
