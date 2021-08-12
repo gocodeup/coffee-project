@@ -1,11 +1,24 @@
 "use strict"
 
 
+// function renderCoffee(coffee) {
+//
+//     var html = '<div class="coffee col ">';
+//     html += '<h3>' + coffee.name + '</h3>';
+//     html += '<p>' + coffee.roast + '</p>';
+//     html += '<br>';
+//     html += '</div>';
+//
+//     return html;
+// }
+
 function renderCoffee(coffee) {
-    var html = '<div class="coffee col">';
-    html += '<h3>' + coffee.name + '</h3>';
-    html += '<p>' + coffee.roast + '</p>';
+    var html ='<div class="card m-2 text-white bg-dark mb-3" style="max-width: 12rem;">'
+     html += '<div class="coffee col card-body">';
+    html += '<h3 class="card-title">' + coffee.name + '</h3>';
+    html += '<p class="card-text">' + coffee.roast + '</p>';
     html += '<br>';
+    html += '</div>';
     html += '</div>';
 
     return html;

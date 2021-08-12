@@ -1,3 +1,10 @@
+
+body {
+    background-image: url("coffee1.jpg");
+    /*color:white;*/
+}
+
+
 table {
     border-collapse: collapse;
     margin: 15px 0;
@@ -6,4 +13,8 @@ table {
 td, th {
     border: 1px solid black;
     padding: 5px 10px;
+}
+
+.card{
+    opacity: 0.75;
 }
