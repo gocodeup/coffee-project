@@ -3,32 +3,43 @@
 <head>
     <meta charset="UTF-8">
     <title></title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<h1>Coffee!</h1>
 
-<form>
-    <label for="roast-selection"></label>
-    <select id="roast-selection">
-        <option>light</option>
-        <option>medium</option>
-        <option>dark</option>
-    </select>
+    <div class="container m-2 my-4">
+        <div class="row">
+            <h1 class="col">Coffee!</h1>
 
-    <input id="searchbar"  type="text"
-           name="search" placeholder="Search coffees..">
-    <input id="submit" type="submit" />
-</form>
+            <form class="col">
+                <label for="roast-selection"></label>
+                <select id="roast-selection">
+                    <option>light</option>
+                    <option>medium</option>
+                    <option>dark</option>
+                </select>
 
-<div id="coffees">
-    <div class="coffee">
-        <h3>Coffee Name</h3>
-        <p>Roast Type</p>
+                <input id="searchbar"  type="text"
+                       name="search" placeholder="Search coffees..">
+                <input id="submit" type="submit" />
+            </form>
+        </div>
     </div>
-    <br>
-</div>
 
-<script src="main.js"></script>
+    <hr>
+
+
+
+
+    <div class="container m-2">
+        <div id="coffees" class="row">
+        </div>
+    </div>
+
+
+    <script src="main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
+
 </body>
 </html>
