@@ -8,34 +8,38 @@
     <link rel="stylesheet" href="style.css">
 
 </head>
-<body>
-    <h1 class="text-center" style="border: 5px solid red">Coffee!</h1>
+<body style="background-image: url('https://www.pexels.com/photo/white-and-orange-cat-beside-white-ceramic-mug-3709086/')">
+    <h1 class="text-center">Coffee!</h1>
     <hr>
 <!--Hallo der-->
-    <div class="row d-flex flex-row-reverse" style="border: 5px solid orange">
-    <form class="col-6" style="border: 5px solid green">
+    <div class="row d-flex flex-row-reverse p-0">
+    <form class="col-6 p-0">
         <label for="roast-selection"></label>
-        <select id="roast-selection">
+        <select class="form-control" id="roast-selection">
             <option>All</option>
             <option>light</option>
             <option>medium</option>
             <option>dark</option>
         </select>
+        <br>
         <input id="coffee-selection" class="form-control" type="text" placeholder="Default input">
-        <input id="submit" type="submit" />
+        <br>
+        <input id="submit" type="submit" class="col-12 btn btn-primary" />
         <hr>
         <h2 class="text-center">Add a Coffee</h2>
-        <label for="roast-selection"></label>
-        <select id="another-roast">
+        <label for="another-roast"></label>
+        <select class="form-control" id="another-roast">
             <option>light</option>
             <option>medium</option>
             <option>dark</option>
         </select>
+        <br>
         <input id="whatever" class="form-control" type="text" placeholder="Default input">
-        <input id="submitAlso" type="submit" />
+        <br>
+        <input id="submitAlso" type="submit" class="col-12 btn btn-primary" />
     </form>
 
-<div id="coffees" class="container col-6" style="border: 5px solid black">
+<div id="coffees" class="container row col-6">
     </div>
     </div>
 <!--    <table>-->
