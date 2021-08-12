@@ -27,7 +27,7 @@ function updateCoffees(e) {
         if (coffee.roast === selectedRoast) {
             filteredCoffees.push(coffee);
         }
-        if(coffe.roast === selectedRoast) {
+        if(coffee.roast === selectedRoast) {
             div.innerHTML = renderCoffees(filteredCoffees)
         }
     });
