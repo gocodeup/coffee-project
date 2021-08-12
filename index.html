@@ -21,33 +21,35 @@
             </div>
         </div>
         <div class="col-6">
-            <form class="text-center">
-                <h1>Search for coffee</h1>
-                <label for="roast-selection"></label>
-                <select id="roast-selection">
+            <form>
+                <label for="roast-selection" class="font-weight-bold m-1">Roast</label>
+                <select id="roast-selection" class="col-12 btn-lg">
                     <!--Added option for all roasts-->
                     <option>all</option>
                     <option>light</option>
                     <option>medium</option>
                     <option>dark</option>
                 </select>
-                <input id="coffee-name" placeholder="Enter coffee name..." type="text" />
-                <label for="coffee-name"></label>
-                <input id="submit" type="submit" />
+                <label for="coffee-name" class="font-weight-bold m-1">Name</label>
+                <input id="coffee-name" placeholder="Enter coffee name..." type="text" class="col-12 btn-lg mb-2"/>
+                <input id="submit" class="col-12 btn-primary btn-lg" type="submit" />
             </form>
             <br>
-            <form class="text-center">
-                <h1>Add a coffee</h1>
-                <label for="add-coffee-roast"></label>
-                <select id="add-coffee-roast">
+            <form>
+                <h1 class="text-center">Add a coffee</h1>
+
+                <label for="add-coffee-roast" class="font-weight-bold m-1">Roast</label>
+                <select id="add-coffee-roast" class="col-12 btn-lg">
                     <!--Added option for all roasts-->
                     <option>light</option>
                     <option>medium</option>
                     <option>dark</option>
                 </select>
-                <input id="add-coffee-name" placeholder="Name of your coffee..." type="text" />
-                <label for="add-coffee-name"></label>
-                <input id="add-submit" type="submit" />
+                <label for="add-coffee-name" class="font-weight-bold m-1">Name</label>
+                <input id="add-coffee-name" placeholder="Name of your coffee..." type="text"
+                class="btn-lg mb-2 col-12"/>
+
+                <input id="add-submit" type="submit" class="btn-warning btn-lg col-12"/>
             </form>
         </div>
     </div>
