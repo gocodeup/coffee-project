@@ -3,7 +3,7 @@
 function renderCoffee(coffee) {
     var html = '<tr class="coffee">';
     html += '<td class="d-none">' + coffee.id + '</td>';
-    html += '<td style="border: none">' + coffee.name + '</td>';
+    html += '<td style="border: none"><h1>' + coffee.name + '</h1></td>';
     html += '<td style="border: none">' + coffee.roast + '</td>';
     html += '</tr>';
 
