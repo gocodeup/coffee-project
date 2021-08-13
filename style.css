@@ -36,7 +36,7 @@ body #theCoffee {
 
 
 #myInput {
-    background-image: url('/css/searchicon.png'); /* Add a search icon to input */
+    /*background-image: url('/css/searchicon.png'); !* Add a search icon to input *!*/
     background-position: 10px 12px; /* Position the search icon */
     background-repeat: no-repeat; /* Do not repeat the icon image */
     width: 100%; /* Full-width */
@@ -68,26 +68,26 @@ body #theCoffee {
     background-color: #f1f1f1;
 }
 
-/*.cards row{*/
-/*    padding: 12px 0 0 0;*/
-/*    align-items: center;*/
-/*    align-content: center;*/
-/*}*/
+.cards row{
+    padding: 12px 0 0 0;
+    align-items: center;
+    align-content: center;
+}
 
-/*.sdot ,.sdot1, .sdot2 ,.sdot3 ,.sdot4{*/
-/*    height: 18px;*/
-/*    width: 18px;*/
-/*    display: flex;*/
-/*    justify-content: center;*/
-/*    align-items: center;*/
-/*}*/
+.sdot ,.sdot1, .sdot2 ,.sdot3 ,.sdot4{
+    height: 18px;
+    width: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
-/*.container-cards{*/
-/*    display: flex;*/
-/*    justify-content: center;*/
-/*    margin: auto;*/
+.container-cards{
+    display: flex;
+    justify-content: center;
+    margin: auto;
 
-/*}*/
+}
 
 
 
