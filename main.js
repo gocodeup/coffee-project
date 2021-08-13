@@ -3,7 +3,6 @@
 function renderCoffee(coffee) {
     var html = '';
     html += '<div class="col-6"><h1>' + coffee.name + '</h1><p>' +  coffee.roast + '</p></div>';
-
     return html;
 }
 
@@ -32,7 +31,14 @@ function updateCoffees(e) {
     });
     divBody.innerHTML = renderCoffees(filteredCoffees);
 }
-
+function renderList(coffees){
+    var html = '';
+    coffees.forEach(function (coffee)
+    {
+        html += '<option>' + coffee.name + '</option>';
+    })
+    return html;
+}
 function addCoffee(e){
     e.preventDefault();
     var newCoffee = {
@@ -43,8 +49,21 @@ function addCoffee(e){
     if (/\S/.test(newCoffee.name)){
     coffees.push(newCoffee);
     updateCoffees(e);
+    console.log(coffees);
+    deleteCoffeeName.innerHTML = renderList(coffees);
     }
 }
+function deleteCoffee(e){
+    e.preventDefault();
+    coffees.forEach(function (coffee, index){
+        if (deleteCoffeeName.value === coffee.name){
+            coffees.splice(index,1);
+        }
+    })
+    updateCoffees(e);
+    deleteCoffeeName.innerHTML = renderList(coffees);
+}
+
 // from http://www.ncausa.org/About-Coffee/Coffee-Roasts-Guide
 var coffees = [
     {id: 1, name: 'Light City', roast: 'light'},
@@ -64,6 +83,7 @@ var coffees = [
 ];
 
 var divBody = document.querySelector('#coffees');
+
 // searching for coffee
 var submitButton = document.querySelector('#submit');
 var roastSelection = document.querySelector('#roast-selection');
@@ -74,11 +94,17 @@ var addSubmitButton = document.querySelector('#add-submit');
 var addRoastSelection = document.querySelector('#add-coffee-roast');
 var addNameSelection = document.querySelector('#add-coffee-name');
 
+//delete a coffee
+var deleteCoffeeName = document.querySelector('#delete-coffee-roast')
+var deleteSubmitButton = document.querySelector('#delete-submit');
+
 submitButton.addEventListener('click', updateCoffees);
 roastSelection.addEventListener('change', updateCoffees);
 nameSelection.addEventListener('keyup', updateCoffees);
 
 addSubmitButton.addEventListener("click", addCoffee);
+deleteSubmitButton.addEventListener("click", deleteCoffee);
 
 // initialization function
 divBody.innerHTML = renderCoffees(coffees);
+deleteCoffeeName.innerHTML = renderList(coffees);
