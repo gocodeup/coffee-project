@@ -22,14 +22,14 @@ function updateCoffees(e) {
     e.preventDefault(); // don't submit the form, we just want to update the data
     var selectedRoast = roastSelection.value;
     var filteredCoffees = [];
-    coffees.forEach(function(coffee) {
+    coffees.forEach(function(coffee) { //makes a custom array of coffees that match the roast selection
         if (coffee.roast === selectedRoast) {
             filteredCoffees.push(coffee);
         }
     });
     if(selectedRoast === "all"){
         tbody.innerHTML = renderCoffees(coffees);
-        return undefined;
+        return undefined; // this line just prevents the function from falling through to the code below
     }
         tbody.innerHTML = renderCoffees(filteredCoffees);
 }
@@ -51,15 +51,18 @@ function searchBarListener(){ //called onInput by the html for the search bar
 
 //adding new coffee
 function addCoffee(){
+    //Getting name and roast values
     var newCoffeeRoastType = document.querySelector('#new-coffee-roast-selection').value;
     var newCoffeeName = document.querySelector('#new-coffee-name').value;
+    //pushing object with those values and a new ID into the coffees array
     coffees.push({
         id: (parseFloat(coffees.length) + 1),
         name: newCoffeeName,
         roast: newCoffeeRoastType
     })
-    console.log(coffees);
+    //This causes the browser to render the coffee array again so it displays the new addition
     tbody.innerHTML = renderCoffees(coffees);
+    //This resets the field to have nothing in it after submitting
     document.querySelector('#new-coffee-name').value = "";
 }
 
@@ -87,13 +90,25 @@ var coffees = [
 var tbody = document.querySelector('#coffees');
 var submitButton = document.querySelector('#submit');
 var roastSelection = document.querySelector('#roast-selection');
-var newCoffeeSubmitButton = document.querySelector('#new-submit')
+var newCoffeeSubmitButton = document.querySelector('#new-submit');
 
  tbody.innerHTML = renderCoffees(coffees);
 
 // document.getElementById("coffeeSearch").addEventListener("inputs", searchBarListener);
 
+//These cause the functions to execute on event
 submitButton.addEventListener('click', updateCoffees);
 roastSelection.addEventListener('input', updateCoffees);
 newCoffeeSubmitButton.addEventListener('click', addCoffee);
+//newCoffeeNameBarEnter.addEventListener('submit',addCoffee);
 
+//Doing this so that hitting enter in the bar has the same effect as clicking submit
+//maybe then it will stop reloading the page when you hit enter?
+//New Note, now it works with the help of onSubmit="return false;" in the Form Tag.
+document
+    .getElementById("new-coffee-name")
+    .addEventListener("keyup", function(event) {
+        if (event.key === "Enter") {
+            addCoffee();
+        }
+    });

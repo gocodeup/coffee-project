@@ -17,6 +17,7 @@
             <div class="col-6">
                 <form class = 'mb-2'>
                     <label for="roast-selection">Roast</label>
+                    <br>
                     <select id="roast-selection" class="dropdown">
                         <option>all</option>
                         <option>light</option>
@@ -30,7 +31,7 @@
                     <input id="submit" type="submit" class="btn btn-primary mt-2"/>
                 </form>
                 <hr>
-                <form>
+                <form onSubmit="return false;">
                     <div class = "d-flex justify-content-center">
                         <h3>Add A Coffee</h3>
                     </div>
@@ -44,7 +45,7 @@
                     <br>
                     <label for="new-coffee-name">Coffee Name</label>
                     <br>
-                    <input id="new-coffee-name" type="search" name="coffeeName" oninput="searchBarListener()">
+                    <input id="new-coffee-name" type="search" name="coffeeName">
                     <br>
             <!--        <input id="new-submit" type="submit" />-->
                     <button type="button" id="new-submit" class="btn btn-primary mt-2">Submit</button>
