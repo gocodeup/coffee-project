@@ -26,7 +26,9 @@ p {
     font-size: 1rem;
 }
 
-h3{
+#coffeeName{
+    font-weight: normal;
+    font-size: 1rem;
 
 }
 label{
