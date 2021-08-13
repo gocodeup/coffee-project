@@ -7,3 +7,15 @@ td, th {
     border: 1px solid black;
     padding: 5px 10px;
 }
+
+h1,.display-4{
+
+    background-color: rgba(255,255,255,0.55);
+}
+
+.jumbotron {
+    background-image: url('img/filter-coffee_759.jpeg');
+    background-size: cover;
+    height: 100%;
+    padding: 64px 0 64px 0;
+}

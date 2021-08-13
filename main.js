@@ -26,6 +26,7 @@ function updateCoffees(e) {
         if (coffee.roast === selectedRoast) {
             filteredCoffees.push(coffee);
         }
+
     });
     tbody.innerHTML = renderCoffees(filteredCoffees);
 }
@@ -61,11 +62,11 @@ window.addEventListener('load', (e) => {
 
 //// ALL ROAST SELECTION OPTION ////
 var roastSelection = document.getElementById('roast-selection');
-roastSelection.addEventListener('change', (e) => {
 
-
-    return renderCoffees()
-});
+//
+//
+//     return renderCoffees()
+// });
 
 ////   FILTERED COFFEE INPUT   ///
  const coffeeNameInput = document.getElementById('searchBar');
