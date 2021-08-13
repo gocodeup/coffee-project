@@ -39,6 +39,17 @@ function renderList(coffees){
     })
     return html;
 }
+
+function renderRoastList(roasts){
+    var html = '';
+    roasts.forEach(function (roast)
+    {
+        html += '<option>' + roast + '</option>';
+    })
+    return html;
+}
+
+
 function addCoffee(e){
     e.preventDefault();
     var newCoffee = {
@@ -51,6 +62,7 @@ function addCoffee(e){
     updateCoffees(e);
     console.log(coffees);
     deleteCoffeeName.innerHTML = renderList(coffees);
+    originalCoffeeName.innerHTML = renderList(coffees);
     }
 }
 function deleteCoffee(e){
@@ -62,6 +74,20 @@ function deleteCoffee(e){
     })
     updateCoffees(e);
     deleteCoffeeName.innerHTML = renderList(coffees);
+    originalCoffeeName.innerHTML = renderList(coffees);
+}
+
+function editCoffee(e){
+    e.preventDefault();
+    coffees.forEach(function(coffee, index){
+        if (originalCoffeeName.value === coffee.name){
+            coffee.name = editedCoffeeName.value;
+            coffee.roast = editedCoffeeRoast.value;
+        }
+    })
+    updateCoffees(e);
+    deleteCoffeeName.innerHTML = renderList(coffees);
+    originalCoffeeName.innerHTML = renderList(coffees);
 }
 
 // from http://www.ncausa.org/About-Coffee/Coffee-Roasts-Guide
@@ -82,6 +108,12 @@ var coffees = [
     {id: 14, name: 'French', roast: 'dark'},
 ];
 
+var roasts = [
+    'light',
+    'medium',
+    'dark'
+]
+
 var divBody = document.querySelector('#coffees');
 
 // searching for coffee
@@ -98,13 +130,25 @@ var addNameSelection = document.querySelector('#add-coffee-name');
 var deleteCoffeeName = document.querySelector('#delete-coffee-roast')
 var deleteSubmitButton = document.querySelector('#delete-submit');
 
+//edit a coffee
+var originalCoffeeName = document.querySelector('#original-coffee');
+var editedCoffeeName = document.querySelector('#new-coffee-name');
+var editedCoffeeRoast = document.querySelector('#new-coffee-roast');
+var editSubmitButton = document.querySelector('#edit-coffee-submit');
+
+
 submitButton.addEventListener('click', updateCoffees);
 roastSelection.addEventListener('change', updateCoffees);
 nameSelection.addEventListener('keyup', updateCoffees);
 
+
 addSubmitButton.addEventListener("click", addCoffee);
 deleteSubmitButton.addEventListener("click", deleteCoffee);
+editSubmitButton.addEventListener('click', editCoffee);
 
 // initialization function
 divBody.innerHTML = renderCoffees(coffees);
 deleteCoffeeName.innerHTML = renderList(coffees);
+originalCoffeeName.innerHTML = renderList(coffees);
+editedCoffeeRoast.innerHTML = renderRoastList(roasts);
+
