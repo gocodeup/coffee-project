@@ -1,3 +1,48 @@
+/*body {*/
+
+
+/*}*/
+.container {
+
+    text-align: center;
+    }
+h1 {
+    font-family: "Apple Braille";
+    font-weight: lighter;
+    color: ghostwhite;
+    position: center;
+}
+.centered {
+    position: absolute;
+}
+#search-Bar {
+    text-align: center;
+    text-decoration-color: black;
+    background-color: ghostwhite;
+
+}
+
+
+p {
+    color: ghostwhite;
+    font-weight: bold;
+    border-style: double;
+    border-color: rosybrown;
+    box-sizing: border-box;
+    border-width: thick;
+    border-collapse: collapse;
+}
+p:after {
+
+    content:"";
+    display: block;
+    margin: auto;
+    width: 25%;
+    /*padding-bottom: 15px;*/
+    padding-top: 15px;
+    border-bottom: rosybrown;
+}
+
 table {
     border-collapse: collapse;
     margin: 15px 0;
@@ -6,4 +51,9 @@ table {
 td, th {
     border: 1px solid black;
     padding: 5px 10px;
+    display: flex;
+}
+
+#submit {
+    display: none;
 }

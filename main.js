@@ -12,22 +12,21 @@ function renderCoffee(coffee) {
 
 function renderCoffees(coffees) {
     var html = '';
-    for(var i = coffees.length - 1; i >= 0; i--) {
+    for (var i = coffees.length - 1; i >= 0; i--) {
         html += renderCoffee(coffees[i]);
     }
     return html;
 }
 
 function updateCoffees(e) {
-    console.log("hello")
     e.preventDefault(); // don't submit the form, we just want to update the data
     var selectedRoast = roastSelection.value;
     var filteredCoffees = [];
-    coffees.forEach(function(coffee) {
+    coffees.forEach(function (coffee) {
         if (coffee.roast === selectedRoast) {
             filteredCoffees.push(coffee);
         }
-        if(selectedRoast === "All") {
+        if (selectedRoast === "All") {
             filteredCoffees.push(coffee);
         }
     });
@@ -36,12 +35,12 @@ function updateCoffees(e) {
 
 function searchCoffees() {
     let input = document.getElementById('search-Bar').value
-    input=input.toLowerCase();
+    input = input.toLowerCase();
 
     let sCoffees = [];
     for (var i = 0; i < coffees.length; i++) {
         if (coffees[i].name.toLowerCase().includes(input) || coffees[i].roast.toLowerCase().includes(input)) {
-            sCoffees.push( coffees[i]);
+            sCoffees.push(coffees[i]);
         }
     }
     div.innerHTML = renderCoffees(sCoffees);
@@ -67,9 +66,6 @@ var coffees = [
 
 coffees.reverse();
 
-// var hideList = document.getElementById('hide').style.display = 'none';
-
-// // hideList.style.display = 'none';
 
 var div = document.querySelector('#coffees');
 var submitButton = document.querySelector('#submit');
@@ -79,7 +75,7 @@ var searchBar = document.querySelector('#search-Bar');
 
 div.innerHTML = renderCoffees(coffees);
 
-// searchButton.addEventListener("click", searchCoffees);
+
 searchBar.addEventListener('inputs', searchCoffees);
 submitButton.addEventListener('click', updateCoffees);
 
