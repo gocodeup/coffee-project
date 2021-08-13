@@ -13,3 +13,8 @@ p {
     color: gray;
 }
 
+p {
+    margin-bottom: 0;
+    color: darkgrey;
+}
+
