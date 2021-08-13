@@ -49,9 +49,9 @@ function updateCoffees(e) {
     var selectedRoast = roastSelection.value;
     var filteredCoffees = [];
     coffees.forEach(function(coffee) {
-        if (coffee.roast === selectedRoast || coffee.name.startsWith(search.value) === true) {
-            filteredCoffees.push(coffee);
-        }
+        // if (coffee.roast === selectedRoast || coffee.name.startsWith(search.value) === true) {
+        //     filteredCoffees.push(coffee);
+        // }
         if (coffee.roast === selectedRoast && coffee.name.startsWith(search.value) === true) {
             filteredCoffees.push(coffee);
         }
