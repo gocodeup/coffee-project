@@ -19,7 +19,6 @@ function renderCoffees(coffees) {
 }
 
 function updateCoffees(e) {
-    console.log("hello")
     e.preventDefault(); // don't submit the form, we just want to update the data
     var selectedRoast = roastSelection.value;
     var filteredCoffees = [];
