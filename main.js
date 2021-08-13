@@ -25,13 +25,13 @@ function updateCoffees(e) {
     var filteredCoffees = [];
     if (selectedRoast === 'All') {
         coffees.forEach(function (coffee){
-            if(coffee.name.toLowerCase().indexOf(selectedCoffee)!== -1){
+            if(coffee.name.toLowerCase().indexOf(selectedCoffee.toLowerCase())!== -1){
                 filteredCoffees.push(coffee);
             }
         });
     } else {
         coffees.forEach(function (coffee) {
-            if (coffee.roast === selectedRoast && coffee.name.toLowerCase().indexOf(selectedCoffee) !== -1) {
+            if (coffee.roast === selectedRoast && coffee.name.toLowerCase().indexOf(selectedCoffee.toLowerCase()) !== -1) {
                 filteredCoffees.push(coffee);
             }
 
@@ -42,18 +42,24 @@ function updateCoffees(e) {
 
 function addCoffee(x) {
     x.preventDefault();
-    var creatCoffee = {
+    var createCoffee = {
         id: coffees.length + 1,
         name: newCoffee.value,
         roast: anotherRoast.value,
     }
-    coffees.push(creatCoffee);
+    coffees.push(createCoffee);
     tbody.innerHTML = renderCoffees(coffees);
 }
 
+// function storageInputs() {
+//     localStorage.setItem('textinput', createCoffee.name)
+//     var storedInput = localStorage.getItem('textinput')
+// }
+
+
 // from http://www.ncausa.org/About-Coffee/Coffee-Roasts-Guide
 var coffees = [
-    {id: 1, name: 'Light City', roast: 'light', filter:'all'},
+    {id: 1, name: 'Light City', roast: 'light'},
     {id: 2, name: 'Half City', roast: 'light'},
     {id: 3, name: 'Cinnamon', roast: 'light'},
     {id: 4, name: 'City', roast: 'medium'},
@@ -74,7 +80,7 @@ var tbody = document.querySelector('#coffees');
 var submitButton = document.querySelector('#submit');
 var roastSelection = document.querySelector('#roast-selection');
 var anotherRoast = document.querySelector('#another-roast');
-var newCoffee = document.querySelector('#whatever');
+var newCoffee = document.querySelector('#new-coffee');
 var submitTwo = document.querySelector('#submitAlso');
 var coffeeSelection = document.querySelector('#coffee-selection')
 

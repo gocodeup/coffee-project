@@ -4,17 +4,20 @@
     <meta charset="UTF-8">
     <title></title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="style.css">
 
 </head>
-<body style="background-image: url('https://www.pexels.com/photo/white-and-orange-cat-beside-white-ceramic-mug-3709086/')">
+<body class="m-5">
     <h1 class="text-center">Coffee!</h1>
     <hr>
 <!--Hallo der-->
-    <div class="row d-flex flex-row-reverse p-0">
+    <div class="row d-flex flex-row-reverse p-0 m-5">
     <form class="col-6 p-0">
-        <label for="roast-selection"></label>
+        <label for="roast-selection"><h5>Roast</h5></label>
         <select class="form-control" id="roast-selection">
             <option>All</option>
             <option>light</option>
@@ -22,36 +25,28 @@
             <option>dark</option>
         </select>
         <br>
+        <h5>Coffee Name</h5>
         <input id="coffee-selection" class="form-control" type="text" placeholder="Default input">
         <br>
         <input id="submit" type="submit" class="col-12 btn btn-primary" />
         <hr>
         <h2 class="text-center">Add a Coffee</h2>
-        <label for="another-roast"></label>
+        <label for="another-roast"><h5>Roast</h5></label>
         <select class="form-control" id="another-roast">
             <option>light</option>
             <option>medium</option>
             <option>dark</option>
         </select>
         <br>
-        <input id="whatever" class="form-control" type="text" placeholder="Default input">
+        <h5>Coffee Name</h5>
+        <input id="new-coffee" class="form-control" type="text" placeholder="Default input">
         <br>
         <input id="submitAlso" type="submit" class="col-12 btn btn-primary" />
     </form>
 
-<div id="coffees" class="container row col-6">
+    <div id="coffees" class="container row col-6">
     </div>
     </div>
-<!--    <table>-->
-<!--        <thead>-->
-<!--            <tr>-->
-<!--                <th>ID</th>-->
-<!--                <th>NAME</th>-->
-<!--                <th>ROAST</th>-->
-<!--            </tr>-->
-<!--        </thead>-->
-<!--        <tbody id="coffees"></tbody>-->
-<!--    </table>-->
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
