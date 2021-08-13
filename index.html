@@ -6,43 +6,45 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
 </head>
-<body class="container">
+<body>
+<div>
+
     <div class="row justify-content-center">
         <h1>Coffee!</h1>
     </div>
 
-<!--    <div class="row justify-content-end my-3">-->
-<!--        <div class="col-6">-->
-<!--            <h5>Roast</h5>-->
-<!--            <div class="col-6">-->
-<!--                <form class="form-control">-->
-<!--                    <label for="roast-selection">Roast</label>-->
-<!--                    <select id="roast-selection">-->
-<!--                        <option selected>All</option>-->
-<!--                        <option>light</option>-->
-<!--                        <option>medium</option>-->
-<!--                        <option>dark</option>-->
-<!--                    </select>-->
-<!--                    <label for="cname" class="mt-2 font-weight-bold">Coffee Name</label>-->
-<!--                    <input type="text" id="cname" name="cname" onkeyup="updateCoffees(this)">-->
-<!--                </form>-->
-<!--            </div>-->
-<!--        </div>-->
-<!--    </div>-->
+    <main class="container">
 
-    <div id="search-form">
-        <form class="d-flex flex-column">
-            <label for="roast-selection" class="font-weight-bold">Roast</label>
-            <select id="roast-selection" onchange="updateCoffees(this)">
-                <option>all</option>
-                <option>light</option>
-                <option>medium</option>
-                <option>dark</option>
-            </select>
-            <label for="cname" class="mt-2 font-weight-bold">Coffee Name</label>
-            <input type="text" id="cname" name="cname" onkeyup="updateCoffees(this)">
-        </form>
-    </div>
+        <div class="row">
+
+            <div class="col-6">
+                <tbody>
+
+                </tbody>
+
+            </div>
+
+            <div class="col-6">
+                <form class="d-flex flex-column">
+                    <label for="roast-selection" class="font-weight-bold">Roast</label>
+                    <select id="roast-selection">
+                        <option selected>All</option>
+                        <option>light</option>
+                        <option>medium</option>
+                        <option>dark</option>
+                    </select>
+                    <label for="" class="mt-2 font-weight-bold">Coffee Name</label>
+                    <input type="text">
+                </form>
+            </div>
+
+        </div>
+
+    </main>
+
+
+
+</div>
 
 
 
