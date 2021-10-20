@@ -1,4 +1,5 @@
 "use strict"
+var userSearch;
 
 function renderCoffee(coffee) {
     var html = '<div class="coffee">';
@@ -18,11 +19,16 @@ function renderCoffees(coffees) {
 }
 
 function updateCoffees(e) {
-    e.preventDefault(); // don't submit the form, we just want to update the data
-    var selectedRoast = roastSelection.value;
+    //e.preventDefault(); // don't submit the form, we just want to update the data
     var filteredCoffees = [];
+    var selectedRoast = roastSelection.value;
+    if (typeof userSearch !== 'undefined') {
+        var searchStringLC = userSearch.toLowerCase();
+    }
+
     coffees.forEach(function(coffee) {
-        if (coffee.roast === selectedRoast) {
+        var localCoffee = coffee.name.toLowerCase();
+        if(localCoffee.includes(searchStringLC) && ((coffee.roast === selectedRoast)||(selectedRoast === 'all'))){
             filteredCoffees.push(coffee);
         }
     });
@@ -48,9 +54,14 @@ var coffees = [
 ];
 
 var tbody = document.querySelector('#coffees');
-var submitButton = document.querySelector('#submit');
 var roastSelection = document.querySelector('#roast-selection');
-
+var inputDetect = document.querySelector('#site-search');
 tbody.innerHTML = renderCoffees(coffees);
 
-submitButton.addEventListener('click', updateCoffees);
+inputDetect.addEventListener('input', updateSearch);
+function updateSearch(e) {
+    userSearch = e.target.value;
+    updateCoffees();
+}
+
+roastSelection.addEventListener('input', updateCoffees);
