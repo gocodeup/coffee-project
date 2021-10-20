@@ -1,0 +1,45 @@
+<b> coffee-project </b> <br>
+Changelog<br>
+All notable changes to this project will be documented in this file.
+
+
+## [Unreleased]
+
+## [1.1.1] - 2021-10-20
+### Changed
+- Search Bar and Roast List now update immediately on input.
+
+### Removed
+- Removed the submit button for coffee roast and search input to support immediate input return.
+
+## [1.1.0] - 2021-10-20
+### Added
+ - Search Bar Function Added for Coffee Names.
+   - Partial Strings Accepted.
+   - Case Insensitive.
+ - "All" Now available for Coffee Roast Selection
+### Changed
+- Roast Filter selection default from "Light" to "All"
+
+## [1.0.1] - 2021-10-19
+### Changed
+ - Changed the Coffee List Display.
+   - from a Table to a Div.
+   - from descending ID to ascending ID.
+   - removed the coffee ID (from display only).
+
+## [1.0.0]   - 2021-10-19
+### Changed
+- Initial version from repository <br> (https://github.com/gocodeup/coffee-project)
+
+
+
+
+# Changelog Format
+### [Version]
+#### Added - new features.
+#### Changed - existing functions.
+#### Deprecated- to be removed functions.
+#### Removed - fully removed features.
+#### Fixed - new features.
+#### Security - vulnerabilities or case use.
