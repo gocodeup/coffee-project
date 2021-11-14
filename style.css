@@ -1,9 +1,56 @@
-table {
-    border-collapse: collapse;
-    margin: 15px 0;
+*{
+    box-sizing: border-box;
 }
+body{
+    margin: 0;
+    background-color: darkblue;
+}
+header {
+    margin-top: 1.5em;
+    text-align: center;
+}
+label, input, select {
+    margin: 1em;
+    width: 35%;
+}
+h1 {
+    font-size: 64px;
+    line-height: 1.5em;
+    color: white;
+}
+hr {
+    width: 80%;
+    border: 4px solid gray;
+    border-radius: 2px;
+    margin: 0 auto;
+}
+.coffee{
 
-td, th {
-    border: 1px solid black;
-    padding: 5px 10px;
+}
+h3 {
+    margin: 1em;
+}
+.content {
+    background-color: lightblue;
+    margin: 20px;
+    border-radius: 4px;
+    text-align: center;
+    flex-basis: 100%;
+}
+#container{
+    display: flex;
+    width: 100%;
+}
+#functions{
+    width: 40%;
+}
+#roast-filter-label{
+    margin-right: 2.5em;
+}
+#coffees{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    width: 50%;
 }
