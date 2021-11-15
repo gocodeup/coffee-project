@@ -4,13 +4,19 @@ All notable changes to this project will be documented in this file.
 
 
 ## [Unreleased]
+## [1.1.2] - 2021-11-14
+### Changed
+- Render function for each individual Coffee now uses h3 and h4 elements.
+- Default table styling replaced with heading and body styles.
+### Added
+- CSS styling for general elements, flex containers, forms.
+- Form for adding new coffee added (not yet functional through JS)
 
 ## [1.1.1] - 2021-10-20
 ### Changed
-- Search Bar and Roast List now update immediately on input.
-
+- List now updates immediately on input of either search/filter option.
 ### Removed
-- Removed the submit button for coffee roast and search input to support immediate input return.
+- Removed submit buttons to support immediate input return.
 
 ## [1.1.0] - 2021-10-20
 ### Added
@@ -26,7 +32,7 @@ All notable changes to this project will be documented in this file.
  - Changed the Coffee List Display.
    - from a Table to a Div.
    - from descending ID to ascending ID.
-   - removed the coffee ID (from display only).
+   - removed the coffee ID from the display only.
 
 ## [1.0.0]   - 2021-10-19
 ### Changed
