@@ -6,10 +6,16 @@
 // for now it returns html code that displays ONE coffee's info in a row
 // this function is run by renderCoffees
 function renderCoffee(coffee) {
-    var html = '<tr class="coffee">';
-    html += '<td>' + coffee.name + '</td>';
-    html += '<td>' + coffee.roast + '</td>';
-    html += '</tr>';
+    // var html = '<tr class="coffee">';
+    // html += '<td>' + coffee.name + '</td>';
+    // html += '<td>' + coffee.roast + '</td>';
+    // html += '</tr>';
+    // each list in the list of of coffees we will display is simply going to be sent back as
+    // <div class="coffee"><span>*COFFEE NAME*</span> <span>*COFFEE ROAST*</span></div>
+    let html = '<div class="coffee">';
+    html += '<span class="coffee-name">' + coffee.name + '</span> ';
+    html += '<span class="coffee-roast">' + coffee.roast + '</span>';
+    html += '</div>'
 
     return html;
 }
@@ -38,7 +44,7 @@ function updateCoffees(e) {
     });
     // tbody is the contents of a table in html
     // the function it calls overwrites the table only when this part of this function runs
-    tbody.innerHTML = renderCoffees(filteredCoffees);
+    coffeeDiv.innerHTML = renderCoffees(filteredCoffees);
 }
 
 // this is the list of coffees and their data
@@ -64,13 +70,14 @@ var coffees = [
     {id: 14, name: 'French', roast: 'dark'},
 ];
 
-var tbody = document.querySelector('#coffees');
-var submitButton = document.querySelector('#submit');
-var roastSelection = document.querySelector('#roast-selection');
+const coffeeDiv = document.querySelector('#coffee-display-container');
+const submitButton = document.querySelector('#submit');
+const roastSelection = document.querySelector('#roast-selection');
 
 
 // this line initially fills the table with ALL coffees
-tbody.innerHTML = renderCoffees(coffees);
+coffeeDiv.innerHTML = renderCoffees(coffees);
+
 
 //when submitButton is clicked, updateCoffees runs
 submitButton.addEventListener('click', updateCoffees);
