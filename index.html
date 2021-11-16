@@ -2,43 +2,61 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title></title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+          integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
 </head>
-<body>
-    <h1>Coffee!</h1>
+<body class="container">
+<section class="row">
+    <h1 class="col-12 text-center">Coffee!</h1>
+</section>
 
-    <form>
+<section class="row">
+    <form class="col-6">
         <!-- label and select here provide the data we use to filter the coffees by type of roast -->
         <label for="roast-selection"></label>
         <select id="roast-selection">
-<!--            the values that the coffees are compared to in the javascript come from here and are read as strings-->
+            <!--            the values that the coffees are compared to in the javascript come from here and are read as strings-->
             <option>light</option>
             <option>medium</option>
             <option>dark</option>
         </select>
-<!--        We are going to need to add another field (probably a text field in here too to allow user to -->
-<!--        search through the coffees by name. Since it's a text field we do not have to provide values here -->
-        <input id="submit" type="submit" />
+        <!-- New label for the coffee name search input-->
+        <label for="name-search"></label>
+        <input type="text" id="name-search">
+        <!--        We are going to need to add another field (probably a text field in here too to allow user to -->
+        <!--        search through the coffees by name. Since it's a text field we do not have to provide values here -->
+        <input id="submit" type="submit"/>
     </form>
 
-<!--    This needs to be replaced so that each coffee is displayed in a div that
-contains a heading displaying the coffee name, and the type of roast in a paragraph.
-Don't display the ids, these are only for our application's internal use-->
-<!--    <table>-->
-<!--        <thead>-->
-<!--            <tr>-->
-<!--                <th>NAME</th>-->
-<!--                <th>ROAST</th>-->
-<!--            </tr>-->
-<!--        </thead>-->
-<!--        <tbody id="coffees"></tbody>-->
-<!--    </table>-->
-    <div id="coffee-display-container">
+    <!--    This needs to be replaced so that each coffee is displayed in a div that
+    contains a heading displaying the coffee name, and the type of roast in a paragraph.
+    Don't display the ids, these are only for our application's internal use-->
+    <!--    <table>-->
+    <!--        <thead>-->
+    <!--            <tr>-->
+    <!--                <th>NAME</th>-->
+    <!--                <th>ROAST</th>-->
+    <!--            </tr>-->
+    <!--        </thead>-->
+    <!--        <tbody id="coffees"></tbody>-->
+    <!--    </table>-->
+    <section class="col-6">
+        <div id="coffee-display-container">
 
-    </div>
+        </div>
+    </section>
+</section>
 <!--    throw the whole thing away! -->
 
-    <script src="main.js"></script>
+<script src="main.js"></script>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
+        crossorigin="anonymous"></script>
 </body>
 </html>

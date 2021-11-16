@@ -30,10 +30,13 @@ function renderCoffees(coffees) {
 }
 
 function updateCoffees(e) {
+    // e calls back to the event manager and is connected form submission
     e.preventDefault(); // don't submit the form, we just want to update the data
     // roastSelection is given values to present the user in the html page and this data is then
     // sent into the javascript application by this variable assignment.
     var selectedRoast = roastSelection.value;
+    // this string contains the coffee name we wish to match with
+    let selectedName = nameSearch.value;
     // filteredCoffees is created here empty and will be filled with coffees with data matching
     var filteredCoffees = [];
     //                          coffee here is just a selector for each element inside coffeeS which is defined below
@@ -73,6 +76,8 @@ var coffees = [
 const coffeeDiv = document.querySelector('#coffee-display-container');
 const submitButton = document.querySelector('#submit');
 const roastSelection = document.querySelector('#roast-selection');
+
+const nameSearch = document.querySelector('#name-search');
 
 
 // this line initially fills the table with ALL coffees
