@@ -1,9 +1,31 @@
-table {
-    border-collapse: collapse;
-    margin: 15px 0;
-}
+* {
+    margin: 0;
+    padding: 0;
+    }
+body, html {
+    box-sizing: border-box;
+    font-family: 'Josefin Sans', sans-serif;
+    }
 
-td, th {
-    border: 1px solid black;
-    padding: 5px 10px;
-}
+
+
+
+/*
+Font family
+font-family: 'Josefin Sans', sans-serif;
+NavBar -
+Main header - 68px Bold 700
+32px regular 400 - Coffee names
+16px regular 400 - coffee roast type
+
+*/
+.shipping-header {
+    background-color: orange;
+    }
+
+.shipping-ul {
+    text-align: center;
+    
+    }
+
+.shipping-a.
