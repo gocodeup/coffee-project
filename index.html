@@ -23,16 +23,32 @@
         <input id="submit" type="submit" />
     </form>
 
-    <table>
-        <thead>
-            <tr>
-                <th>ID</th>
-                <th>NAME</th>
-                <th>ROAST</th>
-            </tr>
-        </thead>
-        <tbody id="coffees"></tbody>
-    </table>
+<!--        <table>-->
+<!--            <thead>-->
+<!--                <tr>-->
+<!--                    <th>ID</th>-->
+<!--                    <th>NAME</th>-->
+<!--                    <th>ROAST</th>-->
+<!--                </tr>-->
+<!--            </thead>-->
+<!--            <tbody id="coffees"></tbody>-->
+<!--        </table>-->
+
+<!--    display each coffee in its own card that displays the coffee name and type of roast -->
+    <div class="d-flex"> <!--container for cards-->
+        <div class="card" style="width: 18rem;">
+            <div class="card-body" id="coffees"> <!--first card -->
+                <h5 class="card-title">Coffee Name</h5>
+                <h6 class="card-subtitle mb-2 text-muted">Type of Roast</h6>
+            </div>
+        </div>
+
+    </div>
+
+
+
+
+
 
 <!-----------------scripts------------------------------>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
