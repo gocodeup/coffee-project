@@ -65,3 +65,18 @@ function updateSearch(e) {
 }
 
 roastSelection.addEventListener('input', updateCoffees);
+
+// IMPLEMENTING ADD COFFEE FORM FUNCTIONALITY ///
+
+let newAddedCoffee = [];
+const addCoffee = document.querySelector('#submit');
+addCoffee.addEventListener('click', function (event) {
+    event.preventDefault()
+    let coffeeName = document.querySelector('#add-coffee').value;
+    let newID = coffees.length + 1;
+    let coffeeRoast = document.querySelector('#added-roast').value;
+    newAddedCoffee.push({id: newID, name:coffeeName, roast:coffeeRoast});
+    coffees.push({newAddedCoffee});
+});
+
+console.log(newAddedCoffee);
