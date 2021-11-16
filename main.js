@@ -1,5 +1,5 @@
 "use strict"
-var userSearch;
+var userSearch = '';
 
 function renderCoffee(coffee) {
     var html = '<div class="coffee">';
