@@ -6,45 +6,52 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<header>
-    <h1>Coffee!</h1>
-    <hr>
-</header>
-<div id="container">
-    <div id="functions">
-        <form class="content">
-            <h2>Search for Coffee</h2>
-            <label for="site-search">Filter Coffee Name:</label>
-                <input type="search" id="site-search" />
-            <br>
-            <label id="roast-filter-label" for="roast-selection">Filter by Roast:</label>
-                <select id="roast-selection">
-                    <option>all</option>
-                    <option>light</option>
-                    <option>medium</option>
-                    <option>dark</option>
-                </select>
-        </form>
-        <hr>
-        <form class="content">
-            <h2>Add a Coffee</h2>
-            <label for="add-coffee">Name:</label>
-                <input type="text" id="add-coffee">
-            <br>
-            <label for="added-roast">Roast:</label>
-                <select id="added-roast">
-                    <option>light</option>
-                    <option>medium</option>
-                    <option>dark</option>
-                </select>
-            <br>
-            <input id="submit" type="submit"/>
-        </form>
-    </div>
-    <!--Leave "#coffees" Div Alone for Document Rendering -->
-    <div class="content" id="coffees"></div>
 
-    <script src="main.js"></script>
+
+<div id="width-limiter">
+    <header>
+        <h1>Coffee!</h1>
+
+    </header>
+    <hr>
+    <div id="container">
+        <div id="functions">
+            <form class="content">
+                <h2>Search for Coffee</h2>
+                <label for="site-search">Filter Coffee Name:</label>
+                    <input type="search" id="site-search" />
+                <br>
+                <label id="roast-filter-label" for="roast-selection">Filter by Roast:</label>
+                    <select id="roast-selection">
+                        <option>all</option>
+                        <option>light</option>
+                        <option>medium</option>
+                        <option>dark</option>
+                    </select>
+            </form>
+            <br>
+            <hr>
+            <form class="content">
+                <h2>Add a Coffee</h2>
+                <label for="add-coffee">Name:</label>
+                    <input type="text" id="add-coffee">
+                <br>
+                <label for="added-roast">Roast:</label>
+                    <select id="added-roast">
+                        <option>light</option>
+                        <option>medium</option>
+                        <option>dark</option>
+                    </select>
+                <br>
+                <input id="submit" type="submit"/>
+            </form>
+        </div>
+        <!--Leave "#coffees" Div Alone for Document Rendering -->
+        <div class="content" id="coffees"></div>
+
+
+    </div>
 </div>
+<script src="main.js"></script>
 </body>
 </html>

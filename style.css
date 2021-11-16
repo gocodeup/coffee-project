@@ -1,3 +1,7 @@
+:root{
+    --main-bg: darkblue;
+}
+
 *{
     box-sizing: border-box;
 }
@@ -11,7 +15,7 @@ header {
 }
 label, input, select {
     margin: 1em;
-    width: 35%;
+    width: 60%;
 }
 h1 {
     font-size: 64px;
@@ -24,33 +28,44 @@ hr {
     border-radius: 2px;
     margin: 0 auto;
 }
-.coffee{
-
-}
-h3 {
-    margin: 1em;
+h3, h4 {
+    margin: .1em;
 }
 .content {
     background-color: lightblue;
-    margin: 20px;
+    margin: 0 auto;
     border-radius: 4px;
     text-align: center;
     flex-basis: 100%;
+}
+.coffee{
+    width: 248px;
+    height: 64px;
+    background-color: white;
+    border: 2px solid black;
+    border-radius: 8px;
+}
+#width-limiter{
+    max-width: 972px;
+    margin: 1em auto;
 }
 #container{
     display: flex;
     width: 100%;
 }
 #functions{
-    width: 40%;
+    width: 50%;
 }
 #roast-filter-label{
     margin-right: 2.5em;
 }
 #coffees{
+    margin-top: 1em;
+    background-color: var(--main-bg);
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
+    justify-content: center;
+    align-content: flex-start;
     flex-wrap: wrap;
     width: 50%;
 }
