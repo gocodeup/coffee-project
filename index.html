@@ -9,25 +9,32 @@
     <h1>Coffee!</h1>
 
     <form>
+        <!-- label and select here provide the data we use to filter the coffees by type of roast -->
         <label for="roast-selection"></label>
         <select id="roast-selection">
+<!--            the values that the coffees are compared to in the javascript come from here and are read as strings-->
             <option>light</option>
             <option>medium</option>
             <option>dark</option>
         </select>
+<!--        We are going to need to add another field (probably a text field in here too to allow user to -->
+<!--        search through the coffees by name. Since it's a text field we do not have to provide values here -->
         <input id="submit" type="submit" />
     </form>
 
+<!--    This needs to be replaced so that each coffee is displayed in a div that
+contains a heading displaying the coffee name, and the type of roast in a paragraph.
+Don't display the ids, these are only for our application's internal use-->
     <table>
         <thead>
             <tr>
-                <th>ID</th>
                 <th>NAME</th>
                 <th>ROAST</th>
             </tr>
         </thead>
         <tbody id="coffees"></tbody>
     </table>
+<!--    throw the whole thing away! -->
 
     <script src="main.js"></script>
 </body>

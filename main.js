@@ -1,8 +1,12 @@
 "use strict"
 
+// This needs to be changed to divs
+// Can work with when we're changing the html so that this doesn't completely break
+// before we break it on purpose
+// for now it returns html code that displays ONE coffee's info in a row
+// this function is run by renderCoffees
 function renderCoffee(coffee) {
     var html = '<tr class="coffee">';
-    html += '<td>' + coffee.id + '</td>';
     html += '<td>' + coffee.name + '</td>';
     html += '<td>' + coffee.roast + '</td>';
     html += '</tr>';
@@ -10,6 +14,7 @@ function renderCoffee(coffee) {
     return html;
 }
 
+// this function puts together all the new html code for displaying a table in the web page
 function renderCoffees(coffees) {
     var html = '';
     for(var i = coffees.length - 1; i >= 0; i--) {
@@ -20,16 +25,27 @@ function renderCoffees(coffees) {
 
 function updateCoffees(e) {
     e.preventDefault(); // don't submit the form, we just want to update the data
+    // roastSelection is given values to present the user in the html page and this data is then
+    // sent into the javascript application by this variable assignment.
     var selectedRoast = roastSelection.value;
+    // filteredCoffees is created here empty and will be filled with coffees with data matching
     var filteredCoffees = [];
+    //                          coffee here is just a selector for each element inside coffeeS which is defined below
     coffees.forEach(function(coffee) {
         if (coffee.roast === selectedRoast) {
             filteredCoffees.push(coffee);
         }
     });
+    // tbody is the contents of a table in html
+    // the function it calls overwrites the table only when this part of this function runs
     tbody.innerHTML = renderCoffees(filteredCoffees);
 }
 
+// this is the list of coffees and their data
+// it is an array of objects which have this structure:
+// id:       <number>
+// name:     <string>
+// roast:    <string>
 // from http://www.ncausa.org/About-Coffee/Coffee-Roasts-Guide
 var coffees = [
     {id: 1, name: 'Light City', roast: 'light'},
@@ -52,6 +68,9 @@ var tbody = document.querySelector('#coffees');
 var submitButton = document.querySelector('#submit');
 var roastSelection = document.querySelector('#roast-selection');
 
+
+// this line initially fills the table with ALL coffees
 tbody.innerHTML = renderCoffees(coffees);
 
+//when submitButton is clicked, updateCoffees runs
 submitButton.addEventListener('click', updateCoffees);
