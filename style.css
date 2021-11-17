@@ -13,7 +13,7 @@ td, th {
     font-weight: bolder;
 }
 
-#roast-selection{
+#roast-selection {
     background-color: #ffff;
     position: relative;
     padding: 8px 16px;
@@ -21,4 +21,4 @@ td, th {
     cursor: pointer;
     user-select: none;
     margin: 25px 0;
-
+}
