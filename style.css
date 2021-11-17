@@ -7,3 +7,27 @@ td, th {
     border: 1px solid black;
     padding: 5px 10px;
 }
+.bg-image{
+    background-image: url("images/pexels-photo-4264046.jpeg");
+    background-size: cover;
+    border-radius: .5em;
+    background-repeat: no-repeat;
+}
+.nav-bg{
+    background-color: rgba(72, 69, 56, 0.5);
+    border-radius: .5em;
+    padding: 0 .7em;
+}
+.btn-color {
+    background-color: saddlebrown;
+    border: 1px solid black;
+    border-radius: .5em;
+    color: sandybrown;
+}
+.header-background{
+    background-image: url('https://gifimage.net/wp-content/uploads/2017/01/Coffee-GIF-Image-Download-38.gif')
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 1em;
+}
