@@ -28,4 +28,51 @@ Main header - 68px Bold 700
     
     }
 
-.shipping-a.
+.roast-type {
+text-align: center;
+}
+
+/*Main-container*/
+
+
+/*Product Item Div*/
+
+.product-item-div {
+    border: 1px solid #cbc9c9;
+  background-color: mintcream;
+    /*max-width: 400px;*/
+    margin: 5px;
+    
+}
+
+/*Image Sizes*/
+.product-info-img {
+    width:100%;
+    height:auto;
+    /*object-fit: cover;*/
+}
+
+.product-item-image-div {
+    /*max-width: 425px;*/
+    /*height: 379px;*/
+    /*margin-bottom: 10px;*/
+}
+
+/*Roast and Price css*/
+
+.region-roast-blend-info {
+    /*display: flex;*/
+    /*flex-wrap: wrap;*/
+    /*flex-direction: row;*/
+    /*justify-content: space-between;*/
+}
+
+.roast {
+    /*display: inline-block;*/
+    /*vertical-align: middle;*/
+}
+
+.right-info {
+    display: inline-block;
+    vertical-align: middle;
+    }
