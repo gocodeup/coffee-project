@@ -1,9 +1,32 @@
-table {
-    border-collapse: collapse;
-    margin: 15px 0;
+.jumbotron {
+    background-image: url("img/coffeebanner.jpeg");
+    background-repeat: repeat;
+    background-position: center;
+    background-size: cover;
+    top: 3em;
 }
 
-td, th {
-    border: 1px solid black;
-    padding: 5px 10px;
+.display-4{
+    background-color: black;
+    color: white;
+    font-family: Georgia;
+    opacity: 50%;
+    border-radius: 50%;
+}
+
+.hr-line{
+    width: 85%;
+    border: 1px lightgrey solid;
+}
+#coffee-align{
+    width: 100%;
+}
+
+.style-coffee{
+    display: flex;
+    flex-flow: wrap;
+}
+
+h1{
+    font-family: Georgia;
 }
