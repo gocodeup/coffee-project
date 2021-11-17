@@ -74,5 +74,8 @@ addCoffee.addEventListener('click', function (event) {
     let newID = coffees.length + 1;
     let coffeeRoast = document.querySelector('#added-roast').value;
     coffees.push({id: newID, name:coffeeName, roast:coffeeRoast});
+    localStorage['coffees'] = JSON.stringify(coffees); /// ADDED LOCAL STORAGE ////
     console.log(coffees);
+    updateCoffees();
 });
+
