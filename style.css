@@ -41,6 +41,17 @@ Main header - 68px Bold 700
 
 /*Main-container*/
 
+/*Jumbotron*/
+
+.jumbotron-border {
+    border: 2px solid red;
+}
+
+h1, h4 {
+    color: white;
+}
+
+
 
 /*Product Item Div*/
 
