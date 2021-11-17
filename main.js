@@ -13,7 +13,7 @@ function renderCoffee(coffee) {
 function renderCoffees(coffees) {
     var html = '';
     html = '<div class = "row">';
-    for(var i = coffees.length - 1; i >= 0; i--) {
+    for(var i = 0; i < coffees.length; i++) {
         html += renderCoffee(coffees[i]);
     }
     html += '</div>';
