@@ -17,52 +17,30 @@
 </head>
 <body>
 
-<!--Shipping Header-->
-<div class="shipping-header">
-	<ul class="shipping-ul">
-		<a href="#">ORDERS $35+  SHIP FREE | IMPORTANT SHIPPING NOTICE ><a>
-			<a href="#">VIEW DETAILS<a>
-				<ul>
-</div>
-<!--Main Image Header-->
-<div class="jumbotron jumbotron-fluid">
-	<div class="container text-center">
-		<h1 class="display-4">Coffee Attack</h1>
-		<p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloremque expedita quos sunt vitae? A aspernatur aut consectetur doloribus hic iure rem! Consectetur dicta excepturi in iste laborum molestiae totam vero?</p>
-	</div>
-</div>
-<!--Tabs for Roast Choices-->
-<div class="container">
-	<div class="row text-center">
-		<div class="col-sm clear:both">
-			All
-		</div>
-		<div class="col-sm">
-			Dark
-		</div>
-		<div class="col-sm">
-			Medium
-		</div>
-		<div class="col-sm">
-			Light
-		</div>
-	</div>
-</div>
+<h1>Coffee!</h1>
 
-<!--Products-->
+<form>
+	<label for="roast-selection"></label>
+	<select id="roast-selection">
+		<option>light</option>
+		<option>medium</option>
+		<option>dark</option>
+	</select>
+	<input id="submit" type="submit" />
+</form>
 
+<table>
+	<thead>
+	<tr>
+		<th>ID</th>
+		<th>NAME</th>
+		<th>ROAST</th>
+	</tr>
+	</thead>
+	<tbody id="coffees"></tbody>
+</table>
 
-
-
-
-
-
-
-
-
-
-
-
+<script src="main.js"></script>
 
 <!-- Optional JavaScript -->
 <script src="main.js"></script>
