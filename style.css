@@ -1,13 +1,12 @@
-:root{
-    --main-bg: darkblue;
+:root {
+    --main-bg: saddlebrown;
 }
-
 *{
     box-sizing: border-box;
 }
 body{
     margin: 0;
-    background-color: darkblue;
+    background-color: var(--main-bg);
 }
 header {
     margin-top: 1.5em;
@@ -29,39 +28,80 @@ hr {
     margin: 0 auto;
 }
 h3, h4 {
-    margin: .1em;
+    display: inline;
+    margin: 0 1em;
+}
+h3{
+    line-height: 3em;
+}
+h4{
+    line-height: 3.5em;
 }
 .content {
-    background-color: lightblue;
+
     margin: 0 auto;
     border-radius: 4px;
     text-align: center;
     flex-basis: 100%;
 }
 .coffee{
-    width: 248px;
-    height: 64px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 272px;
+    height: 56px;
     background-color: white;
-    border: 2px solid black;
+    border: 1px solid saddlebrown;
     border-radius: 8px;
 }
-#width-limiter{
+.light{
+    color: #DAA06D;
+    background-color: ;
+}
+.medium{
+    color: #7B3F00;
+}
+.dark{
+    color: #5C4033;
+}
+.roast{
+    border-radius: 7px;
+    width:  92px;
+}
+.lt{
+    background-color: #EADDCA;
+    color: saddlebrown;
+}
+.med{
+    background-color: #7B3F00;
+    color: #DAA06D;
+}
+.drk{
+    background-color: #5C4033;
+    color: #DAA06D;
+}
+#main-content{
     max-width: 972px;
     margin: 1em auto;
+    background-color: lightgoldenrodyellow;
 }
 #container{
     display: flex;
     width: 100%;
 }
 #functions{
+    margin: .5em;
     width: 50%;
+    background-color: #DAA06D;
+    border: 1px solid saddlebrown;
+    border-radius: 8px;
 }
 #roast-filter-label{
     margin-right: 2.5em;
 }
 #coffees{
     margin-top: 1em;
-    background-color: var(--main-bg);
+    background-color: ;
     display: flex;
     flex-direction: row;
     justify-content: center;
