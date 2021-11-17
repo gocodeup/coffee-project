@@ -1,5 +1,19 @@
 "use strict"
 
+/**added function for the userInput for the search */
+function userSearch(e){
+    var userKeyStroke = userInput.value;
+    userKeyStroke = userKeyStroke.toLowerCase();
+    var searchedCoffees = []; //this was never queried, fixed .innerHTML below
+    updateCoffees(e).forEach(function (coffee){
+        if(coffee.name.toLowerCase().includes(userKeyStroke)){
+            searchedCoffees.push(coffee);
+        }
+    });
+    tbody.innerHTML = renderCoffee(searchedCoffees);
+}
+
+
 function renderCoffee(coffee) {
     var html = '<div class="coffee text-center>';
     html += '<div class="text-nowrap">' + '<span class="h2">' + coffee.name + '</span>'
@@ -53,7 +67,11 @@ var coffees = [
 var tbody = document.querySelector('#coffees');
 var submitButton = document.querySelector('#submit');
 var roastSelection = document.querySelector('#roast-selection');
+/** added var userInput for the addEventListener userInput*/
+var userInput = document.querySelector(coffees.reverse());
 
 tbody.innerHTML = renderCoffees(coffees);
 
 submitButton.addEventListener('click', updateCoffees);
+userInput.addEventListener('keyup', userSearch);
+roastSelection.addEventListener('click', updateCoffees);
