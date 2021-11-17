@@ -6,6 +6,9 @@
     font-family: verdana;
     font-size: 1em;
     padding: 4px;
+    display: flex;
+    flex-direction: column;
+    flex-direction: column;
 }
 
 .card-container {
@@ -19,4 +22,11 @@
 
 .hidden {
     display: none
+}
+
+#select-roast {
+    width: 150px;
+    height: 150px;
+    border: 1px solid black;
+    padding-top: 2em;
 }
