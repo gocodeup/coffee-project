@@ -1,16 +1,32 @@
 "use strict"
 
-function renderCoffee(coffee) {
-    var html = '<tr class="coffee">';
-    html += '<td>' + coffee.id + '</td>';
-    html += '<td>' + coffee.name + '</td>';
-    html += '<td>' + coffee.roast + '</td>';
-    html += '</tr>';
-
-    return html;
+/**added function for the userInput for the search */
+function userSearch(e){
+    var userKeyStroke = userInput.value;
+    userKeyStroke = userKeyStroke.toLowerCase();
+    var searchedCoffees = []; //this was never queried, fixed .innerHTML below
+    updateCoffees(e).forEach(function (coffee){
+        if(coffee.name.toLowerCase().includes(userKeyStroke)){
+            searchedCoffees.push(coffee);
+        }
+    });
+    tbody.innerHTML = renderCoffee(searchedCoffees);
 }
 
-function renderCoffees(coffees) {
+
+function renderCoffee(coffee) {
+    var html = '<div class="coffee text-center>';
+    html += '<div class="text-nowrap">' + '<span class="h2">' + coffee.name + '</span>'
+        + '<span class="text-light">' + coffee.roast + '</span>' + '</div>';
+    html += '</div>';
+    return html;
+}
+    // var html = '<tr class="coffee">';
+    // html += '<td>' + coffee.id + '</td>';
+    // html += '<td>' + coffee.name + '</td>';
+    // html += '<td>' + coffee.roast + '</td>';
+    // html += '</tr>';
+ function renderCoffees(coffees) {
     var html = '';
     for(var i = coffees.length - 1; i >= 0; i--) {
         html += renderCoffee(coffees[i]);
@@ -51,7 +67,11 @@ var coffees = [
 var tbody = document.querySelector('#coffees');
 var submitButton = document.querySelector('#submit');
 var roastSelection = document.querySelector('#roast-selection');
+/** added var userInput for the addEventListener userInput*/
+var userInput = document.querySelector(coffees.reverse());
 
 tbody.innerHTML = renderCoffees(coffees);
 
 submitButton.addEventListener('click', updateCoffees);
+userInput.addEventListener('keyup', userSearch);
+roastSelection.addEventListener('click', updateCoffees);
