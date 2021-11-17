@@ -71,3 +71,5 @@ div.innerHTML = renderCoffees(coffees);
 coffeeNameSelection.addEventListener('keyup', searchCoffees)
 submitButton.addEventListener('click', updateCoffees);
 
+//Add functionality to update the displayed coffee as soon as they select an option from the select.
+roastSelection.addEventListener('change', updateCoffees);
