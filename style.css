@@ -7,3 +7,26 @@ td, th {
     border: 1px solid black;
     padding: 5px 10px;
 }
+
+.roast{
+    color: black;
+    font-weight: bolder;
+}
+
+#roast-selection {
+    background-color: #ffff;
+    position: relative;
+    padding: 8px 16px;
+    border: 1px solid gray;
+    cursor: pointer;
+    user-select: none;
+    margin: 25px 0;
+}
+.search {
+    background-color: #ffff;
+    position: relative;
+    padding: 8px 16px;
+    border: 1px solid gray;
+    cursor: pointer;
+    user-select: none;
+}
