@@ -13,7 +13,9 @@ td, th {
     font-weight: bolder;
 }
 
+/*updated-js-and-html*/
 #roast-selection {
+
     background-color: #ffff;
     position: relative;
     padding: 8px 16px;
@@ -21,6 +23,7 @@ td, th {
     cursor: pointer;
     user-select: none;
     margin: 25px 0;
+
 }
 .search {
     background-color: #ffff;
@@ -30,3 +33,4 @@ td, th {
     cursor: pointer;
     user-select: none;
 }
+
