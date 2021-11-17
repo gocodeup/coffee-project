@@ -74,27 +74,8 @@ addCoffee.addEventListener('click', function (event) {
     let newID = coffees.length + 1;
     let coffeeRoast = document.querySelector('#added-roast').value;
     coffees.push({id: newID, name:coffeeName, roast:coffeeRoast});
+    localStorage['coffees'] = JSON.stringify(coffees); /// ADDED LOCAL STORAGE ////
     console.log(coffees);
+    updateCoffees();
 });
 
-// TESTING OUT LOCAL STORAGE ///////
-
-    // let storedCoffees =
-    //JSON.parse(window.localStorage.getItem('coffees'));
-    // updateCoffees(storedCoffees);
-
-
-
-const storeCoffee = document.querySelector('#submit');
-storeCoffee.addEventListener('click', function () {
-    let name = document.querySelector('#add-coffee').value;
-    let coffeeRoast = document.querySelector('#added-roast').value;
-    const coffees = {
-        name: name,
-        roast: coffeeRoast
-    }
-    let id = coffees.length + 1;
-
-
-    window.localStorage.setItem(id, JSON.stringify(coffees)); /// ADDED LOCAL STORAGE ////
-})
