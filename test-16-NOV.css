@@ -1,0 +1,22 @@
+.box {
+    width: 150px;
+    height: 150px;
+    border: 1px solid black;
+    text-align: center;
+    font-family: verdana;
+    font-size: 1em;
+    padding: 4px;
+}
+
+.card-container {
+    display: flex;
+    margin: 8px;
+}
+
+.container>DIV {
+    margin: 4px;
+}
+
+.hidden {
+    display: none
+}
