@@ -70,6 +70,9 @@ roastSelection.addEventListener('input', updateCoffees);
 const addCoffee = document.querySelector('#submit');
 addCoffee.addEventListener('click', function (event) {
     event.preventDefault()
+    coffeeAdd();
+});
+function coffeeAdd () {
     let coffeeName = document.querySelector('#add-coffee').value.toLowerCase();
     let newID = coffees.length + 1;
     let coffeeRoast = document.querySelector('#added-roast').value;
@@ -77,5 +80,14 @@ addCoffee.addEventListener('click', function (event) {
     localStorage['coffees'] = JSON.stringify(coffees); /// ADDED LOCAL STORAGE ////
     console.log(coffees);
     updateCoffees();
-});
+}
+window.onload = function(){
+    let storedCoffee = JSON.parse(localStorage.getItem('coffees'));
+    console.log(storedCoffee);
+    for (let i = 14; i < storedCoffee.length; i++) {
+        coffees.push(storedCoffee[i]);
+    }
+    updateCoffees();
+}
+
 
