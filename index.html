@@ -16,9 +16,35 @@
 	<title>Coffee Attack</title>
 </head>
 <body>
-
-<h1>Coffee!</h1>
-
+<!--Shipping Header-->
+<div class="shipping-header">
+	<ul class= "shipping-ul">
+		<a href="#">ORDERS $35+ FREE SHIPPING | IMPORTANT SHIPPING NOTICE-><a>
+		<a href="#">VIEW DETAILS<a>
+		</ul>
+</div>
+<nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
+	<a class="navbar-brand" href="#" style="">
+		<img src="coffee.svg" width="30" height="30" class="d-inline-block align-top" alt="" loading="lazy">
+		<span>Give me SOME Coffee!</span>
+	</a>
+	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+		<span class="navbar-toggler-icon"></span>
+	</button>
+	<div class="collapse navbar-collapse" id="navbarNav">
+		<ul class="navbar-nav">
+			<li class="nav-item active">
+				<a class="nav-link" href="#">About <span class="sr-only">(current)</span></a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" href="#">Coffee</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" href="#">Pricing</a>
+			</li>
+		</ul>
+	</div>
+</nav>
 <form>
 	<label for="roast-selection"></label>
 	<select id="roast-selection">
@@ -29,16 +55,9 @@
 	<input id="submit" type="submit" />
 </form>
 
-<table>
-	<thead>
-	<tr>
-		<th>ID</th>
-		<th>NAME</th>
-		<th>ROAST</th>
-	</tr>
-	</thead>
-	<tbody id="coffees"></tbody>
-</table>
+<div id = "coffeelist">
+	<div class= "card-columns" id="coffees"></div>
+</div>
 
 <script src="main.js"></script>
 
