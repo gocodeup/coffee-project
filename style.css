@@ -1,3 +1,8 @@
+
+body {
+    background-color: #6a8e7f;
+}
+
 table {
     border-collapse: collapse;
     margin: 15px 0;
@@ -7,3 +12,33 @@ td, th {
     border: 1px solid black;
     padding: 5px 10px;
 }
+#roast-selection, #query, #searchbtn, #submit {
+    border: none;
+}
+
+.light {
+    color: #a0522d;
+}
+
+.medium {
+   color: #8b4513
+}
+
+.dark{
+    color: #654321
+}
+.coffee {
+    width: 33%;
+}
+/*#query {*/
+/*    border: none;*/
+/*}*/
+
+/*#searchbtn {*/
+/*    border: none;*/
+/*}*/
+
+/*#submit {*/
+/*    border: none;*/
+/*}*/
+
