@@ -1,11 +1,11 @@
 "use strict"
 
 function renderCoffee(coffee) {
-    var html = '<tr class="coffee">';
-    html += '<td>' + coffee.id + '</td>';
-    html += '<td>' + coffee.name + '</td>';
-    html += '<td>' + coffee.roast + '</td>';
-    html += '</tr>';
+    var html = '<div class="coffee">';
+    // html += '<div>' + coffee.id + '</div>'; ID does not display
+    html += '<h1>' + coffee.name + '</h1>'; // Heading for coffee names
+    html += '<p>' + coffee.roast + '</p>'; // Paragraph for roast types
+    html += '</div>';
 
     return html;
 }
@@ -21,9 +21,12 @@ function renderCoffees(coffees) {
 function updateCoffees(e) {
     e.preventDefault(); // don't submit the form, we just want to update the data
     var selectedRoast = roastSelection.value;
+    var searchedRoast = search.value.toUpperCase();
     var filteredCoffees = [];
     coffees.forEach(function(coffee) {
-        if (coffee.roast === selectedRoast) {
+        if (coffee.roast === selectedRoast || coffee.name === searchedRoast) {
+            filteredCoffees.push(coffee);
+        } else if(roastSelection.value === 'all') {
             filteredCoffees.push(coffee);
         }
     });
@@ -51,6 +54,7 @@ var coffees = [
 var tbody = document.querySelector('#coffees');
 var submitButton = document.querySelector('#submit');
 var roastSelection = document.querySelector('#roast-selection');
+var search = document.querySelector('#search');
 
 tbody.innerHTML = renderCoffees(coffees);
 
