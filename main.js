@@ -4,10 +4,16 @@ function renderCoffee(coffee) {
     var html = '<div class="coffee">';
     // html += '<div>' + coffee.id + '</div>'; ID does not display
     html += '<h1>' + coffee.name + '</h1>'; // Heading for coffee names
-    html += '<p>' + coffee.roast + '</p>'; // Paragraph for roast types
+    html += '<p class="text-center">' + coffee.roast + '</p>'; // Paragraph for roast types
     html += '</div>';
 
     return html;
+}
+
+function showHideCoffee() {
+    if(document.getElementById('roast-selection')){
+
+    }
 }
 
 function renderCoffees(coffees) {
@@ -21,12 +27,23 @@ function renderCoffees(coffees) {
 function updateCoffees(e) {
     e.preventDefault(); // don't submit the form, we just want to update the data
     var selectedRoast = roastSelection.value;
-    var searchedRoast = search.value.toUpperCase();
+    // var searchedRoast = search.value.toUpperCase();
     var filteredCoffees = [];
     coffees.forEach(function(coffee) {
-        if (coffee.roast === selectedRoast || coffee.name === searchedRoast) {
+        if (coffee.roast === selectedRoast) {
             filteredCoffees.push(coffee);
         } else if(roastSelection.value === 'all') {
+            filteredCoffees.push(coffee);
+        }
+    });
+    tbody.innerHTML = renderCoffees(filteredCoffees);
+}
+
+function searchCoffees() {
+    var searchedCoffee = search.value.toUpperCase();
+    var filteredCoffees =[];
+    coffees.forEach(function(coffee) {
+        if(coffee.name.toUpperCase().includes(searchedCoffee)) {
             filteredCoffees.push(coffee);
         }
     });
@@ -55,7 +72,9 @@ var tbody = document.querySelector('#coffees');
 var submitButton = document.querySelector('#submit');
 var roastSelection = document.querySelector('#roast-selection');
 var search = document.querySelector('#search');
+var div = document.querySelector('#coffees');
 
 tbody.innerHTML = renderCoffees(coffees);
 
 submitButton.addEventListener('click', updateCoffees);
+search.addEventListener('input', searchCoffees)
