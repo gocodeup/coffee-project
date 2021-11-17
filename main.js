@@ -43,7 +43,35 @@ function coffeeComparison (x) {
     }
     div.innerHTML = renderCoffees(filteredCoffees);
 }
+//-------------------------
+function searchCoffees(y) {
+    y.preventDefault();
+    var searchRoast = searchBox.value.toLowerCase();
+    var filteredCoffees = [];
+    for (var i = 0; i < coffees.length; i++) {
+        if (coffees[i].name.toLowerCase().includes(searchRoast.toLowerCase())) {
+            filteredCoffees.push(coffees[i]);
+        }
 
+        div.innerHTML = renderCoffees(filteredCoffees);
+    }
+}
+
+//---------------------------
+
+
+
+//ADD COFFEE
+// var addForm = document.forms['add-coffee'];
+// addForm.addEventListener('submit', function(e){
+//     e.preventDefault();
+//     var value = addForm.querySelector('input[type="text"]').value;
+//     var coffees = document.createElement('span');
+//
+//     coffees.push(coffees[i]);
+//
+//     div.innerHTML = renderCoffees(filteredCoffees);
+// });
 
 // from http://www.ncausa.org/About-Coffee/Coffee-Roasts-Guide
 var coffees = [
@@ -69,7 +97,10 @@ var roastSelection = document.querySelector('#roast-selection');
 var searchButton = document.querySelector('#searchbtn');
 var searchedCoffee = document.querySelector('#query');
 div.innerHTML = renderCoffees(coffees);
-
+//---------------------
+var searchBox = document.querySelector('.searchBox');
+searchBox.addEventListener('keyup', searchCoffees);
+//----------------------
 
 searchButton.addEventListener('click', coffeeComparison);
 
