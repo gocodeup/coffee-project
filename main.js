@@ -2,11 +2,26 @@
 var userSearch = '';
 
 function renderCoffee(coffee) {
-    var html = '<div class="coffee">';
-    html += '<h3>' + coffee.name + '</h3>';
-    html += '<h4>' + coffee.roast + '</h4>';
-    html += '</div>';
-
+    switch(coffee.roast){
+        case "light":
+            var html = '<div class="coffee light">';
+            html += '<h3>' + coffee.name + '</h3>';
+            html += '<div class="roast lt"><h4>' + coffee.roast + '</h4></div>';
+            html += '</div>';
+            break;
+        case "medium":
+            var html = '<div class="coffee medium">';
+            html += '<h3>' + coffee.name + '</h3>';
+            html += '<div class="roast med"><h4>' + coffee.roast + '</h4></div>';
+            html += '</div>';
+            break;
+        case "dark":
+            var html = '<div class="coffee dark">';
+            html += '<h3>' + coffee.name + '</h3>';
+            html += '<div class="roast drk"><h4>' + coffee.roast + '</h4></div>';
+            html += '</div>';
+            break;
+    }
     return html;
 }
 
