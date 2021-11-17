@@ -1,3 +1,14 @@
+body {
+    font-family: Montserrat;
+    text-align: center;
+}
+
+h1 {
+    font-family: Montserrat;
+    font-weight: normal;
+    font-size: 3rem;
+    line-height: 1.5;
+}
 table {
     border-collapse: collapse;
     margin: 15px 0;
@@ -8,14 +19,167 @@ td, th {
     padding: 5px 10px;
 }
 
+
+
+/*Navigation Bar*/
+
+
+.navbar-brand {
+    font-family: "ubuntu";
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+.nav-item {
+    padding: 0 18px;
+}
+
+.nav-link {
+    font-size: 1.5rem;
+}
+
+.container-fluid {
+    padding: 7% 10%;
+
+}
+.top{
+    background-image: url("../images/pexels-pixabay-531754.jpg");
+    background-size: 100%;
+
+
+}
+/*sections
+.colored-section{
+
+}
+.white-section{
+
+}
+
+/*title Section*/
+#title {
+    background-color: #6B4F4F;
+    color: white;
+
+}
+#title .container-fluid {
+    padding: 3% 15% 7%
+}
+.title-intro {
+    padding-top: 3rem;
+    font-weight: bold;
+    text-align: left;
+}
+
+/*Download Buttons*/
+.download-button {
+    margin: 8% 3% 8% 0;
+}
+
+/* Title Image*/
+.title-img {
+    width: 22%;
+    transform: rotate(20deg);
+    position: absolute;
+    left: 700px;
+    top: 150px;
+}
+
+@media (max-width:1089px) {
+    .title-intro {
+        text-align: center;
+    }
+
+    .title-img {
+        position: static;
+        transform: rotate(0);
+        width: 60%;
+    }
+}
+
+/*Features Section*/
+#features {
+    background-color: white;
+    position: relative;
+}
+
+.icon {
+    font-size: 4rem;
+    color: #D79771;
+    margin-bottom: .7rem;
+}
+
+.icon:hover {
+    color: #AA2B1D;
+}
+
+h2, h3 {
+    font-family: Montserrat;
+    font-weight: bold;
+    font-size: 2rem;
+    line-height: 1.5;
+}
+
+p {
+    font-size: 1.3rem;
+    color: #8f8f8f;
+}
+
+/*Gallery Section*/
+#gallery {
+
+    background-color: #CDC7BE;
+    color: white;
+}
+
+.coffee-image {
+    /*width: 50%;*/
+    /*margin: 20px;*/
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.carousel-item {}
+
+
+
+/*Sizing Section*/
+#sizing {
+    padding: 100px;
+}
+
+.size-column {
+    padding: 3% 2%;
+}
+.size-button{
+    background-color: #9A9483;
+    color: #FFFFFF;
+}
+.size-button:hover{
+    background-color: #AA2B1D;
+    color: #FFFFFF;
+}
+.cup-small{
+    width: 100px;
+}
+.cup-regular{
+    width: 130px;
+}
+.cup-big{
+    width: 150px;
+}
+
+/*Menu Section*/
+#menu{
+    background-color: #F4F4F4 ;
+}
+
 .roast{
     color: black;
     font-weight: bolder;
 }
 
-/*updated-js-and-html*/
 #roast-selection {
-
     background-color: #ffff;
     position: relative;
     padding: 8px 16px;
@@ -23,7 +187,6 @@ td, th {
     cursor: pointer;
     user-select: none;
     margin: 25px 0;
-
 }
 .search {
     background-color: #ffff;
@@ -34,3 +197,58 @@ td, th {
     user-select: none;
 }
 
+/* Testimonials & Press Section*/
+#press {
+    background-color: white;
+    padding-bottom: 3%;
+}
+
+.press-logo {
+    width: 12%;
+    margin: 20px 20px 15px;
+}
+/*cta & contact section*/
+#cta {
+    background-color: #9A9483;
+    color: white;
+    padding: 7% 15%;
+}
+
+.cta-footer {
+    font-size: 2rem;
+    line-height: 1.5;
+}
+
+.sign-up {
+    font-family: Montserrat;
+    font-size: 2.5rem;
+    font-weight: bolder;
+    padding-bottom: 30px;
+}
+
+.btn-footer {
+    padding-top: 10px;
+}
+/*Press Section*/
+#press {
+    background-color: #CDC7BE;
+    padding-bottom: 3%;
+}
+
+.press-logo {
+    width: 12%;
+    margin: 20px 20px 15px;
+}
+/*footer section*/
+#footer {
+    background-color: white;
+}
+
+.cp {
+    font-size: 1rem;
+    font-family: Montserrat;
+}
+
+.social-icon {
+    margin: 20px 10px;
+}
