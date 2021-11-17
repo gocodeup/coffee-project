@@ -2,33 +2,101 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Coffee Co.</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Coffee!</h1>
+<!--<h1 class="text-center">Coffee!</h1>-->
 
-    <form>
-        <label for="roast-selection"></label>
-        <select id="roast-selection">
-            <option>light</option>
-            <option>medium</option>
-            <option>dark</option>
-        </select>
-        <input id="submit" type="submit" />
-    </form>
+<div class="container-fluid">
+    <div class="jumbotron jumbotron-fluid">
+        <div class="container">
+            <h1 class="display-4">Coffee CO.</h1>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-6">
+            <div id="coffeeDisplay" class="col-6">
+                <table id="test">
+                    <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>NAME</th>
+                        <th>ROAST</th>
+                    </tr>
+                    </thead>
+                    <tbody id="coffees"></tbody>
+                </table>
+            </div>
+        </div>
+        <div class="col-6">
+            <div class="row">
+                <div class="col">
+                    <div class="card">
+                        <!--                        <h5 class="card-header"></h5>-->
+                        <div class="card-body">
+                            <div class="form-group">
+                                <label for="roast-selection" class="font-weight-bold">Roast</label>
+                                <select class="form-control" id="roast-selection">
+                                    <option>all</option>
+                                    <option>light</option>
+                                    <option>medium</option>
+                                    <option>dark</option>
+                                </select>
+                                <br>
+                                <label for="coffee-name-selection" class="font-weight-bold">Coffee Name</label>
+                                <div class="input-group">
+                                    <input id="coffee-name-selection" type="text" class="form-control" placeholder="Search" aria-label="Username" aria-describedby="basic-addon1">
+                                </div>
+                                <br>
+                                <button type="button" class="btn btn-primary btn-lg btn-block">Submit</button>
+                                <!--                                <input id="submit" type="submit" />  submit button-->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br> <!--Add Coffee Card Spacer-->
+            <div class="row">
+                <div class="col">
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="form-group w-100">
+                                <h3 class="text-center">ADD COFFEE</h3>
+                                <label for="add-roast-selection" class="font-weight-bold">Roast</label>
+                                <select class="form-control" id="add-roast-selection">
+                                    <option>light</option>
+                                    <option>medium</option>
+                                    <option>dark</option>
+                                    <option>all</option>
+                                </select>
+                                <br>
+                                <label for="add-coffee-name-selection" class="font-weight-bold">Name</label>
+                                <div class="input-group">
+                                    <input id="add-coffee-name-selection" type="text" class="form-control" placeholder="Add Coffee" aria-label="Username" aria-describedby="basic-addon1">
+                                </div>
+                                <br>
+                                <button type="button" class="btn btn-primary btn-lg btn-block">Submit</button>
+                                <!--                                 <label for='user-search' class="font-weight-bold">Name</label>-->
+                                <!--                                 <br>-->
+                                <!--                                 <input id='user-search' type='search' placeholder='name of coffee'>-->
+                                <!--                                </form>-->
+                                <!--<input id="submit" type="submit" />submit button-->
+                                <!--</form>-->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 
-    <table>
-        <thead>
-            <tr>
-                <th>ID</th>
-                <th>NAME</th>
-                <th>ROAST</th>
-            </tr>
-        </thead>
-        <tbody id="coffees"></tbody>
-    </table>
 
-    <script src="main.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF" crossorigin="anonymous"></script>
+<script src="js/coffee-main.js"></script>
 </body>
 </html>
