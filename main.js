@@ -131,4 +131,3 @@ function formatNewCoffee(input) {
 }
 
 coffees.reverse();
-=======
