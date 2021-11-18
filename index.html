@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns="http://www.w3.org/1999/html">
 <head>
     <meta charset="UTF-8">
     <title>Coffee Project</title>
@@ -54,7 +54,6 @@
     </a>
 </div>
 
-<!--<form>-->
 
 <!--        Search for Coffee Card-->
 
@@ -63,36 +62,40 @@
 
 
         <h5 class="card-title">Search for Coffee</h5>
-        <h6 class="card-subtitle mb-2 text-muted">Select roast</h6>
-        <!--                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>-->
-        <form class="form-group mb-3">
-            <label for="roast-selection"></label>
-            <select class="form -control custom-select" id="roast-selection">
-                <option>Show All</option>
-                <option>Light</option>
-                <option>Medium</option>
-                <option>Dark</option>
-            </select>
-            <!--            </div>-->
-            <div class="form-group">
-                <label for="createCoffee"></label>
-                <h6 class="card-subtitle mb-2 text-muted">Search coffee by name</h6>
-                <input type="text" class="form-control" id="createCoffee">
-            </div>
+        <!--        <h6 class="card-subtitle mb-2 text-muted">Select roast</h6>-->
 
-            <!--            Submit button for Search Coffee Card-->
+        <div class="form-group mb-3">
+            <form>
+                <label for="roast-selection" class="card-subtitle mb-2 text-muted">Select roast</label>
+                <select id="roast-selection" class="form-control custom-select">
+                    <option>Show All</option>
+                    <option>light</option>
+                    <option>medium</option>
+                    <option>dark</option>
+                </select>
 
-            <div>
-                <input id="submit" type="submit"/>
-            </div>
+        </div>
 
+        <div class="form-group">
+            <label for="createCoffee"></label>
+            <h6 class="card-subtitle mb-2 text-muted">Search coffee by name</h6>
+            <input type="text" class="form-control" id="createCoffee">
+        </div>
+
+        <!--            Submit button for Search Coffee Card-->
+
+        <div>
+            <input id="submit" type="submit"/>
+        </div>
         </form>
+
 
     </div>
 </div>
-<!--</form>-->
+
+
 <!--        Name Coffee Card-->
-<!--<form>-->
+
 <div class="card mt-3 mb-3" style="width: 30rem;">
     <div class="card-body">
         <h5 class="card-title">Add Coffee to Menu</h5>
@@ -106,10 +109,10 @@
             </select>
         </div>
         <div class="form-group">
-            <label for="exampleInputEmail1"></label>
+            <label for="addCoffee"></label>
             <h6 class="card-subtitle mb-2 text-muted">Name of Coffee</h6>
-            <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-            <small id="emailHelp" class="form-text text-muted">Go ahead, try it!</small>
+            <input type="text" class="form-control" id="addCoffee">
+            <small class="form-text text-muted">Go ahead, try it!</small>
         </div>
 
         <!--            Submit button for Add Coffee Card-->
@@ -121,7 +124,6 @@
     </div>
 </div>
 
-<!--</form>-->
 
 <!--All Coffee Information -->
 
@@ -130,7 +132,6 @@
     <h3>NAME</h3>
     <p>ROAST</p>
 </div>
-
 
 
 <script src="main.js"></script>
