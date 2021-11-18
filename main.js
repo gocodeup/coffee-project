@@ -57,10 +57,16 @@ function coffeeAdd(obj) {
     var newAddRoast = addRoast.value;
     var newAddName = addName.value.charAt(0).toUpperCase() + addName.value.slice(1);
     obj = {id: id, name: newAddName, roast: newAddRoast};
+    /*attempt at saving data
+    window.localStorage.setItem('name', JSON.stringify(coffees.push(obj)));
+    JSON.parse(window.localStorage.getItem('name'));*/
     coffees.push(obj);
 
+
     tbody.innerHTML = renderCoffees(coffees);
+
 }
+
 
 // from http://www.ncausa.org/About-Coffee/Coffee-Roasts-Guide
 var coffees = [
