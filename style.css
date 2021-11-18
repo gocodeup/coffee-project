@@ -101,3 +101,14 @@ a {
 .card {
     background-color: darkslategrey;
 }
+
+.nav-link {
+    text-align: center;
+    margin-left: 650px;
+}
+.about{
+    text-align:center;
+    color: #d5dcdc;
+    text-shadow: 1px 1px black;
+}
+
