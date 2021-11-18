@@ -21,14 +21,40 @@ td, th {
 }
 
 .medium {
-   color: #8b4513
+   color: #80461b;
 }
 
 .dark{
-    color: #654321
+    color: #654321;
 }
 .coffee {
     width: 33%;
+}
+
+h1 {
+    margin-top: 20px;
+    font-family: 'Architects Daughter', cursive, sans-serif;
+}
+h2 {
+    font-family: 'Genos', sans-serif;
+    font-weight: bold;
+    text-shadow: 2px 2px #808080;
+}
+h4 {
+    color: #800000;
+    font-family: 'Architects Daughter', cursive, sans-serif;
+
+}
+.hide {
+    display: none;
+}
+.roast:hover + .hide {
+    display: block;
+}
+
+.tag {
+    color: #52595D;
+    font-family: 'Yuji Boku', serif;
 }
 /*#query {*/
 /*    border: none;*/
