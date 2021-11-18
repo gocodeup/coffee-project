@@ -136,18 +136,15 @@ h4 {
     background-color: #5C4033;
     color: #DAA06D;
 }
-
 #main-content {
     max-width: 972px;
     margin: 0 auto;
     background-color: wheat;
 }
-
 #container {
     display: flex;
     width: 100%;
 }
-
 #functions {
     margin: .5em;
     width: 40%;
