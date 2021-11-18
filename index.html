@@ -10,18 +10,21 @@
 
 <div id="main-content">
     <header>
+        <div id="twitter-fixed">
+            <p id="dismissal">Click here to Dismiss</p>
+            <a class="twitter-timeline" href="https://twitter.com/codey_the_duck" data-tweet-limit="1" data-width="399" ></a>
+        </div>
         <h1>Coffee!</h1>
 
     </header>
-    <hr>
     <div id="container">
         <div id="functions">
             <form class="content">
-                <h2>Search for Coffee</h2>
-                <label for="site-search">Filter Coffee Name:</label>
+                <h2>Search our Coffees</h2>
+                <label for="site-search">By Name:</label>
                     <input type="search" id="site-search" />
                 <br>
-                <label id="roast-filter-label" for="roast-selection">Filter by Roast:</label>
+                <label id="roast-filter-label" for="roast-selection">By Roast:</label>
                     <select id="roast-selection">
                         <option>all</option>
                         <option>light</option>
@@ -32,7 +35,7 @@
             <br>
             <hr>
             <form class="content">
-                <h2>Add a Coffee</h2>
+                <h2>Add a Coffee to our Menu!</h2>
                 <label for="add-coffee">Name:</label>
                     <input type="text" id="add-coffee">
                 <br>
@@ -47,11 +50,14 @@
             </form>
         </div>
         <!--Leave "#coffees" Div Alone for Document Rendering -->
-        <div class="content" id="coffees"></div>
+        <div id="coffee-container">
+            <div class="content" id="coffees"></div>
+        </div>
 
 
     </div>
 </div>
 <script src="main.js"></script>
+<script async src="http://platform.twitter.com/widgets.js" charset="utf-8"></script>
 </body>
 </html>
