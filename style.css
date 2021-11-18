@@ -83,6 +83,7 @@ td, th {
     position: absolute;
     left: 700px;
     top: 150px;
+
 }
 
 @media (max-width:1089px) {
@@ -254,4 +255,8 @@ p {
 
 .social-icon {
     margin: 20px 10px;
+}
+
+.coffee {
+    display: block;
 }

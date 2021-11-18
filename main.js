@@ -1,13 +1,23 @@
 "use strict"
 
+
+//search coffee section
+
+
 function renderCoffee(coffee) {
     var html = '<div class="coffee">';
     // html += '<div>' + coffee.id + '</div>'; ID does not display
     html += '<h1>' + coffee.name + '</h1>'; // Heading for coffee names
-    html += '<p>' + coffee.roast + '</p>'; // Paragraph for roast types
+    html += '<p class="text-center">' + coffee.roast + '</p>'; // Paragraph for roast types
     html += '</div>';
 
     return html;
+}
+
+function showHideCoffee() {
+    if(document.getElementById('roast-selection')){
+
+    }
 }
 
 function renderCoffees(coffees) {
@@ -21,12 +31,23 @@ function renderCoffees(coffees) {
 function updateCoffees(e) {
     e.preventDefault(); // don't submit the form, we just want to update the data
     var selectedRoast = roastSelection.value;
-    var searchedRoast = search.value.toUpperCase();
+    // var searchedRoast = search.value.toUpperCase();
     var filteredCoffees = [];
     coffees.forEach(function(coffee) {
-        if (coffee.roast === selectedRoast || coffee.name === searchedRoast) {
+        if (coffee.roast === selectedRoast) {
             filteredCoffees.push(coffee);
         } else if(roastSelection.value === 'all') {
+            filteredCoffees.push(coffee);
+        }
+    });
+    tbody.innerHTML = renderCoffees(filteredCoffees);
+}
+
+function searchCoffees() {
+    var searchedCoffee = search.value.toUpperCase();
+    var filteredCoffees =[];
+    coffees.forEach(function(coffee) {
+        if(coffee.name.toUpperCase().includes(searchedCoffee)) {
             filteredCoffees.push(coffee);
         }
     });
@@ -55,7 +76,61 @@ var tbody = document.querySelector('#coffees');
 var submitButton = document.querySelector('#submit');
 var roastSelection = document.querySelector('#roast-selection');
 var search = document.querySelector('#search');
+var div = document.querySelector('#coffees');
 
 tbody.innerHTML = renderCoffees(coffees);
 
 submitButton.addEventListener('click', updateCoffees);
+search.addEventListener('input', searchCoffees)
+
+
+// Add coffee section
+
+
+
+function searchCoffees(value) {
+    var filteredCoffees = [];
+    for(var i = 0; i < coffees.length; i++) {
+        if (coffees[i].name.toLowerCase().indexOf(value.toLowerCase()) > -1) {
+            filteredCoffees.push(coffees[i]);
+        }
+    }
+    tbody.innerHTML = renderCoffees(filteredCoffees);
+}
+function newHideCoffee() {
+    if(document.getElementById('add-coffee-roast-select')){
+   }
+}
+function addCoffee() {
+    var coffee = {
+        id:'',
+        name:'',
+        roast:'',
+    };
+    coffee.id = coffees.length + 1;
+    var tempName = document.getElementById('add-coffee-name').value;
+    coffee.name = formatNewCoffee(tempName);
+    coffee.roast = document.getElementById('add-coffee-roast-select').value;
+    coffees.push(coffee);
+    // var insertAtIndex = coffees.lastIndexOf(coffee.roast);
+    // coffees.splice(insertAtIndex, 0, coffee);
+    arrangeCoffee();
+    tbody.innerHTML = renderCoffees(coffees);
+}
+
+document.querySelector()
+
+function arrangeCoffee() {
+    coffees.sort(function(a, b) {
+        return a.id - b.id
+    });
+    coffees.reverse();
+}
+
+function formatNewCoffee(input) {
+    return input.replace(/\b\w/g, function(letter) {
+        return letter.toUpperCase()
+    })
+}
+
+coffees.reverse();
