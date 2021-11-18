@@ -1,11 +1,10 @@
+/*  Root, All, Body */
 :root {
     --main-bg: saddlebrown;
 }
-
 *{
     box-sizing: border-box;
 }
-
 body{
     margin: 0;
     background-color: var(--main-bg);
@@ -14,21 +13,21 @@ body{
 .nav {
     background-color: lightgrey;
 }
+/* Elemental Styles */
 
+/* Navbar Styles */
 .navbar-list {
     display: flex;
     list-style: none;
     padding: 0;
     margin: 0;
 }
-
 .nav a {
     text-decoration: none;
     color: black;
     display: inline-block;
     padding: .5em 1em;
 }
-
 .nav ul li:nth-child(4) {
     margin-left: auto;
 }
@@ -49,7 +48,6 @@ body{
     font-family: 'Amatic SC', cursive;
     font-size: 20px;
 }
-
 
 header {
     background-image: url("/img/coffee-banner.jpeg");
@@ -91,26 +89,23 @@ h1 {
 h2{
     margin-bottom: .1em;
 }
-
 h3, h4 {
     display: inline;
     margin: 0 1em;
 }
-
 h3 {
     line-height: 3em;
 }
-
 h4 {
     line-height: 3.5em;
 }
-
 .content {
     margin: 0 auto;
     border-radius: 4px;
     text-align: center;
     flex-basis: 100%;
 }
+/* Coffee and Roast-Color Styling*/
 .coffee {
     display: flex;
     flex-direction: row;
@@ -121,38 +116,32 @@ h4 {
     border: 1px solid saddlebrown;
     border-radius: 8px;
 }
-
 .light {
     color: #DAA06D;
 }
-
 .medium {
     color: #7B3F00;
 }
-
 .dark {
     color: #5C4033;
 }
-
 .roast {
     border-radius: 7px;
     width:  92px;
 }
-
 .lt {
     background-color: #EADDCA;
     color: saddlebrown;
 }
-
 .med {
     background-color: #7B3F00;
     color: #DAA06D;
 }
-
 .drk {
     background-color: #5C4033;
     color: #DAA06D;
 }
+/* ID Styling - Containers, Tweet, Coffee container and Individual Coffees */
 #main-content {
     max-width: 972px;
     margin: 0 auto;
@@ -168,9 +157,6 @@ h4 {
     background-color: #DAA06D;
     border: 1px solid saddlebrown;
     border-radius: 8px;
-}
-#roast-filter-label {
-    margin-right: 2.5em;
 }
 #coffees {
     margin-top: 1em;
@@ -200,8 +186,8 @@ h4 {
     font-size: 18px;
     font-weight: bold;
     text-align: center;
-    top: 80px;
-    right: 48px;
+    top: 48px;
+    right: 36px;
 }
 #dismissal:hover{
     text-decoration: underline;

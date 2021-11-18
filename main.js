@@ -89,7 +89,8 @@ addCoffee.addEventListener('click', function (event) {
 });
 
 function coffeeAdd () {
-    let coffeeName = document.querySelector('#add-coffee').value.toLowerCase();
+    let coffeeNameLC = document.querySelector('#add-coffee').value.toLowerCase();
+    let coffeeName = capitalizeNames(coffeeNameLC);
     let newID = coffees.length + 1;
     let coffeeRoast = document.querySelector('#added-roast').value;
     coffees.push({id: newID, name:coffeeName, roast:coffeeRoast});
@@ -97,7 +98,18 @@ function coffeeAdd () {
     console.log(coffees);
     updateCoffees();
 }
-
+function capitalizeNames(string){
+    var name = string.split(' ');
+    var secondWord = '';
+    if(name.length === 2){
+        var secondWord = name[1];
+        var capitalizedSecondWord = secondWord[0].toUpperCase() + secondWord.substring(1);
+        secondWord = capitalizedSecondWord;
+    }
+    var firstWord = name[0];
+    var capitalizedFirstWord = firstWord[0].toUpperCase() + firstWord.substring(1);
+    return capitalizedFirstWord + " " + secondWord;
+}
 //// LOCAL STORAGE ADD TO CURRENT ARRAY AND DISPLAY //////
 
 window.onload = function(){
@@ -109,4 +121,8 @@ window.onload = function(){
     updateCoffees();
 }
 
-
+const banishTweet = document.querySelector('#dismissal');
+const tweetyDiv = document.querySelector('#twitter-fixed');
+banishTweet.addEventListener('click', function (event) {
+    tweetyDiv.style.display = 'none';
+});
