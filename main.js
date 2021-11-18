@@ -55,6 +55,9 @@ var submitButton = document.getElementById('submit');
 var roastSelection = document.getElementById('roast-selection');
 var ControlInput1 = document.getElementById('ControlInput1');
 
+
+
+
 tbody.innerHTML = renderCoffees(coffees);
 
 submitButton.addEventListener('click', updateCoffees);
@@ -72,3 +75,34 @@ function typeName(e){
     });
     tbody.innerHTML = renderCoffees(KeeperofCoffee);
 }
+
+
+
+
+var addSubmitButton = document.getElementById('add-submit');
+
+function addingNames(e){
+    e.preventDefault(); // don't submit the form, we just want to update the data
+    var addControlInput1 = document.getElementById('add-ControlInput1').value;
+    var addroastSelection = document.getElementById('addroast-selection').value;
+    var upperCaseInput = addControlInput1.charAt(0).toUpperCase() + addControlInput1.slice(1);
+    console.log(upperCaseInput);
+    console.log(addroastSelection);
+
+    var pushInput = coffees.push(upperCaseInput);
+    if (addControlInput1 === ""){
+        coffees.push(upperCaseInput);
+    }
+    tbody.innerHTML = renderCoffees(coffees)
+
+
+    Object.assign(upperCaseInput, addroastSelection);
+    console.log(obj);
+
+}
+
+
+addSubmitButton.addEventListener("click", addingNames);
+
+
+

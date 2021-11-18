@@ -6,12 +6,12 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body style="background-color: lightgrey">
 <!--   The Main Heading-->
-<h1 class="text-center border-bottom border-bold pt-3">Coffee!</h1>
+<h1 class="text-center border-bottom border-bold pt-3 shadow-sm p-3 mb-5 bg-white rounded">Coffee!</h1>
 
 <!--DIV for both LEFT&RIGHT side-->
-<div class="row m-5">
+<div class="row m-5 shadow-lg p-5 mb-5 bg-white rounded">
 
     <!--THIS IS LEFT SIDE-->
     <div class="col-6 row">
@@ -36,6 +36,28 @@
             <input id="submit" class="btn btn-primary w-100 my-2" type="submit" />
 
         </form>
+
+<!--        Bottom Form-->
+
+        <form>
+            <h2 class="text-center py-4">Add a Coffee</h2>
+
+            <label for="addroast-selection" class="font-weight-bold">Roast</label>
+            <select id="addroast-selection" class="form-control">
+                <option>light</option>
+                <option>medium</option>
+                <option>dark</option>
+            </select>
+
+            <div class="add-form-group pt-2">
+                <label for="add-ControlInput1" class="font-weight-bold pt-1">Coffee Name</label>
+                <input type="search" class="form-control" id="add-ControlInput1" placeholder="">
+            </div>
+            <input id="add-submit" class="btn btn-primary w-100 my-2" type="submit" />
+
+        </form>
+
+
     </div>
 
 
