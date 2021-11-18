@@ -26,11 +26,28 @@ body{
     text-decoration: none;
     color: black;
     display: inline-block;
-    padding: 1em;
+    padding: .5em 1em;
 }
 
 .nav ul li:nth-child(4) {
     margin-left: auto;
+}
+
+.list-item-about {
+    align-self: center;
+}
+
+.list-item-order {
+    align-self: center;
+}
+
+.list-item-sign {
+    align-self: center;
+}
+
+.link-coffee {
+    font-family: 'Amatic SC', cursive;
+    font-size: 20px;
 }
 
 
