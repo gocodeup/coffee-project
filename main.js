@@ -59,11 +59,16 @@ tbody.innerHTML = renderCoffees(coffees);
 
 submitButton.addEventListener('click', updateCoffees);
 
-function typeName(){
-    var Input1 = document.getElementById('ControlInput1').value.toLocaleLowerCase();
-    console.log(Input1);
-
-}
-
 ControlInput1.addEventListener("keyup", typeName);
 
+function typeName(e){
+    e.preventDefault(); // don't submit the form, we just want to update the data
+    var Input1 = document.getElementById('ControlInput1').value.toLowerCase();
+    var KeeperofCoffee = [];
+    coffees.forEach(function(coffee) {
+        if (coffee.name.toLowerCase().includes(Input1)){
+            KeeperofCoffee.push(coffee);
+        }
+    });
+    tbody.innerHTML = renderCoffees(KeeperofCoffee);
+}
