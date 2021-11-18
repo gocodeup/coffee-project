@@ -193,4 +193,4 @@ function addCoffee(e) {
         userInput.addEventListener('keyup', userSearch);
         roastSelection2.addEventListener('change', updateCoffees);
     }
-}//change instead of 'click'
+ 

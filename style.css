@@ -7,7 +7,6 @@ body{
     height: 100vw;
     width: 100vw;
     color: sandybrown;
-
 }
 /*td, th {*/
 /*    border: 1px solid black;*/
@@ -47,6 +46,7 @@ body{
     height: 20vh;
     font-size: 8em;
 }
+ 
 .gencontainer{
     display: flex;
     justify-content: flex-start;
@@ -89,3 +89,4 @@ ul>li {
 #coffee-roast{
     border: 2px solid white;
 }
+ 
