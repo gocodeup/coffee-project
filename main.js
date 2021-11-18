@@ -45,6 +45,7 @@ function updateCoffees(e) {
 function searchCoffees(e){
     e.preventDefault(); // don't submit the form, we just want to update the data'
     var coffeeName = coffeeNameSelection.value.toLowerCase();
+    console.log(coffeeName);
     var filteredCoffees = [];
     coffees.forEach(function(coffee){
         if (coffee.name.toLowerCase().includes(coffeeName)){
@@ -54,16 +55,25 @@ function searchCoffees(e){
     div.innerHTML = renderCoffees(filteredCoffees)
 }
 
-function searchCoffees(e){
-    e.preventDefault(); // don't submit the form, we just want to update the data'
-    var coffeeName = coffeeNameSelection.value.toLowerCase();
-    var filteredCoffees = [];
-    coffees.forEach(function(coffee){
-        if (coffee.name.toLowerCase().includes(coffeeName)){
-            filteredCoffees.push(coffee);
-        }
-    });
-    div.innerHTML = renderCoffees(filteredCoffees)
+var newCoffeeName = document.querySelector('#new-coffee-name');
+var newCoffeeRoast = document.querySelector('#new-coffee-roast');
+var submitNewCoffeeButton = document.querySelector('#submit-new-coffee');
+//Add functionality to add new coffee to array.
+submitNewCoffeeButton.addEventListener('click', addNewCoffee);
+
+function addNewCoffee(obj){
+    let coffeeID = coffees.length+1;
+    let newNameOfCoffee = newCoffeeName.value.toLowerCase().toString();
+    let newCoffeeType = newCoffeeRoast.value.toString();
+    obj  = {
+        id: coffeeID,
+        name: newNameOfCoffee,
+        roast: newCoffeeType
+    }
+    console.log(obj);
+    coffees.push(obj);
+    console.log(coffees);
+    div.innerHTML = renderCoffees(coffees);
 }
 
 // from http://www.ncausa.org/About-Coffee/Coffee-Roasts-Guide
@@ -87,14 +97,16 @@ var coffees = [
 var div = document.querySelector('#coffees');
 var submitButton = document.querySelector('#submit');
 var roastSelection = document.querySelector('#roast-selection');
-var coffeeNameSelection = document.querySelector('#coffee-name')
+var coffeeNameSelection = document.querySelector('#coffee-name');
 
 div.innerHTML = renderCoffees(coffees);
 
 // Add functionality to update the displayed coffee according to the values typed into the Input field
+
 coffeeNameSelection.addEventListener('input', searchCoffees)
 
 submitButton.addEventListener('click', updateCoffees);
 
 //Add functionality to update the displayed coffee as soon as they select an option from the select.
 roastSelection.addEventListener('change', updateCoffees);
+
