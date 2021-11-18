@@ -24,7 +24,6 @@ function renderCoffee(coffee) {
     return html;
 }
 
-
 function renderCoffees(coffees) {
     var html = '';
 

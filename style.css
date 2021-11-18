@@ -8,7 +8,7 @@ table {
     margin: 15px 0;
 }
 #query {
-    width: 95%;
+    width: 99%;
 }
 #searchcard {
     border: none;
@@ -20,11 +20,12 @@ td, th {
 #roast-selection, #query, #searchbtn, #submit, #addRoast, #addCoffee, #addDescription, #submitcoffee{
     border: none;
     padding: .5em;
-    margin: 1px
+    margin: 1px;
+    width: 99%;
 }
 
-#searchbtn {
-    width: 100%;
+.searchBox, #addCoffee, #addDescription {
+    opacity: 0.8;
 }
 
 .light {
@@ -81,4 +82,33 @@ h4 {
     background-size: cover;
 }
 
+i {
+
+    margin-right: 20px;
+    margin-left: 20px;
+
+}
+.footer {
+    text-align: center;
+    margin-bottom: 30px;
+    font-family: 'Architects Daughter', sans-serif;
+}
+
+a {
+    color: #654321;
+}
+
+.card {
+    background-color: darkslategrey;
+}
+
+.nav-link {
+    text-align: center;
+    margin-left: 650px;
+}
+.about{
+    text-align:center;
+    color: #d5dcdc;
+    text-shadow: 1px 1px black;
+}
 

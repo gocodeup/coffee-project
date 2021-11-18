@@ -14,14 +14,20 @@
 
 </head>
 <body>
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark sticky-top">
+    <ul class="navbar-nav">
+            <a class="nav-link" href="#"><p>Call us now! 210-555-5555</p></a>
+    </ul>
+</nav>
 <div class="mobile-hide">
     <div class="jumbotron bg-cover jumbotron-fluid" style="background-image: url(photos/img.png)">
         <div class="container">
-            <h1 class="display-4">Cody's Coffee</h1>
+            <h1 class="display-4">Codey's Coffee</h1>
             <p class="tag">Just brew it <i class="fas fa-mug-hot"></i></p>
         </div>
     </div>
 </div>
+
 <main class="container">
 
     <div class="row m-0">
@@ -37,7 +43,7 @@
         <div class="col-2 p-0 m-0">
             <div class="row m-0">
                 <div class="card">
-                    <div class="card m-2 " id="searchCard">
+                    <div class="card ">
                         <form class="d-flex">
                             <label for="roast-selection"></label>
                             <select class="flex-grow-1" id="roast-selection">
@@ -48,8 +54,6 @@
                             </select>
                             <input id="submit" type="submit"/>
                         </form>
-                    </div>
-                    <div class="card m-2" id="searchcard">
                         <form id="form">
                             <input type="search" id="query" class="searchBox" placeholder="Search...">
                             <button id="searchbtn">Search</button>
@@ -63,19 +67,28 @@
                                 <option>medium</option>
                                 <option>dark</option>
                             </select>
-                        </div>
-                        <div class="card">
                             <input type="text"  id="addCoffee" placeholder="Add a coffee"/>
-                        </div>
-                        <div class="card">
-                            <input type="text"  id="addDescription" placeholder="Add a description"/>
+
+                            <input type="text" maxlength = "40" id="addDescription"  placeholder="add description"/>
+                            <p style="color: white">*max char 40</p>
                             <input id="submitcoffee" type="submit"/>
                         </div>
                     </form>
+
                 </div>
             </div>
+            <br>
+            <div class="about">About us:
+            <br>We are passionate coffee brewers who only use the best coffee beans found in the coffee belt. Although we were established in 2014, our brewing methods go back to the 1800's when our family first came to the Americas.
+        </div>
         </div>
     </div>
+
+    <div class="footer">
+        <p>Codey's Coffee est. 2014<br>
+            San Antonio, Tx 78205 <br>
+            210-555-5555 <br></p>
+        <a href=""> <i class="fab fa-facebook"></i> </a><a href=""><i class="fab fa-twitter"></i> </a><a href=""><i class="fas fa-envelope"> </i></a><a href=""><i class="fas fa-phone"></i></a>
     </div>
 </main>
 <script src="main.js"></script>
