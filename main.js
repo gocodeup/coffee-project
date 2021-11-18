@@ -60,9 +60,15 @@ var submitButton = document.querySelector('#submit');
 var roastSelection = document.querySelector('#roast-selection');
 //  creating sort var to sort coffees in ascending order
 var sortedCoffees = coffees.sort((a,b) => (a.id < b.id) ? 1 : -1);
-
+//  creating onSelection var
+var onSelect = document.querySelector('.mySelection')
 //  replaced param of coffees to sortedCoffees
 coffeesContainer.innerHTML = renderCoffees(sortedCoffees);
+//  creating listener for dropdown selection
+//  w3schools big help on change listener
+onSelect.addEventListener('change', updateCoffees);
+onSelect.addEventListener('change', allCoffees);
 
-submitButton.addEventListener('click', updateCoffees);
-submitButton.addEventListener('click', allCoffees);
+// submitButton.addEventListener('click', updateCoffees);
+// submitButton.addEventListener('click', allCoffees);
+
