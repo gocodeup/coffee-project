@@ -35,12 +35,15 @@
         <div class="our-4 row">
             <div class="section-bg animate__animated animate__fadeInUp animate_slower">
                 <div>
-            <div id="coffees" class="row border-radius animate__animated animate__fadeInUp animate_slower"></div>
+                    <div class="row text-center">
+                        <div class="gencontainer">
+                            <main id="coffees" class="row border-radius "></main>
+                        </div>
+                    </div>
                 </div>
-            </div>
         </div>
     </div>
-
+</div>
     <div class="container col mb-3">
         <div class="row " >
             <div class="align-middle col-5 p-2 section-bg">
@@ -52,6 +55,7 @@
                                 <label class="fw-bold" for="roast-selection"> Coffee Roast</label>
                                 <div>
                                     <select class="col-12" id="roast-selection">
+                                        <option>All</option>
                                         <option>light</option>
                                         <option>medium</option>
                                         <option>dark</option>
@@ -61,31 +65,38 @@
 
 
                             <div>
+                                <form id="searchBar" autocomplete="on">
                                 <label class="fw-bold" for="roast-selection">Coffee Name</label>
                                 <div>
                                     <label for="user-input">
-                                        <input class="col-12 mb-1" type="search" id="user-input" placeholder="search coffees">
+                                        <input type="text" id="user-input" class="p-0 border-white"
+                                               onkeyup="myFunction()"  placeholder="search coffees">
                                     </label>
                                 </div>
-                            </div>
-                            <!--   the button for submitting search-->
-                            <div class="d-flex justify-content-center">
-                                <button class="col-6" type="submit">SUBMIT</button>
+                                </form>
                             </div>
                         </form>
+                            <!--   the button for submitting search-->
+
+                            <div class="d-flex justify-content-center">
+                                <button class="col-6 btn-color" type="submit">SUBMIT</button>
+                            </div>
+
                 </div>
                         <!--had also copied from by mistake            -->
 <!--                <div class="container fixed-bottom col mb-3 animate__animated animate__fadeInUp animate_slower">-->
 <!--                <div class="row justify-content-center">-->
                 <div class="col-5 p-2 section-bg">
+                    <div class="msg"></div>
                     <div class="h1">Add A Coffee</div>
                     <!-- here is the roast selection for coffee roast-->
                     <!-- probably copy paste for 2nd part for the "Add a Coffee" section-->
                     <form>
                         <div>
-                            <label class="fw-bold" for="roast-selection"> Coffee Roast</label>
+                            <label class="fw-bold" for="roast-selection2"> Coffee Roast</label>
                             <div><!-- removed id="roast-selection" due to copy-paste from the 1st part-->
-                                <select class="col-12" >
+                                <select class="col-12" id="roast-selection2" >
+                                    <option>All</option>
                                     <option>light</option>
                                     <option>medium</option>
                                     <option>dark</option>
@@ -94,7 +105,7 @@
                         </div>
 
                         <div>
-                            <label class="fw-bold" for="roast-selection">Coffee Name</label>
+                            <label class="fw-bold" for="roast-selection2">Coffee Name</label>
                             <div>
                                 <label for="user-input"> <!-- removed id="user-input" due to copy-paste from the 1st part-->
                                     <input class="col-12 mb-1" type="search" placeholder="search coffees">
@@ -103,7 +114,7 @@
                         </div>
                         <!--   the button for submitting search-->
                         <div class="d-flex justify-content-center">
-                            <button class="col-6" type="submit">SUBMIT</button>
+                            <button class="col-6 btn-color" type="submit">SUBMIT</button>
                         </div>
                     </form>
                 </div>
@@ -112,7 +123,7 @@
     </div>
 </div>
 </div>
- 
+
     <!--    <h1>Coffee!</h1>-->
 <!--    <form>-->
 <!--        <label for="roast-selection"></label>-->
@@ -143,3 +154,4 @@
 
 </body>
 </html>
+
