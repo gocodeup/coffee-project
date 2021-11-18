@@ -2,8 +2,10 @@
 
 function renderCoffee(coffee) {
     var html = '<div class="coffee card shadow-sm p-1 bg-white rounded">';
-    html += '<div class="card-body">' + '<h2 class ="card-title">' + coffee.name +'</h2>';
-    html += '<h5 class ="card-text">' + coffee.roast + " roast" + '</h5>';
+    html += '<img src="Screen%20Shot%202021-11-17%20at%201.51.16%20PM.png" alt="coffee" style="width:350px; height: auto; ">'
+    html += '<div class="card-body">' + '<h2 class ="card-title" style="color: red; font-weight: bold">' + coffee.name +'</h2>';
+    html += '<h5 class ="card-text">' + "BLEND | "  + coffee.roast + " roast" + '</h5>';
+    html += '<h5 class="card-text">' + "12 oz | $14.95" +  '</h5>';
     html += '</div>';
     html += '</div>';
     
@@ -53,6 +55,7 @@ var coffees = [
 var tbody = document.querySelector('#coffees');
 var submitButton = document.querySelector('#submit');
 var roastSelection = document.querySelector('#roast-selection');
+
 
 tbody.innerHTML = renderCoffees(coffees);
 
