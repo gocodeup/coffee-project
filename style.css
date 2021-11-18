@@ -111,13 +111,13 @@ select {
     font-size: 14px;
 }
 
-.choose-roast {
-display: flex;
-justify-content: center;
+/*.choose-roast {*/
+/*display: flex;*/
+/*justify-content: center;*/
 
-    border: 3px solid green;
-   
-}
+/*    border: 3px solid green;*/
+/*   */
+/*}*/
 /*Search button*/
 form.example input[type=text] {
     padding: 10px;
