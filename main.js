@@ -1,11 +1,12 @@
 "use strict"
 
+// This is going to effect the coffee name and roast type
 function renderCoffee(coffee) {
-    var html = '<tr class="coffee">';
-    html += '<td>' + coffee.id + '</td>';
-    html += '<td>' + coffee.name + '</td>';
-    html += '<td>' + coffee.roast + '</td>';
-    html += '</tr>';
+    var html = '<div class="coffee d-inline-flex col-6">';
+    // html += '<td>' + coffee.id + '</td>';
+    html += '<h1 class=" font-weight-bold d-flex" >' + coffee.name + '</h1>';
+    html += '<p class="text-secondary  font-weight-lighter  pt-3 h5 ml-3 d-inline">' + coffee.roast + '</p>';
+    html += '</div>';
 
     return html;
 }
@@ -17,6 +18,7 @@ function renderCoffees(coffees) {
     }
     return html;
 }
+
 
 function updateCoffees(e) {
     e.preventDefault(); // don't submit the form, we just want to update the data
@@ -48,10 +50,25 @@ var coffees = [
     {id: 14, name: 'French', roast: 'dark'},
 ];
 
-var tbody = document.querySelector('#coffees');
-var submitButton = document.querySelector('#submit');
-var roastSelection = document.querySelector('#roast-selection');
+var tbody = document.getElementById('coffees');
+var submitButton = document.getElementById('submit');
+var roastSelection = document.getElementById('roast-selection');
+var ControlInput1 = document.getElementById('ControlInput1');
 
 tbody.innerHTML = renderCoffees(coffees);
 
 submitButton.addEventListener('click', updateCoffees);
+
+ControlInput1.addEventListener("keyup", typeName);
+
+function typeName(e){
+    e.preventDefault(); // don't submit the form, we just want to update the data
+    var Input1 = document.getElementById('ControlInput1').value.toLowerCase();
+    var KeeperofCoffee = [];
+    coffees.forEach(function(coffee) {
+        if (coffee.name.toLowerCase().includes(Input1)){
+            KeeperofCoffee.push(coffee);
+        }
+    });
+    tbody.innerHTML = renderCoffees(KeeperofCoffee);
+}
