@@ -83,7 +83,6 @@ td, th {
     position: absolute;
     left: 700px;
     top: 150px;
-
 }
 
 @media (max-width:1089px) {
@@ -136,6 +135,7 @@ p {
 .coffee-image {
     width: 50%;
     margin: 30px;
+
     /*padding-left: 0;*/
     /*padding-right: 0;*/
 }
@@ -182,7 +182,9 @@ p {
     color: black;
     font-weight: bolder;
 }
-
+#coffees{
+    font-size: 2em ;
+}
 #roast-selection {
     background-color: #ffff;
     position: relative;
@@ -200,16 +202,40 @@ p {
     cursor: pointer;
     user-select: none;
 }
-
-/* Testimonials & Press Section*/
-#press {
-    background-color: white;
-    padding-bottom: 3%;
+.coffee-button{
+    background-color: #9A9483;
+    color: #FFFFFF;
+}
+.coffee-button:hover{
+    background-color: #AA2B1D;
+    color: #FFFFFF;
 }
 
-.press-logo {
-    width: 12%;
-    margin: 20px 20px 15px;
+#add-coffee-roast-select{
+    background-color: #ffff;
+    position: relative;
+    padding: 8px 16px;
+    border: 1px solid gray;
+    cursor: pointer;
+    user-select: none;
+    margin: 25px 0;
+}
+
+#add-coffee-name{
+    background-color: #ffff;
+    position: relative;
+    padding: 8px 16px;
+    border: 1px solid gray;
+    cursor: pointer;
+    user-select: none;
+}
+
+
+/* Testimonials & Press Section*/
+.test-img{
+    border-radius: 50%;
+    width:105px;
+    height: 105px;
 }
 /*cta & contact section*/
 #cta {
