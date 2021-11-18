@@ -7,3 +7,26 @@ td, th {
     border: 1px solid black;
     padding: 5px 10px;
 }
+
+.jumbotron.jumbotron-fluid{
+    background-size: cover;
+    background-image: url(../img/coffee-beans2.png);
+}
+
+.display-4{
+    text-align: center;
+    color: white;
+}
+
+body{
+    background-color: bisque;
+}
+
+.btn:hover {
+    background:linear-gradient(to bottom, #ffab23 5%, #ffec64 100%);
+    background-color:#ffab23;
+}
+.btn:active {
+    position:relative;
+    top:1px;
+}
