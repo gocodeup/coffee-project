@@ -75,14 +75,16 @@ searchBar.addEventListener('keyup', (e) => {
     //  got target from object keys which has a value property to target
     //  the value of the target; in this case the value of the search bar
     // console.log(e.target.value);
-    var searchStr = e.target.value;
+    //  making search and filter case insensitive with .toLowercase()
+    var searchStr = e.target.value.toLowerCase();
+    // console.log(searchStr);
     var filteredChars = coffees.filter(coffee => {
         return (
-            coffee.name.includes(searchStr) ||
-            coffee.roast.includes(searchStr)
+            coffee.name.toLowerCase().includes(searchStr) ||
+            coffee.roast.toLowerCase().includes(searchStr)
         );
     });
-    console.log(filteredChars);
+    // console.log(filteredChars);
     // console.log(typeof filteredChars);
     coffeesContainer.innerHTML = renderCoffees(filteredChars);
 })
