@@ -100,14 +100,38 @@ function addCoffee(r) {
         roast: "",
         description: "",
     }
+
     addedCoffee.id = coffees.length + 1;
-    addedCoffee.name = newCoffee.value;
+    addedCoffee.name = capitalizeName(newCoffee.value);
     addedCoffee.roast = newRoast.value;
     addedCoffee.description = newDescription.value;
     customCoffees.push(addedCoffee);
-    addeddDiv.innerHTML = renderCoffees(customCoffees);
+    window.localStorage.setItem('customcoffeenames', JSON.stringify(addedCoffee.name));
+    window.localStorage.setItem('customcoffeeroasts', JSON.stringify(addedCoffee.roast));
+    window.localStorage.setItem('customcoffeedescriptions', JSON.stringify(addedCoffee.description));
+    console.log(JSON.parse(window.localStorage.getItem('customcoffeenames')));
+    addeddDiv.innerHTML = renderCoffees(customCoffees)
+}
+
+
+
+function capitalizeName (str) {
+
+    var splitStr = str.toLowerCase().split(' ');
+    for (var i = 0; i < splitStr.length; i++) {
+
+        splitStr[i] = splitStr[i].charAt(0).toUpperCase() + splitStr[i].substring(1);
+    }
+    return splitStr.join(' ');
+
 
 }
+window.addEventListener('load', (event) =>{
+    console.log(JSON.parse(window.localStorage.getItem('customcoffenames')));
+
+
+
+})
 
 // from http://www.ncausa.org/About-Coffee/Coffee-Roasts-Guide
 var coffees = [
