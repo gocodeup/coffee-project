@@ -185,6 +185,15 @@ p {
 #coffees{
     font-size: 2em ;
 }
+.coffee-name{
+    font-size: 1em;
+    margin: 25px 25px 5px;
+
+}
+.text-center{
+    font-size: 0.5em;
+
+}
 #roast-selection {
     background-color: #ffff;
     position: relative;
@@ -248,7 +257,9 @@ p {
     font-size: 2rem;
     line-height: 1.5;
 }
-
+.app{
+    color:#FFFFFF;
+}
 .sign-up {
     font-family: Montserrat;
     font-size: 2.5rem;
@@ -259,16 +270,7 @@ p {
 .btn-footer {
     padding-top: 10px;
 }
-/*Press Section*/
-#press {
-    background-color: #CDC7BE;
-    padding-bottom: 3%;
-}
 
-.press-logo {
-    width: 12%;
-    margin: 20px 20px 15px;
-}
 /*footer section*/
 #footer {
     background-color: white;
@@ -281,4 +283,138 @@ p {
 
 .social-icon {
     margin: 20px 10px;
+}
+/*contact form*/
+
+.contact1{
+    width: 100%;
+    min-height: 100%;
+    padding: 15px;
+
+}
+
+.container-contact1 {
+    width: 1163px;
+    background: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+}
+.container-contact1-form-btn {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.container-contact1 {
+    width: 1163px;
+    background: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 90px 130px 88px 148px;
+}
+.contact1-form-title {
+    display: block;
+    font-size: 24px;
+    color: #333333;
+    line-height: 1.2;
+    text-align: center;
+    padding-bottom: 44px;
+}
+
+input.input1 {
+    height: 50px;
+    border-radius: 25px;
+    padding: 0 30px;
+}
+input.input1 + .shadow-input1 {
+    border-radius: 25px;
+}
+
+textarea.input1 {
+    min-height: 150px;
+    border-radius: 25px;
+    padding: 12px 30px;
+}
+textarea.input1 + .shadow-input1 {
+    border-radius: 25px;
+}
+.contact1-form-btn {
+    min-width: 193px;
+    height: 50px;
+    border-radius: 25px;
+    background: #9A9483;
+    font-size: 15px;
+    line-height: 1.5;
+    color: #fff;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 25px;
+
+    -webkit-transition: all 0.4s;
+    -o-transition: all 0.4s;
+    -moz-transition: all 0.4s;
+    transition: all 0.4s;
+}
+.wrap-input1 {
+    position: relative;
+    width: 100%;
+    z-index: 1;
+    margin-bottom: 20px;
+}
+
+.input1 {
+    display: block;
+    width: 100%;
+    background: #e6e6e6;
+    font-size: 15px;
+    line-height: 1.5;
+    color: #666666;
+}
+
+.shadow-input1 {
+    content: '';
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    box-shadow: 0px 0px 0px 0px;
+
+}
+
+.input1:focus + .shadow-input1 {
+    -webkit-animation: anim-shadow 0.5s ease-in-out forwards;
+    animation: anim-shadow 0.5s ease-in-out forwards;
+}
+.contact1-form-btn i {
+    margin-left: 7px;
+
+    -webkit-transition: all 0.4s;
+    -o-transition: all 0.4s;
+    -moz-transition: all 0.4s;
+    transition: all 0.4s;
+}
+
+.contact1-form-btn:hover {
+    background: #AA2B1D;
 }

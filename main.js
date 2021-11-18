@@ -7,7 +7,7 @@
 function renderCoffee(coffee) {
     var html = '<div class="coffee">';
     // html += '<div>' + coffee.id + '</div>'; ID does not display
-    html += '<h1>' + coffee.name + '</h1>'; // Heading for coffee names
+    html += '<h1 class="coffee-name">' + coffee.name + '</h1>'; // Heading for coffee names
     html += '<p class="text-center">' + coffee.roast + '</p>'; // Paragraph for roast types
     html += '</div>';
 
