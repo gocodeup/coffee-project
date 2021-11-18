@@ -19,19 +19,26 @@
         </div>
         <div class="col-6">
             <form class="col">
-                <label for="roast-selection" class="col-12">Roast</label>
-                <select id="roast-selection" class="col-12 mySelection">
-                    <option selected>all</option>
-                    <option>light</option>
-                    <option>medium</option>
-                    <option>dark</option>
-                </select>
-                <input id="submit" type="submit" class="mt-2"/>
+                <div class="form-group">
+                    <label for="roast-selection" class="col-12">Roast</label>
+                    <select id="roast-selection" class="col-12 mySelection">
+                        <option selected>all</option>
+                        <option>light</option>
+                        <option>medium</option>
+                        <option>dark</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="roast-search" class="col-12">Coffee Name</label>
+                    <input type="text" id="roast-search" class="form-control">
+                </div>
+                <div class="form-group">
+                    <button id="submit" type="button" class="btn btn-primary btn-lg btn-block">Submit</button>
+<!--                    <input id="submit" type="submit" class="mt-2"/>-->
+                </div>
             </form>
         </div>
     </div>
-
-
 </div>
 
 
@@ -43,3 +50,11 @@
 <script src="main.js"></script>
 </body>
 </html>
+
+<!--
+<div class="form-group">
+    <label for="exampleInputEmail1">Email address</label>
+    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+    <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+  </div>
+-->
