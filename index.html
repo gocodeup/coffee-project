@@ -219,7 +219,11 @@
                 <div class="new-roast text-dark col-lg-* ">
                     <strong>Roast</strong>
                 </div>
+
+
+
                 <select class="selectpicker bs-select-hidden" id="roast-selection" style="width:100%" >
+                    <option disabled selected value> -- select an option -- </option>
                     <option >light</option>
                     <option>medium</option>
                     <option>dark</option>
@@ -252,8 +256,9 @@
                 </div>
                 <input id="add-coffee-name" class="form-control" type="text" placeholder="Add a Coffee" style="width:100%">
                 <div class=" text-center">
-                    <input onclick="addCoffee()" class="btn coffee-button btn-lg btn-block mt-3" id="submit-2" type="submit" />
+                    <input onclick="viewData(text)" class="btn coffee-button btn-lg btn-block mt-3" id="submit-2" type="submit" />
                 </div>
+                <div id="divCheckbox" style="display: none;"></div>
             </form>
         </div>
     </div>

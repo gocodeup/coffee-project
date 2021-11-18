@@ -14,12 +14,6 @@ function renderCoffee(coffee) {
     return html;
 }
 
-function showHideCoffee() {
-    if(document.getElementById('roast-selection')){
-
-    }
-}
-
 function renderCoffees(coffees) {
     var html = '';
     for(var i = coffees.length - 1; i >= 0; i--) {
@@ -27,13 +21,13 @@ function renderCoffees(coffees) {
     }
     return html;
 }
-
+//Updates according to the option selected in form
 function updateCoffees(e) {
     e.preventDefault(); // don't submit the form, we just want to update the data
     var selectedRoast = roastSelection.value;
     // var searchedRoast = search.value.toUpperCase();
     var filteredCoffees = [];
-    coffees.forEach(function(coffee) {
+    sortById.forEach(function(coffee) {
         if (coffee.roast === selectedRoast) {
             filteredCoffees.push(coffee);
         } else if(roastSelection.value === 'all') {
@@ -42,7 +36,7 @@ function updateCoffees(e) {
     });
     tbody.innerHTML = renderCoffees(filteredCoffees);
 }
-
+//Searched through list of coffees
 function searchCoffees() {
     var searchedCoffee = search.value.toUpperCase();
     var filteredCoffees =[];
@@ -53,6 +47,26 @@ function searchCoffees() {
     });
     tbody.innerHTML = renderCoffees(filteredCoffees);
 }
+//adds a new coffee item to the array
+
+var addRoast = document.getElementById('add-coffee-roast-select')
+var addName = document.getElementById('add-coffee-name')
+function coffeeAdd(obj) {
+    obj.preventDefault(); // will not submit the form, stopping the refresh
+    var id = coffees.length + 1;
+    var newAddRoast = addRoast.value;
+    var newAddName = addName.value.charAt(0).toUpperCase() + addName.value.slice(1);
+    obj = {id: id, name: newAddName, roast: newAddRoast};
+    /*attempt at saving data
+    window.localStorage.setItem('name', JSON.stringify(coffees.push(obj)));
+    JSON.parse(window.localStorage.getItem('name'));*/
+    coffees.push(obj);
+
+
+    tbody.innerHTML = renderCoffees(coffees);
+
+}
+
 
 // from http://www.ncausa.org/About-Coffee/Coffee-Roasts-Guide
 var coffees = [
@@ -77,7 +91,9 @@ var submitButton = document.querySelector('#submit');
 var submitButton2 = document.querySelector('#submit-2');
 var roastSelection = document.querySelector('#roast-selection');
 var search = document.querySelector('#search');
-var div = document.querySelector('#coffees');
+var sortById = coffees.sort(function(a, b) {
+    return b.id - a.id
+});
 
 tbody.innerHTML = renderCoffees(coffees);
 
@@ -85,31 +101,9 @@ submitButton.addEventListener('click', updateCoffees);
 search.addEventListener('input', searchCoffees)
 
 
-// Add coffee section
 
-function addCoffee() {
-    var coffee = {
-        id:'',
-        name:'',
-        roast:'',
-    };
-    coffee.id = coffees.length + 1;
-    var addedName = document.getElementById('add-coffee-name').value;
-    coffee.name = formatNewCoffee(addedName);
-    coffee.roast = document.getElementById('add-coffee-roast-select').value;
-    coffees.push(coffee);
-    arrangeCoffee();
-    tbody.innerHTML = renderCoffees(coffees);
-}
+submitButton2.addEventListener('click', coffeeAdd);
 
-submitButton2.addEventListener('click', addCoffee);
-
-function arrangeCoffee() {
-    coffees.sort(function(a, b) {
-        return a.id - b.id
-    });
-    coffees.reverse();
-}
 
 function formatNewCoffee(input) {
     return input.replace(/\b\w/g, function(letter) {
