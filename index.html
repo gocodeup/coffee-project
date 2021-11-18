@@ -11,25 +11,59 @@
     <script src="https://kit.fontawesome.com/5bdcb73ea0.js" crossorigin="anonymous"></script>
 
 </head>
-<body>
-<div class="jumbotron" style="height: 40px; background-color: white">
-    <h1 class="display-4 text-center" style="margin-top: -30px">Coffee!</h1>
-    <br>
-    <hr>
-</div>
+<body style="background-image: url(img/image2.jpg); background-size: cover;">
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light Navi">
+    <a class="navbar-brand" href="#"style="color: saddlebrown; font-weight: bolder; font-family: 'Architects Daughter', cursive;">Coffee Stop</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+                <a class="nav-link" href="#"style="color: grey">Our Mission <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Our Baristas</a>
+            </li>
+            <form class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2" type="search" placeholder="Zip code" aria-label="Search">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit"style="color: grey; border-color: lightgrey">Search stops near you!</button>
+            </form>
+
+        </ul>
+
+        <ul class="nav justify-content-end">
+            <li class="nav-item">
+                <a class="nav-link" href="#" tabindex="-1" aria-disabled="true" style="color: grey"><i class="fas fa-user-plus"></i> Sign up</a>
+            </li>
+        </ul>
+
+
+
+    </div>
+</nav>
+
+
+
+<br><br>
+<div class="jumbotron" style="height: 40px; background-color: white;"></div>
+    <h1 class="display-4 text-center" style="margin-top: -140px; color: aliceblue; font-weight: bolder; font-size: 75px;">Coffee!</h1>
+    <br><br><br>
 <div class="container">
     <div class="row">
         <div class="col">
             <form>
                 <div class="row">
                     <div class="container m-auto p-auto col-12">
-                        <label for="coffee-name" class="control-label font-weight-bold text-capitalize">Coffee
+                        <label for="coffee-name" class="control-label font-weight-bold text-capitalize" style="color: bisque">Coffee
                             Name</label>
                         <input type="text" id="coffee-name">
                     </div>
                     <div class="container m-auto p-auto col-12">
                         <label for="roast-selection"
-                               class="control-label font-weight-bold text-capitalize">Roast</label>
+                               class="control-label font-weight-bold text-capitalize" style="color: bisque">Roast</label>
                         <select id="roast-selection">
                             <option>all</option>
                             <option>light</option>
@@ -67,5 +101,6 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
         crossorigin="anonymous"></script>
+
 </body>
 </html>

@@ -3,7 +3,7 @@
 function renderCoffee(coffee) {
     // Refactored the code to use bootstrap and divs instead of Tables
     var html = '<div class="col-6 m-0">';
-    // html += '<span>' + coffee.id + " " + '</span>';
+
     html += '<span class="font-weight-bold text-capitalize">' + coffee.name + " " + '</span>';
     html += '<span class="font-weight-bold text-capitalize text-black-50">' + coffee.roast + '</span>';
     html += '</div>';
@@ -15,10 +15,12 @@ function renderCoffees(coffees) {
 
     var html = '';
     html = '<div class = "row">';
+
     // Original code loops the coffees going backwards thru the array
     // for(var i = coffees.length - 1; i >= 0; i--) {
 
     // Refactored the code to loop thru the array starting from the beginning of the array
+
     for(var i = 0; i < coffees.length; i++) {
         html += renderCoffee(coffees[i]);
     }
@@ -98,8 +100,11 @@ var roastSelection = document.querySelector('#roast-selection');
 var coffeeNameSelection = document.querySelector('#coffee-name');
 
 div.innerHTML = renderCoffees(coffees);
+
 // Add functionality to update the displayed coffee according to the values typed into the Input field
-coffeeNameSelection.addEventListener('keyup', searchCoffees);
+
+coffeeNameSelection.addEventListener('input', searchCoffees)
+
 submitButton.addEventListener('click', updateCoffees);
 
 //Add functionality to update the displayed coffee as soon as they select an option from the select.
