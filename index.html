@@ -27,7 +27,7 @@
     <!-- Nav Bar -->
     <div class="container-fluid top">
         <nav class="navbar navbar-expand-lg navbar-dark">
-            <a class="navbar-brand" href="">Natural Fix</a>
+            <a class="navbar-brand" href="">Kuali Cavee</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -41,14 +41,15 @@
                         <a class="nav-link" href="#carousel-coffee"><strong>Gallery</strong></a>
                     </li>
                     <li class="nav-item">
+                        <a class="nav-link" href="#menu">Order<i class="fas fa-coffee"></i></a>
+                    </li>
+                    <li class="nav-item">
                         <a class="nav-link" href="#sizing"><strong>Order</strong></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#cta"><strong>Contact</strong></a>
+                        <a class="nav-link" href="#cta"><strong>App</strong></a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#menu"><i class="fas fa-coffee"></i></a>
-                    </li>
+
 
 
                 </ul>
@@ -62,7 +63,7 @@
                 <h1>Every good <strong>Coffee</strong>
                     <br>          starts with a good <strong>Roast</strong>.</h1>
 
-                <button type="button" class="btn btn-outline-light btn-lg download-button " onclick="location.href='#sizing';">   Order  </button>
+                <button type="button" class="btn btn-light btn-lg download-button " onclick="location.href='#sizing';">   Order  </button>
             </div>
         </div>
     </div>
@@ -78,7 +79,7 @@
             <div class="feature-box col-lg-4">
                 <i class="fas fa-heart icon"></i>
                 <h3>Quality</h3>
-                <p> A cup of Natural Fix Coffee is expertly crafted with premium organic coffee to meet our high quality standards.</p>
+                <p> A cup of Kuali Cavee is expertly crafted with premium organic coffee to meet our high quality standards.</p>
             </div>
             <div class="feature-box col-lg-4">
                 <i class="fas fa-seedling icon"></i>
@@ -200,6 +201,7 @@
 
 <!--Menu -->
 <section class="colored-section my-lg-2 py-lg-5" id="menu">
+    <h1 class="menu-header"> Our Coffee Selection</h1>
     <div class="row">
 
         <div id="coffees" class="container d-flex flex-wrap col-6">
@@ -305,8 +307,9 @@
 <section class="colored-section" id="cta">
     <div class="container-fluid">
         <div class="cta-footer">
-            <h3 class="sign-up">Natural Fix APP</h3>
-            <p>Order from anywhere!! Download our App, and enjoy all the benefits.</p>
+            <h3 class="sign-up">Kuali Cavee APP</h3>
+            <p class="app">Order from anywhere!! Download our App, and enjoy all the benefits.</p>
+            <img src="images/pngkey.com-coffee-to-go-png-8548341%20copy.png">
         </div>
 
         <div class="btn-footer">
@@ -322,8 +325,44 @@
 <!-- Footer -->
 
 <footer class="white-section" id="footer">
-    <div class="container-fluid">
+    <div class="container-fluid col-6 align-self-center">
+        <div class="contact1 ">
+            <form class="contact1-form validate-form">
+				<span class="contact1-form-title">
+					Get in touch
+				</span>
 
+                <div class="wrap-input1 validate-input" data-validate = "Name is required">
+                    <input class="input1" type="text" name="name" placeholder="Name">
+                    <span class="shadow-input1"></span>
+                </div>
+
+                <div class="wrap-input1 validate-input" data-validate = "Valid email is required: ex@abc.xyz">
+                    <input class="input1" type="text" name="email" placeholder="Email">
+                    <span class="shadow-input1"></span>
+                </div>
+
+                <div class="wrap-input1 validate-input" data-validate = "Subject is required">
+                    <input class="input1" type="text" name="subject" placeholder="Subject">
+                    <span class="shadow-input1"></span>
+                </div>
+
+                <div class="wrap-input1 validate-input" data-validate = "Message is required">
+                    <textarea class="input1" name="message" placeholder="Message"></textarea>
+                    <span class="shadow-input1"></span>
+                </div>
+
+                <div class="container-contact1-form-btn">
+                    <button class="contact1-form-btn">
+						<span>
+							Send Email
+							<i class="fa fa-long-arrow-right" aria-hidden="true"></i>
+						</span>
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
         <button type="button" class="social-icon btn btn-light twitter-btn"> <i class="fab fa-twitter"></i></button>
         <button type="button" class="social-icon btn btn-light facebook-btn"> <i class="fab fa-facebook-f"></i></button>
         <button type="button" class="social-icon btn btn-light instagram-btn"> <i class="fab fa-instagram"></i></button>
