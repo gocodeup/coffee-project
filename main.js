@@ -87,6 +87,7 @@ addCoffee.addEventListener('click', function (event) {
     event.preventDefault()
     coffeeAdd();
 });
+
 function coffeeAdd () {
     let coffeeName = document.querySelector('#add-coffee').value.toLowerCase();
     let newID = coffees.length + 1;
@@ -96,6 +97,9 @@ function coffeeAdd () {
     console.log(coffees);
     updateCoffees();
 }
+
+//// LOCAL STORAGE ADD TO CURRENT ARRAY AND DISPLAY //////
+
 window.onload = function(){
     let storedCoffee = JSON.parse(localStorage.getItem('coffees'));
     console.log(storedCoffee);

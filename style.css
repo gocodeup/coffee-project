@@ -1,19 +1,46 @@
 :root {
     --main-bg: saddlebrown;
 }
+
 *{
     box-sizing: border-box;
 }
+
 body{
     margin: 0;
     background-color: var(--main-bg);
 }
+
+.nav {
+    background-color: lightgrey;
+}
+
+.navbar-list {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.nav a {
+    text-decoration: none;
+    color: black;
+    display: inline-block;
+    padding: 1em;
+}
+
+.nav ul li:nth-child(4) {
+    margin-left: auto;
+}
+
+
 header {
     background-image: url("/img/coffee-banner.jpeg");
     background-size: cover;
     height: 248px;
     padding-top: 8em;
 }
+
 label, input, select {
     font-size: 18px;
     font-family: Arial, sans-serif;
@@ -47,23 +74,27 @@ h1 {
 h2{
     margin-bottom: .1em;
 }
+
 h3, h4 {
     display: inline;
     margin: 0 1em;
 }
-h3{
+
+h3 {
     line-height: 3em;
 }
-h4{
+
+h4 {
     line-height: 3.5em;
 }
+
 .content {
     margin: 0 auto;
     border-radius: 4px;
     text-align: center;
     flex-basis: 100%;
 }
-.coffee{
+.coffee {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -73,46 +104,63 @@ h4{
     border: 1px solid saddlebrown;
     border-radius: 8px;
 }
-.light{
+
+.light {
     color: #DAA06D;
 }
-.medium{
+
+.medium {
     color: #7B3F00;
 }
-.dark{
+
+.dark {
     color: #5C4033;
 }
-.roast{
+
+.roast {
     border-radius: 7px;
     width:  92px;
 }
-.lt{
+
+.lt {
     background-color: #EADDCA;
     color: saddlebrown;
 }
-.med{
+
+.med {
     background-color: #7B3F00;
     color: #DAA06D;
 }
-.drk{
+
+.drk {
     background-color: #5C4033;
     color: #DAA06D;
 }
-#main-content{
+
+#main-content {
     max-width: 972px;
     margin: 0 auto;
     background-color: wheat;
 }
-#container{
+
+#container {
     display: flex;
     width: 100%;
 }
-#functions{
+
+#functions {
     margin: .5em;
     width: 40%;
     background-color: #DAA06D;
     border: 1px solid saddlebrown;
     border-radius: 8px;
+}
+#roast-filter-label {
+    margin-right: 2.5em;
+}
+#coffees {
+    margin-top: 1em;
+    background-color: ;
 }
 #coffee-container{
     width: 60%;
