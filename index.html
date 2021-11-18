@@ -9,40 +9,51 @@
     <h1>Coffee!</h1>
 
     <form>
-        <label for="roast-selection"></label>
+        <label for="roast-selection">Roast</label>
+        <br>
         <select id="roast-selection">
             <option>light</option>
             <option>medium</option>
             <option>dark</option>
         </select>
-        <input id="submit" type="submit" />
+        <br>
+        <br>
+        <label for="coffeeName">Coffee Name</label>
+        <br>
+        <input id="coffeeName" type="text" placeholder="Coffee Search">
+        <br>
+        <br>
+        <input id="submit" type="submit"/>
     </form>
-
+    <div id="coffees"> </div> <!--div for coffee popup-->
 <!--start of div for coffee selection-->
-    <div>
-        <form action="">
-            <div>
-                <select id=" ">
-                    <option>coffee name</option>
-                    <option>medium</option>
-                    <option>dark</option>
-                </select>
-            </div>
-<!--            <input id="submit" type="submit" />-->
-        </form>
-    </div>
+<!--    <div>-->
+<!--        <form action="">-->
+<!--            <div>-->
+<!--                <label for="coffees">Coffee Name</label>-->
+<!--                <br>-->
+<!--                <input id="coffees" name="coffee" type="text">-->
+<!--&lt;!&ndash;                <select id=" ">&ndash;&gt;-->
+<!--&lt;!&ndash;                    <option>coffee name</option>&ndash;&gt;-->
+<!--&lt;!&ndash;                    <option>medium</option>&ndash;&gt;-->
+<!--&lt;!&ndash;                    <option>dark</option>&ndash;&gt;-->
+<!--&lt;!&ndash;                </select>&ndash;&gt;-->
+<!--            </div>-->
+<!--&lt;!&ndash;            <input id="submit" type="submit" />&ndash;&gt;-->
+<!--        </form>-->
+<!--    </div>-->
 <!--    end of div -->
 
-    <table>
-        <thead>
-            <tr>
-<!--                <th>ID</th>-->
-                <th>NAME</th>
-                <th>ROAST</th>
-            </tr>
-        </thead>
-        <tbody id="coffees"></tbody>
-    </table>
+<!--    <table>-->
+<!--        <thead>-->
+<!--            <tr>-->
+<!--&lt;!&ndash;                <th>ID</th>&ndash;&gt;-->
+<!--                <th>NAME</th>-->
+<!--                <th>ROAST</th>-->
+<!--            </tr>-->
+<!--        </thead>-->
+<!--        <tbody id="coffees"></tbody>-->
+<!--    </table>-->
 
     <script src="main.js"></script>
 </body>

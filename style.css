@@ -7,3 +7,10 @@ td, th {
     border: 1px solid black;
     padding: 5px 10px;
 }
+form {
+    border: 1px black solid;
+}
+.coffee {
+    border: black 1px solid;
+    display: block;
+}
