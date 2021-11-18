@@ -1,6 +1,9 @@
 
 body {
+
     background-color: #6a8e7f;
+
+    background-repeat: no-repeat;
 }
 
 table {
@@ -77,10 +80,6 @@ h4 {
     text-shadow: 1px 1px saddlebrown;
     font-size: 20px;
 }
-.jumbotron {
-    background-repeat: no-repeat;
-    background-size: cover;
-}
 
 i {
 
@@ -92,6 +91,7 @@ i {
     text-align: center;
     margin-bottom: 30px;
     font-family: 'Architects Daughter', sans-serif;
+    background-image: url('photos/img_1.png');
 }
 
 a {
@@ -102,13 +102,36 @@ a {
     background-color: darkslategrey;
 }
 
-.nav-link {
-    text-align: center;
-    margin-left: 650px;
+
+
+.sticky {
+    color: white;
 }
-.about{
-    text-align:center;
-    color: #d5dcdc;
-    text-shadow: 1px 1px black;
+@media only screen and (max-width: 600px) {
+    .jumbotron {
+        display: none;
+    }
+    .about {
+        display: none;
+    }
 }
 
+@media only screen and (min-width: 600px) {
+    .jumbotron {
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    .about{
+        display: flex;
+        text-align:center;
+        color: #d5dcdc;
+        text-shadow: 1px 1px black;
+    }
+
+    .beans {
+        display: flex;
+        margin: 0;
+    }
+
+
+}
