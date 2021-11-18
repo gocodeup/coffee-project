@@ -1,10 +1,11 @@
 "use strict"
 
+// This is going to effect the coffee name and roast type
 function renderCoffee(coffee) {
-    var html = '<div class="coffee d-inline-flex align-self-stretch col-6" id="mylist">';
+    var html = '<div class="coffee d-inline-flex col-6">';
     // html += '<td>' + coffee.id + '</td>';
-    html += '<div class="font-weight-bold h1 mb-2 ">' + coffee.name + '</div>';
-    html += '<div class="font-weight-light h4 pt-3 ml-2 text-secondary">' + coffee.roast + '</div>';
+    html += '<h1 class=" font-weight-bold d-flex" >' + coffee.name + '</h1>';
+    html += '<p class="text-secondary  font-weight-lighter  pt-3 h5 ml-3 d-inline">' + coffee.roast + '</p>';
     html += '</div>';
 
     return html;
@@ -12,12 +13,12 @@ function renderCoffee(coffee) {
 
 function renderCoffees(coffees) {
     var html = '';
-    console.log(coffees)
     for(var i = coffees.length - 1; i >= 0; i--) {
         html += renderCoffee(coffees[i]);
     }
     return html;
 }
+
 
 function updateCoffees(e) {
     e.preventDefault(); // don't submit the form, we just want to update the data
@@ -30,6 +31,7 @@ function updateCoffees(e) {
     });
     tbody.innerHTML = renderCoffees(filteredCoffees);
 }
+
 // from http://www.ncausa.org/About-Coffee/Coffee-Roasts-Guide
 var coffees = [
     {id: 1, name: 'Light City', roast: 'light'},
@@ -48,8 +50,20 @@ var coffees = [
     {id: 14, name: 'French', roast: 'dark'},
 ];
 
-var tbody = document.querySelector('#coffees');
-var submitButton = document.getElementById('ControlInput1');
+var tbody = document.getElementById('coffees');
+var submitButton = document.getElementById('submit');
 var roastSelection = document.getElementById('roast-selection');
+var ControlInput1 = document.getElementById('ControlInput1');
 
-submitButton.addEventListener('keyup', updateCoffees);
+tbody.innerHTML = renderCoffees(coffees);
+
+submitButton.addEventListener('click', updateCoffees);
+
+function typeName(){
+    var Input1 = document.getElementById('ControlInput1').value.toLocaleLowerCase();
+    console.log(Input1);
+
+}
+
+ControlInput1.addEventListener("keyup", typeName);
+
