@@ -46,6 +46,7 @@ body{
     height: 20vh;
     font-size: 8em;
 }
+<<<<<<< HEAD
 .gencontainer{
     display: flex;
     justify-content: flex-start;
@@ -88,3 +89,5 @@ ul>li {
 #coffee-roast{
     border: 2px solid white;
 }
+=======
+>>>>>>> b65359762afd463e37d399b89da5d6e720528afa
