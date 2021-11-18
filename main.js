@@ -89,18 +89,14 @@ function addingNames(e){
     console.log(upperCaseInput);
     console.log(addroastSelection);
 
-    var pushInput = coffees.push(upperCaseInput);
-    if (addControlInput1 === ""){
-        coffees.push(upperCaseInput);
-    }
+
+console.log(coffees)
+    coffees.push(upperCaseInput, addroastSelection)
+    coffees['name'] = upperCaseInput;
+    coffees['roast'] = addroastSelection;
+
     tbody.innerHTML = renderCoffees(coffees)
-
-
-    Object.assign(upperCaseInput, addroastSelection);
-    console.log(obj);
-
 }
-
 
 addSubmitButton.addEventListener("click", addingNames);
 
