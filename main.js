@@ -124,7 +124,6 @@ function capitalizeName (str) {
     }
     return splitStr.join(' ');
 
-
 }
 window.addEventListener('load', (event) =>{
     console.log(JSON.parse(window.localStorage.getItem('customcoffenames')));
