@@ -205,8 +205,14 @@
                 <div class="roast text-dark col-lg-* ">
                     <strong>Roast</strong>
                 </div>
+
                 <select class=" bs-select-hidden" id="roast-selection" style="width:100%" >
                     <option >light</option>
+
+                <select class="selectpicker bs-select-hidden" id="roast-selection" style="width:100%" >
+                    <option disabled selected value> -- select an option -- </option>
+                    <option>light</option>
+
                     <option>medium</option>
                     <option>dark</option>
                     <option>all</option>
@@ -216,7 +222,7 @@
                 </div>
                 <input id="search" class="form-control" type="text" placeholder="Search for Coffee" style="width:100%">
                 <div class=" text-center">
-                    <input class="btn btn-primary btn-lg btn-block mt-3" id="submit" type="submit" />
+                    <button class="btn btn-primary btn-lg btn-block mt-3" id="submit" type="submit">Submit</button>
                 </div>
             </form>
         </div>
@@ -314,7 +320,7 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
 
 <script src="main.js"></script>
-
+</div>
 </body>
 
 </html>
