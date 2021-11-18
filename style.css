@@ -1,9 +1,24 @@
-/*table {*/
-/*    border-collapse: collapse;*/
-/*    margin: 15px 0;*/
-/*}*/
 
-/*td, th {*/
-/*    border: 1px solid black;*/
-/*    padding: 5px 10px;*/
-/*}*/
+@import url('https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Estonia&display=swap');
+
+h1 {
+    font-family: 'Estonia', cursive;
+}
+#coffees {
+    color: aliceblue;
+    margin-left: 100px;
+}
+
+.Navi {
+    padding-bottom: -75px;
+}
+
+
+
+.jumbotron {
+    opacity: 0.35;
+}
+
+
