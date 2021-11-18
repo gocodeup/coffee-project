@@ -65,6 +65,7 @@ label, input, select {
 input, select{
     border-radius: 6px;
 }
+
 p {
     margin: 0;
     padding: 0.1em;
