@@ -7,13 +7,24 @@ table {
     border-collapse: collapse;
     margin: 15px 0;
 }
-
+#query {
+    width: 95%;
+}
+#searchcard {
+    border: none;
+}
 td, th {
     border: 1px solid black;
     padding: 5px 10px;
 }
-#roast-selection, #query, #searchbtn, #submit {
+#roast-selection, #query, #searchbtn, #submit, #addRoast, #addCoffee, #addDescription, #submitcoffee{
     border: none;
+    padding: .5em;
+    margin: 1px
+}
+
+#searchbtn {
+    width: 100%;
 }
 
 .light {
@@ -69,23 +80,5 @@ h4 {
     background-repeat: no-repeat;
     background-size: cover;
 }
-/*.container {*/
-/*    border: 2px solid black;*/
-/*    border-radius: 5px;*/
-/*    background-color: lightgray;*/
-/*    color: #fff;*/
-/*    opacity: 50%;*/
-/*}*/
 
-/*#query {*/
-/*    border: none;*/
-/*}*/
-
-/*#searchbtn {*/
-/*    border: none;*/
-/*}*/
-
-/*#submit {*/
-/*    border: none;*/
-/*}*/
 

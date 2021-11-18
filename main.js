@@ -1,13 +1,14 @@
 "use strict"
 
 function renderCoffee(coffee) {
+
     if (coffee.roast === 'light') {
-        var html = '<div class="coffee light">';
+        var html = '<div class="coffee light p-0">';
         html += '<h2>' + coffee.name + '</h2>';
         html += '<div class="roast"><p>' + coffee.roast + '</p></div>';
         html += '<div class="hide"><h4>' + coffee.description + '</h4></div>';
         html += '</div>';
-    } else if ( coffee.roast === 'medium'){
+    } else if (coffee.roast === 'medium') {
         var html = '<div class="coffee medium">';
         html += '<h2>' + coffee.name + '</h2>';
         html += '<div class="roast"><p>' + coffee.roast + '</p></div>';
@@ -23,10 +24,22 @@ function renderCoffee(coffee) {
     return html;
 }
 
+
 function renderCoffees(coffees) {
     var html = '';
 
-    for(var i = 0; i < coffees.length; i++) {
+    coffees.sort(function (ele) {
+        if (ele.roast === 'dark') {
+            return 2;
+        }
+        if (ele.roast === 'light') {
+            return -1;
+        }
+        return 1;
+    });
+
+
+    for (var i = 0; i < coffees.length; i++) {
         html += renderCoffee(coffees[i]);
     }
     return html;
@@ -34,19 +47,23 @@ function renderCoffees(coffees) {
 
 function updateCoffees(e) {
     e.preventDefault(); // don't submit the form, we just want to update the data
-    var selectedRoast = roastSelection.value;
+    if (roastSelection.value === 'all') {
+        var selectedRoast = 'light, medium, dark'
+    } else {
+        var selectedRoast = roastSelection.value;
+    }
     var filteredCoffees = [];
 
-    coffees.forEach(function(coffee) {
+    coffees.forEach(function (coffee) {
 
-        if (coffee.roast === selectedRoast) {
+        if (selectedRoast.includes(coffee.roast)) {
             filteredCoffees.push(coffee);
         }
     });
     div.innerHTML = renderCoffees(filteredCoffees);
 }
 
-function coffeeComparison (x) {
+function coffeeComparison(x) {
     x.preventDefault(); // don't submit the form, we just want to update the data
     var searched = searchedCoffee.value.toLowerCase();
     var filteredCoffees = [];
@@ -57,6 +74,7 @@ function coffeeComparison (x) {
     }
     div.innerHTML = renderCoffees(filteredCoffees);
 }
+
 //-------------------------
 function searchCoffees(y) {
     y.preventDefault();
@@ -73,19 +91,24 @@ function searchCoffees(y) {
 
 //---------------------------
 
+var customCoffees = [];
+// ADD COFFEE
+function addCoffee(r) {
+    r.preventDefault();
+    var addedCoffee = {
+        id: 0,
+        name: "",
+        roast: "",
+        description: "",
+    }
+    addedCoffee.id = coffees.length + 1;
+    addedCoffee.name = newCoffee.value;
+    addedCoffee.roast = newRoast.value;
+    addedCoffee.description = newDescription.value;
+    customCoffees.push(addedCoffee);
+    addeddDiv.innerHTML = renderCoffees(customCoffees);
 
-
-//ADD COFFEE
-// var addForm = document.forms['add-coffee'];
-// addForm.addEventListener('submit', function(e){
-//     e.preventDefault();
-//     var value = addForm.querySelector('input[type="text"]').value;
-//     var coffees = document.createElement('span');
-//
-//     coffees.push(coffees[i]);
-//
-//     div.innerHTML = renderCoffees(filteredCoffees);
-// });
+}
 
 // from http://www.ncausa.org/About-Coffee/Coffee-Roasts-Guide
 var coffees = [
@@ -100,11 +123,16 @@ var coffees = [
     {id: 9, name: 'New Orleans', roast: 'dark', description: 'Deep dark blend with smooth smokey flavors'},
     {id: 10, name: 'European', roast: 'dark', description: 'Robust with s distinct flavor'},
     {id: 11, name: 'Espresso', roast: 'dark', description: 'Luxuriously creamy, with a kiss of foamy cream'},
-    {id: 12, name: 'Viennese', roast: 'dark', description: 'Espresso with half steamed milk, topped off with milk froth.'},
+    {
+        id: 12,
+        name: 'Viennese',
+        roast: 'dark',
+        description: 'Espresso with half steamed milk, topped off with milk froth.'
+    },
     {id: 13, name: 'Italian', roast: 'dark', description: 'Arabica coffee smooth and acidic'},
     {id: 14, name: 'French', roast: 'dark', description: 'Intense and smokey-sweet flavor'},
 ];
-
+var addeddDiv = document.querySelector('#newcoffees')
 var div = document.querySelector('#coffees');
 var submitButton = document.querySelector('#submit');
 var roastSelection = document.querySelector('#roast-selection');
@@ -114,8 +142,15 @@ div.innerHTML = renderCoffees(coffees);
 //---------------------
 var searchBox = document.querySelector('.searchBox');
 searchBox.addEventListener('keyup', searchCoffees);
+
+var newCoffee = document.querySelector('#addCoffee');
+var newRoast = document.querySelector('#addRoast');
+var newDescription = document.querySelector('#addDescription')
+var submitCoffee = document.querySelector('#submitcoffee')
 //----------------------
 
 searchButton.addEventListener('click', coffeeComparison);
 
 submitButton.addEventListener('click', updateCoffees);
+
+submitCoffee.addEventListener('click', addCoffee)
