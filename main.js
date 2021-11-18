@@ -2,7 +2,7 @@
 
 function renderCoffee(coffee) {
     var html = '<div class="col-6 m-0">';
-    html += '<span>' + coffee.id + " " + '</span>';
+    //html += '<span>' + coffee.id + " " + '</span>';
     html += '<span class="font-weight-bold text-capitalize">' + coffee.name + " " + '</span>';
     html += '<span class="font-weight-bold text-capitalize text-black-50">' + coffee.roast + '</span>';
     html += '</div>';
@@ -13,7 +13,7 @@ function renderCoffee(coffee) {
 function renderCoffees(coffees) {
     var html = '';
     html = '<div class = "row">';
-    for(var i = coffees.length - 1; i >= 0; i--) {
+    for(var i = 0; i < coffees.length; i++) {
         html += renderCoffee(coffees[i]);
     }
     html += '</div>';
@@ -27,9 +27,23 @@ function updateCoffees(e) {
     coffees.forEach(function(coffee) {
         if (coffee.roast === selectedRoast) {
             filteredCoffees.push(coffee);
+        }else if(roastSelection.value === 'all'){
+            filteredCoffees.push(coffee);
         }
     });
     div.innerHTML = renderCoffees(filteredCoffees);
+}
+
+function searchCoffees(e){
+    e.preventDefault(); // don't submit the form, we just want to update the data'
+    var coffeeName = coffeeNameSelection.value.toLowerCase();
+    var filteredCoffees = [];
+    coffees.forEach(function(coffee){
+        if (coffee.name.toLowerCase().includes(coffeeName)){
+            filteredCoffees.push(coffee);
+        }
+    });
+    div.innerHTML = renderCoffees(filteredCoffees)
 }
 
 // from http://www.ncausa.org/About-Coffee/Coffee-Roasts-Guide
@@ -53,7 +67,11 @@ var coffees = [
 var div = document.querySelector('#coffees');
 var submitButton = document.querySelector('#submit');
 var roastSelection = document.querySelector('#roast-selection');
+var coffeeNameSelection = document.querySelector('#coffee-name')
 
 div.innerHTML = renderCoffees(coffees);
-
+coffeeNameSelection.addEventListener('input', searchCoffees)
 submitButton.addEventListener('click', updateCoffees);
+
+//Add functionality to update the displayed coffee as soon as they select an option from the select.
+roastSelection.addEventListener('change', updateCoffees);
