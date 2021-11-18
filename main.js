@@ -1,5 +1,4 @@
 "use strict"
-
 function renderCoffee(coffee) {
     var html = '<div class="coffee col-6">';
     html += '<h3>' + coffee.name + '</h3>';
@@ -56,7 +55,7 @@ var coffees = [
 ];
 
 var coffeesContainer = document.querySelector('#coffees');
-var submitButton = document.querySelector('#submit');
+// var submitButton = document.querySelector('#submit');
 var roastSelection = document.querySelector('#roast-selection');
 //  creating sort var to sort coffees in ascending order
 var sortedCoffees = coffees.sort((a,b) => (a.id < b.id) ? 1 : -1);
@@ -68,6 +67,25 @@ coffeesContainer.innerHTML = renderCoffees(sortedCoffees);
 //  w3schools big help on change listener
 onSelect.addEventListener('change', updateCoffees);
 onSelect.addEventListener('change', allCoffees);
+//  var for searchBar Id
+var searchBar = document.getElementById('roast-search')
+//  creating listener for searchBar
+//  utilizing arrow callback function cited: https://www.youtube.com/watch?v=wxz5vJ1BWrc
+searchBar.addEventListener('keyup', (e) => {
+    //  got target from object keys which has a value property to target
+    //  the value of the target; in this case the value of the search bar
+    // console.log(e.target.value);
+    var searchStr = e.target.value;
+    var filteredChars = coffees.filter(coffee => {
+        return (
+            coffee.name.includes(searchStr) ||
+            coffee.roast.includes(searchStr)
+        );
+    });
+    console.log(filteredChars);
+    // console.log(typeof filteredChars);
+    coffeesContainer.innerHTML = renderCoffees(filteredChars);
+})
 
 // submitButton.addEventListener('click', updateCoffees);
 // submitButton.addEventListener('click', allCoffees);

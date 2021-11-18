@@ -15,6 +15,7 @@
 <div class="container">
     <div class="row">
         <div class="col-6">
+            <!-- this is where the list of coffees are -->
             <div class="row" id="coffees"></div>
         </div>
         <div class="col-6">
@@ -28,13 +29,19 @@
                         <option>dark</option>
                     </select>
                 </div>
-                <div class="form-group">
+                <div class="form-group" id="searchWrapper">
                     <label for="roast-search" class="col-12">Coffee Name</label>
-                    <input type="text" id="roast-search" class="form-control">
+                    <input
+                        type="text"
+                        name="searchBar"
+                        id="roast-search"
+                        class="form-control"
+                        placeholder="search coffee"
+                    />
                 </div>
                 <div class="form-group">
                     <button id="submit" type="button" class="btn btn-primary btn-lg btn-block">Submit</button>
-<!--                    <input id="submit" type="submit" class="mt-2"/>-->
+                    <!--                    <input id="submit" type="submit" class="mt-2"/>-->
                 </div>
             </form>
         </div>
