@@ -1,5 +1,9 @@
 "use strict"
 
+
+//search coffee section
+
+
 function renderCoffee(coffee) {
     var html = '<div class="coffee">';
     //html += '<div>' + coffee.id + '</div>'; //ID does not display
@@ -75,3 +79,56 @@ tbody.innerHTML = renderCoffees(coffees);
 submitButton.addEventListener('click', updateCoffees);
 search.addEventListener('input', searchCoffees)
 
+
+
+// Add coffee section
+
+
+
+// function searchCoffees(value) {
+//     var filteredCoffees = [];
+//     for(var i = 0; i < coffees.length; i++) {
+//         if (coffees[i].name.toLowerCase().indexOf(value.toLowerCase()) > -1) {
+//             filteredCoffees.push(coffees[i]);
+//         }
+//     }
+//     tbody.innerHTML = renderCoffees(filteredCoffees);
+// }
+// function newHideCoffee() {
+//     if(document.getElementById('add-coffee-roast-select')){
+//    }
+// }
+function addCoffee() {
+    var coffee = {
+        id:'',
+        name:'',
+        roast:'',
+    };
+    coffee.id = coffees.length + 1;
+    var tempName = document.getElementById('add-coffee-name').value;
+    coffee.name = formatNewCoffee(tempName);
+    coffee.roast = document.getElementById('add-coffee-roast-select').value;
+    coffees.push(coffee);
+    // var insertAtIndex = coffees.lastIndexOf(coffee.roast);
+    // coffees.splice(insertAtIndex, 0, coffee);
+    arrangeCoffee();
+    tbody.innerHTML = renderCoffees(coffees);
+}
+
+document.querySelector()
+
+function arrangeCoffee() {
+    coffees.sort(function(a, b) {
+        return a.id - b.id
+    });
+    coffees.reverse();
+}
+
+function formatNewCoffee(input) {
+    return input.replace(/\b\w/g, function(letter) {
+        return letter.toUpperCase()
+    })
+}
+
+coffees.reverse();
+=======

@@ -23,18 +23,9 @@
 
 <body>
 
-<h1 class="title text-center">Coffee!</h1>
 
-<div class="container">
-    <div class=" coffee-menu bg-none col-12 " >
-
-            <div class="roast text-dark col-lg-* ">
-                Roast
-            </div>
-
-<section class="colored-section" id="title">
     <!-- Nav Bar -->
-    <div class="container-fluid top">
+    <div class="container-fluid top colored-section" id="title">
         <nav class="navbar navbar-expand-lg navbar-dark">
             <a class="navbar-brand" href="">Coffee</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -44,16 +35,19 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item active">
-                        <a class="nav-link" href="#footer"><strong>Our Coffee</strong></a>
+                        <a class="nav-link" href="#features"><strong>Our Coffee</strong></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#pricing"><strong>Order</strong></a>
+                        <a class="nav-link" href="#carousel-coffee"><strong>Gallery</strong></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#sizing"><strong>Order</strong></a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#cta"><strong>Contact</strong></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#cta"><i class="fas fa-coffee"></i></a>
+                        <a class="nav-link" href="#menu"><i class="fas fa-coffee"></i></a>
                     </li>
 
 
@@ -66,9 +60,10 @@
 
         <div class="row">
             <div class="title-intro col-lg-6">
-                <h1>Every good <strong>Coffee</strong> starts with a good <strong>Roast</strong>.</h1>
+                <h1>Every good <strong>Coffee</strong>
+                    <br>          starts with a good <strong>Roast</strong>.</h1>
 
-                <button type="button" class="btn btn-outline-light btn-lg download-button">   Order  </i></button>
+                <button type="button" class="btn btn-outline-light btn-lg download-button " onclick="location.href='#sizing';">   Order  </button>
             </div>
         </div>
     </div>
@@ -104,11 +99,11 @@
 
 <!-- Gallery -->
 
-<section class="colored-section container-fluid" id="gallery">
-    <div id="carousel-coffee" class=" row carousel slide" data-bs-ride="carousel">
+<!--<section class="colored-section container-fluid" id="gallery">-->
+    <div id="carousel-coffee" class="carousel slide" data-ride="carousel" data-interval="2500" dat-pause="hover">
         <div class="carousel-inner col-12">
             <div class="carousel-item active ">
-                <img class="coffee-image img-fluid w-100" src="images/pexels-jonas-mohamadi-1477851.jpg" alt="coffee-pic">
+                <img class="coffee-image d-block w-100" src="images/pexels-jonas-mohamadi-1477851.jpg" alt="coffee-pic">
             </div>
             <div class="carousel-item ">
                 <img class="coffee-image d-block w-100" src="images/pexels-viktoria-alipatova-2074122.jpg" alt="coffee-pic">
@@ -123,20 +118,18 @@
                 <img class="coffee-image d-block w-100" src="images/pexels-oleg-magni-890515.jpg" alt="coffee-pic">
             </div>
         </div>
-        <!--        <button class="carousel-control-prev" type="button" data-bs-target="#carousel-coffee" data-bs-slide="prev">-->
-        <!--            <span class="carousel-control-prev-icon" aria-hidden="true"></span>-->
-        <!--            <span class="visually-hidden">Previous</span>-->
-        <!--        </button>-->
-        <!--        <button class="carousel-control-next" type="button" data-bs-target="#carousel-coffee" data-bs-slide="next">-->
-        <!--            <span class="carousel-control-next-icon" aria-hidden="true"></span>-->
-        <!--            <span class="visually-hidden">Next</span>-->
-        <!--        </button>-->
+<!--                <button class="carousel-control-prev" type="button" data-bs-target="#carousel-coffee" data-bs-slide="prev">-->
+<!--                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>-->
+<!--                    <span class="visually-hidden">Previous</span>-->
+<!--                </button>-->
+<!--                <button class="carousel-control-next" type="button" data-bs-target="#carousel-coffee" data-bs-slide="next">-->
+<!--                    <span class="carousel-control-next-icon" aria-hidden="true"></span>-->
+<!--                    <span class="visually-hidden">Next</span>-->
+<!--                </button>-->
 
     </div>
 </section>
 </div>
-
-
 
 
 
@@ -210,15 +203,23 @@
         <div class=" coffee-menu bg-none col-12 " >
             <form>
                 <div class="roast text-dark col-lg-* ">
-                    Roast
+                    <strong>Roast</strong>
                 </div>
+
+                <select class=" bs-select-hidden" id="roast-selection" style="width:100%" >
+                    <option >light</option>
+
                 <select class="selectpicker bs-select-hidden" id="roast-selection" style="width:100%" >
                     <option disabled selected value> -- select an option -- </option>
                     <option>light</option>
+
                     <option>medium</option>
                     <option>dark</option>
                     <option>all</option>
                 </select>
+                <div class="coffee-name text-dark col-lg-* ">
+                    <strong>Coffee Name</strong>
+                </div>
                 <input id="search" class="form-control" type="text" placeholder="Search for Coffee" style="width:100%">
                 <div class=" text-center">
                     <button class="btn btn-primary btn-lg btn-block mt-3" id="submit" type="submit">Submit</button>
@@ -241,6 +242,29 @@
         <!-    </table>-->
     </div>
 
+    <!--new coffee section-->
+    <div class="container fluid">
+        <div class=" coffee-menu bg-none col-12 " >
+            <form>
+                <div class="new-roast text-dark col-lg-* ">
+                    <strong>Roast</strong>
+                </div>
+                <select class="selectpicker bs-select-hidden" id="add-coffee-roast-select" style="width:100%" >
+                    <option >light</option>
+                    <option>medium</option>
+                    <option>dark</option>
+                    <option>all</option>
+                </select>
+                <div class="new-name text-dark col-lg-* ">
+                    <strong>Name</strong>
+                </div>
+                <input id="add-coffee-name" class="form-control" type="text" placeholder="Add a Coffee" style="width:100%">
+                <div class=" text-center">
+                    <input class="btn btn-primary btn-lg btn-block mt-3" id="submit-2" type="submit" />
+                </div>
+            </form>
+        </div>
+    </div>
 
 </section>
 
