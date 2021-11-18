@@ -3,3 +3,25 @@
      font-family: 'Roboto', sans-serif;
     color: black;
  }
+
+.mainHeader {
+    animation: fadein .5s;
+}
+.mainDiv {
+    animation: fadein 1.5s;
+    height: 75vh;
+
+}
+.coffeeDiv{
+    animation: fadein 5s;
+    overflow:scroll;
+    height: 65vh;
+}
+form{
+    animation: fadein 6s;
+}
+
+@-webkit-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}

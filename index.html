@@ -8,20 +8,22 @@
 </head>
 <body style="background-color: lightgrey">
 <!--   The Main Heading-->
-<h1 class="text-center border-bottom border-bold pt-3 shadow-sm p-3 mb-5 bg-white rounded">Coffee!</h1>
+<h1 class="mainHeader text-center border-bottom border-bold pt-3 shadow-sm p-3 mb-5 bg-white rounded" >Coffee!</h1>
 
 <!--DIV for both LEFT&RIGHT side-->
-<div class="row m-5 shadow-lg p-5 mb-5 bg-white rounded">
+<div class="mainDiv row m-5 shadow-lg p-5 mb-5 bg-white rounded">
 
     <!--THIS IS LEFT SIDE-->
-    <div class="col-6 row">
-        <div id="coffees"></div>
+    <div class=" col-6 row">
+        <div class="coffeeDiv">
+             <div id="coffees"></div>
+        </div>
     </div>
 
 
     <!--THIS IS RIGHT SIDE-->
     <div class="col-6 ">
-        <form>
+        <form class="">
             <label for="roast-selection" class="font-weight-bold">Roast</label>
             <select id="roast-selection" class="form-control">
                 <option>light</option>

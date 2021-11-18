@@ -2,7 +2,7 @@
 
 // This is going to effect the coffee name and roast type
 function renderCoffee(coffee) {
-    var html = '<div class="coffee d-inline-flex col-6">';
+    var html = '<div class="coffee d-inline-flex col-6 py-2">';
     // html += '<td>' + coffee.id + '</td>';
     html += '<h1 class=" font-weight-bold d-flex" >' + coffee.name + '</h1>';
     html += '<p class="text-secondary  font-weight-lighter  pt-3 h5 ml-3 d-inline">' + coffee.roast + '</p>';
@@ -86,14 +86,16 @@ function addingNames(e){
     var addControlInput1 = document.getElementById('add-ControlInput1').value;
     var addroastSelection = document.getElementById('addroast-selection').value;
     var upperCaseInput = addControlInput1.charAt(0).toUpperCase() + addControlInput1.slice(1);
-    console.log(upperCaseInput);
-    console.log(addroastSelection);
+    var pushedCoffee = {
+            id: "",
+            name: "",
+            roast: ""
+        }
+    pushedCoffee.id = coffees.length + 1;
+    pushedCoffee.name = upperCaseInput;
+    pushedCoffee.roast = addroastSelection;
 
-
-console.log(coffees)
-    coffees.push(upperCaseInput, addroastSelection)
-    coffees['name'] = upperCaseInput;
-    coffees['roast'] = addroastSelection;
+    coffees.push(pushedCoffee)
 
     tbody.innerHTML = renderCoffees(coffees)
 }
