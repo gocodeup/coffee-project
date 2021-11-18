@@ -60,7 +60,6 @@ label, input, select {
     font-size: 18px;
     font-family: Arial, sans-serif;
     margin: .5em;
-    width: 50%;
 }
 input, select{
     border-radius: 6px;
@@ -105,6 +104,9 @@ h4 {
     border-radius: 4px;
     text-align: center;
     flex-basis: 100%;
+}
+.my-inputs{
+    width: 50%;
 }
 /* Coffee and Roast-Color Styling*/
 .coffee {
@@ -193,4 +195,20 @@ h4 {
 #dismissal:hover{
     text-decoration: underline;
     color: black;
+}
+#order-now{
+    margin: 1em;
+    font-size: 36px;
+    padding: .25em;
+    border: solid tomato 2px;
+    border-radius: 8px;
+    background-color: lightblue;
+    text-align: center;
+    transition: width 2s, height 2s, background-color 2s, color 2s, padding 2s, margin 2s;
+}
+#order-now:hover{
+    margin: .5em;
+    padding: 1em;
+    color: white;
+    background-color: red;
 }
