@@ -88,19 +88,19 @@ search.addEventListener('input', searchCoffees)
 
 
 
-function searchCoffees(value) {
-    var filteredCoffees = [];
-    for(var i = 0; i < coffees.length; i++) {
-        if (coffees[i].name.toLowerCase().indexOf(value.toLowerCase()) > -1) {
-            filteredCoffees.push(coffees[i]);
-        }
-    }
-    tbody.innerHTML = renderCoffees(filteredCoffees);
-}
-function newHideCoffee() {
-    if(document.getElementById('add-coffee-roast-select')){
-   }
-}
+// function searchCoffees(value) {
+//     var filteredCoffees = [];
+//     for(var i = 0; i < coffees.length; i++) {
+//         if (coffees[i].name.toLowerCase().indexOf(value.toLowerCase()) > -1) {
+//             filteredCoffees.push(coffees[i]);
+//         }
+//     }
+//     tbody.innerHTML = renderCoffees(filteredCoffees);
+// }
+// function newHideCoffee() {
+//     if(document.getElementById('add-coffee-roast-select')){
+//    }
+// }
 function addCoffee() {
     var coffee = {
         id:'',
