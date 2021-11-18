@@ -51,10 +51,13 @@
 <!--Main Image Header-->
 <div class="jumbotron jumbotron-fluid" style="background-image: url(coffee-love.jpeg); height: 400px;">
 	<div class="container text-center jumbotron-border">
-		<h1 class="display-4">Coffee Attack</h1>
-		<h4 class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloremque expedita quos sunt vitae? A aspernatur aut consectetur doloribus hic iure rem! Consectetur dicta excepturi in iste laborum molestiae totam vero?</h4>
+		<h1 class="display-4 font-weight-bold" style="font-size: 150px; font-weight: 600; text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;">Coffee Attack</h1>
+		<h4 class="lead" style="font-size: 32px; text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;">“Life happens, coffee helps.”</h4>
 	</div>
 </div>
+
+<div style="margin: 30px; padding: 30px">
+
 
 <form>
 	<label for="roast-selection"></label>
@@ -65,11 +68,16 @@
 		<option>dark</option>
 	</select>
 	<input id="submit" type="submit" />
+	<div class="choose-roast"><p>choose roast</p></div>
 </form>
 
 <div id = "coffeelist">
 	<div class= "card-columns" id="coffees"></div>
 </div>
+
+</div>
+
+<div class="choose-roast"><p>choose roast</p></div>
 
 <script src="main.js"></script>
 
