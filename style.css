@@ -32,8 +32,13 @@ td, th {
 }
 
 h1 {
-    margin-top: 20px;
+    max-height: fit-content;
+    margin: 0;
+    padding-top: 20px;
     font-family: 'Architects Daughter', cursive, sans-serif;
+    text-shadow: 1px 1px black;
+    color: darkslategrey;
+
 }
 h2 {
     font-family: 'Genos', sans-serif;
@@ -53,9 +58,25 @@ h4 {
 }
 
 .tag {
-    color: #52595D;
+    display: flex;
+    color: black;
     font-family: 'Yuji Boku', serif;
+    padding-left: 200px;
+    text-shadow: 1px 1px saddlebrown;
+    font-size: 20px;
 }
+.jumbotron {
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+/*.container {*/
+/*    border: 2px solid black;*/
+/*    border-radius: 5px;*/
+/*    background-color: lightgray;*/
+/*    color: #fff;*/
+/*    opacity: 50%;*/
+/*}*/
+
 /*#query {*/
 /*    border: none;*/
 /*}*/
