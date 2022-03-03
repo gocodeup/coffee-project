@@ -13,3 +13,10 @@ h1 {
     justify-content: center;
 }
 
+div {
+    display: none;
+}
+
+th {
+    display: none;
+}
