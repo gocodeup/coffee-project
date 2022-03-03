@@ -30,4 +30,28 @@ th {
     display: none;
 }
 
-.
+.input {
+    width: 550px;
+    height: 30px;
+}
+#submit {
+    width: 550px;
+    height: 30px;
+    background-color: cornflowerblue;
+}
+
+#roast-selection {
+    width: 550px;
+    height: 30px;
+}
+
+.flex-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+h5 {
+    display: flex;
+    padding-right: 450px;
+}

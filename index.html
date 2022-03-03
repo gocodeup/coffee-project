@@ -10,22 +10,28 @@
     <h1>Coffee!</h1>
     <hr>
     <form>
+        <div class="flex-container">
         <h5>Roast</h5>
-
-            <label for="roast-selection"></label>
-            <select class="form-select" id="roast-selection">
+          <label for="roast-selection"></label>
+            <select id="roast-selection">
+                <option>Select</option>
                 <option>light</option>
                 <option>medium</option>
                 <option>dark</option>
             </select>
+        </div>
     </form>
       <br>
         <form class="form">
+            <div class="flex-container">
         <h5>Coffee Name</h5>
             <input id="search" type="text" class="input" placeholder="search..."/>
             <br>
             <br>
+            </div>
+            <div class="flex-container">
             <input id="submit" type="submit"/>
+            </div>
         </form>
     <table>
         <thead>
