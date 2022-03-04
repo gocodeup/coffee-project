@@ -70,14 +70,13 @@ function coffeeNames(){
 
 
 var tbody = document.querySelector('#coffees');
-// var submitButton = document.querySelector('#submit');
-// var roastSelection = document.querySelector('#roast-selection');
-// var searchBox = document.querySelector('#searchBox');
-//
-//
+var submitButton = document.querySelector('#submit');
+ var roastSelection = document.querySelector('#roast-selection');
+var searchBox = document.querySelector('#searchBox');
+
 tbody.innerHTML = renderCoffees(coffees);
-//
-// submitButton.addEventListener('click', updateCoffees);
-// roastSelection.addEventListener("input", updateCoffees);
-// // searchBox.addEventListener('keyup', coffeeNames)
+
+submitButton.addEventListener('click', updateCoffees);
+roastSelection.addEventListener("input", updateCoffees);
+searchBox.addEventListener('keyup', coffeeNames)
 
