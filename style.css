@@ -26,9 +26,6 @@ h6{
     display: flex;
     padding-left: 150px;
 }
-div {
-    display: none;
-}
 
 th {
     display: none;
