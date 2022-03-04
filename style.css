@@ -17,11 +17,15 @@ td, th {
     padding: 5px 10px;
 }
 
-h1 {
+header{
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
 }
-
+h6{
+    display: flex;
+    padding-left: 150px;
+}
 div {
     display: none;
 }
@@ -30,29 +34,3 @@ th {
     display: none;
 }
 
-.input {
-    width: 550px;
-    height: 30px;
-}
-#submit {
-    width: 550px;
-    height: 30px;
-    background-color: cornflowerblue;
-    color: white;
-}
-
-#roast-selection {
-    width: 550px;
-    height: 30px;
-}
-
-.flex-container {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-}
-
-h5 {
-    display: flex;
-    padding-right: 450px;
-}
