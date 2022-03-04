@@ -26,6 +26,9 @@ function updateCoffees(e) {
         if (coffee.roast === selectedRoast) {
             filteredCoffees.push(coffee);
         }
+        if  (roastSelection.value === 'all'){
+            filteredCoffees.push(coffee)
+        }
     });
     tbody.innerHTML = renderCoffees(filteredCoffees);
 }
