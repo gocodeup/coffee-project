@@ -5,6 +5,8 @@
 
 body {
     box-sizing: border-box;
+    background-image: url("Img/pexels-kaboompics-com-6347.jpg");
+    background-size: cover;
 }
 
 table {
