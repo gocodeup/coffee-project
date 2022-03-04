@@ -13,11 +13,15 @@
 	<h6>"...MMM Que Rico!"</h6>
 </header>
 <hr>
-<div class="col d-flex justify-content-end">
-	<div class="card col-6">
-		<span class="card-body row d-grid justify-content-end p-5">
+
+
+	<div id="coffees" class="container row">
+	</div>
+<div class="d-flex">
+	<div class="card ">
+		<span class="card-body">
 			<span class="card-text">
-			<form class="form d-grid col-3 pull-right">
+			<form class="form">
 				<h5>Roast</h5>
 				<label for="roast-selection"></label>
 				<select id="roast-selection">
@@ -28,7 +32,7 @@
 				</select>
 			</form>
 			<br>
-			<form class="form d-grid col-3 pull-right">
+			<form class="form">
 				<h5>Coffee Name</h5>
 				<input id="searchBox" type="text" placeholder="search...">
 				<input id="submit" type="submit">
@@ -41,7 +45,8 @@
 </div>
 
 
-<div id="coffees" class="container row">
+
+
 	<!--    <table>-->
 	<!--        <thead>-->
 	<!--            <tr>-->
@@ -53,7 +58,7 @@
 	<!--    -->
 	<!--        <tbody id="coffees"></tbody>-->
 	<!--    </table>-->
-</div>
+
 
 <script src="main.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
