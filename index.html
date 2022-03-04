@@ -1,61 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Coffee Project</title>
-    <link rel="stylesheet" href="style.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+	<meta charset="UTF-8">
+	<title>Coffee Project</title>
+	<link rel="stylesheet" href="style.css">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+	      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 </head>
 <body>
 <header>
-    <h1>Cafe Bar</h1>
-    <h6>"...MMM Que Rico!"</h6>
+	<h1>Cafe Bar</h1>
+	<h6>"...MMM Que Rico!"</h6>
 </header>
-    <hr>
+<hr>
 <div class="col d-flex justify-content-end">
-<div class="card col-6">
-    <div class="card-body row d-grid justify-content-end p-5">
-        <p class="card-text">
-        <form class="form d-grid col-3 pull-right">
-           <h5>Roast</h5>
-        <label for="roast-selection"></label>
-        <select id="roast-selection">
-            <option>Select</option>
-            <option>light</option>
-            <option>medium</option>
-            <option>dark</option>
-        </select>
-        </form>
-        <br>
-        <form class="form d-grid col-3 pull-right">
-            <h5>Coffee Name</h5>
-            <input id="searchBox" type="text" placeholder="search..."/>
-            <input id="submit" type="submit"/>
-        </form>
-        </p>
-        <div class="d-grid col-3 pull-right">
-            <button class="btn btn-primary" type="button">Button</button>
-        </div>
-    </div>
+	<div class="card col-6">
+		<span class="card-body row d-grid justify-content-end p-5">
+			<span class="card-text">
+			<form class="form d-grid col-3 pull-right">
+				<h5>Roast</h5>
+				<label for="roast-selection"></label>
+				<select id="roast-selection">
+					<option>Select</option>
+					<option>light</option>
+					<option>medium</option>
+					<option>dark</option>
+				</select>
+			</form>
+			<br>
+			<form class="form d-grid col-3 pull-right">
+				<h5>Coffee Name</h5>
+				<input id="searchBox" type="text" placeholder="search...">
+				<input id="submit" type="submit">
+
+			</form>
+            </span>
+        </span>
+		</div>
+	</div>
 </div>
+
+
+<div id="coffees" class="container row">
+	<!--    <table>-->
+	<!--        <thead>-->
+	<!--            <tr>-->
+	<!--                <th>ID</th>-->
+	<!--                <th>NAME</th>-->
+	<!--                <th>ROAST</th>-->
+	<!--            </tr>-->
+	<!--        </thead>-->
+	<!--    -->
+	<!--        <tbody id="coffees"></tbody>-->
+	<!--    </table>-->
 </div>
 
+<script src="main.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
 
-    <div id="coffees" class="container row">
-<!--    <table>-->
-<!--        <thead>-->
-<!--            <tr>-->
-<!--                <th>ID</th>-->
-<!--                <th>NAME</th>-->
-<!--                <th>ROAST</th>-->
-<!--            </tr>-->
-<!--        </thead>-->
-<!--    -->
-<!--        <tbody id="coffees"></tbody>-->
-<!--    </table>-->
-    </div>
-
-    <script src="main.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 </body>
 </html>
