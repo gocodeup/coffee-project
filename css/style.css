@@ -1,3 +1,15 @@
+/*Amazing trick I found on stack overflow to see elements easily Like a mockup wizard! -Mark*/
+/*TODO: Play with this, comment the {outline: ... on and off to check css layout - Mark*/
+/** { outline: 1px solid red; }*/
+body {
+    background-image: url("../assets/coffee-and-programming.png");
+    /*background-color: #2f3136;*/
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;    color: #5dbcd2;
+}
+
 table {
     border-collapse: collapse;
     margin: 15px 0;
@@ -6,4 +18,14 @@ table {
 td, th {
     border: 1px solid black;
     padding: 5px 10px;
+}
+
+.jumbotron {
+    background-image: url("../assets/cybertron-person.png");
+    background-size: cover;
+    padding: 30px;
+    /*background-image: linear-gradient(to right,  #5637DD, #3046C5, #60106B);*/
+    /*background-image: linear-gradient(270deg,  #5637DD, #3046C5, #60106B);*/
+    color: white;
+    margin: 0;
 }
