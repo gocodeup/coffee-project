@@ -4,7 +4,7 @@ function renderCoffee(coffee) {
     var html = '<section class="coffee">';
     // html += '<div>' + coffee.id + '</div>';
     html += '<div>' + coffee.name + '</div>';
-    html += '<div>' + coffee.roast + '</div>';
+    html += '<div class="my-1 text-muted">' + coffee.roast + '</div>';
     html += '</section>';
 
     return html;
