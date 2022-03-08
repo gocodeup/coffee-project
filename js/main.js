@@ -113,6 +113,6 @@ exampleModal.addEventListener('show.bs.modal', function (event) {
     var modalTitle = exampleModal.querySelector('.modal-title')
     var modalBodyInput = exampleModal.querySelector('.modal-body input')
 
-    modalTitle.textContent = 'Add Coffee Name to ' + recipient
+    modalTitle.textContent = 'Add a Custom brew!'
     modalBodyInput.value = recipient
 })
