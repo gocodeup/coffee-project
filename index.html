@@ -7,7 +7,22 @@
 </head>
 <body>
     <h1>Coffee!</h1>
+<!--    TODO
+Update the HTML
 
+Tables are a little old school, you need to refactor the code so that each coffee is displayed in a div that contains a heading displaying the coffee name,
+ and the type of roast in a paragraph.
+Don't display the ids, these are only for our application's internal use
+
+When the page loads, the coffees should be sorted by their ids in ascending order
+
+Add functionality to search through the coffees by name, and display only the coffees that match the provided search term
+(You will need to add an input field to the existing form for this)
+
+Add functionality to update the displayed coffee as the user types into the search box, or as soon as they select an option from the select.-->
+
+
+<!--    This is the form-->
     <form>
         <label for="roast-selection"></label>
         <select id="roast-selection">
@@ -18,16 +33,35 @@
         <input id="submit" type="submit" />
     </form>
 
-    <table>
-        <thead>
-            <tr>
-                <th>ID</th>
-                <th>NAME</th>
-                <th>ROAST</th>
-            </tr>
-        </thead>
-        <tbody id="coffees"></tbody>
-    </table>
+<!--This is the table-->
+
+<!--    <table>-->
+<!--        <thead>-->
+<!--            <tr>-->
+<!--                <th>ID</th>-->
+<!--                <th>NAME</th>-->
+<!--                <th>ROAST</th>-->
+<!--            </tr>-->
+<!--        </thead>-->
+<!--        <tbody id="coffees"></tbody>-->
+<!--    </table>-->
+
+    <div>
+        <h3>
+            Light City
+        </h3>
+        <p>
+            light
+        </p>
+    </div>
+    <div>
+        <h3>
+            Half City City
+        </h3>
+        <p>
+            light
+        </p>
+    </div>
 
     <script src="main.js"></script>
 </body>
