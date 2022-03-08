@@ -1,34 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
+<!--Head, Metatags, Bootstrap CSS, Additional CSS, Title-->
+
 <head>
-    <meta charset="UTF-8">
-    <title></title>
+    <!-- Required meta tags always come first -->
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no"/>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>HTML 5 WEBPAGE TAB TITLE</title>
+    <!-- Bootstrap CSS First -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <!-- Additional CSS must be placed after Bootstrap CSS -->
     <link rel="stylesheet" href="css/style.css">
-</head>
+
+
 <body>
-    <h1>Coffee!</h1>
+<h1>Coffee!</h1>
 
-    <form>
-        <label for="roast-selection"></label>
-        <select id="roast-selection">
-            <option>light</option>
-            <option>medium</option>
-            <option>dark</option>
-        </select>
-        <input id="submit" type="submit" />
-    </form>
+<form>
+    <label for="roast-selection"></label>
+    <select id="roast-selection">
+        <option>light</option>
+        <option>medium</option>
+        <option>dark</option>
+    </select>
+    <input id="submit" type="submit"/>
+</form>
 
-    <table>
-        <thead>
-            <tr>
-                <th>ID</th>
-                <th>NAME</th>
-                <th>ROAST</th>
-            </tr>
-        </thead>
-        <tbody id="coffees"></tbody>
-    </table>
+<table>
+    <thead>
+    <tr>
+        <th>ID</th>
+        <th>NAME</th>
+        <th>ROAST</th>
+    </tr>
+    </thead>
+    <tbody id="coffees"></tbody>
+</table>
 
-    <script src="js/main.js"></script>
+<script src="js/main.js"></script>
 </body>
 </html>
