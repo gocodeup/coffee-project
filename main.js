@@ -10,19 +10,17 @@ function renderCoffee(coffee) {
     return html;
 }
 
-function renderCoffees(coffees) {
-    var html = '';
-    for(var i = 0; i <= coffees.length - 1; i++) {
-        console.log(coffees[i]);
-        html += renderCoffee(coffees[i]);
-    }
-    return html;
-}
+// function renderCoffees(coffees) {
+//     var html = '';
+//     for(var i = 0; i <= coffees.length - 1; i++) {
+//         html += renderCoffee(coffees[i]);
+//     }
+//     return html;
+// }
 
 function updateCoffees(e) {
     e.preventDefault(); // don't submit the form, we just want to update the data
     var selectedRoast = roastSelection.value;
-    console.log(selectedRoast);
     var filteredCoffees = [];
     coffees.forEach(function(coffee) {
         if (coffee.roast === selectedRoast) {
@@ -58,9 +56,9 @@ tbody.innerHTML = renderCoffees(coffees);
 
 submitButton.addEventListener('click', updateCoffees);
 
+
 let userInput = document.getElementById("search");
 userInput.addEventListener('keyup', filterCoffees);
-console.log(userInput);
 
 function filterCoffees(e) {
     e.preventDefault(); // don't submit the form, we just want to update the data
@@ -72,4 +70,41 @@ function filterCoffees(e) {
         }
     });
     tbody.innerHTML = renderCoffees(filteredCoffees);
+
 }
+
+//user adds coffee
+
+
+let userInputRoast = document.getElementById("add-new-roast");
+
+let userInputCoffee = document.getElementById("new-coffee-name");
+
+let userInputSubmit = document.getElementById("submit-coffee");
+
+userInputSubmit.addEventListener('click', addNewCoffee);
+
+function addNewCoffee(e){
+    e.preventDefault(); // don't submit the form, we just want to update the data
+    var newCoffee = {
+        id: coffees.length + 1,
+        name: userInputCoffee.value,
+        roast: userInputRoast.value
+    }
+    coffees.push(newCoffee);
+    console.log(coffees);
+
+    tbody.innerHTML = renderCoffees(coffees);
+
+}
+
+
+function renderCoffees(coffees) {
+    var html = '';
+    for(var i = 0; i <= coffees.length - 1; i++) {
+        html += renderCoffee(coffees[i]);
+    }
+    return html;
+}
+
+// let myLocalStorage = window.localStorage.setItem()
