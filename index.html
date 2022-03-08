@@ -14,7 +14,6 @@
     <!-- Additional CSS must be placed after Bootstrap CSS -->
     <link rel="stylesheet" href="css/style.css">
 
-    <!--SANDBOX BELOW-->
 
 
     <div class="jumbotron jumbotron-fluid">
@@ -24,10 +23,49 @@
         </div>
     </div>
 
-    <!--SANDBOX ABOVE-->
+
+
+
+
+
 
 <body>
 <h1>Coffee!</h1>
+<!--SANDBOX BELOW-->
+<!--    TODO: Review Bootstrap MODAL -->
+<!--    -->
+<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="light coffees">Add Light Roast</button>
+<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="medium coffees">Add Medium Roast</button>
+<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="dark coffees">Add Dark Roast</button>
+
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Send idea</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="mb-3">
+<!--                        TODO: Test adding dropdown menu here: -->
+<!--                        <label for="recipient-name" class="col-form-label">Roast:</label>-->
+<!--                        <input type="text" class="form-control" id="recipient-name">-->
+                    </div>
+                    <div class="mb-3">
+                        <label for="message-text" class="col-form-label">Add Your Coffee Name:</label>
+                        <textarea class="form-control" id="message-text"></textarea>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Send Coffee Name</button>
+            </div>
+        </div>
+    </div>
+</div>
+
 
 <form>
     <label for="roast-selection"></label>
@@ -44,7 +82,6 @@
 <input id="searchbar" onkeyup="search_coffee()" type="text"
        name="search" placeholder="Search flavors..">
 </form>
-
 
 
 <section id="coffees">

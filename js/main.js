@@ -46,7 +46,13 @@ function search_coffee() {
         }
     }
 }
-
+//TODO FOR MARK: Try this -Mark:
+// I present you with the cleanest way ever, in the form of the world's smallest jquery plugin:
+// jQuery.fn.reverse = [].reverse;
+// Usage:
+//     $('jquery-selectors-go-here').reverse().each(function () {
+//         //business as usual goes here
+//     });
 // from http://www.ncausa.org/About-Coffee/Coffee-Roasts-Guide
 var coffees = [
     {id: 1, name: 'Light City', roast: 'light'},
@@ -73,3 +79,40 @@ tbody.innerHTML = renderCoffees(coffees.reverse());
 
 submitButton.addEventListener('click', updateCoffees);
 
+//TODO: Sandbox:
+//addeventbutton
+//     $(document).ready(function(){
+//     $('#addEventBtn').on('click', function(e){
+//         e.preventDefault();
+//         localStorage.setItem('openModal', '#addEventModal');
+//         let href = e.target.href;
+//         window.location.replace(href);
+//     });
+// })
+
+
+//Supposdely local storage call
+//     var modalId = localStorage.getItem('openModal');
+//     if(modalId != null){
+//     $(modalId).modal("show"); //use modal with id addEventModal
+//     localStorage.removeItem('openModal');
+// }
+
+
+//TODO: review boostrap modal JS
+var exampleModal = document.getElementById('exampleModal')
+exampleModal.addEventListener('show.bs.modal', function (event) {
+    // Button that triggered the modal
+    var button = event.relatedTarget
+    // Extract info from data-bs-* attributes
+    var recipient = button.getAttribute('data-bs-whatever')
+    // If necessary, you could initiate an AJAX request here
+    // and then do the updating in a callback.
+    //
+    // Update the modal's content.
+    var modalTitle = exampleModal.querySelector('.modal-title')
+    var modalBodyInput = exampleModal.querySelector('.modal-body input')
+
+    modalTitle.textContent = 'Add Coffee Name to ' + recipient
+    modalBodyInput.value = recipient
+})
