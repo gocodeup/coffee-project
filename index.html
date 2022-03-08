@@ -34,9 +34,8 @@
 <!--SANDBOX BELOW-->
 <!--    TODO: Review Bootstrap MODAL -->
 <!--    -->
-<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="light coffees">Add Light Roast</button>
-<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="medium coffees">Add Medium Roast</button>
-<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="dark coffees">Add Dark Roast</button>
+<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="light coffees">Create-a-Coffee</button>
+
 
 <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog">
@@ -49,6 +48,16 @@
                 <form>
                     <div class="mb-3">
 <!--                        TODO: Test adding dropdown menu here: -->
+                        <div class="dropdown">
+                            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                                -- choose roast --
+                            </button>
+                            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                                <li><a class="dropdown-item" href="#">Light</a></li>
+                                <li><a class="dropdown-item" href="#">Medium</a></li>
+                                <li><a class="dropdown-item" href="#">Dark</a></li>
+                            </ul>
+                        </div>
 <!--                        <label for="recipient-name" class="col-form-label">Roast:</label>-->
 <!--                        <input type="text" class="form-control" id="recipient-name">-->
                     </div>
