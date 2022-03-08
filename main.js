@@ -72,4 +72,5 @@ function filterCoffees(e) {
         }
     });
     tbody.innerHTML = renderCoffees(filteredCoffees);
+
 }
