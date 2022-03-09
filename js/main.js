@@ -2,7 +2,9 @@
 
 function selectedRoast() {
     var roastType = document.getElementById("roastType");
-    document.getElementById("selectedRoast").value = roastType.options[roastType.selectedIndex].text;
+    if (roastType.value !== '---Select a Roast---') {
+        document.getElementById("selectedRoast").value = roastType.options[roastType.selectedIndex].text;
+    }
 }
 
 function customCoffee() {
@@ -29,6 +31,7 @@ function renderCoffees(coffees) {
     }
     return html;
 }
+
 //filters by roast type including all
 function updateCoffees(e) {
     e.preventDefault(); // don't submit the form, we just want to update the data
@@ -58,6 +61,7 @@ function search_coffee() {
         }
     }
 }
+
 //TODO FOR MARK: Try this -Mark:
 // I present you with the cleanest way ever, in the form of the world's smallest jquery plugin:
 // jQuery.fn.reverse = [].reverse;
