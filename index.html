@@ -37,7 +37,7 @@
 <!--    TODO: Review Bootstrap MODAL: Complete -->
 <!--TODO: Review bootstrap spacing utilities for this -->
 <!--    -->
-<!--<main class="container fluid p-5">-->
+<!--<main class="container container-fluid p-5">-->
 <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
@@ -54,9 +54,9 @@
                     <div class="mb-3">
                         <label for="roastType" class="col-form-label">Choose Your Roast:</label>
                         <select id="roastType">
-                            <option>light</option>
-                            <option>medium</option>
-                            <option>dark</option>
+                            <option>Light</option>
+                            <option>Medium</option>
+                            <option>Dark</option>
                         </select>
                     </div>
                 </form>
@@ -78,10 +78,16 @@
 </div>
 
 <!--DIV inside of form is acceptable just not common-->
-<section class="col-2">
+
+
+<section class=" d-inline-flex justify-content-center mx-auto" style="width: 80%">
     <form>
-        <div class="row">
-            <div class="col-6">
+        <input id="searchbar" type="text"
+               name="search" placeholder="Search flavors..">
+    </form>
+    <form class="d-flex">
+        <div class="row d-inline-flex">
+            <div class="col-10">
                 <label for="roast-selection"></label>
                 <select id="roast-selection">
                     <option>all</option>
@@ -89,15 +95,15 @@
                     <option>medium</option>
                     <option>dark</option>
                 </select>
-                <input id="submit" type="submit" value="Search by Roast"/>
+                <input id="submit" type="submit" value="Search Roasts"/>
             </div>
         </div>
     </form>
     <!--search bar-->
-    <form>
-        <input id="searchbar"  type="text"
-               name="search" placeholder="Search by flavor...">
-    </form>
+    <!--    <form>-->
+    <!--        <input id="searchbar" type="text"-->
+    <!--               name="search" placeholder="Search flavors..">-->
+    <!--    </form>-->
 </section>
 
 
