@@ -1,12 +1,15 @@
+@media all {
 body {
-    background-image:url("../IMG/coffee-around-the-world.jpg"); ;
+    background-image: url("");;
     background-size: cover;
-    font-family: "Open Sans", Helvetica, Arial, sans-serif;
+    font-family: Impact;
+    text-align: center;
 }
+
 /*End of Background style*/
 h2 {
     color: black;
-    background-color:navajowhite;
+    background-color: navajowhite;
     opacity: 75%;
     font-family: Impact;
 }
@@ -20,25 +23,20 @@ h1 {
 }
 
 
-
-
-
 .cont {
     position: relative;
     overflow: hidden;
     height: 100vh;
     padding: 80px 70px;
 }
+
 /*Fixes size of div cards*/
 .cont__inner {
     position: relative;
     height: 75%;
-    width:auto;
+    width: auto;
 }
 
-.cont__inner:hover .el__bg:after {
-    opacity: 1;
-}
 /*Card positisons */
 .el {
     position: absolute;
@@ -46,7 +44,7 @@ h1 {
     top: 0;
     width: 19.2%;
     height: 100%;
-    background-image: url("../IMG/coffee2.jpg");
+    background-image: url("../Images/coffe3.jpg");
     background-size: cover;
     background-position: center;
     transition: transform 0.6s 0.7s, width 0.7s, opacity 0.6s 0.7s, z-index 0s 1.3s;
@@ -54,57 +52,31 @@ h1 {
 }
 
 .el:not(.s--active) {
-    cursor:crosshair;
+    cursor: pointer;
 }
+
 /*Header for cards*/
-.cont.s--inactive .el__preview-cont {
-    opacity: 0;
-    transform: translateY(10px);
-}
 
 .el__text {
     text-transform: uppercase;
-    font-size: 20px;
-    text-align: center;
+
 
 }
+
 /*end of headers for cards*/
-/* Everything Below effects the numbers */
 
-.el__index {
-    overflow: hidden;
-    position: absolute;
-    left: 0;
-    bottom: -80px;
-    width: 100%;
-    height: 100%;
-    min-height: 250px;
-    text-align: center;
-    font-size: 4vw;
-    font-family: Impact;
-    line-height: 0.85;
-    font-weight: bold;
-    transition: transform 0.5s, opacity 0.3s 1.4s;
-    transform: translate3d(0, 1vw, 0);
-}
-
-.el:hover .el__index {
-    transform: translate3d(0, 0, 0);
-}
-
-.cont.s--el-active .el__index {
-    transition: transform 0.5s, opacity 0.3s;
-    opacity: 0;
-}
+/* Everything Below effects the text area */
 
 .el__index-back, .el__index-front {
     position: absolute;
     left: 0;
     bottom: 0;
     width: 100%;
+    font-size: 80px;
 }
 
-/* Color For number menu*/
+/* Color For text anime hero/villians*/
+
 .el__index-back {
     color: goldenrod;
     opacity: 0;
@@ -151,7 +123,6 @@ h1 {
 /* everything below effect the sections for boxes */
 .el:nth-child(1) .el__bg:before {
     transition-delay: 0s;
-    background-image: url("IMG/paper2.jpg");
 }
 
 .el:nth-child(2) {
@@ -177,26 +148,5 @@ h1 {
 }
 
 
-
-
 /*Media All Sizes*/
-@media screen and (min-width: 768px) {
-
-    hr {
-        width: 55%
-    }
-}
-
-@media screen and ( min-width: 992px) {
-
-    hr {
-        width: 100%
-    }
-}
-
-@media screen and (min-width: 1450px) {
-
-    hr {
-        width: 100%
-    }
 }
