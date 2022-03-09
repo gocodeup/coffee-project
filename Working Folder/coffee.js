@@ -8,7 +8,7 @@
 //
 //     return html;
 // }
-
+//Complete
 function renderCoffee(coffee){
     var html = '<div class="coffee">';
     html += '<div>' + '<h3>' + coffee.name + '</h3>' + " " + '<select class="roast-selection">' + coffee.roast + ' <i class="icon fas fa-coffee">' + '</i>' +
@@ -30,29 +30,31 @@ function updateCoffees(e) {
     e.preventDefault(); // don't submit the form, we just want to update the data
     var selectedRoast = roastSelection.value;
     var filteredCoffees = [];
-    coffees.forEach(function(coffee) {
-        if (coffee.roast === selectedRoast) {
-            filteredCoffees.push(coffee);
-        } else if (coffee.name.toLowerCase().includes(textInput)) {
-            filteredCoffees.push(coffee);
-        }
-    }) divBody.innerHTML = renderCoffees(filteredCoffees);
+    if (roastSelection.value === 'all'){
+        filteredCoffees = coffees;
+    } else {
+        coffees.forEach(function (coffee){
+            if (coffee.roast === selectedRoast) {
+                filteredCoffees.push(coffee);
+            }
+        });
+    } divBody.innerHTML = renderCoffees(filteredCoffees);
 }
 
-// function updateCoffees(e) {
-//     e.preventDefault(); // don't submit the form, we just want to update the data
-//     var selectedRoast = roastSelection.value;
-//     var filteredCoffees = [];
-//     coffees.forEach(function(coffee) {
-//         if (coffee.roast === selectedRoast) {
-//             filteredCoffees.push(coffee);
-//         } else if (textInput === coffees){
-//             filteredCoffees.push(coffee)
-//         }
-//     });
-//     divBody.innerHTML = renderCoffees(filteredCoffees);
-//     console.log(filteredCoffees)
-// }
+function updateCoffeeInput(e) {
+    e.preventDefault();
+    var coffeeUserInput = coffeeInput.value.toLowerCase()
+    var coffeeHolic = [];
+    coffees.forEach(function (coffee){
+        if (coffeeInput.value === ""){
+            coffeeUserInput.push(coffee);
+        } else if (coffee.name.toLowerCase().includes(coffeeUserInput)){
+            coffeeHolic.push(coffee);
+        }
+    });
+    divBody.innerHTML = renderCoffees(coffeeHolic);
+}
+
 
 // from http://www.ncausa.org/About-Coffee/Coffee-Roasts-Guide
 var coffees = [
@@ -75,11 +77,13 @@ var coffees = [
 var divBody = document.querySelector('#coffees');
 var submitButton = document.querySelector('#submit');
 var roastSelection = document.querySelector('#roast-selection');
-var textInput = document.querySelector("#text-input").value
+var coffeeInput = document.querySelector("#text-input").value;
 
 
 divBody.innerHTML = renderCoffees(coffees);
 
 submitButton.addEventListener('click', updateCoffees);
-textInput.addEventListener("keyup", updateCoffees);
+//textInput.addEventListener("keyup", updateCoffees);
+coffeeInput.addEventListener('input', updateCoffeeInput);
+
 
