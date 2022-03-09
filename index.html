@@ -19,17 +19,32 @@
         <input id="submit" type="submit" />
     </form>
     <br>
-    <form>
+    <form class="container">
         <h1>add new cofee</h1>
         <label for="add-new-roast">Roast</label>
         <select id="add-new-roast">
+
+            <option></option>
+            <option>no</option>
             <option>light</option>
             <option>medium</option>
             <option>dark</option>
         </select>
-        <input type="text" id="new-coffee-name" placeholder="Coffee Name Here">
+        <input class="storage" type="text" id="new-coffee-name" placeholder="Coffee Name Here">
 
-        <input id="submit-coffee" type="submit" />
+        <input id="submit-coffee" type="submit"/>
+
+        <button class="button">save</button>
+
+        <details>
+            <summary>your favorite coffee</summary>
+
+        <p class="roast-text"></p>
+        <p class="text"></p>
+        </details>
+
+        <button id="remove">remove saved coffee</button>
+        <br>
     </form>
 
     <div>
