@@ -1,5 +1,17 @@
 "use strict"
 
+function selectedRoast() {
+    var roastType = document.getElementById("roastType");
+    document.getElementById("selectedRoast").value = roastType.options[roastType.selectedIndex].text;
+}
+
+function customCoffee() {
+    let customName = document.getElementById("custom-name").value;
+    console.log(customName);
+    document.getElementById("customCoffeeName").value =
+        customName;
+}
+
 function renderCoffee(coffee) {
     var html = '<section class="coffee">';
     // html += '<div>' + coffee.id + '</div>';
