@@ -2,8 +2,8 @@
 /*TODO: Play with this, comment the {outline: ... on and off to check css layout - Mark*/
 /** { outline: 1px solid red; }*/
 body {
-    background-image: url("../assets/coffee-and-programming.png");
-    /*background-color: #2f3136;*/
+    /*background-image: url("../assets/coffee-and-programming.png");*/
+    background-color: #2f3136;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
