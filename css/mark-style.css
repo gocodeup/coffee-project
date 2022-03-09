@@ -1,0 +1,130 @@
+/*Amazing trick I found on stack overflow to see elements easily Like a mockup wizard! -Mark*/
+/*TODO: Play with this, comment the {outline: ... on and off to check css layout - Mark*/
+/** { outline: 1px solid red; }*/
+body {
+    background-image: url("../assets/terminal_background.png");
+    /*background-color: #2f3136;*/
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;    color: #5dbcd2;
+}
+
+table {
+    border-collapse: collapse;
+    margin: 15px 0;
+}
+
+td, th {
+    border: 1px solid black;
+    padding: 5px 10px;
+}
+
+.modalbackground {
+    background: black;
+}
+
+.darkgray {
+    background: #2f3136;
+}
+
+.jumbotron {
+    background-image: url("../assets/cybertron-person.png");
+    background-size: cover;
+    padding: 30px;
+    /*background-image: linear-gradient(to right,  #5637DD, #3046C5, #60106B);*/
+    /*background-image: linear-gradient(270deg,  #5637DD, #3046C5, #60106B);*/
+    color: white;
+    margin: 0;
+}
+
+.fancy-header {
+    color: #9e8aff;
+    Opacity: 1;
+}
+
+hr {
+    width:80%;
+    margin: auto;
+    color: #fcf601;
+
+}
+
+.jsicon {
+    /*color: #fcf601;*/
+    color: #fbd4f1;
+
+
+}
+
+.neonText {
+    color: #fff;
+    text-shadow:
+        /* White glow */
+            0 0 7px #fff,
+            0 0 10px #fff,
+                /*0 0 21px #fff,*/
+                /* Green glow */
+            0 0 42px #0fa,
+            0 0 82px #0fa,
+            0 0 92px #0fa;
+    /*0 0 102px #0fa,*/
+    /*0 0 151px #0fa;*/
+}
+
+.neonGreenText {
+    color: #fff;
+    text-shadow:
+            0 0 7px #0fa,
+            0 0 10px #0fa,
+            0 0 21px #0fa,
+            0 0 42px #0fa,
+            0 0 82px #0fa,
+            0 0 92px #0fa,
+            0 0 102px #0fa,
+            0 0 151px #0fa;
+}
+
+.neonBlueText {
+    color: #fff;
+    text-shadow:
+            0 0 5px #0ff,
+            0 0 10px #0ff,
+            0 0 20px #0ff,
+            0 0 40px #0ff,
+            0 0 80px #0ff,
+            0 0 90px #0ff,
+            0 0 100px #0ff,
+            0 0 150px #0ff;
+}
+
+/*@keyframes flicker {*/
+/*    0%, 18%, 22%, 25%, 53%, 57%, 100% {*/
+/*        text-shadow:*/
+/*                0 0 4px #fff,*/
+/*                0 0 11px #fff,*/
+/*                0 0 19px #fff,*/
+/*                0 0 40px #0fa,*/
+/*                0 0 80px #0fa,*/
+/*                0 0 90px #0fa,*/
+/*                0 0 100px #0fa,*/
+/*                0 0 150px #0fa;*/
+/*    }*/
+/*    20%, 24%, 55% {*/
+/*        text-shadow: none;*/
+/*    }*/
+/*}*/
+
+
+
+/*<div style="position: fixed; z-index: -99; width: 100%; height: 100%">*/
+/*                                                                     <iframe*/
+/*                                                                     frameborder="0"*/
+/*height="100%"*/
+/*width="100%"*/
+/*src="https://youtube.com/embed/ID?autoplay=1&controls=0&showinfo=0&autohide=1"*/
+/*>*/
+/*</iframe>*/
+/*  </div>*/
+
+/*// Replace ID with the actual ID of your YouTube video*/

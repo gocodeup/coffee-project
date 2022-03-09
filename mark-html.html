@@ -17,16 +17,19 @@
 
 <body>
 <div class="jumbotron jumbotron-fluid">
-    <div class="container">
-        <h1 class="display-4 fancy-header">JS Cafe</h1>
-        <p class="lead jsicon">(<i class="fa-brands fa-js-square">!== </i><i class="fa-brands fa-java"></i>)</p>
+    <div class="container mx-0 px-0">
+        <div class="mx-0 px-0">
+            <img src="assets/js_cafe_logo.png" style="height: 20%; width: 20%">
+        </div>
+        <!--        <p class="lead jsicon">(<i class="fa-brands fa-js-square">!== </i><i class="fa-brands fa-java"></i>)</p>-->
     </div>
 </div>
 <br>
 <!--<hr style="width:80%; margin: auto;">-->
 
-<h1 class ="text-center fancy-header ">Enjoy your <i class="fa-solid fa-mug-hot"></i> with  <i class="fa-brands fa-js-square"></i></h1>
-<h2 class ="text-center"> or your <i class="fa-solid fa-cookie-bite"></i> with <i class="fa-brands fa-java"></i></h2>
+<h1 class="text-center fancy-header neonText">Enjoy your <i class="fa-solid fa-mug-hot"></i> with <i
+        class="fa-brands fa-js-square"></i></h1>
+<h2 class="text-center neonText"> or your <i class="fa-solid fa-cookie-bite"></i> with <i class="fa-brands fa-java"></i></h2>
 
 <hr style="width:80%; margin: auto;">
 <br>
@@ -34,84 +37,85 @@
 <!--    TODO: Review Bootstrap MODAL: Complete -->
 <!--TODO: Review bootstrap spacing utilities for this -->
 <!--    -->
-<!--<main class="container fluid p-5">-->
-<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">Send idea</h5>
+<!--<main class="container container-fluid p-5">-->
+<div class="modal fade modalbackground" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog darkgray">
+        <div class="modal-content darkgray">
+            <div class="modal-header darkgray">
+                <h5 class="modal-title neonText" id="exampleModalLabel">Send idea</h5>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
-            <div class="modal-body">
+            <div class="modal-body darkgray">
                 <form>
                     <div class="mb-3">
-                        <label for="custom-name" class="col-form-label">Add Your Custom Coffee Name:</label>
-                        <textarea class="form-control" id="custom-name" onkeyup="customCoffee()"></textarea>
+                        <label for="custom-name" class="col-form-label neonText">Add Your Custom Coffee Name:</label>
+                        <input class="form-control" id="custom-name">
                     </div>
                     <div class="mb-3">
-                        <label for="roastType" class="col-form-label">Choose Your Roast:</label>
-                        <select id="roastType" onchange="selectedRoast()">
-                            <option>---Select a Roast---</option>
+                        <label for="roastType" class="col-form-label neonText">Choose Your Roast:</label>
+                        <select id="roastType">
                             <option>Light</option>
                             <option>Medium</option>
                             <option>Dark</option>
                         </select>
                     </div>
                 </form>
-                <div>
-                    <p>
-                        Your coffee name:
-                        <input readonly type="text" id="customCoffeeName" size="20">
-                    </p>
-                    <p>
-                        Your roast type:
-                        <input readonly type="text" id="selectedRoast" size="20">
-                    </p>
-                </div>
             </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                <button  id="send" type="button" class="btn btn-primary">Send Coffee Name</button>
+            <div class="modal-footer darkgray">
+                <button type="button" class="btn btn-secondary bg-dark" style="border: black" data-bs-dismiss="modal">Close</button>
+                <button id="send" type="button" class="btn btn-secondary" data-bs-dismiss="modal">Send Coffee Name
+                </button>
             </div>
         </div>
     </div>
 </div>
 <!--</main>-->
 <!--TODO: Keep this, nice and center looks better for now -Mark-->
-<div class="mx-auto" style="width: 200px;">
-    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal"
+<div class="mx-auto d-flex justify-content-center" style="width: 200px;">
+    <button type="button" class="btn btn-primary bg-dark" style="border: black" data-bs-toggle="modal" data-bs-target="#exampleModal"
             data-bs-whatever="">Create-a-Coffee
     </button>
 </div>
 
 <!--DIV inside of form is acceptable just not common-->
-<section class="col-2">
-    <form>
-        <div class="row">
-            <div class="col-6">
-                <label for="roast-selection"></label>
-                <select id="roast-selection">
-                    <option>all</option>
-                    <option>light</option>
-                    <option>medium</option>
-                    <option>dark</option>
-                </select>
-                <input id="submit" type="submit" value="Search Roasts"/>
+
+<div class="d-flex justify-content-center mt-3">
+    <section class="d-inline-flex justify-content-center mx-auto" style="width: 80%">
+        <form class="d-flex">
+            <div class="row d-inline-flex">
+                <div class="col-10">
+                    <label for="roast-selection"></label>
+                    <select id="roast-selection" class="mb-2">
+                        <option>all</option>
+                        <option>light</option>
+                        <option>medium</option>
+                        <option>dark</option>
+                    </select>
+                    <input id="submit" type="submit" value="Search Roasts"/>
+                </div>
             </div>
-        </div>
-    </form>
-    <!--search bar-->
-    <form>
-        <input id="searchbar" onkeyup="search_coffee()" type="text"
-               name="search" placeholder="Search flavors..">
-    </form>
-</section>
+        </form>
+        <!--search bar-->
+        <form>
+            <input id="searchbar" type="text"
+                   name="search" placeholder="Search by flavor...">
+        </form>
+    </section>
+</div>
 
+<div class="pip">
+    <div class="d-flex justify-content-center mt-4">
+        <section id="coffees" style="width: 80%" class="d-flex justify-content-center flex-wrap neonText">
+            <!--    Coffees display here-->
+        </section>
+    </div>
 
-<section id="coffees">
-    <!--    Coffees display here-->
-</section>
-
+</div>
+<!--random change to see what happens at 1749-->
+<!--<iframe width="560" height="315" src="https://www.youtube.com/embed/zyS3siSF62M?start=1&autoplay=1&mute=0&enablejsapi=1"-->
+<!--        title="YouTube video player" frameborder="0"-->
+<!--        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"-->
+<!--        allowfullscreen></iframe>-->
 
 <script src="js/main.js"></script>
 
