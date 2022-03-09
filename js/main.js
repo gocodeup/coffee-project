@@ -29,6 +29,7 @@ function renderCoffees(coffees) {
     }
     return html;
 }
+
 //filters by roast type including all
 function updateCoffees(e) {
     e.preventDefault(); // don't submit the form, we just want to update the data
@@ -58,6 +59,7 @@ function search_coffee() {
         }
     }
 }
+
 //TODO FOR MARK: Try this -Mark:
 // I present you with the cleanest way ever, in the form of the world's smallest jquery plugin:
 // jQuery.fn.reverse = [].reverse;
@@ -128,3 +130,20 @@ exampleModal.addEventListener('show.bs.modal', function (event) {
     modalTitle.textContent = 'Add a Custom brew!'
     modalBodyInput.value = recipient
 })
+
+var send = function() {
+    let newCoffee =
+        {
+            id: coffees.length + 1,
+            name: document.getElementById('custom-name').value,
+            roast: document.getElementById('selectedRoast').value
+
+        };
+
+    coffees.push(newCoffee)
+}
+
+
+document.getElementById('send').addEventListener('click', send);
+document.getElementById('send').addEventListener('click', updateCoffees);
+
