@@ -95,7 +95,6 @@ function addNewCoffee(e){
     console.log(coffees);
 
     tbody.innerHTML = renderCoffees(coffees);
-
 }
 
 
@@ -107,4 +106,53 @@ function renderCoffees(coffees) {
     return html;
 }
 
-// let myLocalStorage = window.localStorage.setItem()
+//local storage
+//get elements from html
+const storageInput = document.querySelector('.storage');
+const button = document.querySelector('.button');
+const text = document.querySelector('.text')
+const roastTextShow = document.querySelector('.roast-text')
+let roastSelectorValue = document.querySelector('#add-new-roast')
+
+//get coffee name values from when user enters text into coffee name here
+storageInput.addEventListener('input', letter => {
+    storageInput.textContent = letter.target.value;
+})
+
+//get values for dropdown
+roastSelectorValue.addEventListener('change', selection => {
+    roastSelectorValue = roastSelectorValue.value;
+})
+
+
+//saves user input when click save into local storage
+const saveToLocalStorage = () => {
+    localStorage.setItem('coffeeroast', roastSelectorValue);
+    localStorage.setItem('coffeeinput', storageInput.textContent);
+
+}
+//event listener for button save
+button.addEventListener('click', saveToLocalStorage)
+
+// if there is input in local, show the text into new p tag
+const storedInput = localStorage.getItem('coffeeinput');
+
+if (storageInput){
+    text.textContent = storedInput;
+}
+
+
+
+// if there is input in local, show the dropdown value into new p tag
+const storedRoast = localStorage.getItem('coffeeroast')
+if (storedRoast){
+    roastTextShow.textContent =  storedRoast + ' roast';
+}
+
+
+//removes local storage
+const buttonRemover = document.querySelector('#remove');
+buttonRemover.addEventListener('click', remove => {
+    localStorage.removeItem('coffeeinput');
+    localStorage.removeItem('coffeeroast');
+})
