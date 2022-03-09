@@ -27,9 +27,9 @@
 <br>
 <!--<hr style="width:80%; margin: auto;">-->
 
-<h1 class="text-center fancy-header neonText">Enjoy your <i class="fa-solid fa-mug-hot"></i> with <i
+<h1 class="text-center fancy-header ">Enjoy your <i class="fa-solid fa-mug-hot"></i> with <i
         class="fa-brands fa-js-square"></i></h1>
-<h2 class="text-center neonText"> or your <i class="fa-solid fa-cookie-bite"></i> with <i class="fa-brands fa-java"></i></h2>
+<h2 class="text-center"> or your <i class="fa-solid fa-cookie-bite"></i> with <i class="fa-brands fa-java"></i></h2>
 
 <hr style="width:80%; margin: auto;">
 <br>
@@ -37,22 +37,24 @@
 <!--    TODO: Review Bootstrap MODAL: Complete -->
 <!--TODO: Review bootstrap spacing utilities for this -->
 <!--    -->
+
 <!--<main class="container container-fluid p-5">-->
-<div class="modal fade modalbackground" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog darkgray">
-        <div class="modal-content darkgray">
-            <div class="modal-header darkgray">
-                <h5 class="modal-title neonText" id="exampleModalLabel">Send idea</h5>
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Send idea</h5>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
-            <div class="modal-body darkgray">
+            <div class="modal-body">
                 <form>
                     <div class="mb-3">
-                        <label for="custom-name" class="col-form-label neonText">Add Your Custom Coffee Name:</label>
+                        <label for="custom-name" class="col-form-label">Add Your Custom Coffee Name:</label>
                         <input class="form-control" id="custom-name">
                     </div>
-                    <div class="mb-3">
-                        <label for="roastType" class="col-form-label neonText">Choose Your Roast:</label>
+<!--                    mx-auto" style="width: 200px;"-->
+                    <div class="mx-auto width: 200px">
+                        <label for="roastType" class="col-form-label">Choose Your Roast:</label>
                         <select id="roastType">
                             <option>Light</option>
                             <option>Medium</option>
@@ -61,9 +63,9 @@
                     </div>
                 </form>
             </div>
-            <div class="modal-footer darkgray">
-                <button type="button" class="btn btn-secondary bg-dark" style="border: black" data-bs-dismiss="modal">Close</button>
-                <button id="send" type="button" class="btn btn-secondary" data-bs-dismiss="modal">Send Coffee Name
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button id="send" type="button" class="btn btn-primary" data-bs-dismiss="modal">Send Coffee Name
                 </button>
             </div>
         </div>
@@ -71,8 +73,8 @@
 </div>
 <!--</main>-->
 <!--TODO: Keep this, nice and center looks better for now -Mark-->
-<div class="mx-auto d-flex justify-content-center" style="width: 200px;">
-    <button type="button" class="btn btn-primary bg-dark" style="border: black" data-bs-toggle="modal" data-bs-target="#exampleModal"
+<div class="mx-auto" style="width: 200px;">
+    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal"
             data-bs-whatever="">Create-a-Coffee
     </button>
 </div>
@@ -103,13 +105,7 @@
     </section>
 </div>
 
-<div class="pip">
-    <div class="d-flex justify-content-center mt-4">
-        <section id="coffees" style="width: 80%" class="d-flex justify-content-center flex-wrap neonText">
-            <!--    Coffees display here-->
-        </section>
-    </div>
-</div>
+
 
 <!--<iframe width="560" height="315" src="https://www.youtube.com/embed/zyS3siSF62M?start=1&autoplay=1&mute=0&enablejsapi=1"-->
 <!--        title="YouTube video player" frameborder="0"-->
