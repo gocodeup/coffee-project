@@ -1,14 +1,22 @@
 "use strict"
 
-function renderCoffee(coffee) {
-    var html = '<div class="coffee">';
-    html += '<h3>' + coffee.name + '</h3>';
-    html += '<p>' + coffee.roast + '</p>';
-    html += '</div>';
+// function renderCoffee(coffee) {
+//     var html = '<div class="coffee">';
+//     html += '<h3>' + coffee.name + '</h3>';
+//     html += '<p>' + coffee.roast + '</p>';
+//     html += '</div>';
+//
+//     return html;
+// }
 
+function renderCoffee(coffee){
+    var html = '<div class="coffee">';
+    html += '<div>' + '<h3>' + coffee.name + '</h3>' + " " + '<select class="roast-selection">' + coffee.roast + ' <i class="icon fas fa-coffee">' + '</i>' +
+        '</select>' + '</div>';
+    html += '</div>'
     return html;
 }
-
+// Complete
 function renderCoffees(coffees) {
     var html = '';
     // console.log(coffees)
@@ -16,9 +24,8 @@ function renderCoffees(coffees) {
         html += renderCoffee(coffees[i]);
     }
     return html;
-
 }
-
+//Complete
 function updateCoffees(e) {
     e.preventDefault(); // don't submit the form, we just want to update the data
     var selectedRoast = roastSelection.value;
@@ -26,10 +33,10 @@ function updateCoffees(e) {
     coffees.forEach(function(coffee) {
         if (coffee.roast === selectedRoast) {
             filteredCoffees.push(coffee);
+        } else if (coffee.name.toLowerCase().includes(textInput)) {
+            filteredCoffees.push(coffee);
         }
-    });
-    divBody.innerHTML = renderCoffees(filteredCoffees);
-
+    }) divBody.innerHTML = renderCoffees(filteredCoffees);
 }
 
 // function updateCoffees(e) {
