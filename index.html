@@ -25,8 +25,9 @@
 <br>
 <!--<hr style="width:80%; margin: auto;">-->
 
-<h1 class ="text-center fancy-header ">Enjoy your <i class="fa-solid fa-mug-hot"></i> with  <i class="fa-brands fa-js-square"></i></h1>
-<h2 class ="text-center"> or your <i class="fa-solid fa-cookie-bite"></i> with <i class="fa-brands fa-java"></i></h2>
+<h1 class="text-center fancy-header ">Enjoy your <i class="fa-solid fa-mug-hot"></i> with <i
+        class="fa-brands fa-js-square"></i></h1>
+<h2 class="text-center"> or your <i class="fa-solid fa-cookie-bite"></i> with <i class="fa-brands fa-java"></i></h2>
 
 <hr style="width:80%; margin: auto;">
 <br>
@@ -46,32 +47,22 @@
                 <form>
                     <div class="mb-3">
                         <label for="custom-name" class="col-form-label">Add Your Custom Coffee Name:</label>
-                        <textarea class="form-control" id="custom-name" onkeyup="customCoffee()"></textarea>
+                        <input class="form-control" id="custom-name">
                     </div>
                     <div class="mb-3">
                         <label for="roastType" class="col-form-label">Choose Your Roast:</label>
-                        <select id="roastType" onchange="selectedRoast()">
-                            <option>---Select a Roast---</option>
+                        <select id="roastType">
                             <option>Light</option>
                             <option>Medium</option>
                             <option>Dark</option>
                         </select>
                     </div>
                 </form>
-                <div>
-                    <p>
-                        Your coffee name:
-                        <input readonly type="text" id="customCoffeeName" size="20">
-                    </p>
-                    <p>
-                        Your roast type:
-                        <input readonly type="text" id="selectedRoast" size="20">
-                    </p>
-                </div>
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                <button  id="send" type="button" class="btn btn-primary" data-bs-dismiss="modal">Send Coffee Name</button>
+                <button id="send" type="button" class="btn btn-primary" data-bs-dismiss="modal">Send Coffee Name
+                </button>
             </div>
         </div>
     </div>

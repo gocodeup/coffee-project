@@ -137,11 +137,11 @@ var send = function() {
         {
             id: coffees.length + 1,
             name: document.getElementById('custom-name').value,
-            roast: document.getElementById('selectedRoast').value
+            roast: document.getElementById('roastType').value
 
         };
 
-    coffees.push(newCoffee)
+    coffees.unshift(newCoffee)
 
 }
 
