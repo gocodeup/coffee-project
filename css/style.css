@@ -29,3 +29,21 @@ td, th {
     color: white;
     margin: 0;
 }
+
+.fancy-header {
+    text-decoration: underline;
+    color: #9e8aff;
+    Opacity: 1;
+}
+
+hr {
+    width:80%;
+    margin: auto;
+    color: #fcf601;
+
+}
+
+.jsicon {
+    /*color: #fcf601;*/
+    color: #fbd4f1;
+}
