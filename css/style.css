@@ -20,6 +20,14 @@ td, th {
     padding: 5px 10px;
 }
 
+.modalbackground {
+    background: black;
+}
+
+.darkgray {
+    background: #2f3136;
+}
+
 .jumbotron {
     background-image: url("../assets/cybertron-person.png");
     background-size: cover;
