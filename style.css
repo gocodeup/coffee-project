@@ -231,3 +231,52 @@ h2 {
     font-family: 'VT323', monospace;
     font-size: 2em;
 }
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+
+@media only screen and (max-width: 768px) {
+    .search{
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .lower-body{
+        margin-top: -2em;
+        width: 90%;
+        flex-wrap: wrap;
+    }
+    .content{
+        width: 100%;
+        flex-wrap: wrap;
+        margin-top: 2em;
+        margin-right: 1em;
+    }
+    #coffees{
+        width: 100%;
+        flex-wrap: wrap;
+    }
+    .coffee{
+        font-size: 15px;
+        width: 30%;
+        outline: 1px solid white;
+        margin-right: 2%;
+        margin-bottom: 3em;
+        text-align: center;
+    }
+    .summary{
+        text-align: center;
+        margin: 1em 0;
+    }
+    .text, .roast-text{
+        text-align: center;
+    }
+    #submit-coffee{
+        margin-left: 3em;
+    }
+    .button{
+        margin-left: 2em;
+    }
+    #remove{
+        margin-left: 3em;
+    }
+}
