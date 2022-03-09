@@ -10,13 +10,13 @@ function renderCoffee(coffee) {
     return html;
 }
 
-// function renderCoffees(coffees) {
-//     var html = '';
-//     for(var i = 0; i <= coffees.length - 1; i++) {
-//         html += renderCoffee(coffees[i]);
-//     }
-//     return html;
-// }
+function renderCoffees(coffees) {
+    var html = '';
+    for(var i = 0; i <= coffees.length - 1; i++) {
+        html += renderCoffee(coffees[i]);
+    }
+    return html;
+}
 
 function updateCoffees(e) {
     e.preventDefault(); // don't submit the form, we just want to update the data
@@ -57,20 +57,23 @@ tbody.innerHTML = renderCoffees(coffees);
 submitButton.addEventListener('click', updateCoffees);
 
 
-let userInput = document.getElementById("search");
-userInput.addEventListener('keyup', filterCoffees);
+let userInput = document.getElementById("search")
+userInput.addEventListener('keyup', filterCoffees)
 
 function filterCoffees(e) {
     e.preventDefault(); // don't submit the form, we just want to update the data
     var result = userInput.value.charAt(0).toUpperCase();
+    // var result = userInput.textContent = e.target.value;
+    console.log(result);
+
     var filteredCoffees = [];
     coffees.forEach(function(coffee) {
         if (coffee.name.includes(result)) {
+            console.log(result)
             filteredCoffees.push(coffee);
         }
     });
     tbody.innerHTML = renderCoffees(filteredCoffees);
-
 }
 
 //user adds coffee
@@ -98,13 +101,8 @@ function addNewCoffee(e){
 }
 
 
-function renderCoffees(coffees) {
-    var html = '';
-    for(var i = 0; i <= coffees.length - 1; i++) {
-        html += renderCoffee(coffees[i]);
-    }
-    return html;
-}
+
+
 
 //local storage
 //get elements from html
