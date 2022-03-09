@@ -59,8 +59,6 @@ function search_coffee() {
             x[i].style.display = "list-item";
         }
     }
-
-
 }
 document.getElementById('searchbar').addEventListener('keyup', search_coffee);
 

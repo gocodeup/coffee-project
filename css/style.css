@@ -31,7 +31,6 @@ td, th {
 }
 
 .fancy-header {
-    text-decoration: underline;
     color: #9e8aff;
     Opacity: 1;
 }
@@ -49,17 +48,30 @@ hr {
 
 
 }
-.neonText {
+.neonGreenText {
     color: #fff;
     text-shadow:
-            0 0 7px #fff,
-            0 0 10px #fff,
-            0 0 21px #fff,
+            0 0 7px #0fa,
+            0 0 10px #0fa,
+            0 0 21px #0fa,
             0 0 42px #0fa,
             0 0 82px #0fa,
             0 0 92px #0fa,
             0 0 102px #0fa,
             0 0 151px #0fa;
+}
+
+.neonBlueText {
+    color: #fff;
+    text-shadow:
+            0 0 5px #0ff,
+            0 0 10px #0ff,
+            0 0 20px #0ff,
+            0 0 40px #0ff,
+            0 0 80px #0ff,
+            0 0 90px #0ff,
+            0 0 100px #0ff,
+            0 0 150px #0ff;
 }
 
 
