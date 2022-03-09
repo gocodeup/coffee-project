@@ -45,15 +45,27 @@
 
     <!--    This is the form-->
     <form>
-        <label for="roast-selection"></label>
-        <select id="roast-selection">
-            <option>light</option>
-            <option>medium</option>
-            <option>dark</option>
-        </select>
+        <div class="rightSelections">
+            <!--do we need the label for roast selection? Could we move the id up and have a class instead-->
+            <label for="roast-selection"></label>
+            <select id="roast-selection">
+                <option>Light</option>
+                <option>Medium</option>
+                <option>Dark</option>
+                <option>All Roasts</option>
+            </select>
+            <!--is this a textarea?-->
         <input id="submit" type="submit"/>
         <input id="text-input" type="text"/>
+        </div>
     </form>
+    <!--need to have a text area bod to input coffee name here-->
+    <hr>
+
+    <!--add coffee section -->
+    <h2>Add You Coffee Preferences</h2>
+    <h4>Roast Type</h4>
+
 
 
     <!--This was the table-->
