@@ -59,7 +59,11 @@ function search_coffee() {
             x[i].style.display = "list-item";
         }
     }
+
+
 }
+document.getElementById('searchbar').addEventListener('keyup', search_coffee);
+
 
 //TODO FOR MARK: Try this -Mark:
 // I present you with the cleanest way ever, in the form of the world's smallest jquery plugin:
