@@ -57,6 +57,7 @@ function updateCoffeeInput(e) {
 }
 
 //adding a coffee functionality
+//need Casey here
 function addCoffee() {
     var newRoast = newRoastInput.value;
     var newName = newCoffeeNameInput.value;
@@ -90,12 +91,15 @@ var divBody = document.querySelector('#coffees');
 var submitButton = document.querySelector('#submit');
 var roastSelection = document.querySelector('#roast-selection');
 var coffeeInput = document.querySelector("#text-input").value;
+//need Casey here
+//var newCoffeeNameInput = document.querySelector("#user-coffee-name");
+//var newRoastInput = document.querySelector("#user-coffee-roast");
 
 
 divBody.innerHTML = renderCoffees(coffees);
 
-submitButton.addEventListener('click', updateCoffees);
-//textInput.addEventListener("keyup", updateCoffees);
+submitButton.addEventListener('click', addCoffee);
 coffeeInput.addEventListener('input', updateCoffeeInput);
+roastSelection.addEventListener('input', updateCoffees);
 
 
