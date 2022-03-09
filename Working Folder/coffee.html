@@ -45,17 +45,47 @@
 
     <!--    This is the form-->
     <form>
-        <label for="roast-selection"></label>
-        <select id="roast-selection">
-            <option>light</option>
-            <option>medium</option>
-            <option>dark</option>
-        </select>
+        <div class="rightSelections">
+            <!--do we need the label for roast selection? Could we move the id up and have a class instead-->
+            <label for="roast-selection"></label>
+            <select id="roast-selection">
+                <option>Light</option>
+                <option>Medium</option>
+                <option>Dark</option>
+                <option selected>All Roasts</option>
+            </select>
+            <!--is this a textarea?-->
         <input id="submit" type="submit"/>
+
         <label>Coffee Name</label>
         <input id="text-input" type="text" placeholder="Enter a coffee name"/>
     </form>
+    <!--need to have a text area bod to input coffee name here-->
+    <hr>
 
+    <!--add coffee section -->
+    <h2>Add Your Coffee Preferences</h2>
+    <h4>Roast Type</h4>
+        <div class="row">
+            <div class="col coffee-input">
+                <input id="user-coffee-roast" type="text" class="form" placeholder="">
+            </div>
+        </div>
+    <h4>Enter Coffee Name</h4>
+        <div class="row">
+            <div class="col coffee-name">
+                <input id="user-coffee-name" type="text" class="form" placeholder="">
+            </div>
+        </div>
+
+    <button id="coffee-button" type="submit" class="btn main-btn">Folders is in Your Cup</button>
+    <hr>
+    <!--coffee tweets -->
+    <article>
+        <p class="title"><i class="fa-brands fa-twitter"></i> COFFEE TWEET</p>
+        <p>Lorem ipsum sit amet, consectetur adipisicing elit, sed diam nonummy nibh euismod sorem ipsum dolor
+            dit amet, consequatur doloremque.</p>
+    </article>
 
     <!--This was the table-->
     <section>

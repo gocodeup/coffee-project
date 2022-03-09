@@ -56,6 +56,17 @@ function updateCoffeeInput(e) {
     divBody.innerHTML = renderCoffees(coffeeHolic);
 }
 
+//adding a coffee functionality
+function addCoffee() {
+    var newRoast = newRoastInput.value;
+    var newName = newCoffeeNameInput.value;
+    var newCoffee = [
+        name: newName,
+        roast: newRoast
+    ];
+    coffees.push(newCoffee)
+    divBody.innerHTML = renderCoffees(coffees);
+}
 
 // from http://www.ncausa.org/About-Coffee/Coffee-Roasts-Guide
 var coffees = [
