@@ -1,5 +1,4 @@
 "use strict"
-
 function selectedRoast() {
     var roastType = document.getElementById("roastType");
     if (roastType.value !== '---Select a Roast---') {
