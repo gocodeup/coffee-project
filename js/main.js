@@ -132,3 +132,20 @@ exampleModal.addEventListener('show.bs.modal', function (event) {
     modalTitle.textContent = 'Add a Custom brew!'
     modalBodyInput.value = recipient
 })
+
+var send = function() {
+    let newCoffee =
+        {
+            id: coffees.length + 1,
+            name: document.getElementById('custom-name').value,
+            roast: document.getElementById('selectedRoast').value
+
+        };
+
+    coffees.push(newCoffee)
+}
+
+
+document.getElementById('send').addEventListener('click', send);
+document.getElementById('send').addEventListener('click', updateCoffees);
+
