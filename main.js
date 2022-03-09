@@ -68,7 +68,7 @@ function filterCoffees(e) {
 
     var filteredCoffees = [];
     coffees.forEach(function(coffee) {
-        if (coffee.name.includes(result)) {
+        if (coffee.name.toLowerCase().includes(result.toLowerCase())){
             console.log(result)
             filteredCoffees.push(coffee);
         }
