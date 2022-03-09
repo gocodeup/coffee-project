@@ -1,9 +1,198 @@
-table {
-    border-collapse: collapse;
-    margin: 15px 0;
+/** {*/
+/*    outline: 1px solid white;*/
+/*}*/
+
+body {
+    background-color: black;
 }
 
-td, th {
-    border: 1px solid black;
-    padding: 5px 10px;
+.heading {
+    text-align: center;
+    color: lawngreen;
+    font-family: 'VT323', monospace;
+    font-size: 10em;
+    margin: 0;
 }
+
+.search {
+    display: flex;
+    justify-content: center;
+}
+
+#search {
+    outline: 3px solid lawngreen;
+    background-color: black;
+    color: lawngreen;
+    font-family: 'VT323', monospace;
+    margin: 20px;
+    height: 50px;
+    width: 1000px;
+    font-size: 3em;
+}
+
+#search:hover {
+    background-color: green;
+    color: white;
+}
+
+#submit {
+    font-family: 'VT323', monospace;
+    outline: 3px solid lawngreen;
+    background-color: black;
+    color: lawngreen;
+    margin: 20px;
+    width: 100px;
+    font-size: 2em;
+}
+
+#submit:hover {
+    background-color: green;
+    color: white;
+}
+
+#roast-selection {
+    font-family: 'VT323', monospace;
+    outline: 3px solid lawngreen;
+    background-color: black;
+    color: lawngreen;
+    margin: 20px;
+    width: 100px;
+    font-size: 2em;
+}
+
+#roast-selection:hover {
+    background-color: green;
+    color: white;
+}
+
+.lower-body {
+    display: flex;
+    flex-direction: row;
+    margin: 0 50px;
+    justify-content: space-between;
+}
+
+.content {
+    color: lawngreen;
+    font-family: 'VT323', monospace;
+    font-size: 2em;
+    display: flex;
+    flex-wrap: wrap;
+    width: 800px;
+    margin: 0;
+}
+
+.coffee {
+    width: 400px;
+}
+
+.coffee h1 {
+    margin: 0;
+}
+
+#coffees {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.container {
+    outline: 3px solid lawngreen;
+    padding: 10px;
+}
+
+h2 {
+    color: lawngreen;
+    font-family: 'VT323', monospace;
+    font-size: 3em;
+    margin: 0;
+    text-align: center;
+}
+
+#add-new-roast {
+    font-family: 'VT323', monospace;
+    outline: 3px solid lawngreen;
+    background-color: black;
+    color: lawngreen;
+    height: 40px;
+    margin: 10px;
+}
+
+#add-new-roast:hover {
+    background-color: green;
+    color: white;
+}
+
+.label {
+    color: lawngreen;
+    font-family: 'VT323', monospace;
+    font-size: 2em;
+    display: flex;
+    align-items: center;
+}
+
+.storage {
+    font-family: 'VT323', monospace;
+    outline: 3px solid lawngreen;
+    background-color: black;
+    color: lawngreen;
+    width: 300px;
+    font-size: 2em;
+    margin: 10px;
+}
+
+.storage:hover {
+    background-color: green;
+    color: white;
+}
+
+.new-search {
+    display: flex;
+}
+
+#submit-coffee {
+    font-family: 'VT323', monospace;
+    outline: 3px solid lawngreen;
+    background-color: black;
+    color: lawngreen;
+    margin: 20px;
+    width: 100px;
+    font-size: 2em;
+}
+
+#submit-coffee:hover {
+    background-color: green;
+    color: white;
+}
+
+.button {
+    font-family: 'VT323', monospace;
+    outline: 3px solid lawngreen;
+    background-color: black;
+    color: lawngreen;
+    margin: 20px;
+    width: 100px;
+    font-size: 2em;
+}
+
+.button:hover {
+    background-color: green;
+    color: white;
+}
+
+#remove {
+    font-family: 'VT323', monospace;
+    outline: 3px solid lawngreen;
+    background-color: black;
+    color: lawngreen;
+    margin: 20px;
+    width: 100px;
+    font-size: 2em;
+    width: 300px;
+}
+
+#remove:hover {
+    background-color: green;
+    color: white;
+}
+

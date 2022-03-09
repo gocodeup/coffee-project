@@ -4,11 +4,17 @@
     <meta charset="UTF-8">
     <title></title>
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
 </head>
-<body>
-    <h1>Coffee!</h1>
 
-    <form>
+<body>
+
+    <h1 class="heading">COFFEE</h1>
+    <i class="fa-solid fa-gamepad-modern"></i>
+
+    <form class="search">
         <label for="roast-selection"></label>
         <select id="roast-selection">
             <option>light</option>
@@ -18,43 +24,50 @@
         <input type="text" id="search">
         <input id="submit" type="submit" />
     </form>
+
     <br>
-    <form class="container">
-        <h1>add new cofee</h1>
-        <label for="add-new-roast">Roast</label>
-        <select id="add-new-roast">
+    <br>
 
-            <option></option>
-            <option>no</option>
-            <option>light</option>
-            <option>medium</option>
-            <option>dark</option>
-        </select>
-        <input class="storage" type="text" id="new-coffee-name" placeholder="Coffee Name Here">
+    <div class="lower-body">
+        <div class="content">
 
-        <input id="submit-coffee" type="submit"/>
+            <div id="coffees"></div>
+        </div>
 
-        <button class="button">save</button>
+        <form class="container">
 
-        <details>
-            <summary>your favorite coffee</summary>
+            <h2>ADD NEW COFFEE</h2>
+            <br>
 
-        <p class="roast-text"></p>
-        <p class="text"></p>
-        </details>
+            <div class="new-search">
+                <label class="label" for="add-new-roast" style="color: lawngreen,">Roast: </label>
+                <select id="add-new-roast">
 
-        <button id="remove">remove saved coffee</button>
-        <br>
-    </form>
+                    <option></option>
+                    <option>light</option>
+                    <option>medium</option>
+                    <option>dark</option>
+                </select>
+                <input class="storage" type="text" id="new-coffee-name" placeholder="Coffee Name Here">
 
-    <div>
-        <h1>NAME</h1>
-        <p>ROAST</p>
+            </div>
 
-        <div id="coffees"></div>
+            <input id="submit-coffee" type="submit"/>
+            <button class="button">Save</button>
+
+            <details>
+                <summary>your favorite coffee</summary>
+
+            <p class="roast-text"></p>
+            <p class="text"></p>
+            </details>
+
+            <button id="remove">Remove Saved Coffee</button>
+            <br>
+        </form>
     </div>
 
-
+    <script src="https://kit.fontawesome.com/09d59239c9.js" crossorigin="anonymous"></script>
     <script src="main.js"></script>
 </body>
 </html>
