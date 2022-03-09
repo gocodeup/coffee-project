@@ -38,21 +38,21 @@
 <!--TODO: Review bootstrap spacing utilities for this -->
 <!--    -->
 <!--<main class="container container-fluid p-5">-->
-<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">Send idea</h5>
+<div class="modal fade modalbackground" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog darkgray">
+        <div class="modal-content darkgray">
+            <div class="modal-header darkgray">
+                <h5 class="modal-title neonText" id="exampleModalLabel">Send idea</h5>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
-            <div class="modal-body">
+            <div class="modal-body darkgray">
                 <form>
                     <div class="mb-3">
-                        <label for="custom-name" class="col-form-label">Add Your Custom Coffee Name:</label>
+                        <label for="custom-name" class="col-form-label neonText">Add Your Custom Coffee Name:</label>
                         <input class="form-control" id="custom-name">
                     </div>
                     <div class="mb-3">
-                        <label for="roastType" class="col-form-label">Choose Your Roast:</label>
+                        <label for="roastType" class="col-form-label neonText">Choose Your Roast:</label>
                         <select id="roastType">
                             <option>Light</option>
                             <option>Medium</option>
@@ -61,9 +61,9 @@
                     </div>
                 </form>
             </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                <button id="send" type="button" class="btn btn-primary" data-bs-dismiss="modal">Send Coffee Name
+            <div class="modal-footer darkgray">
+                <button type="button" class="btn btn-secondary bg-dark" style="border: black" data-bs-dismiss="modal">Close</button>
+                <button id="send" type="button" class="btn btn-secondary" data-bs-dismiss="modal">Send Coffee Name
                 </button>
             </div>
         </div>
