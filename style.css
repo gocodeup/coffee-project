@@ -178,7 +178,7 @@ h2 {
     background-color: black;
     color: lawngreen;
     margin: 20px;
-    width: 100px;
+    width: 40%;
     font-size: 2em;
     cursor: url(iconmonstr-cursor-5.svg), auto;
 }
@@ -206,6 +206,8 @@ h2 {
 }
 
 .details{
-    outline: 2;
+    color: lawngreen;
+    width: 100%;
+    font-size: 2em;
 }
 
