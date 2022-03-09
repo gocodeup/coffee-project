@@ -1,5 +1,31 @@
 "use strict"
 
+
+
+// function search_coffees() {
+//     let input = document.getElementById('searchbar').value
+//     input=input.toLowerCase();
+//     let x = document.getElementsByClassName('animals');
+//
+//     for (i = 0; i < x.length; i++) {
+//         if (!x[i].innerHTML.toLowerCase().includes(input)) {
+//             x[i].style.display="none";
+//         }
+//         else {
+//             x[i].style.display="list-item";
+//         }
+//     }
+// }
+
+// let input = document.querySelector("#search").value;
+
+// input.addEventListener("keyup", upperCaseTextInput)
+//
+// function upperCaseTextInput(event) {
+//     console.log(event.target.value);
+//     event.target.value = event.target.value.toUpperCase();
+// }
+
 function renderCoffee(coffee) {
     var html = '<div class="coffee">';
     html += '<h2>' + coffee.name + '</h2>';
@@ -29,6 +55,18 @@ function updateCoffees(e) {
     tbody.innerHTML = renderCoffees(filteredCoffees);
 }
 
+function updateSearchedCoffees(e) {
+    e.preventDefault(); // don't submit the form, we just want to update the data
+    var searchedCoffee = searchBar.value;
+    var filteredCoffees = [];
+    coffees.forEach(function(coffee) {
+        if (coffee.name === searchedCoffee) {
+            filteredCoffees.push(coffee);
+        }
+    });
+    tbody.innerHTML = renderCoffees(filteredCoffees);
+}
+
 // from http://www.ncausa.org/About-Coffee/Coffee-Roasts-Guide
 var coffees = [
     {id: 1, name: 'Light City', roast: 'light'},
@@ -50,6 +88,7 @@ var coffees = [
 var tbody = document.querySelector('#coffees');
 var submitButton = document.querySelector('#submit');
 var roastSelection = document.querySelector('#roast-selection');
+var searchBar = document.querySelector('#search');
 
 tbody.innerHTML = renderCoffees(coffees);
 
