@@ -4,6 +4,7 @@
 
 body {
     background-color: black;
+    cursor: url(iconmonstr-cursor-5.svg), auto;
 }
 
 .heading {
@@ -28,6 +29,7 @@ body {
     height: 50px;
     width: 1000px;
     font-size: 3em;
+    cursor: url(iconmonstr-cursor-5.svg), auto;
 }
 
 #search:hover {
@@ -43,6 +45,7 @@ body {
     margin: 20px;
     width: 100px;
     font-size: 2em;
+    cursor: url(iconmonstr-cursor-5.svg), auto;
 }
 
 #submit:hover {
@@ -58,6 +61,7 @@ body {
     margin: 20px;
     width: 100px;
     font-size: 2em;
+    cursor: url(iconmonstr-cursor-5.svg), auto;
 }
 
 #roast-selection:hover {
@@ -116,6 +120,7 @@ h2 {
     color: lawngreen;
     height: 40px;
     margin: 10px;
+    cursor: url(iconmonstr-cursor-5.svg), auto;
 }
 
 #add-new-roast:hover {
@@ -139,6 +144,7 @@ h2 {
     width: 300px;
     font-size: 2em;
     margin: 10px;
+    cursor: url(iconmonstr-cursor-5.svg), auto;
 }
 
 .storage:hover {
@@ -158,6 +164,7 @@ h2 {
     margin: 20px;
     width: 100px;
     font-size: 2em;
+    cursor: url(iconmonstr-cursor-5.svg), auto;
 }
 
 #submit-coffee:hover {
@@ -173,6 +180,7 @@ h2 {
     margin: 20px;
     width: 100px;
     font-size: 2em;
+    cursor: url(iconmonstr-cursor-5.svg), auto;
 }
 
 .button:hover {
@@ -189,6 +197,7 @@ h2 {
     width: 100px;
     font-size: 2em;
     width: 300px;
+    cursor: url(iconmonstr-cursor-5.svg), auto;
 }
 
 #remove:hover {

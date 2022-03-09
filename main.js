@@ -62,7 +62,7 @@ userInput.addEventListener('keyup', filterCoffees)
 
 function filterCoffees(e) {
     e.preventDefault(); // don't submit the form, we just want to update the data
-    var result = userInput.value.charAt(0).toUpperCase();
+    var result = userInput.value;
     // var result = userInput.textContent = e.target.value;
     console.log(result);
 
