@@ -14,10 +14,10 @@ function customCoffee() {
 }
 
 function renderCoffee(coffee) {
-    var html = '<section class="coffee">';
+    var html = '<section class="coffee d-flex">';
     // html += '<div>' + coffee.id + '</div>';
-    html += '<div>' + coffee.name + '</div>';
-    html += '<div class="my-1 text-muted">' + coffee.roast + '</div>';
+    html += '<div class="mx-2">' + '{' + coffee.name + '</div>';
+    html += '<div class="my-1 text-muted">' + coffee.roast + '}' + '</div>';
     html += '</section>';
 
     return html;
