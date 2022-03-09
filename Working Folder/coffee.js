@@ -12,8 +12,8 @@
 //Complete
 function renderCoffee(coffee){
     var html = '<div class="coffee">';
-    html += '<div>' + '<h3>' + coffee.name + '</h3>' + " " + '<select class="roast-selection">' + coffee.roast + ' <i class="icon fas fa-coffee">' + '</i>' +
-        '</select>' + '</div>';
+    html += '<div>' + '<h3>' + coffee.name + '</h3>' + " " + '<p>' + coffee.roast + ' <i class="icon fas fa-coffee">' + '</i>' +
+        '</p>' + '</div>';
     html += '</div>'
     return html;
 }
@@ -45,6 +45,7 @@ function updateCoffees(e) {
 function updateCoffeeInput(e) {
     e.preventDefault();
     var coffeeUserInput = coffeeInput.value.toLowerCase()
+    console.log(coffeeUserInput);
     var coffeeHolic = [];
     coffees.forEach(function (coffee){
         if (coffeeInput.value === ""){
@@ -57,15 +58,18 @@ function updateCoffeeInput(e) {
 }
 
 //adding a coffee functionality
-function addCoffee() {
+//need Casey here
+function addCoffee(e) {
+    e.preventDefault()
     var newRoast = newRoastInput.value;
     var newName = newCoffeeNameInput.value;
-    var newCoffee = [
+    var newCoffee = {
+        id: coffees.length + 1,
         name: newName,
         roast: newRoast
-    ];
+    };
     coffees.push(newCoffee)
-    divBody.innerHTML = renderCoffees(coffees);
+    updateCoffees(e);
 }
 
 // from http://www.ncausa.org/About-Coffee/Coffee-Roasts-Guide
@@ -89,13 +93,18 @@ var coffees = [
 var divBody = document.querySelector('#coffees');
 var submitButton = document.querySelector('#submit');
 var roastSelection = document.querySelector('#roast-selection');
-var coffeeInput = document.querySelector("#text-input").value;
+var coffeeInput = document.querySelector("#coffee-input");
+var newCoffeeNameInput = document.querySelector("#user-coffee-name");
+var newRoastInput = document.querySelector("#user-coffee-roast");
+var addCoffeeBtn = document.querySelector('#coffee-button');
 
+console.log(coffeeInput);
 
 divBody.innerHTML = renderCoffees(coffees);
 
 submitButton.addEventListener('click', updateCoffees);
-//textInput.addEventListener("keyup", updateCoffees);
-coffeeInput.addEventListener('input', updateCoffeeInput);
+coffeeInput.addEventListener('keyup', updateCoffeeInput);
+roastSelection.addEventListener('input', updateCoffees);
+addCoffeeBtn.addEventListener('click', addCoffee);
 
 
