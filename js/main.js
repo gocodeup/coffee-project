@@ -228,4 +228,17 @@ document.getElementById('youtube-button').addEventListener('click', function(eve
 
 
 //Mark playing with background images using JS
-document.body.style.backgroundImage = "url('image.png')";
+
+
+    // The function below will change the background image
+    function changeBackgroundImage(bgImage) {
+        document.body.style.backgroundImage = "url(" + bgImage +  ")";
+        // document.body.style.backgroundImage = "url('../assets/amberRetroTerminal.png')";
+        // document.body.style.backgroundImage = "url('../assets/blackMacRetroTerm.png)')";
+        // document.body.style.backgroundImage = "url('../assets/blueRetroTerminal.png')";
+        // document.body.style.backgroundImage = "url('../assets/greenRetroTerminal.png')";
+
+        document.body.style.backgroundRepeat = "no-repeat";
+        document.body.style.backgroundSize = "cover";}
+    // call the function when the whole DOM content is loaded
+    // document.addEventListener("DOMContentLoaded", changeBackgroundImage());
