@@ -153,3 +153,35 @@ var send = function() {
 document.getElementById('send').addEventListener('click', send);
 document.getElementById('send').addEventListener('click', updateCoffees);
 
+
+
+// function toggleYoutube() {
+//     if(document.getElementById('youtube-button') === true){
+//         var html = '<p class="youtube"></p>'
+//         html += '<iframe \n' +
+//             '            width=70%\n' +
+//             '            src="https://www.youtube.com/embed/zyS3siSF62M?start=1&autoplay=1&mute=0&enablejsapi=1"\n' +
+//             '            title="YouTube video player" frameborder="0"\n' +
+//             '            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"\n' +
+//             '            allowfullscreen>'+ '</iframe>'
+//     }
+//
+// }
+//
+// document.getElementById('youtube-button').addEventListener('toggle', toggleYoutube)
+
+document.getElementById('youtube-button').addEventListener('click', function(event){
+    let p = event.target;
+    if (p.classList.contains('hidden')) {
+        p.classList.remove('hidden');
+        event.target.innerHTML = '<iframe \n' +
+            '            width=70%\n' +
+            '            src="https://www.youtube.com/embed/zyS3siSF62M?start=1&autoplay=1&mute=0&enablejsapi=1"\n' +
+            '            title="YouTube video player" frameborder="0"\n' +
+            '            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"\n' +
+            '            allowfullscreen>' + '</iframe>';
+    } else {
+        p.classList.add('hidden');
+        event.target.innerHTML = 'Vibes' ;
+    }
+});
