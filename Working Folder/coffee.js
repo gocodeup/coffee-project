@@ -1,17 +1,10 @@
 //pull the lever Kronk!
 "use strict"
 
-// function renderCoffee(coffee) {
-//     var html = '<div class="coffee">';
-//     html += '<h3>' + coffee.name + '</h3>';
-//     html += '<p>' + coffee.roast + '</p>';
-//     html += '</div>';
-//
-//     return html;
-// }
+
 //Complete
 function renderCoffee(coffee){
-    var html = '<div class="coffee">';
+    var html = '<div class="coffee col-6">';
     html += '<div>' + '<h3>' + coffee.name + '</h3>' + " " + '<p>' + coffee.roast + ' <i class="icon fas fa-coffee">' + '</i>' +
         '</p>' + '</div>';
     html += '</div>'

@@ -25,7 +25,7 @@ body {
 }
 
 #roast-selection {
-    width: 100%;
+    width: 50%;
 }
 
 .coffee-name {
@@ -33,6 +33,9 @@ body {
 }
 .drop-down-choices {
     padding: 0.5em;
+    border-style: solid;
+    border-radius: 15px 30px;
+
 }
 .main-btn {
     position: relative;
@@ -45,4 +48,19 @@ body {
     border-radius: 8px;
 }
 
+.form:hover{
+    /*border-style: solid;*/
+    border-radius: 15px 25px;
+    background-color: rgba(169, 239, 169, 0.99);
+    border: 2px solid black;
+    width: 50%;
+    text-align: center;
+
+
+}
+
+#submit, #coffee-button {
+    border-radius: 30px 15px;
+    margin-top: 1em;
+    width: 50%;
 }
