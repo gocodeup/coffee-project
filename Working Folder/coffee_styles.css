@@ -50,7 +50,7 @@ body {
 
 .form:hover{
     /*border-style: solid;*/
-    border-radius: 15px 25px;
+    border-radius: 15px 30px;
     background-color: rgba(169, 239, 169, 0.99);
     border: 2px solid black;
     width: 50%;
@@ -63,4 +63,11 @@ body {
     border-radius: 30px 15px;
     margin-top: 1em;
     width: 50%;
+}
+
+.coffee-list:hover {
+    border-radius:30px 15px;
+    border: 2px solid black;
+    text-align: center;
+    background-color: rgba(169, 239, 169, 0.99);
 }
