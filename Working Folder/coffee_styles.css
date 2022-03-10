@@ -25,7 +25,7 @@ body {
 }
 
 #roast-selection {
-    width: 50%;
+    width: 60%;
 }
 
 .coffee-name {
@@ -49,25 +49,43 @@ body {
 }
 
 .form:hover{
-    /*border-style: solid;*/
+
     border-radius: 15px 30px;
-    background-color: rgba(169, 239, 169, 0.99);
+    background-color: rgba(167, 125, 84, 60%);
     border: 2px solid black;
-    width: 50%;
+    width: 60%;
     text-align: center;
-
-
+}
+.form {
+    border-radius: 30px 15px;
+    border: black 1px;
 }
 
 #submit, #coffee-button {
+    border: solid 2px;
     border-radius: 30px 15px;
     margin-top: 1em;
-    width: 50%;
+    width: 60%;
+
+
 }
 
 .coffee-list:hover {
     border-radius:30px 15px;
     border: 2px solid black;
     text-align: center;
-    background-color: rgba(169, 239, 169, 0.99);
+    background-color: rgba(167, 125, 84, 60%);
+}
+
+.card {
+    background-color: rgba(201, 176, 154, 60%)!important;
+}
+#coffee-button:hover {
+    border-radius: 15px 30px;
+    background-color: rgba(167, 125, 84, 50%);
+}
+
+.btn {
+    border-radius: 15px 30px;
+    background-color: rgba(167, 125, 84, 50%);
 }
