@@ -2,7 +2,7 @@
 /*TODO: Play with this, comment the {outline: ... on and off to check css layout - Mark*/
 /** { outline: 1px solid red; }*/
 body {
-    background-image: url("../assets/terminal_background.png");
+    background-image: url("assets/terminal_background.png");
     /*background-color: #2f3136;*/
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -30,7 +30,7 @@ td, th {
 }
 
 .jumbotron {
-    background-image: url("../assets/cybertron-person.png");
+    background-image: url("assets/cybertron-person.png");
     background-size: cover;
     padding: 30px;
     /*background-image: linear-gradient(to right,  #5637DD, #3046C5, #60106B);*/
