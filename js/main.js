@@ -185,3 +185,47 @@ document.getElementById('youtube-button').addEventListener('click', function(eve
         event.target.innerHTML = 'Vibes' ;
     }
 });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//Mark playing with background images using JS
+document.body.style.backgroundImage = "url('image.png')";
