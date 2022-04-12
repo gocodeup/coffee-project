@@ -22,48 +22,50 @@
 
 
 <body>
-
-<section class="colored-section" id="title">
-    <!-- Nav Bar -->
-    <div class="container-fluid top">
-        <nav class="navbar navbar-expand-lg navbar-dark">
-            <a class="navbar-brand" href="">Kuali Cavee</a>
+<!-- Nav Bar -->
+    <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="" style="color: saddlebrown">Kuali Cavee</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
 
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <div class="collapse navbar-collapse" id="navbar-coffee">
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item active">
-                        <a class="nav-link" href="#features"><strong>Our Coffee</strong></a>
+                        <a class="nav-link" href="#features" style="color: saddlebrown"><strong>Our Coffee</strong></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#carousel-coffee"><strong>Gallery</strong></a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#menu">Order<i class="fas fa-coffee"></i></a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#sizing"><strong>Order</strong></a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#cta"><strong>App</strong></a>
+                        <a class="nav-link" href="#carousel-coffee" style="color: saddlebrown"><strong>Gallery</strong></a>
                     </li>
 
-
-
+                    <li class="nav-item">
+                        <a class="nav-link" href="#sizing" style="color: saddlebrown"><strong>Order</strong></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#cta" style="color: saddlebrown"><strong>App</strong></a>
+                    </li>
                 </ul>
             </div>
-        </nav>
+      </div>
+
+    </nav>
+
+
+
+
+<section class="colored-section" id="title">
+
+    <div class="container-fluid top">
 
         <!-- Title -->
 
-        <div class="row">
-            <div class="title-intro col-lg-6">
-                <h1>Every good <strong>Coffee</strong>
+        <div class="row align-items-center" >
+            <div class="title-intro mx-5  col-lg-6 text-center align-items-center ">
+                <h1 class="mt-5">Every good <strong>Coffee</strong>
                     <br>          starts with a good <strong>Roast</strong>.</h1>
 
-                <button type="button" class="btn btn-light btn-lg download-button " onclick="location.href='#sizing';">   Order  </button>
+                <button type="button" class="btn btn-light btn-lg download-button " onclick="location.href='#sizing';" >   Order  </button>
             </div>
         </div>
     </div>
@@ -100,35 +102,26 @@
 <!-- Gallery -->
 
 <!--<section class="colored-section container-fluid" id="gallery">-->
-<div id="carousel-coffee" class="carousel slide" data-ride="carousel" data-interval="2000" dat-pause="hover">
-    <div class="carousel-inner col-12">
+<div class="container-fluid" >
+<div id="carousel-coffee" class="carousel slide" data-ride="carousel" data-interval="3000" dat-pause="hover">
+    <div class="carousel-inner ">
         <div class="carousel-item active ">
-            <img class="coffee-image img-fluid w-100" src="images/pexels-jonas-mohamadi-1477851.jpg" alt="coffee-pic">
+            <img class="coffee-image img-fluid" src="images/pexels-jonas-mohamadi-1477851.jpg" alt="coffee-pic">
         </div>
         <div class="carousel-item ">
-            <img class="coffee-image d-block w-100" src="images/pexels-viktoria-alipatova-2074122.jpg" alt="coffee-pic">
+            <img class="coffee-image img-fluid" src="images/pexels-viktoria-alipatova-2074122.jpg" alt="coffee-pic">
         </div>
         <div class="carousel-item  ">
-            <img class="coffee-image d-block w-100" src="images/pexels-furkan-tumer-7405056.jpg" alt="coffee-pic">
+            <img class="coffee-image img-fluid " src="images/pexels-furkan-tumer-7405056.jpg" alt="coffee-pic">
         </div>
         <div class="carousel-item  ">
-            <img class="coffee-image d-block w-100" src="images/pexels-tom-swinnen-1309778.jpg" alt="coffee-pic">
+            <img class="coffee-image img-fluid " src="images/pexels-tom-swinnen-1309778.jpg" alt="coffee-pic">
         </div>
         <div class="carousel-item  ">
-            <img class="coffee-image d-block w-100" src="images/pexels-oleg-magni-890515.jpg" alt="coffee-pic">
+            <img class="coffee-image img-fluid" src="images/pexels-oleg-magni-890515.jpg" alt="coffee-pic">
         </div>
-    </div>
-    <!--                <button class="carousel-control-prev" type="button" data-bs-target="#carousel-coffee" data-bs-slide="prev">-->
-    <!--                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>-->
-    <!--                    <span class="visually-hidden">Previous</span>-->
-    <!--                </button>-->
-    <!--                <button class="carousel-control-next" type="button" data-bs-target="#carousel-coffee" data-bs-slide="next">-->
-    <!--                    <span class="carousel-control-next-icon" aria-hidden="true"></span>-->
-    <!--                    <span class="visually-hidden">Next</span>-->
-    <!--                </button>-->
 
 </div>
-
 </div>
 
 
@@ -200,7 +193,7 @@
 </section>
 
 <!--Menu -->
-<section class="colored-section my-lg-2 py-lg-5" id="menu">
+<section class="colored-section my-lg-1 py-lg-3 container-fluid" id="menu">
     <h1 class="menu-header"> Our Coffee Selection</h1>
     <div class="row">
 
@@ -279,7 +272,7 @@
 
             <div class="feature-box col-lg-4 ">
                 <img class="test-img" src="images/lady-img.jpg">
-                <p>Excellent coffee! Great customer service! Lots of options to choose from and, they even have food to go your coffee!</p>
+                <p>Excellent coffee! Great customer service! Lots of options to choose from and, they even have food to go with your coffee!</p>
                 <p> -Lisa P.</p>
                 <p></p>
                 <p></p>
@@ -309,7 +302,7 @@
         <div class="cta-footer">
             <h3 class="sign-up">Kuali Cavee APP</h3>
             <p class="app">Order from anywhere!! Download our App, and enjoy all the benefits.</p>
-            <img src="images/pngkey.com-coffee-to-go-png-8548341%20copy.png">
+            <img class="img-fluid" src="images/pngkey.com-coffee-to-go-png-8548341%20copy.png">
         </div>
 
         <div class="btn-footer">
