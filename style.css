@@ -124,19 +124,13 @@ p {
 
 /*Gallery Section*/
 #gallery {
-
+    height: 600px;
     background-color: #CDC7BE;
     color: white;
 }
-
-
-
-
-
-
 /*Sizing Section*/
 #sizing {
-    padding: 100px;
+    padding-top: 20px;
 }
 
 .size-column {
@@ -237,7 +231,7 @@ p {
 #cta {
     background-color: #9A9483;
     color: white;
-    padding: 7% 15%;
+
 }
 
 .cta-footer {

@@ -23,10 +23,10 @@
 
 <body>
 <!-- Nav Bar -->
-    <nav class="navbar navbar-expand-lg">
+    <nav class="navbar  navbar-expand-lg navbar-light bg-light">
         <div class="container-fluid">
             <a class="navbar-brand" href="" style="color: saddlebrown">Kuali Cavee</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-coffee" aria-controls="#navbar-coffee" aria-expanded="false" aria-label="Toggle navigation" >
                 <span class="navbar-toggler-icon"></span>
             </button>
 
@@ -102,9 +102,9 @@
 <!-- Gallery -->
 
 <!--<section class="colored-section container-fluid" id="gallery">-->
-<div class="container-fluid" >
+<div class="colored-section" >
 <div id="carousel-coffee" class="carousel slide" data-ride="carousel" data-interval="3000" dat-pause="hover">
-    <div class="carousel-inner ">
+    <div class="carousel-inner "  style=" width:100%; max-height: 600px !important;">
         <div class="carousel-item active ">
             <img class="coffee-image img-fluid" src="images/pexels-jonas-mohamadi-1477851.jpg" alt="coffee-pic">
         </div>
@@ -137,7 +137,7 @@
 
     <div class="container">
         <div class="row">
-            <div class="size-column col-lg-4 col-md-6">
+            <div class="size-column col-lg-4 col-md-6 col-xs-12">
                 <div class="card">
                     <div class="card-header">
                         <h3>Pequeño</h3>
@@ -193,70 +193,66 @@
 </section>
 
 <!--Menu -->
-<section class="colored-section my-lg-1 py-lg-3 container-fluid" id="menu">
-    <h1 class="menu-header"> Our Coffee Selection</h1>
-    <div class="row">
+<section class="colored-section  " id="menu">
+    <div class="container-fluid">
+        <h2 class="menu-header mt-3 pt-5"> Our Coffee Selection</h2>
+        <div class="container-fluid">
+            <div class="row">
+                <div id="coffees" class="container-fluid d-flex flex-wrap col col-lg-6 col-md-12 col-sm-12 align-middle justify-content-center"></div>
+                <div class=" coffee-menu bg-none col d-flex justify-content-center">
+                     <div class="m-3 col-lg-8 ">
+                        <p><strong>Find a Coffee</strong></p>
+                         <form class="my-lg-2 py-lg-5">
+                            <div class="new-roast text-dark col-lg-* ">
+                                <strong>Roast</strong>
+                            </div>
+                            <select class="selectpicker bs-select-hidden" id="roast-selection" style="width:100%" >
+                                <option disabled selected value> -- select an option -- </option>
+                                <option >light</option>
+                                <option>medium</option>
+                                <option>dark</option>
+                                <option>all</option>
+                            </select>
+                             <div class="coffee-name text-dark col-lg-* ">
+                                 <strong>Coffee Name</strong>
+                             </div>
+                             <input id="search" class="form-control" type="text" placeholder="Search for Coffee" style="width:100%">
+                             <div class=" text-center">
+                                 <input  class="btn coffee-button btn-lg btn-block mt-3" id="submit" type="submit" />
+                             </div>
+                         </form>
 
-        <div id="coffees" class="container d-flex flex-wrap col-6">
-            <!--    <table>-->
-            <!--        <thead>-->
-            <!--            <tr>-->
-            <!--                <th>ID</th>-->
-            <!--                <th>NAME</th>-->
-            <!--                <th>ROAST</th>-->
-            <!--            </tr>-->
-            <!--        </thead>-->
-            <!--            <tbody id="coffees"></tbody>
-            <!-    </table>-->
-        </div>
-        <div class=" coffee-menu bg-none col-6 my-lg-2 py-lg-5" >
-            <form class="my-lg-2 py-lg-5">
-                <div class="new-roast text-dark col-lg-* ">
-                    <strong>Roast</strong>
-                </div>
+                         <p><strong>Add a Coffee</strong></p>
+        <!--new coffee section-->
+
+        <form class="my-lg-2 py-lg-5">
+            <div class="new-roast text-dark col-lg-* ">
+                <strong>Roast</strong>
+            </div>
+            <select class="selectpicker bs-select-hidden" id="add-coffee-roast-select" style="width:100%" >
+                <option >light</option>
+                <option>medium</option>
+                <option>dark</option>
+                <option>all</option>
+            </select>
+            <div class="new-name text-dark col-lg-* ">
+                <strong>Name</strong>
+            </div>
+            <input id="add-coffee-name" class="form-control" type="text" placeholder="Add a Coffee" style="width:100%">
+            <div class=" text-center">
+                <input onclick="viewData(text)" class="btn coffee-button btn-lg btn-block mt-3" id="submit-2" type="submit" />
+            </div>
+            <div id="divCheckbox" style="display: none;"></div>
+        </form>
+    </div>
 
 
+</div>
 
-                <select class="selectpicker bs-select-hidden" id="roast-selection" style="width:100%" >
-                    <option disabled selected value> -- select an option -- </option>
-                    <option >light</option>
-                    <option>medium</option>
-                    <option>dark</option>
-                    <option>all</option>
-                </select>
-                <div class="coffee-name text-dark col-lg-* ">
-                    <strong>Coffee Name</strong>
-                </div>
-                <input id="search" class="form-control" type="text" placeholder="Search for Coffee" style="width:100%">
-                <div class=" text-center">
-                    <input  class="btn coffee-button btn-lg btn-block mt-3" id="submit" type="submit" />
-                </div>
-            </form>
-
-            <hr class="my-lg-1 py-lg-2">
-            <!--new coffee section-->
-
-            <form class="my-lg-2 py-lg-5">
-                <div class="new-roast text-dark col-lg-* ">
-                    <strong>Roast</strong>
-                </div>
-                <select class="selectpicker bs-select-hidden" id="add-coffee-roast-select" style="width:100%" >
-                    <option >light</option>
-                    <option>medium</option>
-                    <option>dark</option>
-                    <option>all</option>
-                </select>
-                <div class="new-name text-dark col-lg-* ">
-                    <strong>Name</strong>
-                </div>
-                <input id="add-coffee-name" class="form-control" type="text" placeholder="Add a Coffee" style="width:100%">
-                <div class=" text-center">
-                    <input onclick="viewData(text)" class="btn coffee-button btn-lg btn-block mt-3" id="submit-2" type="submit" />
-                </div>
-                <div id="divCheckbox" style="display: none;"></div>
-            </form>
+            </div>
         </div>
     </div>
+
 </section>
 
 
@@ -318,7 +314,7 @@
 <!-- Footer -->
 
 <footer class="white-section" id="footer">
-    <div class="container-fluid col-6 align-self-center">
+    <div class="container-fluid col align-self-center">
         <div class="contact1 ">
             <form class="contact1-form validate-form">
 				<span class="contact1-form-title">
