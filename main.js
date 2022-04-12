@@ -50,17 +50,18 @@ function searchCoffees() {
 //adds a new coffee item to the array
 
 var addRoast = document.getElementById('add-coffee-roast-select')
-var addName = document.getElementById('add-coffee-name')
+var addName = document.getElementById('add-coffee-name') //used for localStorage
 function coffeeAdd(obj) {
     obj.preventDefault(); // will not submit the form, stopping the refresh
     var id = coffees.length + 1;
     var newAddRoast = addRoast.value;
     var newAddName = addName.value.charAt(0).toUpperCase() + addName.value.slice(1);
     obj = {id: id, name: newAddName, roast: newAddRoast};
-    /*attempt at saving data
-    window.localStorage.setItem('name', JSON.stringify(coffees.push(obj)));
-    JSON.parse(window.localStorage.getItem('name'));*/
     coffees.push(obj);
+    /*attempt at saving data*/
+    window.localStorage.setItem('add-coffee-name', JSON.stringify(coffees));
+    JSON.parse(window.localStorage.getItem('add-coffee-name')); //Added item shows up in local storage
+
 
 
     tbody.innerHTML = renderCoffees(coffees);
