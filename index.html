@@ -22,48 +22,50 @@
 
 
 <body>
-
-<section class="colored-section" id="title">
-    <!-- Nav Bar -->
-    <div class="container-fluid top">
-        <nav class="navbar navbar-expand-lg navbar-dark">
-            <a class="navbar-brand" href="">Kuali Cavee</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+<!-- Nav Bar -->
+    <nav class="navbar  navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="" style="color: saddlebrown">Kuali Cavee</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-coffee" aria-controls="#navbar-coffee" aria-expanded="false" aria-label="Toggle navigation" >
                 <span class="navbar-toggler-icon"></span>
             </button>
 
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <div class="collapse navbar-collapse" id="navbar-coffee">
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item active">
-                        <a class="nav-link" href="#features"><strong>Our Coffee</strong></a>
+                        <a class="nav-link" href="#features" style="color: saddlebrown"><strong>Our Coffee</strong></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#carousel-coffee"><strong>Gallery</strong></a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#menu">Order<i class="fas fa-coffee"></i></a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#sizing"><strong>Order</strong></a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#cta"><strong>App</strong></a>
+                        <a class="nav-link" href="#carousel-coffee" style="color: saddlebrown"><strong>Gallery</strong></a>
                     </li>
 
-
-
+                    <li class="nav-item">
+                        <a class="nav-link" href="#sizing" style="color: saddlebrown"><strong>Order</strong></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#cta" style="color: saddlebrown"><strong>App</strong></a>
+                    </li>
                 </ul>
             </div>
-        </nav>
+      </div>
+
+    </nav>
+
+
+
+
+<section class="colored-section" id="title">
+
+    <div class="container-fluid top">
 
         <!-- Title -->
 
-        <div class="row">
-            <div class="title-intro col-lg-6">
-                <h1>Every good <strong>Coffee</strong>
+        <div class="row align-items-center" >
+            <div class="title-intro mx-5  col-lg-6 text-center align-items-center ">
+                <h1 class="mt-5">Every good <strong>Coffee</strong>
                     <br>          starts with a good <strong>Roast</strong>.</h1>
 
-                <button type="button" class="btn btn-light btn-lg download-button " onclick="location.href='#sizing';">   Order  </button>
+                <button type="button" class="btn btn-light btn-lg download-button " onclick="location.href='#sizing';" >   Order  </button>
             </div>
         </div>
     </div>
@@ -100,35 +102,26 @@
 <!-- Gallery -->
 
 <!--<section class="colored-section container-fluid" id="gallery">-->
-<div id="carousel-coffee" class="carousel slide" data-ride="carousel" data-interval="2000" dat-pause="hover">
-    <div class="carousel-inner col-12">
+<div class="colored-section" >
+<div id="carousel-coffee" class="carousel slide" data-ride="carousel" data-interval="3000" dat-pause="hover">
+    <div class="carousel-inner "  style=" width:100%; max-height: 600px !important;">
         <div class="carousel-item active ">
-            <img class="coffee-image img-fluid w-100" src="images/pexels-jonas-mohamadi-1477851.jpg" alt="coffee-pic">
+            <img class="coffee-image img-fluid" src="images/pexels-jonas-mohamadi-1477851.jpg" alt="coffee-pic">
         </div>
         <div class="carousel-item ">
-            <img class="coffee-image d-block w-100" src="images/pexels-viktoria-alipatova-2074122.jpg" alt="coffee-pic">
+            <img class="coffee-image img-fluid" src="images/pexels-viktoria-alipatova-2074122.jpg" alt="coffee-pic">
         </div>
         <div class="carousel-item  ">
-            <img class="coffee-image d-block w-100" src="images/pexels-furkan-tumer-7405056.jpg" alt="coffee-pic">
+            <img class="coffee-image img-fluid " src="images/pexels-furkan-tumer-7405056.jpg" alt="coffee-pic">
         </div>
         <div class="carousel-item  ">
-            <img class="coffee-image d-block w-100" src="images/pexels-tom-swinnen-1309778.jpg" alt="coffee-pic">
+            <img class="coffee-image img-fluid " src="images/pexels-tom-swinnen-1309778.jpg" alt="coffee-pic">
         </div>
         <div class="carousel-item  ">
-            <img class="coffee-image d-block w-100" src="images/pexels-oleg-magni-890515.jpg" alt="coffee-pic">
+            <img class="coffee-image img-fluid" src="images/pexels-oleg-magni-890515.jpg" alt="coffee-pic">
         </div>
-    </div>
-    <!--                <button class="carousel-control-prev" type="button" data-bs-target="#carousel-coffee" data-bs-slide="prev">-->
-    <!--                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>-->
-    <!--                    <span class="visually-hidden">Previous</span>-->
-    <!--                </button>-->
-    <!--                <button class="carousel-control-next" type="button" data-bs-target="#carousel-coffee" data-bs-slide="next">-->
-    <!--                    <span class="carousel-control-next-icon" aria-hidden="true"></span>-->
-    <!--                    <span class="visually-hidden">Next</span>-->
-    <!--                </button>-->
 
 </div>
-
 </div>
 
 
@@ -144,7 +137,7 @@
 
     <div class="container">
         <div class="row">
-            <div class="size-column col-lg-4 col-md-6">
+            <div class="size-column col-lg-4 col-md-6 col-xs-12">
                 <div class="card">
                     <div class="card-header">
                         <h3>Pequeño</h3>
@@ -200,70 +193,67 @@
 </section>
 
 <!--Menu -->
-<section class="colored-section my-lg-2 py-lg-5" id="menu">
-    <h1 class="menu-header"> Our Coffee Selection</h1>
-    <div class="row">
+<section class="colored-section  " id="menu">
+    <div class="container-fluid">
+        <h2 class="menu-header mt-3 pt-5"> Our Coffee Selection</h2>
+        <div class="container-fluid">
+            <div class="row">
+                <div id="coffees" class="container-fluid d-flex flex-wrap col col-lg-6 col-md-12 col-sm-12 align-middle justify-content-center"></div>
+                <div class=" coffee-menu bg-none col d-flex justify-content-center">
+                     <div class="m-3 col-lg-8 ">
+                        <p><strong>Find a Coffee</strong></p>
+                         <form class="my-lg-2 py-lg-5">
+                            <div class="new-roast text-dark col-lg-* ">
+                                <strong>Roast</strong>
+                            </div>
+                            <select class="selectpicker bs-select-hidden" id="roast-selection" style="width:100%" >
+                                <option disabled selected value> -- select an option -- </option>
+                                <option >light</option>
+                                <option>medium</option>
+                                <option>dark</option>
+                                <option>all</option>
+                            </select>
+                             <div class="coffee-name text-dark col-lg-* ">
+                                 <strong>Coffee Name</strong>
+                             </div>
+                             <input id="search" class="form-control" type="text" placeholder="Search for Coffee" style="width:100%">
+                             <div class=" text-center">
+                                 <input  class="btn coffee-button btn-lg btn-block mt-3" id="submit" type="submit" />
+                             </div>
+                         </form>
 
-        <div id="coffees" class="container d-flex flex-wrap col-6">
-            <!--    <table>-->
-            <!--        <thead>-->
-            <!--            <tr>-->
-            <!--                <th>ID</th>-->
-            <!--                <th>NAME</th>-->
-            <!--                <th>ROAST</th>-->
-            <!--            </tr>-->
-            <!--        </thead>-->
-            <!--            <tbody id="coffees"></tbody>
-            <!-    </table>-->
-        </div>
-        <div class=" coffee-menu bg-none col-6 my-lg-2 py-lg-5" >
-            <form class="my-lg-2 py-lg-5">
-                <div class="new-roast text-dark col-lg-* ">
-                    <strong>Roast</strong>
-                </div>
+                         <p><strong>Add a Coffee</strong></p>
+        <!--new coffee section-->
+
+        <form class="my-lg-2 py-lg-5">
+            <div class="new-roast text-dark col-lg-* ">
+                <strong>Roast</strong>
+            </div>
+            <select class="selectpicker bs-select-hidden" id="add-coffee-roast-select" style="width:100%" >
+                <option >light</option>
+                <option>medium</option>
+                <option>dark</option>
+                <option>all</option>
+            </select>
+            <div class="new-name text-dark col-lg-* ">
+                <strong>Name</strong>
+            </div>
+            <input id="add-coffee-name" class="form-control" type="text" placeholder="Add a Coffee" style="width:100%">
+            <div class=" text-center">
+                <input onclick="viewData(text)" class="btn coffee-button btn-lg btn-block mt-3" id="submit-2" type="submit" />
+            </div>
+            <div id="divCheckbox" style="display: none;"></div>
+        </form>
+    </div>
 
 
+</div>
 
-                <select class="selectpicker bs-select-hidden" id="roast-selection" style="width:100%" >
-                    <option disabled selected value> -- select an option -- </option>
-                    <option >light</option>
-                    <option>medium</option>
-                    <option>dark</option>
-                    <option>all</option>
-                </select>
-                <div class="coffee-name text-dark col-lg-* ">
-                    <strong>Coffee Name</strong>
-                </div>
-                <input id="search" class="form-control" type="text" placeholder="Search for Coffee" style="width:100%">
-                <div class=" text-center">
-                    <input  class="btn coffee-button btn-lg btn-block mt-3" id="submit" type="submit" />
-                </div>
-            </form>
+            </div>
 
-            <hr class="my-lg-1 py-lg-2">
-            <!--new coffee section-->
-
-            <form class="my-lg-2 py-lg-5">
-                <div class="new-roast text-dark col-lg-* ">
-                    <strong>Roast</strong>
-                </div>
-                <select class="selectpicker bs-select-hidden" id="add-coffee-roast-select" style="width:100%" >
-                    <option >light</option>
-                    <option>medium</option>
-                    <option>dark</option>
-                    <option>all</option>
-                </select>
-                <div class="new-name text-dark col-lg-* ">
-                    <strong>Name</strong>
-                </div>
-                <input id="add-coffee-name" class="form-control" type="text" placeholder="Add a Coffee" style="width:100%">
-                <div class=" text-center">
-                    <input onclick="viewData()" class="btn coffee-button btn-lg btn-block mt-3" id="submit-2" type="submit" />
-                </div>
-                <div id="divCheckbox" style="display: none;"></div>
-            </form>
         </div>
     </div>
+
 </section>
 
 
@@ -279,7 +269,7 @@
 
             <div class="feature-box col-lg-4 ">
                 <img class="test-img" src="images/lady-img.jpg">
-                <p>Excellent coffee! Great customer service! Lots of options to choose from and, they even have food to go your coffee!</p>
+                <p>Excellent coffee! Great customer service! Lots of options to choose from and, they even have food to go with your coffee!</p>
                 <p> -Lisa P.</p>
                 <p></p>
                 <p></p>
@@ -309,7 +299,7 @@
         <div class="cta-footer">
             <h3 class="sign-up">Kuali Cavee APP</h3>
             <p class="app">Order from anywhere!! Download our App, and enjoy all the benefits.</p>
-            <img src="images/pngkey.com-coffee-to-go-png-8548341%20copy.png">
+            <img class="img-fluid" src="images/pngkey.com-coffee-to-go-png-8548341%20copy.png">
         </div>
 
         <div class="btn-footer">
@@ -325,7 +315,7 @@
 <!-- Footer -->
 
 <footer class="white-section" id="footer">
-    <div class="container-fluid col-6 align-self-center">
+    <div class="container-fluid col col-lg-6 align-self-center">
         <div class="contact1 ">
             <form class="contact1-form validate-form">
 				<span class="contact1-form-title">
