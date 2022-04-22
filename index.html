@@ -2,79 +2,34 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title></title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/css/materialize.min.css"/>
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
-    <link rel="stylesheet" href="../html/js-html/css/coffee.css"/>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<header class="header">
-    <div class="row banner">
-        <div class="col s12">
-            <img class="responsive-img right" id="coffee-giphy" src="https://raw.githubusercontent.com/marcy-cooper-scott/coffee-project/master/images/coffee-gif.gif"/>
-        </div>
-        <div class="col s12">
-            <h1 class="left" id="welcome">Coffee!</h1>
-        </div>
-    </div>
-</header>
+<!--test test-->
+    <h1>Coffeedsds!</h1>
 
-<div class="container">
-    <div class="row coffee-wrapper">
+    <form>
+        <label for="roast-selection"></label>
+        <select id="roast-selection">
+            <option>light</option>
+            <option>medium</option>
+            <option>dark</option>
+        </select>
+        <input id="submit" type="submit" />
+    </form>
 
-        <div class="col s12 coffee-row">
-            <div id="coffees"></div>
-        </div>
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>NAME</th>
+                <th>ROAST</th>
+            </tr>
+        </thead>
+        <tbody id="coffees"></tbody>
+    </table>
 
-        <div class="col s12 coffee-row">
-            <form>
-                <h3 class="form-title">Search coffees:</h3>
-                <div class="form-group">
-                    <label for="roast-selection">Roast:</label>
-                    <div class="input-field">
-                        <select id="roast-selection" onchange="updateCoffees(value)">
-                            <option value='all' selected>all</option>
-                            <option value="light">light</option>
-                            <option value="medium">medium</option>
-                            <option value="dark">dark</option>
-                        </select>
-                    </div>
-                </div>
-                <div class="form-group">
-                    <label for="coffee-search">Coffee Name:</label>
-                    <input id="coffee-search" value='' type="text" onkeyup="searchCoffees(value)">
-                </div>
-            </form>
-            <form>
-                <h3 class="form-title">Add coffee:</h3>
-                <div class="form-group">
-                    <label for="add-coffee-roast-select">Roast:</label>
-                    <select id="add-coffee-roast-select">
-                        <option value="light">light</option>
-                        <option value="medium">medium</option>
-                        <option value="dark">dark</option>
-                    </select>
-                </div>
-                <div class="form-group">
-                    <label for="add-coffee-name">Coffee Name:</label>
-                    <input id="add-coffee-name" value='' type="text" onfocus="showAllCoffees()">
-                </div>
-                <button class="btn waves-effect waves-light" id="add-coffee" type="button" onclick="addCoffee()">Submit
-                    <i class="material-icons right">send</i>
-                </button>
-            </form>
-        </div>
-    </div>
-</div>
-
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/js/materialize.min.js"></script>
-<script src="../../js/coffee.js"></script>
-<script>
-    // //need this to initialize the materialize <select> because REASONS.
-    $('select').formSelect();
-</script>
-
+    <script src="main.js"></script>
 </body>
 </html>
