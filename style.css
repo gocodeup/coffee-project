@@ -1,11 +1,51 @@
-table {
-    border-collapse: collapse;
-    margin: 15px 0;
+/*table {*/
+/*    border-collapse: collapse;*/
+/*    margin: 15px 0;*/
+/*}*/
+
+/*td, th {*/
+/*    border: 1px solid black;*/
+/*    padding: 5px 10px;*/
+/*}*/
+
+h1 {
+    border: 1px solid blue;
 }
 
-td, th {
+.table-container {
+    display: flex;
+    border: 3px solid purple;
+}
+
+.inner-container {
+    border: 1px solid red;
+}
+
+
+.table-heading, .inner-cell {
     border: 1px solid black;
-    padding: 5px 10px;
+    width: 75px;
+    padding: 5px 5px;
+}
+
+.dev-header, .dev-inner {
+    display: none;
+}
+
+.table-heading {
+    font-weight: bold;
+}
+
+.coffee-select-container {
+    border: 3px solid purple;
+}
+
+.label-input-combo {
+    border: 2px solid red;
+}
+
+.coffee-select-container {
+    border: 3px solid purple;
 }
 
 
