@@ -71,10 +71,6 @@ allCoffee.addEventListener('change', function(e) {
 });
 
 
-
-
-    
-
 var search = document.getElementById('select-roast');
 search.addEventListener('keyup', function(e) {
     var searchTerm = e.target.value;
@@ -93,5 +89,30 @@ search.addEventListener('keyup', function(e) {
             list += "<span style=font-size:6vw>" + coffee.name + "</span>" + "<span style='color:orange;font-size:3vw'>" + coffee.roast + "</span>" + "<br>" ;
         }
     });
+    document.getElementById('coffee-list').innerHTML = (list);
+});
+
+//adding a new coffee to the list
+var nameInput = document.getElementById('addBar');
+var roastType = document.getElementById('roastSelect');
+
+document.querySelector('form.add-coffee-container').addEventListener('submit', function (e) {
+    e.preventDefault();
+    console.log(nameInput.value+ ' ' + roastType.value);
+    console.log(coffees);
+    coffees.push({name: nameInput.value, roast: roastType.value});
+    var list = '';
+    coffees.forEach(function(coffee) {
+        if (coffee.roast == 'dark') {
+            list += "<span style=font-size:6vw>" + coffee.name + "</span>" + "<span style='color:black;font-size:3vw'>" + coffee.roast + "</span>" + "<br>" ;
+        }
+        if (coffee.roast == 'medium') {
+            list += "<span style=font-size:6vw>" + coffee.name + "</span>" + "<span style='color:brown;font-size:3vw'>" + coffee.roast + "</span>" + "<br>" ;
+        }
+        if (coffee.roast == 'light') {
+            list += "<span style=font-size:6vw>" + coffee.name + "</span>" + "<span style='color:orange;font-size:3vw'>" + coffee.roast + "</span>" + "<br>" ;
+        }
+    }
+    );
     document.getElementById('coffee-list').innerHTML = (list);
 });
