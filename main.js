@@ -22,9 +22,52 @@ const coffeeList = coffees.map(function(coffee) {
         return "<span style=font-size:6vw>" + coffee.name + "</span>" + "<span style='color:orange;font-size:3vw'>" + coffee.roast + "</span>" + "<br>" ;
     } else if (coffee.roast == 'medium') {
         return "<span style=font-size:6vw>" + coffee.name + "</span>" + "<span style='color:brown;font-size:3vw'>" + coffee.roast + "</span>" + "<br>" ;
-    } else {
+    } else  if (coffee.roast == 'dark') {
         return "<span style=font-size:6vw>" + coffee.name + "</span>" + "<span style='color:black;font-size:3vw'>" + coffee.roast + "</span>" + "<br>" ;
     }
 });
 
 document.getElementById('coffee-list').innerHTML = (coffeeList.join(''));
+
+var roast = document.getElementById('roast-select');
+roast.addEventListener('change', function(e) {
+    var roastType = e.target.value;
+    var filteredCoffees = coffees.filter(function(coffee) {
+        return coffee.roast === roastType;
+    });
+    var list = '';
+    filteredCoffees.forEach(function(coffee) {
+        if (coffee.roast == 'dark') {
+            list += "<span style=font-size:6vw>" + coffee.name + "</span>" + "<span style='color:black;font-size:3vw'>" + coffee.roast + "</span>" + "<br>" ;
+        }
+        if (coffee.roast == 'medium') {
+            list += "<span style=font-size:6vw>" + coffee.name + "</span>" + "<span style='color:brown;font-size:3vw'>" + coffee.roast + "</span>" + "<br>" ;
+        }
+        if (coffee.roast == 'light') {
+            list += "<span style=font-size:6vw>" + coffee.name + "</span>" + "<span style='color:orange;font-size:3vw'>" + coffee.roast + "</span>" + "<br>" ;
+               }
+    });
+    document.getElementById('coffee-list').innerHTML = (list);
+});
+
+
+var search = document.getElementById('select-roast');
+search.addEventListener('keyup', function(e) {
+    var searchTerm = e.target.value;
+    var filteredCoffees = coffees.filter(function(coffee) {
+        return coffee.name.toLowerCase().includes(searchTerm.toLowerCase());
+    });
+    var list = '';
+    filteredCoffees.forEach(function(coffee) {
+        if (coffee.roast == 'dark') {
+            list += "<span style=font-size:6vw>" + coffee.name + "</span>" + "<span style='color:black;font-size:3vw'>" + coffee.roast + "</span>" + "<br>" ;
+        }
+        if (coffee.roast == 'medium') {
+            list += "<span style=font-size:6vw>" + coffee.name + "</span>" + "<span style='color:brown;font-size:3vw'>" + coffee.roast + "</span>" + "<br>" ;
+        }
+        if (coffee.roast == 'light') {
+            list += "<span style=font-size:6vw>" + coffee.name + "</span>" + "<span style='color:orange;font-size:3vw'>" + coffee.roast + "</span>" + "<br>" ;
+        }
+    });
+    document.getElementById('coffee-list').innerHTML = (list);
+});

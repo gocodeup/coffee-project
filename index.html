@@ -5,6 +5,7 @@
     <title></title>
     <link rel="stylesheet" href="style.css">
 </head>
+<body>
 <div class="heading">
     <h1>Tomahawk Coffee Company</h1>
 </div>
@@ -14,15 +15,16 @@
 <h1>Choose Roast</h1>
 <div>
     <div class="container">
-        <form>
+        <form class="select-container">
             <label class ="roast-label input-label">Roast</label>
-            <select id="roast-select">
+            <select id="roast-select" class="roast-select">
+                <option value="dark">All</option>
                 <option value="light">Light</option>
                 <option value="medium">Medium</option>
                 <option value="dark">Dark</option>
             </select>
-            <input id="select-roast" type="search" placeholder="Search By Name"/>
-            <input id="submit-1" type="submit" />
+            <input id="select-roast" type="search" id="search-bar" class="search-bar" placeholder="Search By Name"/>
+            <input id="submit-1" type="submit" class="submit-button" />
         </form>
         <br>
     </div>
