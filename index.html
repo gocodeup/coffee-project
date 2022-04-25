@@ -11,7 +11,7 @@
 
     <h1>Coffee!</h1>
 
-<!-- Select a coffe from the list starts here-->
+<!-- Select a coffee from the list starts here-->
     <form>
         <label for="roast-selection">Roast
             <select id="roast-selection">
@@ -23,7 +23,7 @@
         </label>
         <div>
             <label for="coffee-name">Coffee Name
-                <input type="text" placeholder="Search..." id="coffee-name">
+                <input type="text" placeholder="Search..." id="coffee-name" onkeyup="updateCoffees(e)">
             </label>
         </div>
         <input id="submit" type="submit" />
