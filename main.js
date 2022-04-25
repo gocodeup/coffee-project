@@ -43,7 +43,16 @@ function updateCoffees(e) {
             }
         tbody.innerHTML = renderCoffees(filteredCoffees);
     });
-};
+}
+// function asuserTypes(coffeeName, userInput) {
+//
+//     for (var word of userInput) {
+//         if (coffeeName.indexOf(word)) {
+//             result =
+//         }
+//         return result;
+//     }
+// }
 
 
 // from http://www.ncausa.org/About-Coffee/Coffee-Roasts-Guide
@@ -75,3 +84,4 @@ tbody.innerHTML = renderCoffees(coffees);
 
 submitButton.addEventListener('click', updateCoffees);
 roastSelection.addEventListener('change', updateCoffees);
+nameSelection.addEventListener('keyup', updateCoffees);

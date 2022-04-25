@@ -8,11 +8,18 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
+<!--        container       -->
+<div class="container">
+    <div class="row">
+        <div class="col text-center">
     <h1>Coffee!</h1>
+        </div>
+    </div>
 
 <!-- Select a coffee from the list starts here-->
     <form>
+        <div class="col-6">
+        <div class="row">
         <label for="roast-selection">Roast
             <select id="roast-selection">
                 <option>all</option>
@@ -21,18 +28,30 @@
                 <option>dark</option>
             </select>
         </label>
+            </div>
+            <div class="row">
         <div>
             <label for="coffee-name">Coffee Name
                 <input type="text" placeholder="Search..." id="coffee-name" onkeyup="updateCoffees(e)">
             </label>
-        </div>
+            </div>
+            </div>
+    <div class="row">
         <input id="submit" type="submit" />
+        </div>
     </form>
 
+
+
+
+
 <!-- Add a Coffee Form Starts jere -->
+<div class="row">
     <h2>Add a Coffee</h2>
+    </div>
 
     <form>
+        <div class="row">
         <label for="new-roast">Roast
             <select id="new-roast">
                 <option>light</option>
@@ -40,14 +59,23 @@
                 <option>dark</option>
             </select>
         </label>
+            </div>
+        <div class="row">
         <div>
             <label for="new-name">Coffee Name
                 <input type="text" placeholder="Search..." id="new--name">
             </label>
         </div>
+            </div>
+        <div class="row">
         <input id="submit" type="submit" />
+            </div>
     </form>
+</div>
 
+    <div class="container">
+        <div class="row">
+            <div class="col-6">
     <table>
 <!--        <thead>-->
 <!--            <tr>-->
@@ -58,6 +86,10 @@
 <!--        </thead>-->
         <tbody id="coffees"></tbody>
     </table>
+            </div>
+        </div>
+    </div>
+
 
         <!-- These are bundles of JS plugins and extra css to accommodate nav tab functionality-->
         <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
