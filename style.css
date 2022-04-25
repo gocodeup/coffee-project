@@ -8,22 +8,73 @@
 /*    padding: 5px 10px;*/
 /*}*/
 
-h1 {
+/*START BORDERS TO HELP VISUALIZE*/
+.main-container, .table-container, .pick-add-container {
+    /*border: 1px solid blue;*/
+}
+/*END BORDERS TO HELP VISUALIZE*/
+
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url("/img/bg-img(dark).png");
+    background-size: cover;
+    padding: 25px;
+    font-family: 'Heebo';
+    font-weight: 100;
+    color: white;
+}
+
+.main-container {
     border: 1px solid blue;
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 900px;
+    margin: 25px auto;
+    justify-content: space-between;
+    background-color: rgba(38, 35, 35, 0.8);
+    border-radius: 25px;
+    box-shadow: rgba(255, 165, 0, 0.18) 0px 5px 5px;
+    padding: 10px;
+}
+
+span {
+    color: orange;
+}
+
+h1 {
+    flex-basis: 100%;
+    text-align: center;
+    margin-bottom: 10px;
+    text-shadow: orange;
+}
+
+.main-heading {
+    /*padding: 0 20px;*/
+    margin: 20px 0;
+    font-family: 'Secular One', serif;
 }
 
 .table-container {
     display: flex;
-    border: 3px solid purple;
+    width: 50%;
+}
+
+.pick-add-container {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
 }
 
 .inner-container {
-    border: 1px solid red;
 }
 
 
 .table-heading, .inner-cell {
-    border: 1px solid black;
+    /*border: 1px solid black;*/
     width: 75px;
     padding: 5px 5px;
 }
@@ -36,16 +87,82 @@ h1 {
     font-weight: bold;
 }
 
-.coffee-select-container {
-    border: 3px solid purple;
+.pick-add-container {
+    padding: 10px;
 }
 
-.label-input-combo {
+.sub-heading {
+    font-size: 12px;
+}
+
+.coffee-select-container {
+    margin-bottom: 20px;
+}
+
+.label-input {
+    display: flex;
+    margin-bottom: 10px;
+    font-size: 13px;
+}
+
+.label-input>input {
+    width: 50%;
+}
+
+.label-input>label {
+    width: 40%;
+    margin-right: 5%;
+    font-weight: 300;
+}
+
+.button-t1 {
+    display: flex;
+    justify-content: center;
+}
+
+.button-t1>button {
+    width: 100%; /* adjust button width 5% to 100%*/
+    border-radius: 15px;
+    border: 1px solid white;
+    padding: 4px 0;
+    background-color: #efa931;
+    transition: 1s;
+}
+
+.button-t1>button:hover {
+    background-color: transparent;
+    color: white;
+}
+
+
+.social-icons {
+    /*border: 1px solid red;*/
+    width: 100%;
+    text-align: center;
+    font-size: 20px;
+}
+
+i {
+    margin-left: 5px;
+    color: orange;
+}
+
+/*START FILTERABLE LIST*/
+
+.col {
     border: 2px solid red;
+    /*margin: 15px;*/
 }
 
-.coffee-select-container {
-    border: 3px solid purple;
+.row{
+    /*border: 2px solid blue;*/
 }
+
+.coffee{
+    /*border: 2px solid blue;*/
+}
+
+/*END FILTERABLE LIST*/
+
 
 

@@ -3,6 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <title></title>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -28,81 +31,116 @@
 <!--        <tbody id="coffees"></tbody>-->
 <!--    </table>-->
 
-<h1>Coffee!!!</h1>
+<!--<h1>Coffee!!!</h1>-->
 
-<div class="table-container">
+<!--<div class="table-container">-->
 
-    <div class="dev-inner-container">
-        <div class="dev-header">ID</div>
-        <div class="dev-inner">14</div>
+<!--    <div class="dev-inner-container">-->
+<!--        <div class="dev-header">ID</div>-->
+<!--        <div class="dev-inner">14</div>-->
+<!--    </div>-->
+
+<!--    <div class="inner-container">-->
+<!--        <div class="table-heading">NAME</div>-->
+<!--        <div class="inner-cell inner-id">French</div>-->
+<!--    </div>-->
+
+<!--    <div class="inner-container">-->
+<!--        <div class="table-heading">ROAST</div>-->
+<!--        <div class="inner-cell inner-id">dark</div>-->
+<!--    </div>-->
+<!--</div>-->
+
+<!--<br>-->
+<!--<br>-->
+
+<!--    PICK AND ADD COFFEE CONTAINER-->
+<div class="main-container">
+    <h1 class="main-heading"><span>7th AVE</span> COFFEE</h1>
+    <!--BEGINNING OF COFFEE TABLE-->
+    <div class="table-container">
+
+        <div class="col order-1" >
+            <div class="row" id="coffees">
+
+            </div>
+        </div>
+
     </div>
+    <!--END OF COFFEE TABLE-->
 
-    <div class="inner-container">
-        <div class="table-heading">NAME</div>
-        <div class="inner-cell inner-id">French</div>
+    <!--*************************************************************************************************************************************************-->
+
+    <!--PICK AND ADD COFFEE CONTAINER-->
+    <div class="pick-add-container">
+        <!--    BEGINNING OF SELECT YOUR COFFEE-->
+        <div class="coffee-select-container">
+            <div class="sub-heading"><h1>Pick your Coffee</h1></div>
+            <div class="label-input">
+                <label for="">Roast</label>
+                <select>
+                    <option class="roast-option" value=””>option1</option>
+                    <option class="roast-option" value=””>option2</option>
+                    <option class="roast-option" value=””>option3</option>
+                    <option class="roast-option" value=””>option3</option>
+                </select>
+            </div>
+
+            <div class="label-input">
+                <label for="">Coffee Name</label>
+                <input type="" class="roast-input" name="" access="" id="">
+            </div>
+            <div class="button-t1">
+                <button role="button">Submit</button>
+            </div>
+        </div><!--    END OF SELECT YOUR COFFEE-->
+
+        <!--    BEGINNING OF SELECT YOUR COFFEE-->
+        <!--    BEGINNING OF SELECT YOUR COFFEE-->
+        <div class="coffee-select-container">
+            <div class="sub-heading"><h1>Add a Coffee</h1></div>
+            <div class="label-input">
+                <label for="">Roast</label>
+                <select>
+                    <option class="roast-option" value=””>option1</option>
+                    <option class="roast-option" value=””>option2</option>
+                    <option class="roast-option" value=””>option3</option>
+                    <option class="roast-option" value=””>option3</option>
+                </select>
+            </div>
+
+            <div class="label-input">
+                <label for="">Coffee Name</label>
+                <input type="" class="roast-input" name="" access="" id="">
+            </div>
+            <div class="button-t1">
+                <button role="button">Submit</button>
+            </div>
+        </div><!--    END OF SELECT YOUR COFFEE-->
+        <!--    END OF SELECT YOUR COFFEE-->
     </div>
+    <!--END OF PICK AND ADD CONTAINER-->
+    <div class="social-icons">
+        <i class="fa-brands fa-instagram"></i>
+        <i class="fa-brands fa-facebook"></i>
+        <i class="fa-brands fa-youtube"></i>
 
-    <div class="inner-container">
-        <div class="table-heading">ROAST</div>
-        <div class="inner-cell inner-id">dark</div>
     </div>
 </div>
 
-<br>
-<br>
-
-<!--    BEGINNING OF SELECT YOUR COFFEE-->
-    <div class="coffee-select-container">
-        <div class="c"><h1>Pick your Coffee</h1></div>
-
-        <div class="label-input-combo">
-            <label for="" class="roast-dropdown-label">Roast</label>
-            <select>
-                <option class="roast-option" value=””>option1</option>
-                <option class="roast-option" value=””>option2</option>
-                <option class="roast-option" value=””>option3</option>
-                <option class="roast-option" value=””>option3</option>
-            </select>
-        </div>
-
-        <div class="label-input-combo">
-            <label for="" class="roast-input-label">Coffee Name</label>
-            <input type="" class="roast-input" name="" access="" id="">
-        </div>
-        <div class="label-input-combo">
-            <button type="button" class="roast-btn" name="" id="">Submit</button>
-        </div>
-    </div>
-    <!--    END OF SELECT YOUR COFFEE-->
-
-<!--    BEGINNING OF SELECT YOUR COFFEE-->
-<div class="coffee-select-container">
-    <div class="c"><h1>Add a Coffee</h1></div>
-
-    <div class="label-input-combo">
-        <label for="" class="roast-dropdown-label">Roast</label>
-        <select>
-            <option class="roast-option" value=””>option1</option>
-            <option class="roast-option" value=””>option2</option>
-            <option class="roast-option" value=””>option3</option>
-            <option class="roast-option" value=””>option3</option>
-        </select>
-    </div>
-
-    <div class="label-input-combo">
-        <label for="" class="roast-input-label">Coffee Name</label>
-        <input type="" class="roast-input" name="" access="" id="">
-    </div>
-    <div class="label-input-combo">
-        <button type="button" class="roast-btn" name="" id="">Submit</button>
-    </div>
-</div>
 <!--    END OF SELECT YOUR COFFEE-->
 
 
+<!--    START OF FILTERABLE LIST-->
+<!--<div class="col order-1" >-->
+<!--    <div class="row" id="coffees">-->
 
+<!--    </div>-->
+<!--</div>-->
+<!--    END OF FILTERABLE LIST-->
 
-
-    <script src="main.js"></script>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
+<script src="main.js"></script>
 </body>
 </html>
