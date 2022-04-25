@@ -25,7 +25,6 @@ function updateCoffees(e) {
     var selectedName = nameSelection.value;
     var filteredCoffees = [];
     coffees.forEach(function (coffee) {
-
             if (selectedRoast === 'all' && selectedName === '') {
                 filteredCoffees.push(coffee);
                 if (coffee.name !== selectedName && selectedName !== '') {
