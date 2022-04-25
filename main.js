@@ -10,11 +10,23 @@ function renderCoffee(coffee) {
     return html;
 }
 
+function renderCoffee(coffee) {
+    var html = '<div class="coffee">';
+//     html += '<td>' + coffee.id + '</td>';
+    html += '<h2>' + coffee.name + '</h2>';
+    html += '<p>' + coffee.roast + '</p>';
+    html += '</div>';
+
+    return html;
+}
+
 function renderCoffees(coffees) {
     var html = '';
-    for(var i = coffees.length - 1; i >= 0; i--) {
-        html += renderCoffee(coffees[i]);
-    }
+    coffees.forEach(function(blend) {
+    // for(var i = 0; i <= coffees.length; i++) {
+    // for(var i = coffees.length -1; i>= 0; i--) {
+        html += renderCoffee(blend);
+    })
     return html;
 }
 
@@ -32,7 +44,7 @@ function updateCoffees(e) {
 
 // from http://www.ncausa.org/About-Coffee/Coffee-Roasts-Guide
 var coffees = [
-    {id: 1, name: 'Light City', roast: 'light'},
+    {id: 1, name: 'Light City', roast: 'light'}, //each object is called 'blend'
     {id: 2, name: 'Half City', roast: 'light'},
     {id: 3, name: 'Cinnamon', roast: 'light'},
     {id: 4, name: 'City', roast: 'medium'},
@@ -53,5 +65,8 @@ var submitButton = document.querySelector('#submit');
 var roastSelection = document.querySelector('#roast-selection');
 
 tbody.innerHTML = renderCoffees(coffees);
+
+//option to remove table header row from HTML page
+// thead.innerHTML = renderCoffeeHeader();
 
 submitButton.addEventListener('click', updateCoffees);
