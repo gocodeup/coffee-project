@@ -14,7 +14,7 @@
 }
 
 #coffees{
-    border: 2px solid orange;
+    /*border: 2px solid orange;*/
 }
 /*END BORDERS TO HELP VISUALIZE*/
 
@@ -45,6 +45,23 @@ body {
     padding: 10px;
 }
 
+.main-container:nth-child(1) {
+    /*flex-basis: 100%;*/
+}
+
+.logo {
+    width: 100%;
+    text-align: center;
+    /*margin-bottom: 20px;*/
+    padding-top: 25px;
+    padding-bottom: 25px;
+}
+
+.logo>img {
+    width: 150px;
+    height: 145px;
+}
+
 span {
     color: orange;
 }
@@ -57,8 +74,7 @@ h1 {
 }
 
 .main-heading {
-    padding: 0 20px;
-    /*margin: 20px 0;*/
+    margin: 35px 0;
     font-family: 'Secular One', serif;
 }
 
@@ -101,18 +117,32 @@ h1 {
     font-size: 18px;
 }
 
+.sub-heading2> h1{
+    margin-top: 25px;
+}
+
 .coffee-select-container {
     margin-bottom: 20px;
+}
+
+.form-control {
+    width: auto;
+    height: 25px;
+    line-height: 0;
+    font-size: 15px;
+    padding: 0;
+    border-radius: 3px;
 }
 
 .label-input {
     display: flex;
     margin-bottom: 10px;
-    font-size: 13px;
+    font-size: 15px;
 }
 
 .label-input>input {
     width: 50%;
+    border-radius: 5px;
 }
 
 .label-input>label {
@@ -130,9 +160,11 @@ h1 {
     width: 100%; /* adjust button width 5% to 100%*/
     border-radius: 15px;
     border: 1px solid white;
-    padding: 4px 0;
-    background-color: #efa931;
+    margin-top: 15px;
+    padding: 3px 0;
+    background-color: #c78603;
     transition: 1s;
+    color: white;
 }
 
 .button-t1>button:hover {
@@ -145,12 +177,17 @@ h1 {
     /*border: 1px solid red;*/
     width: 100%;
     text-align: center;
-    font-size: 20px;
+}
+
+.social-icons>p {
+    margin-bottom: 0;
 }
 
 i {
     margin-left: 5px;
     color: orange;
+    font-size: 25px;
+
 }
 
 /*START FILTERABLE LIST*/
@@ -165,7 +202,7 @@ i {
 }
 
 #coffees{
-    border: 2px solid orange;
+    /*border: 2px solid orange;*/
     /*font-size: 5px;*/
 }
 
@@ -174,6 +211,8 @@ i {
 }
 .coffee>p {
     font-size: 10px;
+    padding-left: 3px;
+    color: orange;
 }
 
 /*END FILTERABLE LIST*/
