@@ -1,9 +1,21 @@
-table {
-    border-collapse: collapse;
-    margin: 15px 0;
+/*table {*/
+/*    border-collapse: collapse;*/
+/*    margin: 15px 0;*/
+/*}*/
+
+/*td, th {*/
+/*    border: 1px solid black;*/
+/*    padding: 5px 10px;*/
+/*}*/
+
+.coffee-header {
+    text-align: center;
 }
 
-td, th {
-    border: 1px solid black;
-    padding: 5px 10px;
+hr {
+    border: 3px solid saddlebrown;
+}
+
+.coffee-roast-form {
+    text-align: center;
 }
