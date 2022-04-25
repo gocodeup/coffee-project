@@ -21,3 +21,16 @@ body{
     color: white;
 
 }
+#right-container {
+    column-count: 2;
+}
+.coffee {
+    column-count: 2;
+}
+table {
+    margin-top: 0em;
+}
+
+.coffee > p {
+    display: inline-flex;
+}
