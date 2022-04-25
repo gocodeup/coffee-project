@@ -2,34 +2,65 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title></title>
+    <title>Better Buzz Coffee Project</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<!-- test 1, 2-->
     <h1>Coffee!</h1>
 
+<!-- Select a coffe from the list starts here-->
     <form>
-        <label for="roast-selection"></label>
-        <select id="roast-selection">
-            <option>light</option>
-            <option>medium</option>
-            <option>dark</option>
-        </select>
+        <label for="roast-selection">Roast
+            <select id="roast-selection">
+                <option>light</option>
+                <option>medium</option>
+                <option>dark</option>
+            </select>
+        </label>
+        <div>
+            <label for="coffee-name">Coffee Name
+                <input type="text" placeholder="Search..." id="coffee-name">
+            </label>
+        </div>
+        <input id="submit" type="submit" />
+    </form>
+
+<!-- Add a Coffee Form Starts jere -->
+    <h2>Add a Coffee</h2>
+
+    <form>
+        <label for="new-roast">Roast
+            <select id="new-roast">
+                <option>light</option>
+                <option>medium</option>
+                <option>dark</option>
+            </select>
+        </label>
+        <div>
+            <label for="new-name">Coffee Name
+                <input type="text" placeholder="Search..." id="new--name">
+            </label>
+        </div>
         <input id="submit" type="submit" />
     </form>
 
     <table>
-        <thead>
-            <tr>
-                <th>ID</th>
-                <th>NAME</th>
-                <th>ROAST</th>
-            </tr>
-        </thead>
+<!--        <thead>-->
+<!--            <tr>-->
+<!--                <th>ID</th>-->
+<!--                <th>NAME</th>-->
+<!--                <th>ROAST</th>-->
+<!--            </tr>-->
+<!--        </thead>-->
         <tbody id="coffees"></tbody>
     </table>
+
+        <!-- These are bundles of JS plugins and extra css to accommodate nav tab functionality-->
+        <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF" crossorigin="anonymous"></script>
 
     <script src="../coffee-project/main.js"></script>
 </body>
