@@ -26,4 +26,5 @@ const coffeeList = coffees.map(function(coffee) {
         return "<span style=font-size:6vw>" + coffee.name + "</span>" + "<span style='color:black;font-size:3vw'>" + coffee.roast + "</span>" + "<br>" ;
     }
 });
+
 document.getElementById('coffee-list').innerHTML = (coffeeList.join(''));

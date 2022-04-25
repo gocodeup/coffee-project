@@ -5,41 +5,47 @@
     <title></title>
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
-   <div class="heading">
-    <h1>Search</h1>
-   </div>
-   <div>
-       <div class="container">
-    <form>
-        <label class ="coffee-type"></label>
-        <select id="coffee-type">
-            <option>all</option>
-            <option>light</option>
-            <option>medium</option>
-            <option>dark</option>
-        </select>
-        <input id="select-roast" type="search" placeholder="Search By Name"/>
-        <input id="submit-1" type="submit" />
-    </form>
-   </div>
-       <div class="heading">
-           <h1>Add Coffee</h1>
-       </div>
-       <div class="container">
-   <form>
-        <label class="roast-selection"></label>
-        <select id="roast-selection">
-            <option>light</option>
-            <option>medium</option>
-            <option>dark</option>
-        </select>
-        <input id="add-coffee" type="search" placeholder="Enter New Coffee" />
-        <input id="submit-2" type="submit" />
-    </form>
-</div><div id="coffee-list">
-    <div id="coffee-name"></div>
-    <div id="coffee-roast"></div>
+<div class="heading">
+    <h1>Tomahawk Coffee Company</h1>
+</div>
+
+<br>
+
+<h1>Choose Roast</h1>
+<div>
+    <div class="container">
+        <form>
+            <label class ="roast-label input-label">Roast</label>
+            <select id="roast-select">
+                <option value="light">Light</option>
+                <option value="medium">Medium</option>
+                <option value="dark">Dark</option>
+            </select>
+            <input id="select-roast" type="search" placeholder="Search By Name"/>
+            <input id="submit-1" type="submit" />
+        </form>
+        <br>
+    </div>
+    <div class="heading">
+        <h1>Add Coffee</h1>
+    </div>
+    <div class="container">
+
+        <form>
+            <label class="roast-label input-label">Roast</label>
+            <select id="roastSelect">
+                <option>light</option>
+                <option>medium</option>
+                <option>dark</option>
+            </select>
+            <input id="add-coffee" type="search" placeholder="Enter New Coffee" />
+            <input id="submit-2" type="submit" />
+        </form>
+    </div>
+    <div id="coffee-list">
+        <div id="coffee-name"></div>
+        <div id="coffee-roast"></div>
+    </div>
 </div>
     
 
