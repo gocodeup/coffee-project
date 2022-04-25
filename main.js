@@ -1,14 +1,14 @@
 "use strict"
 
-function renderCoffee(coffee) {
-    var html = '<tr class="coffee">';
-    html += '<td>' + coffee.id + '</td>';
-    html += '<td>' + coffee.name + '</td>';
-    html += '<td>' + coffee.roast + '</td>';
-    html += '</tr>';
-
-    return html;
-}
+// function renderCoffee(coffee) {
+//     var html = '<tr class="coffee">';
+//     html += '<td>' + coffee.id + '</td>';
+//     html += '<td>' + coffee.name + '</td>';
+//     html += '<td>' + coffee.roast + '</td>';
+//     html += '</tr>';
+//
+//     return html;
+// }
 
 function renderCoffee(coffee) {
     var html = '<div class="coffee">';
@@ -33,15 +33,32 @@ function renderCoffees(coffees) {
 function updateCoffees(e) {
     e.preventDefault(); // don't submit the form, we just want to update the data
     var selectedRoast = roastSelection.value;
+    var selectedName = nameSelection.value;
     var filteredCoffees = [];
     coffees.forEach(function(coffee) {
-        if (coffee.roast === selectedRoast) {
+        if(coffee.name === selectedName){
             filteredCoffees.push(coffee);
-        }
+        } else if (coffee.roast === selectedRoast) {
+            filteredCoffees.push(coffee);
+        } else if(selectedRoast === 'all'){
+                filteredCoffees.push(coffee);
+            }
+
     });
     tbody.innerHTML = renderCoffees(filteredCoffees);
 }
 
+// function updatecoffeeNames(a){
+//     a.preventDefault(); // don't submit the form, we just want to update the data
+//     var selectedName = nameSelection.value;
+//     var filteredCoffeesNames = [];
+//     coffees.forEach(function(coffee) {
+//         if (coffee.name === selectedName) {
+//             filteredCoffeesNames.push(coffee);
+//         }
+//     });
+//     tbody.innerHTML = renderCoffees(filteredCoffeesNames);
+// }
 // from http://www.ncausa.org/About-Coffee/Coffee-Roasts-Guide
 var coffees = [
     {id: 1, name: 'Light City', roast: 'light'}, //each object is called 'blend'
@@ -63,10 +80,17 @@ var coffees = [
 var tbody = document.querySelector('#coffees');
 var submitButton = document.querySelector('#submit');
 var roastSelection = document.querySelector('#roast-selection');
+// console.log(roastSelection);
+var nameSelection = document.querySelector('#coffee-name');
+// var searchboxAction = document.getElementById('submit').addEventListener('keyup', function updateCoffees() {
+//     subHeader.style.color = 'blue';
+// })
+
 
 tbody.innerHTML = renderCoffees(coffees);
-
+// tbody.innerHTML = renderCoffeesNames(coffees);
 //option to remove table header row from HTML page
 // thead.innerHTML = renderCoffeeHeader();
 
 submitButton.addEventListener('click', updateCoffees);
+submitButton.addEventListener('change', updateCoffees);
