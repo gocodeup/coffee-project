@@ -9,15 +9,6 @@ function renderCoffee(coffee) {
 
     return html;
 }
-// function renderCoffee(coffee) {
-//     var html = '<tr class="coffee">';
-//     html += '<td>' + coffee.id + '</td>';
-//     html += '<td>' + coffee.name + '</td>';
-//     html += '<td>' + coffee.roast + '</td>';
-//     html += '</tr>';
-//
-//     return html;
-// }
 
 function renderCoffees(coffees) {
     var html = '';
@@ -27,40 +18,59 @@ function renderCoffees(coffees) {
     return html;
 }
 
-function updateCoffees(e) {
+
+function searchCoffees(e) {
     e.preventDefault(); // don't submit the form, we just want to update the data
-    var selectedRoast = roastSelection.value;
+    let coffeeName = search.value;
+    console.log(coffeeName);
     var filteredCoffees = [];
     coffees.forEach(function(coffee) {
-        if (coffee.roast === selectedRoast) {
+        if (coffee.name.toUpperCase().indexOf(coffeeName.toUpperCase()) > -1) {
             filteredCoffees.push(coffee);
         }
     });
-    tbody.innerHTML = renderCoffees(filteredCoffees);
+    console.log(filteredCoffees);
+    tbody.innerHTML = renderCoffees(filteredCoffees)
 }
 
 // from http://www.ncausa.org/About-Coffee/Coffee-Roasts-Guide
 var coffees = [
-    {id: 1, name: 'Light City', roast: 'light'},
-    {id: 2, name: 'Half City', roast: 'light'},
-    {id: 3, name: 'Cinnamon', roast: 'light'},
-    {id: 4, name: 'City', roast: 'medium'},
-    {id: 5, name: 'American', roast: 'medium'},
-    {id: 6, name: 'Breakfast', roast: 'medium'},
-    {id: 7, name: 'High', roast: 'dark'},
-    {id: 8, name: 'Continental', roast: 'dark'},
-    {id: 9, name: 'New Orleans', roast: 'dark'},
-    {id: 10, name: 'European', roast: 'dark'},
-    {id: 11, name: 'Espresso', roast: 'dark'},
-    {id: 12, name: 'Viennese', roast: 'dark'},
-    {id: 13, name: 'Italian', roast: 'dark'},
-    {id: 14, name: 'French', roast: 'dark'},
+    {id: 1, name: 'Light City', roast: 'light', imgURL: "img/lightcity.png"},
+    {id: 2, name: 'Half City', roast: 'light', imgURL: "img/halfcity.png"},
+    {id: 3, name: 'Cinnamon', roast: 'light', imgURL: "img/cinnamon.png"},
+    {id: 4, name: 'City', roast: 'medium', imgURL: "img/city.png"},
+    {id: 5, name: 'American', roast: 'medium', imgURL: "img/american.png"},
+    {id: 6, name: 'Breakfast', roast: 'medium', imgURL: "img/breakfast.png"},
+    {id: 7, name: 'High', roast: 'dark', imgURL: "img/high.png"},
+    {id: 8, name: 'Continental', roast: 'dark', imgURL: "img/continental.png"},
+    {id: 9, name: 'New Orleans', roast: 'dark', imgURL: "img/neworleans.png"},
+    {id: 10, name: 'European', roast: 'dark', imgURL: "img/european.png"},
+    {id: 11, name: 'Espresso', roast: 'dark', imgURL: "img/espresso.png"},
+    {id: 12, name: 'Viennese', roast: 'dark', imgURL: "img/viennese.png"},
+    {id: 13, name: 'Italian', roast: 'dark', imgURL: "img/italian.png"},
+    {id: 14, name: 'French', roast: 'dark', imgURL: "img/french.png"},
 ];
-
 var tbody = document.querySelector('#coffees');
 var submitButton = document.querySelector('#submit');
 var roastSelection = document.querySelector('#roast-selection');
-
+let search = document.querySelector("#searchCoffee");
 tbody.innerHTML = renderCoffees(coffees);
 
-submitButton.addEventListener('click', updateCoffees);
+submitButton.addEventListener('click', searchCoffees);
+
+// event listener that takes in a value
+roastSelection.addEventListener("change", function() {
+    let selectedRoast = roastSelection.value;
+    let html = '';
+    coffees.forEach(coffee => {
+        if (selectedRoast === coffee.roast) {
+            console.log(renderCoffee(coffee));
+            tbody.innerHTML = html += renderCoffee(coffee);
+
+        } else if (selectedRoast === "all") {
+            tbody.innerHTML = renderCoffees(coffees);
+        }
+    })
+})
+
+search.addEventListener('keyup', searchCoffees)

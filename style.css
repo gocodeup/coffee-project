@@ -12,6 +12,10 @@
 .main-container, .table-container, .pick-add-container {
     /*border: 1px solid blue;*/
 }
+
+#coffees{
+    border: 2px solid orange;
+}
 /*END BORDERS TO HELP VISUALIZE*/
 
 * {
@@ -29,7 +33,7 @@ body {
 }
 
 .main-container {
-    border: 1px solid blue;
+    /*border: 1px solid blue;*/
     display: flex;
     flex-wrap: wrap;
     max-width: 900px;
@@ -53,20 +57,22 @@ h1 {
 }
 
 .main-heading {
-    /*padding: 0 20px;*/
-    margin: 20px 0;
+    padding: 0 20px;
+    /*margin: 20px 0;*/
     font-family: 'Secular One', serif;
 }
 
 .table-container {
     display: flex;
-    width: 50%;
+    width: 49%;
+    margin-right: 5px;
 }
 
 .pick-add-container {
     display: flex;
     flex-direction: column;
     width: 50%;
+    /*border: 2px solid red;*/
 }
 
 .inner-container {
@@ -91,8 +97,8 @@ h1 {
     padding: 10px;
 }
 
-.sub-heading {
-    font-size: 12px;
+.sub-heading>h1 {
+    font-size: 18px;
 }
 
 .coffee-select-container {
@@ -149,8 +155,8 @@ i {
 
 /*START FILTERABLE LIST*/
 
-.col {
-    border: 2px solid red;
+.order-1 {
+    /*border: 2px solid red;*/
     /*margin: 15px;*/
 }
 
@@ -158,8 +164,16 @@ i {
     /*border: 2px solid blue;*/
 }
 
-.coffee{
-    /*border: 2px solid blue;*/
+#coffees{
+    border: 2px solid orange;
+    /*font-size: 5px;*/
+}
+
+#name {
+    font-size: 18px;
+}
+.coffee>p {
+    font-size: 10px;
 }
 
 /*END FILTERABLE LIST*/

@@ -2,10 +2,16 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title></title>
-
+    <title>7th Ave Coffee</title>
+<!--FONTAWESOME CDN-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<!--    GOOGLE FONTS-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@100;200;300;400;500&family=Secular+One&display=swap" rel="stylesheet">
+<!--    BOOTSTRAP-->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
-
+<!--CSS-->
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -77,21 +83,21 @@
         <div class="coffee-select-container">
             <div class="sub-heading"><h1>Pick your Coffee</h1></div>
             <div class="label-input">
-                <label for="">Roast</label>
-                <select>
-                    <option class="roast-option" value=””>option1</option>
-                    <option class="roast-option" value=””>option2</option>
-                    <option class="roast-option" value=””>option3</option>
-                    <option class="roast-option" value=””>option3</option>
+                <label for="roast-selection">Roast</label>
+                <select id="roast-selection" class="form-control">
+                    <option value="all">all</option>
+                    <option value="light">light</option>
+                    <option value="medium">medium</option>
+                    <option value="dark">dark</option>
                 </select>
             </div>
 
             <div class="label-input">
                 <label for="">Coffee Name</label>
-                <input type="" class="roast-input" name="" access="" id="">
+                <input type="search" class="roast-input" id="searchCoffee">
             </div>
             <div class="button-t1">
-                <button role="button">Submit</button>
+                <button id="submit" type="submit" role="button">Submit</button>
             </div>
         </div><!--    END OF SELECT YOUR COFFEE-->
 
@@ -100,12 +106,12 @@
         <div class="coffee-select-container">
             <div class="sub-heading"><h1>Add a Coffee</h1></div>
             <div class="label-input">
-                <label for="">Roast</label>
-                <select>
-                    <option class="roast-option" value=””>option1</option>
-                    <option class="roast-option" value=””>option2</option>
-                    <option class="roast-option" value=””>option3</option>
-                    <option class="roast-option" value=””>option3</option>
+                <label for="roast-selection1">Roast</label>
+                <select id="roast-selection1" class="form-control">\
+                    <option>all</option>
+                    <option>light</option>
+                    <option>medium</option>
+                    <option>dark</option>
                 </select>
             </div>
 
