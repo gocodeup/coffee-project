@@ -7,19 +7,20 @@
 </head>
 <body>
    <div class="heading">
-    <h1>Roast</h1>
+    <h1>Search</h1>
    </div>
    <div>
        <div class="container">
     <form>
         <label class ="coffee-type"></label>
         <select id="coffee-type">
+            <option>all</option>
             <option>light</option>
             <option>medium</option>
             <option>dark</option>
         </select>
-        <input id="submit-1" type="submit" />
         <input id="select-roast" type="search" placeholder="Search By Name"/>
+        <input id="submit-1" type="submit" />
     </form>
    </div>
        <div class="heading">
@@ -33,13 +34,14 @@
             <option>medium</option>
             <option>dark</option>
         </select>
-        <input id="submit-2" type="submit" />
         <input id="add-coffee" type="search" placeholder="Enter New Coffee" />
+        <input id="submit-2" type="submit" />
     </form>
-   </div>
-   <div class="coffee-list">
-
-   </div>
+</div><div id="coffee-list">
+    <div id="coffee-name"></div>
+    <div id="coffee-roast"></div>
+</div>
+    
 
     <script src="main.js"></script>
 </body>
