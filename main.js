@@ -53,9 +53,11 @@ function newButton(e) {
         name: roastName.value,
         roast: roastType.value,
     }
-    console.log(coffeeObject)
+    console.log(coffeeObject);
     coffees.push(coffeeObject);
     renderCoffees(coffees);
+    document.getElementById('newForm').reset();
+    updateCoffees(e);
 }
 
 // from http://www.ncausa.org/About-Coffee/Coffee-Roasts-Guide
