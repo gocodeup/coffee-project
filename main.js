@@ -46,6 +46,20 @@ function updateCoffees(e) {
     });
 }
 
+function newButton(e) {
+    e.preventDefault();
+    var coffeeObject = {
+        id: coffees.length +1,
+        name: roastName.value,
+        roast: roastType.value,
+    }
+    console.log(coffeeObject);
+    coffees.push(coffeeObject);
+    renderCoffees(coffees);
+    document.getElementById('newForm').reset();
+    updateCoffees(e);
+}
+
 // from http://www.ncausa.org/About-Coffee/Coffee-Roasts-Guide
 var coffees = [
     {id: 1, name: 'Light City', roast: 'light'}, //each object is called 'blend'
@@ -67,8 +81,10 @@ var coffees = [
 var tbody = document.querySelector('#coffees');
 var submitButton = document.querySelector('#submit');
 var roastSelection = document.querySelector('#roast-selection');
-
 var nameSelection = document.querySelector('#coffee-name');
+var submitNew = document.querySelector('#submit-new')
+var roastType = document.querySelector('#new-roast')
+var roastName = document.querySelector('#new-name')
 
 
 tbody.innerHTML = renderCoffees(coffees);
@@ -76,3 +92,4 @@ tbody.innerHTML = renderCoffees(coffees);
 submitButton.addEventListener('click', updateCoffees);
 roastSelection.addEventListener('change', updateCoffees);
 nameSelection.addEventListener('keyup', updateCoffees);
+submitNew.addEventListener('click', newButton);
