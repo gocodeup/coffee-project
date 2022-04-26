@@ -60,4 +60,9 @@ body {
     border-left: 1px solid black;
 }
 
+audio {
+    display: flex;
+    align-self: center;
+}
+
 
