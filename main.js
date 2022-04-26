@@ -17,16 +17,29 @@ function renderCoffees(coffees) {
     return html;
 }
 
-function updateCoffeeRoast(e) {
+function updateCoffeesByRoast(e) {
     e.preventDefault(); // don't submit the form, we just want to update the data
     var selectedRoast = roastSelection.value;
-    var filteredCoffeeRoast = [];
+    var filteredCoffeeRoasts = [];
     coffees.forEach(function(coffee) {
         if (coffee.roast === selectedRoast) {
-            filteredCoffeeRoast.push(coffee);
+            filteredCoffeeRoasts.push(coffee);
+            bodyMainDiv.innerHTML = renderCoffees(filteredCoffeeRoasts);
+        } else if ('All Roasts' === selectedRoast) {
+            bodyMainDiv.innerHTML = renderCoffees(coffees);
         }
     });
-    bodyMainDiv.innerHTML = renderCoffees(filteredCoffeeRoast);
+}
+
+function updateCoffeesByName() {
+    var selectedCoffee = coffeeSearch.value;
+    var filteredCoffeeNames = [];
+    coffees.forEach(function(coffee) {
+        if (coffee.name === selectedCoffee || coffee.name.startsWith(selectedCoffee) || coffeeSearch.value.toLowerCase() === coffee.name.toLowerCase() || coffee.name.toLowerCase().startsWith(selectedCoffee.toLowerCase()) || coffee.name.includes(selectedCoffee) || coffee.name.toLowerCase().includes(selectedCoffee.toLowerCase())) {
+            filteredCoffeeNames.push(coffee);
+        }
+    });
+    bodyMainDiv.innerHTML = renderCoffees(filteredCoffeeNames);
 }
 
 // from http://www.ncausa.org/About-Coffee/Coffee-Roasts-Guide
@@ -52,10 +65,12 @@ coffees.sort((a, b) => {
 });
 
 var bodyMainDiv = document.querySelector('#coffees');
-var submitRoast = document.querySelector('#submit');
+// var submitButton = document.querySelector('#submit');
 var roastSelection = document.querySelector('#roast-selection');
-
+var coffeeSearch = document.querySelector('#coffee-selection');
 
 bodyMainDiv.innerHTML = renderCoffees(coffees);
 
-submitRoast.addEventListener('click', updateCoffeeRoast);
+roastSelection.addEventListener('change', updateCoffeesByRoast);
+// submitButton.addEventListener('click', updateCoffeesByRoast);
+coffeeSearch.addEventListener('keyup', updateCoffeesByName);

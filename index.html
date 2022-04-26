@@ -29,20 +29,22 @@
             </div>
         </div>
 
-        <form class="col">
-            <label for="roast-selection">Roast Type:</label>
-            <select id="roast-selection">
-                <option>All Roasts</option>
-                <option>Light</option>
-                <option>Medium</option>
-                <option>Dark</option>
-            </select>
-            <input id="submit" type="submit">
-            <div>
-                <label for="coffee-selection">Coffee Name:</label>
+        <div class="col">
+            <form>
+                <label for="roast-selection">Filter by Roast:</label>
+                <select id="roast-selection">
+                    <option>All Roasts</option>
+                    <option>Light</option>
+                    <option>Medium</option>
+                    <option>Dark</option>
+                </select>
+                <input class="btn btn-primary" id="submit" type="submit" />
+            </form>
+            <form>
+                <label for="coffee-selection">Search for a Coffee:</label>
                 <input id="coffee-selection" name="coffee-selection" type="text">
-            </div>
-        </form>
+            </form>
+        </div>
     </div>
 </div>
 
