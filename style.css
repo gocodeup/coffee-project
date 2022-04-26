@@ -1,9 +1,16 @@
-table {
-    border-collapse: collapse;
-    margin: 15px 0;
-}
+/*table {*/
+/*    border-collapse: collapse;*/
+/*    margin: 15px 0;*/
+/*}*/
 
-td, th {
-    border: 1px solid black;
-    padding: 5px 10px;
+/*td, th {*/
+/*    border: 1px solid black;*/
+/*    padding: 5px 10px;*/
+/*}*/
+
+.jumbotron {
+    background-image: url("https://images.pexels.com/photos/2316554/pexels-photo-2316554.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
 }
