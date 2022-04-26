@@ -51,6 +51,7 @@ h1{
     cursor: pointer;
     margin-top: .2em;
     position: absolute;
+    bottom: 1em;
 }
 
 #coffee-list{
@@ -67,3 +68,6 @@ h1{
     overflow: scroll;
 }
 
+/* .add-coffee-container{
+    text-align: center;
+} */
