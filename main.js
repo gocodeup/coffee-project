@@ -23,6 +23,9 @@ var tbody = document.querySelector('#coffees');
 tbody.innerHTML = renderCoffees(coffees);
 function renderCoffees(coffees) {
     var html = '';
+    if(localStorage.getItem("userCoffee")){
+        coffees.push(JSON.parse(localStorage.getItem('userCoffee')))
+    }
     for(var i = coffees.length - 1; i >= 0; i--) {
         html += renderCoffee(coffees[i]);
     }
@@ -82,16 +85,20 @@ function searchCoffees(e) {
 // ************************************************
 const addCoffee = (e) => {
     e.preventDefault(); //stops the form from submitting
-    let userCoffee = {
-        //id: document.querySelector(),//we need to reference the id?
+    var userCoffee = {
+        id: coffees.length += 1,
         name: document.querySelector("#searchCoffee1").value,
-        roast: document.querySelector('#roast-selection1').value
+        roast: document.querySelector('#roast-selection1').value,
+        imgURL : `img/new.png`
     }
-    coffees.push(userCoffee);
-    console.log('userCoffee: ', userCoffee)
-    document.forms[0].reset();// to clear the form for next entries
-    tbody.innerHTML = renderCoffees(coffees)
-    console.log('coffees: ', coffees)
+
+    let userCoffee_serialized = JSON.stringify(userCoffee);
+    localStorage.setItem("userCoffee", userCoffee_serialized);
+
+    coffees.pop();
+    // coffees.push(userCoffee_serialized);
+    tbody.innerHTML = renderCoffees(coffees);
+
 }
 var submitButton = document.querySelector('#submit1');
 submitButton.addEventListener('click', addCoffee);
