@@ -36,12 +36,12 @@ table {
     border: 3px solid black;
 }
 #coffee-logo {
-    position: fixed;
-    bottom: 15px;
-    right: 24px;
+    position: absolute;
+    bottom: -150px;
+    right: 40%;
     z-index: 1000;
-    height: 180px;
-    width: 155px;
+    height: 220px;
+    width: 180px;
 }
 .name-style, #thank-you {
     font-family: 'Bilbo Swash Caps';

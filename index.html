@@ -11,7 +11,7 @@
 
 <body class="container shadow-lg">
 
-    <img src="../coffee-project/coffee-images/logo.png" alt='logo' id="coffee-logo"/>
+<!--    <img src="../coffee-project/coffee-images/logo.png" alt='logo' id="coffee-logo"/>-->
 
 <div class="container mt-4 p-3 col-10" id="outside-border"> <!-- Container to hold everything, separate from body -->
         <div class="container my-2 mx-auto row d-flex justify-content-center text-center"> <!-- Header row -->
@@ -26,10 +26,10 @@
             <div class="row m-.5 mt-3 d-flex justify-content-center p-2">
                 <form class="form-inline">
 
-                    <label for="roast-selection">Roast</label>
+<!--                    <label for="roast-selection">Roast</label>-->
 
-                        <select id="roast-selection">
-                            <option>all</option>
+                        <select id="roast-selection" class="form-control w-100">
+                            <option>Roast Type (All)</option>
                             <option>light</option>
                             <option>medium</option>
                             <option>dark</option>
@@ -42,7 +42,7 @@
 <!--                    </div>-->
 
 <!--                    <input id="submit" type="submit" class="w-100"/>-->
-                    <button type="button" id="submit" class="btn btn-light w-100">Search</button>
+                    <button type="button" id="submit" class="btn btn-warning w-100">Search</button>
                 </form>
             </div>
 
@@ -52,19 +52,25 @@
         </div>
         <div class="row m-.5 d-flex justify-content-center p-2">
             <form class="form-inline" id="newForm">
-                <div class="my-1">
-                    <label for="new-roast">Add a Roast
-                        <select id="new-roast">
+<!--                <div class="my-1">-->
+<!--                    <label for="new-roast">Add a Roast-->
+<!--                        <select id="new-roast">-->
+<!--                            <option>light</option>-->
+<!--                            <option>medium</option>-->
+<!--                            <option>dark</option>-->
+<!--                        </select>-->
+                        <select id="new-roast" class="form-control w-100">
+                            <option>Add Roast Type</option>
                             <option>light</option>
                             <option>medium</option>
                             <option>dark</option>
                         </select>
-                    </label>
-                </div>
+<!--                    </label>-->
+<!--                </div>-->
 
                 <input type="search" placeholder="Add Name..." id="new-name" class="form-control w-100 my-2">
 
-                <button type="button" id="submit-new" class="btn btn-light w-100">Search</button>
+                <button type="button" id="submit-new" class="btn btn-warning w-100">Search</button>
 
 <!--                <div class="my-2">-->
 <!--                    <label for="new-name">Coffee Name-->
@@ -96,7 +102,7 @@
 
     <!--start footer section -->
     <div class="container row m-0 p-0">
-        <div class="column d-flex justify-content-end mt-2 mr-5 w-100">
+        <div class="column d-flex justify-content-end mt-2 w-100">
         <span class="d-flex align-items-center mr-2" id="thank-you">Cheers to the best coffee house in San Diego!</span>
         <div class="d-flex align-items-center" id="all-logos">
             <!--Facebook Logo from Bootstrap-->
@@ -117,6 +123,10 @@
         <!-- These are bundles of JS plugins and extra css to accommodate nav tab functionality-->
         <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF" crossorigin="anonymous"></script>
+
+
+    <img src="../coffee-project/coffee-images/logo.png" alt='logo' id="coffee-logo" class="d-flex text-center"/>
+</div>
 
     <script src="../coffee-project/main.js"></script>
 

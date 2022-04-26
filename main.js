@@ -28,7 +28,7 @@ function updateCoffees(e) {
     coffees.forEach(function (coffee) {
         if (coffee.name.toUpperCase().indexOf(selectedName.toUpperCase()) > -1) {
             filteredCoffees.push(coffee);
-            if(coffee.roast !== selectedRoast && selectedRoast !== 'all') {
+            if(coffee.roast !== selectedRoast && selectedRoast !== 'Roast Type (All)') {
                 filteredCoffees.splice(filteredCoffees.indexOf(coffee), 1);
             }
         }
