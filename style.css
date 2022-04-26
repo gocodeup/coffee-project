@@ -17,8 +17,9 @@ td, th {
     background-size: cover;
 }
 body{
-    background-color: black;
-    color: white;
+    opacity: 0.91;
+    background-image: url('../coffee-project/coffee-images/coffee-wallpaper.jpg');
+    background-size: auto 100%;
 
 }
 #right-container {
@@ -30,7 +31,54 @@ body{
 table {
     margin-top: 0em;
 }
-
-.coffee > p {
-    display: inline-flex;
+#outside-border {
+    background-color: white;
+    border: 3px solid black;
+}
+#coffee-logo {
+    position: fixed;
+    bottom: 15px;
+    right: 24px;
+    z-index: 1000;
+    height: 180px;
+    width: 155px;
+}
+.name-style, #thank-you {
+    font-family: 'Bilbo Swash Caps';
+    font-size: 2.5em;
+}
+.roast-style, h1, h2 {
+    font-family: 'Angkor';
+}
+h1 {
+    color: #FBBF18;
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: black;
+    text-shadow: 2px 2px #000;
+}
+#add-coffee-head {
+    color: #FBBF18;
+    font-size: 1.7em;
+}
+#left-column {
+    background-color: black;
+    color: white;
+    border: 2px solid #FBBF18;
+}
+#right-column {
+    column-count: 2;
+    /*border: 2px solid #000;*/
+}
+#thank-you {
+    font-size: 1em;
+}
+.roast-style {
+    font-size: .7em;
+    color: darkgrey;
+}
+p {
+    margin: unset;
+}
+#outer-container {
+    padding: unset;
 }
