@@ -46,6 +46,15 @@ function updateCoffees(e) {
     });
 }
 
+function newButton(input){
+    if(input)
+
+        var coffeeObject= {
+            name:submitNew,
+            roast:roastType,
+
+        }
+
 // from http://www.ncausa.org/About-Coffee/Coffee-Roasts-Guide
 var coffees = [
     {id: 1, name: 'Light City', roast: 'light'}, //each object is called 'blend'
@@ -67,8 +76,9 @@ var coffees = [
 var tbody = document.querySelector('#coffees');
 var submitButton = document.querySelector('#submit');
 var roastSelection = document.querySelector('#roast-selection');
-
 var nameSelection = document.querySelector('#coffee-name');
+var submitNew = document.querySelector('#submit-new')
+var roastType = document.querySelector('#new-roast')
 
 
 tbody.innerHTML = renderCoffees(coffees);
