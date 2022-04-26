@@ -1,6 +1,6 @@
 "use strict"
 
-
+// changes tbody text to read out coffee blends
 function renderCoffee(coffee) {
     var html = '<div class="coffee">';
 //     html += '<td>' + coffee.id + '</td>';
@@ -11,6 +11,7 @@ function renderCoffee(coffee) {
     return html;
 }
 
+//loops through each blend to add new html for each one to print
 function renderCoffees(coffees) {
     var html = '';
     coffees.forEach(function(blend) {
@@ -44,16 +45,6 @@ function updateCoffees(e) {
         tbody.innerHTML = renderCoffees(filteredCoffees);
     });
 }
-// function asuserTypes(coffeeName, userInput) {
-//
-//     for (var word of userInput) {
-//         if (coffeeName.indexOf(word)) {
-//             result =
-//         }
-//         return result;
-//     }
-// }
-
 
 // from http://www.ncausa.org/About-Coffee/Coffee-Roasts-Guide
 var coffees = [
