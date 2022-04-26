@@ -24,7 +24,7 @@
     <!-- Left column starts here for filtering coffee blends-->
         <div class="container col-4 p-3 shadow-lg" id="left-column">
             <div class="row m-.5 mt-3 d-flex justify-content-center p-2">
-                <form>
+                <form class="form-inline">
 
                     <label for="roast-selection">Roast</label>
 
@@ -35,13 +35,14 @@
                             <option>dark</option>
                         </select>
 <!--                    </label>-->
-                    <div class="my-2">
-                        <label for="coffee-name">Coffee Name
-                            <input type="text" placeholder="Search..." id="coffee-name">
-                        </label>
-                    </div>
+<!--                    <div class="my-2">-->
+<!--                        <label for="coffee-name">Coffee Name</label>-->
+                            <input type="search" placeholder="Coffee Name" id="coffee-name" class="form-control w-100 my-2">
+<!--                        </label>-->
+<!--                    </div>-->
 
-                    <input id="submit" type="submit" class="w-100"/>
+<!--                    <input id="submit" type="submit" class="w-100"/>-->
+                    <button type="button" id="submit" class="btn btn-light w-100">Search</button>
                 </form>
             </div>
 
@@ -50,9 +51,9 @@
             <h2 id="add-coffee-head">ADD A COFFEE</h2>
         </div>
         <div class="row m-.5 d-flex justify-content-center p-2">
-            <form id="newForm">
+            <form class="form-inline" id="newForm">
                 <div class="my-1">
-                    <label for="new-roast">Roast
+                    <label for="new-roast">Add a Roast
                         <select id="new-roast">
                             <option>light</option>
                             <option>medium</option>
@@ -60,14 +61,20 @@
                         </select>
                     </label>
                 </div>
-                <div class="my-2">
-                    <label for="new-name">Coffee Name
-                        <input type="text" placeholder="Search..." id="new-name">
-                    </label>
-                </div>
 
-                <input id="submit-new" type="submit" class="w-100"/>
-            </form>
+                <input type="search" placeholder="Add Name..." id="new-name" class="form-control w-100 my-2">
+
+                <button type="button" id="submit-new" class="btn btn-light w-100">Search</button>
+
+<!--                <div class="my-2">-->
+<!--                    <label for="new-name">Coffee Name-->
+<!--                        <input type="text" placeholder="Add me..." id="new-name">-->
+<!--                    </label>-->
+<!--                </div>-->
+
+<!--&lt;!&ndash;                <input id="submit-new" type="submit" class="w-100"/>&ndash;&gt;-->
+<!--                <button type="button" id="submit-new" class="btn btn-light w-100">Add me!</button>-->
+<!--            </form>-->
         </div> <!-- end of add a coffee form -->
 
 </div> <!-- End of left column container -->
