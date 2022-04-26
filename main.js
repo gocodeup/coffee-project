@@ -4,7 +4,7 @@
 function renderCoffee(coffee) {
     var html = '<div class="coffee d-flex align-items-center">';
 //     html += '<td>' + coffee.id + '</td>';
-    html += '<h2 class="name-style my-1 mr-2">' + coffee.name + '</h2>';
+    html += '<h2 class="name-style my-2 mr-2">' + coffee.name + '</h2>';
     html += '<p class="roast-style align-self-end mb-2">' + coffee.roast.toUpperCase() + '</p>';
     html += '</div>';
 
@@ -28,6 +28,9 @@ function updateCoffees(e) {
     coffees.forEach(function (coffee) {
         if (coffee.name.toUpperCase().indexOf(selectedName.toUpperCase()) > -1) {
             filteredCoffees.push(coffee);
+            if(coffee.roast !== selectedRoast && selectedRoast !== 'all') {
+                filteredCoffees.splice(filteredCoffees.indexOf(coffee), 1);
+            }
         }
     });
     tbody.innerHTML = renderCoffees(filteredCoffees);

@@ -19,7 +19,7 @@ td, th {
 body{
     opacity: 0.91;
     background-image: url('../coffee-project/coffee-images/coffee-wallpaper.jpg');
-    background-size: auto 100%;
+    background-size: 50vh;
 
 }
 #right-container {
