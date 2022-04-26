@@ -27,15 +27,10 @@ body{
 }
 .coffee {
     column-count: 2;
-
 }
 table {
     margin-top: 0em;
 }
-
-/*.coffee > p {*/
-/*    display: inline-flex;*/
-/*}*/
 #outside-border {
     background-color: white;
     border: 3px solid black;
@@ -50,7 +45,7 @@ table {
 }
 .name-style, #thank-you {
     font-family: 'Bilbo Swash Caps';
-    font-size: 2em;
+    font-size: 2.5em;
 }
 .roast-style, h1, h2 {
     font-family: 'Angkor';

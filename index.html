@@ -23,42 +23,48 @@
 
     <!-- Left column starts here for filtering coffee blends-->
         <div class="container col-4 p-3 shadow" id="left-column">
-            <div class="row m-.5 d-flex justify-content-center p-3">
+            <div class="row m-.5 mt-3 d-flex justify-content-center p-2">
                 <form>
-                    <label for="roast-selection">Roast
+
+                    <label for="roast-selection">Roast</label>
+
                         <select id="roast-selection">
                             <option>all</option>
                             <option>light</option>
                             <option>medium</option>
                             <option>dark</option>
                         </select>
-                    </label>
-
-                    <label for="coffee-name">Coffee Name
-                        <input type="text" placeholder="Search..." id="coffee-name" onkeyup="updateCoffees(e)">
-                    </label>
+<!--                    </label>-->
+                    <div class="my-2">
+                        <label for="coffee-name">Coffee Name
+                            <input type="text" placeholder="Search..." id="coffee-name">
+                        </label>
+                    </div>
 
                     <input id="submit" type="submit" class="w-100"/>
                 </form>
             </div>
 
         <!-- Add a Coffee Form Starts jere -->
-        <div class="row m-.5 mt-3 d-flex justify-content-center">
+        <div class="row m-.5 mt-5 d-flex justify-content-center">
             <h2 id="add-coffee-head">ADD A COFFEE</h2>
         </div>
-        <div class="row m-.5 d-flex justify-content-center p-3">
+        <div class="row m-.5 d-flex justify-content-center p-2">
             <form>
-                <label for="new-roast">Roast
-                    <select id="new-roast">
-                        <option>light</option>
-                        <option>medium</option>
-                        <option>dark</option>
-                    </select>
-                </label>
-
+                <div class="my-1">
+                    <label for="new-roast">Roast
+                        <select id="new-roast">
+                            <option>light</option>
+                            <option>medium</option>
+                            <option>dark</option>
+                        </select>
+                    </label>
+                </div>
+                <div class="my-2">
                     <label for="new-name">Coffee Name
                         <input type="text" placeholder="Search..." id="new-name">
                     </label>
+                </div>
 
                 <input id="submit-new" type="submit" class="w-100"/>
             </form>
