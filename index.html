@@ -104,29 +104,31 @@
             </div>
         </div><!--    END OF SELECT YOUR COFFEE-->
 
-        <!--    BEGINNING OF SELECT YOUR COFFEE-->
-        <!--    BEGINNING OF SELECT YOUR COFFEE-->
-        <div class="coffee-select-container">
-            <div class="sub-heading sub-heading2"><h1>Add a Coffee</h1></div>
-            <div class="label-input">
-                <label for="roast-selection1">Roast</label>
-                <select id="roast-selection1" class="form-control">\
-                    <option>all</option>
-                    <option>light</option>
-                    <option>medium</option>
-                    <option>dark</option>
-                </select>
-            </div>
 
-            <div class="label-input">
-                <label for="">Coffee Name</label>
-                <input type="" class="roast-input" name="" access="" id="">
+        <!--    BEGINNING OF ADD YOUR COFFEE-->
+        <form>
+            <div class="coffee-select-container">
+                <div class="sub-heading"><h1>Add your Coffee</h1></div>
+                <div class="label-input">
+                    <label for="roast-selection1">Roast</label>
+                    <select id="roast-selection1" class="form-control">
+                        <!-- <option value="all">all</option> -->
+                        <option value="light">light</option>
+                        <option value="medium">medium</option>
+                        <option value="dark">dark</option>
+                    </select>
+                </div>
+                <div class="label-input">
+                    <label>Coffee Name</label>
+                    <!-- main.js > search -->
+                    <input type="search" class="roast-input" id="searchCoffee1">
+                </div>
+                <div class="button-t1">
+                    <button id="submit1" type="submit" role="button">Submit</button><!-- main.js > submitButton -->
+                </div>
             </div>
-            <div class="button-t1">
-                <button role="button">Submit</button>
-            </div>
-        </div><!--    END OF SELECT YOUR COFFEE-->
-        <!--    END OF SELECT YOUR COFFEE-->
+        </form>
+        <!--    END OF ADD YOUR COFFEE-->
     </div>
     <!--END OF PICK AND ADD CONTAINER-->
     <div class="social-icons">

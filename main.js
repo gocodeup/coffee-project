@@ -1,44 +1,3 @@
-"use strict"
-
-
-//receives output from renderCoffees to be displayed on the screen accordingly.
-function renderCoffee(coffee) {
-    var html = '<div class="coffee col-md-6 d-flex mb-3 p-2">';
-    html += '<img src=' + coffee.imgURL + ' class="image" height="30px" mr-2 />';
-    html += '<h3 id="name" class="ml-2">' + coffee.name + '</h3>';
-    html += '<p>' + coffee.roast + '</p>';
-    html += '</div>';
-
-    return html;
-}
-
-//receives filteredCoffees list from searchCoffees
-function renderCoffees(coffees) { //each input from searchCoffees.
-    var html = '';
-    for(var i = coffees.length - 1; i >= 0; i--) { //we then create a loop through and as it finds it, it passes one by one the individual elemetns of the array
-        html += renderCoffee(coffees[i]);
-    }
-    return html;
-}
-
-
-//searches on every letter input on key press.  Will store every matched coffee in filteredCoffees array.
-function searchCoffees(e) {
-    e.preventDefault(); // don't submit the form, we just want to update the data
-    let coffeeName = search.value; //this value is coming from the input
-    console.log(coffeeName);
-    var filteredCoffees = [];
-    coffees.forEach(function(coffee) { //will run through the 14 coffee names
-        if (coffee.name.toUpperCase().indexOf(coffeeName.toUpperCase()) > -1) { //checking for the matching value from the input value then push it to filteredCoffees. We will then pass to rendered coffeees
-            filteredCoffees.push(coffee);
-        }
-    });
-    console.log(filteredCoffees);
-    tbody.innerHTML = renderCoffees(filteredCoffees)
-}
-
-
-
 // from http://www.ncausa.org/About-Coffee/Coffee-Roasts-Guide
 var coffees = [
     {id: 1, name: 'Light City', roast: 'light', imgURL: "img/lightcity.png"},
@@ -57,34 +16,85 @@ var coffees = [
     {id: 14, name: 'French', roast: 'dark', imgURL: "img/french.png"},
 ];
 
+// ************************************************
+// START RENDER COFFEE LIST (THE DEFAULT VIEW)
+// ************************************************
 var tbody = document.querySelector('#coffees');
-var submitButton = document.querySelector('#submit');
-var roastSelection = document.querySelector('#roast-selection');
-let search = document.querySelector("#searchCoffee");
 tbody.innerHTML = renderCoffees(coffees);
-
-submitButton.addEventListener('click', searchCoffees);
-
-// event listener that takes in a value. Updates roast selection from drop down menu. (on page load)
+function renderCoffees(coffees) {
+    var html = '';
+    for(var i = coffees.length - 1; i >= 0; i--) {
+        html += renderCoffee(coffees[i]);
+    }
+    return html;
+}
+function renderCoffee(coffee) {
+    var html = '<div class="coffee col-md-6 d-flex mb-3 p-2">';
+    html += '<img src=' + coffee.imgURL + ' class="image" height="30px" mr-2 />';
+    html += '<h3 id="name" class="ml-2">' + coffee.name + '</h3>';
+    html += '<p>' + coffee.roast + '</p>';
+    html += '</div>';
+    return html;
+}
+// ************************************************
+// END RENDER COFFEE LIST (THE DEFAULT VIEW)
+// ************************************************
+// ************************************************
+// START UPDATE COFFEE LIST (OPTION DROP-DOWN INPUT)
+// ************************************************
+var roastSelection = document.querySelector('#roast-selection');
 roastSelection.addEventListener("change", function() {
     let selectedRoast = roastSelection.value;
+    console.log(selectedRoast)
+    console.log(coffees)
     let html = '';
     coffees.forEach(coffee => {
         if (selectedRoast === coffee.roast) {
-            console.log(renderCoffee(coffee));
             tbody.innerHTML = html += renderCoffee(coffee);
-
         } else if (selectedRoast === "all") {
             tbody.innerHTML = renderCoffees(coffees);
         }
     })
 })
-
+// ************************************************
+// END UPDATE COFFEE LIST (OPTION DROP-DOWN INPUT)
+// ************************************************
+// ************************************************
+// START UPDATE COFFEE LIST (USER INPUT)
+// ************************************************
+let search = document.querySelector("#searchCoffee");
 search.addEventListener('keyup', searchCoffees)
-
-//first type letter into bar, then keyup kicks in the searchCoffees function (which grabs that letter for example
-
-
-
-//ADD TO COFFEES
-
+function searchCoffees(e) {
+    // e.preventDefault(); //Expected behavior achieved without preventDefault()
+    let coffeeName = search.value;
+    var filteredCoffees = [];
+    coffees.forEach(function(coffee) {
+        if (coffee.name.toUpperCase().indexOf(coffeeName.toUpperCase()) > -1) {filteredCoffees.push(coffee);
+        }
+    });
+    tbody.innerHTML = renderCoffees(filteredCoffees)
+}
+// ************************************************
+// END UPDATE COFFEE LIST (USER INPUT)
+// ************************************************
+// ************************************************
+// START ADD COFFEE TO COFFEE LIST (USER INPUT)
+// ************************************************
+const addCoffee = (e) => {
+    e.preventDefault(); //stops the form from submitting
+    let userCoffee = {
+        //id: document.querySelector(),//we need to reference the id?
+        name: document.querySelector("#searchCoffee1").value,
+        roast: document.querySelector('#roast-selection1').value
+    }
+    coffees.push(userCoffee);
+    console.log('userCoffee: ', userCoffee)
+    document.forms[0].reset();// to clear the form for next entries
+    tbody.innerHTML = renderCoffees(coffees)
+    console.log('coffees: ', coffees)
+}
+var submitButton = document.querySelector('#submit1');
+submitButton.addEventListener('click', addCoffee);
+// ************************************************
+// END ADD COFFEE TO COFFEE LIST (USER INPUT)
+// ************************************************
