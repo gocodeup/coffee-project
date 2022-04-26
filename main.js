@@ -2,10 +2,10 @@
 
 // changes tbody text to read out coffee blends
 function renderCoffee(coffee) {
-    var html = '<div class="coffee d-flex align-items-baseline">';
+    var html = '<div class="coffee d-flex align-items-center">';
 //     html += '<td>' + coffee.id + '</td>';
-    html += '<h2 id="name-style">' + coffee.name + '</h2>';
-    html += '<p id="roast-style" >' + coffee.roast.toUpperCase() + '</p>';
+    html += '<h2 class="name-style my-1 mr-2">' + coffee.name + '</h2>';
+    html += '<p class="roast-style align-self-end mb-2">' + coffee.roast.toUpperCase() + '</p>';
     html += '</div>';
 
     return html;
