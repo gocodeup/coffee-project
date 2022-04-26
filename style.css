@@ -8,15 +8,9 @@
 /*    padding: 5px 10px;*/
 /*}*/
 
-.coffee-header {
-    text-align: center;
-}
-
-.coffee-roast-form {
-    text-align: center;
-}
-
-.coffee-image {
-    height: 300px;
-    width: 300px;
+.jumbotron {
+    background-image: url("https://images.pexels.com/photos/2316554/pexels-photo-2316554.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
 }
