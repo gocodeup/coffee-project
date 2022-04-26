@@ -14,11 +14,14 @@
 <header>
     <div class="jumbotron jumbotron-fluid">
         <div class="container heading">
-            <h1 class="display-4 text-center">Coffee</h1>
+            <h1 class="display-4 text-center" style="padding-bottom: 20px">Fancy Coffee Co.</h1>
             <p class="lead"></p>
         </div>
+        <audio src="./images/warmingSun.mp3"  controls="" style="height: 20px; margin: auto"></audio>
     </div>
 </header>
+<div class="align-center">
+</div>
 
 <div class="container">
     <div class="row">
@@ -30,9 +33,14 @@
         </div>
 
         <div class="col-4 text-center">
+            <video autoplay="" muted="" loop="" width="100%" height="auto" controls>
+                <source src="./images/videoCoffee.mp4" type="video/mp4">
+                <source src="./images/videoCoffee.mp4" type="video/ogg">
+                Your browser does not support the video tag.
+            </video>
             <form>
                 <label for="roast-selection" style="font-family: 'Source Serif Pro', serif; font-weight: bold; font-size: 23px">Filter by Roast:</label>
-                <select id="roast-selection" style="font-family: 'Source Serif Pro', serif">
+                <select class="custom-select my-1 mr-sm-2 custom" id="roast-selection" style="font-family: 'Source Serif Pro', serif">
                     <option>All Roasts</option>
                     <option>Light</option>
                     <option>Medium</option>
@@ -41,7 +49,7 @@
             </form>
             <form>
                 <label for="coffee-selection" style="font-family: 'Source Serif Pro', serif; font-weight: bold; font-size: 23px">Search for a Coffee:</label>
-                <input id="coffee-selection" name="coffee-selection" type="text" style="font-family: 'Source Serif Pro', serif">
+                <input id="coffee-selection" class="form-control custom"  name="coffee-selection" type="text" style="font-family: 'Source Serif Pro', serif">
             </form>
             <div>
                 <input class="btn btn-dark btn-block" id="submit" type="submit" style="margin-bottom: 15px"/>

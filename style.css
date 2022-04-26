@@ -14,3 +14,50 @@
     background-size: cover;
     background-position: center;
 }
+
+h1 {
+    color: black;
+    font-weight: bold;
+    font-family: 'Dancing Script', cursive;
+}
+
+.heading {
+    -moz-text-decoration-color: black;
+    /*display: flex;*/
+    display: block;
+    justify-content: center;
+    background-color: antiquewhite;
+    opacity: 0.6;
+    width: 100%;
+}
+body {
+    background-color: ivory;
+}
+
+.row {
+    border: 1px solid black;
+}
+
+.text-center{
+    padding-top: 15px;
+}
+
+#roast-selection {
+    display: inline-block;
+    width: 100%;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+}
+
+#coffee-selection {
+    display: inline-block;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.col-4 {
+    background-color: #b29684;
+    border-left: 1px solid black;
+}
+
+
