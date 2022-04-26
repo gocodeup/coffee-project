@@ -12,10 +12,11 @@
     text-align: center;
 }
 
-hr {
-    border: 3px solid saddlebrown;
-}
-
 .coffee-roast-form {
     text-align: center;
+}
+
+.coffee-image {
+    height: 300px;
+    width: 300px;
 }

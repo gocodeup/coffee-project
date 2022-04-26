@@ -9,27 +9,24 @@
 <body>
 
 <header>
-    <div class="container">
-        <div class="row">
-            <div class="col-12">
-                <h1 class="coffee-header">Coffee!</h1>
-            </div>
+    <div class="jumbotron jumbotron-fluid">
+        <div class="container">
+            <h1 class="display-4 coffee-header">Coffee</h1>
+            <p class="lead"></p>
         </div>
     </div>
 </header>
 
-<hr>
-
 <div class="container">
     <div class="row">
-        <div class="col">
+        <div class="col-8 text-center">
             <div id="coffees" class="coffee">
                 <h1>Coffee Name</h1>
                 <p>Coffee Roast</p>
             </div>
         </div>
 
-        <div class="col">
+        <div class="col-4 text-center">
             <form>
                 <label for="roast-selection">Filter by Roast:</label>
                 <select id="roast-selection">
@@ -38,12 +35,14 @@
                     <option>Medium</option>
                     <option>Dark</option>
                 </select>
-                <input class="btn btn-primary" id="submit" type="submit" />
             </form>
             <form>
                 <label for="coffee-selection">Search for a Coffee:</label>
                 <input id="coffee-selection" name="coffee-selection" type="text">
             </form>
+            <div>
+                <input class="btn btn-dark btn-block" id="submit" type="submit" />
+            </div>
         </div>
     </div>
 </div>
