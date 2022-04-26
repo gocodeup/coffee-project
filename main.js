@@ -74,3 +74,5 @@ bodyMainDiv.innerHTML = renderCoffees(coffees);
 roastSelection.addEventListener('change', updateCoffeesByRoast);
 // submitButton.addEventListener('click', updateCoffeesByRoast);
 coffeeSearch.addEventListener('keyup', updateCoffeesByName);
+
+// Comment
