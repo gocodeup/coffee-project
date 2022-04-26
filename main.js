@@ -23,29 +23,16 @@ function renderCoffees(coffees) {
 function updateCoffees(e) {
     e.preventDefault(); // don't submit the form, we just want to update the data
     var selectedRoast = roastSelection.value;
-    var selectedName = nameSelection.value;
+    var selectedName = nameSelection.value; //array of values from each blend's object
     var filteredCoffees = [];
     coffees.forEach(function (coffee) {
-            if (selectedRoast === 'all' && selectedName === '') {
-                filteredCoffees.push(coffee);
-                if (coffee.name !== selectedName && selectedName !== '') {
-                    filteredCoffees.splice(filteredCoffees.indexOf(coffee), 1);
-                }
-            } else if (selectedRoast === 'all' && selectedName !== '') {
-                filteredCoffees.push(coffee);
-                if (coffee.name !== selectedName) {
-                    filteredCoffees.splice(filteredCoffees.indexOf(coffee), 1);
-                }
-            } else if (coffee.roast === selectedRoast) {
-                filteredCoffees.push(coffee);
-                if (coffee.name !== selectedName && selectedName !== '') {
-                    filteredCoffees.splice(filteredCoffees.indexOf(coffee), 1);
-                }
-            }
-        tbody.innerHTML = renderCoffees(filteredCoffees);
+        if (coffee.name.toUpperCase().indexOf(selectedName.toUpperCase()) > -1) {
+            filteredCoffees.push(coffee);
+        }
     });
+    tbody.innerHTML = renderCoffees(filteredCoffees);
 }
-
+//  Submit form functionality //
 function newButton(e) {
     e.preventDefault();
     var coffeeObject = {
