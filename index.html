@@ -4,6 +4,13 @@
     <meta charset="UTF-8">
     <title></title>
     <link rel="stylesheet" href="style.css">
+    <img style="background-image: url('coffee-background.jpeg');">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bungee+Inline&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&display=swap" rel="stylesheet">
 </head>
 <body>
 <div class="heading">
@@ -24,30 +31,34 @@
                 <option value="dark">Dark</option>
             </select>
             <input id="select-roast" type="search" id="search-bar" class="search-bar" placeholder="Search By Name"/>
-            
+            <input id="submit-1" type="submit" class="submit-button" />
         </form>
         <br>
     </div>
-    <h1 class="add-coffee-head"><em>ADD COFFEE</em></h1>
-    <form class="add-coffee-container">
-        <label class="roast-label input-label">Roast</label>
-        <select id="roastSelect" class="roast-select">
-            <option value="light">Light</option>
-            <option value="medium">Medium</option>
-            <option value="dark">Dark</option>
-        </select>
-        <label class="coffee-label-add input-label">Add Name</label>
-            <input  id="addBar" type="text" placeholder="Enter new coffee"/>   
-            <div class="submit"><button class="submit-button" type="submit">Submit</button></div>
-    </form>
+    <div class="heading">
+        <h1>Add Coffee</h1>
     </div>
+
+    <div class="container">
+        <form class="select-container">
+            <label class ="roast-label input-label">Roast</label>
+            <select id="roastSelect">
+                <option value="light">Light</option>
+                <option value="medium">Medium</option>
+                <option value="dark">Dark</option>
+            </select>
+            <input id="add-coffee" type="search" class="search-bar" placeholder="Enter New Coffee"/>
+            <input id="submit-2" type="submit" class="submit-button" />
+        </form>
+        <br>
+    </div>
+
     <div id="coffee-list">
         <div id="coffee-name"></div>
         <div id="coffee-roast"></div>
     </div>
 </div>
-    
 
-    <script src="main.js"></script>
+<script src="main.js"></script>
 </body>
 </html>

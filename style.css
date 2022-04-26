@@ -1,9 +1,69 @@
-table {
-    border-collapse: collapse;
-    margin: 15px 0;
+body {
+    margin: auto;
+    background-image: url('coffee-background.jpeg');
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
 }
 
-td, th {
-    border: 1px solid black;
-    padding: 5px 10px;
+h1{
+    font-family: 'Bungee Inline', cursive;
+    font-weight: bold;
+    text-align: center;
+    font-size: 80px;
 }
+
+.container {
+    text-align: center;
+    font-family: 'Bungee Inline', cursive;
+}
+
+.input-label{
+    color: black;
+    margin-right: .7em;
+}
+
+.container{
+    margin: 0 auto;
+    background-color: orange;
+    opacity: 90%;
+    border-radius: 10px;
+    border: 5px solid;
+    box-shadow: 8px 8px;
+    position: relative;
+    width: 90%;
+    height: 100%;
+    text-align: center;
+}
+.select-container {
+    position: relative;
+    margin: auto;
+    top: 10px;
+    justify-content: center;
+}
+
+.submit-button{
+    display: inline-block;
+    background-color: blanchedalmond;
+    color: black;
+    border: 1px solid;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-top: .2em;
+    position: absolute;
+}
+
+#coffee-list{
+    background: blanchedalmond;
+    border-radius: 10px;
+    border: 5px solid;
+    box-shadow: 8px 8px;
+    position: relative;
+    margin: 0 auto;
+    margin-top: 2rem;
+    font-family: 'Amatic SC', cursive;
+    width: 90%;
+    height: 60vh;
+    overflow: scroll;
+}
+
