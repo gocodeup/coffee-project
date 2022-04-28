@@ -1,12 +1,9 @@
-* {
-    margin: 0;
-    padding: 0;
-}
 
 body {
     box-sizing: border-box;
-    background-image: url("Img/pexels-kaboompics-com-6347.jpg");
-    background-size: cover;
+    background-image: url("Img/Coffee-Florals.jpg");
+   background-size: cover;
+    background-repeat: no-repeat;
 }
 
 table {
@@ -14,23 +11,35 @@ table {
     margin: 15px 0;
 }
 
-td, th {
-    border: 1px solid black;
-    padding: 5px 10px;
-}
-
 header{
     display: flex;
     flex-direction: column;
+    font-size: 90px;
+    background-color: floralwhite;
+    color: rosybrown;
     align-items: center;
 }
-h6{
+
+.form{
+    padding: 30px;
+    border: double black;
+    background-color: floralwhite;
+    margin: 40px;
+    color: black;
     display: flex;
-    padding-left: 150px;
+    align-items: center;
+    justify-content: space-evenly;
 }
 
-th {
-    display: none;
+#coffees{
+    color: white;
+    border: double floralwhite;
+    padding: 20px;
+    margin:40px;
+    background-color: rosybrown;
+
 }
+
+
 
 
