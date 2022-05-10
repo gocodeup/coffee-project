@@ -20,41 +20,36 @@
         <form>
             <h5 id="roast-heading" class="m-0">Roast</h5>
             <label for="roast-selection"></label>
-            <select class="w-100 mb-4 " style="height: 35px" id="roast-selection">
+            <select class="w-100 mb-4 border rounded border-3" style="height: 35px" id="roast-selection">
+                <option>all</option>
                 <option>light</option>
                 <option>medium</option>
                 <option>dark</option>
+
             </select>
             <h5>Coffee Name</h5>
-            <input class="w-100 mb-4" type="text">
+            <input class="w-100 mb-4 border rounded border-3 " type="text">
             <input class="d-block p-2 text-white w-100 rounded border border-none" style="background: cornflowerblue" id="submit" type="submit"/>
         </form>
         <hr class="color-lightgrey">
         <h1 class="d-flex justify-content-center">Add A Coffee</h1>
         <form>
-            <h5 id="roast-heading" class="m-0">Roast</h5>
+            <h5 id="roast" id="roast-heading" class="m-0">Roast</h5>
             <label for="roast-selection"></label>
-            <select class="w-100 mb-4 " style="height: 35px" id="roast-selection">
+            <select class="w-100 mb-4 border rounded border-3" style="height: 35px" id="roast-selection" >
                 <option>light</option>
                 <option>medium</option>
                 <option>dark</option>
             </select>
             <h5>Name</h5>
-            <input class="w-100 mb-4" type="text">
+            <input class="w-100 mb-4 border rounded border-3 " type="text">
             <input class="d-block p-2 text-white w-100 rounded border border-none" style="background: cornflowerblue" id="submit" type="submit"/>
         </form>
     </div>
     <div class="container">
-        <table>
-            <thead>
-            <tr>
-                <th>ID</th>
-                <th>NAME</th>
-                <th>ROAST</th>
-            </tr>
-            </thead>
-            <tbody id="coffees"></tbody>
-        </table>
+                <h3>NAME</h3>
+                <h3>ROAST</h3>
+        <h4 id="coffees"></h4>
     </div>
 </div>
 <script src="main.js"></script>
