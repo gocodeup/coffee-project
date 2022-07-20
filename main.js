@@ -1,7 +1,7 @@
 "use strict"
 
 function renderCoffee(coffee) {
-    var html = '<div class="coffee">';
+    let html = '<div class="coffee">';
     html += '<h1>' + coffee.name + '</h1>';
     html += '<p>' + coffee.roast + '</p>';
     html += '</div>';
@@ -10,8 +10,8 @@ function renderCoffee(coffee) {
 }
 
 function renderCoffees(coffees) {
-    var html = '';
-    for(var i = coffees.length - 1; i >= 0; i--) {
+    let html = '';
+    for(let i = coffees.length - 1; i >= 0; i--) {
         html += renderCoffee(coffees[i]);
     }
     return html;
@@ -19,8 +19,8 @@ function renderCoffees(coffees) {
 
 function updateCoffeesByRoast(e) {
     e.preventDefault(); // don't submit the form, we just want to update the data
-    var selectedRoast = roastSelection.value;
-    var filteredCoffeeRoasts = [];
+    let selectedRoast = roastSelection.value;
+    let filteredCoffeeRoasts = [];
     coffees.forEach(function(coffee) {
         if (coffee.roast === selectedRoast) {
             filteredCoffeeRoasts.push(coffee);
@@ -32,8 +32,8 @@ function updateCoffeesByRoast(e) {
 }
 
 function updateCoffeesByName() {
-    var selectedCoffee = coffeeSearch.value;
-    var filteredCoffeeNames = [];
+    let selectedCoffee = coffeeSearch.value;
+    let filteredCoffeeNames = [];
     coffees.forEach(function(coffee) {
         if (coffee.name === selectedCoffee || coffee.name.startsWith(selectedCoffee) || coffeeSearch.value.toLowerCase() === coffee.name.toLowerCase() || coffee.name.toLowerCase().startsWith(selectedCoffee.toLowerCase()) || coffee.name.includes(selectedCoffee) || coffee.name.toLowerCase().includes(selectedCoffee.toLowerCase())) {
             filteredCoffeeNames.push(coffee);
@@ -43,7 +43,7 @@ function updateCoffeesByName() {
 }
 
 // from http://www.ncausa.org/About-Coffee/Coffee-Roasts-Guide
-var coffees = [
+let coffees = [
     {id: 1, name: 'Light City', roast: 'Light'},
     {id: 2, name: 'Half City', roast: 'Light'},
     {id: 3, name: 'Cinnamon', roast: 'Light'},
@@ -64,15 +64,13 @@ coffees.sort((a, b) => {
     return (b.id - a.id);
 });
 
-var bodyMainDiv = document.querySelector('#coffees');
+let bodyMainDiv = document.querySelector('#coffees');
 // var submitButton = document.querySelector('#submit');
-var roastSelection = document.querySelector('#roast-selection');
-var coffeeSearch = document.querySelector('#coffee-selection');
+let roastSelection = document.querySelector('#roast-selection');
+let coffeeSearch = document.querySelector('#coffee-selection');
 
 bodyMainDiv.innerHTML = renderCoffees(coffees);
 
 roastSelection.addEventListener('change', updateCoffeesByRoast);
 // submitButton.addEventListener('click', updateCoffeesByRoast);
 coffeeSearch.addEventListener('keyup', updateCoffeesByName);
-
-// Comment
