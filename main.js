@@ -16,6 +16,18 @@ function renderCoffees(coffees) {
     }
     return htmlS;
 }
+function renderOpt(coffee) {
+    let html = `<option value="${coffee.name}">`;
+    return html;
+}
+function renderDatalistOpt(coffees) {
+    let htmlS = '';
+    for(let i = 0; i < coffees.length; i++) {
+        htmlS += renderOpt(coffees[i]);
+    }
+    return htmlS;
+}
+
 
 function updateCoffees(e) {
     e.preventDefault(); // don't submit the form, we just want to update the data
@@ -50,7 +62,9 @@ let coffees = [
 let tbody = document.querySelector('#coffees');
 let submitButton = document.querySelector('#submit');
 let roastSelection = document.querySelector('#roast-selection');
+let datalistOptions = document.querySelector('#datalistOptions');
 
 tbody.innerHTML = renderCoffees(coffees);
+datalistOptions.innerHTML = renderDatalistOpt(coffees);
 
 submitButton.addEventListener('click', updateCoffees);
