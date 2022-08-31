@@ -1,5 +1,7 @@
 body {
     /*display: flex;*/
+    margin-right: 5em;
+    margin-left: 5em;
 }
 table {
     border-collapse: collapse;
@@ -14,9 +16,9 @@ header {
     display: flex;
     border-bottom: 1px solid rgb(208, 203, 203,0.5);
     justify-content: center;
-    width: 90%;
+    width: 100%;
     /*margin-bottom: 1em;*/
-    margin: auto;
+    /*margin: auto;*/
 }
 .big-box {
     display: flex;
@@ -44,4 +46,23 @@ header {
 }
 .right-bottom-box {
 
+}
+.submit-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #3C88CB;
+    color: white;
+    width: 100%;
+    border-radius: 5px;
+    border-color: white;
+    height: 2.5em;
+    margin: 1em 0;
+}
+.form-formatting {
+    width: 99%;
+    border-radius: 5px;
+    border: 1px solid rgba(201, 196, 196, 0.5);
+    height: 2.5em;
+    margin: 1em 0;
 }
