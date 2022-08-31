@@ -17,8 +17,7 @@ header {
     border-bottom: 1px solid rgb(208, 203, 203,0.5);
     justify-content: center;
     width: 100%;
-    /*margin-bottom: 1em;*/
-    /*margin: auto;*/
+    margin-bottom: 2em;
 }
 .big-box {
     display: flex;
@@ -29,8 +28,31 @@ header {
 }
 .left-box {
     width: 50%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+.coffee-container {
+    width: 50%;
 
 }
+.coffee-display {
+    font-size: 2em;
+    color: black;
+    font-weight: bold;
+    margin-right: 0.5em;
+}
+.roast-display {
+    color: rgb(190, 190, 190, 0.7);
+    font-size: 1.2em;
+}
+
+
+
+
+
+
+
 .form1 {
 
 }
