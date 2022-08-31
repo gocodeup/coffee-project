@@ -24,7 +24,7 @@ header {
     display: flex;
 }
 .right-box {
-   width: 50%;
+    width: 50%;
     margin-top: 1em;
 }
 .left-box {
@@ -42,7 +42,7 @@ header {
     padding: 0;
 }
 .right-top-box {
-
+    border-bottom: 1px solid rgb(208, 203, 203,0.5);
 }
 .right-bottom-box {
 
@@ -57,7 +57,7 @@ header {
     border-radius: 5px;
     border-color: white;
     height: 2.5em;
-    margin: 1em 0;
+    margin: 1em 0 2em 0;
 }
 .form-formatting {
     width: 99%;
@@ -65,4 +65,7 @@ header {
     border: 1px solid rgba(201, 196, 196, 0.5);
     height: 2.5em;
     margin: 1em 0;
+}
+h1 {
+    text-align: center;
 }
