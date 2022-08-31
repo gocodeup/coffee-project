@@ -6,29 +6,61 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Coffee!</h1>
+    <header>
+        <h1>Coffee!</h1>
+    </header>
 
-    <form>
-        <label for="roast-selection"></label>
-        <select id="roast-selection">
-            <option>light</option>
-            <option>medium</option>
-            <option>dark</option>
-        </select>
-        <input id="submit" type="submit" />
-    </form>
+    <!--Main Section-->
 
-    <table>
-        <thead>
-            <tr>
-                <th>ID</th>
-                <th>NAME</th>
-                <th>ROAST</th>
-            </tr>
-        </thead>
-        <tbody id="coffees"></tbody>
-    </table>
+    <div class="container big-box">
 
+        <!--Left Box-->
+
+        <div class="left-box">
+            <table>
+                <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>NAME</th>
+                    <th>ROAST</th>
+                </tr>
+                </thead>
+                <tbody id="coffees"></tbody>
+            </table>
+        </div>
+
+        <!--Right Box-->
+
+        <div class="right-box">
+
+            <!--Right Top Box-->
+
+            <div class="right-top-box">
+            <!--Form 1-->
+                <p class="no-spacing"><strong>Roast</strong></p>
+                <form class="form1">
+                    <label for="roast-selection"></label>
+                    <select id="roast-selection">
+                        <option>light</option>
+                        <option>medium</option>
+                        <option>dark</option>
+                    </select>
+                    <input id="submit" type="submit"/>
+                </form>
+            </div>
+
+            <!--Right Bottom Box-->
+
+            <div class="right-bottom-box">
+
+                <!--Form 2-->
+
+                <form class="form2">
+
+                </form>
+            </div>
+        </div>
+    </div>
     <script src="main.js"></script>
 </body>
 </html>

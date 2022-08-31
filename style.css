@@ -1,3 +1,6 @@
+body {
+    /*display: flex;*/
+}
 table {
     border-collapse: collapse;
     margin: 15px 0;
@@ -6,4 +9,39 @@ table {
 td, th {
     border: 1px solid black;
     padding: 5px 10px;
+}
+header {
+    display: flex;
+    border-bottom: 1px solid rgb(208, 203, 203,0.5);
+    justify-content: center;
+    width: 90%;
+    /*margin-bottom: 1em;*/
+    margin: auto;
+}
+.big-box {
+    display: flex;
+}
+.right-box {
+   width: 50%;
+    margin-top: 1em;
+}
+.left-box {
+    width: 50%;
+
+}
+.form1 {
+
+}
+.form2 {
+    /*margin-top: 1em;*/
+}
+.no-spacing {
+    margin: 0;
+    padding: 0;
+}
+.right-top-box {
+
+}
+.right-bottom-box {
+
 }
