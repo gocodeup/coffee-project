@@ -1,5 +1,7 @@
 # Coffee Project
 
+[Coffee Project - NOMAD](https://htmlpreview.github.io/?https://github.com/evans-austin/coffee-project/blob/main/index.html)
+
 Congratulations! You have landed your first development job! You have inherited
 a project from Fancy Coffee Company&copy;, and they want you to make
 improvements to it.
