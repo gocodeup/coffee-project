@@ -42,10 +42,10 @@ function searchForCoffees(event) {
     var typedLetters = searchField.value;
     typedLetters = typedLetters.toLowerCase();
     for (let i = 0; i < coffees.length; i++) {
-        if (roastSearch.value === "all") {
-            newArray = coffees;
+        if (roastSearch.value === "all" && coffees[i].name.toLowerCase().includes(typedLetters)) {
+            newArray.push(coffees[i]);
         }
-        else if (coffees[i].roast === roastSearch.value) {
+        else if (coffees[i].roast === roastSearch.value && coffees[i].name.toLowerCase().includes(typedLetters)) {
             newArray.push(coffees[i]);
         }
     }
@@ -84,7 +84,7 @@ div.innerHTML = renderCoffees(coffees);
 
 searchButton.addEventListener('click', updateCoffees);
 submitButton.addEventListener("click", addCoffee);
-searchField.addEventListener('keypress', searchForCoffees);
+searchField.addEventListener('keyup', searchForCoffees);
 roastSearch.addEventListener('change', searchForCoffees);
 
 
