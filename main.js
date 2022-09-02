@@ -85,7 +85,7 @@ function renderSorted(coffees) {
     for(let i = 0; i < coffees.length; ++i){
         html += renderCoffee(coffees[i]);
     }
-    return
+    return;
 }
 // TODO Add functionality to search through the coffees by name, and display only the coffees that match the provided search term (You will need to add an input field to the existing form for this)
 // 1. search coffee by name
@@ -93,12 +93,28 @@ function renderSorted(coffees) {
 
 function typeCoffee(e) {
     var typed_coffee = document.getElementById("search-bar").value;
+    typed_coffee = typed_coffee.toLowerCase()
     e.preventDefault(); // don't submit the form, we just want to update the data
     var selectedName = typed_coffee;
     var filteredCoffees = [];
     coffees.forEach(function(coffee) {
-        if (coffee.name === selectedName) {
+        if (coffee.name.toLowerCase() === selectedName) {
             filteredCoffees.push(coffee);
+        }
+    });
+    tbody.innerHTML = renderCoffees(filteredCoffees);
+}
+function typingCoffee(e) {
+    var typed_coffee = document.getElementById("search-bar").value;
+    typed_coffee = typed_coffee.toLowerCase();
+    e.preventDefault(); // don't submit the form, we just want to update the data
+    var filteredCoffees = [];
+    coffees.forEach(function(coffee) {
+        var bucket = coffee.name.toLowerCase()
+        if(bucket[0] === typed_coffee[0]) {
+            if(bucket[1] === typed_coffee[1]){
+                filteredCoffees.push(coffee);
+            }
         }
     });
     tbody.innerHTML = renderCoffees(filteredCoffees);
@@ -107,11 +123,18 @@ function typeCoffee(e) {
 var tbody = document.querySelector('#coffees');
 var submitButton = document.querySelector('#submit');
 var roastSelection = document.querySelector('#roast-selection');
+var searchBar = document.querySelector('#search-bar');
 
 // tbody.innerHTML = renderCoffees(coffees);
 tbody.innerHTML = renderSortedCoffees(coffeesSorted);
 
-// submitButton.addEventListener('click', updateCoffees);
+
+
+submitButton.addEventListener("click", updateCoffees);
 submitButton.addEventListener("click", typeCoffee);
+searchBar.addEventListener("keyup", typingCoffee);
+
 
 //addition to test push
+
+
