@@ -4,7 +4,7 @@
 function renderCoffee(coffee) {
     var html = '<tr class="coffee">';
     html += '<td>' + coffee.name + '</td>';
-    html += '<td>' + coffee.roast + '</td>';
+    html += '<td class="roast-type">' + coffee.roast + '</td>';
     html += '</tr>';
     return html;
 }
@@ -61,7 +61,6 @@ var coffees = [
     {id: 14, name: 'French', roast: 'dark'},
 ];
 
-console.log(coffees);
 //1. Sort coffees by id's in acending order
 // - sort an array of dictionaries
 // - use a for to iterate through array
@@ -71,7 +70,6 @@ console.log(coffees);
 //          - I need to remove element than move to front to the front of array using push/shift/splice
 // - console log to check to see if sorted by ids
 var coffeesSorted = coffees;
-console.log(coffeesSorted)
 for(let i = 0; i < coffeesSorted.length; ++i){
     if(coffeesSorted[i]["id"] === coffeesSorted[i]){
         coffeesSorted.splice(coffeesSorted[i], 1, coffeesSorted[i]["value"])
@@ -112,8 +110,10 @@ function typingCoffee(e) {
     coffees.forEach(function(coffee) {
         var bucket = coffee.name.toLowerCase()
         if(bucket[0] === typed_coffee[0]) {
-            if(bucket[1] === typed_coffee[1]){
+            if (bucket[1] === typed_coffee[1]) {
                 filteredCoffees.push(coffee);
+            }else if(bucket[1] === typed_coffee[1]){
+                location.reload()
             }
         }
     });
@@ -131,7 +131,7 @@ tbody.innerHTML = renderSortedCoffees(coffeesSorted);
 
 
 submitButton.addEventListener("click", updateCoffees);
-submitButton.addEventListener("click", typeCoffee);
+searchBar.addEventListener("click", typeCoffee);
 searchBar.addEventListener("keyup", typingCoffee);
 
 

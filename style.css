@@ -1,9 +1,35 @@
+body{
+    font-family: 'Barlow Condensed', sans-serif;
+}
 table {
     border-collapse: collapse;
-    margin: 15px 0;
+    margin: 15px 10em;
 }
 
 td, th {
-    border: 1px solid black;
+    border: none;
     padding: 5px 10px;
+    font-family: 'Barlow Condensed', sans-serif;
+    color: saddlebrown;
 }
+td{
+    line-height: 35px;
+    font-size: 30px;
+}
+th{
+    visibility: hidden;
+}
+.roast-type{
+    color: tan;
+    opacity: 50%;
+}
+.single-pic{
+    margin: 5em 11em;
+}
+h1{
+    color: dimgrey;
+}
+p{
+    color: saddlebrown;
+}
+
