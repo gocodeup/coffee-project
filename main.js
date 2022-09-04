@@ -112,8 +112,8 @@ function typingCoffee(e) {
         if(bucket[0] === typed_coffee[0]) {
             if (bucket[1] === typed_coffee[1]) {
                 filteredCoffees.push(coffee);
-            }else if(bucket[1] === typed_coffee[1]){
-                location.reload()
+            }else{
+                return;
             }
         }
     });
