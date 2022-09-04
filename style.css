@@ -11,8 +11,8 @@ td, th {
     color: saddlebrown;
 }
 td{
-    line-height: 35px;
-    font-size: 30px;
+    line-height: 40px;
+    font-size: 35px;
 }
 th{
     visibility: hidden;
@@ -26,13 +26,13 @@ p{
     color: saddlebrown;
 }
 header{
-    height: 150px;
+    height: 135px;
     background-color: tan;
-    opacity: 25%;
+    opacity: 15%;
 }
 
 footer{
-    height: 125px;
-    background-color: tan;
-    opacity: 7%;
+    display: flex;
+    flex-direction: row-reverse;
 }
+
