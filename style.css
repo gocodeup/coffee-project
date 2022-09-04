@@ -3,12 +3,10 @@ body{
 }
 table {
     border-collapse: collapse;
-    margin: 15px 10em;
 }
 
 td, th {
     border: none;
-    padding: 5px 10px;
     font-family: 'Barlow Condensed', sans-serif;
     color: saddlebrown;
 }
@@ -23,12 +21,7 @@ th{
     color: tan;
     opacity: 50%;
 }
-.single-pic{
-    margin: 5em 11em;
-}
-h1{
-    color: dimgrey;
-}
+
 p{
     color: saddlebrown;
 }
