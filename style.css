@@ -25,4 +25,14 @@ th{
 p{
     color: saddlebrown;
 }
+header{
+    height: 150px;
+    background-color: tan;
+    opacity: 25%;
+}
 
+footer{
+    height: 125px;
+    background-color: tan;
+    opacity: 7%;
+}
