@@ -7,20 +7,26 @@ let coffeeType = {
      light: []
 }
 
-function renderCoffee(name, type) {
-     let selectValue = document.getElementById('coffee-roast-addition')
-     let newCoffee = `<section id=${currentId} class="${type}" >\n` +
-                         `\t\t\t\t<h3>${name}</h3>\n` +
-                         `\t\t\t\t<span>${selectValue.value}</span>\n` +
+function renderCoffee() {
+     
+     let selectValue = document.querySelector('#coffee-roast-addition').value
+     let name = document.querySelector('#addition-coffee').value
+     
+     let newCoffee = `<section id="${currentId}" class="${selectValue}" >` +
+                         `<h3>${name}</h3>` +
+                         `<span>${selectValue}</span>` +
                      "</section>"
+     let newCoffeeElement = document.createElement(newCoffee);
+     
      currentId += 1;
      
     let coffeeListSection = document.getElementById('coffee-list');
-    coffeeListSection.innerHTML += newCoffee;
+    coffeeListSection.appendChild(newCoffeeElement);
 }
 
 document.getElementById('addition-coffee-button').onclick = () => {
      renderCoffee('test', 'dark');
+     
 }
 
 
