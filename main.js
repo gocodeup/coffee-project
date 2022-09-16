@@ -22,6 +22,7 @@ let coffees = [
 let tbody = document.querySelector('#coffees');
 let submitButton = document.querySelector('#submit');
 let roastSelection = document.querySelector('#roast-selection');
+let coffeeName = document.querySelector('#coffee-name');
 
 tbody.innerHTML = renderCoffees(coffees);
 
@@ -58,3 +59,16 @@ function updateCoffees(e) {
     });
     tbody.innerHTML = renderCoffees(filteredCoffees);
 }
+
+let coffeesArray = [];
+for (let i = 0; i < coffees.length; i++){
+    let coffeeArray = coffeesArray.unshift(`${coffees[i].name}`);
+    console.log(coffeeArray);
+}
+
+// coffeeName.onkeyup = function () {
+//
+//     let coffeeMatch = coffees.name.filter(function ()){
+//
+//     }
+// }
