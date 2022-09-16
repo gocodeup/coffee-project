@@ -1,7 +1,7 @@
 "use strict"
 
 // from http://www.ncausa.org/About-Coffee/Coffee-Roasts-Guide
-var coffees = [
+let coffees = [
     {id: 1, name: 'Light City', roast: 'light'},
     {id: 2, name: 'Half City', roast: 'light'},
     {id: 3, name: 'Cinnamon', roast: 'light'},
@@ -18,28 +18,30 @@ var coffees = [
     {id: 14, name: 'French', roast: 'dark'},
 ];
 
-var tbody = document.querySelector('#coffees');
-var submitButton = document.querySelector('#submit');
-var roastSelection = document.querySelector('#roast-selection');
+
+let tbody = document.querySelector('#coffees');
+let submitButton = document.querySelector('#submit');
+let roastSelection = document.querySelector('#roast-selection');
 
 tbody.innerHTML = renderCoffees(coffees);
 
 submitButton.addEventListener('click', updateCoffees);
 
-
+//Changed the tags to div, h1, and p, respectively and eliminated the id line
+//changing the tags here will make the DOM event will adjust the tags that are dynamically inserted into the html when the page loads.
 function renderCoffee(coffee) {
-    var html = '<tr class="coffee">';
-    html += '<td>' + coffee.id + '</td>';
-    html += '<td>' + coffee.name + '</td>';
-    html += '<td>' + coffee.roast + '</td>';
-    html += '</tr>';
+    let html = '<div class="coffee">';
+    html += '<h1>' + coffee.name + '</h1>';
+    html += '<p>' + coffee.roast + '</p>';
+    html += '</div>';
 
     return html;
 }
 
+//changed from descending order to ascending order by changing the for conditions
 function renderCoffees(coffees) {
-    var html = '';
-    for(var i = coffees.length - 1; i >= 0; i--) {
+    let html = '';
+    for(let i = 0; i < coffees.length; i++) {
         html += renderCoffee(coffees[i]);
     }
     return html;
@@ -47,8 +49,8 @@ function renderCoffees(coffees) {
 
 function updateCoffees(e) {
     e.preventDefault(); // don't submit the form, we just want to update the data
-    var selectedRoast = roastSelection.value;
-    var filteredCoffees = [];
+    let selectedRoast = roastSelection.value;
+    let filteredCoffees = [];
     coffees.forEach(function(coffee) {
         if (coffee.roast === selectedRoast) {
             filteredCoffees.push(coffee);
