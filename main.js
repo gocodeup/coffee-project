@@ -59,11 +59,10 @@ function updateCoffees(e) {
     });
     tbody.innerHTML = renderCoffees(filteredCoffees);
 }
-
+// this creates an array of just the coffees that we will be able to loop through.
 let coffeesArray = [];
 for (let i = 0; i < coffees.length; i++){
-    let coffeeArray = coffeesArray.unshift(`${coffees[i].name}`);
-    console.log(coffeeArray);
+    coffeesArray.push(coffees[i].name);
 }
 
 // coffeeName.onkeyup = function () {
