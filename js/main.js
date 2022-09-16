@@ -1,35 +1,29 @@
 "use strict"
 
-
-
-function renderCoffee(coffee) {
-   
+let currentId = 0;
+let coffeeType = {
+     medium: [],
+     dark:[],
+     light: []
 }
 
-function renderCoffees(coffees) {
-    // var html = '';
-    // for(var i = coffees.length - 1; i >= 0; i--) {
-    //     html += renderCoffee(coffees[i]);
-    // }
-    // return html;
-    
+function renderCoffee(name, type) {
+     let selectValue = document.getElementById('coffee-roast-addition')
+     let newCoffee = `<section id=${currentId} class="${type}" >\n` +
+                         `\t\t\t\t<h3>${name}</h3>\n` +
+                         `\t\t\t\t<span>${selectValue.value}</span>\n` +
+                     "</section>"
+     currentId += 1;
+     
+    let coffeeListSection = document.getElementById('coffee-list');
+    coffeeListSection.innerHTML += newCoffee;
 }
 
-function updateCoffees(e) {
-    // e.preventDefault(); // don't submit the form, we just want to update the data
-    // var selectedRoast = roastSelection.value;
-    // var filteredCoffees = [];
-    // coffees.forEach(function(coffee) {
-    //     if (coffee.roast === selectedRoast) {
-    //         filteredCoffees.push(coffee);
-    //     }
-    // });
-    // tbody.innerHTML = renderCoffees(filteredCoffees);
+document.getElementById('addition-coffee-button').onclick = () => {
+     renderCoffee('test', 'dark');
 }
 
-// from http://www.ncausa.org/About-Coffee/Coffee-Roasts-Guide
-var coffees = [
-  
-];
+
+
 
 
