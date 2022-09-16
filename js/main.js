@@ -1,6 +1,8 @@
 "use strict"
 
 let currentId = 0;
+const updateId = () => currentId+=1;
+
 let coffeeType = {
      medium: [],
      dark:[],
@@ -9,23 +11,31 @@ let coffeeType = {
 
 function renderCoffee() {
      
+     updateId();
+     
      let selectValue = document.querySelector('#coffee-roast-addition').value
      let name = document.querySelector('#addition-coffee').value
+     let coffeeListSection = document.getElementById('coffee-list');
      
-     let newCoffee = `<section id="${currentId}" class="${selectValue}" >` +
-                         `<h3>${name}</h3>` +
-                         `<span>${selectValue}</span>` +
+     let newCoffee = `<section id="${currentId}" class="${selectValue} d-flex" >` +
+                         `<h3>${name}</h3>` + `<span style="color: #666666">${selectValue}</span>`+
                      "</section>"
-     let newCoffeeElement = document.createElement(newCoffee);
      
-     currentId += 1;
+     if(!coffeeType[selectValue].includes(name)){
+          coffeeType[selectValue].push(name);
+          coffeeListSection.innerHTML += newCoffee;
+     }
      
-    let coffeeListSection = document.getElementById('coffee-list');
-    coffeeListSection.appendChild(newCoffeeElement);
-}
+     
+     
 
+}
+document.getElementById('search-coffee').oninput = (event) => {
+     let x = document.getElementById('search-coffee').value
+     alert(x)
+}
 document.getElementById('addition-coffee-button').onclick = () => {
-     renderCoffee('test', 'dark');
+     renderCoffee();
      
 }
 
