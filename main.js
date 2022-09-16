@@ -12,7 +12,8 @@ function renderCoffee(coffee) {
 
 function renderCoffees(coffees) {
     let html = '';
-    for(let i = coffees.length - 1; i >= 0; i--) {
+    for(var i = coffees.length - 1; i >= 0; i--) {
+
         html += renderCoffee(coffees[i]);
     }
     return html;
