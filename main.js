@@ -65,9 +65,7 @@ for (let i = 0; i < coffees.length; i++){
     coffeesArray.push(coffees[i].name);
 }
 
-// coffeeName.onkeyup = function () {
-//
-//     let coffeeMatch = coffees.name.filter(function ()){
-//
-//     }
-// }
+coffeeName.onkeyup = function() {
+    let coffeeMatch = coffeesArray.filter(coffeesArray => coffeesArray === coffeeName)
+    tbody.innerHTML = coffeeMatch
+}
