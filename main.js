@@ -40,14 +40,17 @@ function renderCoffee(coffee) {
 }
 
 //changed from descending order to ascending order by changing the for conditions
-function renderCoffees(coffees) {
-    let html = '';
-    for(let i = 0; i < coffees.length; i++) {
-        html += renderCoffee(coffees[i]);
-    }
-    return html;
-}
 
+function renderCoffees(coffees) {
+    for(let i = 0; i < coffees.length; i++) {
+        htmlArray.push (renderCoffee(coffees[i]));
+    }
+    return htmlArray;
+}
+let htmlArray = [];
+
+
+///split function into one for search and one for HTML insertion
 function updateCoffees(e) {
     e.preventDefault(); // don't submit the form, we just want to update the data
     let selectedRoast = roastSelection.value;
@@ -64,8 +67,11 @@ let coffeesArray = [];
 for (let i = 0; i < coffees.length; i++){
     coffeesArray.push(coffees[i].name);
 }
+//
+// coffeeName.onkeyup = function() {
+//     let coffeeMatch = coffeesArray.filter(coffeesArray => coffeesArray === coffeeName)
+//     tbody.innerHTML = coffeeMatch
+// }
 
-coffeeName.onkeyup = function() {
-    let coffeeMatch = coffeesArray.filter(coffeesArray => coffeesArray === coffeeName)
-    tbody.innerHTML = coffeeMatch
-}
+//first make an array instead of an array
+//then make a separate function that converts the string and pushes to the hold.
