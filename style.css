@@ -45,6 +45,12 @@ input {
     display: block;
     width: 100%;
 }
+
 select {
     width: 100%;
 }
+
+h1{
+    text-align: center;
+}
+
