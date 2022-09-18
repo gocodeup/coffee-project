@@ -19,9 +19,10 @@ function renderCoffees(coffees) {
 function updateCoffees(e) {
     e.preventDefault(); // don't submit the form, we just want to update the data
     let selectedRoast = roastSelection.value;
+    let searchedName = nameSearch.value;                                                //<<<<<<<<<<< Got the search bar to work >>>>>>>>>>>>>>//
     let filteredCoffees = [];
     coffees.forEach(function(coffee) {
-        if (coffee.roast === selectedRoast) {
+        if (coffee.roast === selectedRoast && coffee.name === searchedName) {           //<<<<<<<<<<< Got the search bar to work >>>>>>>>>>>>>>//
             filteredCoffees.push(coffee);
         }
     });
@@ -49,7 +50,9 @@ let coffees = [
 let tbody = document.querySelector('#coffees');
 let submitButton = document.querySelector('#submit');
 let roastSelection = document.querySelector('#roast-selection');
+let nameSearch = document.querySelector('#coffeeName');                     //<<<<<<<<<<< Got the search bar to work >>>>>>>>>>>>>>//
 
 tbody.innerHTML = renderCoffees(coffees);
 
 submitButton.addEventListener('click', updateCoffees);
+// submitButton.addEventListener('click', searchForCoffee);
