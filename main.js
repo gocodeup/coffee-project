@@ -28,6 +28,15 @@ function updateCoffees(e) {
     });
     tbody.innerHTML = renderCoffees(filteredCoffees);
 }
+function addCoffee (e){
+    e.preventDefault();
+    coffees.push({
+        id: coffees.length + 1,
+        name: newCoffeeName.value ,
+        roast: newRoast.value,
+    })
+    tbody.innerHTML = renderCoffees(coffees);
+}
 
 // from http://www.ncausa.org/About-Coffee/Coffee-Roasts-Guide
 let coffees = [
@@ -49,10 +58,14 @@ let coffees = [
 
 let tbody = document.querySelector('#coffees');
 let submitButton = document.querySelector('#submit');
+let submitButton2 = document.querySelector('#submit2')
 let roastSelection = document.querySelector('#roast-selection');
 let nameSearch = document.querySelector('#coffeeName');                     //<<<<<<<<<<< Got the search bar to work >>>>>>>>>>>>>>//
+let newCoffeeName = document.querySelector('#newCoffeeName')
+let newRoast = document.querySelector('#roast')
+
 
 tbody.innerHTML = renderCoffees(coffees);
 
 submitButton.addEventListener('click', updateCoffees);
-// submitButton.addEventListener('click', searchForCoffee);
+submitButton2.addEventListener('click', addCoffee)
