@@ -1,5 +1,30 @@
 @import url('https://fonts.googleapis.com/css2?family=Yanone+Kaffeesatz:wght@400;500;600&display=swap');
+h1 {
+    font-family: 'Dancing Script', cursive;
+}
 
+*{
+    box-sizing: border-box;
+    scrollbar-width: none;
+    padding: 0;
+    margin: 0;
+}
 body{
     font-family: 'Yanone Kaffeesatz', sans-serif;
+    background: url("../img/background.jpg");
+    background-size: 100vw;
+}
+#main-section{
+    width: 60vw;
+    height: 80vh;
+    border-radius: 15px;
+    background-color: #390C00aa;
+}
+.coffee{
+    background: linear-gradient(#481C11cc, #060201ee);
+}
+#coffees{
+    overflow: scroll;
+    max-height: 68vh;
+    height: 68vh;
 }

@@ -25,10 +25,25 @@ additionSubmit.addEventListener('click', () => {
 })
 
 function renderCoffee(coffee) {
-     let html = '<section class="coffee">'
-     html += '<p><h2>' + coffee.name + '</h2></hp>';
-     html += '<p>' + coffee.roast + '</p>';
-     html += '</section>';
+     let data = '';
+     
+     // $.ajax('https://coffee.alexflipnote.dev/random').done(function(data, status){
+     //      console.log(data)
+     // })
+     
+     // fetch('https://coffee.alexflipnote.dev/random.json').then(response => response.json()).then(data => console.log(data))
+     // fetch('https://coffee.alexflipnote.dev/random')
+     //      .then(response => response.json())
+     //      .then(data => alert(data))
+     //      .catch(err => console.log(err))
+     
+     console.log(data);
+     let html = '<section class="coffee d-flex justify-content-center align-content-center text-white">' +
+     '<img class="d-flex align-content-center " src="https://coffee.alexflipnote.dev/random" style="height: 50px;' +
+          ' width: auto; border-radius: 25px;">' +
+     '<h2 class="d-flex display-3">' + coffee.name + '</h2>'+
+     '<p class="d-flex display-5 p-2">' + coffee.roast + '</p>' +
+     '</section>';
      return html;
 }
 
