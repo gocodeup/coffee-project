@@ -1,5 +1,12 @@
 "use strict"
-
+//changed from descending order to ascending order by changing the for conditions
+let htmlArray = [];
+function renderCoffees(coffees) {
+    for(let i = 0; i < coffees.length; i++) {
+        htmlArray.push (renderCoffee(coffees[i]));
+    }
+    return htmlArray;
+}
 // from http://www.ncausa.org/About-Coffee/Coffee-Roasts-Guide
 let coffees = [
     {id: 1, name: 'Light City', roast: 'light'},
@@ -24,7 +31,7 @@ let submitButton = document.querySelector('#submit');
 let roastSelection = document.querySelector('#roast-selection');
 let coffeeName = document.querySelector('#coffee-name');
 
-tbody.innerHTML = renderCoffees(coffees);
+tbody.innerHTML = renderCoffees(coffees).join(``);
 
 submitButton.addEventListener('click', updateCoffees);
 
@@ -39,28 +46,18 @@ function renderCoffee(coffee) {
     return html;
 }
 
-//changed from descending order to ascending order by changing the for conditions
-
-function renderCoffees(coffees) {
-    for(let i = 0; i < coffees.length; i++) {
-        htmlArray.push (renderCoffee(coffees[i]));
-    }
-    return htmlArray;
-}
-let htmlArray = [];
-
 
 ///split function into one for search and one for HTML insertion
 function updateCoffees(e) {
     e.preventDefault(); // don't submit the form, we just want to update the data
     let selectedRoast = roastSelection.value;
-    let filteredCoffees = [];
-    coffees.forEach(function(coffee) {
-        if (coffee.roast === selectedRoast) {
-            filteredCoffees.push(coffee);
-        }
-    });
-    tbody.innerHTML = renderCoffees(filteredCoffees);
+    // let filteredCoffees = [];
+    // coffees.forEach(function(coffee) {
+    //     if (coffee.roast === selectedRoast) {
+    //         filteredCoffees.push(coffee);
+    //     }
+    tbody.innerHTML = renderCoffees(coffees).join(``);
+    // });
 }
 // this creates an array of just the coffees that we will be able to loop through.
 let coffeesArray = [];
@@ -75,3 +72,4 @@ for (let i = 0; i < coffees.length; i++){
 
 //first make an array instead of an array
 //then make a separate function that converts the string and pushes to the hold.
+
