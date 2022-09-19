@@ -1,81 +1,40 @@
 "use strict"
 
+//main body selector
+let tbody = document.querySelector('#coffees');
+
+//search selectors
+let submitButton = document.querySelector('#submit');
+let roastSelection = document.querySelector('#roast-selection');
+
+//add coffee selectors
+let additionSelector = document.querySelector('#select-addition');
+let additionSearch = document.querySelector('#addition-name');
+let additionSubmit = document.querySelector('#addition-submit');
+
+additionSubmit.addEventListener('click', () => {
+     let newCoffeeObject = {};
+     newCoffeeObject.id = coffees[coffees.length - 1].id + 1;
+     newCoffeeObject.name = additionSearch.value;
+     newCoffeeObject.roast = additionSelector.value;
+     
+     if(coffees.filter(coffee => coffee.name === newCoffeeObject.name).length === 0){
+          coffees.push(newCoffeeObject);
+          updateCoffees();
+     }
+})
+
 function renderCoffee(coffee) {
      let html = '<section class="coffee">'
      html += '<p><h2>' + coffee.name + '</h2></hp>';
      html += '<p>' + coffee.roast + '</p>';
      html += '</section>';
-
      return html;
 }
 
-function renderCoffees(coffees) {
-     let html = '';
-     for(let i = 0; i < coffees.length; i++) {
-          html += renderCoffee(coffees[i]);
-     }
-     return html;
-}
-
-document.getElementById('search-coffee').oninput = function(){
-     updateCoffees();
-}
-function updateCoffees() {
-
-     // e.preventDefault(); // don't submit the form, we just want to update the data
-     let selectedRoast = roastSelection.value;
-     let filteredCoffees = [];
-
-     //gets the search inputs value and makes it lowercase to make
-     // filtering easy.
-     let search  =  document.getElementById('search-coffee').value
-     search = search.toLowerCase();
-
-     //checks the searches input
-     //for testing purposes
-     console.log(search)
-
-     //checks selected roast if all
-     //displays all roasts regardless of
-     //type.
-     if (selectedRoast === 'all'){
-
-          //iterates through the coffee array and
-          //checks the roast and if the search is
-          // actively being used. It displays
-          //only coffees that match the search.
-          coffees.forEach((coffee) => {
-               if(coffee.roast !== selectedRoast) {
-                    if(search === ''){
-                         filteredCoffees.push(coffee);
-                    }else{
-                         if(coffee.name.toLowerCase().includes(search)){
-                              filteredCoffees.push(coffee);
-                         }
-                    }
-
-               }
-          })
-     }else{
-
-          //does the same thing as the above function but
-          //filters by roast.
-          coffees.forEach(function (coffee) {
-               if (coffee.roast === selectedRoast) {
-                    if(search === ''){
-                         filteredCoffees.push(coffee);
-                    }else{
-                         if(coffee.name.toLowerCase().includes(search)){
-                              filteredCoffees.push(coffee);
-                         }
-                    }
-
-               }
-          });
-     }
-
-     //calls renderCoffees to output the filtered array
-     tbody.innerHTML = renderCoffees(filteredCoffees);
+function renderCoffees(coffees){
+     return coffees.reduce( (current, next) => 
+           current += renderCoffee(next) , '');
 }
 
 
@@ -98,13 +57,5 @@ let coffees = [
      {id: 14, name: 'French', roast: 'dark'},
 ];
 
-//input from the webpage
-let tbody = document.querySelector('#coffees');
-
-let submitButton = document.querySelector('#submit');
-let roastSelection = document.querySelector('#roast-selection');
 
 tbody.innerHTML = renderCoffees(coffees);
-
-// Updates the page based on submit
-submitButton.addEventListener('click', updateCoffees);
