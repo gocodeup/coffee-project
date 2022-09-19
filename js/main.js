@@ -36,7 +36,7 @@ function renderCoffee(coffee) {
      //      .then(response => response.json())
      //      .then(data => alert(data))
      //      .catch(err => console.log(err))
-     
+     //
      console.log(data);
      let html = '<section class="coffee d-flex justify-content-center align-content-center text-white">' +
      '<img class="d-flex align-content-center " src="https://coffee.alexflipnote.dev/random" style="height: 50px;' +

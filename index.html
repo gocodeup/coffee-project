@@ -1,97 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
 	<meta charset="UTF-8">
+	<meta name="viewport" content="initial-scale=1, width=device-width">
 	<title>Coffee Project</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&display=swap" rel="stylesheet">
+
+	<!--		bootstrap cdn css-->
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 	<link rel="stylesheet" href="css/body.css">
+	<link rel="stylesheet" href="css/navbar.css">
 </head>
-
-	<head>
-		
-		<meta charset="UTF-8">
-		<meta name="viewport" content="initial-scale=1, width=device-width">
-		<title></title>
-		<link rel="preconnect" href="https://fonts.googleapis.com">
-		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-		<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&display=swap" rel="stylesheet">
-		
-		<!--		bootstrap cdn css-->
-		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-		
-		<link rel="stylesheet" href="css/body.css">
-		<link rel="stylesheet" href="css/navbar.css">
-	</head>
-	
-
-
-
 <body class="container-fluid w-100 h-100 p-0 m-0">
 
-
-
 	<header class="container-fluid w-100 p-0 m-0">
-		<h1></h1>
+		<h1 class="display-1">Le Café Wey</h1>
 	</header>
-	
+
 	<main class="d-flex justify-content-center align-content-center my-5">
-	
-	<section class="d-flex-column justify-content-center align-content-center" id="main-section">
-		<div class="input-group mb-3">
-			<div class="input-group-prepend d-flex ">
-				<button id="submit" class="btn  btn-secondary" type="button">Button</button>
-			</div>
-			<input id="search-coffee" type="text" class="form-control " placeholder="" aria-label="" aria-describedby="basic-addon1">
-			
-			<select id="roast-selection" class="form-select d-flex " aria-label="Default select example">
-				<option value="all" selected>all</option>
-				<option value="light">light</option>
-				<option value="medium">medium</option>
-				<option value="dark">dark</option>
-			</select>
-		</div>
-		
-		<section id="coffees"></section>
-		
-		<section id="addition-section d-flex">
-			
+
+		<section class="d-flex-column justify-content-center align-content-center" id="main-section">
 			<div class="input-group mb-3">
 				<div class="input-group-prepend d-flex ">
-					<button id="addition-submit" class="btn btn-secondary " type="button">Add Coffee</button>
+					<button id="submit" class="btn  btn-secondary" type="button">Button</button>
 				</div>
-				<input id="addition-name" type="text" class="form-control " placeholder="" aria-label="" aria-describedby="basic-addon1">
-				
-				<select id="select-addition" class="form-select d-flex " aria-label="Default select example">
+				<input id="search-coffee" type="text" class="form-control " placeholder="" aria-label="" aria-describedby="basic-addon1">
+
+				<select id="roast-selection" class="form-select d-flex " aria-label="Default select example">
 					<option value="all" selected>all</option>
 					<option value="light">light</option>
 					<option value="medium">medium</option>
 					<option value="dark">dark</option>
 				</select>
-		</section>
-	</section>
-	
+			</div>
 
-	
-	
+			<section id="coffees"></section>
+
+			<section id="addition-section d-flex">
+
+				<div class="input-group mb-3">
+					<div class="input-group-prepend d-flex ">
+						<button id="addition-submit" class="btn btn-secondary " type="button">Add Coffee</button>
+					</div>
+					<input id="addition-name" type="text" class="form-control " placeholder="" aria-label="" aria-describedby="basic-addon1">
+
+					<select id="select-addition" class="form-select d-flex " aria-label="Default select example">
+						<option value="all" selected>all</option>
+						<option value="light">light</option>
+						<option value="medium">medium</option>
+						<option value="dark">dark</option>
+					</select>
+				</div>
+			 </section>
+		</section>
 	</main>
 	<footer>
-		
-	
-		
 	</footer>
-	
-	
-
-
-
-	
-		
-<!--		bootstrap  cdn javascript-->
-	    <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+	<!--		bootstrap  cdn javascript-->
+		<script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
 		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 		<script src="js/main.js"></script>
 		<script src="js/updates.js"></script>
-		
-	</body>
 
- </html>
+</body>
+</html>
