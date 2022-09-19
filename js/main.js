@@ -12,6 +12,17 @@ let additionSelector = document.querySelector('#select-addition');
 let additionSearch = document.querySelector('#addition-name');
 let additionSubmit = document.querySelector('#addition-submit');
 
+additionSubmit.addEventListener('click', () => {
+     let newCoffeeObject = {};
+     newCoffeeObject.id = coffees[coffees.length - 1].id + 1;
+     newCoffeeObject.name = additionSearch.value;
+     newCoffeeObject.roast = additionSelector.value;
+     
+     if(coffees.filter(coffee => coffee.name === newCoffeeObject.name).length === 0){
+          coffees.push(newCoffeeObject);
+          updateCoffees();
+     }
+})
 
 function renderCoffee(coffee) {
      let html = '<section class="coffee">'
