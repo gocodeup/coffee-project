@@ -7,11 +7,11 @@ improvements to it.
 ## Setup
 
 1. Create a Github organization and add your teammate.
-1. Fork this repository (Click on the "Fork" button on the top right of this
+2. Fork this repository (Click on the "Fork" button on the top right of this
    page) and select the new organization as a destination.
-1. Clone the forked repository from your organization.
-1. Open up the HTML file and check out the existing application.
-1. Read through the code and understand the existing code structure before you start to build the features.
+3. Clone the forked repository from your organization.
+4. Open up the HTML file and check out the existing application.
+5. Read through the code and understand the existing code structure before you start to build the features.
 
 ## TODO
 
@@ -59,3 +59,4 @@ Here is an example demonstrating the above functionality. Your application might
 look different, but should have the same features.
 
 ![Cofee Project Demo](demo.gif)
+

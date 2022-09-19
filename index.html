@@ -1,63 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title></title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-
-
-    <header>
-        <h1>Coffee!</h1>
-    </header>
-    <div class="container">
-<!--        <table>-->
-<!--            <thead>-->
-<!--            <tr>-->
-<!--                <th>NAME</th>-->
-<!--                <th>ROAST</th>-->
-<!--            </tr>-->
-<!--            </thead>-->
-<!--            <tbody id="coffees"></tbody>-->
-<!--        </table>-->
-        <div id="coffees"></div>
-
-         <form>
-             <section>
-                 <label for="roast-selection">Roast</label>
-                 <select id="roast-selection">
-                     <option>light</option>
-                     <option>medium</option>
-                     <option>dark</option>
-                 </select>
-                 <label for="coffeeName">Coffee Name</label>
-                 <input type="text" id="coffeeName">
-                 <input id="submit" type="submit"/>
-             </section>
-             <section>
-                 <h1>Add a Coffee</h1>
-                 <label for="roast">Roast</label>
-                 <select id="roast">
-                     <option>light</option>
-                     <option>medium</option>
-                     <option>dark</option>
-                 </select>
-                 <label for="coffeeName">Name</label>
-                 <input type="text" id="newCoffeeName">
-                 <input id="submit2" type="submit" />
-             </section>
-         </form>
-
-    </div>
-
-
-
-
-
-
-
-
-    <script src="main.js"></script>
-</body>
+    <head>
+        <meta charset="UTF-8">
+        <title>Coffee shop</title>
+        <link rel="icon" type="img/icon" href="img/coffee-cup.jpg">
+        <!-- CSS only -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+    <body>
+        <div class="container main-container">
+            <header class="container coffee-shop-heading">
+                <h1 class="text-center">Coffee House!</h1>
+                <hr>
+            </header>
+            <main class="container border border-3 border-info d-flex justify-content-between">
+                <div id="coffees" class="row px-0"></div>
+                <section class="form-wrapper">
+                    <form class="col">
+                        <label for="roast-selection" class="d-block mb-1">Roast</label>
+                        <select id="roast-selection" class="d-block w-100 py-1 mb-2">
+                            <option>light</option>
+                            <option>medium</option>
+                            <option>dark</option>
+                        </select>
+                        <label for="coffee-name" class="d-block coffee-name mb-1">Coffee Name</label>
+                        <input type="text" id="coffee-name" class="d-block w-100 mb-3 coffee-name-input">
+                        <input id="submit" type="submit" class="w-100 bg-primary border-1 rounded text-white submit-first-form">
+                    </form>
+                    <section class="my-2">
+                        <h1 class="text-center fs-3">Add a Coffee</h1>
+                    </section>
+                    <form>
+                        <label for="roast" class="d-block mb-1">Roast</label>
+                        <select id="roast" class="d-block w-100 py-1 mb-2">
+                            <option>light</option>
+                            <option>medium</option>
+                            <option>dark</option>
+                        </select>
+                        <label for="coffee-flavor" class="d-block mb-1">Name</label>
+                        <input type="text" id="coffee-flavor" class="d-block w-100 mb-3 coffee-flavor-input">
+                        <input id="submit" type="submit" class="d-block w-100 bg-primary text-white submit-second-form">
+                    </form>
+                </section>
+            </main>
+        </div><!-- JavaScript Bundle with Popper -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
+        <!-- vanilla js ----->
+        <script src="js/main.js"></script>
+    </body>
 </html>

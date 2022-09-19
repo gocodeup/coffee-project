@@ -1,0 +1,34 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+html,body {
+    width: 100%;
+    height: 100%;
+}
+.name {
+    display: inline-block;
+    margin-right: 0.4rem;
+}
+.roast {
+    display: inline-block;
+    font-size: 1rem;
+    color: #ccc;
+}
+#coffees {
+    width: 50%;
+}
+.coffee {
+    height: 50px;
+}
+.form-wrapper {
+    width: 50%;
+}
+
+
+
+
+
+
+
