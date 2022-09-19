@@ -1,3 +1,41 @@
+header {
+    border-bottom: 1px solid lightgray;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#coffees {
+    display: flex;
+    flex-flow: column wrap;
+}
+
+.coffee {
+    display: flex;
+    align-items: flex-end;
+}
+main {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+body {
+    font-family: sans-serif;
+}
+
+label {
+    width: 100%;
+
+}
+
+select {
+    width: 100%;
+}
+
+input {
+    width: 100%;
+}
+
 table {
     border-collapse: collapse;
     margin: 15px 0;
