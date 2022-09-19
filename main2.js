@@ -31,6 +31,7 @@ function renderCoffee(coffee) {
 //make it into an array
 let htmlArray = [];
 function renderCoffees(coffees) {
+    htmlArray = [];
     for(let i = 0; i < coffees.length; i++) {
         htmlArray.push (renderCoffee(coffees[i]));
     }
@@ -45,7 +46,7 @@ tbody.innerHTML = renderCoffees(coffees).join(``);
 
 
 
-/*
+
 // this part of the process should limit rendering to only coffes that match BOTH ROAST AND NAME
 
 //additional references to items on the page
@@ -57,9 +58,10 @@ let submitButton = document.querySelector('#submit');
 function updateCoffees(e) {
     e.preventDefault(); // don't submit the form, we just want to update the data
     let selectedRoast = roastSelection.value;
+    let searchName = coffeeName.value;
     let filteredCoffees = [];
     coffees.forEach(function (coffee) {
-        if (coffee.roast === selectedRoast) {
+        if (coffee.roast === selectedRoast && searchName === coffee.name) {
             filteredCoffees.push(coffee);
         }
         tbody.innerHTML = renderCoffees(filteredCoffees).join(``);
@@ -68,7 +70,7 @@ function updateCoffees(e) {
 
 
 submitButton.addEventListener('click', updateCoffees);
-*/
+
 
 // the following adds a coffee to the beginning of the page.
 // these are variables for references to page items
@@ -78,11 +80,9 @@ let submitInput = document.querySelector(`#submit-input`);
 
 function addNewCoffee (e){
     e.preventDefault();
-    console.log(`cats`)
     let html = `<div class="coffee"><h1>${coffeeNameInput.value}</h1><p>${roastSelectionInput.value}</p></div>`;
 
     htmlArray.unshift(html);
-    console.log(htmlArray)
     tbody.innerHTML = htmlArray.join(``);
 }
 
