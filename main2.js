@@ -61,7 +61,7 @@ function updateCoffees(e) {
     let searchName = coffeeName.value;
     let filteredCoffees = [];
     coffees.forEach(function (coffee) {
-        if (coffee.roast === selectedRoast && searchName === coffee.name) {
+        if ((coffee.roast === selectedRoast || selectedRoast === `all`) && coffee.name.toLowerCase().includes(searchName.toLowerCase())) {
             filteredCoffees.push(coffee);
         }
         tbody.innerHTML = renderCoffees(filteredCoffees).join(``);
@@ -70,6 +70,7 @@ function updateCoffees(e) {
 
 
 submitButton.addEventListener('click', updateCoffees);
+coffeeName.addEventListener(`keyup`, updateCoffees);
 
 
 // the following adds a coffee to the beginning of the page.
