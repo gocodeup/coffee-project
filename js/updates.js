@@ -61,7 +61,7 @@ function updateCoffees() {
                     
                }
           });
-     }
+     } 
      
      //calls renderCoffees to output the filtered array
      tbody.innerHTML = renderCoffees(filteredCoffees);
