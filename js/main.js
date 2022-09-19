@@ -20,6 +20,10 @@ function renderCoffees(coffees) {
 document.getElementById('search-coffee').oninput = function(){
      updateCoffees();
 }
+document.getElementById('roast-selection').oninput = function (){
+     updateCoffees();
+}
+
 function updateCoffees() {
 
      // e.preventDefault(); // don't submit the form, we just want to update the data
