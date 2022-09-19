@@ -23,12 +23,10 @@ function updateCoffees(e) {
     let filteredCoffees = [];
     coffees.forEach(function(coffee) {
         if(selectedRoast === 'all') {
-            coffees.forEach(function(coffee) {
-
-            });
+           filteredCoffees.push(coffee);
         } else if (coffee.roast === selectedRoast && searchedCoffee === "") {
             filteredCoffees.push(coffee);
-        } else if (coffee.roast.toLowerCase() === selectedRoast.toLowerCase() && coffee.name.toLowerCase() === searchedCoffee.toLowerCase()) {
+        } else if (coffee.roast.toLowerCase() === selectedRoast.toLowerCase() && coffee.name.toLowerCase().includes(searchedCoffee.toLowerCase())) {
             filteredCoffees.push(coffee);
         }
     });
