@@ -20,11 +20,7 @@ let coffees = [
 
 // prepare list of coffees to be inserted into array
 function renderCoffee(coffee) {
-    let html = '<div class="coffee">';
-    html += '<h1>' + coffee.name + '</h1>';
-    html += '<p>' + coffee.roast + '</p>';
-    html += '</div>';
-
+    let html = `<div class="coffee"><h1>${coffee.name}</h1><p>${coffee.roast}</p></div>`;
     return html;
 }
 
@@ -43,8 +39,6 @@ let tbody = document.querySelector('#coffees');
 //run the function
 tbody.innerHTML = renderCoffees(coffees).join(``);
 /*----------------The above renders the coffees on the page-----------------*/
-
-
 
 
 // this part of the process should limit rendering to only coffes that match BOTH ROAST AND NAME
@@ -68,10 +62,11 @@ function updateCoffees(e) {
     });
 }
 
-
 submitButton.addEventListener('click', updateCoffees);
 coffeeName.addEventListener(`keyup`, updateCoffees);
 
+
+/*----------------The above controls searching for coffees-----------------*/
 
 // the following adds a coffee to the beginning of the page.
 // these are variables for references to page items
@@ -88,3 +83,4 @@ function addNewCoffee (e){
 }
 
 submitInput.addEventListener(`click`, addNewCoffee);
+
