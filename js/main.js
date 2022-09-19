@@ -17,29 +17,70 @@ function renderCoffees(coffees) {
      return html;
 }
 
-function updateCoffees(e) {
-     e.preventDefault(); // don't submit the form, we just want to update the data
+document.getElementById('search-coffee').oninput = function(){
+     updateCoffees();
+}
+function updateCoffees() {
+
+     // e.preventDefault(); // don't submit the form, we just want to update the data
      let selectedRoast = roastSelection.value;
      let filteredCoffees = [];
 
+     //gets the search inputs value and makes it lowercase to make
+     // filtering easy.
+     let search  =  document.getElementById('search-coffee').value
+     search = search.toLowerCase();
+
+     //checks the searches input
+     //for testing purposes
+     console.log(search)
+
+     //checks selected roast if all
+     //displays all roasts regardless of
+     //type.
      if (selectedRoast === 'all'){
+
+          //iterates through the coffee array and
+          //checks the roast and if the search is
+          // actively being used. It displays
+          //only coffees that match the search.
           coffees.forEach((coffee) => {
                if(coffee.roast !== selectedRoast) {
-                    filteredCoffees.push(coffee);
+                    if(search === ''){
+                         filteredCoffees.push(coffee);
+                    }else{
+                         if(coffee.name.toLowerCase().includes(search)){
+                              filteredCoffees.push(coffee);
+                         }
+                    }
+
                }
           })
      }else{
+
+          //does the same thing as the above function but
+          //filters by roast.
           coffees.forEach(function (coffee) {
                if (coffee.roast === selectedRoast) {
-                    filteredCoffees.push(coffee);
+                    if(search === ''){
+                         filteredCoffees.push(coffee);
+                    }else{
+                         if(coffee.name.toLowerCase().includes(search)){
+                              filteredCoffees.push(coffee);
+                         }
+                    }
+
                }
           });
      }
 
+     //calls renderCoffees to output the filtered array
      tbody.innerHTML = renderCoffees(filteredCoffees);
 }
 
+
 // from http://www.ncausa.org/About-Coffee/Coffee-Roasts-Guide
+//our coffee array
 let coffees = [
      {id: 1, name: 'Light City', roast: 'light'},
      {id: 2, name: 'Half City', roast: 'light'},
@@ -59,9 +100,11 @@ let coffees = [
 
 //input from the webpage
 let tbody = document.querySelector('#coffees');
+
 let submitButton = document.querySelector('#submit');
 let roastSelection = document.querySelector('#roast-selection');
 
 tbody.innerHTML = renderCoffees(coffees);
 
+// Updates the page based on submit
 submitButton.addEventListener('click', updateCoffees);
