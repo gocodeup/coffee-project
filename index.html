@@ -1,112 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	
-	<!-- SEO meta tags -->
-	<meta name="description" content="Codeup design project implementing Bootstrap/5.1">
-	<meta name="robots" content="nofollow">
-	<meta charset="utf-8">
-	
-	<!-- CSS only -->
-	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
-	
-	<!-- Bootstrap Icons -->
-	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
-	
-	<!-- Custom css -->
-	<link rel="stylesheet" href="css/navbar/nav.css">
-	<link rel="stylesheet" href="css/body/body.css">
-	
-	<title>Fancy Coffee Company</title>
-	
+	<meta charset="UTF-8">
+	<title></title>
+	<link rel="stylesheet" href="css/body">
 </head>
+<body>
+<h1>Coffee!</h1>
 
-<body class="container-fluid p-0">
-	<header>
-		<nav class="d-flex navbar bg-dark w-100 bg-opacity-100 justify-content-center">
-	        <h1 class="nav-item  display-3">
-		        Fancy Coffee Company
-	        </h1>
-        </nav>
-	</header>
-	
-	<main class="d-flex container-fluid ">
-		
-		<section id="coffee-list" class="d-flex-column col-6">
-			
-		
-		</section>
-		
-		<section id="coffee-selection" class="d-flex-column col-6 ">
-			<h2>Roast</h2>
-			<select class="form-select mb-4" aria-label="Default select example">
-				<option selected>all</option>
-				<option value="1">dark</option>
-				<option value="2">medium</option>
-				<option value="3">light</option>
-			</select>
-			
-			<h2>Coffee</h2>
-			
-			<div class="input-group">
-				<input type="text" id="search-coffee" class="form-control" aria-label="Amount (to the nearest dollar)" >
-			</div>
-			
-			<div class="d-grid gap-2">
-				<button class="btn btn-primary mt-4" type="button">Submit</button>
-			</div>
-			
-			<hr>
-			
-			<h2 class=" d-flex justify-content-center mt-4">Add Coffee</h2>
-			
-			<h2>Roast</h2>
-			
-			<select id="coffee-roast-addition" class="form-select mb-4" aria-label="Default select example">
-				<option value="dark">dark</option>
-				<option value="medium">medium</option>
-				<option value="light">light</option>
-			</select>
-			
-			<h2>Coffee</h2>
-			
-			<div class="input-group">
-				<input type="text" id="addition-coffee" class="form-control" aria-label="Amount (to the nearest dollar)">
-			</div>
-			'
-			<div class="d-grid gap-2">
-				<button id="addition-coffee-button" class="btn btn-primary mt-4" type="button">Submit</button>
-			</div>
-			
-		</section>
-		
-	</main>
- 
+<form>
+	<label for="roast-selection"></label>
+	<select id="roast-selection">
+		<option>all</option>
+		<option>light</option>
+		<option>medium</option>
+		<option>dark</option>
+	</select>
+	<input id="submit" type="submit" />
+</form>
 
-<!--    <form>-->
-<!--        <label for="roast-selection"></label>-->
-<!--        <select id="roast-selection">-->
-<!--            <option>light</option>-->
-<!--            <option>medium</option>-->
-<!--            <option>dark</option>-->
-<!--        </select>-->
-<!--        <input id="submit" type="submit" />-->
-<!--    </form>-->
 
-<!--    <table>-->
-<!--        <thead>-->
-<!--            <tr>-->
-<!--                <th>ID</th>-->
-<!--                <th>NAME</th>-->
-<!--                <th>ROAST</th>-->
-<!--            </tr>-->
-<!--        </thead>-->
-<!--        <tbody id="coffees"></tbody>-->
-<!--    </table>-->
+<section>
+	<input type="text" id="search-coffee">
+</section>
+<section id="coffees">
+	<input type="text" id="add-coffee">
+</section>
 
-    <script src="js/main.js"></script>
-    <!-- JavaScript Bundle with Popper -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
-
+<script src="js/main.js"></script>
 </body>
 </html>
