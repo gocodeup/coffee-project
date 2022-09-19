@@ -22,14 +22,17 @@ function updateCoffees(e) {
     let searchedCoffee = searchedCoffeeName.value;
     let filteredCoffees = [];
     coffees.forEach(function(coffee) {
-        if (coffee.roast === selectedRoast && coffee.name === searchedCoffee) {
+        if(selectedRoast === 'all') {
+
+        } else if (coffee.roast === selectedRoast && searchedCoffee === "") {
             filteredCoffees.push(coffee);
-        } else if (coffee.roast === selectedRoast) {
+        } else if (coffee.roast.toLowerCase() === selectedRoast.toLowerCase() && coffee.name.toLowerCase() === searchedCoffee.toLowerCase()) {
             filteredCoffees.push(coffee);
         }
     });
     div.innerHTML = renderCoffees(filteredCoffees);
 }
+
 function addCoffee(e) {
     e.preventDefault();
     coffees.push({
@@ -59,17 +62,18 @@ let coffees = [
 ];
 
 let div = document.querySelector('#coffees');
-let submitButton = document.querySelector('#submit');
-let submitButton2 = document.querySelector('#submit2')
+let submitButton2 = document.querySelector('#submit2');
 let roastSelection = document.querySelector('#roast-selection');
 let searchedCoffeeName = document.querySelector("#coffeeName");
-let newCoffeeName = document.querySelector('#newCoffeeName')
-let newRoast = document.querySelector('#roast')
+let newCoffeeName = document.querySelector('#newCoffeeName');
+let newRoast = document.querySelector('#roast');
+
 
 
 div.innerHTML = renderCoffees(coffees);
 
-submitButton.addEventListener('click', updateCoffees);
+// submitButton.addEventListener('click', updateCoffees);
+// submitButton2.addEventListener('click', addCoffee)
+roastSelection.addEventListener('input', updateCoffees);
+searchedCoffeeName.addEventListener('input', updateCoffees);
 submitButton2.addEventListener('click', addCoffee)
-// roastSelection.addEventListener('input', updateCoffees);
-// newCoffeeName.addEventListener('input', addCoffee)
