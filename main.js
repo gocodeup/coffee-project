@@ -51,13 +51,13 @@ function renderCoffee(coffee) {
 function updateCoffees(e) {
     e.preventDefault(); // don't submit the form, we just want to update the data
     let selectedRoast = roastSelection.value;
-    // let filteredCoffees = [];
-    // coffees.forEach(function(coffee) {
-    //     if (coffee.roast === selectedRoast) {
-    //         filteredCoffees.push(coffee);
-    //     }
+     let filteredCoffees = [];
+     coffees.forEach(function(coffee) {
+        if (coffee.roast === selectedRoast) {
+            filteredCoffees.push(coffee);
+        }
     tbody.innerHTML = renderCoffees(coffees).join(``);
-    // });
+    });
 }
 // this creates an array of just the coffees that we will be able to loop through.
 let coffeesArray = [];
