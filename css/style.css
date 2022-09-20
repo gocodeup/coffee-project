@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat&family=Caveat+Brush&display=swap');* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+html {
+    width: 100%;
+    height: 100%;
+}
+body {
+    width: 100%;
+    height: 100%;
+    font-family: 'Caveat Brush', cursive;
+    font-weight: 700;
+    background-image: url('../img/coffee-shop.jpg');
+    background-position: top 30% center;
+    background-size: cover;
+}
+.main-container {
+    border: 10px solid #ff7f50;
+    border-radius: 20px;
+    padding: 2rem;
+    box-shadow: 2px 2px 5px 10px #faebd7;
+}
+.coffee-shop-heading {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+.coffee-shop-heading > h1{
+    font-family: fantasy;
+    color: #faebd7;
+}
+.name {
+    display: inline-block;
+    margin-right: 0.4rem;
+    color: #faebd7;
+    font-size: 2rem;
+}
+.roast {
+    display: inline-block;
+    font-size: 1.3rem;
+    color: #ff7f50;
+}
+#coffees {
+    width: 55%;
+}
+.coffee {
+    height: 50px;
+}
+.form-wrapper {
+    width: 50%;
+}
+label {
+    color: #ff7f50;
+    font-size: 1.3rem;
+}
+input, select {
+    background-color: #faebd7;
+    outline: none;
+    border: 1px solid #faebd7;
+    border-radius: 5px;
+}
+#coffeeName, #newCoffeeName {
+    font-size: 1.2rem;
+}
+#submit, #submit2 {
+    background-color: #ff7f50;
+    border-radius: 5px;
+    color: #000;
+    font-size: 1.2rem;
+}
+.sub-title {
+    margin-top: 1rem;
+    color: #faebd7;
+}
+
+
+
+
+
+
