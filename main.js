@@ -35,7 +35,10 @@ function updateCoffeesByName() {
     let selectedCoffee = coffeeSearch.value;
     let filteredCoffeeNames = [];
     coffees.forEach(function(coffee) {
-        if (coffee.name === selectedCoffee || coffee.name.startsWith(selectedCoffee) || coffeeSearch.value.toLowerCase() === coffee.name.toLowerCase() || coffee.name.toLowerCase().startsWith(selectedCoffee.toLowerCase()) || coffee.name.includes(selectedCoffee) || coffee.name.toLowerCase().includes(selectedCoffee.toLowerCase())) {
+        if (coffee.name === selectedCoffee || coffee.name.startsWith(selectedCoffee) ||
+            coffeeSearch.value.toLowerCase() === coffee.name.toLowerCase() ||
+            coffee.name.toLowerCase().startsWith(selectedCoffee.toLowerCase()) ||
+            coffee.name.includes(selectedCoffee) || coffee.name.toLowerCase().includes(selectedCoffee.toLowerCase())) {
             filteredCoffeeNames.push(coffee);
         }
     });
