@@ -10,22 +10,24 @@
 </head>
 <body>
 
-    <h1>Coffee!</h1>
 
+<div class="container-fluid">
+    <h1>Coffee!</h1>
     <form>
         <fieldset>
             <legend>Make Your Roast!</legend>
             <div class="mb-3">
                 <label for="disabledTextInput" class="form-label">Name</label>
-                <input type="text" id="disabledTextInput" class="form-control" placeholder="Enter Coffee Name Here">
+                <input id="submit" type="text" id="disabledTextInput" class="form-control" placeholder="Enter Coffee Name Here">
             </div>
             <div class="mb-3">
-                <select class="form-select" aria-label="Default select example">
-                    <option selected>Roast Options</option>
-                    <option value="1">Light</option>
-                    <option value="2">Medium</option>
-                    <option value="3">Dark</option>
-                </select>
+                <label for="roast-selection">Roast Options</label>
+                    <select id="roast-selection" class="form-select" aria-label="Default select example">
+                        <option selected>Roast Options</option>
+                        <option value="1">Light</option>
+                        <option value="2">Medium</option>
+                        <option value="3">Dark</option>
+                    </select>
             </div>
 
             <button type="submit" class="btn btn-primary">Submit</button>
@@ -34,15 +36,14 @@
 
 
 
-    <form style="background-color: grey">
-        <label for="roast-selection"></label>
-        <select id="roast-selection">
-            <option>light</option>
-            <option>medium</option>
-            <option>dark</option>
-        </select>
-        <input id="submit" type="submit" />
-    </form>
+
+
+
+
+</div>
+
+
+
 
     <table>
         <thead>
