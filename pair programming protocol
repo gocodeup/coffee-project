@@ -1,0 +1,14 @@
+Pilot takes over while co-pilot does not do anything with repo:
+
+Git pull from main branch
+git branch newBranchName
+git checkout newBranchName
+make all changes on this new branch and do these as needed:
+    git add .
+    git commit -m "meaningful messages"
+    git push origin newBranchName
+The when its time to switch out go to github and:
+    click on create pull request
+    marge the pull request, resolving any conflict
+Then co-pilot becomes pilot and pilot becomes co-pilot.
+
