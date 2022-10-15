@@ -1,34 +1,5 @@
 "use strict"
 
-function renderCoffee(coffee) {
-    var html = '<tr class="coffee">';
-    html += '<td>' + coffee.id + '</td>';
-    html += '<td>' + coffee.name + '</td>';
-    html += '<td>' + coffee.roast + '</td>';
-    html += '</tr>';
-
-    return html;
-}
-
-function renderCoffees(coffees) {
-    var html = '';
-    for(var i = coffees.length - 1; i >= 0; i--) {
-        html += renderCoffee(coffees[i]);
-    }
-    return html;
-}
-
-function updateCoffees(e) {
-    e.preventDefault(); // don't submit the form, we just want to update the data
-    var selectedRoast = roastSelection.value;
-    var filteredCoffees = [];
-    coffees.forEach(function(coffee) {
-        if (coffee.roast === selectedRoast) {
-            filteredCoffees.push(coffee);
-        }
-    });
-    tbody.innerHTML = renderCoffees(filteredCoffees);
-}
 
 // from http://www.ncausa.org/About-Coffee/Coffee-Roasts-Guide
 var coffees = [
@@ -48,10 +19,26 @@ var coffees = [
     {id: 14, name: 'French', roast: 'dark'},
 ];
 
-var tbody = document.querySelector('#coffees');
-var submitButton = document.querySelector('#submit');
-var roastSelection = document.querySelector('#roast-selection');
+/*
+    Uses Javascript filter function to take in a desired roast and compare it to all items in the Coffee Array
+    Input: desiredRoast - String: complete string to search the array element's ["roast"] for
+    Return: filteredCoffee - Array: Returns a new array of all items matching this roast
+*/
+function filterByRoast(desiredRoast){
+    let filteredCoffee = coffees.filter(function(element){return element.roast == desiredRoast});
 
-tbody.innerHTML = renderCoffees(coffees);
+    return filteredCoffee;
+}
 
-submitButton.addEventListener('click', updateCoffees);
+/*
+    Uses Javascript filter function to take in a desired name and compare it to all items in the Coffee Array
+    Input: desiredName - String: String to search the array element's ["name"] for
+    Return: filteredCoffee - Array: Returns a new array of all items matching this name
+*/
+function filterByName(desiredName){
+    let filteredCoffee = coffees.filter(function(element){return element.name == desiredName});
+
+    return filteredCoffee;
+}
+
+console.log(filterByName('Espresso'));
