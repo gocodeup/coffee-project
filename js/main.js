@@ -48,10 +48,35 @@ var coffees = [
     {id: 14, name: 'French', roast: 'dark'},
 ];
 
-var tbody = document.querySelector('#coffees');
+// var tbody = document.querySelector('#coffees');
 var submitButton = document.querySelector('#submit');
 var roastSelection = document.querySelector('#roast-selection');
 
-tbody.innerHTML = renderCoffees(coffees);
+// tbody.innerHTML = renderCoffees(coffees);
 
 submitButton.addEventListener('click', updateCoffees);
+
+
+// display coffe name and roast in fancy divs
+
+function renderCoffeeUpdated(coffee) {
+    var html = '<div>';
+    html += '<h1 >' + coffee.name + '</h1>';
+    html += '<p>' + coffee.roast + '</p>';
+    html += '</div>';
+    return html;
+}
+
+function renderCoffeesUpdated(coffees){
+    let html = '';
+    coffees.forEach(function(coffee){
+        html += renderCoffeeUpdated(coffee);
+    });
+
+    return html;
+}
+//console.log(renderCoffeeUpdated(coffees[0]));
+
+let coffeeList = document.getElementById('coffeeList');
+
+coffeeList.innerHTML= renderCoffeesUpdated(coffees);
