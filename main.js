@@ -41,11 +41,21 @@ function renderCoffees(coffees) {
 function updateCoffees(e) {
     e.preventDefault(); // don't submit the form, we just want to update the data
     let searchTerm = document.querySelector('#roast-name').value
-    // var selectedRoast = roastSelection.value;
+    var selectedRoast = roastSelection.value;
     var filteredCoffees = coffees.filter(currentCoffee => {
-        return currentCoffee.name === searchTerm
-        });
+        if (currentCoffee.roast == selectedRoast || selectedRoast == "All") {
+            if (searchTerm) {
+                return searchTerm.toLowerCase().includes(currentCoffee.name.toLowerCase())
+            } else {
+                return true
+            }
+        }
+    })
+
+
     tbody.innerHTML = renderCoffees(filteredCoffees);
+    console.log(filteredCoffees)
+    console.log(selectedRoast)
 }
 function viewRoast(e) {
     e.preventDefault();
@@ -59,6 +69,10 @@ function viewRoast(e) {
 //     e.preventDefault()
 //     updateCoffees(e)
 // }
+roastSelection.onchange = function (e) {
+    e.preventDefault()
+    updateCoffees(e)
+}
 coffeeSubmit.onclick = function(e) {
     e.preventDefault()
     updateCoffees(e)
