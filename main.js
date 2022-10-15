@@ -1,7 +1,6 @@
 "use strict"
 
 var tbody = document.querySelector('#coffees');
-var submitButton = document.querySelector('#submit');
 var roastSelection = document.querySelector('#roast-selection');
 var coffeeSubmit = document.querySelector('#coffee-submit')
 var roastName = document.querySelector('#roast-name')
@@ -67,6 +66,7 @@ coffeeSubmit.onclick = function(e) {
     updateCoffees(e)
 }
 roastName.onkeyup = updateCoffees
+
 updateCoffees()
 
 // submitButton.addEventListener('click', updateCoffees);
