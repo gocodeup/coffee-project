@@ -1,9 +1,27 @@
-table {
-    border-collapse: collapse;
-    margin: 15px 0;
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap');
+ body{
+     font-family: 'Roboto', sans-serif;
+    color: black;
+ }
+
+.mainHeader {
+    animation: fadein .5s;
+}
+.mainDiv {
+    animation: fadein 1.5s;
+    height: 75vh;
+
+}
+.coffeeDiv{
+    animation: fadein 5s;
+    overflow:scroll;
+    height: 65vh;
+}
+form{
+    animation: fadein 6s;
 }
 
-td, th {
-    border: 1px solid black;
-    padding: 5px 10px;
+@-webkit-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
 }
