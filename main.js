@@ -25,7 +25,7 @@ var coffees = [
     Return: filteredCoffee - Array: Returns a new array of all items matching this roast
 */
 function filterByRoast(desiredRoast){
-    let filteredCoffee = coffees.filter(function(element){return element.roast == desiredRoast});
+    let filteredCoffee = coffees.filter(function(element){return element.roast.toLowerCase() == desiredRoast.toLowerCase()});
 
     return filteredCoffee;
 }
@@ -36,9 +36,32 @@ function filterByRoast(desiredRoast){
     Return: filteredCoffee - Array: Returns a new array of all items matching this name
 */
 function filterByName(desiredName){
-    let filteredCoffee = coffees.filter(function(element){return element.name == desiredName});
+    let filteredCoffee = coffees.filter(function(element){return element.name.toLowerCase() == desiredName.toLowerCase()});
 
     return filteredCoffee;
 }
 
-console.log(filterByName('Espresso'));
+
+/*
+    The defualt state showing all Coffee Roasts and Names
+*/
+function defaultState(){
+    // Instead of making 3 arrays, assigning it to the results of filterByRoast(type)- just go it inline and combine into a brand new array of all roast types 
+    let allRoasts = filterByRoast('light').concat(filterByRoast('medium')).concat(filterByRoast('dark'));
+
+    allRoasts.forEach(function(element){
+        coffeeName.innerHTML += element.name + "<br>";
+        coffeeRoast.innerHTML += element.roast + "<br>";});
+}
+
+function partialFilterName(input){
+    let sorted = []
+    for( let j=0; j<coffees.length; j++){
+        if(input in coffees[j].name){
+            sorted.push(coffees[j])
+        }
+    }
+    return sorted;
+}
+
+console.log(partialFilterName('Cinn'));
