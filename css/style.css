@@ -1,0 +1,22 @@
+table {
+    border-collapse: collapse;
+    margin: 15px 0;
+}
+
+td, th {
+    border: 1px solid black;
+    padding: 5px 10px;
+}
+
+#coffeeListBG{
+    background-image: url("../img/beanBlackboard.jpeg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 1000px;
+    height: 700px;
+}
+
+#coffeeList{
+    color: white;
+
+}
