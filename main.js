@@ -46,14 +46,14 @@ function filterByName(desiredName){
     The defualt state showing all Coffee Roasts and Names
 */
 function defaultState(){
-    // Instead of making 3 arrays, assigning it to the results of filterByRoast(type)- just go it inline and combine into a brand new array of all roast types 
-    let allRoasts = filterByRoast('light').concat(filterByRoast('medium')).concat(filterByRoast('dark'));
-
-    allRoasts.forEach(function(element){
+    coffees.forEach(function(element){
         coffeeName.innerHTML += element.name + "<br>";
         coffeeRoast.innerHTML += element.roast + "<br>";});
 }
 
+/*
+    Sorts through all the coffee names to try and find a match for however number of letters given
+*/
 function partialFilterName(input){
     let sorted = []
     for( let j=0; j<coffees.length; j++){
@@ -64,4 +64,5 @@ function partialFilterName(input){
     return sorted;
 }
 
-console.log(partialFilterName('Cinn'));
+
+defaultState();
