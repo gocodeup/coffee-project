@@ -1,5 +1,6 @@
 "use strict"
 
+// Variables being declared
 var tbody = document.querySelector('#coffees');
 var roastSelection = document.querySelector('#roast-selection');
 var coffeeSubmit = document.querySelector('#coffee-submit')
@@ -21,6 +22,7 @@ var coffees = [
     {id: 14, name: 'French', roast: 'Dark', img:'img/french.jpeg'},
 ];
 
+// Coffee Objects --> Bootstrap Cards
 function renderCoffee(coffee) {
     var html = `<div id="${coffee.id}" class="border-3 card mb-2" style="width: 18rem;">`;
     html += `<div class="d-flex mt-3 justify-content-center"><h3 class="fw-bold">${coffee.name}</h3></div>`
@@ -30,6 +32,8 @@ function renderCoffee(coffee) {
 
     return html;
 }
+
+// Presenting Coffee Cards in Ascending Order
 function renderCoffees(coffees) {
     var html = '';
     for(var i = coffees.length - 1; i >= 0; i--) {
@@ -37,6 +41,9 @@ function renderCoffees(coffees) {
     }
     return html;
 }
+
+// todo: include ability to search incomplete terms.  Ex:  Search 'city' and return (City, Light City, Half City)
+// Preset Option Search Function
 function updateCoffees(e) {
     if (e) {
         e.preventDefault(); // don't submit the form, we just want to update the data
@@ -56,6 +63,7 @@ function updateCoffees(e) {
     tbody.innerHTML = renderCoffees(filteredCoffees);
 }
 
+// Event Responses
 roastSelection.onchange = updateCoffees
 coffeeSubmit.onclick = updateCoffees
 roastName.onkeyup = updateCoffees

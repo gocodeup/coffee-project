@@ -10,6 +10,7 @@
     <link href="https://fonts.googleapis.com/css?family=Abel|Anton&display=swap" rel="stylesheet">
 </head>
 <body>
+
 <div class="container-fluid">
     <div class="d-flex justify-content-center">
         <h1 class="display-1 fw-bold mt-5 text-nowrap">THE MEAN BEAN</h1>
@@ -18,11 +19,24 @@
     <form class="mb-4">
         <fieldset>
             <legend class="d-flex justify-content-center"><h3 class="mb-4">Choose Your $%@#!*& Roast!</h3></legend>
-            <div class="mb-3">
+
+            <!-- Preset Options & Custom Orders Tabs -->
+            <ul class="nav nav-pills">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">Can't think for yourself</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">I guess we're not good enough</a>
+                </li>
+            </ul>
+
+            <!-- todo: make event listener attached to tabs above that removes the 'display: none' class for the specific tab selected -->
+            <!-- Preset Options Inputs -->
+            <div class="mb-3 d-none">
                 <label for="roast-name" class="fw-bold form-label ms-2">Coffee Name Here:</label>
                 <input id="roast-name" type="text" class="form-control" placeholder="Enter Coffee Name Here">
             </div>
-            <div class="mb-3">
+            <div class="mb-3 d-none">
                 <label for="roast-selection" class="fw-bold ms-2">Select Roast Now:</label>
                     <select id="roast-selection" class="form-select" aria-label="Default select example">
                         <option value="All">All</option>
@@ -31,7 +45,49 @@
                         <option value="Dark">Dark</option>
                     </select>
             </div>
-            <button id="coffee-submit" type="submit" class="mb-4 btn btn-primary">Submit</button>
+
+            <!-- Custom Order Inputs -->
+            <div class="mb-3 d-none">
+                <label for="custom-name" class="fw-bold form-label ms-2">Roast Name:</label>
+                <input id="custom-name" type="text" class="form-control" placeholder="Enter Dumb Name Here I guess">
+            </div>
+            <div class="mb-3 d-none">
+                <label for="custom-selection" class="fw-bold ms-2">Select Roast Now:</label>
+                    <select id="custom-selection" class="form-select" aria-label="Default select example">
+                        <option value="All">All</option>
+                        <option value="Light">Light</option>
+                        <option value="Medium">Medium</option>
+                        <option value="Dark">Dark</option>
+                    </select>
+            </div>
+
+            <!-- Choose Image For Custom Order -->
+            <div>
+                <h3 class="d-none">If your coffee's soOoOo great, pick a picture for it then.</h3>
+                <div class="form-check d-none">
+                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                    <label class="form-check-label" for="flexRadioDefault1">
+                        <img src="img/stewie.png" class="custom-pics ">
+                    </label>
+                </div>
+                <div class="form-check d-none">
+                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+                    <label class="form-check-label" for="flexRadioDefault2">
+                        <img src="img/jesus.jpeg" class="custom-pics">
+                    </label>
+                </div>
+                <div class="form-check d-none">
+                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault3" checked>
+                    <label class="form-check-label" for="flexRadioDefault2">
+                        <img src="img/shrek.png" class="custom-pics">
+                    </label>
+                </div>
+                <button id="picture-submit" type="submit" class="mb-4 btn btn-primary d-none">Submit</button>
+<!-- todo: event listener or 'on click' that accepts the active radio selection upon button click, take that img, and assign it as the new cards img -->
+            </div>
+
+
+            <button id="coffee-submit" type="submit" class="mb-4 btn btn-primary d-none">Submit</button>
         </fieldset>
     </form>
     <div class="container-fluid d-flex justify-content-center mb-5">
