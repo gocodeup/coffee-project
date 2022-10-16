@@ -22,9 +22,9 @@ var coffees = [
 ];
 
 function renderCoffee(coffee) {
-    var html = `<div id="${coffee.id}" class="card" style="width: 18rem;">`;
-    html += `<div class="d-flex justify-content-center"><h3>${coffee.name}</h3></div>`
-    html += `<div  class="d-flex justify-content-center" style="float: right;"><p>${coffee.roast}</p></div>`
+    var html = `<div id="${coffee.id}" class="col-lg-1 col-md-1 card mb-2" style="width: 18rem;">`;
+    html += `<div class="d-flex mt-3 justify-content-center"><h3>${coffee.name}</h3></div>`
+    html += `<div  class="d-flex justify-content-center" style="float: right;"><p>roast type: ${coffee.roast}</p></div>`
     html += `<img src="${coffee.img}" class="card-img-top" alt="...">`
     html += '</div>';
 
@@ -44,7 +44,7 @@ function updateCoffees(e) {
     let searchTerm = document.querySelector('#roast-name').value
     var selectedRoast = roastSelection.value;
     var filteredCoffees = coffees.filter(currentCoffee => {
-        if (currentCoffee.roast == selectedRoast || selectedRoast == "All") {
+        if (currentCoffee.roast === selectedRoast || selectedRoast === "All") {
             if (searchTerm) {
                 return searchTerm.toLowerCase().includes(currentCoffee.name.toLowerCase())
             } else {
@@ -54,17 +54,10 @@ function updateCoffees(e) {
     })
     filteredCoffees.sort((coffeea, coffeeb) => coffeea.id < coffeeb.id? 0:-1)
     tbody.innerHTML = renderCoffees(filteredCoffees);
-    console.log(filteredCoffees)
-    console.log(selectedRoast)
 }
-roastSelection.onchange = function (e) {
-    e.preventDefault()
-    updateCoffees(e)
-}
-coffeeSubmit.onclick = function(e) {
-    e.preventDefault()
-    updateCoffees(e)
-}
+
+roastSelection.onchange = updateCoffees
+coffeeSubmit.onclick = updateCoffees
 roastName.onkeyup = updateCoffees
 
 updateCoffees()
