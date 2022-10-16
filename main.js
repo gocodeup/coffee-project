@@ -22,10 +22,10 @@ var coffees = [
 ];
 
 function renderCoffee(coffee) {
-    var html = `<div id="${coffee.id}" class="col-lg-1 col-md-1 card mb-2" style="width: 18rem;">`;
-    html += `<div class="d-flex mt-3 justify-content-center"><h3>${coffee.name}</h3></div>`
+    var html = `<div id="${coffee.id}" class="border-3 card mb-2" style="width: 18rem;">`;
+    html += `<div class="d-flex mt-3 justify-content-center"><h3 class="fw-bold">${coffee.name}</h3></div>`
     html += `<div  class="d-flex justify-content-center" style="float: right;"><p>roast type: ${coffee.roast}</p></div>`
-    html += `<img src="${coffee.img}" class="card-img-top" alt="...">`
+    html += `<img src="${coffee.img}" class="border-top border-3 card-img-top" alt="...">`
     html += '</div>';
 
     return html;
