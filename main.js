@@ -17,33 +17,34 @@ function renderCoffees(coffees) {
     }
     return html;
 }
-// filters coffee and makes new array 1
 
-function updateCoffees(e) {  //☕️☕️☕️☕️☕️
+function searchName(e) {  //new
+    e.preventDefault(); // don't submit the form, we just want to update the data
+    var searchedName = nameSearch.value.toLowerCase();
+    var filteredCoffees = [];
+    coffees.forEach(function(coffee) {
+        if (coffee.name.toLowerCase().includes(searchedName)) {
+            filteredCoffees.push(coffee);
+        }
+    });
+    tbody.innerHTML = renderCoffees(filteredCoffees);
+}
+
+
+function updateCoffees(e) {
     e.preventDefault(); // don't submit the form, we just want to update the data
     var selectedRoast = roastSelection.value;
     var filteredCoffees = [];
     coffees.forEach(function(coffee) {
-        if (coffee.roast === selectedRoast ) {
+        if (coffee.roast === selectedRoast) {
+            filteredCoffees.push(coffee);
+        } else if (roastSelection.value === "all"){
             filteredCoffees.push(coffee);
         }
+
     });
     tbody.innerHTML = renderCoffees(filteredCoffees);
 }
-function searchCoffees(e) {  //new
-    e.preventDefault(); // don't submit the form, we just want to update the data
-    // var selectedRoast = roastSelection.value;
-    var searchedRoast = roastSearch.value;
-    var filteredCoffees = [];
-    coffees.forEach(function(coffee) {
-        if (coffee.roast === searchedRoast ) {
-            filteredCoffees.push(coffee);
-        }
-    });
-    tbody.innerHTML = renderCoffees(filteredCoffees);
-}
-
-
 
 
 
@@ -68,14 +69,11 @@ var coffees = [
 var tbody = document.querySelector('#coffees');
 // var submitButton = document.querySelector('#search'); // ☕️☕️☕️☕️☕️
 var roastSelection = document.querySelector('#roast-selection')
-
-
+var nameSearch = document.getElementById('roast-search')// new
 
 tbody.innerHTML = renderCoffees(coffees);
 
 // submitButton.addEventListener('click', updateCoffees);
 roastSelection.addEventListener('change', updateCoffees);
-
-var roastSearch = document.querySelector('#roast-search')// new
-roastSearch.addEventListener('search',searchCoffees);//new
+nameSearch.addEventListener('input',searchName);//new
 
