@@ -5,8 +5,11 @@
 // ref var for html
 var tbody = document.querySelector('#coffees');
 var roastSelection = document.querySelector('#roast-selection');
-var coffeeSubmit = document.querySelector('#coffee-submit')
-var roastName = document.querySelector('#roast-name')
+var coffeeSubmit = document.querySelector('#coffee-submit');
+var roastName = document.querySelector('#roast-name');
+var customName = document.querySelector('#custom-name');
+var customSelection = document.querySelector('#custom-selection');
+var customCoffeeSubmit = document.querySelector('#custom-coffee-submit')
 var coffees = [
     {id: 1, name: 'Light City', roast: 'Light', img:'img/light_city.jpeg'},
     {id: 2, name: 'Half City', roast: 'Light', img:'img/half_city.webp'},
@@ -23,6 +26,9 @@ var coffees = [
     {id: 13, name: 'Italian', roast: 'Dark', img:'img/italy.jpeg'},
     {id: 14, name: 'French', roast: 'Dark', img:'img/french.jpeg'},
 ];
+var customCoffees = [
+    {id: 15, name: '', roast: '', img: ''},
+    ];
 
 // Coffee Objects --> Bootstrap Cards
 function renderCoffee(coffee) {
@@ -37,8 +43,10 @@ function renderCoffee(coffee) {
 
 // Presenting Coffee Cards in Ascending Order
 function renderCoffees(coffees) {
+    console.log('renderCoffees start');
     var html = '';
     for(var i = coffees.length - 1; i >= 0; i--) {
+        console.log("coffees[i]: ", coffees[i]);
         html += renderCoffee(coffees[i]);
     }
     return html;
@@ -50,10 +58,12 @@ function updateCoffees(e) {
     if (e) {
         e.preventDefault(); // don't submit the form, we just want to update the data
     }
-    let searchTerm = document.querySelector('#roast-name').value
+    console.log("coffees should have custom coffee after submit 'add coffee': ", coffees);
+    let searchTerm = roastName.value
     var selectedRoast = roastSelection.value;
     var filteredCoffees = coffees.filter(currentCoffee => {
         if (currentCoffee.roast === selectedRoast || selectedRoast === "All") {
+            console.log("search term ", searchTerm)
             if (searchTerm) {
                 return searchTerm.toLowerCase().includes(currentCoffee.name.toLowerCase())
             } else {
@@ -61,15 +71,50 @@ function updateCoffees(e) {
             }
         }
     })
+    console.log("filteredCoffees: ", filteredCoffees);
     filteredCoffees.sort((coffeea, coffeeb) => coffeea.id < coffeeb.id? 0:-1)
     tbody.innerHTML = renderCoffees(filteredCoffees);
 }
 
+
+    // gives the custom placeholder object a coffee name from input
+    function newObjectName () {
+        console.log("customName: ", customName.value);
+        customCoffees.name = customName.value
+        console.log("customCoffees.name: ", customCoffees.name);
+    }
+
+    // gives the custom placeholder object a new roast from the input
+    function newObjectRoast () {
+        console.log("customRoast: ", customSelection.value);
+        console.log(customSelection);
+        customCoffees.img = 'img/stewie.png'
+        customCoffees.roast = customSelection.value
+        console.log("customCoffees.roast: ", customCoffees.roast);
+    }
+
+//     updates the coffee object to add the newly custom coffee to the array of coffees
+function updateCoffeesObject() {
+
+    console.log('updateCoffeesObject clicked! ')
+
+    console.log("customCoffees: ", customCoffees);
+    coffees.unshift(customCoffees)
+    console.log("coffees: ", coffees);
+
+    // calls updateCoffees again to render the updated coffee object (with the new custom coffee)
+    updateCoffees()
+}
+
+
 // Event Responses
+
 roastSelection.onchange = updateCoffees
 coffeeSubmit.onclick = updateCoffees
 roastName.onkeyup = updateCoffees
-
+customName.onkeyup = newObjectName
+customSelection.onchange = newObjectRoast
+customCoffeeSubmit.onclick = updateCoffeesObject
 updateCoffees()
 
 // submitButton.addEventListener('click', updateCoffees);
