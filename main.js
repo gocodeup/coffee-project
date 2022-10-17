@@ -57,17 +57,17 @@ function defaultState(){
 
 /*
     Sorts through all the coffee names to try and find a match for however number of letters given
+    Input: 
 */
-function partialFilterName(input){
-    console.log("Beep");
-    let results = [];
-    if(input){
+function partialFilterName(searchString){
+    if(searchString){
+        let results = [];
         for(let i=0; i<coffees.length; i++){
-            if(coffees[i].name.slice(0,input.length)==input){
+            if(coffees[i].name.toLowerCase().slice(0,searchString.length)==searchString.toLowerCase()){
                 results.push(coffees[i]);
             }
         }
-        //return results;
+        return results;
     }
 }
 
