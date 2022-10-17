@@ -1,12 +1,86 @@
-table {
-    border-collapse: collapse;
-    margin: 15px 0;
+/*table {*/
+/*    border-collapse: collapse;*/
+/*    margin: 15px 0;*/
+/*}*/
+
+/*td, th {*/
+/*    border: 1px solid black;*/
+/*    padding: 5px 10px;*/
+/*}*/
+
+*{
+    box-sizing: border-box;
+    margin : 0;
+    padding: 0;
+    background-color: #171717 ;
+    /*background-color: #24252a ;*/
+
+}
+li, a, button{
+    font-family: ;
+    font-size: 16px;
+    color: #edf0f1;
+    text-decoration: none;
+}
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 20px;
+
+}
+.logo {
+    cursor: pointer;
+    width: 150px;
+
+}
+.nav-links{
+    list-style: none;
+}
+.nav-links li {
+    display:inline-block;
+    padding: 0px 20px;
+}
+.nav-links li a {
+    transition: all 0.3s ease 0s;
+}
+.nav-links li a:hover{
+    color:#1F51FF;
+}
+button {
+    padding: 9px 25px;
+    background-color: red;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+}
+button:hover{
+    color:#1F51FF;
+}
+.jumbotron{
+    display:flex;
+    align-items: center;
+    height: 450px;
+    background-size: cover ;
+    background-image: url("css-img/Untitled_design_27_21d8abf020.png");
+}
+h1{
+    width: 50%;
+    background: #CC5500;
+    opacity: 0.6;
+    text-align: center;
+
 }
 
-td, th {
-    border: 1px solid black;
-    padding: 5px 10px;
-}
+
+
+
+
+
+
+
+
 
 
 
