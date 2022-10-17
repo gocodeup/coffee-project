@@ -102,12 +102,16 @@ function updateCoffeeList() {
 
 function filterHelper(userInput, coffee){
     for(let i = 0; i < userInput.length; i++){
-        if(userInput[i] !== coffee.name[i]){
+        // ToDo bonus #2: case insensitive (added .toLowerCase() in if statement)
+        if(userInput[i].toLowerCase() !== coffee.name[i].toLowerCase()){
             return false;}
     };
-    if(roastSelected.value !== coffee.roast) {
-    return false;
-    };
+    // ToDo bonus #1: select "all" roasts
+    if(roastSelected.value !== "all"){
+        // ToDo #4: Select box for roast type
+        if(roastSelected.value !== coffee.roast) {
+            return false;
+    }};
     return true;
 }
 let roastSelected = document.getElementById("roast-select");
