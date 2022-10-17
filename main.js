@@ -38,7 +38,7 @@ function updateCoffees(e) {
     let filter = document.getElementById("search-term").value.toUpperCase();
     //console.log("filter is " + filter);
     coffees.forEach(function(coffee) {
-        if (coffee.roast === selectedRoast && coffee.name.toUpperCase().includes(filter)) {
+        if (((selectedRoast === 'all') || (coffee.roast === selectedRoast))&& (coffee.name.toUpperCase().includes(filter))){
             filteredCoffees.push(coffee);
         }
     });
@@ -72,3 +72,4 @@ tbody.innerHTML = renderCoffees(coffees);
 
 //submitButton.addEventListener('click', updateCoffees);
 searchBox.addEventListener('keyup', updateCoffees);
+roastSelection.addEventListener('change', updateCoffees);
