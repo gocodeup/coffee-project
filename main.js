@@ -68,6 +68,7 @@ function partialFilterName(searchString){
     if(searchString){
         let results = [];
         for(let i=0; i<coffees.length; i++){
+            // Change the coffeenames and searchString to lowercase (temporarily); then shorten the coffeename length (temporarily) to match the searchStrings length; and compare results
             if(coffees[i].name.toLowerCase().slice(0,searchString.length)==searchString.toLowerCase()){
                 results.push(coffees[i]);
             }
@@ -76,6 +77,7 @@ function partialFilterName(searchString){
     }
 }
 
+// Event listener that detects anytime the text input field is modified and passes it's current value to 'partialNameSearch' function; creating a real-time coffee filter system
 coffeeSearch.addEventListener('input', partialFilterName(coffeeSearch.value))
 
 defaultState();
