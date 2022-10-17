@@ -1,14 +1,15 @@
 "use strict"
 
-// function renderCoffee(coffee) {
-//     var html = '<tr class="coffee">';
-//     html += '<td>' + coffee.id + '</td>';
-//     html += '<td>' + coffee.name + '</td>';
-//     html += '<td>' + coffee.roast + '</td>';
-//     html += '</tr>';
-//
-//     return html;
-// }
+    //  Displays coffee name/id/roast into table from array
+//This is a DOM
+/*function renderCoffee(coffee) {
+     var html = '<tr class="coffee">'; //Adds a new  <tr> after the </thead> on line 30
+    html += '<td>' + coffee.name + '</td>'; //Add a <td> element into the new <tr> after line 30
+    html += '<td>' + coffee.roast + '</td>'; //Does same as above
+     html += '</tr>';
+
+     return html;
+ }*/
 
 
 function renderCoffee(coffee) {
@@ -27,7 +28,7 @@ function renderCoffees(coffees) {
     }
     return html;
 }
-
+// updates form as roasts are selected
 function updateCoffees(e) {
     e.preventDefault(); // don't submit the form, we just want to update the data
     var selectedRoast = roastSelection.value;
@@ -37,9 +38,9 @@ function updateCoffees(e) {
             filteredCoffees.push(coffee);
         }
     });
-    div.innerHTML = renderCoffees(filteredCoffees);
+    tbody.innerHTML = renderCoffees(filteredCoffees);
 }
-
+// Array of coffees to display
 // from http://www.ncausa.org/About-Coffee/Coffee-Roasts-Guide
 var coffees = [
     {id: 1, name: 'Light City', roast: 'light'},
@@ -58,10 +59,10 @@ var coffees = [
     {id: 14, name: 'French', roast: 'dark'},
 ];
 
-var div = document.querySelector('#coffees');
+var tbody = document.querySelector('#coffees');
 var submitButton = document.querySelector('#submit');
 var roastSelection = document.querySelector('#roast-selection');
 
-div.innerHTML = renderCoffees(coffees);
+tbody.innerHTML = renderCoffees(coffees);
 
 submitButton.addEventListener('click', updateCoffees);
