@@ -1,6 +1,8 @@
 "use strict"
 
 // Variables being declared
+
+// ref var for html
 var tbody = document.querySelector('#coffees');
 var roastSelection = document.querySelector('#roast-selection');
 var coffeeSubmit = document.querySelector('#coffee-submit')
