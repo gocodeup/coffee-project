@@ -15,6 +15,11 @@ body{
 /*    background-size: cover;*/
 /*}*/
 
+/*.title {*/
+/*    display: flex;*/
+/*    justify-content: center;*/
+/*    padding-top: 20em;*/
+/*}*/
 
 * {
     border: red 1px solid
