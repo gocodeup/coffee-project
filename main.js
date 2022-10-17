@@ -46,6 +46,8 @@ function filterByName(desiredName){
     Input: coffeeToDisplay - Array: The list of coffees to display on the screen
 */
 function renderResults(coffeeToDisplay){
+    coffeeName.innerHTML = "";
+    coffeeRoast.innerHTML = "";
     coffeeToDisplay.forEach(function(element){
         coffeeName.innerHTML += element.name + "<br>";
         coffeeRoast.innerHTML += element.roast + "<br>";});
@@ -56,7 +58,7 @@ function renderResults(coffeeToDisplay){
     The default state showing all Coffee Roasts and Names
 */
 function defaultState(){
-    renderResults(coffees);
+    renderResults(coffees);     // Renders the coffees using the default/ complete list of coffeetypes
 }
 
 /*
@@ -73,11 +75,13 @@ function partialFilterName(searchString){
                 results.push(coffees[i]);
             }
         }
-        return results;
+        renderResults(results);
+    }else{
+        defaultState();
     }
 }
 
 // Event listener that detects anytime the text input field is modified and passes it's current value to 'partialNameSearch' function; creating a real-time coffee filter system
-coffeeSearch.addEventListener('input', partialFilterName(coffeeSearch.value))
+coffeeSearch.addEventListener('input', function(){partialFilterName(this.value);});
 
 defaultState();
