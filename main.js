@@ -1,5 +1,5 @@
 "use strict"
-test
+
 // Array of coffees to display
 // from http://www.ncausa.org/About-Coffee/Coffee-Roasts-Guide
 var coffees = [
@@ -80,6 +80,26 @@ var nameSearch = document.querySelector('#coffeeSearch');
 
 div.innerHTML = renderCoffees(coffees);
 
+// This looks at the value of the searchbox
+let searchBox = document.getElementById("coffeeSearch")
+//This looks at value of RoastDropdown
+const roastType = document.getElementById("roast-selection")
+
+// This looks at change, outputs console of change
+roastType.addEventListener("change" ,(event) => {
+    console.log(roastType.value);
+});
+
+    /*
+        const selectElement = document.querySelector('.ice-cream');
+
+    selectElement.addEventListener('change',
+                (event) => {
+          const result = document.querySelector('.result');
+          result.textContent = `You like ${event.target.value}`;
+    });
+     */
+
 
 // timing
 // listen for change on the search field
@@ -89,6 +109,8 @@ div.innerHTML = renderCoffees(coffees);
 // -----
 // listen for change on inputChange (search and/or roast type)
 // onSubmit -> grab values of inputField and/or roastType
+//          Var searchBox grabs the input field
+
 // -> grab values: 1) find element id 2) .value
 // do these values match ANY of the existing coffees in my coffees array?
 // if yes, -> add matching coffee objects to filteredArr -> display the updated filteredArr, which contains coffees that match either/or (exact) input fields
