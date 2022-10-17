@@ -1,6 +1,6 @@
 "use strict"
 
-    //  Displays coffee name/id/roast into table from array
+//  Displays coffee name/id/roast into table from array
 //This is a DOM
 /*function renderCoffee(coffee) {
      var html = '<tr class="coffee">'; //Adds a new  <tr> after the </thead> on line 30
@@ -58,7 +58,7 @@ var coffees = [
     {id: 13, name: 'Italian', roast: 'dark'},
     {id: 14, name: 'French', roast: 'dark'},
 ];
-
+coffees = coffees.reverse();
 var tbody = document.querySelector('#coffees');
 var submitButton = document.querySelector('#submit');
 var roastSelection = document.querySelector('#roast-selection');
