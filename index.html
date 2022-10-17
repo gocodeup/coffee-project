@@ -2,32 +2,39 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title></title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coffee</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
+    
 </head>
 <body>
-    <h1>Coffee!</h1>
+    <h1 style="text-align: center">Coffee!</h1>
 
     <form>
-        <label for="roast-selection"></label>
+        <!-- <label for="roast-selection"></label>
         <select id="roast-selection">
             <option>light</option>
             <option>medium</option>
             <option>dark</option>
-        </select>
-        <input id="submit" type="submit" />
+        </select> -->
+        <label for="coffeeSearch" style="margin-left:50px">Search for a Coffee!</label>
+        <input type="text" id="coffeeSearch" placeholder="enterAName">
     </form>
 
-    <table>
-        <thead>
-            <tr>
-                <th>ID</th>
-                <th>NAME</th>
-                <th>ROAST</th>
-            </tr>
-        </thead>
-        <tbody id="coffees"></tbody>
-    </table>
+
+    <div id="coffee-holder"></div>
+    <div class="container">
+        <div class="row">
+            <div class="col-4">Name</div>
+            <div class="col-4">Roast</div>
+        </div>
+        <div class="row">
+            <div class="col-4" id="coffeeName"></div>
+            <div class="col-4" id="coffeeRoast"></div>
+        </div>
+    </div>
 
     <script src="main.js"></script>
 </body>
