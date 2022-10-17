@@ -55,14 +55,14 @@ function defaultState(){
     Sorts through all the coffee names to try and find a match for however number of letters given
 */
 function partialFilterName(input){
-    let sorted = []
-    for( let j=0; j<coffees.length; j++){
-        if(input in coffees[j].name){
-            sorted.push(coffees[j])
+    let results = [];
+
+    for(let i=0; i<coffees.length; i++){
+        if(coffees[i].name.slice(0,input.length)==input){
+            results.push(coffees[i]);
         }
     }
-    return sorted;
+    return results;
 }
-
 
 defaultState();
