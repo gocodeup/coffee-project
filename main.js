@@ -22,7 +22,7 @@ var coffees = [
 /*
     Uses Javascript filter function to take in a desired roast and compare it to all items in the Coffee Array
     Input: desiredRoast - String: complete string to search the array element's ["roast"] for
-    Return: filteredCoffee - Array: Returns a new array of all items matching this roast
+    Output: filteredCoffee - Array: Returns a new array of all items matching this roast
 */
 function filterByRoast(desiredRoast){
     let filteredCoffee = coffees.filter(function(element){return element.roast.toLowerCase() == desiredRoast.toLowerCase()});
@@ -33,7 +33,7 @@ function filterByRoast(desiredRoast){
 /*
     Uses Javascript filter function to take in a desired name and compare it to all items in the Coffee Array
     Input: desiredName - String: String to search the array element's ["name"] for
-    Return: filteredCoffee - Array: Returns a new array of all items matching this name
+    Output: filteredCoffee - Array: Returns a new array of all items matching this name
 */
 function filterByName(desiredName){
     let filteredCoffee = coffees.filter(function(element){return element.name.toLowerCase() == desiredName.toLowerCase()});
@@ -41,8 +41,14 @@ function filterByName(desiredName){
     return filteredCoffee;
 }
 
-function renderResults(results){
-    results.forEach(function(element){
+/*
+    Renders a list off coffee types on the website
+    Input: coffeeToDisplay - Array: The list of coffees to display on the screen
+*/
+function renderResults(coffeeToDisplay){
+    coffeeName.innerHTML = "";
+    coffeeRoast.innerHTML = "";
+    coffeeToDisplay.forEach(function(element){
         coffeeName.innerHTML += element.name + "<br>";
         coffeeRoast.innerHTML += element.roast + "<br>";});
 }
@@ -52,25 +58,30 @@ function renderResults(results){
     The default state showing all Coffee Roasts and Names
 */
 function defaultState(){
-    renderResults(coffees);
+    renderResults(coffees);     // Renders the coffees using the default/ complete list of coffeetypes
 }
 
 /*
     Sorts through all the coffee names to try and find a match for however number of letters given
+    Input: searchString - String : The letters to attempt to match
+    Output: results - Array: Any possible results that match the searchString
 */
-function partialFilterName(input){
-    console.log("Beep");
-    let results = [];
-    if(input){
+function partialFilterName(searchString){
+    if(searchString){
+        let results = [];
         for(let i=0; i<coffees.length; i++){
-            if(coffees[i].name.slice(0,input.length)==input){
+            // Change the coffeenames and searchString to lowercase (temporarily); then shorten the coffeename length (temporarily) to match the searchStrings length; and compare results
+            if(coffees[i].name.toLowerCase().slice(0,searchString.length)==searchString.toLowerCase()){
                 results.push(coffees[i]);
             }
         }
-        //return results;
+        renderResults(results);
+    }else{
+        defaultState();
     }
 }
 
-coffeeSearch.addEventListener('input', partialFilterName(coffeeSearch.value))
+// Event listener that detects anytime the text input field is modified and passes it's current value to 'partialNameSearch' function; creating a real-time coffee filter system
+coffeeSearch.addEventListener('input', function(){partialFilterName(this.value);});
 
 defaultState();
