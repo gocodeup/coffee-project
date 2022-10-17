@@ -21,47 +21,61 @@
             <legend class="d-flex justify-content-center"><h3 class="mb-4">Choose Your $%@#!*& Roast!</h3></legend>
 
             <!-- Preset Options & Custom Orders Tabs -->
-            <ul class="nav nav-pills">
-                <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#">Can't think for yourself</a>
+
+            <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link active" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home" type="button" role="tab" aria-controls="pills-home" aria-selected="true">Can't think for yourself?</button>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">I guess we're not good enough</a>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#pills-profile" type="button" role="tab" aria-controls="pills-profile" aria-selected="false">I guess we're not good enough!</button>
                 </li>
             </ul>
 
-            <!-- todo: make event listener attached to tabs above that removes the 'display: none' class for the specific tab selected -->
             <!-- Preset Options Inputs -->
-            <div class="mb-3 d-none">
-                <label for="roast-name" class="fw-bold form-label ms-2">Coffee Name Here:</label>
-                <input id="roast-name" type="text" class="form-control" placeholder="Enter Coffee Name Here">
-            </div>
-            <div class="mb-3 d-none">
-                <label for="roast-selection" class="fw-bold ms-2">Select Roast Now:</label>
-                    <select id="roast-selection" class="form-select" aria-label="Default select example">
-                        <option value="All">All</option>
-                        <option value="Light">Light</option>
-                        <option value="Medium">Medium</option>
-                        <option value="Dark">Dark</option>
-                    </select>
+
+            <div class="tab-content" id="pills-tabContent">
+                <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab" tabindex="0">
+                    <div class="mb-3">
+                        <label for="roast-name" class="fw-bold form-label ms-2">Coffee Name Here:</label>
+                        <input id="roast-name" type="text" class="form-control" placeholder="Enter Coffee Name Here">
+                    </div>
+                    <div class="mb-3">
+                        <label for="roast-selection" class="fw-bold ms-2">Select Roast Now:</label>
+                        <select id="roast-selection" class="mb-3 form-select" aria-label="Default select example">
+                            <option value="All">All</option>
+                            <option value="Light">Light</option>
+                            <option value="Medium">Medium</option>
+                            <option value="Dark">Dark</option>
+                        </select>
+                        <button id="coffee-submit" type="submit" class="mb-4 btn btn-primary">Submit</button>
+                    </div>
+                </div>
+
+                <!-- Custom Order Inputs -->
+
+                <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab" tabindex="0">
+                    <div class="mb-3">
+                        <label for="custom-name" class="fw-bold form-label ms-2">Roast Name:</label>
+                        <input id="custom-name" type="text" class="form-control" placeholder="Enter Dumb Name Here I guess">
+                    </div>
+                    <div class="mb-3">
+                        <label for="custom-selection" class="fw-bold ms-2">Select Roast Now:</label>
+                        <select id="custom-selection" class="mb-3 form-select" aria-label="Default select example">
+                            <option value="All">All</option>
+                            <option value="Light">Light</option>
+                            <option value="Medium">Medium</option>
+                            <option value="Dark">Dark</option>
+                        </select>
+                        <button id="custom-coffee-submit" type="submit" class="mb-4 btn btn-primary">Submit</button>
+                    </div>
+                </div>
             </div>
 
-            <!-- Custom Order Inputs -->
-            <div class="mb-3 d-none">
-                <label for="custom-name" class="fw-bold form-label ms-2">Roast Name:</label>
-                <input id="custom-name" type="text" class="form-control" placeholder="Enter Dumb Name Here I guess">
-            </div>
-            <div class="mb-3 d-none">
-                <label for="custom-selection" class="fw-bold ms-2">Select Roast Now:</label>
-                    <select id="custom-selection" class="form-select" aria-label="Default select example">
-                        <option value="All">All</option>
-                        <option value="Light">Light</option>
-                        <option value="Medium">Medium</option>
-                        <option value="Dark">Dark</option>
-                    </select>
-            </div>
+
+            <!-- todo: make event listener attached to tabs above that removes the 'display: none' class for the specific tab selected -->
 
             <!-- Choose Image For Custom Order -->
+
             <div>
                 <h3 class="d-none">If your coffee's soOoOo great, pick a picture for it then.</h3>
                 <div class="form-check d-none">
@@ -83,19 +97,18 @@
                     </label>
                 </div>
                 <button id="picture-submit" type="submit" class="mb-4 btn btn-primary d-none">Submit</button>
-<!-- todo: event listener or 'on click' that accepts the active radio selection upon button click, take that img, and assign it as the new cards img -->
+                <!-- todo: event listener or 'on click' that accepts the active radio selection upon button click, take that img, and assign it as the new cards img -->
             </div>
 
 
-            <button id="coffee-submit" type="submit" class="mb-4 btn btn-primary d-none">Submit</button>
         </fieldset>
     </form>
     <div class="container-fluid d-flex justify-content-center mb-5">
-<!--        <div class="col">-->
+        <!--        <div class="col">-->
 
-                    <div id="coffees"></div>
+        <div id="coffees"></div>
 
-<!--        </div>-->
+        <!--        </div>-->
     </div>
     <script src="main.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
