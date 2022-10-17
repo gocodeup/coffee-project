@@ -29,6 +29,7 @@ function renderCoffee(coffee) {
 
 
 function renderCoffees(coffees) {
+    console.log("coffees in render Coffee: ", coffees)
     var html = '';
     for(var i = coffees.length - 1; i >= 0; i--) {
         html += renderCoffee(coffees[i]);
@@ -38,6 +39,7 @@ function renderCoffees(coffees) {
 // updates form as roasts are selected
 function updateCoffees(e) {
     e.preventDefault(); // don't submit the form, we just want to update the data
+    console.log("updateCoffees ran");
     var selectedRoast = roastSelection.value;
     var filteredCoffees = [];
     coffees.forEach(function(coffee) {
@@ -55,6 +57,7 @@ function updateCoffees(e) {
             */
 function searchCoffees(e) {
     e.preventDefault(); // don't submit the form, we just want to update the data
+    console.log("searchCoffees ran");
     var selectedName = nameSearch.value;
     var searchedCoffees = [];
     coffees.forEach(function(coffee) {
@@ -76,5 +79,17 @@ var nameSearch = document.querySelector('#coffeeSearch');
 
 div.innerHTML = renderCoffees(coffees);
 
+
+// timing
+// listen for change on the search field
+// listen for change on the dropdown selection
+// ifChange in either input, then pass those values into submit -> trigger a re-render based on items submitted
+
+// -----
+// listen for change on inputChange (search and/or roast type)
+// onSubmit -> grab values of inputField and/or roastType
+// -> grab values: 1) find element id 2) .value
+// do these values match ANY of the existing coffees in my coffees array?
+// if yes, -> add matching coffee objects to filteredArr -> display the updated filteredArr, which contains coffees that match either/or (exact) input fields
 submitButton.addEventListener('click', updateCoffees);
 submitButton.addEventListener('click', searchCoffees);
