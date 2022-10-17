@@ -22,7 +22,7 @@ var coffees = [
 /*
     Uses Javascript filter function to take in a desired roast and compare it to all items in the Coffee Array
     Input: desiredRoast - String: complete string to search the array element's ["roast"] for
-    Return: filteredCoffee - Array: Returns a new array of all items matching this roast
+    Output: filteredCoffee - Array: Returns a new array of all items matching this roast
 */
 function filterByRoast(desiredRoast){
     let filteredCoffee = coffees.filter(function(element){return element.roast.toLowerCase() == desiredRoast.toLowerCase()});
@@ -33,7 +33,7 @@ function filterByRoast(desiredRoast){
 /*
     Uses Javascript filter function to take in a desired name and compare it to all items in the Coffee Array
     Input: desiredName - String: String to search the array element's ["name"] for
-    Return: filteredCoffee - Array: Returns a new array of all items matching this name
+    Output: filteredCoffee - Array: Returns a new array of all items matching this name
 */
 function filterByName(desiredName){
     let filteredCoffee = coffees.filter(function(element){return element.name.toLowerCase() == desiredName.toLowerCase()});
@@ -41,8 +41,12 @@ function filterByName(desiredName){
     return filteredCoffee;
 }
 
-function renderResults(results){
-    results.forEach(function(element){
+/*
+    Renders a list off coffee types on the website
+    Input: coffeeToDisplay - Array: The list of coffees to display on the screen
+*/
+function renderResults(coffeeToDisplay){
+    coffeeToDisplay.forEach(function(element){
         coffeeName.innerHTML += element.name + "<br>";
         coffeeRoast.innerHTML += element.roast + "<br>";});
 }
@@ -57,7 +61,8 @@ function defaultState(){
 
 /*
     Sorts through all the coffee names to try and find a match for however number of letters given
-    Input: 
+    Input: searchString - String : The letters to attempt to match
+    Output: results - Array: Any possible results that match the searchString
 */
 function partialFilterName(searchString){
     if(searchString){
