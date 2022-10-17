@@ -1,3 +1,26 @@
+body{
+    background-color: #090707 !important;
+    color: white !important ;
+}
+
+.navbar {
+    background-color: #090707;
+    border-bottom: white;
+}
+
+/*.jumbotron {*/
+/*    background-image: url("/img/home-7-video-img-1.jpg");*/
+/*    height: 400px;*/
+/*    width: 100%;*/
+/*    background-size: cover;*/
+/*}*/
+
+/*.title {*/
+/*    display: flex;*/
+/*    justify-content: center;*/
+/*    padding-top: 20em;*/
+/*}*/
+
 * {
     border: red 1px solid
 }
