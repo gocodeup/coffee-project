@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+</head>
+<body>
+<!--Jumbotron header-->
+<div class="mb-5 p-5 bg-primary text-white fluid" style="text-align: center">
+    <h1>Coffee!</h1>
+</div>
+
+<!--<h1 class="d-flex justify-content-center">Coffee!</h1>-->
+
+<!--overall container-->
+<div class="container">
+    <div class="row">
+
+        <!--        Coffees-->
+        <div class="container text-center">
+            <div class="row" style="">
+                <div class="col-6">
+                    <!--        <div class="col-3" id="oddCoffees">-->
+                    <div id="coffees"></div>
+                    <!--        </div>-->
+                    <!--        <div class="col-3" id="evenCoffees"></div>-->
+                    <!--    </div>-->
+                </div>
+                <!--    search/add cards-->
+                <div class="col-6">
+                    <div class="card" style="width: 100%;height: 130px">
+                        <div class="card-header">
+                            Featured Coffees
+                        </div>
+                        <form id="search-roast">
+                            <label for="roast-selection" style="margin-top: 30px"></label>
+                            <select id="roast-selection">
+                                <!-- added all option below-->
+                                <option selected>all</option>
+                                <option>light</option>
+                                <option>medium</option>
+                                <option>dark</option>
+                            </select>
+                            <br/>
+                            <input type="text" name="search-term" id="search-term" required placeholder="Choose your brew!" style="margin-top: 7px">
+                            <label for="search-term"></label>
+
+                            <!-- removed submit button and traded it for search box with event listener-->
+                            <!-- <input id="submit" type="submit" />-->
+                        </form>
+                    </div>
+                    <br>
+                    <div class="card" style="width: 100%;height: 130px">
+                        <div class="card-header">
+                            Add New Coffee
+                        </div>
+                        <form id="add-a-coffee">
+                            <label for="new-coffee-roast"; style="margin-top: 30px"></label>
+                            <select id="new-coffee-roast" name="new-coffee-roast">
+                                <option>light</option>
+                                <option>medium</option>
+                                <option>dark</option>
+                            </select>
+                            <br/>
+                            <input type="text" placeholder="Enter new coffee name" name="new-coffee-name-input" id="new-coffee-name-input" required style="margin-top: 7px">
+                            <label for="new-coffee-name-input"></label>
+                            <input id="new-coffee-submit" type="submit" value="ADD">
+                        </form>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="/Users/alvinmckenzie/Library/Application Support/JetBrains/IntelliJIdea2022.2/scratches/scratch_4.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+
+</body>
+</html>
