@@ -41,28 +41,36 @@ function filterByName(desiredName){
     return filteredCoffee;
 }
 
-
-/*
-    The defualt state showing all Coffee Roasts and Names
-*/
-function defaultState(){
-    coffees.forEach(function(element){
+function renderResults(results){
+    results.forEach(function(element){
         coffeeName.innerHTML += element.name + "<br>";
         coffeeRoast.innerHTML += element.roast + "<br>";});
+}
+
+
+/*
+    The default state showing all Coffee Roasts and Names
+*/
+function defaultState(){
+    renderResults(coffees);
 }
 
 /*
     Sorts through all the coffee names to try and find a match for however number of letters given
 */
 function partialFilterName(input){
+    console.log("Beep");
     let results = [];
-
-    for(let i=0; i<coffees.length; i++){
-        if(coffees[i].name.slice(0,input.length)==input){
-            results.push(coffees[i]);
+    if(input){
+        for(let i=0; i<coffees.length; i++){
+            if(coffees[i].name.slice(0,input.length)==input){
+                results.push(coffees[i]);
+            }
         }
+        //return results;
     }
-    return results;
 }
+
+coffeeSearch.addEventListener('input', partialFilterName(coffeeSearch.value))
 
 defaultState();
