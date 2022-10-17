@@ -1,3 +1,13 @@
+body{
+    background-color: #090707 !important;
+    color: white !important ;
+}
+
+.navbar {
+    background-color: #090707;
+    border-bottom: white;
+}
+
 * {
     border: red 1px solid
 }
