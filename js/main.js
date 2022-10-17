@@ -1,37 +1,8 @@
 "use strict"
 
-function renderCoffee(coffee) {
-    var html = '<tr class="coffee">';
-    html += '<td>' + coffee.id + '</td>';
-    html += '<td>' + coffee.name + '</td>';
-    html += '<td>' + coffee.roast + '</td>';
-    html += '</tr>';
-
-    return html;
-}
-
-function renderCoffees(coffees) {
-    var html = '';
-    for(var i = coffees.length - 1; i >= 0; i--) {
-        html += renderCoffee(coffees[i]);
-    }
-    return html;
-}
-
-function updateCoffees(e) {
-    e.preventDefault(); // don't submit the form, we just want to update the data
-    var selectedRoast = roastSelection.value;
-    var filteredCoffees = [];
-    coffees.forEach(function(coffee) {
-        if (coffee.roast === selectedRoast) {
-            filteredCoffees.push(coffee);
-        }
-    });
-    tbody.innerHTML = renderCoffees(filteredCoffees);
-}
 
 // from http://www.ncausa.org/About-Coffee/Coffee-Roasts-Guide
-var coffees = [
+let coffees = [
     {id: 1, name: 'Light City', roast: 'light'},
     {id: 2, name: 'Half City', roast: 'light'},
     {id: 3, name: 'Cinnamon', roast: 'light'},
@@ -47,18 +18,37 @@ var coffees = [
     {id: 13, name: 'Italian', roast: 'dark'},
     {id: 14, name: 'French', roast: 'dark'},
 ];
+// Refactoring coffees into localStorage for bonus #3, persisting data between page reloads
+// on initial page load, set given coffees array to localStorage
+// All modifications to data will happen in localStorage
 
-// var tbody = document.querySelector('#coffees');
-var submitButton = document.querySelector('#submit');
-var roastSelection = document.querySelector('#roast-selection');
+// if localstorage does not have a copy of coffees, then set localStorage.localCoffees = coffees
+// otherwise, do not overwrite existing array in localStorage.localCoffees
+if(localStorage.getItem("localCoffees") == null){
+    localStorage.setItem("localCoffees", JSON.stringify(coffees));
+}
 
-// tbody.innerHTML = renderCoffees(coffees);
+let jsCoffees; // javascript variable to act as temp storage for localStorage array
 
-submitButton.addEventListener('click', updateCoffees);
+updatejsCoffees(); // update jsCoffees to match localStorage
 
 
-// display coffe name and roast in fancy divs
+// pull localStorage.localCoffees to jsCoffees;
+function updatejsCoffees(){
+    jsCoffees = JSON.parse( localStorage.getItem("localCoffees"));
+}
+// update localStorage with jsCoffees
+function updateLocalCoffees(){
+    localStorage.setItem("localCoffees", JSON.stringify(jsCoffees));
+}
 
+/* localStorage procedure:
+* when adding a coffee: jsCoffees.push(newCoffee) then updateLocalCoffees()
+* To access localStorage: updatejsCoffees(), then use jsCoffees
+* */
+
+
+// Todo #1: Use divs instead of table
 function renderCoffeeUpdated(coffee) {
     var html = '<div>';
     html += '<h1 >' + coffee.name + '</h1>';
@@ -67,39 +57,40 @@ function renderCoffeeUpdated(coffee) {
     return html;
 }
 
-function renderCoffeesUpdated(coffees){
+function renderCoffeesUpdated(coffeesToRender){
     let html = '';
-    coffees.forEach(function(coffee){
+    //console.log(typeof inputCoffeeArray);
+    // getting coffee array from localStorage:
+    // ToDo #2: Initially display coffees in ascending ID order
+    coffeesToRender.forEach(function(coffee){
+        // console.log(coffee);
         html += renderCoffeeUpdated(coffee);
     });
 
     return html;
 }
-//console.log(renderCoffeeUpdated(coffees[0]));
 
 let coffeeList = document.getElementById('coffeeList');
-
-coffeeList.innerHTML= renderCoffeesUpdated(coffees);
+updatejsCoffees()
+coffeeList.innerHTML= renderCoffeesUpdated(jsCoffees);
 let coffeeChoice = document.getElementById("coffeeSearch");
-coffeeChoice.addEventListener("change", updateCoffeeList);
+// changed event type to keyup for expected data:
+coffeeChoice.addEventListener("keyup", updateCoffeeList);
+
 function updateCoffeeList() {
     let coffeeSelected = coffeeChoice.value;
     let filteredCoffees = [];
-    coffees.forEach(function(coffee) {
-        // console.log(coffeeSelected[0] + coffee.name[0]);
-        // for ( let i = 0; i < coffeeSelected.length; i++){
-        // if(coffeeSelected[0] === coffee.name[0]){
-        //      filteredCoffees.push(coffee);
-        //  }});
+    // getting coffee array from localStorage:
+    updatejsCoffees();
+    jsCoffees.forEach(function(coffee) {
         if (filterHelper(coffeeSelected, coffee)) {
             filteredCoffees.push(coffee);
         }
     })
-    console.log(filteredCoffees);
     coffeeList.innerHTML= renderCoffeesUpdated(filteredCoffees);
-
 }
 
+// ToDo #3: filter the coffees being displayed by user inputs
 function filterHelper(userInput, coffee){
     for(let i = 0; i < userInput.length; i++){
         // ToDo bonus #2: case insensitive (added .toLowerCase() in if statement)
@@ -115,5 +106,51 @@ function filterHelper(userInput, coffee){
     return true;
 }
 let roastSelected = document.getElementById("roast-select");
-console.log(roastSelected.value);
+// console.log(roastSelected.value);
 roastSelected.addEventListener("change", updateCoffeeList);
+
+
+// Todo Bonus 3: Add new Coffee from user Input
+
+/*
+* new form with Name and Roast inputs ✅
+* form submit button ✅
+* that form needs getelementbyid ✅
+* make sure input is valid (coffee name doesn't have number, ect) ✅
+* push new coffee object to coffees variable ✅
+* updateCoffees() ✅
+* Persist between page loads/refresh ✅
+* */
+
+let newCoffeeSubmit = document.getElementById("newCoffeeSubmit");
+let newCoffeeName = document.getElementById("newCoffeeName");
+let newCoffeeRoast = document.getElementById("newCoffeeRoast");
+
+newCoffeeSubmit.addEventListener("click", addCoffeeToCoffees);
+
+// submit button event listener on click => get data from form
+function addCoffeeToCoffees(){
+
+    updatejsCoffees();
+    let coffee = {id: jsCoffees.length + 1, name: newCoffeeName.value, roast: newCoffeeRoast.value}
+    if(coffee.name.length > 0 && coffee.roast.length > 0){
+        // update jsCoffees from local storage with updatejsCoffees() function
+        updatejsCoffees()
+        // update coffees with new coffee
+        jsCoffees.push(coffee);
+        // set localStorage.coffees to new coffees array
+        updateLocalCoffees();
+
+        // getting coffee array from localStorage (testing):
+        // console.log(JSON.parse(localStorage.getItem("coffees")));
+
+    } else {
+        displayError("invalid coffee name or roast selection");
+    }
+
+    updateCoffeeList();
+}
+
+function displayError(errorMessage){
+    console.log(errorMessage);
+}
