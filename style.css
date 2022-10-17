@@ -1,6 +1,21 @@
 * {
-    /*border: red 1px solid*/
+    border: red 1px solid
 }
+
+:root {
+    --wt: #ffffff;
+    --blue: #1e90ff;
+    --dblue:#0c3448;
+    --lb:#e5a97c;
+    --mb:#c17743;
+    --dbrown:#37201c;
+    --lg:#9db57c;
+    --mg:#526024;
+    --dg:#9db57c;
+}
+
+/*example*/
+/*body { background-color: var(--blue); }*/
 
 table {
     border-collapse: collapse;
