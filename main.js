@@ -1,20 +1,5 @@
 "use strict"
 
-// When the page loads, the coffees should be sorted by their ids in ascending order
-//
-// dd functionality to search through the coffees by name, and display only the coffees that match the provided search term (You will need to add an input field to the existing form for this)
-//
-// Add functionality to update the displayed coffee as the user types into the search box, or as soon as they select an option from the select.
-
-// Add an option to select all roasts for roast type
-//
-// Make your name search case insensitive
-//
-// Allow the user to add new coffees to the page
-//
-// Create another form on the page that has an input for the coffee name, and a select to choose the coffee roast. When the form is submitted, the new coffee should appear on the page. (Note that any new coffees you add will be lost when you refresh the page, for an extra challenge, research how localStorage works and see if you can find a way to persist the data)
-
-
 function renderCoffee(coffee) {
     var html = '<div class="coffee id="' + coffee.id + '">';
     html += '<h2>' + coffee.name + '</h2>';
@@ -25,6 +10,8 @@ function renderCoffee(coffee) {
 
 function renderCoffees(coffees) {
     var html = '';
+    // When the page loads, the coffees should be sorted by their ids in ascending order
+    // changed for loop to load in order of index
     for (let i = 0; i < coffees.length; i++) {
         html += renderCoffee(coffees[i]);
     }
@@ -32,12 +19,16 @@ function renderCoffees(coffees) {
 }
 
 function updateCoffees(e) {
-    e.preventDefault(); // don't submit the form, we just want to update the data
+    // no submit button so we don't need this conditional
+    // if (e) {
+    //     e.preventDefault(); // don't submit the form, we just want to update the data
+    // }
     var selectedRoast = roastSelection.value;
     var filteredCoffees = [];
+    // added filter variable to contain value of search box, ensuring case-insensitive
     let filter = document.getElementById("search-term").value.toUpperCase();
-    //console.log("filter is " + filter);
     coffees.forEach(function(coffee) {
+        // added logic to conditional below to check all roasts and the search filter criteria, ensuring case-insensitive
         if (((selectedRoast === 'all') || (coffee.roast === selectedRoast))&& (coffee.name.toUpperCase().includes(filter))){
             filteredCoffees.push(coffee);
         }
@@ -63,13 +54,49 @@ var coffees = [
     {id: 14, name: 'French', roast: 'dark'},
 ];
 
+function addANewCoffee(e) {
+    if (e) {
+        e.preventDefault(); // don't submit the form, we just want to update the data
+    }
+    // build new coffee array object using inputs
+    let id = coffees.length + 1;
+    let roast = document.querySelector('#new-coffee-roast').value;
+    let name = document.querySelector('#new-coffee-name-input').value;
+    // kick back out if user did not enter a name
+    if (name === "") {
+        alert('Please enter a name for the coffee')
+    } else {  //  if a name was entered, push object to array and update display
+        let newCoffeeObj = {
+            id,
+            name,
+            roast
+        };
+        coffees.push(newCoffeeObj);
+        updateCoffees();
+    }
+}
+
 var tbody = document.querySelector('#coffees');
+// commented out submit button below, and replaced with search box event listener
 //var submitButton = document.querySelector('#submit');
+
 var roastSelection = document.querySelector('#roast-selection');
+
+// add functionality to search through the coffees by name, and display only the coffees that match the provided search term (You will need to add an input field to the existing form for this)
+//  added event listener for the search box so it reacts immediately without submit button
 let searchBox = document.querySelector('#search-term');
+
+// query selector for the event handler for adding a new coffee
+let newCoffeeBox = document.querySelector("#new-coffee-submit");
 
 tbody.innerHTML = renderCoffees(coffees);
 
-//submitButton.addEventListener('click', updateCoffees);
+// commented out submit button below, and replaced with search box event listener
+// submitButton.addEventListener('click', updateCoffees);
 searchBox.addEventListener('keyup', updateCoffees);
+
+// added event listener so selection of roast reacts on change to add 'all' selection functionality
 roastSelection.addEventListener('change', updateCoffees);
+
+// event handler for adding a new coffee
+newCoffeeBox.addEventListener('click', addANewCoffee);

@@ -6,24 +6,42 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Coffee!</h1>
+<h1>Coffee!</h1>
 
-    <form>
-        <label for="roast-selection"></label>
-        <select id="roast-selection">
-            <option selected>all</option>
-            <option>light</option>
-            <option>medium</option>
-            <option>dark</option>
-        </select>
-        <br/>
-        <input type="text" name="search-term" id="search-term" required>
-        <label for="search-term">Enter a name to search</label>
-<!--        <input id="submit" type="submit" />-->
-    </form>
+<div><h2>Search for a coffee</h2></div>
+<form id="search-roast">
+    <label for="roast-selection"></label>
+    <select id="roast-selection">
+        <!-- added all option below-->
+        <option selected>all</option>
+        <option>light</option>
+        <option>medium</option>
+        <option>dark</option>
+    </select>
+    <br/>
+    <input type="text" name="search-term" id="search-term" required>
+    <label for="search-term">Enter a name to search</label>
+    <!-- removed submit button and traded it for search box with event listener-->
+    <!-- <input id="submit" type="submit" />-->
+</form>
 
+<!-- added form to add a coffee -->
+<div><h2>Add a new coffee</h2></div>
+<form id="add-a-coffee">
+    <label for="new-coffee-roast"></label>
+    <select id="new-coffee-roast" name="new-coffee-roast">
+        <option>light</option>
+        <option>medium</option>
+        <option>dark</option>
+    </select>
+    <br/>
+    <input type="text" placeholder="Enter new coffee name" name="new-coffee-name-input" id="new-coffee-name-input" required>
+    <label for="new-coffee-name-input"></label>
+    <input id="new-coffee-submit" type="submit" value="new-coffee-name">
+</form>
 
- <div id="coffees"></div>
+<!-- added div instead of table but kept same id -->
+<div id="coffees"></div>
 <!--    <table>-->
 <!--        <thead>-->
 <!--            <tr>-->
@@ -34,7 +52,6 @@
 <!--        </thead>-->
 <!--        <tbody id="coffees"></tbody>-->
 <!--    </table>-->
-
-    <script src="main.js"></script>
+<script src="main.js"></script>
 </body>
 </html>
