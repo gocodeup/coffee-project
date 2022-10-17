@@ -32,11 +32,13 @@ var customCoffees = [
 
 // Coffee Objects --> Bootstrap Cards
 function renderCoffee(coffee) {
-    var html = `<div id="${coffee.id}" class="border-3 card mb-2" style="width: 18rem;">`;
-    html += `<div class="d-flex mt-3 justify-content-center"><h3 class="fw-bold">${coffee.name}</h3></div>`
-    html += `<div  class="d-flex justify-content-center" style="float: right;"><p>roast type: ${coffee.roast}</p></div>`
-    html += `<img src="${coffee.img}" class="border-top border-3 card-img-top" alt="...">`
-    html += '</div>';
+    var html = `<div class="container-fluid justify-content-center col-12 col-md-6 col-lg-4 mb-3">`;
+    html += `<div id="${coffee.id}"  class="card h-100 card-body">`;
+    html += `<h3 class="d-flex justify-content-center card-title">${coffee.name}</h3>`
+    html += `<p class="d-flex justify-content-center">roast type: ${coffee.roast}</p>`;
+    html += `<img src="${coffee.img}" class="card-img-top" alt="...">`;
+    html += `</div>`;
+    html += `</div>`;
 
     return html;
 }
@@ -46,7 +48,7 @@ function renderCoffees(coffees) {
     console.log('renderCoffees start');
     var html = '';
     for(var i = coffees.length - 1; i >= 0; i--) {
-        console.log("coffees[i]: ", coffees[i]);
+        // console.log("coffees[i]: ", coffees[i]);
         html += renderCoffee(coffees[i]);
     }
     return html;
@@ -70,7 +72,7 @@ function updateCoffees(e) {
                 return true
             }
         }
-    })
+    });
     console.log("filteredCoffees: ", filteredCoffees);
     filteredCoffees.sort((coffeea, coffeeb) => coffeea.id < coffeeb.id? 0:-1)
     tbody.innerHTML = renderCoffees(filteredCoffees);
@@ -94,8 +96,10 @@ function updateCoffees(e) {
     }
 
 //     updates the coffee object to add the newly custom coffee to the array of coffees
-function updateCoffeesObject() {
-
+function updateCoffeesObject(e) {
+    if (e) {
+        e.preventDefault(); // don't submit the form, we just want to update the data
+    }
     console.log('updateCoffeesObject clicked! ')
 
     console.log("customCoffees: ", customCoffees);
