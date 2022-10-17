@@ -31,16 +31,34 @@
     </table>-->
 <hr>
     <h1 id="listHeading">Here are some coffees we offer:</h1>
+    <label for="coffeeSearch">Search: </label>
     <input type="text" id="coffeeSearch" value="">
+    <label for="roast-select">Roast: </label>
     <select id="roast-select">
+        <option value="all" selected disabled class="">Roast</option>
         <option value="light" class="">Light</option>
         <option value="medium" class="">Medium</option>
         <option value="dark" class="">Dark</option>
-        <option value="selectRoast" selected disabled class="">Roast</option>
-
+        <!-- ToDo Bonus #1: add option to select all roasts: -->
+        <option value="all" class="">All Roasts</option>
     </select>
 
-    <label for="coffeeSearch">What is your coffee of choice?</label>
+    <hr>
+
+
+    <label for="newCoffeeName">New Coffee Name: </label>
+    <input id="newCoffeeName">
+    <label for="newCoffeeRoast">New Coffee Roast: </label>
+    <select id="newCoffeeRoast">
+        <option value="" selected disabled class="">Roast Select</option>
+        <option value="light" class="">Light</option>
+        <option value="medium" class="">Medium</option>
+        <option value="dark" class="">Dark</option>
+    </select>
+    <button id="newCoffeeSubmit" type="submit">Submit</button>
+
+
+<!-- ToDo #1: Use divs instead of table-->
     <div id="coffeeListBG" class="">
         <div id="coffeeList" class="">
             <div class="row">
