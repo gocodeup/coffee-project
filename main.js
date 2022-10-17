@@ -1,4 +1,5 @@
 "use strict"
+test
 // Array of coffees to display
 // from http://www.ncausa.org/About-Coffee/Coffee-Roasts-Guide
 var coffees = [
