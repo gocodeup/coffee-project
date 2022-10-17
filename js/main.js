@@ -80,3 +80,36 @@ function renderCoffeesUpdated(coffees){
 let coffeeList = document.getElementById('coffeeList');
 
 coffeeList.innerHTML= renderCoffeesUpdated(coffees);
+let coffeeChoice = document.getElementById("coffeeSearch");
+coffeeChoice.addEventListener("change", updateCoffeeList);
+function updateCoffeeList() {
+    let coffeeSelected = coffeeChoice.value;
+    let filteredCoffees = [];
+    coffees.forEach(function(coffee) {
+        // console.log(coffeeSelected[0] + coffee.name[0]);
+        // for ( let i = 0; i < coffeeSelected.length; i++){
+        // if(coffeeSelected[0] === coffee.name[0]){
+        //      filteredCoffees.push(coffee);
+        //  }});
+        if (filterHelper(coffeeSelected, coffee)) {
+            filteredCoffees.push(coffee);
+        }
+    })
+    console.log(filteredCoffees);
+    coffeeList.innerHTML= renderCoffeesUpdated(filteredCoffees);
+
+}
+
+function filterHelper(userInput, coffee){
+    for(let i = 0; i < userInput.length; i++){
+        if(userInput[i] !== coffee.name[i]){
+            return false;}
+    };
+    if(roastSelected.value !== coffee.roast) {
+    return false;
+    };
+    return true;
+}
+let roastSelected = document.getElementById("roast-select");
+console.log(roastSelected.value);
+roastSelected.addEventListener("change", updateCoffeeList);
