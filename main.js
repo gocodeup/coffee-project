@@ -82,6 +82,11 @@ div.innerHTML = renderCoffees(coffees);
 
 // This looks at the value of the searchbox
 let searchBox = document.getElementById("coffeeSearch")
+
+// See's value of search box as you type. updates in console after you click otu
+        searchBox.addEventListener("keypress", () => {
+            console.log(searchBox.value)
+        })
 //This looks at value of RoastDropdown
 const roastType = document.getElementById("roast-selection")
 
