@@ -8,6 +8,14 @@ body{
     border-bottom: white;
 }
 
+/*.jumbotron {*/
+/*    background-image: url("/img/home-7-video-img-1.jpg");*/
+/*    height: 400px;*/
+/*    width: 100%;*/
+/*    background-size: cover;*/
+/*}*/
+
+
 * {
     border: red 1px solid
 }
