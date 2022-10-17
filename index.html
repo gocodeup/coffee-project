@@ -11,24 +11,38 @@
     <form>
         <label for="roast-selection"></label>
         <select id="roast-selection">
+            <option>all</option>
             <option>light</option>
             <option>medium</option>
             <option>dark</option>
         </select>
-        <input id="submit" type="submit" />
+        <br>
+        <input id="roast-search" type="search"/>
     </form>
 
-    <table>
-        <thead>
-            <tr>
-                <th>ID</th>
-                <th>NAME</th>
-                <th>ROAST</th>
-            </tr>
-        </thead>
-        <tbody id="coffees"></tbody>
-    </table>
+<div id="coffees">
+    <h3></h3>
+    <p></p>
+</div>
+<!--    <table>-->
+<!--        <thead>-->
+<!--            <tr>-->
+<!--                <th>ID</th>-->
+<!--                <th>NAME</th>-->
+<!--                <th>ROAST</th>-->
+<!--            </tr>-->
+<!--        </thead>-->
+<!--        <tbody id="coffees"></tbody>-->
+<!--    </table>-->
 
     <script src="main.js"></script>
 </body>
 </html>
+
+
+
+<!--// get rid of table👇 and display in divs,heading, and paragraph. keep id's in ascending order-->
+
+<!--// add a search bar for the caffees-->
+
+<!--// add functionality to search bar: by automatic suggestions when the user is typing-->
