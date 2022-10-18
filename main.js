@@ -22,7 +22,7 @@ coffees = coffees.reverse();
 
 
 function renderCoffee(coffee) {
-    let html = '<div class="coffee">';
+    let html = '<div class="coffee>';
     html += '<h2>' + coffee.name + '</h2>';
     html += '<p>' + coffee.roast + '</p>';
 
