@@ -48,6 +48,7 @@ var customCoffees = [
 // Coffee Objects --> Bootstrap Cards
 function renderCoffee(coffee) {
     var html = `<div class="container-fluid justify-content-center col-12 col-md-6 col-lg-4 mb-3">`;
+
     html += `<div id="${coffee.id}"  class="card h-100 coffee-cards">`;
     html += `<h3 class="d-flex justify-content-center card-title pt-2">${coffee.name}</h3>`
     html += `<p class="d-flex justify-content-center border border-dark border-5 border-top-0 border-start-0 border-end-0 m-0">roast type: ${coffee.roast}</p>`;
@@ -72,6 +73,7 @@ function updateCoffees(e) {
         e.preventDefault(); // don't submit the form, we just want to update the data
     }
     console.log("coffees: ", coffees);
+
     let searchTerm = roastName.value
     var selectedRoast = roastSelection.value;
     var filteredCoffees = coffees.filter(currentCoffee => {
