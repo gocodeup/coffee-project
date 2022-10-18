@@ -12,10 +12,11 @@
     box-sizing: border-box;
     margin : 0;
     padding: 0;
-    background-color: #171717 ;
-    /*background-color: #24252a ;*/
+    /*background-color: #171717 ;*/
+    background-color: #24252a ;
 
 }
+/*navbar styling-----------------------------------------------------------------------------------*/
 li, a, button{
     font-family: ;
     font-size: 16px;
@@ -31,15 +32,20 @@ header{
 }
 .logo {
     cursor: pointer;
-    width: 150px;
-
+    width: 75px;
+}
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 .nav-links{
     list-style: none;
+    margin: 0;
 }
 .nav-links li {
     display:inline-block;
-    padding: 0px 20px;
+    padding: 0 20px;
 }
 .nav-links li a {
     transition: all 0.3s ease 0s;
@@ -49,7 +55,7 @@ header{
 }
 button {
     padding: 9px 25px;
-    background-color: red;
+    background-color: #CC5500;
     border: none;
     border-radius: 50px;
     cursor: pointer;
@@ -65,14 +71,87 @@ button:hover{
     background-size: cover ;
     background-image: url("css-img/Untitled_design_27_21d8abf020.png");
 }
+/*body styling-----------------------------------------------------------------------------*/
+body{
+    /*color: #edf0f1;*/
+}
 h1{
     width: 50%;
     background: #CC5500;
-    opacity: 0.6;
+    /*opacity: 0.6;*/
     text-align: center;
 
 }
+.sub-header{
+    text-align: center;
+}
+.coffee-search{
+    text-align: right;
+}
+.meat-and-potatoes{
+    display: flex;
+    align-items: center;
+}
+/*holds coffee names---------------------------------------------------------*/
+#coffees{
+    /*border: 2px solid black;*/
+    /*background-color: purple;*/
+    width: 50%;
+    margin: 0;
+    color: #edf0f1;
 
+}
+/*holds search and select bar*/
+.search-select{
+    /*border: 2px solid black;*/
+    /*background-color: yellow;*/
+    width: 50%;
+    margin: 0;
+}
+/*searchbar-------------------------------------------------------------------*/
+.search-box{
+    position: absolute;
+    border: 2px orange solid;
+    height: 50px;
+    border-radius: 40px;
+    padding: 10px;
+    background: #24252a;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+.search-box:hover > .search-txt{
+
+    width: 185px;
+}
+.search-box:hover > .search-btn{
+    /*background: white;*/
+}
+.search-btn{
+    float: right;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background: #24252a;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.4s;
+    /*background-color: yellow;*/
+}
+.search-txt{
+    border: none;
+    background: none;
+    outline: none;
+
+    padding: 0;
+    color: white;
+    font-size: 16px;
+    transition: 0.4s;
+    width: 0;
+    height: 30px;
+}
 
 
 
