@@ -1,13 +1,3 @@
-table {
-    border-collapse: collapse;
-    margin: 15px 0;
-}
-
-td, th {
-    border: 1px solid black;
-    padding: 5px 10px;
-}
-
 #coffeeListBG{
     background-image: url("../img/beanBlackboard.jpeg");
     background-size: cover;
@@ -18,10 +8,24 @@ td, th {
     justify-content: center;
 }
 div#coffeeList {
-    margin-top: 100px;
+    margin-top: 1px;
 }
 
 #coffeeList{
     color: white;
-
+}
+.centered {
+    font-size: xx-large;
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.img-fluid {
+    background-image: url("../img/header.jpeg");
+    width: 1000px;
+    height: 250px;
+    background-size: cover;
+    display: flex;
+    flex-direction: row;
 }
