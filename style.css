@@ -7,19 +7,17 @@ body{
     background-color: #090707;
     border-bottom: white;
 }
-
-/*.jumbotron {*/
-/*    background-image: url("/img/home-7-video-img-1.jpg");*/
-/*    height: 400px;*/
-/*    width: 100%;*/
-/*    background-size: cover;*/
-/*}*/
-
-/*.title {*/
-/*    display: flex;*/
-/*    justify-content: center;*/
-/*    padding-top: 20em;*/
-/*}*/
+.jumbotron {
+    background-image: url("assets/home-7-video-img-1.jpg");
+    background-size: cover;
+    border-top: 1px solid #494848;;
+    height: 500px;
+    color: #ffffff;
+    font-family: 'Oswald', sans-serif;
+    font-size: 70px;
+    text-align: center;
+    text-shadow: 2px 2px #211d1d;
+}
 
 * {
     border: red 1px solid
