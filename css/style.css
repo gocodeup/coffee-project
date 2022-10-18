@@ -12,7 +12,8 @@ div#coffeeList {
 }
 
 .navbar{
-    padding: 0;
+    /*display: flex;*/
+    /*padding: 0;*/
 }
 
 #coffeeList{
@@ -23,11 +24,18 @@ div#coffeeList {
     font-size: 2em;
     font-family: 'Fredericka the Great', cursive;
     text-decoration: none;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 .navLinks{
+    font-size: 20px;
     color: white;
-    font-size: 1em;
+    background-color: darkolivegreen;
+    border: 1px darkolivegreen;
+    border-radius: 25px;
     font-family: 'Fredericka the Great', cursive;
     text-decoration: none;
 }
@@ -66,14 +74,6 @@ div#coffeeList {
     0%{opacity: 1;}
     100%{opacity: 0;}
 }
-
-.centered {
-    font-size: xx-large;
-    position: absolute;
-    top: 60%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
 .img-fluid {
     background-image: url("../img/header.jpeg");
     width: 1000px;
@@ -84,7 +84,28 @@ div#coffeeList {
 }
 
 #navbarSupportedContent{
-    height: 100%;
-    margin: 0;
-    justify-self: flex-end;
+    width: 100%;
 }
+ul {
+    width:100%;
+    justify-content: center;
+    padding-top: 60px;
+}
+li {
+    overflow: auto;
+    white-space: nowrap;
+    list-style: none;
+}
+footer img {
+    width: 1000px;
+    height: 100px;
+}
+footer {
+    width: 1000px;
+}
+footer a{
+    padding-top: 20px;
+    display: flex;
+    justify-content: center;
+}
+
