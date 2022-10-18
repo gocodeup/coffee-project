@@ -25,3 +25,38 @@ div#coffeeList {
     color: white;
 
 }
+
+#darkBean{
+    background-image: url("../img/darkBean.svg");
+    height: 75px;
+    width: 75px;
+    /*background-size: cover;*/
+    background-repeat: no-repeat;
+}
+
+#startOrderBtn{
+    background-image: url("../img/startOrder.jpeg");
+    background-size: cover;
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+}
+
+.animateOne{
+    transition: all 1s;
+}
+
+.animateHalf{
+    transition: 500ms;
+}
+
+/* Might not use these keyframes, as they seem to repeat forever*/
+@keyframes fadeIn{
+    0%{opacity: 0;}
+    100%{opacity: 1;}
+}
+
+@keyframes fadeOut{
+    0%{opacity: 1;}
+    100%{opacity: 0;}
+}
