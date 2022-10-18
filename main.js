@@ -33,7 +33,17 @@ var coffees = [
     {id: 14, name: 'French', roast: 'Dark', img:'img/french.jpeg'},
 ];
 var customCoffees = [
-    {id: 15, name: '', roast: '', img: ''},
+    // [];
+    // = [
+    // {},
+    // {id: 15, name: '', roast: '', img: ''},
+
+    /*-------- uncomment to work on images ---------*/
+    // {id: 0, name: '', roast: '', img: ''},
+    // {id: 0, name: '', roast: '', img: ''},
+    // {id: 0, name: '', roast: '', img: ''},
+    // {id: 0, name: '', roast: '', img: ''},
+    // {id: 0, name: '', roast: '', img: ''},
 ];
 // Coffee Objects --> Bootstrap Cards
 function renderCoffee(coffee) {
@@ -61,6 +71,7 @@ function updateCoffees(e) {
     if (e) {
         e.preventDefault(); // don't submit the form, we just want to update the data
     }
+       console.log("coffees: ", coffees);
     let searchTerm = roastName.value
     var selectedRoast = roastSelection.value;
     var filteredCoffees = coffees.filter(currentCoffee => {
@@ -73,34 +84,77 @@ function updateCoffees(e) {
         }
     });
     filteredCoffees.sort((coffeea, coffeeb) => coffeea.id < coffeeb.id? 0:-1)
+    console.log(filteredCoffees)
     tbody.innerHTML = renderCoffees(filteredCoffees);
 }
 // gives the custom placeholder object a coffee name from input
+
 function newObjectName() {
     customCoffees.name = customName.value
+    // var newName = customName.value
 }
 // gives the custom placeholder object a new roast from the input
 function newObjectRoast() {
+
+
     if (customSelection.value === "Light") {
-        customCoffees.img = 'img/stewie.png'
-        customCoffees.roast = customSelection.value
+        let newId = coffees.length +2;
+       let lightCustom = {id: newId, name: customName.value, roast: customSelection.value, img:'img/light_city.jpeg'};
+       coffees.unshift(lightCustom);
+       //  customCoffees.img = 'img/italy.jpeg'
+       //  customCoffees.roast = customSelection.value
     } else if (customSelection.value === "Medium") {
-        customCoffees.img = 'img/shrek.png'
-        customCoffees.roast = customSelection.value
+        let mediumCustom = [{id: 16, name: customName.value, roast: customSelection.value, img:'img/american.jpeg'},];
+        coffees.unshift(mediumCustom);
+        // customCoffees.img = 'img/shrek.png'
+        // customCoffees.roast = customSelection.value
     } else if (customSelection.value === "Dark") {
-        customCoffees.img = 'img/thanus.jpeg'
-        customCoffees.roast = customSelection.value
+        let heavyCustom = [{id: 17, name: customName.value, roast: customSelection.value, img:'img/viennese.jpeg'},];
+        coffees.unshift(heavyCustom);
+        // customCoffees.img = 'img/european.jpeg'
+        // customCoffees.roast = customSelection.value
     } else {
-        customCoffees.img = 'img/jesus.jpeg'
-        customCoffees.roast = customSelection.value
+        let whoopsCustom = [{id: 17, name: customName.value, roast: customSelection.value, img:'img/high.jpeg'},];
+        coffees.unshift(whoopsCustom);
+        // customCoffees.img = 'img/city.jpeg'
+        // customCoffees.roast = customSelection.value
     }
+
+    /*------- uncomment to work on images -----*/
+    // if (customSelection.value === "Light") {
+    //     customCoffees[0].img = 'img/american.jpeg'
+    //     customCoffees[0].roast = customSelection.value
+    //     customCoffees[0].name = customName.value
+    //     customCoffees[0].id = 15;
+    //     coffees.unshift(customCoffees[0]);
+    // } else if (customSelection.value === "Medium") {
+    //     customCoffees[1].img = 'img/breakfast.jpeg'
+    //     customCoffees[1].roast = customSelection.value
+    //     customCoffees[1].name = customName.value
+    //     customCoffees[1].id = 16;
+    //     coffees.unshift(customCoffees[1]);
+    // } else if (customSelection.value === "Dark") {
+    //     customCoffees[2].img = 'img/city.jpeg'
+    //     customCoffees[2].roast = customSelection.value
+    //     customCoffees[2].name = customName.value
+    //     customCoffees[2].id = 17;
+    //     coffees.unshift(customCoffees[2]);
+    // } else {
+    //     customCoffees[3].img = 'img/french.jpeg'
+    //     customCoffees[3].roast = customSelection.value
+    //     customCoffees[3].name = customName.value
+    //     customCoffees[3].id = 18;
+    //     coffees.unshift(customCoffees[3]);
+    // }
 }
 //     updates the coffee object to add the newly custom coffee to the array of coffees
 function updateCoffeesObject(e) {
     if (e) {
         e.preventDefault(); // don't submit the form, we just want to update the data
 }
-    coffees.unshift(customCoffees);
+    console.log(customCoffees);
+
+    // coffees.unshift(customCoffees);
     localStorage.setItem('name', customName.value);
     localStorage.setItem('value', customSelection.value);
     nameDisplayCheck();
@@ -114,6 +168,7 @@ function clearLocal() {
 }
 function nameDisplayCheck() {
     if (localStorage.getItem('name') && localStorage.getItem('value')) {
+        /*------ uncomment to add more coffees -----*/
         rememberMe.style.display = 'none';
         rememberCustomRoast.style.display = 'none';
         theBtn.style.display = 'none';
@@ -132,7 +187,27 @@ roastName.onkeyup = updateCoffees
 customName.onkeyup = newObjectName
 customSelection.onchange = newObjectRoast
 customCoffeeSubmit.onclick = updateCoffeesObject
+
 forgetBtn.onclick = clearLocal
 darnBtn.onclick = hideForget
 updateCoffees();
 // submitButton.addEventListener('click', updateCoffees);
+
+
+// another
+// grab values from input
+// create anew obj
+// append obj to existing display (push/unshift to array)
+
+// grab the value as hte user types
+// let addedCoffee;
+// roastName.onkeyup(function(){
+//     addedCoffee = roastName.value;
+// })
+
+// create a new array (customCoffees)
+// on submit ->
+// create a new object
+// pass the values grabbed as properties:values to the newly created object
+// push the obj into the array
+// coffees.unshift(customCoffees)
