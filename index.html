@@ -7,6 +7,24 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+
+<!-- psuedo for order button
+1. bean circle image
+2. text
+3. button
+-->
+    <div id="orderAnimation" class="container">
+        <div class="row">
+            <div class="col-4"></div>
+            <div id="darkBean" class="col-1"></div>
+            <button id="startOrderBtn" class="col-2 shadow animate">
+                <p id="orderText" class="animateHalf">Start Order</p>
+            </button>
+            <div class="col-5"></div>
+        </div>
+    </div>
+
+
 <nav class="navbar navbar-expand-lg">
     <div class="container-fluid text-no-wrap">
 <!--    <img src="img/header.jpeg" class="img-fluid" style="height: 200px; width: 1000px" alt="Header Image">-->
@@ -21,6 +39,7 @@
     </div>
 </nav>
 <hr>
+
     <h1 id="listHeading">Here are some coffees we offer:</h1>
     <label for="coffeeSearch">Search: </label>
     <input type="text" id="coffeeSearch" value="">

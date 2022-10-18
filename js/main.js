@@ -152,3 +152,34 @@ function addCoffeeToCoffees(){
 function displayError(errorMessage){
     console.log(errorMessage);
 }
+
+// ********** Animate Order Button ***************
+let startOrderBtn = document.getElementById("startOrderBtn");
+startOrderBtn.addEventListener("click", spawnRoasts);
+
+function spawnRoasts(){
+    // create three roast buttons from center order button
+    // change center button text to "Choose roast"
+    // move the roast buttons out radially
+    // include some link to the center button
+
+    /*button text fades
+    * numbers indicate seconds
+    * 1. "Start Order" fade opacity from 1 -> 0 in 1 second
+    * 2. use "transitioned" to trigger startOrderBtn.innerHTML to "Choose Roast"
+    * 3. transition opacity from 0 - 1 in 1 second, gently grow button size,
+    * spawn three roast buttons and begin them moving outward radially
+    * 4. beans continue to move outward
+    * 5. beans stop, use transitioned to reveal roast names
+    * 6. animation stops */
+
+    // let orderAnimation = document.getElementById("orderAnimation");
+    // fade out the button
+    let orderText = document.getElementById("orderText");
+    orderText.style.opacity = "0";
+
+    orderText.addEventListener("transitionend", function(){
+        orderText.innerText = "Select Roast";
+        orderText.style.opacity = "1";
+    })
+}
