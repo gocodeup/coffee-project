@@ -108,9 +108,10 @@ let searchBox = document.getElementById("coffeeSearch")
 const roastType = document.getElementById("roast-selection")
 
 // This looks at change, outputs console of change
-roastType.addEventListener("change" ,(event) => {
+/*roastType.addEventListener("change" ,(event) => {
     console.log(roastType.value);
-});
+});*/
+roastType.addEventListener("change" , updateCoffees);
 
     /*
         const selectElement = document.querySelector('.ice-cream');
