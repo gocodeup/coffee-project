@@ -12,17 +12,8 @@
     box-sizing: border-box;
     margin : 0;
     padding: 0;
-    /*background-color: #171717 ;*/
-    background-color: #24252a ;
-
 }
 /*navbar styling-----------------------------------------------------------------------------------*/
-li, a, button{
-    font-family: ;
-    font-size: 16px;
-    color: #edf0f1;
-    text-decoration: none;
-}
 header{
     display: flex;
     justify-content: space-between;
@@ -43,27 +34,52 @@ nav{
     list-style: none;
     margin: 0;
 }
+
 .nav-links li {
     display:inline-block;
     padding: 0 20px;
-}
-.nav-links li a {
-    transition: all 0.3s ease 0s;
+
 }
 .nav-links li a:hover{
-    color:#1F51FF;
+    color:white;
 }
+ul li a{
+    display: block;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 13px;
+    letter-spacing: 2px;
+    color: white;
+    margin: 0 10px;
+    padding: 10px 25px;
+    position: relative;
+}
+/*//🟣🟣🟣🟣🟣🟣🟣🟣NAV BUTTONS🟣🟣🟣🟣🟣🟣🟣🟣🟣*!*!*/
 button {
+
     padding: 9px 25px;
-    background-color: #CC5500;
-    border: none;
+    color: #CC5500;
+    border: 2px solid #CC5500;
     border-radius: 50px;
     cursor: pointer;
-    transition: all 0.3s ease 0s;
 }
-button:hover{
-    color:#1F51FF;
+.button:hover{
+     background: #CC5500;
+     color: #000;
+     box-shadow: 0 0 50px #CC5500, 0 0 21px #CC5500;
+ }
+.button-fill{
+    background: #CC5500;
+    color: white;
+    /*border: none;*/
 }
+.button-fill:hover{
+    transition: all 0.6s ease;
+    background: #000;
+    color: #CC5500;
+    box-shadow: 0 0 21px 0 #CC5500 inset, 0 0 50px #CC5500;
+}
+/*//🟣🛑🟣🛑🟣🛑🟣🛑🟣🛑ENDS🟣🛑🟣🛑🟣🛑🟣🛑🟣🛑🟣🛑*!*!*/
 .jumbotron{
     display:flex;
     align-items: center;
@@ -71,16 +87,39 @@ button:hover{
     background-size: cover ;
     background-image: url("css-img/Untitled_design_27_21d8abf020.png");
 }
+/*//🟣🟣🟣🟣🟣🟣🟣🟣🟣SUBSCRIBE BUTTON🟣🟣🟣🟣🟣🟣🟣🟣🟣🟣🟣🟣🟣*!*!*/
+
+
+
+.nav-links li a::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 0%;
+    background: #CC5500;
+    z-index: -1 ;
+    box-shadow: 0 0 10px    #d73c02,
+    0 0 20px    #CC5500,
+    0 0 40px    #CC5500,
+    0 0 80px    #CC5500,
+    0 0 100px   #CC5500;
+    transition: 0.25s;
+}
+.nav-links li a:hover::before{
+    width: 100%;
+}
+/*//🟣🛑🟣🛑🟣🛑🟣🛑🟣🛑ENDS🟣🛑🟣🛑🟣🛑🟣🛑🟣🛑🟣🛑*/
+
 /*body styling-----------------------------------------------------------------------------*/
 body{
-    /*color: #edf0f1;*/
+    background-color: #24252a ;
 }
 h1{
     width: 50%;
     background: #CC5500;
-    /*opacity: 0.6;*/
     text-align: center;
-
 }
 .sub-header{
     text-align: center;
@@ -99,7 +138,6 @@ h1{
     width: 50%;
     margin: 0;
     color: #edf0f1;
-
 }
 /*holds search and select bar*/
 .search-select{
