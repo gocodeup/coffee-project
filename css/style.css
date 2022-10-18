@@ -1,19 +1,18 @@
 #coffeeListBG{
-    background-image: url("../img/beanBlackboard.jpeg");
-    background-size: contain;
-    background-repeat: no-repeat;
-    width: calc(100% - 1em);
-/*    max-width: 2000px;
-    height: 800px;
-    max-height: 800px;*/
+    background-color: #6f4e37;
+    margin: 1em;
+    border: black solid 2px;
     display: flex;
-    /*justify-content: center;*/
+}
+
+.coffeeText{
+    color:black;
+    white-space: nowrap;
 }
 
 #coffeeList{
-    position:relative;
-    left: 30%;
-    top: 100px;
+    display: flex;
+
 }
 
 div#coffeeList {

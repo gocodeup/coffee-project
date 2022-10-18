@@ -58,8 +58,8 @@ function renderCoffeeUpdated(coffee) {
         html = `<div class="col">`
     }
         html += `<div >`;
-            html += '<h1 class="fredericka">' + coffee.name + '</h1>';
-            html += '<p class="fredericka">>' + coffee.roast + " Roast" + '</p>';
+            html += '<h1 class="fredericka coffeeText">' + coffee.name + '</h1>';
+            html += '<p class="fredericka coffeeText">>' + coffee.roast + " Roast" + '</p>';
         html += '</div>';
     if((coffee.id - 1) % 5 === 4 || coffee.id === jsCoffees.length){
         html += `</div>`
