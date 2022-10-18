@@ -4,40 +4,65 @@
     <meta charset="UTF-8">
     <title></title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredericka+the+Great&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-<!-- psuedo for order button
-1. bean circle image
-2. text
-3. button
--->
-    <div id="orderAnimation" class="container">
-        <div class="row">
-            <div class="col-4"></div>
-            <div id="darkBean" class="col-1"></div>
-            <button id="startOrderBtn" class="col-2 shadow animate">
-                <p id="orderText" class="animateHalf">Start Order</p>
-            </button>
-            <div class="col-5"></div>
-        </div>
-    </div>
+<!--<nav class="navbar navbar-expand-lg img-fluid">
+    <div class="container-fluid">
+&lt;!&ndash;    <img src="img/header.jpeg" class="img-fluid" style="height: 200px; width: 1000px" alt="Header Image">&ndash;&gt;
 
-
-<nav class="navbar navbar-expand-lg">
-    <div class="container-fluid text-no-wrap">
-<!--    <img src="img/header.jpeg" class="img-fluid" style="height: 200px; width: 1000px" alt="Header Image">-->
-        <div class="img-fluid">
         <div class="centered">Miles-Rajib CoffeeHouse</div>
-            <div><a class="navbar-brand" href="#">About us</a></div>
-        </div>
-        <a class="nav-link active" aria-current="page" href="#">Home</a>
+
+        <ul>
+            <li class="nav-item d-flex justify-content-end">
+                <a class="nav-link" href="#">Sign up!</a>
+            </li>
+            <li>
+                <a class="navbar-brand" href="#">About us</a>
+            </li>
+            <li>
+                <a class="nav-link active" aria-current="page" href="#">Home</a>
+            </li>
         </ul>
-        <li class="nav-item d-flex justify-content-end"><i class="bi bi-person-fill"></i> <a class="nav-link" href="#">Sign up!</a>
-        </li>
     </div>
+</nav>-->
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light img-fluid">
+
+        <a class="navText centered" href="#">Base Camp Coffee</a>
+
+        <div class="container" id="navbarSupportedContent">
+            <ul class="row">
+                <li class="nav-item col-3">
+                    <a class="active navLinks" aria-current="page" href="#">Home</a>
+                </li>
+                <li class="nav-item col-3">
+                    <a class="navLinks" href="#">About Us</a>
+                </li>
+                <li class="nav-item col-3">
+                    <a class="navLinks" href="#" tabindex="-1" >Sign Up!</a>
+                </li>
+            </ul>
+
+        </div>
+
 </nav>
+
+<div id="orderAnimation" class="container">
+    <div class="row">
+        <div class="col-4"></div>
+        <div id="darkBean" class="col-1"></div>
+        <button id="startOrderBtn" class="col-2 shadow animate">
+            <p id="orderText" class="animateHalf">Start Order</p>
+        </button>
+        <div class="col-5"></div>
+    </div>
+</div>
+
 <hr>
 
     <h1 id="listHeading">Here are some coffees we offer:</h1>
