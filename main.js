@@ -20,6 +20,7 @@ var coffees = [
 ];
 coffees = coffees.reverse();
 
+
 function renderCoffee(coffee) {
     let html = '<div class="coffee">';
     html += '<h2>' + coffee.name + '</h2>';
@@ -59,34 +60,50 @@ function updateCoffees(e) {
 function searchCoffees(e) {
     e.preventDefault(); // don't submit the form, we just want to update the data
     console.log("searchCoffees ran");
-    var selectedName = nameSearch.value;
+    let selectedRoast = roastSelection.value
     var searchedCoffees = [];
+    let values = searchBox.value
     coffees.forEach(function(coffee) {
-        if (coffee.name == selectedName) {
+        if (coffee.name === values) {
+            searchedCoffees.push(coffee);
+        } else if (coffee.roast === selectedRoast) {
             searchedCoffees.push(coffee);
         }
+
+
     });
     div.innerHTML = renderCoffees(searchedCoffees);
+    console.log(searchedCoffees)
 }
+
+
+// failed experiment
+// function timing(e){
+//     e.preventDefault();
+//     return searchCoffees();
+//     console.log(timing);
+// }
+
+
+// Another failed experiment
+// function checkCoffee(coffee) {
+//     return searchCoffees;
+// }
+// document.getElementsByClassName('cohee').innerHTML = coffees.filter(checkCoffee);
 
 
 var div = document.querySelector('#coffees');
 var submitButton = document.querySelector('#submit');
 var roastSelection = document.querySelector('#roast-selection');
 var nameSearch = document.querySelector('#coffeeSearch');
-
-
-
-
 div.innerHTML = renderCoffees(coffees);
+
 
 // This looks at the value of the searchbox
 let searchBox = document.getElementById("coffeeSearch")
 
 // See's value of search box as you type. updates in console after you click otu
-        searchBox.addEventListener("keypress", () => {
-            console.log(searchBox.value)
-        })
+        searchBox.addEventListener("input", searchCoffees)
 //This looks at value of RoastDropdown
 const roastType = document.getElementById("roast-selection")
 
@@ -120,4 +137,4 @@ roastType.addEventListener("change" ,(event) => {
 // do these values match ANY of the existing coffees in my coffees array?
 // if yes, -> add matching coffee objects to filteredArr -> display the updated filteredArr, which contains coffees that match either/or (exact) input fields
 submitButton.addEventListener('click', updateCoffees);
-submitButton.addEventListener('click', searchCoffees);
+// submitButton.addEventListener('click', searchCoffees);
