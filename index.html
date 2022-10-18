@@ -10,27 +10,36 @@
 
 <form name="coffeeFilters">
     <label for="coffeeSearch"></label>
-    <input type="text" id="coffeeSearch" >
+    <input type="text" id="coffeeSearch">
 <!--    <button onclick="setTimeout(timing, 1000);">User Search</button> another failed experiment-->
     <label for="roast-selection"></label>
     <select id="roast-selection">
         <option>All</option>
-        <option>light</option>
-        <option>medium</option>
-        <option>dark</option>
+        <option>Light</option>
+        <option>Medium</option>
+        <option>Dark</option>
     </select>
-    <input id="submit" type="submit" />
+    <input id="submit" type="submit">
 </form>
 
 
-<!--    TABLE REFACTOR HERE-->
-
-
+<!--TABLE REFACTOR HERE-->
 <div id="coffees">
     <h1 class="cohee">Coffee name</h1>
     <p>Roast type</p>
     <p>id</p>
 </div>
+
+
+<!--User Addition Form-->
+<div class="add-coffee-form">
+    <form>
+        <label for="newCoffee">Select a roast:</label>
+        <select id="newCoffee">
+            <option value="Light"></option>
+            <option value="Medium"></option>
+        </select>
+    </form>
 
 
     <!--JS file link-->
