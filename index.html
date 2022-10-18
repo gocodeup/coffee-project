@@ -10,31 +10,52 @@
     
 </head>
 <body>
-    <h1 style="text-align: center">Coffee!</h1>
-
-    <form>
-        <!-- <label for="roast-selection"></label>
-        <select id="roast-selection">
-            <option>light</option>
-            <option>medium</option>
-            <option>dark</option>
-        </select> -->
-        <label for="coffeeSearch" style="margin-left:50px">Search for a Coffee!</label>
-        <input type="text" id="coffeeSearch" placeholder="enterAName">
-    </form>
-
-
-    <div id="coffee-holder"></div>
     <div class="container">
         <div class="row">
-            <div class="col-4">Name</div>
-            <div class="col-4">Roast</div>
+            <div class="col h1" id="title">Mane Room Coffee!</div>
         </div>
         <div class="row">
-            <div class="col-4" id="coffeeName"></div>
-            <div class="col-4" id="coffeeRoast"></div>
+            <div class="col justify-content-center" style="text-align:center"><img src="assets/LionRoar.png" alt="roaring lion" height=80% width=50%></div>
         </div>
-    </div>
+        
+        <div class="row">
+            <div class="col-5 d-flex justify-content-end">
+                <label for="coffeeSearch" style="margin-left:50px">Search for a Coffee!  </label>
+                <input type="text" id="coffeeSearch" placeholder="enterAName">
+            </div>
+            <div class="col-7"></div>
+        </div>
+        <div class="row">
+            <div class="col-5 d-flex justify-content-end">
+                <label for="roast-selection"></label>
+                <select id="roastselection">
+                    <option>--choose--</option>
+                    <option>light</option>
+                    <option>medium</option>
+                    <option>dark</option>
+                </select>
+            </div>
+            <div class="col-7"></div>
+        </div>
+        
+        <div class="row">
+            <div id="coffee-holder"></div>
+                <div class="row d-flex justify-content-center">
+                    <div class="col-4">Name</div>
+                    <div class="col-4">Roast</div>
+                </div>
+                <div class="row d-flex justify-content-center">
+                    <div class="col-4" id="coffeeName"></div>
+                    <div class="col-4" id="coffeeRoast"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col" id="footer">
+                Copyright CodeUp Coffee Inc. 2022
+            </div>
+        </div>
 
     <script src="main.js"></script>
 </body>

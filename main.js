@@ -83,5 +83,12 @@ function partialFilterName(searchString){
 
 // Event listener that detects anytime the text input field is modified and passes it's current value to 'partialNameSearch' function; creating a real-time coffee filter system
 coffeeSearch.addEventListener('input', function(){partialFilterName(this.value);});
+roastselection.addEventListener('change', function(){
+    if(this.value!="--choose--"){
+        renderResults(filterByRoast(this.value));
+    }else{
+        defaultState();
+    }
+})
 
 defaultState();

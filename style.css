@@ -12,3 +12,15 @@ body, html {
     color: var(--darkest-color)
 }
 
+#title{
+    text-align: center;
+    font-weight: bold;
+    font-size: 55px;
+    text-decoration: underline;
+    margin-bottom: 20px;
+}
+
+#footer {
+    text-align: center;
+    margin-top: 120px;
+}
