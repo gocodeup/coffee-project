@@ -48,10 +48,23 @@ function updateLocalCoffees(){
 
 // Todo #1: Use divs instead of table
 function renderCoffeeUpdated(coffee) {
-    var html = '<div>';
-    html += '<h1 >' + coffee.name + '</h1>';
-    html += '<p>' + coffee.roast + '</p>';
-    html += '</div>';
+    // determine which column to place current coffee
+    // Math.floor(id / 5) = column #
+
+    let html = '';
+    updateJsCoffees();
+
+    if((coffee.id - 1) % 5 === 0){
+        html = `<div class="col">`
+    }
+        html += `<div >`;
+            html += '<h1 class="fredericka">' + coffee.name + '</h1>';
+            html += '<p class="fredericka">>' + coffee.roast + " Roast" + '</p>';
+        html += '</div>';
+    if((coffee.id - 1) % 5 === 4 || coffee.id === jsCoffees.length){
+        html += `</div>`
+    }
+
     return html;
 }
 

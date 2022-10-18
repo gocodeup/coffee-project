@@ -1,12 +1,21 @@
 #coffeeListBG{
     background-image: url("../img/beanBlackboard.jpeg");
-    background-size: cover;
+    background-size: contain;
     background-repeat: no-repeat;
-    width: 1000px;
-    height: 700px;
+    width: calc(100% - 1em);
+/*    max-width: 2000px;
+    height: 800px;
+    max-height: 800px;*/
     display: flex;
-    justify-content: center;
+    /*justify-content: center;*/
 }
+
+#coffeeList{
+    position:relative;
+    left: 30%;
+    top: 100px;
+}
+
 div#coffeeList {
     margin-top: 1px;
 }
@@ -18,6 +27,11 @@ div#coffeeList {
 #coffeeList{
     color: white;
 }
+
+.fredericka{
+    font-family: 'Fredericka the Great', cursive;
+}
+
 .navText{
     color: white;
     font-size: 2em;
