@@ -1,9 +1,43 @@
+@font-face {
+    font-family: 'alex_brushregular';
+    src: url('alexbrush-regular-webfont.woff2') format('woff2'),
+        url('alexbrush-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
 table {
     border-collapse: collapse;
     margin: 15px 0;
 }
 
-td, th {
+td,
+th {
     border: 1px solid black;
     padding: 5px 10px;
+}
+
+body {
+    background-image: url('img/MudOnMainPicture.jpg');
+    background-position: center;
+    background-size: 1000px 900px;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: left;
+    padding: 2em 2em;
+}
+
+.coffee-holder {
+    text-align: left;
+}
+
+h1 {
+    font-family: 'alex_brushregular';
+}
+
+tr {
+    color: rgb(12, 8, 1);
+    font-weight: 800;
 }

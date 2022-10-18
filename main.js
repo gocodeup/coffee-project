@@ -1,34 +1,5 @@
 "use strict"
 
-function renderCoffee(coffee) {
-    var html = '<tr class="coffee">';
-    html += '<td>' + coffee.id + '</td>';
-    html += '<td>' + coffee.name + '</td>';
-    html += '<td>' + coffee.roast + '</td>';
-    html += '</tr>';
-
-    return html;
-}
-
-function renderCoffees(coffees) {
-    var html = '';
-    for(var i = coffees.length - 1; i >= 0; i--) {
-        html += renderCoffee(coffees[i]);
-    }
-    return html;
-}
-
-function updateCoffees(e) {
-    e.preventDefault(); // don't submit the form, we just want to update the data
-    var selectedRoast = roastSelection.value;
-    var filteredCoffees = [];
-    coffees.forEach(function(coffee) {
-        if (coffee.roast === selectedRoast) {
-            filteredCoffees.push(coffee);
-        }
-    });
-    tbody.innerHTML = renderCoffees(filteredCoffees);
-}
 
 // from http://www.ncausa.org/About-Coffee/Coffee-Roasts-Guide
 var coffees = [
@@ -48,10 +19,69 @@ var coffees = [
     {id: 14, name: 'French', roast: 'dark'},
 ];
 
-var tbody = document.querySelector('#coffees');
-var submitButton = document.querySelector('#submit');
-var roastSelection = document.querySelector('#roast-selection');
+/*
+    Uses Javascript filter function to take in a desired roast and compare it to all items in the Coffee Array
+    Input: desiredRoast - String: complete string to search the array element's ["roast"] for
+    Output: filteredCoffee - Array: Returns a new array of all items matching this roast
+*/
+function filterByRoast(desiredRoast){
+    let filteredCoffee = coffees.filter(function(element){return element.roast.toLowerCase() == desiredRoast.toLowerCase()});
 
-tbody.innerHTML = renderCoffees(coffees);
+    return filteredCoffee;
+}
 
-submitButton.addEventListener('click', updateCoffees);
+/*
+    Uses Javascript filter function to take in a desired name and compare it to all items in the Coffee Array
+    Input: desiredName - String: String to search the array element's ["name"] for
+    Output: filteredCoffee - Array: Returns a new array of all items matching this name
+*/
+function filterByName(desiredName){
+    let filteredCoffee = coffees.filter(function(element){return element.name.toLowerCase() == desiredName.toLowerCase()});
+
+    return filteredCoffee;
+}
+
+/*
+    Renders a list off coffee types on the website
+    Input: coffeeToDisplay - Array: The list of coffees to display on the screen
+*/
+function renderResults(coffeeToDisplay){
+    coffeeName.innerHTML = "";
+    coffeeRoast.innerHTML = "";
+    coffeeToDisplay.forEach(function(element){
+        coffeeName.innerHTML += element.name + "<br>";
+        coffeeRoast.innerHTML += element.roast + "<br>";});
+}
+
+
+/*
+    The default state showing all Coffee Roasts and Names
+*/
+function defaultState(){
+    renderResults(coffees);     // Renders the coffees using the default/ complete list of coffeetypes
+}
+
+/*
+    Sorts through all the coffee names to try and find a match for however number of letters given
+    Input: searchString - String : The letters to attempt to match
+    Output: results - Array: Any possible results that match the searchString
+*/
+function partialFilterName(searchString){
+    if(searchString){
+        let results = [];
+        for(let i=0; i<coffees.length; i++){
+            // Change the coffeenames and searchString to lowercase (temporarily); then shorten the coffeename length (temporarily) to match the searchStrings length; and compare results
+            if(coffees[i].name.toLowerCase().slice(0,searchString.length)==searchString.toLowerCase()){
+                results.push(coffees[i]);
+            }
+        }
+        renderResults(results);
+    }else{
+        defaultState();
+    }
+}
+
+// Event listener that detects anytime the text input field is modified and passes it's current value to 'partialNameSearch' function; creating a real-time coffee filter system
+coffeeSearch.addEventListener('input', function(){partialFilterName(this.value);});
+
+defaultState();

@@ -1,35 +1,117 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mud on Main</title>
+    <!--  BOOTSTRAP  -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
+        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js" type="text/javascript"
+        charset="utf-8"></script>
     <link rel="stylesheet" href="style.css">
+    <title>Coffee</title>
+
 </head>
+
 <body>
-    <h1>Mud on Main Coffee!</h1>
 
-    <form>
+    <!-- MAIN CONTAINER START -->
+
+    <div class="container">
+        <div class="row">
+            <h1 class="text-center">Mud on Main Coffee!</h1>
+            <hr class="bigger">
+
+<!-- LEFT COLUMN BEGINNING -->
+    <div class="col-6">
+        <div class="row" id="coffees"></div>
+    </div>
+
+<!-- LEFT COLUMN END-->
+
+<!-- RIGHT COLUMN BEGINNING -->
+
+    <div class="col-6">
+        <div class="row">
+
+<!-- SELECT COFFEE BY ROAST -->
+
+    <h6>Display by roast type</h6>
+    <form action="" id="formCoffee">
         <label for="roast-selection"></label>
-        <select id="roast-selection">
-            <option>light</option>
-            <option>medium</option>
-            <option>dark</option>
-        </select>
-        <input id="submit" type="submit" />
+            <select name="roast-selection" id="roast-selection">
+                <option value="all" selected>all</option>
+                <option value="light">light</option>
+                <option value="medium">medium</option>
+                <option value="dark">dark</option>
+            </select>
+        <input id= submit type="submit" />
     </form>
+    <hr>
 
-    <table>
-        <thead>
-            <tr>
-                <th>ID</th>
-                <th>NAME</th>
-                <th>ROAST</th>
-            </tr>
-        </thead>
-        <tbody id="coffees"></tbody>
-    </table>
+<!-- SELECT COFFEE BY INPUT -->
 
-    <script src="main.js"></script>
+<h3>Search for a Coffee!</h3>
+<form action="" id="coffeeSearch" style="margin-left:50px">
+    <input type="text" id="coffeeSearch" placeholder="coffee name"><br>
+</form>
+
+<!-- ADD COFFEE TYPE -->
+
+    <h6>Add Coffee</h6>
+    <form action="AddCoffee">
+        <label for="roastSelection2"></label>
+        <select name="roastSelection2" id="roastSelection2">
+            <option value="all" selected>all</option>
+            <option value="light">light</option>
+            <option value="medium">medium</option>
+            <option value="dark">dark</option>
+        </select>
+        <input type=" id="NewCoffeeName" placeholder="new coffee name">
+    </form>
+    <hr>
+
+<!-- END OF ADD COFFEE TYPE -->
+
+
+                </div>
+
+            </div>
+
+
+
+
+
+
+
+            
+
+            <!-- ADD COFFEE -->
+
+            <hr>
+            <div id="coffee-holder"></div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-4">Name</div>
+                    <div class="col-4">Roast</div>
+                </div>
+                <div class="row">
+                    <div class="col-4" id="coffeeName"></div>
+                    <div class="col-4" id="coffeeRoast"></div>
+
+                    <!-- END MAIN ROW -->
+                </div>
+            </div>
+
+            <!-- BOOTSTRAP BUNDLE WITH POPPER -->
+
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+                integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+                crossorigin="anonymous"></script>
+
+            <!-- EXTERNAL JAVASCRIPT -->
+            <script src="main.js"></script>
 </body>
+
 </html>
