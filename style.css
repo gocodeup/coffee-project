@@ -203,6 +203,20 @@ h1{
     width: 0;
     height: 30px;
 }
+.column{
+    display: inline-flex;
+    flex-direction: column;
+}
+
+
+
+
+
+
+
+
+
+
 
 /*🟣🟣🟣🟣🟣🟣🟣🟣🟣🟣🟣🟣🟣🟣🟣🟣🟣🟣🟣*/
 .wuzUp{

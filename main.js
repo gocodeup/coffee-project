@@ -1,19 +1,27 @@
 "use strict"
 //creates row for an array in mew page
-function renderCoffee(coffee) {
-    var html = '<div class="coffee">';
-    // html += '<td>' + coffee.id + '</td>';
+function renderCoffee(coffee, counter) {
+    var html = '';
+    if(counter % 5 === 1) {
+        html += '<div class = "column">'
+    }
+    html += '<div class = "coffee">'
     html += '<h3>' + coffee.name + '</h3>';
     html += '<p>' + coffee.roast + '</p>';
     html += '</div>';
 
+    if(counter % 5 === 0){
+        html += '</div>';
+    }
     return html;
 }
 // takes new array and organizes it in mumeric order
 function renderCoffees(coffees) {
     var html = '';
+    let counter = 1;
     for(var i = coffees.length - 1; i >= 0; i--) {
-        html += renderCoffee(coffees[i]);
+        html += renderCoffee(coffees[i], counter);
+        counter++
     }
     return html;
 }
