@@ -30,11 +30,9 @@ if(localStorage.getItem("localCoffees") == null){
 
 let jsCoffees; // javascript variable to act as temp storage for localStorage array
 
-updatejsCoffees(); // update jsCoffees to match localStorage
-
-
+updateJsCoffees(); // update jsCoffees to match localStorage
 // pull localStorage.localCoffees to jsCoffees;
-function updatejsCoffees(){
+function updateJsCoffees(){
     jsCoffees = JSON.parse( localStorage.getItem("localCoffees"));
 }
 // update localStorage with jsCoffees
@@ -44,7 +42,7 @@ function updateLocalCoffees(){
 
 /* localStorage procedure:
 * when adding a coffee: jsCoffees.push(newCoffee) then updateLocalCoffees()
-* To access localStorage: updatejsCoffees(), then use jsCoffees
+* To access localStorage: updateJsCoffees(), then use jsCoffees
 * */
 
 
@@ -71,7 +69,7 @@ function renderCoffeesUpdated(coffeesToRender){
 }
 
 let coffeeList = document.getElementById('coffeeList');
-updatejsCoffees()
+updateJsCoffees();
 coffeeList.innerHTML= renderCoffeesUpdated(jsCoffees);
 let coffeeChoice = document.getElementById("coffeeSearch");
 // changed event type to keyup for expected data:
@@ -81,7 +79,7 @@ function updateCoffeeList() {
     let coffeeSelected = coffeeChoice.value;
     let filteredCoffees = [];
     // getting coffee array from localStorage:
-    updatejsCoffees();
+    updateJsCoffees();
     jsCoffees.forEach(function(coffee) {
         if (filterHelper(coffeeSelected, coffee)) {
             filteredCoffees.push(coffee);
@@ -131,11 +129,11 @@ newCoffeeSubmit.addEventListener("click", addCoffeeToCoffees);
 // submit button event listener on click => get data from form
 function addCoffeeToCoffees(){
 
-    updatejsCoffees();
+    updateJsCoffees();
     let coffee = {id: jsCoffees.length + 1, name: newCoffeeName.value, roast: newCoffeeRoast.value}
     if(coffee.name.length > 0 && coffee.roast.length > 0){
-        // update jsCoffees from local storage with updatejsCoffees() function
-        updatejsCoffees()
+        // update jsCoffees from local storage with updateJsCoffees() function
+        updateJsCoffees()
         // update coffees with new coffee
         jsCoffees.push(coffee);
         // set localStorage.coffees to new coffees array
