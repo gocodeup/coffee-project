@@ -1,7 +1,6 @@
 "use strict"
 
 // Variables being declared
-
 // ref var for html
 var tbody = document.querySelector('#coffees');
 var roastSelection = document.querySelector('#roast-selection');
@@ -9,7 +8,14 @@ var coffeeSubmit = document.querySelector('#coffee-submit');
 var roastName = document.querySelector('#roast-name');
 var customName = document.querySelector('#custom-name');
 var customSelection = document.querySelector('#custom-selection');
-var customCoffeeSubmit = document.querySelector('#custom-coffee-submit')
+var customCoffeeSubmit = document.querySelector('#custom-coffee-submit');
+var rememberMe = document.querySelector('.remember');
+var rememberCustomRoast = document.querySelector('.remember-me-too');
+var forgetMe = document.querySelector('.forget');
+var forgetBtn = document.querySelector('#forget-submit');
+var theBtn = document.querySelector('.btn-container');
+var hideBtn = document.querySelector('#forget-btn');
+var darnBtn = document.querySelector('.good-enough');
 var coffees = [
     {id: 1, name: 'Light City', roast: 'Light', img:'img/light_city.jpeg'},
     {id: 2, name: 'Half City', roast: 'Light', img:'img/half_city.webp'},
@@ -28,8 +34,7 @@ var coffees = [
 ];
 var customCoffees = [
     {id: 15, name: '', roast: '', img: ''},
-    ];
-
+];
 // Coffee Objects --> Bootstrap Cards
 function renderCoffee(coffee) {
     var html = `<div class="container-fluid justify-content-center col-12 col-md-6 col-lg-4 mb-3">`;
@@ -39,13 +44,10 @@ function renderCoffee(coffee) {
     html += `<img src="${coffee.img}" class="card-img-top" alt="...">`;
     html += `</div>`;
     html += `</div>`;
-
     return html;
 }
-
 // Presenting Coffee Cards in Ascending Order
 function renderCoffees(coffees) {
-    console.log('renderCoffees start');
     var html = '';
     for(var i = coffees.length - 1; i >= 0; i--) {
         // console.log("coffees[i]: ", coffees[i]);
@@ -53,19 +55,16 @@ function renderCoffees(coffees) {
     }
     return html;
 }
-
 // todo: include ability to search incomplete terms.  Ex:  Search 'city' and return (City, Light City, Half City)
 // Preset Option Search Function
 function updateCoffees(e) {
     if (e) {
         e.preventDefault(); // don't submit the form, we just want to update the data
     }
-    console.log("coffees should have custom coffee after submit 'add coffee': ", coffees);
     let searchTerm = roastName.value
     var selectedRoast = roastSelection.value;
     var filteredCoffees = coffees.filter(currentCoffee => {
         if (currentCoffee.roast === selectedRoast || selectedRoast === "All") {
-            console.log("search term ", searchTerm)
             if (searchTerm) {
                 return searchTerm.toLowerCase().includes(currentCoffee.name.toLowerCase())
             } else {
@@ -73,52 +72,67 @@ function updateCoffees(e) {
             }
         }
     });
-    console.log("filteredCoffees: ", filteredCoffees);
     filteredCoffees.sort((coffeea, coffeeb) => coffeea.id < coffeeb.id? 0:-1)
     tbody.innerHTML = renderCoffees(filteredCoffees);
 }
-
-
-    // gives the custom placeholder object a coffee name from input
-    function newObjectName () {
-        console.log("customName: ", customName.value);
-        customCoffees.name = customName.value
-        console.log("customCoffees.name: ", customCoffees.name);
-    }
-
-    // gives the custom placeholder object a new roast from the input
-    function newObjectRoast () {
-        console.log("customRoast: ", customSelection.value);
-        console.log(customSelection);
+// gives the custom placeholder object a coffee name from input
+function newObjectName() {
+    customCoffees.name = customName.value
+}
+// gives the custom placeholder object a new roast from the input
+function newObjectRoast() {
+    if (customSelection.value === "Light") {
         customCoffees.img = 'img/stewie.png'
         customCoffees.roast = customSelection.value
-        console.log("customCoffees.roast: ", customCoffees.roast);
+    } else if (customSelection.value === "Medium") {
+        customCoffees.img = 'img/shrek.png'
+        customCoffees.roast = customSelection.value
+    } else if (customSelection.value === "Dark") {
+        customCoffees.img = 'img/thanus.jpeg'
+        customCoffees.roast = customSelection.value
+    } else {
+        customCoffees.img = 'img/jesus.jpeg'
+        customCoffees.roast = customSelection.value
     }
-
+}
 //     updates the coffee object to add the newly custom coffee to the array of coffees
 function updateCoffeesObject(e) {
     if (e) {
         e.preventDefault(); // don't submit the form, we just want to update the data
-    }
-    console.log('updateCoffeesObject clicked! ')
-
-    console.log("customCoffees: ", customCoffees);
-    coffees.unshift(customCoffees)
-    console.log("coffees: ", coffees);
-
-    // calls updateCoffees again to render the updated coffee object (with the new custom coffee)
-    updateCoffees()
 }
-
-
+    coffees.unshift(customCoffees);
+    localStorage.setItem('name', customName.value);
+    localStorage.setItem('value', customSelection.value);
+    nameDisplayCheck();
+    // calls updateCoffees again to render the updated coffee object (with the new custom coffee)
+    updateCoffees();
+}
+function clearLocal() {
+    localStorage.removeItem('name');
+    localStorage.removeItem('value');
+    nameDisplayCheck();
+}
+function nameDisplayCheck() {
+    if (localStorage.getItem('name') && localStorage.getItem('value')) {
+        rememberMe.style.display = 'none';
+        rememberCustomRoast.style.display = 'none';
+        theBtn.style.display = 'none';
+        hideBtn.style = 'display';
+    }
+}
+function hideForget() {
+    if (customSelection.value === 'select') {
+        hideBtn.style.display = 'none';
+    }
+}
 // Event Responses
-
+// coffeeSubmit.onclick = updateCoffees
 roastSelection.onchange = updateCoffees
-coffeeSubmit.onclick = updateCoffees
 roastName.onkeyup = updateCoffees
 customName.onkeyup = newObjectName
 customSelection.onchange = newObjectRoast
 customCoffeeSubmit.onclick = updateCoffeesObject
-updateCoffees()
-
+forgetBtn.onclick = clearLocal
+darnBtn.onclick = hideForget
+updateCoffees();
 // submitButton.addEventListener('click', updateCoffees);
