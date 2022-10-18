@@ -9,7 +9,14 @@ var coffeeSubmit = document.querySelector('#coffee-submit');
 var roastName = document.querySelector('#roast-name');
 var customName = document.querySelector('#custom-name');
 var customSelection = document.querySelector('#custom-selection');
-var customCoffeeSubmit = document.querySelector('#custom-coffee-submit')
+var customCoffeeSubmit = document.querySelector('#custom-coffee-submit');
+var rememberMe = document.querySelector('.remember');
+var rememberCustomRoast = document.querySelector('.remember-me-too');
+var forgetMe = document.querySelector('.forget');
+var forgetBtn = document.querySelector('#forget-submit');
+var theBtn = document.querySelector('.btn-container');
+var hideBtn = document.querySelector('#forget-btn');
+var darnBtn = document.querySelector('.good-enough');
 var coffees = [
     {id: 1, name: 'Light City', roast: 'Light', img:'img/light_city.jpeg'},
     {id: 2, name: 'Half City', roast: 'Light', img:'img/half_city.webp'},
@@ -100,25 +107,46 @@ function updateCoffeesObject(e) {
     if (e) {
         e.preventDefault(); // don't submit the form, we just want to update the data
     }
-    console.log('updateCoffeesObject clicked! ')
 
-    console.log("customCoffees: ", customCoffees);
-    coffees.unshift(customCoffees)
-    console.log("coffees: ", coffees);
-
+    coffees.unshift(customCoffees);
+    localStorage.setItem('name', customName.value);
+    localStorage.setItem('value', customSelection.value);
+    nameDisplayCheck();
     // calls updateCoffees again to render the updated coffee object (with the new custom coffee)
-    updateCoffees()
+    updateCoffees();
 }
+function clearLocal () {
+    localStorage.removeItem('name');
+    localStorage.removeItem('value');
+    nameDisplayCheck();
+}
+function nameDisplayCheck () {
+    if (localStorage.getItem('name') && localStorage.getItem('value')) {
+        rememberMe.style.display = 'none';
+        rememberCustomRoast.style.display = 'none';
+        theBtn.style.display = 'none';
+        hideBtn.style = 'display';
+    }
+}
+
+function hideForget() {
+    if (customSelection.value === 'select') {
+        hideBtn.style.display = 'none';
+    }
+}
+
 
 
 // Event Responses
 
 roastSelection.onchange = updateCoffees
-coffeeSubmit.onclick = updateCoffees
+// coffeeSubmit.onclick = updateCoffees
 roastName.onkeyup = updateCoffees
 customName.onkeyup = newObjectName
 customSelection.onchange = newObjectRoast
 customCoffeeSubmit.onclick = updateCoffeesObject
-updateCoffees()
+forgetBtn.onclick = clearLocal
+darnBtn.onclick = hideForget
+updateCoffees();
 
 // submitButton.addEventListener('click', updateCoffees);

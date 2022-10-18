@@ -28,7 +28,7 @@
                 <li class="nav-item" role="presentation">
                     <button class="nav-link active" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home" type="button" role="tab" aria-controls="pills-home" aria-selected="true">Can't think for yourself?</button>
                 </li>
-                <li class="nav-item" role="presentation">
+                <li class="good-enough nav-item" role="presentation">
                     <button class="nav-link" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#pills-profile" type="button" role="tab" aria-controls="pills-profile" aria-selected="false">I guess we're not good enough!</button>
                 </li>
             </ul>
@@ -49,26 +49,31 @@
                             <option value="Medium">Medium</option>
                             <option value="Dark">Dark</option>
                         </select>
-                        <button id="coffee-submit" type="submit" class="mb-4 btn btn-primary">Submit</button>
+<!--                        <button id="coffee-submit" type="submit" class="mb-4 btn btn-primary">Submit</button>-->
                     </div>
                 </div>
 
                 <!-- Custom Order Inputs -->
 
-                <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab" tabindex="0">
-                    <div class="mb-3">
+                <div class="custom-form tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab" tabindex="0">
+                    <div class="remember mb-3">
                         <label for="custom-name" class="fw-bold form-label ms-2">Roast Name:</label>
                         <input id="custom-name" type="text" class="form-control" placeholder="Enter Dumb Name Here I guess">
                     </div>
-                    <div class="mb-3">
+                    <div class="remember-me-too mb-3">
                         <label for="custom-selection" class="fw-bold ms-2">Select Roast Now:</label>
-                        <select id="custom-selection" class="mb-3 form-select" aria-label="Default select example">
-                            <option selected>Pick A Roast Already</option>
+                        <select id="custom-selection" class="mb-3 form-select disabled" aria-label="Default select example">
+                            <option value="select">Select A Roast</option>
                             <option value="Light">Light</option>
                             <option value="Medium">Medium</option>
                             <option value="Dark">Dark</option>
                         </select>
+                    </div>
+                    <div class="btn-container">
                         <button id="custom-coffee-submit" type="submit" class="mb-4 btn btn-primary">Submit</button>
+                    </div>
+                    <div id="forget-btn">
+                        <button id="forget-submit" type="submit" class="forget mb-4 btn btn-primary">Forget</button>
                     </div>
                 </div>
             </div>
