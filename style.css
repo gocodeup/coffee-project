@@ -1,22 +1,8 @@
-
-@font-family: 'Henny Penny',
-cursive;
-@font-family: 'Irish Grover',
-cursive; 
-
-
 body {
     background-color: #BB8268;
 }
 
 #bodyarea {
-	/* background-image: url('assets/MudOnMainPicture.png');
-	background-position: center;
-	background-size: 1000px 900px;
-	background-repeat: no-repeat;
-	display: flex;
-	flex-direction: column;
-	justify-content: center; */
 	align-items: left;
 	padding: 2em 2em;
 	color: #8B4513;
