@@ -1,66 +1,106 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Coffee</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--  BOOTSTRAP  -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js" type="text/javascript"
+        charset="utf-8"></script>
+    <!-- GOOGLE FONT -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Henny+Penny&family=Irish+Grover&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-    
+    <title>Coffee</title>
+
 </head>
+
 <body>
+
+    <!-- MAIN CONTAINER START -->
     <div class="container">
         <div class="row">
-            <div class="col h1" id="title">Mane Room Coffee!</div>
-        </div>
-        <div class="row">
-            <div class="col justify-content-center" style="text-align:center"><img src="assets/LionRoar.png" alt="roaring lion" height=80% width=50%></div>
-        </div>
-        <div.row>
-            <div class="col-12">
-                <hr id = "topLine">
-            </div>
-        </div.row>
-        <div class="row">
-            <div class="col-5 d-flex justify-content-end">
-                <label for="coffeeSearch" style="margin-left:50px">Search for a Coffee!  </label>
-                <input type="text" id="coffeeSearch" placeholder="enterAName">
-            </div>
-            <div class="col-7"></div>
-        </div>
-        <div class="row">
-            <div class="col-5 d-flex justify-content-end">
-                <label for="roast-selection"></label>
-                <select id="roastselection">
-                    <option>--choose--</option>
-                    <option>light</option>
-                    <option>medium</option>
-                    <option>dark</option>
-                </select>
-            </div>
-            <div class="col-7"></div>
-        </div>
-        
-        <div class="row">
-            <div id="coffee-holder"></div>
-                <div class="row d-flex justify-content-center">
-                    <div class="col-4 fw-bold text-decoration-underline">Name</div>
-                    <div class="col-4 fw-bold text-decoration-underline">Roast</div>
-                </div>
-                <div class="row d-flex justify-content-center">
-                    <div class="col-4" id="coffeeName"></div>
-                    <div class="col-4" id="coffeeRoast"></div>
+            <h1 class="text-center">Mud on Main Coffee!</h1>
+            <hr class="bigger">
+
+            <!-- LEFT COLUMN BEGINNING -->
+            <!-- <div class="row g-0 text-center"> -->
+
+            <div class="col-sm col-md-8">
+                <div class="row">
+                    <div id="coffee-holder"></div>
+                    <div class="row d-flex justify-content-center">
+                        <div class="col-4 fw-bold text-decoration-underline">Name</div>
+                        <div class="col-4 fw-bold text-decoration-underline">Roast</div>
+                    </div>
+                    <div class="row d-flex justify-content-center">
+                        <div class="col-4" id="coffeeName"></div>
+                        <div class="col-4" id="coffeeRoast"></div>
+                    </div>
                 </div>
             </div>
-        </div>
 
-        <div class="row">
-            <div class="col" id="footer">
-                Copyright CodeUp Coffee Inc. 2022
+
+            <!-- LEFT COLUMN END-->
+
+            <!-- RIGHT COLUMN BEGINNING -->
+            <div class="col-6 col-md-4">
+                <div class="row">
+
+                    <!-- SELECT COFFEE BY ROAST -->
+
+                    <h6>Display by roast type</h6>
+                    <form action="" id="formCoffee">
+                        <label for="roast-selection"></label>
+                        <select id="roastselection">
+                            <option value="--choose--" selected>--choose--</option>
+                            <option value="light">light</option>
+                            <option value="medium">medium</option>
+                            <option value="dark">dark</option>
+                        </select>
+                        <input id="submit" type="submit">Submit</input>
+                    </form>
+                    <hr>
+
+                    <!-- SELECT COFFEE BY INPUT -->
+
+                    <h3>Search for a Coffee!</h3>
+                    <form class="input-group mb-3" id="coffeeSearch">
+                        <div class="input-group-text">
+                            <label class="form-check-input mt-0" type="image" src="img/beanHeart.jpeg"
+                                aria-label=" Button for following text input">
+                            </label>
+                        </div>
+                        <input type="text" class="form-control" aria-label="Text input with button"
+                            placeholder="coffee name"></input>
+                        <input id="submit" type="submit"></input>
+                    </form> <br>
+
+
+
+                    <!-- END RIGHT COLUMN ROW -->
+
+                </div>
             </div>
-        </div>
 
-    <script src="main.js"></script>
+            <!-- BOOTSTRAP BUNDLE WITH POPPER -->
+
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+                integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+                crossorigin="anonymous">
+            </script>
+
+            <!-- EXTERNAL JAVASCRIPT -->
+            <script src="main.js"></script>
+
+            <!-- END MAIN ROW -->
+        </div>
+        <!-- MAIN CONTAINER END -->
+    </div>
+    </div>
 </body>
+
 </html>

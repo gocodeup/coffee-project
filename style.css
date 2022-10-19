@@ -1,34 +1,59 @@
-/*https://colorhunt.co/palettes/coffee*/
 
-:root{
-    --darkest-color:#61481C;
-    --dark-color:#A4733B;
-    --light-color:#BF9742;
-    --lightest-color:#E6B325;
+@font-family: 'Henny Penny',
+cursive;
+font-family: 'Irish Grover',
+cursive;
+
+table {
+    border-collapse: collapse;
+    margin: 15px 0;
 }
 
-body, html {
-    background-color: var(--light-color);
-    color: var(--darkest-color)
+td,
+th {
+    border: 1px solid black;
+    padding: 5px 10px;
 }
 
-#title{
-    text-align: center;
-    font-weight: bold;
-    font-size: 55px;
-    text-decoration: underline;
-    margin-bottom: 30px;
+body {
+    background-image: url('img/MudOnMainPicture.png');
+    background-position: center;
+    background-size: 1000px 900px;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: left;
+    padding: 2em 2em;
+    color: #8B4513;
 }
 
-#footer {
-    text-align: center;
-    margin-top: 120px;
+.coffee-holder {
+    text-align: left;
 }
 
-#topLine {
-    border: 12px var(--darkest-color) solid; 
-    margin-left:-150px;
-    margin-right: -150px;
-    margin-bottom: 20px;
-    margin-top: -20px;
+h1 {
+    font-family: 'Henny Penny', cursive;
 }
+
+h3,
+h6 {
+    font-family: 'Irish Grover', cursive;
+}
+
+tr {
+    color: rgb(12, 8, 1);
+    font-weight: 800;
+}
+
+hr {
+    height: 0px;
+    border: none;
+    border-top: 3px solid blueviolet;
+}
+
+#coffeeSearch.form-check-input.mt-0 {
+    box-sizing: content-box;
+    padding: 0;
+    margin: 0;
+    object-fit: cover;

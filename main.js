@@ -2,21 +2,76 @@
 
 
 // from http://www.ncausa.org/About-Coffee/Coffee-Roasts-Guide
-var coffees = [
-    {id: 1, name: 'Light City', roast: 'light'},
-    {id: 2, name: 'Half City', roast: 'light'},
-    {id: 3, name: 'Cinnamon', roast: 'light'},
-    {id: 4, name: 'City', roast: 'medium'},
-    {id: 5, name: 'American', roast: 'medium'},
-    {id: 6, name: 'Breakfast', roast: 'medium'},
-    {id: 7, name: 'High', roast: 'dark'},
-    {id: 8, name: 'Continental', roast: 'dark'},
-    {id: 9, name: 'New Orleans', roast: 'dark'},
-    {id: 10, name: 'European', roast: 'dark'},
-    {id: 11, name: 'Espresso', roast: 'dark'},
-    {id: 12, name: 'Viennese', roast: 'dark'},
-    {id: 13, name: 'Italian', roast: 'dark'},
-    {id: 14, name: 'French', roast: 'dark'},
+var coffees = [{
+        id: 1,
+        name: 'Light City',
+        roast: 'light'
+    },
+    {
+        id: 2,
+        name: 'Half City',
+        roast: 'light'
+    },
+    {
+        id: 3,
+        name: 'Cinnamon',
+        roast: 'light'
+    },
+    {
+        id: 4,
+        name: 'City',
+        roast: 'medium'
+    },
+    {
+        id: 5,
+        name: 'American',
+        roast: 'medium'
+    },
+    {
+        id: 6,
+        name: 'Breakfast',
+        roast: 'medium'
+    },
+    {
+        id: 7,
+        name: 'High',
+        roast: 'dark'
+    },
+    {
+        id: 8,
+        name: 'Continental',
+        roast: 'dark'
+    },
+    {
+        id: 9,
+        name: 'New Orleans',
+        roast: 'dark'
+    },
+    {
+        id: 10,
+        name: 'European',
+        roast: 'dark'
+    },
+    {
+        id: 11,
+        name: 'Espresso',
+        roast: 'dark'
+    },
+    {
+        id: 12,
+        name: 'Viennese',
+        roast: 'dark'
+    },
+    {
+        id: 13,
+        name: 'Italian',
+        roast: 'dark'
+    },
+    {
+        id: 14,
+        name: 'French',
+        roast: 'dark'
+    },
 ];
 
 /*
@@ -24,8 +79,10 @@ var coffees = [
     Input: desiredRoast - String: complete string to search the array element's ["roast"] for
     Output: filteredCoffee - Array: Returns a new array of all items matching this roast
 */
-function filterByRoast(desiredRoast){
-    let filteredCoffee = coffees.filter(function(element){return element.roast.toLowerCase() == desiredRoast.toLowerCase()});
+function filterByRoast(desiredRoast) {
+    let filteredCoffee = coffees.filter(function (element) {
+        return element.roast.toLowerCase() == desiredRoast.toLowerCase()
+    });
 
     return filteredCoffee;
 }
@@ -35,8 +92,10 @@ function filterByRoast(desiredRoast){
     Input: desiredName - String: String to search the array element's ["name"] for
     Output: filteredCoffee - Array: Returns a new array of all items matching this name
 */
-function filterByName(desiredName){
-    let filteredCoffee = coffees.filter(function(element){return element.name.toLowerCase() == desiredName.toLowerCase()});
+function filterByName(desiredName) {
+    let filteredCoffee = coffees.filter(function (element) {
+        return element.name.toLowerCase() == desiredName.toLowerCase()
+    });
 
     return filteredCoffee;
 }
@@ -45,20 +104,21 @@ function filterByName(desiredName){
     Renders a list off coffee types on the website
     Input: coffeeToDisplay - Array: The list of coffees to display on the screen
 */
-function renderResults(coffeeToDisplay){
+function renderResults(coffeeToDisplay) {
     coffeeName.innerHTML = "";
     coffeeRoast.innerHTML = "";
-    coffeeToDisplay.forEach(function(element){
+    coffeeToDisplay.forEach(function (element) {
         coffeeName.innerHTML += element.name + "<br>";
-        coffeeRoast.innerHTML += element.roast + "<br>";});
+        coffeeRoast.innerHTML += element.roast + "<br>";
+    });
 }
 
 
 /*
     The default state showing all Coffee Roasts and Names
 */
-function defaultState(){
-    renderResults(coffees);     // Renders the coffees using the default/ complete list of coffeetypes
+function defaultState() {
+    renderResults(coffees); // Renders the coffees using the default/ complete list of coffeetypes
 }
 
 /*
@@ -66,23 +126,23 @@ function defaultState(){
     Input: searchString - String : The letters to attempt to match
     Output: results - Array: Any possible results that match the searchString
 */
-function partialFilterName(searchString){
-    if(searchString){
+function partialFilterName(searchString) {
+    if (searchString) {
         let results = [];
-        for(let i=0; i<coffees.length; i++){
+        for (let i = 0; i < coffees.length; i++) {
             // Change the coffeenames and searchString to lowercase (temporarily); then shorten the coffeename length (temporarily) to match the searchStrings length; and compare results
-            if(coffees[i].name.toLowerCase().slice(0,searchString.length)==searchString.toLowerCase()){
+            if (coffees[i].name.toLowerCase().slice(0, searchString.length) == searchString.toLowerCase()) {
                 results.push(coffees[i]);
             }
         }
         renderResults(results);
-    }else{
+    } else {
         defaultState();
     }
 }
 
 // Event listener that detects anytime the text input field is modified and passes it's current value to 'partialNameSearch' function; creating a real-time coffee filter system
-coffeeSearch.addEventListener('input', function(){partialFilterName(this.value);});
+ {coffeeSearch.addEventListener('input', function(){partialFilterName(this.value);});
 roastselection.addEventListener('change', function(){
     if(this.value!="--choose--"){
         renderResults(filterByRoast(this.value));
