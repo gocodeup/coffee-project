@@ -1,8 +1,9 @@
-
+/* 
 @font-family: 'Henny Penny',
 cursive;
-font-family: 'Irish Grover',
-cursive;
+@font-family: 'Irish Grover',
+cursive; 
+*/
 
 table {
     border-collapse: collapse;
@@ -57,3 +58,4 @@ hr {
     padding: 0;
     margin: 0;
     object-fit: cover;
+}

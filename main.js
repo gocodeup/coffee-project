@@ -150,6 +150,6 @@ roastselection.addEventListener('change', function(){
         defaultState();
     }
 })
- }
+}
 
 defaultState();
