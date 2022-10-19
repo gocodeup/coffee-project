@@ -1,4 +1,5 @@
-font-family: 'Henny Penny',
+
+@font-family: 'Henny Penny',
 cursive;
 font-family: 'Irish Grover',
 cursive;
@@ -56,4 +57,3 @@ hr {
     padding: 0;
     margin: 0;
     object-fit: cover;
-}
