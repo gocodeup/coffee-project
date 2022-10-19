@@ -5,57 +5,47 @@ cursive;
 cursive; 
 
 
-table {
-    border-collapse: collapse;
-    margin: 15px 0;
-}
-
-td,
-th {
-    border: 1px solid black;
-    padding: 5px 10px;
-}
-
 body {
-    background-image: url('img/MudOnMainPicture.png');
-    background-position: center;
-    background-size: 1000px 900px;
-    background-repeat: no-repeat;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: left;
-    padding: 2em 2em;
-    color: #8B4513;
+    background-color: #BB8268;
 }
 
-.coffee-holder {
-    text-align: left;
+#bodyarea {
+	/* background-image: url('assets/MudOnMainPicture.png');
+	background-position: center;
+	background-size: 1000px 900px;
+	background-repeat: no-repeat;
+	display: flex;
+	flex-direction: column;
+	justify-content: center; */
+	align-items: left;
+	padding: 2em 2em;
+	color: #8B4513;
+}
+
+#headerarea {
+    margin: 0 0 0 0;
+    padding: 0 0 0 0;
+    min-width: 100%;
+    background-color: black;
 }
 
 h1 {
-    font-family: 'Henny Penny', cursive;
+	font-family: 'Henny Penny', cursive;
 }
 
 h3,
 h6 {
-    font-family: 'Irish Grover', cursive;
+	font-family: 'Irish Grover', cursive;
 }
 
-tr {
-    color: rgb(12, 8, 1);
-    font-weight: 800;
+.close {
+    margin: 0;
+    padding: 0;
 }
 
 hr {
-    height: 0px;
-    border: none;
-    border-top: 3px solid 8B4513;
-}
-
-#coffeeSearch.form-check-input.mt-0 {
-    box-sizing: content-box;
-    padding: 0;
-    margin: 0;
-    object-fit: cover;
+    border: 15px solid black; 
+    opacity: 1; 
+    width:120%; 
+    margin-left:-100px;
 }
