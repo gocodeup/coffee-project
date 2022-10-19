@@ -1,9 +1,9 @@
-/* 
+
 @font-family: 'Henny Penny',
 cursive;
 @font-family: 'Irish Grover',
 cursive; 
-*/
+
 
 table {
     border-collapse: collapse;
@@ -50,7 +50,7 @@ tr {
 hr {
     height: 0px;
     border: none;
-    border-top: 3px solid blueviolet;
+    border-top: 3px solid 8B4513;
 }
 
 #coffeeSearch.form-check-input.mt-0 {
