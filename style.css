@@ -1,10 +1,7 @@
-@font-face {
-    font-family: 'alex_brushregular';
-    src: url('alexbrush-regular-webfont.woff2') format('woff2'),
-        url('alexbrush-regular-webfont.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-}
+font-family: 'Henny Penny',
+cursive;
+font-family: 'Irish Grover',
+cursive;
 
 table {
     border-collapse: collapse;
@@ -18,7 +15,7 @@ th {
 }
 
 body {
-    background-image: url('img/MudOnMainPicture.jpg');
+    background-image: url('img/MudOnMainPicture.png');
     background-position: center;
     background-size: 1000px 900px;
     background-repeat: no-repeat;
@@ -27,6 +24,7 @@ body {
     justify-content: center;
     align-items: left;
     padding: 2em 2em;
+    color: #8B4513;
 }
 
 .coffee-holder {
@@ -34,10 +32,28 @@ body {
 }
 
 h1 {
-    font-family: 'alex_brushregular';
+    font-family: 'Henny Penny', cursive;
+}
+
+h3,
+h6 {
+    font-family: 'Irish Grover', cursive;
 }
 
 tr {
     color: rgb(12, 8, 1);
     font-weight: 800;
+}
+
+hr {
+    height: 0px;
+    border: none;
+    border-top: 3px solid blueviolet;
+}
+
+#coffeeSearch.form-check-input.mt-0 {
+    box-sizing: content-box;
+    padding: 0;
+    margin: 0;
+    object-fit: cover;
 }
