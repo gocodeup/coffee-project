@@ -23,44 +23,15 @@
         <h3 class="fst-italic mt-2 text-nowrap">Roll For Caffeination!</h3>
     </div>
 
-    <!-- Menu & Custom Cards -->
-    <!--    <nav class="navbar mt-2 nav-card-container">-->
-    <!--        <form class="container-fluid justify-content-center">-->
-    <!--            <button id="menu-btn" class="btn m-2 outline-dark" type="button">-->
-    <!--                <div class="card" style="width: 18rem;">-->
-    <!--                    <img src="../coffee-project/img/path.jpg" class="card-img-top" alt="...">-->
-    <!--                    <div class="card-body">-->
-    <!--                        <h6 class="card-title m-0">-->
-    <!--                            Follow The Path</h6>-->
-    <!--                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-left-circle" viewBox="0 0 16 16">-->
-    <!--                            <path fill-rule="evenodd" d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8zm15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-4.5-.5a.5.5 0 0 1 0 1H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5H11.5z"/>-->
-    <!--                        </svg>-->
-    <!--                    </div>-->
-    <!--                </div>-->
-    <!--            </button>-->
-    <!--            <button id="good-enough" class="btn nav-card" type="button">-->
-    <!--                <div class="card" style="width: 18rem;">-->
-    <!--                    <img src="../coffee-project/img/choose.jpg" class="card-img-top" alt="...">-->
-    <!--                    <div class="card-body">-->
-    <!--                        <h6 class="card-title m-0">Choose Your Own Adventure</h6>-->
-    <!--                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right-circle" viewBox="0 0 16 16">-->
-    <!--                            <path fill-rule="evenodd" d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8zm15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H4.5z"/>-->
-    <!--                        </svg>-->
-    <!--                    </div>-->
-    <!--                </div>-->
-    <!--            </button>-->
-    <!--        </form>-->
-    <!--    </nav>-->
-
     <!-- Roast Selection -->
     <form class="mb-4">
         <fieldset>
 
             <!-- Preset Options & Custom Orders Tabs -->
 
-            <ul class="nav nav-pills mb-3 d-flex justify-content-center mt-5" id="pills-tab" role="tablist">
+            <ul class="nav nav-link nav-pills mb-3 d-flex justify-content-center mt-5" id="pills-tab" role="tablist">
                 <li class="nav-item" role="presentation">
-                    <button class="nav-link active" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home" type="button" role="tab" aria-controls="pills-home" aria-selected="true">
+                    <button class="nav-link bg-transparent" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home" type="button" role="tab" aria-controls="pills-home" aria-selected="true">
                         <div class="card" style="width: 18rem;">
                             <img src="../coffee-project/img/path.jpg" class="card-img-top" alt="...">
                             <div class="card-body">
@@ -74,11 +45,25 @@
                     </button>
                 </li>
                 <li class="good-enough nav-item" role="presentation">
-                    <button class="nav-link" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#pills-profile" type="button" role="tab" aria-controls="pills-profile" aria-selected="false">
+                    <button class="nav-link bg-transparent" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#pills-profile" type="button" role="tab" aria-controls="pills-profile" aria-selected="false">
                         <div class="card" style="width: 18rem;">
                             <img src="../coffee-project/img/choose.jpg" class="card-img-top" alt="...">
                             <div class="card-body">
                                 <h6 class="card-title m-0">Choose Your Own Adventure</h6>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-up-circle" viewBox="0 0 16 16">
+                                    <path fill-rule="evenodd" d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8zm15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-7.5 3.5a.5.5 0 0 1-1 0V5.707L5.354 7.854a.5.5 0 1 1-.708-.708l3-3a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1-.708.708L8.5 5.707V11.5z"/>
+                                </svg>
+                            </div>
+                        </div>
+                    </button>
+                </li>
+                <li class="nav-item roll-dice" role="presentation">
+                    <button class="nav-link bg-transparent" id="dice-roll-btn" type="submit" data-bs-toggle="pill" data-bs-target="#pills-home" type="button" role="tab" aria-controls="pills-home" aria-selected="true">
+                        <div class="card" style="width: 18rem;">
+                            <img src="img/roll.jpeg" class="card-img-top" alt="..." style="height:381.33px;">
+                            <div class="card-body">
+                                <h6 class="card-title m-0">
+                                    Roll The Dice</h6>
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right-circle" viewBox="0 0 16 16">
                                     <path fill-rule="evenodd" d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8zm15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H4.5z"/>
                                 </svg>
@@ -86,9 +71,9 @@
                         </div>
                     </button>
                 </li>
-                <li class="roll-dice" role="presentation">
-                    <button id="dice-roll-btn" type="submit" class="mb-4 btn btn-primary">bdfbzxcvbxb</button>
-                </li>
+<!--                <li class="roll-dice" role="presentation">-->
+<!--                    <button id="dice-roll-btn" type="submit" class="mb-4 btn btn-primary">bdfbzxcvbxb</button>-->
+<!--                </li>-->
             </ul>
 
             <!-- Preset Options Inputs -->
