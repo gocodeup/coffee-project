@@ -1,50 +1,4 @@
 "use strict"
-
-function renderCoffee(coffee) {
-    let html = '<div class="coffee">';
-    html += '<div class="coffee-id" style="visibility: hidden">' + coffee.id + '</div>';
-    html += '<div class="coffee-name">' + coffee.name + '</div>';
-    html += '<div class="coffee-roast">' + coffee.roast + '</div>';
-    html += '</div>';
-
-    return html;
-}
-
-// coffee (variable) is actually each individual coffee from the array of objects
-// its basically coffees[i]
-
-function renderCoffees(coffees) {
-    let html = '';
-    for(let i = 0; i < coffees.length; i++) {
-        html += renderCoffee(coffees[i]);
-    }
-    return html;
-}
-
-function updateCoffees(e) {
-    e.preventDefault(); // don't submit the form, we just want to update the data
-    let selectedRoast = roastSelection.value;
-    let filteredCoffees = [];
-
-    coffees.forEach(function(coffee) {
-        if (coffee.roast === selectedRoast) {
-            filteredCoffees.push(coffee);
-            return tbody.innerHTML = renderCoffees(filteredCoffees);
-        } else if (selectedRoast === 'all') {
-            filteredCoffees.push(coffee)
-            return tbody.innerHTML = renderCoffees(filteredCoffees)
-        }
-    });
-}
-
-// function coffeeText () {
-//     let typedRoast = coffeeNameInput;
-//
-// }
-
-
-
-// from http://www.ncausa.org/About-Coffee/Coffee-Roasts-Guide
 let coffees = [
     {id: 1, name: 'Light City', roast: 'light'},
     {id: 2, name: 'Half City', roast: 'light'},
@@ -62,17 +16,61 @@ let coffees = [
     {id: 14, name: 'French', roast: 'dark'},
 ];
 
-let tbody = document.querySelector('#coffees');
+let displayedCoffee = document.querySelector('#coffees');
 let submitButton = document.querySelector('#submit');
 let roastSelection = document.querySelector('#roast-selection');
 let coffeeNameInput = document.querySelector('#coffee-input');
 
 
 
+function renderCoffeeDiv(coffee) {
+    let html = '<div class="coffee">';
+    html += '<div class="coffee-id" style="visibility: hidden">' + coffee.id + '</div>';
+    html += '<div class="coffee-name">' + coffee.name + '</div>';
+    html += '<div class="coffee-roast">' + coffee.roast + '</div>';
+    html += '</div>';
 
-tbody.innerHTML = renderCoffees(coffees);
+    return html;
+}
+
+// coffee (variable) is actually each individual coffee from the array of objects
+// its basically coffees[i]
+
+function renderAllCoffeesList(coffees) {
+    let html = '';
+    for(let i = 0; i < coffees.length; i++) {
+        html += renderCoffeeDiv(coffees[i]);
+    }
+    return html;
+}
+
+function checkCoffeeName (e) {
+    for(let i = 0; i < coffees.length; i++) {
+        if ((coffeeNameInput.value).includes(coffees[i].name) === true) {
+            return displayedCoffee.innerHTML = renderAllCoffeesList(coffees[i])
+        }
+    }
+}
+
+
+
+function updateCoffees(e) {
+    e.preventDefault(); // don't submit the form, we just want to update the data
+    let selectedRoast = roastSelection.value;
+    let filteredCoffees = [];
+    coffees.forEach(function(coffee) {
+        if (coffee.roast === selectedRoast) {
+            filteredCoffees.push(coffee);
+            return displayedCoffee.innerHTML = renderAllCoffeesList(filteredCoffees);
+        } else if (selectedRoast === 'all') {
+            filteredCoffees.push(coffee)
+            return displayedCoffee.innerHTML = renderAllCoffeesList(filteredCoffees)
+        }
+    });
+}
+displayedCoffee.innerHTML = renderAllCoffeesList(coffees);
 
 submitButton.addEventListener('click', updateCoffees);
 
-coffeeNameInput.addEventListener('keyup', (event) => {});
-
+coffeeNameInput.addEventListener("keyup", checkCoffeeName);
+    
