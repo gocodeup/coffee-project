@@ -1,18 +1,26 @@
 "use strict"
 
 function renderCoffee(coffee) {
-    var html = '<tr class="coffee">';
-    html += '<td>' + coffee.id + '</td>';
-    html += '<td>' + coffee.name + '</td>';
-    html += '<td>' + coffee.roast + '</td>';
-    html += '</tr>';
+    var html = '<div class="coffee">';
+    // html += '<td>' + coffee.id + '</td>';
+    html += '<h3>' + coffee.name + '</h3>';
+    html += '<p>' + coffee.roast + '</p>';
+    html += '</div>';
 
     return html;
 }
 
+// function renderCoffees(coffees) {
+//     var html = '';
+//     for(var i = coffees.length - 1; i >= 0; i--) {
+//         html += renderCoffee(coffees[i]);
+//     }
+//     return html;
+// }
+
 function renderCoffees(coffees) {
     var html = '';
-    for(var i = coffees.length - 1; i >= 0; i--) {
+    for(var i = 0; i < coffees.length; i++) {
         html += renderCoffee(coffees[i]);
     }
     return html;
@@ -48,10 +56,32 @@ var coffees = [
     {id: 14, name: 'French', roast: 'dark'},
 ];
 
-var tbody = document.querySelector('#coffees');
+var coffeeDiv = document.querySelector('#coffees');
 var submitButton = document.querySelector('#submit');
 var roastSelection = document.querySelector('#roast-selection');
 
-tbody.innerHTML = renderCoffees(coffees);
+coffeeDiv.innerHTML = renderCoffees(coffees);
 
 submitButton.addEventListener('click', updateCoffees);
+
+// Search Coffee Section
+
+    function searchCoffee() {
+    // Declare variables
+    var input, filter, coffeeDiv, h3, i, txtValue;
+    input = document.getElementById('myInput');
+    filter = input.value.toUpperCase();
+    // coffeeName = document.getElementsByClassName("myUL");
+    coffeeDiv = document.getElementsByClassName('coffeeDiv');
+
+    // Loop through all list items, and hide those who don't match the search query
+    for (i = 0; i < coffeeDiv.length; i++) {
+    h3 = coffeeDiv[i].getElementsByTagName("h3")[0];
+    txtValue = h3.textContent || h3.innerText;
+    if (txtValue.toUpperCase().indexOf(filter) > -1) {
+    coffeeDiv[i].style.display = "";
+} else {
+    coffeeDiv[i].style.display = "none";
+}
+}
+}
