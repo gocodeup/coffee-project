@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns="http://www.w3.org/1999/html">
 <head>
     <meta charset="UTF-8">
     <title></title>
@@ -7,7 +7,6 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Coffee!</h1>
 
     <form>
         <label for="roast-selection"></label>
@@ -20,17 +19,35 @@
         <input id="submit" type="submit" />
     </form>
 
-    <table>
-        <thead>
-            <tr>
-                <!-- <th>ID</th> -->
-                <th>NAME</th>
-                <th>ROAST</th>
-            </tr>
-        </thead>
-        <tbody id="coffees"></tbody>
-    </table>
+<!--+++++++++++++++++++++++++HEADER END+++++++++++++++++++-->
 
-    <script src="main.js"></script>
+
+<section>
+<form>
+    <label for="roast-selection"></label>
+    <select id="roast-selection">
+        <option>light</option>
+        <option>medium</option>
+        <option>dark</option>
+    </select>
+    <input id="submit" type="submit"/>
+</form>
+
+
+
+<table>
+    <thead>
+    <tr>
+        <!-- <th>ID</th> -->
+        <th>NAME</th>
+        <th>ROAST</th>
+    </tr>
+    </thead>
+    <tbody id="coffees"></tbody>
+</table>
+</div>
+</section>
+
+<script src="main.js"></script>
 </body>
 </html>
