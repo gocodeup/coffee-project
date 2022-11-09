@@ -44,14 +44,18 @@ function renderAllCoffeesList(coffees) {
     return html;
 }
 
-function checkCoffeeName (e) {
+//todo make sure it checks for all letters
+
+function checkCoffeeName () {
+    let search = coffeeNameInput.value;
     for(let i = 0; i < coffees.length; i++) {
-        if ((coffeeNameInput.value).includes(coffees[i].name) === true) {
-            return displayedCoffee.innerHTML = renderAllCoffeesList(coffees[i])
+        // console.log(coffees[i].name);
+        if ((coffees[i].name.toLowerCase()).includes(search)) {
+            console.log(coffees[i])
+            return coffees[i]
         }
     }
 }
-
 
 
 function updateCoffees(e) {
@@ -72,5 +76,5 @@ displayedCoffee.innerHTML = renderAllCoffeesList(coffees);
 
 submitButton.addEventListener('click', updateCoffees);
 
-coffeeNameInput.addEventListener("keyup", checkCoffeeName);
-    
+coffeeNameInput.addEventListener("keyup", (e) => checkCoffeeName());
+
