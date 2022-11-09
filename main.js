@@ -4,7 +4,7 @@ function renderCoffee(coffee) {
     var html = '<div class="coffee">';
     // html += '<td>' + coffee.id + '</td>';
     html += '<h2 class="coffee-name">' + coffee.name + '</h2>';
-    html += '<span class="roast">' + coffee.roast + '</span>';
+    html += '<p class="roast">' + coffee.roast + '</p>';
     html += '</div>';
 
     return html;
