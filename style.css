@@ -7,3 +7,18 @@ td, th {
     border: 1px solid black;
     padding: 5px 10px;
 }
+
+
+.roast {
+    display: inline;
+    font-size: 1.5rem;
+    color: lightgray;
+}
+
+.coffee-name {
+    display: inline;
+    font-size: 2.5rem;
+    margin-right: 1rem;
+
+}
+

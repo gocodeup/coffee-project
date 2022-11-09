@@ -55,3 +55,15 @@ var roastSelection = document.querySelector('#roast-selection');
 tbody.innerHTML = renderCoffees(coffees);
 
 submitButton.addEventListener('click', updateCoffees);
+
+
+
+const input = document.querySelector('input');
+const log = document.getElementById('coffeeChoice');
+
+input.addEventListener('input', updateValue);
+
+function updateValue(e) {
+  console.log(e.target.value);
+}
+

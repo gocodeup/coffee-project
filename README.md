@@ -23,7 +23,7 @@ improvements to it.
     only for our application's internal use
 
 - When the page loads, the coffees should be sorted by their ids in ascending
-  order
+  order ---DONE
 
 - Add functionality to search through the coffees by name, and display only the
   coffees that match the provided search term (You will need to add an input
