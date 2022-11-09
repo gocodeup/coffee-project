@@ -3,7 +3,7 @@
 function renderCoffee(coffee) {
     var html = '<div class="coffee">';
     html += '<p>' + coffee.id + '</p>';
-    html += '<p>' + coffee.name + '</p>';
+    html += '<p>' + coffee.name + '</td>';
     html += '<p>' + coffee.roast + '</p>';
     html += '</div>';
 
@@ -47,6 +47,12 @@ var coffees = [
     {id: 13, name: 'Italian', roast: 'dark'},
     {id: 14, name: 'French', roast: 'dark'},
 ];
+
+let userInput = document.getElementById('CoffeeSearchBar')
+userInput.addEventListener("keyup", function () {
+    let typedInput = document.getElementById('CoffeeSearchBar').value;
+    console.log(typedInput)
+})
 
 var tbody = document.querySelector('#coffees');
 var submitButton = document.querySelector('#submit');
