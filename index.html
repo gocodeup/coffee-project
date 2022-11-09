@@ -9,14 +9,44 @@
     <h1>Coffee!</h1>
 
     <form>
-        <label for="roast-selection"></label>
+        <label for="roast-selection">Roast</label>
         <select id="roast-selection">
             <option>light</option>
             <option>medium</option>
             <option>dark</option>
         </select>
+
+        <br>
+
+        <label for="coffee-input">Coffee Name</label>
+        <input type="text" name="coffee-name" id="coffee-input">
+
+        <br>
+<!--        SUBMIT QUERY BTN-->
         <input id="submit" type="submit" />
+
+        <hr>
+
+        <h4>Add Coffee</h4>
+
+        <label for="add-roast">Roast</label>
+        <select id="add-roast">
+            <option>light</option>
+            <option>medium</option>
+            <option>dark</option>
+        </select>
+
+        <br>
+
+        <label for="add-coffee">Name</label>
+        <input type="text" name="coffee-name" id="add-coffee">
+
+        <br>
+
+        <button type="button">Add Coffee</button>
     </form>
+
+    <br>
 
     <table>
         <thead>
