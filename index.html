@@ -6,9 +6,12 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Coffee!</h1>
+    <div id="header>"
+        <h1>Coffee!</h1>
+    </div>
 
-    <form>
+    <div id="form">
+        <form>
         <label for="roast-selection"></label>
         <select id="roast-selection">
             <option>light</option>
@@ -17,7 +20,9 @@
         </select>
         <input id="submit" type="submit" />
     </form>
+    </div>
 
+    <div id="table">
     <table>
         <thead>
             <tr>
@@ -28,6 +33,7 @@
         </thead>
         <tbody id="coffees"></tbody>
     </table>
+    </div>
 
     <script src="main.js"></script>
 </body>
