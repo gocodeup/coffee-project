@@ -19,29 +19,44 @@
 
 <section>
 <form>
-    <label for="roast-selection"></label>
-    <select id="roast-selection">
-        <option>light</option>
-        <option>medium</option>
-        <option>dark</option>
+    <label for="roast-selection">Roast</label>
+    <select class="roast-selection">
+        <option>All</option>
+        <option>Light</option>
+        <option>Medium</option>
+        <option>Dark</option>
     </select>
+    <label>Coffee Name</label>
+    <input type="text">
     <input id="submit" type="submit"/>
 </form>
+    <h1>Add a Coffee</h1>
+    <form>
+        <label for="roast-selection">Roast</label>
+        <select class="roast-selection">
+            <option>All</option>
+            <option>Light</option>
+            <option>Medium</option>
+            <option>Dark</option>
+        </select>
+        <label>Name:</label>
+        <input type="text">
+    </form>
 
-
-
-<table>
-    <thead>
-    <tr>
-        <!-- <th>ID</th> -->
-        <th>NAME</th>
-        <th>ROAST</th>
-    </tr>
-    </thead>
-    <tbody id="coffees"></tbody>
-</table>
-</div>
+    </div>
 </section>
+
+<!--<table>-->
+<!--    <thead>-->
+<!--    <tr>-->
+<!--        &lt;!&ndash; <th>ID</th> &ndash;&gt;-->
+<!--        <th>NAME</th>-->
+<!--        <th>ROAST</th>-->
+<!--    </tr>-->
+<!--    </thead>-->
+<!--    <tbody id="coffees"></tbody>-->
+<!--</table>-->
+
 
 <script src="main.js"></script>
 </body>
