@@ -1,13 +1,3 @@
-:root{
-    --header-font: 4rem;
-}
-
-#header-title{
-    font-size: var(--header-font);
-    display: flex;
-    justify-content: center;
-}
-
 table {
     border-collapse: collapse;
     /* margin: 15px 0; */
