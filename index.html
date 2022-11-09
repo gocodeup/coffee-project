@@ -9,19 +9,25 @@
     <h1>Coffee!</h1>
 
     <form>
-        <label for="roast-selection"></label>
+        <label for="roast-selection">Roast</label>
+        <br>
         <select id="roast-selection">
             <option>light</option>
             <option>medium</option>
             <option>dark</option>
         </select>
+        <div class="col-12">
+            <label for="searchCoffee" class="form-label">Coffee Name</label>
+            <br>
+            <input type="search" class="form-control" id="searchCoffee" placeholder="Enter Coffee Name">
+        </div>
         <input id="submit" type="submit" />
     </form>
 
     <table>
         <thead>
             <tr>
-                <th>ID</th>
+<!--                <th>ID</th>-->
                 <th>NAME</th>
                 <th>ROAST</th>
             </tr>

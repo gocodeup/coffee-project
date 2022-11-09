@@ -1,11 +1,27 @@
 "use strict"
 
+let search = document.getElementById('searchCoffee');
+search.addEventListener('keyup', function() {
+    console.log("event fired off");
+let searchValue = search.value.toUpperCase();
+let filteredCoffees = [];
+for(let i = 0; i < coffees.length; i++) {
+    if(coffees[i].name.toUpperCase().includes(searchValue)) {
+        console.log(coffees[i]);
+        filteredCoffees.push(coffees[i]);
+    }
+}
+tbody.innerHTML = renderCoffees(filteredCoffees);
+});
+
+
+
 function renderCoffee(coffee) {
-    var html = '<tr class="coffee">';
-    html += '<td>' + coffee.id + '</td>';
-    html += '<td>' + coffee.name + '</td>';
-    html += '<td>' + coffee.roast + '</td>';
-    html += '</tr>';
+    var html = '<div class="coffee">';
+    // html += '<p>' + coffee.id + '</p>';
+    html += '<h1>' + coffee.name + '</h1>';
+    html += '<p>' + coffee.roast + '</p>';
+    html += '</div>';
 
     return html;
 }
