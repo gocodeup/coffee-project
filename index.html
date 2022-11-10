@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>Daily Grind</title>
     <link rel="stylesheet" href="style.css">
     <!-- CSS only -->
@@ -11,13 +12,18 @@
 
 <!--Search by Coffee & Roast-->
 
-<nav class="navbar text-dark">
-    <div class="container-fluid justify-content-end">
-        <form class="search-bar" role="search">
-            <!--    <h1 class="Title">Coffee!</h1>-->
-            <div class="search-bar">
+<nav class="navbar fixed-top container-fluid">
+    <div class="container-fluid text-end">
+        <img src="img/burial-grounds-high-resolution-logo-black-on-transparent-background.png" style="height: 75px" alt="logo">
+        Burial Grounds
+        <div class="search-bar" role="search">
+            <div>
+            <!--Search Bar-->
                 <label for="search"></label>
                 <input  id="search" type="text" placeholder="Search...">
+            </div>
+            <div class="m-0">
+            <!--Roast Sort-->
                 <label for="roast-selection"></label>
                 <select style="height:30px" id="roast-selection">
                     <option>Light</option>
@@ -26,20 +32,19 @@
                 </select>
                 <input id="roast-submit" type="submit"/>
             </div>
+            <div>
             <!--Custom Coffee-->
-<!--        <h2 class="Title">Add a Coffee</h2>-->
-        <div>
-        <label for="custom-name"></label>
-        <input id="custom-name" type="text" placeholder="Coffee Name...">
-        <label for="custom-roast"></label>
-            <select style="height:30px" id="custom-roast">
-                <option>Light</option>
-                <option>Medium</option>
-                <option>Dark</option>
-            </select>
-        <input id="custom-submit" type="submit"/>
+                <label for="custom-name"></label>
+                <input id="custom-name" type="text" placeholder="Coffee Name...">
+                <label for="custom-roast"></label>
+                <select style="height:30px" id="custom-roast">
+                    <option>Light</option>
+                    <option>Medium</option>
+                    <option>Dark</option>
+                </select>
+                <input id="custom-submit" type="submit"/>
+            </div>
         </div>
-    </form>
     </div>
 </nav>
 <!--Coffee Inventory-->

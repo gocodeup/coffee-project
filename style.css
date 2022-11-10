@@ -1,40 +1,36 @@
 * { box-sizing: border-box; }
-body {
-    font: 16px Arial;
-    opacity: 100%;
-}
 html {
     background: url("img/sebastian-schuppik-H7xTpvBjJS4-unsplash.jpg") fixed;
     background-size: cover;
     height: 100%;
     width: 100%;
     top: 0;
+    margin-top: 5em;
 }
-#coffees {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-
+body {
+    font: 16px Arial;
+    opacity: 100%;
 }
 .navbar {
-    max-height: 50px;
+    max-height: 120px;
     align-items: baseline;
     margin-bottom: 20px;
     backdrop-filter: blur(15px);
     background-color: rgba(255, 255, 255, 0.25);
     box-shadow: 0 1px 12px rgba(0, 0, 0, 0.25);
     border: 1px solid rgba(0, 0, 0, 0.3);
-    /*position: fixed;*/
-    /*z-index: 1;*/
+
     /*TODO: make the navbar fixed to the top*/
     /*TODO: make a "return to top" button*/
 }
 .search-bar{
     display: flex;
 }
-.card-img-top {
-    border-radius: 8px;
-    width: 300px;
+#coffees {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
 }
 .card {
     border-radius: 8px;
@@ -46,6 +42,10 @@ html {
     display: inline-block;
     font-weight: bolder;
     color: #fff;
+}
+.card-img-top {
+    border-radius: 8px;
+    width: 300px;
 }
 .card-body {
     text-align: center;
