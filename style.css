@@ -7,3 +7,41 @@ td, th {
     border: 1px solid black;
     padding: 5px 10px;
 }
+body {
+    margin: 40px;
+    background-image: url("img/coffee-beans.jpeg");
+    background-color: sandybrown;
+}
+h2 {
+    margin-top: auto;
+    margin-left: 45px;
+    margin-right: 45px;
+    font-size: 100px;
+    color: white;
+    font-family: 'Special Elite', cursive;
+    display: flex;
+    justify-content: center;
+    background-color: chocolate;
+    text-decoration: underline;
+}
+h1 {
+    font-family: 'Bangers', cursive;
+}
+.container {
+    background-color: sandybrown;
+}
+.card {
+    background-color: sandybrown;
+    border: none;
+    margin-top: 50px;
+}
+#submit, #newCoffee-submit {
+    background-color: blanchedalmond;
+}
+#roast-selection, #userCoffeeRoast {
+    background-color: antiquewhite;
+}
+#searchCoffee, #newCoffee {
+    background-color: antiquewhite;
+}
+

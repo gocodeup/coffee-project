@@ -3,38 +3,122 @@
 <head>
     <meta charset="UTF-8">
     <title></title>
+    <!--Bootstrap Link-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <!--Google Fonts Link-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Special+Elite&display=swap" rel="stylesheet">
+    <!--CSS Link-->
     <link rel="stylesheet" href="style.css">
+
 </head>
 <body>
-    <h1>Coffee!</h1>
+<h2 class="text-center">Coffee Shop!</h2>
+<hr>
 
-    <form>
-        <label for="roast-selection">Roast</label>
-        <br>
-        <select id="roast-selection">
-            <option>light</option>
-            <option>medium</option>
-            <option>dark</option>
-        </select>
-        <div class="col-12">
-            <label for="searchCoffee" class="form-label">Coffee Name</label>
-            <br>
-            <input type="search" class="form-control" id="searchCoffee" placeholder="Enter Coffee Name">
+<div class="container">
+    <div class="row">
+        <!--Coffee List-->
+        <div id="coffees" class="col-6 d-flex flex-wrap"></div>
+        <!--Coffee Selections-->
+        <div class="col-6">
+            <!--First Form (Choose your coffee)-->
+            <div class="select-coffee">
+                <!--                <form>-->
+                <!--                    <h3>Roast</h3>-->
+                <!--                    <label for="roast-selection"></label>-->
+                <!--                    <select id="roast-selection">-->
+                <!--                        <option>All</option>-->
+                <!--                        <option>Light</option>-->
+                <!--                        <option>Medium</option>-->
+                <!--                        <option>Dark</option>-->
+                <!--                    </select>-->
+                <!--                    <h3>Coffee Name</h3>-->
+                <!--                    <label for="searchCoffee" class="form-label"></label>-->
+                <!--                    <input type="search" id="searchCoffee" placeholder="Enter Coffee Name">-->
+                <!--                    <input id="submit" type="submit"/>-->
+                <!--                </form>-->
+
+                <div class="card">
+                    <div class="card-body">
+                        <h3 class="card-title">Roast</h3>
+                        <p class="card-text">
+                            <label for="roast-selection"></label>
+                            <select id="roast-selection">
+                                <option>All</option>
+                                <option>Light</option>
+                                <option>Medium</option>
+                                <option>Dark</option>
+                            </select>
+                        </p>
+                        <h3>Coffee Name</h3>
+                        <p class="card-text">
+                            <label for="searchCoffee" class="form-label"></label>
+                            <input type="search" id="searchCoffee" style="width: 75%;" placeholder="Enter Coffee Name">
+                        </p>
+                        <input id="submit" style="width: 100%;" type="submit"/>
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <!--Second Form (Make your own coffee)-->
+            <div class="make-coffee">
+<!--                <form>-->
+<!--                    <h3>Roast</h3>-->
+<!--                    <label for="userCoffeeRoast"></label>-->
+<!--                    <select id="userCoffeeRoast">-->
+<!--                        <option>Light</option>-->
+<!--                        <option>Medium</option>-->
+<!--                        <option>Dark</option>-->
+<!--                    </select>-->
+<!--                    <h3>Name your coffee</h3>-->
+<!--                    <label for="newCoffee" class="form-label"></label>-->
+<!--                    <input type="text" id="newCoffee" placeholder="Enter New Coffee Name">-->
+<!--                    <input value="New Coffee" id="newCoffee-submit" type="button"/>-->
+<!--                </form>-->
+
+                <div class="card">
+                    <div class="card-body">
+                        <h3 class="card-title">Roast</h3>
+                        <p class="card-text">
+                            <label for="userCoffeeRoast"></label>
+                            <select id="userCoffeeRoast">
+                                <option>Light</option>
+                                <option>Medium</option>
+                                <option>Dark</option>
+                            </select>
+                        </p>
+                        <h3 class="card-title">Name your coffee</h3>
+                        <p class="card-text">
+                            <label for="newCoffee" class="form-label"></label>
+                            <input type="text" id="newCoffee" style="width: 75%;" placeholder="Enter New Coffee Name">
+                        </p>
+                            <input value="Add New Coffee" style="width: 100%;" id="newCoffee-submit" type="button"/>
+                    </div>
+                </div>
+            </div>
         </div>
-        <input id="submit" type="submit" />
-    </form>
+        <!--        <table>-->
+        <!--            <thead>-->
+        <!--            <tr>-->
+        <!--                &lt;!&ndash;                <th>ID</th>&ndash;&gt;-->
+        <!--                <th>NAME</th>-->
+        <!--                <th>ROAST</th>-->
+        <!--            </tr>-->
+        <!--            </thead>-->
+        <!--            <tbody id="coffees"></tbody>-->
+        <!--        </table>-->
+    </div>
+</div>
 
-    <table>
-        <thead>
-            <tr>
-<!--                <th>ID</th>-->
-                <th>NAME</th>
-                <th>ROAST</th>
-            </tr>
-        </thead>
-        <tbody id="coffees"></tbody>
-    </table>
 
-    <script src="main.js"></script>
+<!-- JavaScript Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+        crossorigin="anonymous"></script>
+<script src="main.js"></script>
+
 </body>
 </html>

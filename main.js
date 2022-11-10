@@ -1,5 +1,6 @@
 "use strict"
 
+// Search Bar 1
 let search = document.getElementById('searchCoffee');
 search.addEventListener('keyup', function() {
     console.log("event fired off");
@@ -14,10 +15,23 @@ for(let i = 0; i < coffees.length; i++) {
 tbody.innerHTML = renderCoffees(filteredCoffees);
 });
 
+// Search Bar 2
+let newCoffee = document.querySelector('#newCoffee');
+let newRoast = document.querySelector('#userCoffeeRoast');
+let newCoffeeBtn = document.querySelector('#newCoffee-submit');
+newCoffeeBtn.addEventListener('click', function(input) {
+    let newCoffeeId = coffees.length+1;
+    let newCoffeeName = newCoffee.value.toString();
+    let newCoffeeRoast = newRoast.value.toString();
+    input = {id: newCoffeeId, name: newCoffeeName, roast: newCoffeeRoast};
+    coffees.push(input);
+    tbody.innerHTML = renderCoffees(coffees);
+});
+
 
 
 function renderCoffee(coffee) {
-    var html = '<div class="coffee">';
+    var html = '<div class="coffee" style="width: 50%">';
     // html += '<p>' + coffee.id + '</p>';
     html += '<h1>' + coffee.name + '</h1>';
     html += '<p>' + coffee.roast + '</p>';
@@ -34,12 +48,15 @@ function renderCoffees(coffees) {
     return html;
 }
 
+// Roast Selection List
 function updateCoffees(e) {
     e.preventDefault(); // don't submit the form, we just want to update the data
     var selectedRoast = roastSelection.value;
     var filteredCoffees = [];
     coffees.forEach(function(coffee) {
         if (coffee.roast === selectedRoast) {
+            filteredCoffees.push(coffee);
+        } else if(roastSelection.value === 'All') {
             filteredCoffees.push(coffee);
         }
     });
@@ -48,20 +65,20 @@ function updateCoffees(e) {
 
 // from http://www.ncausa.org/About-Coffee/Coffee-Roasts-Guide
 var coffees = [
-    {id: 1, name: 'Light City', roast: 'light'},
-    {id: 2, name: 'Half City', roast: 'light'},
-    {id: 3, name: 'Cinnamon', roast: 'light'},
-    {id: 4, name: 'City', roast: 'medium'},
-    {id: 5, name: 'American', roast: 'medium'},
-    {id: 6, name: 'Breakfast', roast: 'medium'},
-    {id: 7, name: 'High', roast: 'dark'},
-    {id: 8, name: 'Continental', roast: 'dark'},
-    {id: 9, name: 'New Orleans', roast: 'dark'},
-    {id: 10, name: 'European', roast: 'dark'},
-    {id: 11, name: 'Espresso', roast: 'dark'},
-    {id: 12, name: 'Viennese', roast: 'dark'},
-    {id: 13, name: 'Italian', roast: 'dark'},
-    {id: 14, name: 'French', roast: 'dark'},
+    {id: 1, name: 'Light City', roast: 'Light'},
+    {id: 2, name: 'Half City', roast: 'Light'},
+    {id: 3, name: 'Cinnamon', roast: 'Light'},
+    {id: 4, name: 'City', roast: 'Medium'},
+    {id: 5, name: 'American', roast: 'Medium'},
+    {id: 6, name: 'Breakfast', roast: 'Medium'},
+    {id: 7, name: 'High', roast: 'Dark'},
+    {id: 8, name: 'Continental', roast: 'Dark'},
+    {id: 9, name: 'New Orleans', roast: 'Dark'},
+    {id: 10, name: 'European', roast: 'Dark'},
+    {id: 11, name: 'Espresso', roast: 'Dark'},
+    {id: 12, name: 'Viennese', roast: 'Dark'},
+    {id: 13, name: 'Italian', roast: 'Dark'},
+    {id: 14, name: 'French', roast: 'Dark'},
 ];
 
 var tbody = document.querySelector('#coffees');
