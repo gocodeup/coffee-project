@@ -33,16 +33,10 @@ let filteredCoffee = [];
 
 // this function renders the html into what is being displayed
 function renderCoffeeDiv(coffee) {
-
-    // let html = '<div class="col-6">';
-    // html += '<div class="coffee-id" style="visibility: hidden">' + coffee.id + '</div>';
-    // html += '<div class="coffee-name">' + coffee.name + '</div>';
-    // html += '<div class="coffee-roast">' + coffee.roast + '</div>';
-    // html += '</div>';
-
-
-    let html = `<div class="col-6 card">
-          <img src="..." class="card-img-top" alt="...">
+    let html = '';
+        if (coffee.roast === 'light') {
+            html += `<div class="col-6 card">
+          <img src="https://i.imgur.com/e40rBBn.jpeg" class="card-img-top" alt="...">
           <div class="card-body">
                 
                 <h2 class="coffee-name">${coffee.name}</h2>
@@ -50,7 +44,27 @@ function renderCoffeeDiv(coffee) {
             
           </div>
         </div>`
-
+        } else if (coffee.roast === 'medium') {
+            html += `<div class="col-6 card">
+          <img src="https://i.imgur.com/ROnndBi.jpeg" class="card-img-top" alt="...">
+          <div class="card-body">
+                
+                <h2 class="coffee-name">${coffee.name}</h2>
+                <p class="coffee-roast">${coffee.roast}</p>
+            
+          </div>
+        </div>`
+        } else {
+            html += `<div class="col-6 card">
+          <img src="https://i.imgur.com/znwB08l.jpeg" class="card-img-top" alt="...">
+          <div class="card-body">
+                
+                <h2 class="coffee-name">${coffee.name}</h2>
+                <p class="coffee-roast">${coffee.roast}</p>
+            
+          </div>
+        </div>`
+        }
     return html;
 }
 //--------------------------------------
@@ -115,6 +129,7 @@ function addCoffee() {
     }
 
     coffees.push(newCoffee);
+    return displayedCoffee.innerHTML = renderAllCoffeesList(coffees);
 }
 
 //EVENT LISTENERS
