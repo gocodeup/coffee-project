@@ -17,6 +17,7 @@ let coffees = [
     {id: 14, name: 'French', roast: 'dark'},
 ];
 
+
 //CALLING THE DOM
 let displayedCoffee = document.querySelector('#coffees');
 let selectedRoast = document.querySelector('.selectEl');
@@ -25,6 +26,7 @@ let roastSelection = document.querySelector('#roast-selection');
 let coffeeSearchBar = document.querySelector('#coffee-search');
 let addRoast = document.getElementById('add-roast');
 let addName = document.getElementById('add-coffee');
+
 
 
 // coffee to be displayed
@@ -73,7 +75,6 @@ function renderCoffeeDiv(coffee) {
 
     }
 
-        }
     return html;
 }
 //--------------------------------------
@@ -91,7 +92,9 @@ function renderAllCoffeesList(coffees) {
 // updating what is being displayed based on the roast selection
 function updateCoffees(e) {
     e.preventDefault(); // don't submit the form, we just want to update the data
+    let search = coffeeSearchBar.value;
     filteredCoffee = [];
+    let searchedCoffee = [];
     let selectedRoast = roastSelection.value;
     coffees.forEach(function(coffee) {
         if (coffee.roast === selectedRoast || selectedRoast === 'all') {
@@ -99,22 +102,17 @@ function updateCoffees(e) {
             return displayedCoffee.innerHTML = renderAllCoffeesList(filteredCoffee);
         }
     });
+    for(let i = 0; i < filteredCoffee.length; i++) {
+         if ((filteredCoffee[i].name.toLowerCase()).includes(search) || (filteredCoffee[i].name.toUpperCase()).includes(search)) {
+             searchedCoffee.push(filteredCoffee[i])
+         }
+    }
+    return displayedCoffee.innerHTML = renderAllCoffeesList(searchedCoffee);
+
 };
 //--------------------------------------
 
-// this function is checking what is being searched
-function checkCoffeeName () {
-    let search = coffeeSearchBar.value;
-    let searchedCoffee = [];
-    for(let i = 0; i < filteredCoffee.length; i++) {
-        if ((filteredCoffee[i].name.toLowerCase()).includes(search) || (filteredCoffee[i].name.toUpperCase()).includes(search)) {
-            searchedCoffee.push(filteredCoffee[i])
-            console.log(searchedCoffee);
-        }
-    }
-    return displayedCoffee.innerHTML = renderAllCoffeesList(searchedCoffee);
-}
-//--------------------------------------
+
 
 //THIS FUNCTION WILL TAKE THE STRING AND CAPITALIZE THE FIRST TWO LETTERS
 const capitalizeName = x => {
@@ -146,5 +144,4 @@ displayedCoffee.innerHTML = renderAllCoffeesList(coffees);
 
 selectedRoast.addEventListener('change', updateCoffees);
 
-coffeeSearchBar.addEventListener("keyup", (e) => checkCoffeeName());
-submitBtn.addEventListener('click', (e) => addCoffee());
+coffeeSearchBar.addEventListener("keyup", updateCoffees);
