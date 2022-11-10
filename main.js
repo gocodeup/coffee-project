@@ -50,6 +50,7 @@ let coffees = [
 
 let userInput = document.getElementById('CoffeeSearchBar')
 userInput.addEventListener("keyup", function () {
+
     let typedInput = userInput.value.toUpperCase();
     let filteredCoffees = [];
     for(let i = 0; i < coffees.length; i++){
