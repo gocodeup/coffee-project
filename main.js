@@ -3,7 +3,7 @@
 function renderCoffee(coffee) {
    let html = '<div class="coffee">';
     // html += '<p>' + coffee.id + '</p>';
-    html += '<h1>' + coffee.name + '</h1>';
+    html += '<p>' + coffee.name + '</p>';
     html += '<p>' + coffee.roast + '</p>';
     html += '</div>';
 
@@ -60,10 +60,15 @@ userInput.addEventListener("keyup", function () {
 tbody.innerHTML = renderCoffees(filteredCoffees);
 })
 
+// let userInput1 = document.getElementById('addCoffee')
+// userInput1.push(coffees)
+
 let tbody = document.querySelector('#coffees');
 let submitButton = document.querySelector('#submit');
 let roastSelection = document.querySelector('#roast-selection');
 
-tbody.innerHTML = renderCoffees(coffees);
+
+// tbody.innerHTML = renderCoffees(coffees);
 
 submitButton.addEventListener('click', updateCoffees);
+
