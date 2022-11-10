@@ -1,39 +1,5 @@
 "use strict"
 
-
-function renderCoffee(coffee) {
-    let html = '<tr class="coffee">';
-    html += '<td>' + coffee.id + '</td>';
-    html += '<td>' + coffee.name + '</td>';
-    html += '<td>' + coffee.roast + '</td>';
-    html += '</tr>';
-
-    return html;
-}
-
-function renderCoffees(coffees) {
-    let html = '';
-    for(let i=0; i < coffees.length; i++) {
-        html += renderCoffee(coffees[i]);
-    }
-    return html;
-}
-
-
-function updateCoffees(e) {
-    e.preventDefault(); // don't submit the form, we just want to update the data
-    let roastInput = roastSelection.value;
-    let filteredCoffees = [];
-    coffees.forEach(function(coffee) {
-        if (coffee.roast === roastInput) {
-            filteredCoffees.push(coffee);
-        }
-    });
-    tbody.innerHTML = renderCoffees(filteredCoffees);
-}
-
-// from http://www.ncausa.org/About-Coffee/Coffee-Roasts-Guide
-
 let coffees = [
     {id: 1, name: 'Light City', roast: 'light'},
     {id: 2, name: 'Half City', roast: 'light'},
@@ -51,11 +17,6 @@ let coffees = [
     {id: 14, name: 'French', roast: 'dark'},
 ];
 
-
-
-var tbody = document.querySelector('#coffees');
-var submitButton = document.querySelector('#submit');
-var roastSelection = document.querySelector('#roast-selection');
 
 //CALLING THE DOM
 let displayedCoffee = document.querySelector('#coffees');
@@ -131,7 +92,9 @@ function renderAllCoffeesList(coffees) {
 // updating what is being displayed based on the roast selection
 function updateCoffees(e) {
     e.preventDefault(); // don't submit the form, we just want to update the data
+    let search = coffeeSearchBar.value;
     filteredCoffee = [];
+    let searchedCoffee = [];
     let selectedRoast = roastSelection.value;
     coffees.forEach(function(coffee) {
         if (coffee.roast === selectedRoast || selectedRoast === 'all') {
@@ -139,22 +102,17 @@ function updateCoffees(e) {
             return displayedCoffee.innerHTML = renderAllCoffeesList(filteredCoffee);
         }
     });
+    for(let i = 0; i < filteredCoffee.length; i++) {
+         if ((filteredCoffee[i].name.toLowerCase()).includes(search) || (filteredCoffee[i].name.toUpperCase()).includes(search)) {
+             searchedCoffee.push(filteredCoffee[i])
+         }
+    }
+    return displayedCoffee.innerHTML = renderAllCoffeesList(searchedCoffee);
+
 };
 //--------------------------------------
 
-// this function is checking what is being searched
-function checkCoffeeName () {
-    let search = coffeeSearchBar.value;
-    let searchedCoffee = [];
-    for(let i = 0; i < filteredCoffee.length; i++) {
-        if ((filteredCoffee[i].name.toLowerCase()).includes(search) || (filteredCoffee[i].name.toUpperCase()).includes(search)) {
-            searchedCoffee.push(filteredCoffee[i])
-            console.log(searchedCoffee);
-        }
-    }
-    return displayedCoffee.innerHTML = renderAllCoffeesList(searchedCoffee);
-}
-//--------------------------------------
+
 
 //THIS FUNCTION WILL TAKE THE STRING AND CAPITALIZE THE FIRST TWO LETTERS
 const capitalizeName = x => {
@@ -186,5 +144,5 @@ displayedCoffee.innerHTML = renderAllCoffeesList(coffees);
 
 selectedRoast.addEventListener('change', updateCoffees);
 
-coffeeSearchBar.addEventListener("keyup", (e) => checkCoffeeName());
+coffeeSearchBar.addEventListener("keyup", updateCoffees);
 submitBtn.addEventListener('click', (e) => addCoffee());

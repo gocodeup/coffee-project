@@ -10,3 +10,11 @@ td, th {
 header {
     text-align: center;
 }
+
+.card {
+    --bs-card-border-color: none !important;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    text-align: center;
+}
