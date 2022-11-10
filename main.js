@@ -33,11 +33,23 @@ let filteredCoffee = [];
 
 // this function renders the html into what is being displayed
 function renderCoffeeDiv(coffee) {
-    let html = '<div class="coffee">';
-    html += '<div class="coffee-id" style="visibility: hidden">' + coffee.id + '</div>';
-    html += '<div class="coffee-name">' + coffee.name + '</div>';
-    html += '<div class="coffee-roast">' + coffee.roast + '</div>';
-    html += '</div>';
+
+    // let html = '<div class="col-6">';
+    // html += '<div class="coffee-id" style="visibility: hidden">' + coffee.id + '</div>';
+    // html += '<div class="coffee-name">' + coffee.name + '</div>';
+    // html += '<div class="coffee-roast">' + coffee.roast + '</div>';
+    // html += '</div>';
+
+
+    let html = `<div class="col-6 card">
+          <img src="..." class="card-img-top" alt="...">
+          <div class="card-body">
+                
+                <h2 class="coffee-name">${coffee.name}</h2>
+                <p class="coffee-roast">${coffee.roast}</p>
+            
+          </div>
+        </div>`
 
     return html;
 }
