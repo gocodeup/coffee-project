@@ -12,8 +12,6 @@ html {
     height: 100%;
     width: 100%;
     top: 0;
-    /*position: absolute;*/
-    /*position: fixed;*/
 }
 #coffees {
     /*border-radius: 8px;*/
@@ -29,27 +27,19 @@ html {
     justify-content: center;
 
 }
-.Title{
-    font-weight: bolder;
+.Title {
+    font-weight: bold;
     backdrop-filter: blur(10px);
     background-color: rgba(255, 255, 255, 0.5);
     box-shadow: 0 1px 12px rgba(0, 0, 0, 0.25);
     border: 1px solid rgba(255, 255, 255, 0.3);
-    margin-bottom: 10px;
     display: inline-block;
     opacity: 60%;
 }
-
-.coffeeSearch{
-    display: flex;
-    align-items: baseline;
-    justify-content: flex-end;
-}
-.newCoffee{
-    display: flex;
-    justify-content: flex-end;
-    margin: 0 auto;
+.navbar {
     max-height: 50px;
+    align-items: baseline;
+    margin-bottom: 20px;
 }
 .search-bar{
     display: flex;
