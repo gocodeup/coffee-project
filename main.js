@@ -78,8 +78,7 @@ submitButton.addEventListener('click', updateCoffees);
 let searchCoffee = function () {
     let filteredCoffees = [];
     for (let i = 0; i < coffees.length; i++) {
-        // takes the input from search bar and compares to coffee obj names
-        if (coffees[i].name.includes(search.value)) {
+        if (coffees[i].name.toLowerCase().includes(search.value.toLowerCase())) {
             filteredCoffees.push(coffees[i]);
         }
     }
