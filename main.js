@@ -27,12 +27,15 @@ function filterCoffeeByRoast() {
     var selectedRoast = roastSelection.value;
     var filteredCoffees = [];
     for (let coffee of coffees) {
-        if (coffee.roast === selectedRoast) {
+        if (selectedRoast === 'all') {
+            filteredCoffees.push(coffee);
+
+        } else if (coffee.roast === selectedRoast) {
             filteredCoffees.push(coffee);
         }
-    }
-   return filteredCoffees;
+    } return filteredCoffees;
 }
+
 function filterCoffeeByName() {
     let coffeeNameInputValue = coffeeGrab.value;
     var filteredCoffeesName = [];
@@ -43,7 +46,8 @@ function filterCoffeeByName() {
     }
     return filteredCoffeesName;
 }
-function filterCoffees () {
+
+function filterCoffees() {
     let finalSearchResult = []
     let roast = filterCoffeeByRoast();
     let name = filterCoffeeByName();
@@ -52,9 +56,8 @@ function filterCoffees () {
             finalSearchResult.push(coffee);
         }
     }
-    return finalSearchResult
+    return finalSearchResult;
 }
-
 
 
 // from http://www.ncausa.org/About-Coffee/Coffee-Roasts-Guide
@@ -85,9 +88,5 @@ let coffeeGrab = document.querySelector("#coffee-name");
 tbody.innerHTML = renderCoffees(coffees);
 
 submitButton.addEventListener('click', updateCoffees);
-
-
-coffeeGrab.addEventListener("keyup", (event) => {
-        filterCoffeeByName()
-    }
-)
+coffeeGrab.addEventListener("keyup", updateCoffees);
+roastSelection.addEventListener('change', updateCoffees);
