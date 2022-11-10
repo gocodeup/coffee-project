@@ -14,41 +14,55 @@
 <!--Header and divider line-->
     <h1 class ="d-flex justify-content-center">Coffee!</h1>
 <hr>
-<!--left element for coffee name-->
-    <div id = "coffee-property "></div>
-<!--top-right menu bar-->
-    <div id = "top-menu">
-        <form>
-             <label for="roast-selection">Roast</label>
-            <select id="roast-selection">
-                <option>all</option>
-                <option>light</option>
-                <option>medium</option>
-                <option>dark</option>
-            </select>
-            <label id="old-coffee" for ="  ">Coffee Name</label>
-            <input placeholder="">
-            <input id="submitt" type="submit" />
-        </form>
+<!--right element for coffee name-->
 
-    <hr>
-    </div>
-<!--bottom right menu bar-->
-    <div id = " bottom-menu"></div>
 
-    <h3>Add a Coffee</h3>
-<form>
-    <label for="roast-selection">Roast</label>
-    <select id="roast-varieties">
-        <option>all</option>
-        <option>light</option>
-        <option>medium</option>
-        <option>dark</option>
-    </select>
-    <label id = "new-coffee" for ="coffees">Name</label>
-    <input placeholder="">
-    <input id="submit" type="submit" />
-</form>
+<div class="container text-left">
+    <div class="row">
+        <div class="col">
+            <table>
+<!--                <thead>-->
+<!--                <tr>-->
+<!--                    <th>ID</th>-->
+<!--                    <th>NAME</th>-->
+<!--                    <th>ROAST</th>-->
+<!--                </tr>-->
+<!--                </thead>-->
+                <tbody id="coffees"></tbody>
+            </table>
+        </div>
+        <div class="col">
+            <form>
+                <label for="roast-selection" class = "form-label fw-bold">Roast</label>
+                <select id="roast-selection" class="form-control">
+                    <option>All</option>
+                    <option>light</option>
+                    <option>medium</option>
+                    <option>dark</option>
+                </select>
+                <label for="inputtext5" class="form-label fw-bold">Coffee Name</label>
+                <input type="text" class="form-control" aria-describedby="text">
+
+                <input id="submit" type="submit" class="col-12 bg-primary " />
+            </form><hr>
+            <form>
+                <h2>Add A Coffee</h2>
+                <label for="roast-selection" class = "form-label fw-bold">Roast</label>
+                <select id="roast-selections" class="form-control">
+                    <option>All</option>
+                    <option>light</option>
+                    <option>medium</option>
+                    <option>dark</option>
+                </select>
+                <label for="inputtext5" class="form-label fw-bold">Name</label>
+                <input type="text" id="inputtext5" class="form-control" aria-describedby="text">
+
+                <input id="submits" type="submit" class = "col-12 bg-primary" />
+            </form>
+        </div>
+
+
+
 
 
 
