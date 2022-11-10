@@ -1,9 +1,9 @@
 "use strict"
 
 function renderCoffee(coffee) {
-    var html = '<div class="coffee">';
+    var html = '<div class="coffee col-6">';
     html += '<p id="coffeeID" style="display: none">' + coffee.id + '</p>';
-    html += '<h2 id="coffeeName">' + coffee.name + '</h2>';
+    html += '<h2  id="coffeeName">' + coffee.name + '</h2>';
     html += '<p id="=coffeeRoast">' + coffee.roast + '</p>';
     html += '</div>';
 
@@ -32,6 +32,7 @@ function updateCoffees(e) {
 
 // from http://www.ncausa.org/About-Coffee/Coffee-Roasts-Guide
 let coffees = [
+
     {id: 1, name: 'Light City', roast: 'light'},
     {id: 2, name: 'Half City', roast: 'light'},
     {id: 3, name: 'Cinnamon', roast: 'light'},
@@ -55,3 +56,4 @@ var roastSelection = document.querySelector('#roast-selection');
 tbody.innerHTML = renderCoffees(coffees);
 
 submitButton.addEventListener('click', updateCoffees);
+

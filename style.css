@@ -37,5 +37,6 @@ td, th {
     flex-wrap: nowrap;
     flex-grow: 1;
     justify-content: space-evenly;
+    margin-bottom: 50px;
 }
 
