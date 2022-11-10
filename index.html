@@ -1,50 +1,80 @@
 <!DOCTYPE html>
-<html lang="en" xmlns="http://www.w3.org/1999/html">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title></title>
-    <link rel="stylesheet" href="reset.css">
+    <title>Coffee!</title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">
 </head>
 <body>
 
 <!--+++++++++++++++++++++++++HEADER++++++++++++++++++++++++++-->
 <header>
-        <h1 id="header-title">Coffee!</h1>
+    <!--    <h1 class=" d-flex justify-content-center ">Coffee!</h1>-->
+    <a class=" d-flex justify-content-center " href="https://www.fontspace.com/category/coffee"><img
+            src="https://see.fontimg.com/api/renderfont4/vmLaL/eyJyIjoiZnMiLCJoIjoxMzAsInciOjIwMDAsImZzIjo2NSwiZmdjIjoiIzAwMDAwMCIsImJnYyI6IiNGRkZGRkYiLCJ0IjoxfQ/Y29mZmVl/mf-coffee-mugs-2.png"
+            alt="Coffee fonts"></a>
     <hr>
 </header>
 
-<!--+++++++++++++++++++++++++HEADER END+++++++++++++++++++-->
+<!--+++++++++++++++++++++++++LEFT-COLUMN+++++++++++++++++++-->
+<main>
+    <div class="container ol">
+        <div class="row">
+            <div class="col-8 ol">
+                <div id="coffee-list"></div>  <!--creates empty space for the coffee list-->
+            </div>
 
+            <!--+++++++++++++++++++++++++SEARCH FOR COFFEE+++++++++++++++++++-->
+            <div class="col">   <!--col automatically adjusts-->
 
-<section>
-<form>
-    <label for="roast-selection">Roast</label>
-    <select class="roast-selection">
-        <option>All</option>
-        <option>Light</option>
-        <option>Medium</option>
-        <option>Dark</option>
-    </select>
-    <label>Coffee Name</label>
-    <input type="text">
-    <input id="submit" type="submit"/>
-</form>
-    <h1>Add a Coffee</h1>
-    <form>
-        <label for="roast-selection">Roast</label>
-        <select class="roast-selection">
-            <option>All</option>
-            <option>Light</option>
-            <option>Medium</option>
-            <option>Dark</option>
-        </select>
-        <label>Name:</label>
-        <input type="text">
-    </form>
+                <form>
+                    <label for="roast-selection"><strong><p class="m-0 p-0">Roast</p></strong></label>
+                    <select id="roast-selection" class="form-select" aria-label="Select Roast">
+                        <option>All</option>
+                        <option>Light</option>
+                        <option>Medium</option>
+                        <option>Dark</option>
+                    </select>
+                    <!--+++++++++++++++++++++++++COFFEE SEARCH & BUTTON+++++++++++++++++++-->
 
+                    <div>
+                        <label class="hi" for="add-coffee"><strong><p class="m-0 p-0">Coffee Name</p></strong></label>
+                        <input type="text" class="form-control mb-2" id="add-coffee"> <!--ID from label and input must match-->
+                    </div>
+                    <div>
+                        <button type="button" class="btn btn-primary w-100 ">Submit</button>
+
+                    </div>
+                    <hr class="hr">
+                    <!--+++++++++++++++++++++++++ADD COFFEE SECTION+++++++++++++++++++-->
+
+                </form>
+                <h2 class="d-flex justify-content-center">Add a Coffee!</h2>
+                <form>
+                    <label for="roast-add"><strong><p class="m-0 p-0">Roast</p></strong></label>
+                    <select id="roast-add" class="form-select" aria-label="Select Roast">
+                        <option>All</option>
+                        <option>Light</option>
+                        <option>Medium</option>
+                        <option>Dark</option>
+                    </select>
+
+                    <div class>
+                        <label for="coffee-search"><strong><p class="m-0 p-0">Name</p></strong></label>
+                        <input type="text" class="form-control mb-2" id="coffee-search"> <!--ID from label and input must match-->
+                    </div>
+                    <div>
+                        <button class="btn btn-primary w-100">Submit</button>
+                    </div>
+                </form>
+            </div>
+        </div>
     </div>
-</section>
+    </div>
+</main>
 
 <!--<table>-->
 <!--    <thead>-->
@@ -59,5 +89,12 @@
 
 
 <script src="main.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
 </body>
 </html>
+
+
+
+
