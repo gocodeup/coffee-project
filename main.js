@@ -1,4 +1,5 @@
 "use strict"
+
 let coffees = [
     {id: 1, name: 'Light City', roast: 'light'},
     {id: 2, name: 'Half City', roast: 'light'},
@@ -16,10 +17,14 @@ let coffees = [
     {id: 14, name: 'French', roast: 'dark'},
 ];
 
+//CALLING THE DOM
 let displayedCoffee = document.querySelector('#coffees');
-let submitButton = document.querySelector('#submit');
+let selectedRoast = document.querySelector('.selectEl');
+let submitBtn = document.getElementById('addBtn');
 let roastSelection = document.querySelector('#roast-selection');
 let coffeeSearchBar = document.querySelector('#coffee-search');
+let addRoast = document.getElementById('add-roast');
+let addName = document.getElementById('add-coffee');
 
 
 // coffee to be displayed
@@ -46,12 +51,7 @@ function renderAllCoffeesList(coffees) {
     }
     return html;
 };
-//--------------------------------------
-// function clearFilter () {
-//     if (filteredCoffee.length > 1) {
-//         filteredCoffee.splice(0,filteredCoffee.length);
-//     }
-// };
+
 
 // updating what is being displayed based on the roast selection
 function updateCoffees(e) {
@@ -81,12 +81,32 @@ function checkCoffeeName () {
 }
 //--------------------------------------
 
+//THIS FUNCTION WILL TAKE THE STRING AND CAPITALIZE THE FIRST TWO LETTERS
+const capitalizeName = x => {
+    const split = x.split(' ');
+    for (let i = 0; i < split.length; i++) {
+        split[i] = split[i][0].toUpperCase() + split[i].substring(1);
+    }
+    return split.join(' ');
+}
 
+//ADDING COFFEE SECTION
+function addCoffee() {
+    let roastValue = addRoast.value.toLowerCase();
+    // console.log(roastValue);
+    let nameValue = addName.value;
+    // console.log(nameValue);
+    let newCoffee = {
+        id: coffees.length + 1,
+        name: capitalizeName(nameValue),
+        roast: roastValue
+    }
 
+    coffees.push(newCoffee);
+}
+
+//EVENT LISTENERS
 displayedCoffee.innerHTML = renderAllCoffeesList(coffees);
-
-submitButton.addEventListener('click', updateCoffees);
-// submitButton.addEventListener('click', clearFilter);
-
+selectedRoast.addEventListener('click', updateCoffees);
 coffeeSearchBar.addEventListener("keyup", (e) => checkCoffeeName());
-
+submitBtn.addEventListener('click', (e) => addCoffee());

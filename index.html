@@ -10,7 +10,7 @@
 
     <form>
         <label for="roast-selection">Roast</label>
-        <select id="roast-selection">
+        <select id="roast-selection" class="selectEl">
             <option>all</option>
             <option>light</option>
             <option>medium</option>
@@ -22,7 +22,7 @@
 <!--  Start Coffee Search Bar-->
 
         <label for="coffee-search">Coffee Name</label>
-        <input type="text" name="coffee-name" id="coffee-search">
+        <input type="text" name="coffee-name" id="coffee-search" onkeypress="return event.keyCode != 13;">
 
   <!-- End Coffee Search Bar-->
 
@@ -51,7 +51,7 @@
 
         <br>
 
-        <button type="button">Add Coffee</button>
+        <button type="button" id="addBtn">Add Coffee</button>
     </form>
 
     <br>
