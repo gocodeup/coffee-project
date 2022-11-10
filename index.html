@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title></title>
+    <title>Daily Grind</title>
     <link rel="stylesheet" href="style.css">
     <!-- CSS only -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
@@ -11,7 +11,7 @@
 
 <!--Search by Coffee & Roast-->
 
-<nav class="navbar bg-secondary bg-opacity-50 text-dark">
+<nav class="navbar text-dark">
     <div class="container-fluid justify-content-end">
         <form class="search-bar" role="search">
             <!--    <h1 class="Title">Coffee!</h1>-->
@@ -32,7 +32,11 @@
         <label for="custom-name"></label>
         <input id="custom-name" type="text" placeholder="Coffee Name...">
         <label for="custom-roast"></label>
-        <input id="custom-roast" type="text" placeholder="Roast Strength...">
+            <select style="height:30px" id="custom-roast">
+                <option>Light</option>
+                <option>Medium</option>
+                <option>Dark</option>
+            </select>
         <input id="custom-submit" type="submit"/>
         </div>
     </form>
@@ -40,7 +44,6 @@
 </nav>
 <!--Coffee Inventory-->
     <div id="coffees"></div>
-
 <!--Coffee Card Test-->
     <!--<div class="card bg-transparent" style="width: 18rem;">-->
     <!--    <img src="img/coffee_salty-siren.webp" class="card-img-top" alt="coffee image">-->

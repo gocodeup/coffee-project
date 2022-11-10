@@ -25,7 +25,8 @@ let addCoffee = function (e) {
     coffees.push( {
         id: coffees.length + 1,
         name: customName.value,
-        roast: customRoast.value
+        roast: customRoast.value,
+        img: customImg(customRoast.value)
     });
     console.log(`${customName.value} has been added to the inventory.`);
     coffeeDiv.innerHTML = renderCoffees(coffees);
@@ -35,6 +36,17 @@ let customName = document.querySelector('#custom-name');
 let customRoast = document.querySelector('#custom-roast');
 let customSubmit = document.querySelector('#custom-submit');
 customSubmit.addEventListener('click', addCoffee);
+
+// Custom Coffee Placeholder Images
+function customImg(input) {
+    if (input === "Medium") {
+        return 'img/coffee_medium.webp';
+    } else if (input === "Dark") {
+        return 'img/coffee_dark.webp';
+    } else {
+        return 'img/coffee_light.webp';
+    }
+}
 
 // Populates the Coffee Selection
 // function renderCoffee(coffee) {
