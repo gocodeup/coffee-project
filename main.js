@@ -1,52 +1,8 @@
 "use strict"
 
-function renderCoffee(coffee) {
-    var html = '<div class="coffee">';
-    // html += '<td>' + coffee.id + '</td>';
-    html += '<h3>' + coffee.name + '</h3>';
-    html += '<p>' + coffee.roast + '</p>';
-    html += '</div>';
-
-    return html;
-}
-
-function renderCoffees(coffees) {
-    var html = '';
-    for(var i = 0; i < coffees.length; i++) {
-        html += renderCoffee(coffees[i]);
-    }
-    return html;
-}
-
-// function updateCoffees(e) {
-//     e.preventDefault(); // don't submit the form, we just want to update the data
-//     var selectedRoast = roastSelection.value;
-//     var filteredCoffees = [];
-//     coffees.forEach(function(coffee) {
-//         if (coffee.roast === selectedRoast) {
-//             filteredCoffees.push(coffee);
-//         }
-//     });
-//     coffeeDiv.innerHTML = renderCoffees(filteredCoffees);
-// }
-
-let searchCoffee = function () {
-    let filteredCoffees = [];
-    for(let i = 0; i < coffees.length; i++) {
-        // take input from search bar and compare to coffees
-        if (coffees[i].name.includes(search.value)) {
-            filteredCoffees.push(coffees[i]);
-        }
-        // return filteredCoffees[i]
-    }
-    coffeeDiv.innerHTML = renderCoffees(filteredCoffees);
-}
-
-let search = document.getElementById('search');
-search.addEventListener('keyup', searchCoffee);
-
+// Coffee Inventory
 // from http://www.ncausa.org/About-Coffee/Coffee-Roasts-Guide
-var coffees = [
+let coffees = [
     {id: 1, name: 'Light City', roast: 'light'},
     {id: 2, name: 'Half City', roast: 'light'},
     {id: 3, name: 'Cinnamon', roast: 'light'},
@@ -63,11 +19,72 @@ var coffees = [
     {id: 14, name: 'French', roast: 'dark'},
 ];
 
-var coffeeDiv = document.querySelector('#coffees');
-var submitButton = document.querySelector('#submit');
-var roastSelection = document.querySelector('#roast-selection');
+// Custom Coffee Functionality
+let addCoffee = function (e) {
+    e.preventDefault(); // don't submit the form, we just want to update the data
+    coffees.push( {
+        id: coffees.length + 1,
+        name: customName.value,
+        roast: customRoast.value
+    });
+    console.log(`${customName.value} has been added to the inventory.`);
+    coffeeDiv.innerHTML = renderCoffees(coffees);
+}
 
+let customName = document.querySelector('#custom-name');
+let customRoast = document.querySelector('#custom-roast');
+let customSubmit = document.querySelector('#custom-submit');
+customSubmit.addEventListener('click', addCoffee);
+
+// Populates the Coffee Selection
+function renderCoffee(coffee) {
+    let html = '<div class="coffees">';
+    // html += '<td>' + coffee.id + '</td>';
+    html += '<h3>' + coffee.name + '</h3>';
+    html += '<p>' + coffee.roast + '</p>';
+    html += '</div>';
+
+    return html;
+}
+function renderCoffees(coffees) {
+    let html = '';
+    for(let i = 0; i < coffees.length; i++) {
+        html += renderCoffee(coffees[i]);
+    }
+    return html;
+}
+
+let coffeeDiv = document.querySelector('#coffees');
 coffeeDiv.innerHTML = renderCoffees(coffees);
 
-// submitButton.addEventListener('click', updateCoffees);
+// Updates the Coffee by Roast
+function updateCoffees(e) {
+    e.preventDefault(); // don't submit the form, we just want to update the data
+    let selectedRoast = roastSelection.value;
+    let filteredCoffees = [];
+    coffees.forEach(function(coffee) {
+        if (coffee.roast === selectedRoast) {
+            filteredCoffees.push(coffee);
+        }
+    });
+    coffeeDiv.innerHTML = renderCoffees(filteredCoffees);
+}
 
+let roastSelection = document.querySelector('#roast-selection');
+let submitButton = document.querySelector('#roast-submit');
+submitButton.addEventListener('click', updateCoffees);
+
+// Search Bar Functionality
+let searchCoffee = function () {
+    let filteredCoffees = [];
+    for (let i = 0; i < coffees.length; i++) {
+        // takes the input from search bar and compares to coffee obj names
+        if (coffees[i].name.includes(search.value)) {
+            filteredCoffees.push(coffees[i]);
+        }
+    }
+    coffeeDiv.innerHTML = renderCoffees(filteredCoffees);
+}
+
+let search = document.getElementById('search');
+search.addEventListener('keyup', searchCoffee);
