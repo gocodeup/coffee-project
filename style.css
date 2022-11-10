@@ -1,5 +1,5 @@
 table {
-    border-collapse: collapse;
+    /*border-collapse: collapse;*/
     margin: 15px 0;
 }
 
@@ -7,3 +7,19 @@ td, th {
     border: 1px solid black;
     padding: 5px 10px;
 }
+/*section {*/
+/*    display: flex;*/
+/*    flex-direction: row-reverse;*/
+/*    justify-content: space-around;*/
+/*}*/
+
+/*.coffees {*/
+/*    display: flex;*/
+/*    justify-items: flex-end;*/
+/*    flex-direction: row;*/
+/*    flex-wrap: wrap;*/
+/*}*/
+
+/*.coffee-table {*/
+/*    display: flex;*/
+/*}*/
