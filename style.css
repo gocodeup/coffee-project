@@ -13,13 +13,29 @@ td, th {
 /*    justify-content: space-around;*/
 /*}*/
 
-/*.coffees {*/
-/*    display: flex;*/
-/*    justify-items: flex-end;*/
-/*    flex-direction: row;*/
-/*    flex-wrap: wrap;*/
-/*}*/
 
-/*.coffee-table {*/
-/*    display: flex;*/
-/*}*/
+
+.coffee-table {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    /*justify-content: space-around;*/
+
+}
+
+#coffees{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+
+}
+
+.coffee {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    flex-grow: 1;
+    justify-content: space-evenly;
+}
+
