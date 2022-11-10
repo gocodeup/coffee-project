@@ -1,3 +1,25 @@
+:root{
+    background-color: peru;
+    --main-bg-color: #cd853f;
+    --secondary-color: #8b4513;
+
+}
+h1{
+    background-color: peru;
+}
+
+hr{
+    background-color: var(--main-bg-color);
+}
+section{
+    background-color: var(--main-bg-color);
+}
+
+.submit{
+    background-color: var(--main-bg-color);
+
+}
+
 table {
     /*border-collapse: collapse;*/
     margin: 15px 0;
@@ -27,7 +49,7 @@ td, th {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space-around;
+    /*justify-content: space-around;*/
 
 }
 
@@ -36,6 +58,14 @@ td, th {
     flex-direction: row;
     flex-wrap: nowrap;
     flex-grow: 1;
-    justify-content: space-evenly;
+    /*justify-content: space-evenly;*/
     margin-bottom: 50px;
 }
+#coffeeRoast{
+    display: flex;
+    align-content: flex-end;
+}
+h1{
+    text-align: center;
+}
+
