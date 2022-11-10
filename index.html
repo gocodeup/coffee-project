@@ -8,34 +8,35 @@
 <body>
     <h1>Coffee!</h1>
 
+<!--Search by Coffee-->
     <div class="search-bar">
         <form>
-            <input type="text" id="search" placeholder="Search..." name="search">
+            <label for="search"></label>
+            <input id="search" type="text" placeholder="Search...">
         </form>
     </div>
-
+<!--Search by Roast-->
+    <form>
+        <label for="roast-selection"></label>
+        <select id="roast-selection">
+            <option>light</option>
+            <option>medium</option>
+            <option>dark</option>
+        </select>
+        <input id="roast-submit" type="submit" />
+    </form>
+<!--Custom Coffee-->
+    <form>
+        <label for="custom-name"></label>
+        <input id="custom-name" type="text" placeholder="Coffee Name...">
+        <label for="custom-roast"></label>
+        <input id="custom-roast" type="text" placeholder="Roast Strength...">
+        <input id="custom-submit" type="submit" />
+    </form>
+<!--Coffee Inventory-->
     <div id="coffees"></div>
-
-<!--    <form>-->
-<!--        <label for="roast-selection"></label>-->
-<!--        <select id="roast-selection">-->
-<!--            <option>light</option>-->
-<!--            <option>medium</option>-->
-<!--            <option>dark</option>-->
-<!--        </select>-->
-<!--        <input id="submit" type="submit" />-->
-<!--    </form>-->
-
-<!--    <table>-->
-<!--        <thead>-->
-<!--            <tr>-->
-<!--                <th>ID</th>-->
-<!--                <th>NAME</th>-->
-<!--                <th>ROAST</th>-->
-<!--            </tr>-->
-<!--        </thead>-->
-<!--    </table>-->
-
+    <div id="new-coffees"></div>
+<!--JavaScript-->
     <script src="main.js"></script>
 </body>
 </html>
