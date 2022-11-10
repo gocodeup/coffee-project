@@ -3,32 +3,117 @@
 <head>
     <meta charset="UTF-8">
     <title></title>
+
+    <!--EXTERNAL CSS-->
     <link rel="stylesheet" href="style.css">
+    <!--BOOTSTRAP CSS-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+
 </head>
 <body>
+
+<!--TITLE-->
+<header>
     <h1>Coffee!</h1>
+</header>
 
-    <form>
-        <label for="roast-selection"></label>
-        <select id="roast-selection">
-            <option>light</option>
-            <option>medium</option>
-            <option>dark</option>
-        </select>
-        <input id="submit" type="submit" />
-    </form>
+<!--CONTENT-->
+<main>
 
-    <table>
-        <thead>
-            <tr>
-                <th>ID</th>
-                <th>NAME</th>
-                <th>ROAST</th>
-            </tr>
-        </thead>
-        <tbody id="coffees"></tbody>
-    </table>
+    <!--START OF OUR BOOTSTRAP GRID-->
+    <div class="container">
+        <div class="row">
 
-    <script src="main.js"></script>
+            <!--START OF OUR FORM COLUMN-->
+            <div class="col">
+                <form>
+
+                    <!--START OF SEARCHING COFFEE-->
+
+                    <!--ROAST SELECTION-->
+                    <label for="roast-selection">Roast</label>
+                    <select id="roast-selection" class="selectEl">
+                        <option>all</option>
+                        <option>light</option>
+                        <option>medium</option>
+                        <option>dark</option>
+                    </select>
+
+                    <br>
+
+                    <!--SEARCH COFFEE-->
+                    <label for="coffee-search">Coffee Name</label>
+
+                    <input type="text" name="coffee-name" id="coffee-search">
+
+                    <input type="text" name="coffee-name" id="coffee-search" >
+
+                    <br>
+
+                    <!--CLEAR BUTTON-->
+
+                    <input id="submit" type="submit" />
+
+                    <input id="submit" type="submit" />-->
+                    <button id="submit" type="button">Search</button>
+
+
+                    <!--END OF SEARCHING COFFEE-->
+
+                    <hr>
+
+                    <!--START OF OUR ADD COFFEE-->
+                    <h4>Add a Coffee</h4>
+
+                    <!--ADD ROAST-->
+                    <label for="add-roast">Roast</label>
+                    <select id="add-roast">
+                        <option>light</option>
+                        <option>medium</option>
+                        <option>dark</option>
+                    </select>
+
+                    <br>
+
+                    <!--ADD COFFEE NAME-->
+                    <label for="add-coffee">Name</label>
+                    <input type="text" name="coffee-name" id="add-coffee">
+
+                    <br>
+
+                    <!--SUBMIT BUTTON-->
+                    <button type="button" id="addBtn">Add Coffee</button>
+
+                    <!--END OF OUR ADD COFFEE-->
+
+                </form>
+            </div>
+            <!--END OF OUR FORM COLUMN-->
+
+            <!--START OF OUR RENDER DATA COLUMN-->
+            <div class="col">
+                <div class="container-fluid">
+                    <div class="row" id="coffees">
+
+                        <!--this is what is currently being displayed-->
+
+                    </div>
+                </div>
+
+            </div>
+            <!--END OF OUR RENDER DATA COLUMN-->
+
+        </div>
+    </div>
+    <!--END OF OUR BOOTSTRAP GRID-->
+
+</main>
+<!--END OF CONTENT-->
+
+
+<!--EXTERNAL JS-->
+<script src="main.js"></script>
+<!-- JavaScript Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
 </body>
 </html>
