@@ -11,31 +11,33 @@
 
 <!--Search by Coffee & Roast-->
 
-<form class="coffeeSearch">
-    <h1 class="Title">Coffee!</h1>
-    <div class="search-bar">
-    <label for="search"></label>
-    <input id="search" type="text" placeholder="Search...">
-    <label for="roast-selection"></label>
-    <select id="roast-selection">
-        <option>light</option>
-        <option>medium</option>
-        <option>dark</option>
-    </select>
-    <input id="roast-submit" type="submit"/>
-    </div>
-</form>
-
-<!--Custom Coffee-->
-    <form class="newCoffee">
-        <h2 class="Title">Add a Coffee</h2>
-        <div></div>
+<nav class="navbar bg-secondary bg-opacity-50 text-dark">
+    <div class="container-fluid justify-content-end">
+        <form class="d-flex" role="search">
+            <!--    <h1 class="Title">Coffee!</h1>-->
+            <div class="search-bar">
+                <label for="search"></label>
+                <input  id="search" type="text" placeholder="Search...">
+                <label for="roast-selection"></label>
+                <select style="height:30px" id="roast-selection">
+                    <option>Light</option>
+                    <option>Medium</option>
+                    <option>Dark</option>
+                </select>
+                <input id="roast-submit" type="submit"/>
+            </div>
+            <!--Custom Coffee-->
+<!--        <h2 class="Title">Add a Coffee</h2>-->
+        <div>
         <label for="custom-name"></label>
         <input id="custom-name" type="text" placeholder="Coffee Name...">
         <label for="custom-roast"></label>
         <input id="custom-roast" type="text" placeholder="Roast Strength...">
-        <input id="custom-submit" type="submit" />
+        <input id="custom-submit" type="submit"/>
+        </div>
     </form>
+    </div>
+</nav>
 <!--Coffee Inventory-->
     <div id="coffees"></div>
     <div id="new-coffees"></div>
