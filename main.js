@@ -1,9 +1,11 @@
 "use strict"
 
 function renderCoffee(coffee) {
+
    let html = '<div class="coffee">';
     // html += '<p>' + coffee.id + '</p>';
-    html += '<h1>' + coffee.name + '</h1>';
+    html += '<p>' + coffee.name + '</p>';
+
     html += '<p>' + coffee.roast + '</p>';
     html += '</div>';
 
@@ -50,6 +52,7 @@ let coffees = [
 
 let userInput = document.getElementById('CoffeeSearchBar')
 userInput.addEventListener("keyup", function () {
+
     let typedInput = userInput.value.toUpperCase();
     let filteredCoffees = [];
     for(let i = 0; i < coffees.length; i++){
