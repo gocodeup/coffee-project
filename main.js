@@ -47,17 +47,16 @@ function renderAllCoffeesList(coffees) {
     return html;
 };
 //--------------------------------------
-function clearFilter () {
-    if (filteredCoffee.length > 1) {
-        filteredCoffee = []
-    }
-}
-
-//todo make sure it checks for all letters
+// function clearFilter () {
+//     if (filteredCoffee.length > 1) {
+//         filteredCoffee.splice(0,filteredCoffee.length);
+//     }
+// };
 
 // updating what is being displayed based on the roast selection
 function updateCoffees(e) {
     e.preventDefault(); // don't submit the form, we just want to update the data
+    filteredCoffee = [];
     let selectedRoast = roastSelection.value;
     coffees.forEach(function(coffee) {
         if (coffee.roast === selectedRoast || selectedRoast === 'all') {
@@ -75,6 +74,7 @@ function checkCoffeeName () {
     for(let i = 0; i < filteredCoffee.length; i++) {
         if ((filteredCoffee[i].name.toLowerCase()).includes(search) || (filteredCoffee[i].name.toUpperCase()).includes(search)) {
             searchedCoffee.push(filteredCoffee[i])
+            console.log(searchedCoffee);
         }
     }
     return displayedCoffee.innerHTML = renderAllCoffeesList(searchedCoffee);
