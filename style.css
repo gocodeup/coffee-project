@@ -4,15 +4,15 @@
     --secondary-color: #8b4513;
 
 }
-h1{
-    background-color: peru;
-}
+/*h1{*/
+/*    background-color: peru;*/
+/*}*/
 
 hr{
-    background-color: var(--main-bg-color);
+    /*background-color: var(--main-bg-color);*/
 }
 section{
-    background-color: var(--main-bg-color);
+    /*background-color: var(--main-bg-color);*/
 }
 
 .submit{
@@ -69,3 +69,12 @@ h1{
     text-align: center;
 }
 
+body {
+    background: url("images/coffee3.webp")  no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+
+
+}
