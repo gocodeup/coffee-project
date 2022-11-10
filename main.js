@@ -134,6 +134,6 @@ function addCoffee() {
 
 //EVENT LISTENERS
 displayedCoffee.innerHTML = renderAllCoffeesList(coffees);
-selectedRoast.addEventListener('click', updateCoffees);
+selectedRoast.addEventListener('change', updateCoffees);
 coffeeSearchBar.addEventListener("keyup", (e) => checkCoffeeName());
 submitBtn.addEventListener('click', (e) => addCoffee());
