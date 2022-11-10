@@ -65,9 +65,7 @@ td, th {
     display: flex;
     align-content: flex-end;
 }
-h1{
-    text-align: center;
-}
+
 
 body {
     background: url("images/coffee3.webp")  no-repeat center center fixed;
@@ -77,4 +75,7 @@ body {
     background-size: cover;
 
 
+}
+.forms2 {
+    border: peru outset 3px;
 }
