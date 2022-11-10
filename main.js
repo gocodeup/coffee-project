@@ -30,6 +30,13 @@ function updateCoffees(e) {
     tbody.innerHTML = renderCoffees(filteredCoffees);
 }
 
+function filterCoffeeByName () {
+    let coffeeTake = coffeeGrab.value;
+    for (let i = 0; i < coffees.length; i++) {
+        if((coffees[i].name).toLowerCase().includes(coffeeTake.toLowerCase())) {
+            // console.log(coffees[i].name)
+        }
+    }}
 // from http://www.ncausa.org/About-Coffee/Coffee-Roasts-Guide
 let coffees = [
 
@@ -49,11 +56,15 @@ let coffees = [
     {id: 14, name: 'French', roast: 'dark'},
 ];
 
-var tbody = document.querySelector('#coffees');
-var submitButton = document.querySelector('#submit');
-var roastSelection = document.querySelector('#roast-selection');
+let tbody = document.querySelector('#coffees');
+let submitButton = document.querySelector('#submit');
+let roastSelection = document.querySelector('#roast-selection');
 
 tbody.innerHTML = renderCoffees(coffees);
 
 submitButton.addEventListener('click', updateCoffees);
 
+
+let coffeeGrab = document.querySelector("#coffee-name");
+coffeeGrab.addEventListener("keyup", (event) => {filterCoffeeByName()}
+)
