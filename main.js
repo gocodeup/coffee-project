@@ -34,8 +34,10 @@ let filteredCoffee = [];
 // this function renders the html into what is being displayed
 function renderCoffeeDiv(coffee) {
     let html = '';
-        if (coffee.roast === 'light') {
-            html += `<div class="col-6 card">
+
+    if (coffee.roast === 'light') {
+        html += `<div class="col-6 card">
+
           <img src="https://i.imgur.com/e40rBBn.jpeg" class="card-img-top" alt="...">
           <div class="card-body">
                 
@@ -44,8 +46,10 @@ function renderCoffeeDiv(coffee) {
             
           </div>
         </div>`
-        } else if (coffee.roast === 'medium') {
-            html += `<div class="col-6 card">
+
+    } else if (coffee.roast === 'medium') {
+        html += `<div class="col-6 card">
+        
           <img src="https://i.imgur.com/ROnndBi.jpeg" class="card-img-top" alt="...">
           <div class="card-body">
                 
@@ -54,8 +58,10 @@ function renderCoffeeDiv(coffee) {
             
           </div>
         </div>`
-        } else {
-            html += `<div class="col-6 card">
+
+    } else {
+        html += `<div class="col-6 card">
+
           <img src="https://i.imgur.com/znwB08l.jpeg" class="card-img-top" alt="...">
           <div class="card-body">
                 
@@ -64,6 +70,9 @@ function renderCoffeeDiv(coffee) {
             
           </div>
         </div>`
+
+    }
+
         }
     return html;
 }
@@ -134,6 +143,8 @@ function addCoffee() {
 
 //EVENT LISTENERS
 displayedCoffee.innerHTML = renderAllCoffeesList(coffees);
+
 selectedRoast.addEventListener('change', updateCoffees);
+
 coffeeSearchBar.addEventListener("keyup", (e) => checkCoffeeName());
 submitBtn.addEventListener('click', (e) => addCoffee());
