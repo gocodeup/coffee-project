@@ -1,20 +1,36 @@
-table {
-    border-collapse: collapse;
-    margin: 15px 0;
+body {
+    font-family: 'Press Start 2P', cursive !important;
+    background-image: url("https://i.imgur.com/zYw7wfv.jpeg");
+    background-repeat: repeat-y;
+    background-size: cover;
+    height: 100vh;
+    color: white !important;
 }
 
-td, th {
-    border: 1px solid black;
-    padding: 5px 10px;
+.card h2 {
+    font-size: 1rem;
+    flex-wrap: nowrap;
+    display: flex;
+    justify-content: center;
 }
-header {
-    text-align: center;
+.card p {
+    font-size: x-small;
 }
-
 .card {
     --bs-card-border-color: none !important;
+    --bs-card-bg: transparent !important;
     display: flex;
     justify-content: center;
     align-content: center;
     text-align: center;
+    color: white;
+
+}
+
+#search, #add {
+    margin: 5rem 0;
+}
+
+.roast-selection {
+    width: 100%;
 }
