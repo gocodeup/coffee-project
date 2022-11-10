@@ -47,39 +47,46 @@ function renderAllCoffeesList(coffees) {
     return html;
 };
 //--------------------------------------
+function clearFilter () {
+    if (filteredCoffee.length > 1) {
+        filteredCoffee = []
+    }
+}
 
 //todo make sure it checks for all letters
+
+// updating what is being displayed based on the roast selection
+function updateCoffees(e) {
+    e.preventDefault(); // don't submit the form, we just want to update the data
+    let selectedRoast = roastSelection.value;
+    coffees.forEach(function(coffee) {
+        if (coffee.roast === selectedRoast || selectedRoast === 'all') {
+            filteredCoffee.push(coffee);
+            return displayedCoffee.innerHTML = renderAllCoffeesList(filteredCoffee);
+        }
+    });
+};
+//--------------------------------------
 
 // this function is checking what is being searched
 function checkCoffeeName () {
     let search = coffeeSearchBar.value;
     let searchedCoffee = [];
-    for(let i = 0; i < coffees.length; i++) {
-        if ((coffees[i].name.toLowerCase()).includes(search) || (coffees[i].name.toUpperCase()).includes(search)) {
-            searchedCoffee.push(coffees[i])
+    for(let i = 0; i < filteredCoffee.length; i++) {
+        if ((filteredCoffee[i].name.toLowerCase()).includes(search) || (filteredCoffee[i].name.toUpperCase()).includes(search)) {
+            searchedCoffee.push(filteredCoffee[i])
         }
     }
     return displayedCoffee.innerHTML = renderAllCoffeesList(searchedCoffee);
 }
 //--------------------------------------
 
-// updating what is being displayed based on the roast selection
-function updateCoffees(e) {
-    e.preventDefault(); // don't submit the form, we just want to update the data
-    let selectedRoast = roastSelection.value;
-    let filteredCoffees = [];
-    coffees.forEach(function(coffee) {
-        if (coffee.roast === selectedRoast || selectedRoast === 'all') {
-            filteredCoffees.push(coffee);
-            return displayedCoffee.innerHTML = renderAllCoffeesList(filteredCoffees);
-        }
-    });
-}
-//--------------------------------------
+
 
 displayedCoffee.innerHTML = renderAllCoffeesList(coffees);
 
 submitButton.addEventListener('click', updateCoffees);
+// submitButton.addEventListener('click', clearFilter);
 
 coffeeSearchBar.addEventListener("keyup", (e) => checkCoffeeName());
 
