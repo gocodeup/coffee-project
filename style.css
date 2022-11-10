@@ -1,3 +1,27 @@
+:root{
+    --header-font: 4rem;
+    --ol: dashed red;
+
+}
+
+.ol{
+    outline: var(--ol);
+}
+
+/** {*/
+/*    background-color: #62849b;*/
+/*}*/
+
+/*html{*/
+/*    background-color: #A85D30;*/
+/*}*/
+
+/*#header-title{*/
+/*    font-size: var(--header-font);*/
+/*    display: flex;*/
+/*    justify-content: center;*/
+/*}*/
+
 table {
     border-collapse: collapse;
     /* margin: 15px 0; */
@@ -9,16 +33,19 @@ td, th {
 }
 
 
-.roast {
-    display: inline;
-    font-size: 1.5rem;
-    color: lightgray;
-}
+/*.roast {*/
+/*    display: inline;*/
+/*    font-size: 1.5rem;*/
+/*    color: lightgray;*/
+/*}*/
 
-.coffee-name {
-    display: inline;
-    font-size: 2.5rem;
-    margin-right: 1rem;
+/*.coffee-name {*/
+/*    display: inline;*/
+/*    font-size: 2.5rem;*/
+/*    margin-right: 1rem;*/
 
-}
+/*}*/
+
+
+
 
