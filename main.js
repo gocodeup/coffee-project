@@ -19,10 +19,14 @@ let coffees = [
 let displayedCoffee = document.querySelector('#coffees');
 let submitButton = document.querySelector('#submit');
 let roastSelection = document.querySelector('#roast-selection');
-let coffeeNameInput = document.querySelector('#coffee-input');
+let coffeeSearchBar = document.querySelector('#coffee-search');
 
 
+// coffee to be displayed
+let filteredCoffee = [];
+//--------------------------------------
 
+// this function renders the html into what is being displayed
 function renderCoffeeDiv(coffee) {
     let html = '<div class="coffee">';
     html += '<div class="coffee-id" style="visibility: hidden">' + coffee.id + '</div>';
@@ -32,49 +36,50 @@ function renderCoffeeDiv(coffee) {
 
     return html;
 }
+//--------------------------------------
 
-// coffee (variable) is actually each individual coffee from the array of objects
-// its basically coffees[i]
-
+// this function pushes the coffee array of objects into the function above
 function renderAllCoffeesList(coffees) {
     let html = '';
     for(let i = 0; i < coffees.length; i++) {
         html += renderCoffeeDiv(coffees[i]);
     }
     return html;
-}
+};
+//--------------------------------------
 
 //todo make sure it checks for all letters
 
+// this function is checking what is being searched
 function checkCoffeeName () {
-    let search = coffeeNameInput.value;
+    let search = coffeeSearchBar.value;
+    let searchedCoffee = [];
     for(let i = 0; i < coffees.length; i++) {
-        // console.log(coffees[i].name);
-        if ((coffees[i].name.toLowerCase()).includes(search)) {
-            console.log(coffees[i])
-            return coffees[i]
+        if ((coffees[i].name.toLowerCase()).includes(search) || (coffees[i].name.toUpperCase()).includes(search)) {
+            searchedCoffee.push(coffees[i])
         }
     }
+    return displayedCoffee.innerHTML = renderAllCoffeesList(searchedCoffee);
 }
+//--------------------------------------
 
-
+// updating what is being displayed based on the roast selection
 function updateCoffees(e) {
     e.preventDefault(); // don't submit the form, we just want to update the data
     let selectedRoast = roastSelection.value;
     let filteredCoffees = [];
     coffees.forEach(function(coffee) {
-        if (coffee.roast === selectedRoast) {
+        if (coffee.roast === selectedRoast || selectedRoast === 'all') {
             filteredCoffees.push(coffee);
             return displayedCoffee.innerHTML = renderAllCoffeesList(filteredCoffees);
-        } else if (selectedRoast === 'all') {
-            filteredCoffees.push(coffee)
-            return displayedCoffee.innerHTML = renderAllCoffeesList(filteredCoffees)
         }
     });
 }
+//--------------------------------------
+
 displayedCoffee.innerHTML = renderAllCoffeesList(coffees);
 
 submitButton.addEventListener('click', updateCoffees);
 
-coffeeNameInput.addEventListener("keyup", (e) => checkCoffeeName());
+coffeeSearchBar.addEventListener("keyup", (e) => checkCoffeeName());
 
