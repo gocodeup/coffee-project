@@ -3,9 +3,6 @@ body {
     font: 16px Arial;
     opacity: 100%;
 }
-
-/*Custom CSS*/
-
 html {
     background: url("img/sebastian-schuppik-H7xTpvBjJS4-unsplash.jpg") fixed;
     background-size: cover;
@@ -14,32 +11,23 @@ html {
     top: 0;
 }
 #coffees {
-    /*border-radius: 8px;*/
-    /*backdrop-filter: blur(10px);*/
-    /*background-color: rgba(255, 255, 255, 0.75);*/
-    /*box-shadow: 0 1px 12px rgba(0, 0, 0, 0.25);*/
-    /*border: 1px solid rgba(255, 255, 255, 0.3);*/
-    /*margin-bottom: 10px;*/
-    /*display: inline-block;*/
-    /*font-weight: bolder;*/
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
 
 }
-.Title {
-    font-weight: bold;
-    backdrop-filter: blur(10px);
-    background-color: rgba(255, 255, 255, 0.5);
-    box-shadow: 0 1px 12px rgba(0, 0, 0, 0.25);
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    display: inline-block;
-    opacity: 60%;
-}
 .navbar {
     max-height: 50px;
     align-items: baseline;
     margin-bottom: 20px;
+    backdrop-filter: blur(15px);
+    background-color: rgba(255, 255, 255, 0.25);
+    box-shadow: 0 1px 12px rgba(0, 0, 0, 0.25);
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    /*position: fixed;*/
+    /*z-index: 1;*/
+    /*TODO: make the navbar fixed to the top*/
+    /*TODO: make a "return to top" button*/
 }
 .search-bar{
     display: flex;
@@ -51,11 +39,14 @@ html {
 .card {
     border-radius: 8px;
     backdrop-filter: blur(10px);
-    background-color: rgba(255, 255, 255, 0.99);
+    background-color: rgba(255, 255, 255, 0.5);
     box-shadow: 0 1px 12px rgba(0, 0, 0, 0.25);
     border: 1px solid rgba(255, 255, 255, 0.3);
     margin-bottom: 10px;
     display: inline-block;
     font-weight: bolder;
     color: #fff;
+}
+.card-body {
+    text-align: center;
 }
