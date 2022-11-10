@@ -4,29 +4,32 @@
     <meta charset="UTF-8">
     <title></title>
     <link rel="stylesheet" href="style.css">
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
 </head>
-<body>
-    <h1>Coffee!</h1>
+<body class="bg-transparent text-dark">
 
-<!--Search by Coffee-->
+<!--Search by Coffee & Roast-->
+
+<form class="coffeeSearch">
+    <h1 class="Title">Coffee!</h1>
     <div class="search-bar">
-        <form>
-            <label for="search"></label>
-            <input id="search" type="text" placeholder="Search...">
-        </form>
+    <label for="search"></label>
+    <input id="search" type="text" placeholder="Search...">
+    <label for="roast-selection"></label>
+    <select id="roast-selection">
+        <option>light</option>
+        <option>medium</option>
+        <option>dark</option>
+    </select>
+    <input id="roast-submit" type="submit"/>
     </div>
-<!--Search by Roast-->
-    <form>
-        <label for="roast-selection"></label>
-        <select id="roast-selection">
-            <option>light</option>
-            <option>medium</option>
-            <option>dark</option>
-        </select>
-        <input id="roast-submit" type="submit" />
-    </form>
+</form>
+
 <!--Custom Coffee-->
-    <form>
+    <form class="newCoffee">
+        <h2 class="Title">Add a Coffee</h2>
+        <div></div>
         <label for="custom-name"></label>
         <input id="custom-name" type="text" placeholder="Coffee Name...">
         <label for="custom-roast"></label>
