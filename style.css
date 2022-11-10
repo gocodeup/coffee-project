@@ -7,24 +7,26 @@ body {
 /*Custom CSS*/
 
 html {
-    background: url("img/sebastian-schuppik-H7xTpvBjJS4-unsplash.jpg");
+    background: url("img/sebastian-schuppik-H7xTpvBjJS4-unsplash.jpg") fixed;
     background-size: cover;
     height: 100%;
     width: 100%;
     top: 0;
     /*position: absolute;*/
-    position: fixed;
+    /*position: fixed;*/
 }
 #coffees {
-    border-radius: 8px;
-    backdrop-filter: blur(10px);
-    background-color: rgba(255, 255, 255, 0.5);
-    box-shadow: 0 1px 12px rgba(0, 0, 0, 0.25);
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    margin-bottom: 10px;
-    display: inline-block;
-    opacity: 60%;
-    font-weight: bolder;
+    /*border-radius: 8px;*/
+    /*backdrop-filter: blur(10px);*/
+    /*background-color: rgba(255, 255, 255, 0.75);*/
+    /*box-shadow: 0 1px 12px rgba(0, 0, 0, 0.25);*/
+    /*border: 1px solid rgba(255, 255, 255, 0.3);*/
+    /*margin-bottom: 10px;*/
+    /*display: inline-block;*/
+    /*font-weight: bolder;*/
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 
 }
 .Title{
@@ -46,9 +48,24 @@ html {
 .newCoffee{
     display: flex;
     justify-content: flex-end;
-    margin: 0px;
+    margin: 0 auto;
     max-height: 50px;
 }
 .search-bar{
     display: flex;
+}
+.card-img-top {
+    border-radius: 8px;
+    width: 300px;
+}
+.card {
+    border-radius: 8px;
+    backdrop-filter: blur(10px);
+    background-color: rgba(255, 255, 255, 0.99);
+    box-shadow: 0 1px 12px rgba(0, 0, 0, 0.25);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    margin-bottom: 10px;
+    display: inline-block;
+    font-weight: bolder;
+    color: #fff;
 }
