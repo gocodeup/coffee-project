@@ -145,3 +145,5 @@ displayedCoffee.innerHTML = renderAllCoffeesList(coffees);
 selectedRoast.addEventListener('change', updateCoffees);
 
 coffeeSearchBar.addEventListener("keyup", updateCoffees);
+
+submitBtn.addEventListener("click", addCoffee);
