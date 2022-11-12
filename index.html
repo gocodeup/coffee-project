@@ -1,107 +1,95 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <title>Coffee!</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>index</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
-          integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
 </head>
 <body>
 
 <!--+++++++++++++++++++++++++HEADER++++++++++++++++++++++++++-->
 <header>
-    <!--    <h1 class=" d-flex justify-content-center ">Coffee!</h1>-->
-    <a class=" d-flex justify-content-center " href="https://www.fontspace.com/category/coffee"><img
-            src="https://see.fontimg.com/api/renderfont4/vmLaL/eyJyIjoiZnMiLCJoIjoxMzAsInciOjIwMDAsImZzIjo2NSwiZmdjIjoiIzAwMDAwMCIsImJnYyI6IiNGRkZGRkYiLCJ0IjoxfQ/Y29mZmVl/mf-coffee-mugs-2.png"
-            alt="Coffee fonts"></a>
-    <hr>
+    <div class="header">
+        <!--    <h1 class=" d-flex justify-content-center ">Fancy Coffee!</h1>-->
+        <a class ="d-flex justify-content-center " href="https://www.fontspace.com/category/architect"><img src="https://see.fontimg.com/api/renderfont4/MVEVJ/eyJyIjoiZnMiLCJoIjoxMzAsInciOjIwMDAsImZzIjo2NSwiZmdjIjoiIzAwMDAwMCIsImJnYyI6IiNGRkZGRkYiLCJ0IjoxfQ/RmFuY3kgQ29mZmVl/iron-master-demo.png" alt="Architect fonts"></a>
+    </div>
+    <div id="header-div"></div>
+    <hr class="mb-2 hr">
 </header>
 
 <!--+++++++++++++++++++++++++LEFT-COLUMN+++++++++++++++++++-->
 <main>
     <div class="container ">
         <div class="row">
-            <div class="col-8 ">
-                <div id="coffee-list">
+            <div class="col">
+                <div class=" d-flex flex-column align-items-center cursive" id="coffeeDiv">
 
-
-                    <!-- <table>
-                        <thead>
-                        <tr>
-                            <th>ID</th>
-                            <th>NAME</th>
-                            <th>ROAST</th>
-                        </tr>
-                        </thead>
-                         <tbody id="coffees"></tbody>
-                     </table> -->
-
-
-
-                </div>  <!--creates empty space for the coffee list-->
+                </div>
+                <div class="smelly"></div>
             </div>
 
             <!--+++++++++++++++++++++++++SEARCH FOR COFFEE+++++++++++++++++++-->
-            <div class="col">   <!--col automatically adjusts-->
+            <div class="col-lg-4">
 
                 <form>
-                    <label for="roast-selection"><strong><p class="m-0 p-0">Roast</p></strong></label>
+                    <label for="roast-selection"><strong><p class="m-0 p-0">Roast Selection</p></strong></label>
                     <select id="roast-selection" class="form-select" aria-label="Select Roast">
-                        <option>All</option>
-                        <option>Light</option>
-                        <option>Medium</option>
-                        <option>Dark</option>
+                        <option>all</option>
+                        <option>light</option>
+                        <option>medium</option>
+                        <option>dark</option>
                     </select>
-                    <!--+++++++++++++++++++++++++COFFEE SEARCH INPUT & BUTTON+++++++++++++++++++-->
-
+                    <!--+++++++++++++++++++++++++INPUT 1 --- BUTTON 1+++++++++++++++++++-->
+                    <!--Input #1-->
                     <div>
-                        <label class="hi" for="add-coffee"><strong><p class="m-0 p-0">Coffee Name</p></strong></label>
-                        <input type="text" class="form-control mb-2" id="add-coffee"> <!--ID from label and input must match-->
+                        <label class="form-label" for="coffee-search"><strong><p class="m-0 p-0">Coffee Name</p></strong></label>
+                        <input type="text" class="form-control mb-2" id="coffee-search">
                     </div>
-                    <div>
-                        <button type="button" class="btn btn-primary w-100" id="search-btn">Submit</button>
-
+                    <div class="d-flex justify-content-center align-item-center">
+                        <!--button #1-->
+                        <input class="btn btn-primary w-50 " id="submit" type="submit"/>
                     </div>
                     <hr class="hr">
-                    <!--+++++++++++++++++++++++++ADD COFFEE SECTION+++++++++++++++++++-->
 
                 </form>
                 <h2 class="d-flex justify-content-center">Add a Coffee!</h2>
                 <form>
                     <label for="roast-add"><strong><p class="m-0 p-0">Roast</p></strong></label>
                     <select id="roast-add" class="form-select" aria-label="Select Roast">
-                        <option>All</option>
-                        <option>Light</option>
-                        <option>Medium</option>
-                        <option>Dark</option>
+                        <option>all</option>
+                        <option>light</option>
+                        <option>medium</option>
+                        <option>dark</option>
                     </select>
-
                     <div class>
-                        <label for="coffee-search"><strong><p class="m-0 p-0">Name</p></strong></label>
-                        <input type="text" class="form-control mb-2" id="coffee-search"> <!--ID from label and input must match-->
+                        <label for="coffee-query"><strong><p class="m-0 p-0">Name</p></strong></label>
+                        <input type="text" class="form-control mb-2" id="coffee-query">
+
                     </div>
                     <div>
-                        <input id="searchSubmit" type="submit" class="btn btn-primary w-100" />
+                        <input id="submit-button" type="submit" class="btn btn-primary w-100"/>
                     </div>
                 </form>
             </div>
         </div>
     </div>
     </div>
+
 </main>
 
 
-
-
 <script src="main.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+<!-- JavaScript Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
         crossorigin="anonymous"></script>
 </body>
 </html>
-
 
 
 

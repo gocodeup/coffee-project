@@ -1,51 +1,107 @@
+@import url('https://fonts.googleapis.com/css2?family=Cedarville+Cursive&display=swap');
+
 :root{
-    --header-font: 4rem;
-    --ol: dashed red;
+    --cursive: 'Cedarville Cursive', cursive;
+    --bg-1: #626d71;
+    --bg-2: #cdcdc0;
+    --bg-3: #ddbc95;
+    --bg-4: #b38867;
+    --bg-5: #f05e1b;
 
 }
 
-.ol{
-    outline: var(--ol);
-}
 
-/** {*/
-/*    background-color: #62849b;*/
-/*}*/
 
-/*html{*/
-/*    background-color: #A85D30;*/
-/*}*/
-
-/*#header-title{*/
-/*    font-size: var(--header-font);*/
-/*    display: flex;*/
-/*    justify-content: center;*/
-/*}*/
-
-table {
-    border-collapse: collapse;
-    /* margin: 15px 0; */
-}
-
-td, th {
-    border: 1px solid black;
-    padding: 5px 10px;
+.cursive{
+    font-family: var(--cursive);
 }
 
 
-/*.roast {*/
-/*    display: inline;*/
-/*    font-size: 1.5rem;*/
-/*    color: lightgray;*/
-/*}*/
+header{
+    background-color: var(--bg-1);
+}
 
-/*.coffee-name {*/
-/*    display: inline;*/
-/*    font-size: 2.5rem;*/
-/*    margin-right: 1rem;*/
+main{
+    background-color: var(--bg-4);
+}
 
-/*}*/
+#coffeeDiv {
+    background-color: var(--bg-3);
+    border-radius: 25%;
+
+}
+
+.roast-type{
+    color: var(--bg-1);
+
+}
 
 
+#header-div{
+    background-color: var(--bg-5);
+}
 
+
+.smelly {
+    width:200px;
+    height:200px;
+    position:relative;
+    --c:#9c879e;
+    --c1:#fff;
+    --c2:#dbd076;
+
+    background:
+            radial-gradient(farthest-side,var(--c2) 98%,#0000) 42% 91.5%/5% 6%,
+            radial-gradient(farthest-side,var(--c2) 98%,#0000) 58% 91.5%/5% 6%,
+            radial-gradient(farthest-side,var(--c2) 98%,#0000) 62% 81.5%/6% 7%,
+            radial-gradient(farthest-side,var(--c2) 98%,#0000) 38% 81.5%/6% 7%,
+            linear-gradient(to right top   ,#0000 44%,var(--c2) 45% 56%,#0000 57%)47% 88%/22% 11%,
+            linear-gradient(to right bottom,#0000 44%,var(--c2) 45% 56%,#0000 57%)53% 88%/22% 11%,
+            radial-gradient(farthest-side,var(--c2) 98%,#0000) 46% 77.5%/3% 3%,
+            radial-gradient(farthest-side,var(--c2) 98%,#0000) 54.5% 77.5%/3% 3%,
+            radial-gradient(farthest-side,var(--c2) 98%,#0000) 50% 77.5%/3% 3%,
+            radial-gradient(farthest-side,#0000 57%,var(--c2) 57.5% 98%,#0000) 50% 73.5%/23% 11%,
+            radial-gradient(farthest-side,#000 98%,#0000)60% 33%/3% 3%,
+            radial-gradient(farthest-side,#000 98%,#0000)40% 33%/3% 3%,
+            conic-gradient(from -45deg,var(--c1) 0 90deg,#0000 0)30% 47%/6% 6%,
+            conic-gradient(from -45deg,var(--c1) 0 90deg,#0000 0)70% 47%/6% 6%,
+            radial-gradient(farthest-side at bottom,var(--c1) 98%,#0000) 30% 29%/23% 10%,
+            radial-gradient(farthest-side at bottom,var(--c1) 98%,#0000) 70% 29%/23% 10%,
+            radial-gradient(farthest-side at top,#d57880 98%,#0000)50% 52.5% /47% 16%,
+            radial-gradient(50% 50%,var(--c) 98%,#0000)82% 88%/13% 13%,
+            radial-gradient(50% 50%,var(--c) 98%,#0000)18% 88%/13% 13%,
+            radial-gradient(58% 50%,var(--c) 98%,#0000)4%  58%/23% 15%,
+            radial-gradient(58% 50%,var(--c) 98%,#0000)96% 58%/23% 15%,
+            radial-gradient(50% 57%,var(--c) 98%,#0000 ) 50% 3%/8% 21%,
+            radial-gradient(50% 57%,var(--c) 98%,#0000 ) 50% 97%/12% 21%,
+            radial-gradient(farthest-side,var(--c) 98%,#0000 ) 81% 20%/15%15%,
+            radial-gradient(farthest-side,var(--c) 98%,#0000 ) 19% 20%/15%15%,
+            radial-gradient(farthest-side,var(--c) 98%,#0000) 50% 66%/83% 83%;
+    background-repeat:no-repeat;
+}
+
+.smelly:before,
+.smelly:after{
+    content: "";
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    left: 83%;
+    top: -7%;
+    background:
+            radial-gradient(farthest-side,#c3bc8c 98%,#0000) 0 0/50% 50%,
+            radial-gradient(farthest-side,#c3bc8c 98%,#0000) 100% 0/60% 50%,
+            radial-gradient(farthest-side,#c3bc8c 98%,#0000) 100% 73%/50% 50%,
+            radial-gradient(farthest-side,#c3bc8c 98%,#0000) 45% 91%/50% 50%,
+            radial-gradient(farthest-side,#c3bc8c 98%,#0000) 6% 59%/50% 50%,
+            conic-gradient(from 19deg at bottom left,#c3bc8c 46deg,#0000 0) 0 100%/40% 40%;
+    background-repeat: no-repeat;
+}
+.smelly::after {
+    right: 83%;
+    left: auto;
+    transform: scaleX(-1);
+/*
+SOURCE:
+https://dev.to/afif/31-single-div-illustration-the-divtober-collection-aik*/
 

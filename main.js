@@ -1,60 +1,5 @@
 "use strict"
-
-//+++++++++++++++++++++++++++++++++++++++++---LEFT---++++++++++++++++++++++++++++++++++++++
-
-//Renders coffee on to the empty div
-function renderCoffee(coffee) {
-    let html = '<tr class="coffee">';
-    html += '<td>' + coffee.id + '</td>';
-    html += '<h1 class="coffee-name">' + coffee.name + '</h1>';
-    html += '<p class="roast">' + coffee.roast + '</p>';
-    html += '</tr>';
-
-    return html;
-}
-
-
-function renderCoffees(coffees) {
-    var html = '';
-    for(var i = 0; i < coffees.length; i++) {
-        html += renderCoffee(coffees[i]);
-    }
-    return html;
-}
-
-
-//+++++++++++++++++++++++++++++++++++++++++---TOP---++++++++++++++++++++++++++++++++++++++
-
-//empty array that collects
-let filteredCoffees = [];
-
-//coffee container to display results
-let coffeeContainer = document.getElementById('coffee-list');
-
-
-//Select-options for Light/Mid/Large
-let roast = document.getElementById("roast-selection");
-//Event Listener for changes when switching Light/Mid/Large
-roast.addEventListener('change', updateCoffees);
-
-
-//Button #1
-let searchSubmit = document.getElementById("search-btn");
-//Event Listener for clicking submit for text-input.
-searchSubmit.addEventListener("click", updateCoffees);
-
-//+++++++++++++++++++++++++++++++++++++++---Bottom---+++++++++++++++++++++++++++++++++++++++
-
-
-//Button #2
-let searchCoffee = document.getElementById("coffee-search");
-
-
-let evt = "";
-const input = document.querySelector('input');
-
-
-//Object-Array of coffee
+// from http://www.ncausa.org/About-Coffee/Coffee-Roasts-Guide
 let coffees = [
     {id: 1, name: 'Light City', roast: 'light'},
     {id: 2, name: 'Half City', roast: 'light'},
@@ -72,40 +17,117 @@ let coffees = [
     {id: 14, name: 'French', roast: 'dark'},
 ];
 
-
-
-
-
-//Logs users key strokes
-function updateValue(e) {
-    console.log(e.target.value)
-    // return e.target.value;
+//updated as per instructions of Readme
+function renderCoffee(coffee) {
+    let html = '<div class="d-flex align-items-end ">'
+    html += '<h1>' + coffee.name + '</h1>';
+    html += '<p class="ms-3 roast-type">' + coffee.roast + '</p>';
+    html += '</div>'
+    return html; //it will return: <div class=coffee><h1>coffee.name</h1><p class= "ms-3">coffee.roast</p></div>
 }
 
-
-function updateCoffees(e) {
-    //it prevents the event from extending past the parameter of which it is assigned
-    e.preventDefault(); // don't submit the form, we just want to update the data
-    //stores the lowercase value of the light/mid/dark
-    let selectedRoast = roast.value.toLowerCase()
-    for (let i = 0; i < coffees.length; i++)
-    {
-        //if roast type === roast value L/M/D
-        if (coffees[i].roast == selectedRoast) {
-            //if light/mid/dark then "push" coffee with that value
-            filteredCoffees.push(coffees[i]);
-        }
-        ///if roast type === roast value L/M/D
-        if(selectedRoast === "all"){
-            filteredCoffees.push(coffees[i]);
-        }
+// This function will loop through renderCoffee, in the event there is an array
+//Any array has to be reversed later
+function renderCoffees(coffees) {
+    let html = ''; //string Bucket
+    for(let i = coffees.length - 1; i >= 0; i--) { // <= the order of [i] will display highest ID # to lowest ID #
+        html += renderCoffee(coffees[i]); //html = "renderedCoffee(input[i])"
     }
-
-    
-    coffeeContainer.innerHTML = renderCoffees(filteredCoffees);
-    return filteredCoffees;
-
+    return html; //it will return something like this: <div><h1>"NAME"</h1><p>"ROAST"</p></div>
 }
+
+
+//Filters #1: only by Selection Option #1
+//Needs another Filter for Text-Input #1
+function updateCoffees(e) {
+    e.preventDefault(); // don't submit the form, we just want to update the data
+    let selectedRoast = roast.value;//roast selection value L/M/D, not "all"
+    let filteredCoffees = []; //array bucket
+    coffees.forEach(function(coffee) { //individualises to coffee
+        if (coffee.roast === selectedRoast) {//from the coffee-obj-arr roast L/M/D=== value of L/M/D, All is not included
+            filteredCoffees.push(coffee);
+        }
+    });
+    coffeeDiv.innerHTML = renderCoffees(filteredCoffees); //write in the inner coffeeDiv in the format presented in the function rendersCoffee and looped via renderedCoffeeS
+
+    if(selectedRoast === 'all') {
+        coffeeDiv.innerHTML = renderCoffees(coffees);
+    }
+}
+
+//Filters #2: only by text-input #1
+function coffeeSearch(e) {
+    e.preventDefault();
+    let searchTerm = searchCoffee.value.toLowerCase(); //converts input text to lowercase
+    let filteredCoffees = [];//array bucket to collect stuff
+    coffees.forEach(function(coffee){//looping the var of coffees
+        if (coffee.name.toLowerCase().includes(searchTerm)){ //Thank Gil for this tip
+            filteredCoffees.push(coffee);
+        }
+    })
+    coffeeDiv.innerHTML = renderCoffees(filteredCoffees);
+    //write w/in coffeeDiv in the format displayed in the function renderCoffee the filteredCoffees
+}
+
+// +++++++++++++++++++++++++++++++ADD COFFEE SECTION UNFINISHED++++++++++++++++++++++++++++++++
+
+
+function addCoffeeItem(e) {
+    e.preventDefault();
+    let newCoffeeArr = []; //bucket for new coffee items arraY
+    let newCoffeeObj = { //bucket for new obj
+        id: coffees.length + 1, //the length + 1... so this should compute to be i = 15, especially since we are pushing
+        name: coffeeQuery.value, //#query-coffee's value
+        roast: roastAdd.value //added the roast's value
+    };//empty object to collect variables
+    newCoffeeArr.push(newCoffeeObj); //pushing the newCoffeeObj within the empty newCoffee Array
+    coffeeDiv.innerHTML = renderCoffee(newCoffeeArr);
+}
+// coffeeDiv.innerHTML = renderCoffee(newCoffee);
+//https://stackoverflow.com/questions/40250139/how-can-i-push-an-object-into-an-array
+
+
+
+
+//Option Selector #1
+let roast = document.querySelector('#roast-selection'); //given
+roast.addEventListener("change",updateCoffees); //given, but modified to change
+
+
+//Button #1
+let submitButton = document.querySelector('#submit'); //given
+submitButton.addEventListener('click', updateCoffees); //given
+
+
+//text input #1
+let searchCoffee= document.querySelector('#coffee-search'); //given
+searchCoffee.addEventListener('input', coffeeSearch); //created
+
+//I hate the naming convetion used!!!!!!!!!!!!!!!!!!!!!
+//linked to the function renderCoffeeS(the for loop), NOT renderCoffee w/o "s" (the format)
+//EXPLAINATION:
+// write w/in .coffeeDiv in the format provided by the function renderCoffee, the coffees object-array,
+// but in a reverse array order
+coffeeDiv.innerHTML = renderCoffees(coffees.reverse()); //modified from tbody.innerHTML
+
+
+
+
+// ++++++++++++++++++++++++++++++++++++++ADD COFFEE+++++++++++++++++++++++++
+
+//Selection Option #2
+// it is click b/c we are submitting the request to add to "Coffees" - object array
+let roastAdd = document.querySelector('#roast-add');
+// roast.addEventListener("click",);
+
+
+//Button #2
+let buttonSubmit = document.querySelector('#submit-button');
+// buttonSubmit.addEventListener('click', updateCoffees);
+
+//text input #2
+let coffeeQuery= document.querySelector('#coffee-query');
+// coffeeQuery.addEventListener('input',addCoffeeItem );
 
 
 
