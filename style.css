@@ -3,8 +3,10 @@ body {
     background-image: url("https://i.imgur.com/zYw7wfv.jpeg");
     background-repeat: repeat-y;
     background-size: cover;
-    height: 100vh;
     color: white !important;
+    background-attachment: fixed;
+    background-position: center center;
+    min-height: 100%;
 }
 
 .card h2 {
@@ -33,4 +35,13 @@ body {
 
 .roast-selection {
     width: 100%;
+}
+
+select {
+    width: 100% !important;
+    height: 25%;
+}
+
+input {
+    width: 100% !important;
 }
