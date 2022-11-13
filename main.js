@@ -61,6 +61,7 @@ function updateCoffees(e) {
 }
 //Notes:
 // This is a hybrid of both filter #1 & filter #2.
+// This will prevent "undefined" when switching between all/light/medium/dark
 
 
 // //Filters #1: only by Selection Option #1
