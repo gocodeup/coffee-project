@@ -5,82 +5,173 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>index</title>
+    <title>Fancy Coffee</title>
     <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/c1f274691e.js" crossorigin="anonymous"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
           integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
 </head>
+
 <body>
-
-<!--+++++++++++++++++++++++++HEADER++++++++++++++++++++++++++-->
-<header>
-    <div class="header">
-        <!--    <h1 class=" d-flex justify-content-center ">Fancy Coffee!</h1>-->
-        <a class ="d-flex justify-content-center " href="https://www.fontspace.com/category/architect"><img src="https://see.fontimg.com/api/renderfont4/MVEVJ/eyJyIjoiZnMiLCJoIjoxMzAsInciOjIwMDAsImZzIjo2NSwiZmdjIjoiIzAwMDAwMCIsImJnYyI6IiNGRkZGRkYiLCJ0IjoxfQ/RmFuY3kgQ29mZmVl/iron-master-demo.png" alt="Architect fonts"></a>
-    </div>
-    <div id="header-div"></div>
-    <hr class="mb-2 hr">
-</header>
-
-<!--+++++++++++++++++++++++++LEFT-COLUMN+++++++++++++++++++-->
 <main>
-    <div class="container ">
-        <div class="row">
-            <div class="col">
-                <div class=" d-flex flex-column align-items-center cursive" id="coffeeDiv">
-
-                </div>
-                <div class="smelly"></div>
+    <!--+++++++++++++++++++++++++HEADER++++++++++++++++++++++++++-->
+    <header>
+        <header>
+            <div class="header">
+<!--                        <h1 class=" d-flex justify-content-center cursive">Fancy Coffee!</h1>-->
+                <a class="d-flex justify-content-center w-100" href="https://www.fontspace.com/category/architect"><img
+                        src="https://see.fontimg.com/api/renderfont4/MVEVJ/eyJyIjoiZnMiLCJoIjoxMzAsInciOjIwMDAsImZzIjo2NSwiZmdjIjoiIzAwMDAwMCIsImJnYyI6IiNGRkZGRkYiLCJ0IjoxfQ/RmFuY3kgQ29mZmVl/iron-master-demo.png"
+                        alt="Architect fonts"></a>
             </div>
+            <div id="header-div"></div>
+            <hr class="mb-2 hr">
+        </header>
 
-            <!--+++++++++++++++++++++++++SEARCH FOR COFFEE+++++++++++++++++++-->
-            <div class="col-lg-4">
+        <!--+++++++++++++++++++++++++LEFT-COLUMN+++++++++++++++++++-->
 
-                <form>
-                    <label for="roast-selection"><strong><p class="m-0 p-0">Roast Selection</p></strong></label>
-                    <select id="roast-selection" class="form-select" aria-label="Select Roast">
-                        <option>all</option>
-                        <option>light</option>
-                        <option>medium</option>
-                        <option>dark</option>
-                    </select>
-                    <!--+++++++++++++++++++++++++INPUT 1 --- BUTTON 1+++++++++++++++++++-->
-                    <!--Input #1-->
+        <div class="container ">
+            <div class="row">
+                <div class="col">
+                    <div class=" d-flex flex-column align-items-center cursive" id="coffeeDiv">
+
+                    </div>
+                    <div class="smelly"></div>
+                </div>
+
+                <!--+++++++++++++++++++++++++SEARCH FOR COFFEE+++++++++++++++++++-->
+
+                <div class="col-lg-4">
+
+                    <form>
+                        <label for="roast-selection"><strong><p class="m-0 p-0">Roast Selection:</p></strong></label>
+                        <select id="roast-selection" class="form-select" aria-label="Select Roast">
+                            <option>all</option>
+                            <option>light</option>
+                            <option>medium</option>
+                            <option>dark</option>
+                        </select>
+                        <!--+++++++++++++++++++++++++INPUT 1 --- BUTTON 1+++++++++++++++++++-->
+                        <!--Input #1-->
+                        <div>
+                            <label class="form-label m-0 p-0" for="coffee-search"><strong><p class="m-0 p-0">Coffee
+                                Name:</p>
+                            </strong></label>
+                            <input type="text" class="form-control mb-2" id="coffee-search">
+                        </div>
+                        <div class="d-flex justify-content-center align-item-center">
+                            <!--button #1-->
+                            <input class="btn btn-primary w-50 " id="submit" type="submit"/>
+                        </div>
+                        <hr class="hr">
+
+                    </form>
+                    <h2 class="d-flex justify-content-center">Add a Coffee!</h2>
+                    <form>
+                        <label for="roast-add"><strong><p class="m-0 p-0">Roast:</p></strong></label>
+                        <select id="roast-add" class="form-select" aria-label="Select Roast">
+                            <option>light</option>
+                            <option>medium</option>
+                            <option>dark</option>
+                        </select>
+                        <div class>
+                            <label for="coffee-query"><strong><p class="m-0 p-0">Name:</p></strong></label>
+                            <input type="text" class="form-control mb-2" id="coffee-query">
+                        </div>
+                        <div class="d-flex justify-content-center mb-3">
+                            <input class="btn btn-primary  w-50" id="add-button" type="submit"/>
+                        </div>
+
+                        <div id="carouselExampleIndicators" class=" carousel slide" data-bs-ride="true">
+                            <div class="carousel-indicators">
+                                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0"
+                                        class="active" aria-current="true" aria-label="Slide 1"></button>
+                                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                                        aria-label="Slide 2"></button>
+                                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+                                        aria-label="Slide 3"></button>
+                            </div>
+
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <img src="img/coffee-4.jpeg" class="d-block w-100 d-flex justify-content-center"
+                                         alt="coffee-4">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="img/coffee-2.jpeg" class="d-block w-100" alt="coffee-2">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="img/coffee-5.jpeg" class="d-block w-100" alt="coffee-5">
+                                </div>
+                            </div>
+                            <button class="carousel-control-prev" type="button"
+                                    data-bs-target="#carouselExampleIndicators"
+                                    data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Previous</span>
+                            </button>
+                            <button class="carousel-control-next" type="button"
+                                    data-bs-target="#carouselExampleIndicators"
+                                    data-bs-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Next</span>
+                            </button>
+                        </div>
+                    </form>
                     <div>
-                        <label class="form-label" for="coffee-search"><strong><p class="m-0 p-0">Coffee Name</p></strong></label>
-                        <input type="text" class="form-control mb-2" id="coffee-search">
-                    </div>
-                    <div class="d-flex justify-content-center align-item-center">
-                        <!--button #1-->
-                        <input class="btn btn-primary w-50 " id="submit" type="submit"/>
-                    </div>
-                    <hr class="hr">
 
-                </form>
-                <h2 class="d-flex justify-content-center">Add a Coffee!</h2>
-                <form>
-                    <label for="roast-add"><strong><p class="m-0 p-0">Roast</p></strong></label>
-                    <select id="roast-add" class="form-select" aria-label="Select Roast">
-                        <option>all</option>
-                        <option>light</option>
-                        <option>medium</option>
-                        <option>dark</option>
-                    </select>
-                    <div class>
-                        <label for="coffee-query"><strong><p class="m-0 p-0">Name</p></strong></label>
-                        <input type="text" class="form-control mb-2" id="coffee-query">
 
                     </div>
-                    <div>
-                        <input id="submit-button" type="submit" class="btn btn-primary w-100"/>
-                    </div>
-                </form>
+                </div>
             </div>
         </div>
-    </div>
-    </div>
 
-</main>
+        </main>
+
+
+        <footer>
+        <div class="container-footer">
+            <div class="row d-flex justify-content-between">
+                <div class="col-lg-4 ">
+                    <ul class="d-flex align-items-center">
+                        <li class="coffee-footer"><a style="color: black" href="#">Blog</a></li>
+                        <li class="coffee-footer"><a style="color: black" href="#">Menu</a></li>
+                        <li class="coffee-footer"><a style="color: black" href="#">Contact</a></li>
+                        <li class="coffee-footer"><a style="color: black" href="#">Careers</a></li>
+                    </ul>
+                </div>
+                <div class="col"></div>
+                <div class="col-4 d-flex ">
+                    <ul class="d-flex align-items-center ">
+                        <li class="coffee-footer"><a style="color: black" href="#">Follow Us</a></li>
+                        <li class="coffee-footer"><a style="color: black" href="#"><i class="fa-brands fa-facebook"></i></a>
+                        </li>
+                        <li class="coffee-footer"><a style="color: black" href="#"><i
+                                class="fa-brands fa-instagram"></i></a>
+                        </li>
+                        <li class="coffee-footer"><a style="color: black" href="#"><i class="fa-brands fa-youtube"></i></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!--    <div id="coffee-footer">-->
+            <!--        <ul class="container-footer">-->
+            <!--            <div class="group-one">-->
+            <!--                <li class="coffee-footer"><a style = "color: black" href="#">Blog</a></li>-->
+            <!--                <li class="coffee-footer"><a style = "color: black" href="#">Menu</a></li>-->
+            <!--                <li class="coffee-footer"><a style = "color: black" href="#">Contact Us</a></li>-->
+            <!--                <li class="coffee-footer"><a style = "color: black" href="#">Careers</a></li>-->
+            <!--            </div>-->
+            <!--            <div class="group-two">-->
+            <!--                <li class="coffee-footer"><a style = "color: black" href="#">Follow Us</a></li>-->
+            <!--                <li class="coffee-footer"><a style = "color: black" href="#"><i class="fa-brands fa-facebook"></i></a></li>-->
+            <!--                <li class="coffee-footer"><a style = "color: black" href="#"><i class="fa-brands fa-instagram"></i></a></li>-->
+            <!--                <li class="coffee-footer"><a style = "color: black" href="#"><i class="fa-brands fa-youtube"></i></a></li>-->
+            <!--            </div>-->
+            <!--        </ul>-->
+
+            <!--    </div>-->
+            </footer>
 
 
 <script src="main.js"></script>

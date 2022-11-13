@@ -7,8 +7,14 @@
     --bg-3: #ddbc95;
     --bg-4: #b38867;
     --bg-5: #f05e1b;
+    --bg-6: #6b3e1f;
 
 }
+
+main{
+    height: 75em;
+}
+
 
 
 
@@ -16,14 +22,19 @@
     font-family: var(--cursive);
 }
 
-
-header{
-    background-color: var(--bg-1);
+html, main, body{
+    background-color: var(--bg-4);
 }
 
 main{
-    background-color: var(--bg-4);
+    /*background-color: var(--bg-4);*/
 }
+
+.header{
+    background-color: var(--bg-1);
+}
+
+
 
 #coffeeDiv {
     background-color: var(--bg-3);
@@ -36,10 +47,63 @@ main{
 
 }
 
-
-#header-div{
-    background-color: var(--bg-5);
+footer{
+    background-color: var(--bg-1);
 }
+
+#coffee-footer{
+    position: relative;
+}
+
+.coffee-pics{
+    top: 3rem;
+    border: solid black 3px;
+}
+
+li{
+    list-style-type: none;
+}
+
+li:hover{
+    color: blue;
+    text-decoration: none;
+}
+
+a:link{
+    text-decoration: none;
+}
+
+
+/*.container-footer{*/
+/*    display: flex;*/
+/*    align-items: center;*/
+/*    list-style: none;*/
+/*    background-color: var(--bg-6);*/
+/*    cursor: pointer;*/
+
+/*}*/
+
+/*.group-one{*/
+/*    display: flex;*/
+/*    justify-content: flex-start;*/
+/*    font-weight: bolder;*/
+
+/*}*/
+/*.group-two {*/
+/*    display: flex;*/
+/*    justify-content: flex-end;*/
+/*    flex-grow: 1;*/
+
+/*}*/
+
+.coffee-footer {
+    margin: .5em;
+    font-weight: bolder;
+    font-size: 1.5rem;
+
+}
+
+
 
 
 .smelly {
@@ -49,7 +113,6 @@ main{
     --c:#9c879e;
     --c1:#fff;
     --c2:#dbd076;
-
     background:
             radial-gradient(farthest-side,var(--c2) 98%,#0000) 42% 91.5%/5% 6%,
             radial-gradient(farthest-side,var(--c2) 98%,#0000) 58% 91.5%/5% 6%,
@@ -101,7 +164,4 @@ main{
     right: 83%;
     left: auto;
     transform: scaleX(-1);
-/*
-SOURCE:
-https://dev.to/afif/31-single-div-illustration-the-divtober-collection-aik*/
-
+}
