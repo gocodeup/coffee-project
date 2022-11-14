@@ -159,21 +159,35 @@ coffeeDiv.innerHTML = renderCoffees(coffees); //given, modified tbody.innerHTML 
 
 
 
-// +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+// +++++++++++++++++++++++++++++ADD-COFFEE++++++++++++++++++++++++++++++++++
 
 //Selection Option #2
 // it is click b/c we are submitting the request to add to "Coffees" - object array
-let roastAdd = document.querySelector('#roast-add');
-roastAdd.addEventListener("click", addCoffeeItem);
+let roastAdd = document.querySelector('#roast-add'); //created
+// roastAdd.addEventListener("click", addCoffeeItem);//created
 
-
-//Button #2
-let addButton = document.querySelector('#add-button');
-addButton.addEventListener('click', addCoffeeItem);
+//Note:
+// addEventListener was not needed for roastAdd.
+// The event only needs to be fired once, not three times.
+// We do not need it to when the option selector is selected.
 
 //text input #2
-let addCoffeeName= document.querySelector('#coffee-query');
-addCoffeeName.addEventListener('keyup',addCoffeeItem);
+let addCoffeeName= document.querySelector('#coffee-query'); //created
+// addCoffeeName.addEventListener('click',addCoffeeItem); //created
+
+//Note:
+// addEventListener was not needed for addCoffeeName.
+// The event only needs to be fired once, not three times.
+// We do not need it with the text-input.
+
+//Button #2
+let addButton = document.querySelector('#add-button'); //created
+addButton.addEventListener('click', addCoffeeItem); //created
+
+//Note:
+// addEventListener was  needed for add.
+// The event only needs to be fired once, not three times.
+// We do need it to fire when the button us submitted.
 
 
 
