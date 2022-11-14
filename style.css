@@ -6,6 +6,7 @@
 }
 h1{
     font-family: 'Princess Sofia', cursive;
+
 }
 
 hr{
@@ -24,6 +25,7 @@ table {
     /*border-collapse: collapse;*/
     margin: 15px 0;
     font-family: 'Princess Sofia', cursive;
+    color: #FFDCBA;
 
 }
 
@@ -62,22 +64,220 @@ td, th {
     flex-grow: 1;
     /*justify-content: space-evenly;*/
     margin-bottom: 50px;
+    border: saddlebrown 3px;
+    border-radius: 10px;
+    background-color: rgba(0,0,0,.5);
+
 }
 #coffeeRoast{
     display: flex;
     align-content: flex-end;
 }
+#roast-selection {
+    background-color: cornsilk;
+}
+#coffee-name {
+    background-color: cornsilk;
+}
+#newRoast-selection {
+    background-color: cornsilk;
+}
+#newCoffee-name {
+    background-color: cornsilk;
+
+}
 
 
 body {
-    background: url("images/coffee3.webp")  no-repeat center center fixed;
+    background: url("images/bg-blurred.jpeg")  no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
+    text-decoration-color: #FFDCBA;
 
 
 }
 .forms2 {
     border: peru outset 3px;
+    background-color: #FFDCBA ;
+    background-color: rgba(0,0,0,.5);
+    color: #FFDCBA;
+
+}
+
+/*background-image: url("images/Coffee-life.png");*/
+/*width: 80px;*/
+/*height: 80px;*/
+/*opacity: 0.5;*/
+/*float: left;*/
+/*border: 10px;*/
+/*border-radius: 150px;*/
+
+/*img {*/
+/*    width: 100px;*/
+/*    height: 100px;*/
+/*    justify-self: flex-start;*/
+/*    !*position: relative;*!*/
+/*    border-radius: 30px;*/
+
+
+
+#header {
+    display: flex;
+    height: 80%;
+    width: 100%;
+    align-content: center;
+    margin-top: 1rem;
+
+
+}
+
+
+nav {
+    /*background-image: url("images/Coffee-life.png");*/
+
+    border: 10px;
+    border-radius: 150px;
+    display: flex;
+justify-content: center;
+    text-align: center;
+}
+
+#video {
+    display: flex;
+    justify-content: stretch;
+    width: 100%;
+    height: 40vh;
+}
+
+/*svg{*/
+/*    background:url("images/Coffee-life.png") no-repeat center;*/
+/*    width:80vmin;*/
+/*    height:auto;*/
+/*    display:flex;*/
+/*}*/
+/*text{*/
+/*    font-size:10px;*/
+/*    transition:font-size .4s ease-out;*/
+/*    font-weight:900;*/
+/*}*/
+/*svg:hover text{*/
+/*    transition:font-size .4s ease-in;*/
+/*    font-size: 300px;*/
+/*}*/
+body
+{
+    margin: 0;
+    padding: 0;
+}
+
+.glitch
+{
+    position: relative;
+    width: 100%;
+    height: 50vh;
+    background: url("images/Coffee-life.png")  center;
+    background-size: cover;
+}
+
+.glitch:before
+{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url("images/Coffee-life.png") center;
+    background-size: cover; /* contain for split effect */
+    opacity: .5;
+    mix-blend-mode: hard-light;
+    animation: glitch2 10s linear infinite;
+}
+
+.glitch:hover:before
+{
+    animation: glitch1 1s linear infinite;
+}
+
+@keyframes glitch1
+{
+    0%
+    {
+        background-position: 0 0;
+        filter: hue-rotate(0deg);
+    }
+    10%
+    {
+        background-position: 5px 0;
+    }
+    20%
+    {
+        background-position: -5px 0;
+    }
+    30%
+    {
+        background-position: 15px 0;
+    }
+    40%
+    {
+        background-position: -5px 0;
+    }
+    50%
+    {
+        background-position: -25px 0;
+    }
+    60%
+    {
+        background-position: -50px 0;
+    }
+    70%
+    {
+        background-position: 0 -20px;
+    }
+    80%
+    {
+        background-position: -60px -20px;
+    }
+    81%
+    {
+        background-position: 0 0;
+    }
+    100%
+    {
+        background-position: 0 0;
+        filter: hue-rotate(360deg);
+    }
+}
+
+@keyframes glitch2
+{
+    0%
+    {
+        background-position: 0 0;
+        filter: hue-rotate(0deg);
+    }
+    10%
+    {
+        background-position: 15px 0;
+    }
+    15%
+    {
+        background-position: -15px 0;
+    }
+    20%
+    {
+        filter: hue-rotate(360deg);
+    }
+    25%
+    {
+        background-position: 0 0;
+        filter: hue-rotate(0deg);
+    }
+    100%
+    {
+        background-position: 0 0;
+        filter: hue-rotate(0deg);
+    }
 }
