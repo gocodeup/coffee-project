@@ -21,7 +21,7 @@ let coffees = [
 
 // Custom Coffee Functionality
 let addCoffee = function (e) {
-    e.preventDefault(); // don't submit the form, we just want to update the data
+    e.preventDefault(); // doesn't submit the form, just updates the data
     coffees.push( {
         id: coffees.length + 1,
         name: customName.value,
@@ -49,21 +49,12 @@ function customImg(input) {
 }
 
 // Populates the Coffee Selection
-// function renderCoffee(coffee) {
-//     let html = '<div class="coffees">';
-//     // html += '<td>' + coffee.id + '</td>';
-//     html += '<h3>' + coffee.name + '</h3>';
-//     html += '<p>' + coffee.roast + '</p>';
-//     html += '</div>';
-//
-//     return html;
-// }
 function renderCoffee(coffee) {
     let html = '<div class="card bg-transparent m-4 align-items-center" style="width: 18rem;">';
-    html += '<img src="' + coffee.img + '" class="card-img-top" alt="coffee image">'; // TODO: img for coffees obj
+    html += '<img src="' + coffee.img + '" class="card-img-top align-self-center mt-2" style="width: 17rem;" alt="coffee image">'; // TODO: img for coffees obj
     html += '<div class="card-body coffees">';
     html += '<h3 class="card-title">' + coffee.name + '</h3>';
-    html += '<p class="card-text">' + coffee.roast + '</p>';
+    html += '<p class="card-text">' + coffee.roast + ' Roast</p>';
     html += '</div>';
     html += '</div>';
 
@@ -83,31 +74,42 @@ coffeeDiv.innerHTML = renderCoffees(coffees);
 
 // Updates the Coffee by Roast
 function updateCoffees(e) {
-    e.preventDefault(); // don't submit the form, we just want to update the data
+    e.preventDefault(); // doesn't submit the form, just updates the data
     let selectedRoast = roastSelection.value;
     let filteredCoffees = [];
-    coffees.forEach(function(coffee) {
-        if (coffee.roast === selectedRoast) {
-            filteredCoffees.push(coffee);
-        }
-    });
-    coffeeDiv.innerHTML = renderCoffees(filteredCoffees);
-}
-
-let roastSelection = document.querySelector('#roast-selection');
-let submitButton = document.querySelector('#roast-submit');
-submitButton.addEventListener('click', updateCoffees);
-
-// Search Bar Functionality
-let searchCoffee = function () {
-    let filteredCoffees = [];
-    for (let i = 0; i < coffees.length; i++) {
-        if (coffees[i].name.toLowerCase().includes(search.value.toLowerCase())) {
-            filteredCoffees.push(coffees[i]);
-        }
+    if (selectedRoast === "All") {
+        coffees.forEach(function(coffee){
+            if (coffee.name.toLowerCase().includes(search.value.toLowerCase())) {
+                filteredCoffees.push(coffee);
+            }
+        });
+    } else if (selectedRoast !== "All") {
+        coffees.forEach(function(coffee) {
+            if (coffee.roast === selectedRoast) {
+                if (coffee.name.toLowerCase().includes(search.value.toLowerCase())) {
+                    filteredCoffees.push(coffee);
+                }
+            }
+        });
     }
+
     coffeeDiv.innerHTML = renderCoffees(filteredCoffees);
 }
 
 let search = document.getElementById('search');
-search.addEventListener('keyup', searchCoffee);
+search.addEventListener('keyup', updateCoffees);
+let roastSelection = document.querySelector('#roast-selection');
+roastSelection.addEventListener('change', updateCoffees);
+
+// Search Bar Functionality
+// let searchCoffee = function (e) {
+//     let filteredCoffees = [];
+//     for (let i = 0; i < coffees.length; i++) {
+//         if (coffees[i].name.toLowerCase().includes(search.value.toLowerCase())) {
+//             filteredCoffees.push(coffees[i]);
+//         }
+//     }
+//
+//     coffeeDiv.innerHTML = renderCoffees(filteredCoffees);
+// }
+
