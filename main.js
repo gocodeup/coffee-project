@@ -80,6 +80,13 @@ function addNewCoffee(e){
     const coffeeName = typeLetter.charAt(0).toUpperCase() + typeLetter.slice(1);
     // console.log(typeLetter)
     let coffee = {name:coffeeName, roast:selectedRoast};
+    // coffees.push(coffee);
+    coffees.forEach(function (coffee){
+        if(coffee.roast === selectedRoast && typeLetter === coffee.name.toLowerCase()){
+            alert("has it");
+            coffees.pop();
+        }
+    })
     coffees.push(coffee);
     localStorage.setItem('newCoffeeList', JSON.stringify(coffees));
     tbody.innerHTML = renderCoffees(coffees);
