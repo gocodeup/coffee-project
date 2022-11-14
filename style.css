@@ -22,6 +22,7 @@ body {
 .add-a-coffee {
     display: flex;
     justify-content: flex-end;
+    color: black;
 }
 
 p {
