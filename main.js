@@ -1,5 +1,7 @@
 "use strict"
 
+// renderCoffee function is concatenating "coffee.name" & "coffee.roast"
+
 function renderCoffee(coffee) {
    let html = '<div class="coffee">';
     // html += '<p>' + coffee.id + '</p>';
@@ -9,6 +11,8 @@ function renderCoffee(coffee) {
 
     return html;
 }
+
+
 
 function renderCoffees(coffees) {
    let html = '';
