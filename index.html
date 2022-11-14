@@ -8,20 +8,18 @@
     <!--CSS & Font Awesome-->
     <script src="https://kit.fontawesome.com/e8ac724fbe.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="style.css">
-    <!-- Bootstrap -->
+    <!--Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
-    <!--    Google Fonts-->
+    <!--Google Fonts-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
-
 </head>
+
 <body class="bg-transparent text-dark">
-
 <!--Search by Coffee & Roast-->
-
 <nav class="navbar fixed-top container-fluid">
     <div class="container-fluid text-end">
         <i class="fa-solid fa-skull"></i>
@@ -29,8 +27,8 @@
         <div class="search-bar" role="search">
             <div>
             <!--Search Bar-->
-                <label for="search"></label>
-                <input  id="search" type="text" placeholder="Search...">
+                <label for="search">Search Coffee Blends</label>
+                <input id="search" type="text" placeholder="Search...">
             </div>
             <div class="m-0">
             <!--Roast Sort-->
@@ -41,19 +39,27 @@
                     <option>Medium</option>
                     <option>Dark</option>
                 </select>
-                <input id="roast-submit" type="submit"/>
             </div>
-            <div>
+            <div class="dropdown">
             <!--Custom Coffee-->
-                <label for="custom-name"></label>
-                <input id="custom-name" type="text" placeholder="Coffee Name...">
-                <label for="custom-roast"></label>
-                <select style="height:30px" id="custom-roast">
-                    <option>Light</option>
-                    <option>Medium</option>
-                    <option>Dark</option>
-                </select>
-                <input id="custom-submit" type="submit"/>
+                <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" style="background-color: #4ed284; color: #fff;">
+                    Custom Coffee
+                </button>
+                <div class="dropdown-menu dropdown-menu-end dropdown-menu-dark m-0 pt-0 pe-3 pb-3 ps-3">
+                    <div>
+                        <label for="custom-name"></label>
+                        <input id="custom-name" type="text" placeholder="Coffee Name...">
+                    </div>
+                    <div class="mt-3 d-flex justify-content-end">
+                        <label for="custom-roast"></label>
+                        <select class="flex-fill" style="height:30px" id="custom-roast">
+                            <option>Light</option>
+                            <option>Medium</option>
+                            <option>Dark</option>
+                        </select>
+                        <input id="custom-submit" type="submit"/>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -87,7 +93,8 @@
                 </div>
                 <div class="col item social"><a href="#"><i class="icon ion-social-facebook"></i></a><a href="#"><i class="icon ion-social-twitter"></i></a><a href="#"><i class="icon ion-social-snapchat"></i></a><a href="#"><i class="icon ion-social-instagram"></i></a></div>
             </div>
-            <img src="img/burial-grounds-high-resolution-logo-black-on-transparent-background.png" style="height: 150px" alt="logo2"> <p class="copyright">Burial Grounds © 2022</p>
+            <img src="img/burial-grounds-high-resolution-logo-black-on-transparent-background.png" style="height: 150px" alt="logo2">
+             <p class="copyright">Burial Grounds © 2022</p>
         </div>
     </footer>
 </div>
@@ -102,8 +109,8 @@
 <!--    </div>-->
 <!--JavaScript-->
     <script src="main.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.bundle.min.js"></script>
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
 
 </body>
 </html>

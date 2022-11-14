@@ -101,15 +101,3 @@ search.addEventListener('keyup', updateCoffees);
 let roastSelection = document.querySelector('#roast-selection');
 roastSelection.addEventListener('change', updateCoffees);
 
-// Search Bar Functionality
-// let searchCoffee = function (e) {
-//     let filteredCoffees = [];
-//     for (let i = 0; i < coffees.length; i++) {
-//         if (coffees[i].name.toLowerCase().includes(search.value.toLowerCase())) {
-//             filteredCoffees.push(coffees[i]);
-//         }
-//     }
-//
-//     coffeeDiv.innerHTML = renderCoffees(filteredCoffees);
-// }
-
