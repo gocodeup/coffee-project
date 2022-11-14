@@ -33,6 +33,7 @@ h3 {
     justify-content: center;
 }
 .header3 {
+    font-size: xx-large;
     font-weight: bolder;
     padding-top: 50px;
     padding-bottom: 15px;
@@ -75,11 +76,25 @@ h3 {
 #newCoffee-submit:hover {
     background-color: goldenrod;
 }
+
 .footH3 {
     display: inline-flex;
     background-color: sandybrown;
     margin: 0 20px;
+
+    position: relative;
+    animation-name: example;
+    animation-duration: 5s;
+    animation-delay: 3s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-fill-mode: none;
 }
+@keyframes example {
+    from {left: 0px; background-color: blanchedalmond; color: chocolate;}
+    to {left: 1003px; background-color: chocolate; color: blanchedalmond;}
+}
+
 /*Icons*/
 footer {
     display: flex;
