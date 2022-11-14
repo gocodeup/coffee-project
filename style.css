@@ -69,6 +69,7 @@ h3 {
     display: flex;
     justify-content: flex-start;
 }
+/*Icons*/
 footer {
     display: flex;
     justify-content: space-around;
@@ -116,23 +117,3 @@ footer {
     color: white;
     text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 }
-
-/*Mobile*/
-/*@media screen and (max-width: 320px) {*/
-/*    #coffees {*/
-/*        width: 50%;*/
-/*    }*/
-/*    .card {*/
-/*        display: flex;*/
-/*        align-content: center;*/
-/*        width: 100%;*/
-/*    }*/
-/*}*/
-
-/*Tablet*/
-/*@media screen and (min-width: 321px) and (max-width: 768px) {*/
-/*    #coffees {*/
-/*        width: 50%*/
-/*    }*/
-/*}*/
-
