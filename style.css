@@ -70,13 +70,12 @@ td, th {
     flex-direction: row;
     flex-wrap: nowrap;
     flex-grow: 1;
-    /*justify-content: space-evenly;*/
+    margin-left: auto;
     margin-bottom: 50px;
     border: saddlebrown 3px;
     border-radius: 10px;
     background-color: rgba(0,0,0,.5);
     box-shadow: 10px 10px 5px #5D341F;
-
 ;
 
 }
@@ -97,7 +96,9 @@ td, th {
     background-color: cornsilk;
 
 }
-
+.container {
+    color: peru ;
+}
 
 body {
     background: url("images/bg-blurred.jpeg")  no-repeat center center fixed;
