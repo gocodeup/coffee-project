@@ -11,8 +11,8 @@ body {
     font: 16px Arial;
     opacity: 100%;
 }
+/*Nav Bar*/
 .navbar {
-    /*max-height: 120px;*/
     align-items: baseline;
     margin-bottom: 20px;
     backdrop-filter: blur(15px);
@@ -20,13 +20,28 @@ body {
     box-shadow: 0 1px 12px rgba(0, 0, 0, 0.25);
     border: 1px solid rgba(0, 0, 0, 0.3);
 }
+i {
+    font-weight: bolder;
+    color: #4ed284;
+    scale: 225%;
+}
+.container-fluid>h1 {
+    text-decoration: underline;
+    color: black;
+    margin-bottom: 0;
+    font-family: 'Permanent Marker', cursive;
+    font-size: 32px;
+}
 .search-bar{
     display: flex;
 }
-button {
-    background-color: #4ed284;
-    color: #fff;
+.drop-bg {
+    backdrop-filter: blur(15px);
+    background-color: rgba(255, 255, 255, 0.25);
+    box-shadow: 0 1px 12px rgba(0, 0, 0, 0.25);
+    border: 1px solid rgba(0, 0, 0, 0.3);
 }
+/*Coffee Inventory*/
 #coffees {
     display: flex;
     flex-wrap: wrap;
@@ -51,7 +66,7 @@ button {
 .card-body {
     text-align: center;
 }
-
+/*Footer*/
 .footer-dark {
     padding:50px 0;
     color:#f0f9ff;
@@ -126,7 +141,7 @@ button {
     text-align:center;
     border-radius:50%;
     box-shadow:0 0 0 1px rgba(255,255,255,0.4);
-    margin:0 8px;
+    margin: 0 8px;
     color:#fff;
     opacity:0.75;
 }
@@ -137,21 +152,14 @@ button {
 
 .footer-dark .copyright {
     text-align:center;
-    padding-top:24px;
+    padding-top:1em;
     opacity:0.3;
     font-size:13px;
     margin-bottom:0;
 }
-
-.fa-solid{
-    text-decoration: underline;
-    font-weight: bolder;
-    color: green;
-}
-.container-fluid>p{
-    text-decoration: underline;
-    color: black;
-    margin-bottom: 0;
-    font-family: 'Permanent Marker', cursive;
-    font-size: x-large;
+.footer-logo {
+    height: 150px;
+    width: 150px;
+    left: 0;
+    padding-top: 1em;
 }
