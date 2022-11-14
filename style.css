@@ -12,10 +12,11 @@ body {
     background-image: url("img/coffee-beans.jpeg");
     background-color: sandybrown;
 }
+h1 {
+    font-family: 'Bangers', cursive;
+}
 h2 {
-    margin-top: auto;
-    margin-left: 45px;
-    margin-right: 45px;
+    margin: auto;
     font-size: 100px;
     color: white;
     font-family: 'Special Elite', cursive;
@@ -24,8 +25,17 @@ h2 {
     background-color: chocolate;
     text-decoration: underline;
 }
-h1 {
-    font-family: 'Bangers', cursive;
+h3 {
+    font-size: xx-large;
+    font-family: 'Lemonada', cursive;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+}
+.header3 {
+    font-weight: bolder;
+    padding-top: 50px;
+    padding-bottom: 15px;
 }
 .container {
     background-color: sandybrown;
@@ -35,7 +45,17 @@ h1 {
     border: none;
     margin-top: 50px;
 }
+.card-text {
+    display: flex;
+    align-content: center;
+}
+#coffees {
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+}
 #submit, #newCoffee-submit {
+    width: 100%;
     background-color: blanchedalmond;
 }
 #roast-selection, #userCoffeeRoast {
@@ -44,8 +64,28 @@ h1 {
     justify-content: flex-start;
 }
 #searchCoffee, #newCoffee {
+    width: 75%;
     background-color: antiquewhite;
     display: flex;
     justify-content: flex-start;
 }
+
+/*Mobile*/
+/*@media screen and (max-width: 320px) {*/
+/*    #coffees {*/
+/*        width: 50%;*/
+/*    }*/
+/*    .card {*/
+/*        display: flex;*/
+/*        align-content: center;*/
+/*        width: 100%;*/
+/*    }*/
+/*}*/
+
+/*Tablet*/
+/*@media screen and (min-width: 321px) and (max-width: 768px) {*/
+/*    #coffees {*/
+/*        width: 50%*/
+/*    }*/
+/*}*/
 

@@ -16,22 +16,24 @@
 
 </head>
 <body>
-<h2 class="text-center">Coffee Shop!</h2>
+<h2 class="col-md-12 col-sm-6">Coffee Shop!</h2>
 <hr>
 
 <div class="container">
     <div class="row">
         <!--Coffee List-->
-        <div id="coffees" class="col-md-6 col-sm-3 d-flex flex-wrap"></div>
+        <div class="col-md-6">
+            <h3 class="header3">Coffee List:</h3>
+            <div id="coffees"></div>
+        </div>
         <!--Coffee Selections-->
         <div class="col-md-6">
             <!--First Form (Choose your coffee)-->
             <div class="select-coffee">
                 <div class="card">
-                    <h1 class="text-center" style="font-family: 'Lemonada', cursive; font-weight: bold;">Select your
-                        coffee</h1>
+                    <h3>Choose your coffee!</h3>
                     <div class="card-body">
-                        <h3 class="card-title">Roast</h3>
+                        <h4 class="card-title">Roast:</h4>
                         <p class="card-text">
                             <label for="roast-selection"></label>
                             <select id="roast-selection">
@@ -41,12 +43,12 @@
                                 <option>Dark</option>
                             </select>
                         </p>
-                        <h3>Coffee Name</h3>
+                        <h4 class="card-title">Coffee Name:</h4>
                         <p class="card-text">
                             <label for="searchCoffee" class="form-label"></label>
-                            <input type="search" id="searchCoffee" style="width: 75%;" placeholder="Enter Coffee Name">
+                            <input type="search" id="searchCoffee" placeholder="Search Coffee Name">
                         </p>
-                        <input id="submit" style="width: 100%;" type="submit"/>
+                        <input id="submit" type="submit"/>
                     </div>
                 </div>
             </div>
@@ -54,10 +56,9 @@
             <!--Second Form (Make your own coffee)-->
             <div class="make-coffee">
                 <div class="card">
-                    <h1 class="text-center" style="font-family: 'Lemonada', cursive; font-weight: bold">Create your
-                        coffee</h1>
+                    <h3>Create your own coffee!</h3>
                     <div class="card-body">
-                        <h3 class="card-title">Roast</h3>
+                        <h4 class="card-title">Roast:</h4>
                         <p class="card-text">
                             <label for="userCoffeeRoast"></label>
                             <select id="userCoffeeRoast">
@@ -66,34 +67,24 @@
                                 <option>Dark</option>
                             </select>
                         </p>
-                        <h3 class="card-title">Name your coffee</h3>
+                        <h4 class="card-title">Name your coffee:</h4>
                         <p class="card-text">
                             <label for="newCoffee" class="form-label"></label>
-                            <input type="text" id="newCoffee" style="width: 75%;" placeholder="Enter New Coffee Name">
+                            <input type="text" id="newCoffee" placeholder="Enter New Coffee Name">
                         </p>
-                        <input value="Add New Coffee" style="width: 100%;" id="newCoffee-submit" type="button"/>
+                        <input value="Add New Coffee" id="newCoffee-submit" type="button"/>
                     </div>
                 </div>
             </div>
         </div>
-        <!--        <table>-->
-        <!--            <thead>-->
-        <!--            <tr>-->
-        <!--                &lt;!&ndash;                <th>ID</th>&ndash;&gt;-->
-        <!--                <th>NAME</th>-->
-        <!--                <th>ROAST</th>-->
-        <!--            </tr>-->
-        <!--            </thead>-->
-        <!--            <tbody id="coffees"></tbody>-->
-        <!--        </table>-->
     </div>
 </div>
 
-
-<!-- JavaScript Bundle with Popper -->
+<!--Bootstrap Script Tag-->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
         crossorigin="anonymous"></script>
+<!--JavaScript Script Tag-->
 <script src="main.js"></script>
 
 </body>
