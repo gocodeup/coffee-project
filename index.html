@@ -18,7 +18,7 @@
 <body>
 
 <!--TITLE-->
-<header class="text-center ">
+<header class="text-center">
     <h1 class="my-5">The 8-bit Coffee Shop</h1>
 </header>
 
@@ -40,9 +40,9 @@
                        <h4 class="d-flex justify-content-center mb-4
 ">Select your Coffee:</h4>
                     <!--ROAST SELECTION-->
-                    <label for="roast-selection">Roast Type:</label>
+                    <label for="roast-selection" class="mb-2">Roast Type:</label>
                        <br>
-                    <select id="roast-selection" class="selectEl form-select">
+                    <select id="roast-selection" class="selectEl form-select px-2 w-100 border-success">
                         <option>all</option>
                         <option>light</option>
                         <option>medium</option>
@@ -52,9 +52,9 @@
                     <br>
 
                     <!--SEARCH COFFEE-->
-                    <label for="coffee-search">Search Your Coffee:</label>
+                    <label for="coffee-search" class="mb-2">Search Your Coffee:</label>
                        <br>
-                    <input type="text" name="coffee-name" id="coffee-search" placeholder="ex. Espresso" >
+                    <input type="text" name="coffee-name" id="coffee-search" placeholder="ex. Espresso" class="px-2 py-1 w-100 border-success rounded">
 
                     <br>
 
@@ -72,9 +72,9 @@
 ">Add your Coffee:</h4>
 
                     <!--ADD ROAST-->
-                    <label for="add-roast">Roast Type:</label>
+                    <label for="add-roast" class="mb-2">Roast Type:</label>
                         <br>
-                    <select class="roast-selection form-select" id="add-roast">
+                    <select class="roast-selection form-select px-2 w-100 border-success" id="add-roast">
                         <option>light</option>
                         <option>medium</option>
                         <option>dark</option>
@@ -83,14 +83,14 @@
                     <br>
 
                     <!--ADD COFFEE NAME-->
-                    <label for="add-coffee">Coffee Name:</label>
+                    <label for="add-coffee" class="mb-2">Coffee Name:</label>
                         <br>
-                    <input type="text" name="coffee-name" id="add-coffee" placeholder="">
+                    <input type="text" name="coffee-name" id="add-coffee" class="px-2 py-1 w-100 border-success rounded">
 
                     <br>
 
                     <!--SUBMIT BUTTON-->
-                    <button type="button" id="addBtn">Add Coffee</button>
+                    <button type="button" id="addBtn" class="px-2 py-2 rounded-pill">Add Coffee</button>
 
                     <!--END OF OUR ADD COFFEE-->
 
@@ -101,7 +101,7 @@
             <!--END OF OUR FORM COLUMN-->
 
             <!--START OF OUR RENDER DATA COLUMN-->
-            <div class="col">
+            <div class="col mt-4">
                 <div class="container-fluid">
                     <div class="row" id="coffees">
 
