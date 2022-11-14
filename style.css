@@ -1,3 +1,28 @@
+body {
+    background-color: gold;
+}
+
+.roast-container {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.coffee-container {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.add-a-coffee {
+    display: flex;
+    justify-content: flex-end;
+}
+
+p {
+    text-decoration: black;
+    font-weight: bold;
+    font-size: 25px;
+}
+
 table {
     border-collapse: collapse;
     margin: 15px 0;
@@ -7,5 +32,3 @@ td, th {
     border: 1px solid black;
     padding: 5px 10px;
 }
-
-
