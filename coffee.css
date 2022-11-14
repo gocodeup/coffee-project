@@ -1,0 +1,48 @@
+html, body {
+    margin: 0;
+    height: 100%;
+    background-image: url(coffee.png);
+    padding: cover;
+    background-size:100% 100%;
+    background-repeat:no-repeat;
+}
+table{
+    margin: 0;
+}
+
+tbody{
+    font-family: 'Italianno', cursive;
+}
+h1.text-center{
+    font-family: 'Dancing Script', cursive;
+    color:hwb(32 13% 32% / 0.74);
+}
+
+.coffee{
+    display: flex;
+    align-items: baseline;
+}
+.scrollable{
+    height: 600px; /* or any value */
+    overflow-y: scroll;
+}
+.btn{
+    color: rgb(165, 138, 108);
+}
+.form-control{
+    background: transparent;
+    border: none;
+}
+.input-group-text{
+    background: transparent;
+    border: none;
+    color:bisque;
+}
+.form-select{
+    background: transparent;
+    border: none;
+    color:grey;
+}
+h1{
+    font-size :60px;
+}

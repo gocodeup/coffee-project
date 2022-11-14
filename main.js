@@ -18,8 +18,8 @@ let coffees = [
 
 function renderCoffee(coffee) {
     var html = '<tr class="coffee">';
-    html += '<td>' + coffee.name + '</td>';
-    html += '<td>' + coffee.roast + '</td>';
+    html += '<td style="color:#eeebebfd; font-size:65px;">' + coffee.name + '</td>';
+    html += '<td style="color:#a9a9a9b4; font-size:30px;">' + "-" +coffee.roast + '</td>';
     html += '</tr>';
 
     return html;
@@ -49,7 +49,6 @@ function updateCoffees(e) {
 }
 //type search
 function updateTypeCoffees(){
-    console.log("event");
     let selectedRoast = roastSelection.value.toLowerCase();
     let typeLetter = searchCoffee.value.toLowerCase();
     let filteredCoffees = [];
@@ -78,8 +77,23 @@ function addNewCoffee(e){
     // console.log(typeLetter)
     let coffee = {name:coffeeName, roast:selectedRoast};
     coffees.push(coffee);
-    localStorage.setItem('newCoffeeList', JSON.stringify(coffees))
+    localStorage.setItem('newCoffeeList', JSON.stringify(coffees));
     tbody.innerHTML = renderCoffees(coffees)
+    location.reload()
+}
+// remove coffee
+function reomveCoffee(e){
+    e.preventDefault();
+    let selectedRoast = removeSelection.value.toLowerCase();
+    let typeLetter = removeType.value.toLowerCase();
+    coffees.forEach(function(coffee,i){
+        if(coffee.roast === selectedRoast && coffee.name === typeLetter){
+            coffees.splice(i,1);
+        }
+    })
+    localStorage.setItem('newCoffeeList', JSON.stringify(coffees));
+    tbody.innerHTML = renderCoffees(coffees)
+
 }
 
 // var elements
@@ -90,6 +104,9 @@ let newRoastSelection = document.getElementById('roast-selection')
 let newCoffee = document.getElementById('new-coffee');
 let searchCoffee = document.getElementById('search-coffee');
 let submitNewCoffee = document.getElementById('submit');
+let removeCoffeeBtn = document.getElementById('remove-submit');
+let removeSelection = document.getElementById('roast-selection-remove');
+let removeType = document.getElementById('remove-coffee');
 let newCoffees = localStorage.getItem('newCoffeeList');
 newCoffees = JSON.parse(newCoffees);
 
@@ -99,6 +116,7 @@ roastSelection.addEventListener('change', updateCoffees);
 newCoffee.addEventListener('keyup',updateCoffees);
 searchCoffee.addEventListener('keyup',updateTypeCoffees);
 submitNewCoffee.addEventListener('click', addNewCoffee)
+removeCoffeeBtn.addEventListener('click', reomveCoffee)
 
 if(newCoffees === null){
     tbody.innerHTML = renderCoffees(coffees)
