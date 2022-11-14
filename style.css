@@ -40,8 +40,12 @@ h1 {
 }
 #roast-selection, #userCoffeeRoast {
     background-color: antiquewhite;
+    display: flex;
+    justify-content: flex-start;
 }
 #searchCoffee, #newCoffee {
     background-color: antiquewhite;
+    display: flex;
+    justify-content: flex-start;
 }
 

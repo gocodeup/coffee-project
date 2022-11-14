@@ -9,7 +9,8 @@
     <!--Google Fonts Link-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Special+Elite&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Lemonada&family=Special+Elite&display=swap"
+          rel="stylesheet">
     <!--CSS Link-->
     <link rel="stylesheet" href="style.css">
 
@@ -21,27 +22,14 @@
 <div class="container">
     <div class="row">
         <!--Coffee List-->
-        <div id="coffees" class="col-6 d-flex flex-wrap"></div>
+        <div id="coffees" class="col-md-6 col-sm-3 d-flex flex-wrap"></div>
         <!--Coffee Selections-->
-        <div class="col-6">
+        <div class="col-md-6">
             <!--First Form (Choose your coffee)-->
             <div class="select-coffee">
-                <!--                <form>-->
-                <!--                    <h3>Roast</h3>-->
-                <!--                    <label for="roast-selection"></label>-->
-                <!--                    <select id="roast-selection">-->
-                <!--                        <option>All</option>-->
-                <!--                        <option>Light</option>-->
-                <!--                        <option>Medium</option>-->
-                <!--                        <option>Dark</option>-->
-                <!--                    </select>-->
-                <!--                    <h3>Coffee Name</h3>-->
-                <!--                    <label for="searchCoffee" class="form-label"></label>-->
-                <!--                    <input type="search" id="searchCoffee" placeholder="Enter Coffee Name">-->
-                <!--                    <input id="submit" type="submit"/>-->
-                <!--                </form>-->
-
                 <div class="card">
+                    <h1 class="text-center" style="font-family: 'Lemonada', cursive; font-weight: bold;">Select your
+                        coffee</h1>
                     <div class="card-body">
                         <h3 class="card-title">Roast</h3>
                         <p class="card-text">
@@ -65,21 +53,9 @@
             <hr>
             <!--Second Form (Make your own coffee)-->
             <div class="make-coffee">
-<!--                <form>-->
-<!--                    <h3>Roast</h3>-->
-<!--                    <label for="userCoffeeRoast"></label>-->
-<!--                    <select id="userCoffeeRoast">-->
-<!--                        <option>Light</option>-->
-<!--                        <option>Medium</option>-->
-<!--                        <option>Dark</option>-->
-<!--                    </select>-->
-<!--                    <h3>Name your coffee</h3>-->
-<!--                    <label for="newCoffee" class="form-label"></label>-->
-<!--                    <input type="text" id="newCoffee" placeholder="Enter New Coffee Name">-->
-<!--                    <input value="New Coffee" id="newCoffee-submit" type="button"/>-->
-<!--                </form>-->
-
                 <div class="card">
+                    <h1 class="text-center" style="font-family: 'Lemonada', cursive; font-weight: bold">Create your
+                        coffee</h1>
                     <div class="card-body">
                         <h3 class="card-title">Roast</h3>
                         <p class="card-text">
@@ -95,7 +71,7 @@
                             <label for="newCoffee" class="form-label"></label>
                             <input type="text" id="newCoffee" style="width: 75%;" placeholder="Enter New Coffee Name">
                         </p>
-                            <input value="Add New Coffee" style="width: 100%;" id="newCoffee-submit" type="button"/>
+                        <input value="Add New Coffee" style="width: 100%;" id="newCoffee-submit" type="button"/>
                     </div>
                 </div>
             </div>
