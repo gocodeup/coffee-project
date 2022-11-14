@@ -54,7 +54,11 @@ function updateTypeCoffees(){
     let filteredCoffees = [];
     let roastFilterCoffees =[];
     coffees.forEach(function (coffee){
-        if (coffee.roast === selectedRoast){
+        if (coffee.roast.toLowerCase() === selectedRoast){
+            console.log(coffees)
+            roastFilterCoffees.push(coffee);
+        }
+        if("all"=== selectedRoast){
             roastFilterCoffees.push(coffee);
         }
     })
