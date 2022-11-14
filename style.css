@@ -8,6 +8,14 @@ h1{
     font-family: 'Princess Sofia', cursive;
 
 }
+h2{
+    font-family: 'Raleway', sans-serif;
+    text-align: center;
+}
+
+h3{
+    font-family: 'Raleway', sans-serif;
+}
 
 hr{
     /*background-color: var(--main-bg-color);*/
@@ -67,6 +75,9 @@ td, th {
     border: saddlebrown 3px;
     border-radius: 10px;
     background-color: rgba(0,0,0,.5);
+    box-shadow: 10px 10px 5px #5D341F;
+
+;
 
 }
 #coffeeRoast{
@@ -99,29 +110,18 @@ body {
 
 }
 .forms2 {
-    border: peru outset 3px;
+    /*border: peru outset 3px;*/
+    border-radius: 10px;
     background-color: #FFDCBA ;
     background-color: rgba(0,0,0,.5);
     color: #FFDCBA;
+    box-shadow: 10px 10px 5px #5D341F;
+
 
 }
-
-/*background-image: url("images/Coffee-life.png");*/
-/*width: 80px;*/
-/*height: 80px;*/
-/*opacity: 0.5;*/
-/*float: left;*/
-/*border: 10px;*/
-/*border-radius: 150px;*/
-
-/*img {*/
-/*    width: 100px;*/
-/*    height: 100px;*/
-/*    justify-self: flex-start;*/
-/*    !*position: relative;*!*/
-/*    border-radius: 30px;*/
-
-
+.form1{
+    padding: 0.5em 0;
+}
 
 #header {
     display: flex;
@@ -135,8 +135,6 @@ body {
 
 
 nav {
-    /*background-image: url("images/Coffee-life.png");*/
-
     border: 10px;
     border-radius: 150px;
     display: flex;
