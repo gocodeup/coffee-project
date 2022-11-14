@@ -100,16 +100,16 @@ function updateCoffees(e) {
 // +++++++++++++++++++++++++++++++ADD COFFEE SECTION UNFINISHED++++++++++++++++++++++++++++++++
 
 //Hypothesis #1
-function addCoffeeItem(e) {
-    e.preventDefault();
-    let newCoffeeObj = {
-        id: coffees.length + 1,
-        name: addCoffeeName.value,
-        roast: roastAdd.value
-    };
-    coffees.push(newCoffeeObj);
-    coffeeDiv.innerHTML = renderCoffees(coffees);
-}
+// function addCoffeeItem(e) {
+//     e.preventDefault();
+//     let newCoffeeObj = {
+//         id: coffees.length + 1,
+//         name: addCoffeeName.value,
+//         roast: roastAdd.value
+//     };
+//     coffees.push(newCoffeeObj);
+//     coffeeDiv.innerHTML = renderCoffees(coffees);
+// }
 
 // Notes:
 //I originally used "renderCoffee" rather than "renderCoffees, so I kept getting undefined.  Problem resolved.
@@ -117,18 +117,20 @@ function addCoffeeItem(e) {
 
 
 //Hypothesis #2
-// function addCoffeeItem(e) {
-//     e.preventDefault();
-//     let id = coffees.length + 1;
-//     let name =  coffeeQuery.value;
-//     let roast =  roastAdd.value;
-//     coffees.push({id, name, roast}); //pushing the newCoffeeObj within the empty newCoffee Array
-//     console.log(coffees);
-//     coffeeDiv.innerHTML = renderCoffee(coffees);
-// }
+function addCoffeeItem(e) {
+    e.preventDefault();
+    let id = coffees.length + 1;
+    let name =  addCoffeeName.value;
+    let roast =  roastAdd.value;
+    coffees.push({id, name, roast}); //pushing the newCoffeeObj within the empty newCoffee Array
+    console.log(coffees);
+    coffeeDiv.innerHTML = renderCoffees(coffees);
+}
 
 //NOTES:
-//Hypothesis #2 does not work properly.  It does not recognize the name and roast variables.
+//It works as well!  However, the naming convention gave issue.
+//Replaced "renderCoffee" with "renderCoffees"
+//I REALLY hate the naming conventions!
 
 
 
