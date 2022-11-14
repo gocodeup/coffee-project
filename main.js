@@ -99,12 +99,25 @@ function updateCoffees(e) {
 
 // +++++++++++++++++++++++++++++++ADD COFFEE SECTION UNFINISHED++++++++++++++++++++++++++++++++
 
+//capitalizes each first letter of a word
+function titleCase(str) {
+    let splitStr = str.toLowerCase().split(' ');  // I want a lowercase str split @ spaces and converted into an array
+    for (let i = 0; i < splitStr.length; i++) {
+        splitStr[i] = splitStr[i].charAt(0).toUpperCase() + splitStr[i].substring(1); //
+    }
+
+    return splitStr.join(' ');
+}
+
+//Source:
+// https://stackoverflow.com/questions/32589197/how-can-i-capitalize-the-first-letter-of-each-word-in-a-string-using-javascript
+
 //Hypothesis #1
 // function addCoffeeItem(e) {
 //     e.preventDefault();
 //     let newCoffeeObj = {
 //         id: coffees.length + 1,
-//         name: addCoffeeName.value,
+//         name: titleCase(addCoffeeName.value),
 //         roast: roastAdd.value
 //     };
 //     coffees.push(newCoffeeObj);
@@ -116,11 +129,12 @@ function updateCoffees(e) {
 // I hate the naming conventions!!!!!!!!!!!
 
 
+
 //Hypothesis #2
 function addCoffeeItem(e) {
     e.preventDefault();
     let id = coffees.length + 1;
-    let name =  addCoffeeName.value;
+    let name =  titleCase(addCoffeeName.value);
     let roast =  roastAdd.value;
     coffees.push({id, name, roast}); //pushing the newCoffeeObj within the empty newCoffee Array
     console.log(coffees);
