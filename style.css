@@ -12,7 +12,7 @@ body {
     opacity: 100%;
 }
 .navbar {
-    max-height: 120px;
+    /*max-height: 120px;*/
     align-items: baseline;
     margin-bottom: 20px;
     backdrop-filter: blur(15px);
@@ -20,9 +20,12 @@ body {
     box-shadow: 0 1px 12px rgba(0, 0, 0, 0.25);
     border: 1px solid rgba(0, 0, 0, 0.3);
 }
-
 .search-bar{
     display: flex;
+}
+button {
+    background-color: #4ed284;
+    color: #fff;
 }
 #coffees {
     display: flex;
