@@ -4,9 +4,9 @@
     --secondary-color: #8b4513;
 
 }
-/*h1{*/
-/*    background-color: peru;*/
-/*}*/
+h1{
+    font-family: 'Princess Sofia', cursive;
+}
 
 hr{
     /*background-color: var(--main-bg-color);*/
@@ -23,6 +23,8 @@ section{
 table {
     /*border-collapse: collapse;*/
     margin: 15px 0;
+    font-family: 'Princess Sofia', cursive;
+
 }
 
 td, th {
