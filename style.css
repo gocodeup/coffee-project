@@ -18,7 +18,7 @@ h1 {
 h2 {
     margin: auto;
     font-size: 100px;
-    color: white;
+    color: black;
     font-family: 'Special Elite', cursive;
     display: flex;
     justify-content: center;
@@ -69,23 +69,51 @@ h3 {
     display: flex;
     justify-content: flex-start;
 }
-
-/*Mobile*/
-/*@media screen and (max-width: 320px) {*/
-/*    #coffees {*/
-/*        width: 50%;*/
-/*    }*/
-/*    .card {*/
-/*        display: flex;*/
-/*        align-content: center;*/
-/*        width: 100%;*/
-/*    }*/
-/*}*/
-
-/*Tablet*/
-/*@media screen and (min-width: 321px) and (max-width: 768px) {*/
-/*    #coffees {*/
-/*        width: 50%*/
-/*    }*/
-/*}*/
-
+/*Icons*/
+footer {
+    display: flex;
+    justify-content: space-around;
+    background-color: sandybrown;
+    margin: 0 20px;
+}
+.fa {
+    border-radius: 50%;
+    padding: 20px;
+    font-size: 30px;
+    width: 75px;
+    text-align: center;
+    text-decoration: none;
+    margin: 5px 2px;
+}
+.fa:hover {
+    opacity: 0.7;
+}
+.fa-facebook {
+    background: #3B5998;
+    color: white;
+}
+.fa-twitter {
+    background: #55ACEE;
+    color: white;
+}
+.fa-google {
+    background: #DD4B39;
+    color: white;
+}
+.fa-youtube {
+    background: #BB0000;
+    color: white;
+}
+.fa-instagram {
+    background: #125688;
+    color: white;
+}
+.fa-pinterest {
+    background: #CB2027;
+    color: white;
+}
+.fa-snapchat-ghost {
+    background: #FFFC00;
+    color: white;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
