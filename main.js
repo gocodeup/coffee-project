@@ -108,13 +108,12 @@ function addCoffeeItem(e) {
         roast: roastAdd.value
     };
     coffees.push(newCoffeeObj);
-    coffeeDiv.innerHTML = renderCoffee(coffees);
-    console.log(coffees)
+    coffeeDiv.innerHTML = renderCoffees(coffees);
 }
 
 // Notes:
-//It works but anything gets pushed into var= coffees.
-//It will push
+//I originally used "renderCoffee" rather than "renderCoffees, so I kept getting undefined.  Problem resolved.
+// I hate the naming conventions!!!!!!!!!!!
 
 
 //Hypothesis #2
