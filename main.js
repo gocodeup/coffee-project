@@ -1,4 +1,5 @@
-"use strict"
+"use strict";
+(function () {
 
 // Coffee Inventory
 // from http://www.ncausa.org/About-Coffee/Coffee-Roasts-Guide
@@ -101,3 +102,4 @@ search.addEventListener('keyup', updateCoffees);
 let roastSelection = document.querySelector('#roast-selection');
 roastSelection.addEventListener('change', updateCoffees);
 
+})();
