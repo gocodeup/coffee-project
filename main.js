@@ -73,16 +73,7 @@ function newCoffeeRoast() {
     coffees.push(newCoffees)
     return  tbody.innerHTML = renderCoffees(coffees);
 
-    // console.log(newCoffees)
-    //     for(selectedRoast )
-    // // for (let coffee of coffees) {
-    //     if (selectedRoast === 'all') {
-    //         filteredCoffees.push(coffee);
-    //
-    //     } else if (coffee.roast === selectedRoast) {
-    //         filteredCoffees.push(coffee);
-    //     }
-    // } return newCoffees;
+
 }
 
 
