@@ -89,7 +89,7 @@ function renderAllCoffeesList(coffees) {
 };
 
 
-// updating what is being displayed based on the roast selection
+// updating what is being displayed based on the roast selection & search
 function updateCoffees(e) {
     e.preventDefault(); // don't submit the form, we just want to update the data
     let search = coffeeSearchBar.value;
