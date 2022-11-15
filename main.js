@@ -1,5 +1,5 @@
-"use strict"
-
+"use strict";
+(function () {
 let coffees = [
     {id: 1, name: 'Light City', roast: 'light'},
     {id: 2, name: 'Half City', roast: 'light'},
@@ -147,3 +147,5 @@ selectedRoast.addEventListener('change', updateCoffees);
 coffeeSearchBar.addEventListener("keyup", updateCoffees);
 
 submitBtn.addEventListener("click", addCoffee);
+
+})();
