@@ -193,33 +193,30 @@ body
     }
 }
 
-@keyframes glitch2
-{
-    0%
-    {
+@keyframes glitch2 {
+    0% {
         background-position: 0 0;
         filter: hue-rotate(0deg);
     }
-    10%
-    {
+    10% {
         background-position: 15px 0;
     }
-    15%
-    {
+    15% {
         background-position: -15px 0;
     }
-    20%
-    {
+    20% {
         filter: hue-rotate(360deg);
     }
-    25%
-    {
+    25% {
         background-position: 0 0;
         filter: hue-rotate(0deg);
     }
-    100%
-    {
+    100% {
         background-position: 0 0;
         filter: hue-rotate(0deg);
     }
+}
+.copyright {
+    float: right;
+    color: peru;
 }
