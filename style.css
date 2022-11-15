@@ -1,13 +1,5 @@
-:root{
-    background-color: peru;
-    --main-bg-color: #cd853f;
-    --secondary-color: #8b4513;
 
-}
-h1{
-    font-family: 'Princess Sofia', cursive;
 
-}
 h2{
     font-family: 'Raleway', sans-serif;
     text-align: center;
@@ -16,15 +8,6 @@ h2{
 h3{
     font-family: 'Raleway', sans-serif;
 }
-
-
-
-
-.submit{
-    background-color: var(--main-bg-color);
-
-}
-
 
 .coffee-table {
     display: flex;
@@ -38,7 +21,6 @@ h3{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-
 
 }
 
