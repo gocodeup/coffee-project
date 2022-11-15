@@ -1,4 +1,5 @@
-"use strict"
+"use strict";
+(function() {
 
 function renderCoffee(coffee) {
     var html = '<div class="coffee col-5">';
@@ -119,3 +120,5 @@ submitButton.addEventListener('click', updateCoffees);
 coffeeGrab.addEventListener("keyup", updateCoffees);
 roastSelection.addEventListener('change', updateCoffees);
 newSubmit.addEventListener('click', (e) => newCoffeeRoast())
+
+}());
