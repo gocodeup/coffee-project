@@ -17,43 +17,20 @@ h3{
     font-family: 'Raleway', sans-serif;
 }
 
-hr{
-    /*background-color: var(--main-bg-color);*/
-}
-section{
-    /*background-color: var(--main-bg-color);*/
-}
+
+
 
 .submit{
     background-color: var(--main-bg-color);
 
 }
 
-table {
-    /*border-collapse: collapse;*/
-    margin: 15px 0;
-    font-family: 'Princess Sofia', cursive;
-    color: #FFDCBA;
-
-}
-
-td, th {
-    border: 1px solid black;
-    padding: 5px 10px;
-}
-/*section {*/
-/*    display: flex;*/
-/*    flex-direction: row-reverse;*/
-/*    justify-content: space-around;*/
-/*}*/
-
-
 
 .coffee-table {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    /*justify-content: space-around;*/
+
 
 }
 
@@ -61,7 +38,7 @@ td, th {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    /*justify-content: space-around;*/
+
 
 }
 
@@ -111,7 +88,6 @@ body {
 
 }
 .forms2 {
-    /*border: peru outset 3px;*/
     border-radius: 10px;
     background-color: #FFDCBA ;
     background-color: rgba(0,0,0,.5);
@@ -150,21 +126,6 @@ justify-content: center;
     height: 40vh;
 }
 
-/*svg{*/
-/*    background:url("images/Coffee-life.png") no-repeat center;*/
-/*    width:80vmin;*/
-/*    height:auto;*/
-/*    display:flex;*/
-/*}*/
-/*text{*/
-/*    font-size:10px;*/
-/*    transition:font-size .4s ease-out;*/
-/*    font-weight:900;*/
-/*}*/
-/*svg:hover text{*/
-/*    transition:font-size .4s ease-in;*/
-/*    font-size: 300px;*/
-/*}*/
 body
 {
     margin: 0;
