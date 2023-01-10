@@ -3,32 +3,71 @@
 <head>
     <meta charset="UTF-8">
     <title></title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Coffee!</h1>
+<div class="page-wrapper">
+    <header class="container">
+        <h1>Coffee!</h1>
+        <hr>
+    </header>
+    <div class="container">
+        <div class="row">
+            <div class="container col-6">
+                <table>
+                    <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>NAME</th>
+                        <th>ROAST</th>
+                    </tr>
+                    </thead>
+                    <tbody id="coffees"></tbody>
+                </table>
+            </div>
+            <div class="container col-6">
 
-    <form>
-        <label for="roast-selection"></label>
-        <select id="roast-selection">
-            <option>light</option>
-            <option>medium</option>
-            <option>dark</option>
-        </select>
-        <input id="submit" type="submit" />
-    </form>
+                <form>
+                    <label for="roast-selection" class="col-12">Roast</label>
+                    <select id="roast-selection" class="col-12">
+                        <option>light</option>
+                        <option>medium</option>
+                        <option>dark</option>
+                        <option>all</option>
+                    </select>
+                    <label for="coffee-name-selection" class="col-12"> Coffee Name</label>
+                    <textarea id="coffee-name-selection" class="col-12">
 
-    <table>
-        <thead>
-            <tr>
-                <th>ID</th>
-                <th>NAME</th>
-                <th>ROAST</th>
-            </tr>
-        </thead>
-        <tbody id="coffees"></tbody>
-    </table>
+                    </textarea>
+                    <input id="submit" type="submit" class="col-12 text-white text-bg-primary"/>
+                </form>
+                <hr>
+                <h1> Add a Coffee</h1>
+                <form>
+                    <label for="roast-selection" class="col-12">Roast</label>
+                    <select id="roast-selection" class="col-12">
+                        <option>light</option>
+                        <option>medium</option>
+                        <option>dark</option>
+                        <option>all</option>
+                    </select>
+                    <label for="coffee-name-selection" class="col-12"> Name</label>
+                    <textarea id="coffee-name-selection" class="col-12">
 
-    <script src="main.js"></script>
+                    </textarea>
+                    <input id="submit" type="submit" class="col-12 text-white text-bg-primary"/>
+                </form>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="main.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+        crossorigin="anonymous"></script>
 </body>
 </html>
