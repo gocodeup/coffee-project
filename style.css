@@ -19,3 +19,7 @@ td, th {
 .header{
     text-align: center;
 }
+
+.wrapper{
+    margin: 10px;
+}
