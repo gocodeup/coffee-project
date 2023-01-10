@@ -3,7 +3,25 @@ table {
     margin: 15px 0;
 }
 
+/*body {*/
+/*    background-image: url('./images/bg-wood.jpg');*/
+/*    background-repeat: no-repeat;*/
+/*    background-attachment: fixed;*/
+/*    background-size: cover;*/
+/*}*/
+
 td, th {
     border: 1px solid black;
     padding: 5px 10px;
+    /*color: whitesmoke;*/
 }
+
+/*.page-title {*/
+/*    display: flex;*/
+/*    flex-direction: row;*/
+/*    justify-content: center;*/
+/*    font-family: 'Italiana', sarif;*/
+/*    color: whitesmoke;*/
+/*    font-size: 3em;*/
+/*    margin: 1.5em;*/
+/*}*/
