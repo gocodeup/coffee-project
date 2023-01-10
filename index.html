@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -30,5 +30,107 @@
     </table>
 
     <script src="main.js"></script>
+</body>
+</html> -->
+
+<!doctype html>
+<html lang="en">
+<head>
+    <!--- Required meta tags --->
+
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- Bootstrap CSS ------>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+          integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+    <title>Coffee!</title>
+
+    </head>
+<body>
+<nav class="white-text navbar navbar-expand-lg sticky-top">
+
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse justify-content-between" id="navbarNav">
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <a href="#coffeeList" class="white-a nav-link">Coffee List</a>
+            </li>
+        </ul>
+        <a class="navbar-brand d-none d-lg-block caramel-text" href="#"><h1>Coffee Junkies</h1></a>
+        <ul class="navbar-nav">
+            <li class="nav-item active">
+                <a href="#newCoffee" class="white-a nav-link">Add Coffee<span class="sr-only">(current)</span></a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+<div class="container">
+
+<div class="white-text jumbotron jumbotron-fluid m-0">
+    <div class="container text-center">
+        <div class="pt-4">
+            <h1 class="display-3">Coffee </h1>
+            <h4 class="">Get it however you like it...</h4>
+        </div>
+
+        <a id="newCoffee"></a>
+    </div>
+</div>
+
+ <div class="d-flex justify-content-around" id="coffeeSearch">
+        <form class="w-50 p-4">
+            <div class="row p-1">
+                <div class="col">
+                    <label for="roast-selection" class="light-text">Filter by Roast</label>
+                    <select id="roast-selection" class="form-control">
+                        <option>all</option>
+                        <option>light</option>
+                        <option>medium</option>
+                        <option>dark</option>
+                    </select>
+                </div>
+            </div>
+            <div class="p-1">
+                <input id="submit" class="form-control myButton" type="submit"/>
+            </div>
+        </form>
+
+        <form class="w-50 p-4">
+            <div class="row p-1">
+                <div class="col-6">
+                    <label for="new-name" class="light-text">Add a New Coffee</label>
+                    <input type="text" class="form-control" id="new-name" placeholder="Coffee Name..">
+                </div>
+                <div class="col-6">
+                    <label for="new-roast" class="light-text">Roast Type</label>
+                    <select id="new-roast" class="form-control">
+                        <option>light</option>
+                        <option>medium</option>
+                        <option>dark</option>
+                    </select>
+                </div>
+
+            </div>
+            <div class="p-1">
+                <button type="submit" class="form-control myButton" id="submitNew">Submit</button>
+            </div>
+        </form>
+
+    </div>
+
+
+<div id="coffeeList" class="px-4">
+    <div class="card-columns" id="coffees">
+    </div>
+</div>
+
+</div>
 </body>
 </html>
