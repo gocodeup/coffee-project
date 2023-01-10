@@ -1,6 +1,6 @@
 "use strict"
 
-function renderCoffee(coffee) {
+function renderCoffeeDiv(coffee) {
     let html = '<div class="coffee">';
     html += '<h1 class="d-inline-block px-2">' + coffee.name + '</h1>';
     html += '<p class="text-secondary d-inline-block">' + coffee.roast + '</p>';
@@ -9,10 +9,10 @@ function renderCoffee(coffee) {
     return html;
 }
 
-function renderCoffees(coffees) {
+function renderCoffees(arr) {
     let html = '';
-    for(let i = 0; i < coffees.length; i++) {
-        html += renderCoffee(coffees[i]);
+    for(let i = 0; i < arr.length; i++) {
+        html += renderCoffeeDiv(arr[i]);
     }
     return html;
 }
@@ -20,7 +20,7 @@ function renderCoffees(coffees) {
 function searchCoffees(string) {
     let arr = [];
     for (const coffee of coffees) {
-        if (coffee.name.includes(string) || coffee.roast.includes(string)) {
+        if (coffee.name.toLowerCase().includes(string.toLowerCase()) || coffee.roast.includes(string.toLowerCase())) {
             arr.push(coffee);
         }
     }
@@ -58,9 +58,20 @@ const coffees = [
 ];
 
 const tbody = document.querySelector('#coffees');
-const submitButton = document.querySelector('#submit');
+const submitButton = document.querySelector('#submit-search');
+const coffeeSearch = document.querySelector("#coffee-search");
 const roastSelection = document.querySelector('#roast-selection');
 
 tbody.innerHTML = renderCoffees(coffees);
 
-submitButton.addEventListener('click', updateCoffees);
+submitButton.addEventListener('click', ()=> {
+    tbody.innerHTML = renderCoffees(searchCoffees(coffeeSearch.value));
+});
+
+coffeeSearch.addEventListener("keydown", () => {
+    tbody.innerHTML = renderCoffees(searchCoffees(coffeeSearch.value));
+})
+
+roastSelection.addEventListener('click', (event) => {
+
+})
