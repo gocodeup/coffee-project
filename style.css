@@ -4,7 +4,7 @@
 }
 body{
     background-image:url(./images/background-1.jpg);
-    background-size:contain;
+    background-size: cover;
 }
 table {
     border-collapse: collapse;
