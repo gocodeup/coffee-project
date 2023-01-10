@@ -13,14 +13,15 @@
 <form class="">
 	<label for="roast-selection" class="form-label">Roast</label>
 	<select id="roast-selection" class="form-control">
+		<option>all</option>
 		<option>light</option>
 		<option>medium</option>
 		<option>dark</option>
 	</select>
 	<label for="coffee-search" class="form-label">Coffee Name</label>
 	<input id="coffee-search" type="text" class="form-control" placeholder="search">
+	<button id="submit-search" type="button" class="btn btn-primary my-2">Submit</button>
 </form>
-	<button id="submit-search" type="submit" class="btn btn-primary my-2">Submit</button>
 <div id="coffees"></div>
 <script src="main.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
