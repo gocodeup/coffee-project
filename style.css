@@ -13,10 +13,12 @@
 .coffee {
     display: flex;
     align-items: center;
+    justify-content: end;
 }
 
 .coffee p {
-    color: red;
+    color: grey;
+
 }
 
 
