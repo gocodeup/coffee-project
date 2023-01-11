@@ -1,27 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Abel&family=Anton&family=Lato:wght@300&family=Montserrat:wght@400;600&family=Roboto&family=Source+Code+Pro&family=Work+Sans&display=swap');
 * {
-    box-sizing: border-box;
-    margin: 0;
     font-family: 'Montserrat', sans-serif;
 ;
-}
-body {
-    margin: 0 1em;
-}
-.container-fluid {
-    display: flex;
-    padding: 0;
 }
 h1, h3 {
     padding-top: .5em;
     display: flex;
     justify-content: center;
-}
-#coffees {
-    width: 50%;
-}
-form {
-    width: 50%;
 }
 select, input {
     width: 100%;
@@ -29,19 +14,10 @@ select, input {
 h1, h3, label {
     font-weight: bold;
 }
-.coffee {
-    display: flex;
-    align-self: flex-start;
-}
-.coffee > div {
-    align-self: center;
-    padding-bottom: .5em;
-}
 .coffeeName {
     font-size: 1.5em;
     font-weight: bolder;
 }
 .light, .medium, .dark {
-    margin-left: 1em;
     color: gray;
 }
