@@ -39,38 +39,46 @@ function updateCoffees(e) {
 function updateCoffeesNames(e) {
     e.preventDefault(); // don't submit the form, we just want to update the data
     var selectedCoffees = [];
+
     coffees.forEach(function(coffee) {
-        if (coffee.name.startsWith(coffeeInput.value) && coffee.roast === roastSelection.value) {
+        if (coffee.name.includes(coffeeInput.value) && coffee.roast === roastSelection.value) {
             selectedCoffees.push(coffee);
         }
+        // else if(coffee.name.includes(coffeeInput.value) && coffee.roast !== roastSelection.value) {
+        //     selectedCoffees.push("");
+        // }
     });
 
-    tbody.innerHTML = renderCoffees(selectedCoffees);
+        // if(coffee.name.includes(coffeeInput.value) && coffee.roastAll === roastSelectionAll.value) {
+        //     selectedCoffees.push(coffee);
+        // }
+        tbody.innerHTML = renderCoffees(selectedCoffees)
 
 }
 
 // from http://www.ncausa.org/About-Coffee/Coffee-Roasts-Guide
 let coffees = [
-    {id: 1, name: 'Light City', roast: 'light'},
-    {id: 2, name: 'Half City', roast: 'light'},
-    {id: 3, name: 'Cinnamon', roast: 'light'},
-    {id: 4, name: 'City', roast: 'medium'},
-    {id: 5, name: 'American', roast: 'medium'},
-    {id: 6, name: 'Breakfast', roast: 'medium'},
-    {id: 7, name: 'High', roast: 'dark'},
-    {id: 8, name: 'Continental', roast: 'dark'},
-    {id: 9, name: 'New Orleans', roast: 'dark'},
-    {id: 10, name: 'European', roast: 'dark'},
-    {id: 11, name: 'Espresso', roast: 'dark'},
-    {id: 12, name: 'Viennese', roast: 'dark'},
-    {id: 13, name: 'Italian', roast: 'dark'},
-    {id: 14, name: 'French', roast: 'dark'},
+    {id: 1, name: 'Light City', roast: 'light', roastAll: 'all'},
+    {id: 2, name: 'Half City', roast: 'light', roastAll: 'all'},
+    {id: 3, name: 'Cinnamon', roast: 'light', roastAll: 'all'},
+    {id: 4, name: 'City', roast: 'medium', roastAll: 'all'},
+    {id: 5, name: 'American', roast: 'medium', roastAll: 'all'},
+    {id: 6, name: 'Breakfast', roast: 'medium', roastAll: 'all'},
+    {id: 7, name: 'High', roast: 'dark', roastAll: 'all'},
+    {id: 8, name: 'Continental', roast: 'dark', roastAll: 'all'},
+    {id: 9, name: 'New Orleans', roast: 'dark', roastAll: 'all'},
+    {id: 10, name: 'European', roast: 'dark', roastAll: 'all'},
+    {id: 11, name: 'Espresso', roast: 'dark', roastAll: 'all'},
+    {id: 12, name: 'Viennese', roast: 'dark', roastAll: 'all'},
+    {id: 13, name: 'Italian', roast: 'dark', roastAll: 'all'},
+    {id: 14, name: 'French', roast: 'dark', roastAll: 'all'},
 ];
 
 let tbody = document.querySelector('#coffees');
 let submitButton = document.querySelector('#submit');
 let roastSelection = document.querySelector('#roast-selection');
 let roastSelection2 = document.querySelector('#roast-selection2');
+let roastSelectionAll = document.querySelector('#roast-selection-all');
 let nameInput = document.querySelector('#name-input')
 let coffeeInput = document.querySelector('#coffee-name-input');
 
