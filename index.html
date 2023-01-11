@@ -24,7 +24,7 @@
       <div
         class="header text-center shadow p-2 sticky-top bg-light bg-gradient"
       >
-        <h1>Coffee!</h1>
+        <h1 class="fw-bold">Coffee!</h1>
       </div>
       <!-- page header ends here -->
 
@@ -60,11 +60,27 @@
               <input class="form-control mb-3 py-0 px-2 border-dark rounded-1" type="text" placeholder="coffee name" aria-label="form-control-sm example">
               <input class="btn btn-primary col-12 rounded-1 fs-6 p-0" id="submit" type="submit" />
             </form>
+            <hr>
             <!-- section searching for coffee ends here -->
-
+            <div  class="add-coffee text-center fw-bold fs-4" >Add a Coffee</div>
             <!-- section adding coffee starts here -->
 
-
+            <form class="col-12">
+                <div class="mb-2">
+                  <label for="exampleRoast" class="form-label">Roast</label>
+                  <!-- <input class="col-12 rounded-1" class="p-0" type="text" class="form-control" id="exampleRoast" aria-describedby="Roast"> -->
+                  <select class="col-12 rounded-1" id="roast-selection">
+                    <option>light</option>
+                    <option>medium</option>
+                    <option>dark</option>
+                  </select>
+                </div>
+                <div class="mb-3">
+                  <label for="addName" class="form-label">Name</label>
+                  <input class="col-12 border-dark border rounded-1 p-0 px-2" class="p-0" type="text" class="form-control" id="exampleAddName">
+                </div>
+                <button class="btn btn-primary p-0 col-12 rounded-1" type="submit" class="btn btn-primary">Submit</button>
+              </form>
             <!-- section adding coffee ends here -->
           </div>
           <!-- page's right column ends here -->
