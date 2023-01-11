@@ -68,17 +68,14 @@ let coffees = [
     {id: 14, name: 'French', roast: 'dark'},
 ];
 let content = document.querySelector('#coffees');
-let submitButton = document.querySelector('#submit1');
 let submitButton2 = document.querySelector('#submit2');
 let roastSelection = document.querySelector('#roast-selection');
 let addRoastSelection = document.querySelector('#add-roast-selection');
 let addNewCoffee = document.querySelector('#enterNewCoffee');
-let searchCoffeesBar = document.getElementById("#enterCoffee");
+let searchCoffeesBar = document.querySelector("#enterCoffee");
 
 content.innerHTML = renderCoffees(coffees);
 
 roastSelection.addEventListener('click', updateCoffees);
 submitButton2.addEventListener('click', addCoffees);
-submitButton.addEventListener('click', searchCoffees);
-
-// change
+searchCoffeesBar.addEventListener('keyup', searchCoffees);
