@@ -36,10 +36,10 @@
         <div class="row"> <!-- START row for content -->
 
             <div class="search-results d-flex justify-content-center col-6"> <!-- START search results column (left) -->
-                <table class="fs-5" style="font-family: 'Cormorant SC', serif;">
+                <table class="table table-hover table-bordered fs-5" style="font-family: 'Cormorant SC', serif;">
                     <thead>
                     <tr>
-                        <th>ID</th>
+                        <th hidden="hidden">ID</th>
                         <th>NAME</th>
                         <th>ROAST</th>
                     </tr>
@@ -52,19 +52,50 @@
                 <div class="coffee-form">
                     <div class="row">
                         <form>
-                            <label for="roast-selection"></label>
-                            <select id="roast-selection" class="fs-5" style="font-family: 'Cormorant SC', serif;">
-                                <option>all</option>
-                                <option>light</option>
-                                <option>medium</option>
-                                <option>dark</option>
-                            </select>
+                            <div class="row">
+                                <label for="roast-selection">Roast</label>
+                                <select id="roast-selection" class="fs-5" style="font-family: 'Cormorant SC', serif;">
+                                    <option>all</option>
+                                    <option>light</option>
+                                    <option>medium</option>
+                                    <option>dark</option>
+                                </select>
+                            </div>
+                            <div class="row">
+                                <label for="coffee-selection">Coffee Name</label>
+                            <!-- Edit input to update displayed coffees as user types -->
+                                <input id="coffee-selection" type="text">
+                            </div>
                             <div class="row">
                                 <input  id="submit" class="fs-5" style="font-family: 'Cormorant SC', serif;" type="submit" />
                             </div>
                         </form>
                     </div>
+                    <div class="row d-flex justify-content-center col-6">
+                        Add a Coffee
+                    </div>
+                    <div class="new-coffee-form">
+                        <div class="row">
+                            <form>
+                                <div class="row">
+                                    <label for="new-roast">Roast</label>
+                                    <select id="new-roast" class="fs-5" style="font-family: 'Cormorant SC', serif;">
+                                        <option>light</option>
+                                        <option>medium</option>
+                                        <option>dark</option>
+                                    </select>
+                                </div>
+                                <div class="row">
+                                    <label for="new-coffee">Name</label>
+                                    <input id="new-coffee" type="text">
+                                </div>
+                                <div class="row">
+                                    <input  id="submit-new-coffee" class="fs-5" style="font-family: 'Cormorant SC', serif;" type="submit" />
+                                </div>
+                            </form>
+                        </div>
                 </div>
+
             </div> <!-- END search form column (right) -->
 
         </div><!-- START row for content -->
