@@ -1,7 +1,6 @@
 "use strict"
 function renderCoffee(coffee) {
     let html = '<div class="coffee col-12" id="' + coffee.id + '">';
-    // html += '<td>' + coffee.id + '</td>';
     html += '<div class="row">';
     // let coffeeItem =
     html += '<div class="coffeeName col-6" id="' + coffee.name + '">' + coffee.name + '</div>';
@@ -31,6 +30,8 @@ function updateCoffees(e) {
         }
     });
     content.innerHTML = renderCoffees(filteredCoffees);
+    let coffeesVis = document.getElementById("coffees");
+    coffeesVis.classList.remove("opacity-0");
 }
 function addCoffees(value) {
     let filteredCoffees = coffees;
@@ -68,7 +69,7 @@ let coffees = [
     {id: 14, name: 'French', roast: 'dark'},
 ];
 let content = document.querySelector('#coffees');
-let submitButton2 = document.querySelector('#submit2');
+let submitButton = document.querySelector('#submit');
 let roastSelection = document.querySelector('#roast-selection');
 let addRoastSelection = document.querySelector('#add-roast-selection');
 let addNewCoffee = document.querySelector('#enterNewCoffee');
@@ -76,5 +77,5 @@ let addNewCoffee = document.querySelector('#enterNewCoffee');
 
 content.innerHTML = renderCoffees(coffees);
 roastSelection.addEventListener('change', updateCoffees);
-submitButton2.addEventListener('click', addCoffees);
+submitButton.addEventListener('click', addCoffees);
 // searchCoffeesBar.addEventListener('keyup', searchCoffees);
