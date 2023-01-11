@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Abel&family=Anton&family=Lato:wght@300&family=Montserrat&family=Roboto&family=Source+Code+Pro&family=Work+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Abel&family=Anton&family=Lato:wght@300&family=Montserrat:wght@400;600&family=Roboto&family=Source+Code+Pro&family=Work+Sans&display=swap');
 * {
     box-sizing: border-box;
     margin: 0;
@@ -27,17 +27,18 @@ select, input {
     width: 100%;
 }
 label {
-    font-weight: bolder;
+    font-weight: bold;
 }
 .coffee {
     display: flex;
+    align-self: flex-start;
 }
 .coffee > div {
-    padding: .5em 0;
     align-self: center;
+    padding-bottom: .5em;
 }
 .coffeeName {
-    font-size: 3em;
+    font-size: 1.5em;
     font-weight: bolder;
 }
 .light, .medium, .dark {
