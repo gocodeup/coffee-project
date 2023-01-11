@@ -1,5 +1,39 @@
 /*font-family: 'League Gothic', sans-serif;*/
 /*font-family: 'Rubik Dirt', cursive;*/
 
+body {
+    background-color: #40494f;
 
+}
 
+.company {
+    font-family: 'Rubik Dirt', cursive;
+    padding: 10px;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px #5b5858;
+    /*text-decoration: underline;*/
+}
+
+.images {
+    height: 125px;
+    width: 125px;
+    border-radius: 8%;
+    margin-bottom: 20px;
+}
+
+/*.image1 {*/
+/*    display: flex;*/
+/*    justify-content: start;*/
+/*}*/
+
+/*.image2 {*/
+/*    display: flex;*/
+/*    justify-content: end;*/
+/*}*/
+
+.container-header {
+    display: flex;
+    /*justify-content: space-between;*/
+    /* margin-right: 0;*/
+    /*margin-left: 0;*/
+}

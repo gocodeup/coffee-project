@@ -1,19 +1,22 @@
 "use strict"
 
 function renderCoffee(coffee) {
-    var html = '<div class="container d-flex justify-content-center">';
+    var html = '<div class="coffee card shadow-sm p-1 bg-white rounded>';
     // html += '<div>' + coffee.id + '</div>';
-    html += '<div class="card coffee-name d-flex" style="width: 18rem;">' + '<h2>' + coffee.name + '</h2>' + '</div>';
-    html += '<div class="card roast-type d-flex" style="width: 18rem;">' + '<p>' + coffee.roast + '</p>' + '</div>';
+    html += '<div class="card-body">' + '<h2 class="card-title">' + coffee.name + '</h2>';
+    html += '<h5 class="card-text">' + coffee.roast + ' roast' + '</h5>';
+    html += '</div>';
     html += '</div>';
 
     return html;
 }
 
+
 function renderCoffees(coffees) {
     var html = '';
-    for (var i = coffees.length - 1; i >= 0; i--) {
-        html += renderCoffee(coffees.reverse()[i]);
+    for (var i = 0; i < coffees.length; i++) {
+        console.log(coffees[i])
+        html += renderCoffee(coffees[i]);
     }
     return html;
 }
