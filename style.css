@@ -6,12 +6,8 @@ table {
     margin: 15px 0;
 }
 
-td, th {
-    border: 0px solid white;
-    padding: 5px 10px;
-}
 .submit-btn{
-    background-color: rgb(60,136,203);
+    background-color: #3C89CB;
     border: 2px solid dimgrey;
     border-radius: 2%;
 }
