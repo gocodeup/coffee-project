@@ -17,26 +17,26 @@ var coffees = [ //used to store all the coffee into a variable
     {id: 13, name: 'Italian', roast: 'dark'},
     {id: 14, name: 'French', roast: 'dark'},
 ];
-
+//used in the first form
 var tbody = document.querySelector('#coffees'),
-    submitButton = document.querySelector('#submit'),
+    submitButton1 = document.querySelector('#submit'),
     roastSelection = document.querySelector('#roast-selection');
 //custom var
-var coffeeName = document.querySelector('#name-selection')
+var coffeeName = document.querySelector('#name-selection'),
+    coffeeAddition = document.querySelector('#coffee-addition'),
+    submitButton2 = document.querySelector('#submit1');
 
 tbody.innerHTML = renderCoffees(coffees);
-
-submitButton.addEventListener('click', updateCoffees);//first button
-
+submitButton1.addEventListener('click', updateCoffees);//first button
+submitButton2.addEventListener('click', console.log(coffeeAddition.innerHTML))
 //Functions here -------------
-
-function renderCoffee(coffee) { //this is used to turn the coffee into lines of HTML
+function renderCoffee(coffee) {
     var html = '<div class="coffee">';
     html += '<h2>' + coffee.name + '</h2>';
     html += '<p>' + coffee.roast + '</p>' + '</div>';
 
     return html;
-}
+}//this is used to turn the coffee into lines of HTML
 
 function renderCoffees(coffees) {
     var html = '';
@@ -64,4 +64,4 @@ function updateCoffees(e) {
     }
     tbody.innerHTML = renderCoffees(filteredCoffees);
     // console.log(coffeeName.value) //used for testing
-}
+} //this filters the list to show only what is desired.
