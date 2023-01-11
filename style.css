@@ -1,3 +1,17 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+h1 {
+    padding-top: .5em;
+    display: flex;
+    justify-content: center;
+}
+#coffees {
+    width: 50vw;
+}
+
+
 .coffee {
     display: flex;
 }
