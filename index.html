@@ -13,11 +13,11 @@
 <div class="page-wrapper mt-3">
 
     <!--***** header *****-->
-    <header class="container d-flex justify-content-center">
+    <header class="container">
         <div class="row">
-            <h1>Coffee!</h1>
-            <hr class="col-12">
+            <h1 class="container d-flex justify-content-center">Coffee!</h1>
         </div>
+            <hr>
     </header>
     <!--***** end header *****-->
 
@@ -28,18 +28,14 @@
             <!--***** container 1 *****-->
             <div class="container col-6">
                 <div class="row">
-                    <div class="col">
-                        <table>
-                            <thead>
-                            <tr>
-                                <th>ID</th>
-                                <th>NAME</th>
-                                <th>ROAST</th>
-                            </tr>
-                            </thead>
-                            <tbody id="coffees"></tbody>
-                        </table>
-                    </div>
+                    <table>
+                        <div class="thead">
+                            <div class="tr d-flex">
+                                <tbody id="coffees"></tbody>
+                            </div>
+
+                        </div>
+                    </table>
                 </div>
             </div>
             <!--***** end container 1-->
@@ -50,12 +46,13 @@
                     <form>
                         <label class="col-12" for="roast-selection">Roast</label>
                         <select class="col-12" id="roast-selection">
+                            <option>all</option>
                             <option>light</option>
                             <option>medium</option>
                             <option>dark</option>
                         </select>
-                        <label for="coffee-name-input">Coffee Name</label>
-                        <textarea id="coffee-name-input"></textarea>
+                        <label for="coffee-name-input" class="col-12">Coffee Name</label>
+                        <input id="coffee-name-input" type="text" class="col-12"/>
                         <input class="col-12 text-bg-primary text-white" id="submit" type="submit"/>
                     </form>
                     <hr class="col-12 mt-5">
@@ -68,7 +65,7 @@
                             <option>dark</option>
                         </select>
                         <label for="name-input">Name</label>
-                        <textarea id="name-input"></textarea>
+                        <input id="name-input" type="text" class="col-12"/>
                         <input class="col-12 text-bg-primary text-white" id="submit" type="submit"/>
                     </form>
                 </div>
