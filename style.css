@@ -1,3 +1,6 @@
+.page-wrapper{
+    min-height: 100vh;
+}
 table {
     border-collapse: collapse;
     margin: 15px 0;
@@ -6,4 +9,9 @@ table {
 td, th {
     border: 1px solid black;
     padding: 5px 10px;
+}
+.submit-btn{
+    background-color: rgb(60,136,203);
+    border: 2px solid dimgrey;
+    border-radius: 2%;
 }
