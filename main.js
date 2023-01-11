@@ -75,3 +75,4 @@ function updateCoffees(e) {
     }
     tbody.innerHTML = renderCoffees(filteredCoffees);
 }//this filters the list to show only what is desired.
+
