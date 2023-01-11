@@ -12,7 +12,7 @@ body {
     display: flex;
     padding: 0;
 }
-h1 {
+h1, h3 {
     padding-top: .5em;
     display: flex;
     justify-content: center;
@@ -26,7 +26,7 @@ form {
 select, input {
     width: 100%;
 }
-label {
+h1, h3, label {
     font-weight: bold;
 }
 .coffee {
