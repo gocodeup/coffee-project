@@ -3,8 +3,8 @@
     margin: 0;
 }
 body{
-    background-image:url(./images/background-1.jpg);
-    background-size: cover;
+    /* background-image:url(./images/background-1.jpg); */
+    /* background-size: cover; */
 }
 table {
     border-collapse: collapse;
@@ -16,10 +16,3 @@ td, th {
     padding: 5px 10px;
 }
 
-.header{
-    text-align: center;
-}
-
-.wrapper{
-    margin: 10px;
-}
