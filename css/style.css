@@ -5,15 +5,33 @@ body{
     height: 100%;
 
 }
+p{
+    font-size:2em;
+    opacity: 20%;
+    margin-left:10px;
+}
 
 table {
     border-collapse: collapse;
     margin: 15px 0;
+    height: 50%;
+}
+#coffees{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width:100%;
+   
+    
+    
 }
 
+
 td, th {
-    border: 1px solid black;
+    /* border: 1px solid black; */
     padding: 5px 10px;
+    display: flex;
+    flex-direction: space-between;
 }
 
 .container-form{
@@ -26,3 +44,4 @@ form{
     display: flex;
     flex-direction: column;
 }
+
