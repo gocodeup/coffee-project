@@ -45,11 +45,11 @@ function addCoffees(value) {
 function searchCoffees(value) {
     let filteredCoffees = [];
     for (let i = 0; i < coffees.length; i++) {
-        if(coffees[i].name.toLowerCase().indexOf(value.toLowerCase()) > -1) {
+        if(coffees[i].name.toLowerCase().indexOf(value.toLowerCase()) >  -1) {
             filteredCoffees.push(coffees[i]);
         }
     }
-    content.innerHTML = renderCoffees(searchCoffeesBar);
+    content.innerHTML = renderCoffees(filteredCoffees);
 }
 let coffees = [
     {id: 1, name: 'Light City', roast: 'light'},
@@ -72,10 +72,9 @@ let submitButton2 = document.querySelector('#submit2');
 let roastSelection = document.querySelector('#roast-selection');
 let addRoastSelection = document.querySelector('#add-roast-selection');
 let addNewCoffee = document.querySelector('#enterNewCoffee');
-let searchCoffeesBar = document.querySelector("#enterCoffee");
+// let searchCoffeesBar = document.querySelector("#enterCoffee");
 
 content.innerHTML = renderCoffees(coffees);
-
 roastSelection.addEventListener('click', updateCoffees);
 submitButton2.addEventListener('click', addCoffees);
-searchCoffeesBar.addEventListener('keyup', searchCoffees);
+// searchCoffeesBar.addEventListener('keyup', searchCoffees);
