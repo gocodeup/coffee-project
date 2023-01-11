@@ -117,4 +117,4 @@ tbody.innerHTML = renderCoffees(coffees);
 // Event listeners
 submitButton.addEventListener('click', updateCoffees);
 roastOnSelection.addEventListener('change', updateCoffees);
-coffeeSearch.addEventListener('keyup', updateCoffeesOnType);
+coffeeSearch.addEventListener('keyup', updateCoffeesOnType);a
