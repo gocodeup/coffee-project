@@ -26,8 +26,6 @@
                 <div class="table">
                     <div class="thead">
                         <div class="tr d-flex">
-<!--                            <div class='th'>NAME</div>-->
-<!--                            <div class='th'>ROAST</div>-->
                         </div>
                     </div>
                     <div id="coffees" class="d-flex flex-wrap"></div>
@@ -53,11 +51,13 @@
 
                             <label class="w-100">
                                 <span class="fs-5 fw-bold">Coffee Name</span>
-                                <input type="text" id="search-input" placeholder="Search" class="w-100 p-2 mb-4">
+                                <input type="text" id="search-input" placeholder="Search" onKeyUp="showResults(this.value)" class="w-100 p-2 mb-4">
                             </label>
 
                             <input id="submit" type="submit"
                                    class="submit-button w-100 p-2 mb-2 bg-primary text-white"/>
+
+                            <div id="result"></div>
 
                         </form>
                     </div>
