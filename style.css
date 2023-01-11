@@ -9,19 +9,6 @@
 /*    animation: gradient-animation 5s ease-in-out infinite;*/
 /*}*/
 
-/*@keyframes gradient-animation {*/
-/*    0% {*/
-/*        background-position: 0% 50%;*/
-/*    }*/
-/*    50% {*/
-/*        background-position: 100% 50%;*/
-/*    }*/
-/*    100% {*/
-/*        background-position: 0% 50%;*/
-/*    }*/
-/*}*/
-
-
 hr {
     width: 90%;
     opacity:60%;
@@ -69,14 +56,15 @@ input[type="button"]  {
  #coffees {
      display: flex;
      flex-direction: column;
-     height: 50vh;
+     height: 80vh;
      flex-wrap: wrap;
+     margin: 20px;
  }
  .coffee {
      display: inline-flex;
  }
 p {
-     margin-top:27px;
+     margin-top:13px;
      margin-left: 10px;
      color: darkgray;
 }
