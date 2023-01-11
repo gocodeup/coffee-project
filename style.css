@@ -8,8 +8,9 @@
 body {
     margin: 0 1em;
 }
-.container {
+.container-fluid {
     display: flex;
+    padding: 0;
 }
 h1 {
     padding-top: .5em;
@@ -22,20 +23,24 @@ h1 {
 form {
     width: 50%;
 }
-select {
+select, input {
     width: 100%;
+}
+label {
+    font-weight: bolder;
 }
 .coffee {
     display: flex;
 }
 .coffee > div {
-    padding: .5em;
+    padding: .5em 0;
     align-self: center;
 }
 .coffeeName {
-    font-size: 1.5em;
+    font-size: 3em;
     font-weight: bolder;
 }
 .light, .medium, .dark {
+    margin-left: 1em;
     color: gray;
 }
