@@ -6,29 +6,45 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Coffee!</h1>
+<h1>Coffee!</h1>
 
-    <form>
-        <label for="roast-selection"></label>
-        <select id="roast-selection">
-            <option>light</option>
-            <option>medium</option>
-            <option>dark</option>
-        </select>
-        <input id="submit" type="submit" />
-    </form>
+<form>
+    <label for="roast-selection"></label>
+    <h5>Roast</h5>
+    <select id="roast-selection">
+        <option>light</option>
+        <option>medium</option>
+        <option>dark</option>
+    </select>
+    <h5>Coffee Name</h5>
+    <input id="search" type="text" class="input" placeholder="search..."/>
+    <input id="submit" type="submit" />
+</form>
+<h2>Add a Coffee</h2>
+<form>
+    <label for="roast-selection"></label>
+    <h5>Roast</h5>
+    <select id="roast-selection">
+        <option>light</option>
+        <option>medium</option>
+        <option>dark</option>
+    </select>
+    <h5>Name</h5>
+    <input id="search" type="text" class="input" placeholder="search..."/>
+    <input id="submit" type="submit" />
+</form>
 
-    <table>
-        <thead>
-            <tr>
-                <th>ID</th>
-                <th>NAME</th>
-                <th>ROAST</th>
-            </tr>
-        </thead>
-        <tbody id="coffees"></tbody>
-    </table>
+<table>
+    <thead>
+    <tr>
+        <th>ID</th>
+        <th>NAME</th>
+        <th>ROAST</th>
+    </tr>
+    </thead>
+    <tbody id="coffees"></tbody>
+</table>
 
-    <script src="main.js"></script>
+<script src="main.js"></script>
 </body>
 </html>
