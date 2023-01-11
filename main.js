@@ -39,10 +39,10 @@ function createCoffee(){
         idCoffee = coffees.length + 1,
         // ||above outlines  the established parameters|| for the ||new coffee object below||
         newCoffee = {
-        id: idCoffee,
-        name: newName,
-        roast: newRoast
-    };
+            id: idCoffee,
+            name: newName,
+            roast: newRoast
+        };
     coffees.push(newCoffee);
     tbody.innerHTML = renderCoffees(coffees);
 }
@@ -75,3 +75,4 @@ function updateCoffees(e) {
     }
     tbody.innerHTML = renderCoffees(filteredCoffees);
 }//this filters the list to show only what is desired.
+

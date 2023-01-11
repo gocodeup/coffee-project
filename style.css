@@ -1,13 +1,84 @@
-table {
-    border-collapse: collapse;
-    margin: 15px 0;
+.title {
+    display:grid;
+    place-content: center;
 }
 
-td, th {
-    border: 1px solid black;
-    padding: 5px 10px;
+/*body {*/
+/*    background-image: linear-gradient(to right, #1e5799 0%, #2989d8 50%, #207cca 51%, #7db9e8 100%);*/
+/*    background-size: cover;*/
+/*    animation: gradient-animation 5s ease-in-out infinite;*/
+/*}*/
+
+/*@keyframes gradient-animation {*/
+/*    0% {*/
+/*        background-position: 0% 50%;*/
+/*    }*/
+/*    50% {*/
+/*        background-position: 100% 50%;*/
+/*    }*/
+/*    100% {*/
+/*        background-position: 0% 50%;*/
+/*    }*/
+/*}*/
+
+
+hr {
+    width: 90%;
+    opacity:60%;
 }
-.coffee {
+
+.divContainer {
+    display: grid;
+    grid-template-areas:
+    "left right"
+}
+#left-div {
+    grid-area: left;
+
+}
+
+/*div containing forms*/
+#right-div {
+    grid-area: right;
+}
+.column {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
+    padding: 0 100px 0 10px;
 }
+label {
+    margin: 5px;
+    font-weight: bold;
+}
+input[type="button"]  {
+    color: white;
+    background-color: rgb(59,137,201);
+    margin-top: 10px;
+    border: none;
+    height: 25px;
+    border-radius: 3px;
+}
+
+.line {
+    background-color: darkgray;
+    width: 90%;
+    height: 1px;
+    margin-top:1rem;
+}
+
+ #coffees {
+     display: flex;
+     flex-direction: column;
+     height: 50vh;
+     flex-wrap: wrap;
+ }
+ .coffee {
+     display: inline-flex;
+ }
+p {
+     margin-top:27px;
+     margin-left: 10px;
+     color: darkgray;
+}
+
+
