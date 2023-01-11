@@ -59,14 +59,38 @@ function findCoffee(e){
     e.preventDefault();
     let coffeeNew = [];
     let coffeeInput = coffeeSearch.value;
-
-    coffees.forEach(function(coffee){
-        // lowered = coffeeInput.toLowerCase();
-        if(coffee.name.includes(coffeeInput)){
-            coffeeNew.push(coffee);
+    let selectedRoast = roastSelection.value;
+    if(selectedRoast === 'all'){
+        coffees.forEach(function(coffee){
+            if(coffee.name.toLowerCase().includes(coffeeInput)){
+                coffeeNew.push(coffee);
             }
         });
-    tbody.innerHTML = renderCoffees(coffeeNew);
+        tbody.innerHTML = renderCoffees(coffeeNew);
+    }else if(selectedRoast === 'light'){
+        coffees.forEach(function(coffee){
+            if(coffee.name.toLowerCase().includes(coffeeInput)){
+                coffeeNew.push(coffee);
+            }
+        });
+        tbody.innerHTML = renderCoffees(coffeeNew);
+    }else if(selectedRoast === 'medium'){
+        coffees.forEach(function(coffee){
+            if(coffee.name.toLowerCase().includes(coffeeInput)){
+                coffeeNew.push(coffee);
+            }
+        });
+        tbody.innerHTML = renderCoffees(coffeeNew);
+    }else if(selectedRoast === 'dark'){
+        coffees.forEach(function(coffee){
+            if(coffee.name.toLowerCase().includes(coffeeInput)){
+                coffeeNew.push(coffee);
+            }
+        });
+        tbody.innerHTML = renderCoffees(coffeeNew);
+    }
+
+
 }
 // from http://www.ncausa.org/About-Coffee/Coffee-Roasts-Guide
 
