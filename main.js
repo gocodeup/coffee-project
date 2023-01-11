@@ -12,7 +12,7 @@ function renderCoffee(coffee) {
 
 function renderCoffees(coffees) {
     let html = '';
-    for(let i = coffees.length - 1; i >= 0; i--) {
+    for(let i = 0 ; i < coffees.length; i++) {
         html += renderCoffee(coffees[i]);
     }
     return html;
@@ -25,6 +25,8 @@ function updateCoffees(e) {
     coffees.forEach(function(coffee) {
         if (coffee.roast === selectedRoast) {
             filteredCoffees.push(coffee);
+        } else if (coffee.default === selectedRoast) {
+            filteredCoffees.push(coffee);
         }
     });
     tbody.innerHTML = renderCoffees(filteredCoffees);
@@ -32,20 +34,20 @@ function updateCoffees(e) {
 
 // from http://www.ncausa.org/About-Coffee/Coffee-Roasts-Guide
 let coffees = [
-    {id: 1, name: 'Light City', roast: 'light'},
-    {id: 2, name: 'Half City', roast: 'light'},
-    {id: 3, name: 'Cinnamon', roast: 'light'},
-    {id: 4, name: 'City', roast: 'medium'},
-    {id: 5, name: 'American', roast: 'medium'},
-    {id: 6, name: 'Breakfast', roast: 'medium'},
-    {id: 7, name: 'High', roast: 'dark'},
-    {id: 8, name: 'Continental', roast: 'dark'},
-    {id: 9, name: 'New Orleans', roast: 'dark'},
-    {id: 10, name: 'European', roast: 'dark'},
-    {id: 11, name: 'Espresso', roast: 'dark'},
-    {id: 12, name: 'Viennese', roast: 'dark'},
-    {id: 13, name: 'Italian', roast: 'dark'},
-    {id: 14, name: 'French', roast: 'dark'},
+    {id: 1, name: 'Light City', roast: 'light', default : 'all'},
+    {id: 2, name: 'Half City', roast: 'light' , default : 'all'},
+    {id: 3, name: 'Cinnamon', roast: 'light' , default : 'all'},
+    {id: 4, name: 'City', roast: 'medium' , default : 'all'},
+    {id: 5, name: 'American', roast: 'medium' , default : 'all'},
+    {id: 6, name: 'Breakfast', roast: 'medium' , default : 'all'},
+    {id: 7, name: 'High', roast: 'dark' , default : 'all'},
+    {id: 8, name: 'Continental', roast: 'dark' , default : 'all'},
+    {id: 9, name: 'New Orleans', roast: 'dark' , default : 'all'},
+    {id: 10, name: 'European', roast: 'dark' , default : 'all'},
+    {id: 11, name: 'Espresso', roast: 'dark' , default : 'all'},
+    {id: 12, name: 'Viennese', roast: 'dark' , default : 'all'},
+    {id: 13, name: 'Italian', roast: 'dark' , default : 'all'},
+    {id: 14, name: 'French', roast: 'dark' , default : 'all'},
 ];
 
 let tbody = document.querySelector('#coffees');
