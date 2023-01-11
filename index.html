@@ -18,18 +18,14 @@
         <div class="col-6 px-0" id="coffees"></div>
         <form class="col-6 px-0">
             <label class="pb-2" for="roast-selection">Reset</label>
-            <select id="roast-selection">
+            <select id="roast-selection" onchange="renderCoffees()">
                 <option>all</option>
                 <option>light</option>
                 <option>medium</option>
                 <option>dark</option>
             </select>
             <label class="py-2" for="roast-selection">Coffee Name</label>
-
-<!--            <input class="form-control" id="enterCoffee" type="text" placeholder="enter coffee name here" aria-label="default input example" onclick="searchCoffees">-->
-
             <input class="form-control" id="enterCoffee" type="text" placeholder="enter coffee name here" aria-label="default input example" onkeyup="searchCoffees(value)">
-
             <button type="button" class="btn btn-primary w-100 mt-2" id="submit1">Submit</button>
             <hr>
             <h3>Add A Coffee</h3>
