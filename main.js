@@ -1,10 +1,39 @@
 "use strict"
 
-function renderCoffee(coffee) {
+// from http://www.ncausa.org/About-Coffee/Coffee-Roasts-Guide
+var coffees = [ //used to store all the coffee into a variable
+    {id: 1, name: 'Light City', roast: 'light'},
+    {id: 2, name: 'Half City', roast: 'light'},
+    {id: 3, name: 'Cinnamon', roast: 'light'},
+    {id: 4, name: 'City', roast: 'medium'},
+    {id: 5, name: 'American', roast: 'medium'},
+    {id: 6, name: 'Breakfast', roast: 'medium'},
+    {id: 7, name: 'High', roast: 'dark'},
+    {id: 8, name: 'Continental', roast: 'dark'},
+    {id: 9, name: 'New Orleans', roast: 'dark'},
+    {id: 10, name: 'European', roast: 'dark'},
+    {id: 11, name: 'Espresso', roast: 'dark'},
+    {id: 12, name: 'Viennese', roast: 'dark'},
+    {id: 13, name: 'Italian', roast: 'dark'},
+    {id: 14, name: 'French', roast: 'dark'},
+];
+
+var tbody = document.querySelector('#coffees'),
+    submitButton = document.querySelector('#submit'),
+    roastSelection = document.querySelector('#roast-selection');
+//custom var
+var coffeeName = document.querySelector('#name-selection')
+
+tbody.innerHTML = renderCoffees(coffees);
+
+submitButton.addEventListener('click', updateCoffees);//first button
+
+//Functions here -------------
+
+function renderCoffee(coffee) { //this is used to turn the coffee into lines of HTML
     var html = '<div class="coffee">';
     html += '<h2>' + coffee.name + '</h2>';
     html += '<p>' + coffee.roast + '</p>' + '</div>';
-
 
     return html;
 }
@@ -34,36 +63,5 @@ function updateCoffees(e) {
         });
     }
     tbody.innerHTML = renderCoffees(filteredCoffees);
-    console.log(coffeeName.value)
+    // console.log(coffeeName.value) //used for testing
 }
-
-
-// from http://www.ncausa.org/About-Coffee/Coffee-Roasts-Guide
-var coffees = [
-    {id: 1, name: 'Light City', roast: 'light'},
-    {id: 2, name: 'Half City', roast: 'light'},
-    {id: 3, name: 'Cinnamon', roast: 'light'},
-    {id: 4, name: 'City', roast: 'medium'},
-    {id: 5, name: 'American', roast: 'medium'},
-    {id: 6, name: 'Breakfast', roast: 'medium'},
-    {id: 7, name: 'High', roast: 'dark'},
-    {id: 8, name: 'Continental', roast: 'dark'},
-    {id: 9, name: 'New Orleans', roast: 'dark'},
-    {id: 10, name: 'European', roast: 'dark'},
-    {id: 11, name: 'Espresso', roast: 'dark'},
-    {id: 12, name: 'Viennese', roast: 'dark'},
-    {id: 13, name: 'Italian', roast: 'dark'},
-    {id: 14, name: 'French', roast: 'dark'},
-];
-
-var tbody = document.querySelector('#coffees');
-var submitButton = document.querySelector('#submit');
-var roastSelection = document.querySelector('#roast-selection');
-//custom var
-var coffeeName = document.querySelector('#name-selection')
-
-
-tbody.innerHTML = renderCoffees(coffees);
-
-submitButton.addEventListener('click', updateCoffees);
-
