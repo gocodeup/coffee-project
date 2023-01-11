@@ -32,25 +32,17 @@
         <!-- Page's only row starts here -->
         <div class="row mt-3">
           <!-- page's left column starts here -->
-          <div class="col-6">
-            <div class="row">
-              <div class="col-6"><table>
-                <tbody id="coffees"></tbody>
-              </table>
-              </div>
-              <div class="col-6"><table>
-                <tbody id="coffees"></tbody>
-              </table>
-              </div>
+            <div class="col-6">
+                <table>
+                    <tbody class="d-flex flex-wrap" id="coffees"></tbody>
+                </table>
             </div>
-
-          </div>
           <!-- page's left column ends here -->
 
           <!-- page's right column starts here -->
           <div class="col-6">
             <!-- section searching for coffee starts here -->
-            <form class="col-12">   
+            <form class="col-12">
               <label for="roast-selection"> Roast</label>
               <select class="col-12 rounded-1" id="roast-selection">
                 <option>all</option>
@@ -59,31 +51,53 @@
                 <option>dark</option>
               </select>
               <label class="mt-2" for="coffee-name"> Coffee Name</label>
-              <input class="form-control mb-3 py-0 px-2 border-dark rounded-1" type="text" placeholder="coffee name" aria-label="form-control-sm example" id="search-coffee">
-              <input class="btn btn-primary col-12 rounded-1 fs-6 p-0" id="submit" type="submit" />
-
+              <input
+                class="form-control mb-3 py-0 px-2 border-dark rounded-1"
+                type="text"
+                placeholder="coffee name"
+                aria-label="form-control-sm example"
+                id="search-coffee"
+              />
+              <input
+                class="btn btn-primary col-12 rounded-1 fs-6 p-0"
+                id="submit"
+                type="submit"
+              />
             </form>
-            <hr>
+            <hr />
             <!-- section searching for coffee ends here -->
-            <div  class="add-coffee text-center fw-bold fs-4" >Add a Coffee</div>
+            <div class="add-coffee text-center fw-bold fs-4">Add a Coffee</div>
             <!-- section adding coffee starts here -->
 
             <form class="col-12">
-                <div class="mb-2">
-                  <label for="exampleRoast" class="form-label">Roast</label>
-                  <!-- <input class="col-12 rounded-1" class="p-0" type="text" class="form-control" id="exampleRoast" aria-describedby="Roast"> -->
-                  <select class="col-12 rounded-1" id="roast-selection">
-                    <option>light</option>
-                    <option>medium</option>
-                    <option>dark</option>
-                  </select>
-                </div>
-                <div class="mb-3">
-                  <label for="addName" class="form-label">Name</label>
-                  <input class="col-12 border-dark border rounded-1 p-0 px-2" class="p-0" type="text" class="form-control" id="exampleAddName" placeholder="type coffee name">
-                </div>
-                <button class="btn btn-primary p-0 col-12 rounded-1" type="submit" class="btn btn-primary">Submit</button>
-              </form>
+              <div class="mb-2">
+                <label for="exampleRoast" class="form-label">Roast</label>
+                <!-- <input class="col-12 rounded-1" class="p-0" type="text" class="form-control" id="exampleRoast" aria-describedby="Roast"> -->
+                <select class="col-12 rounded-1" id="roast-selection">
+                  <option>light</option>
+                  <option>medium</option>
+                  <option>dark</option>
+                </select>
+              </div>
+              <div class="mb-3">
+                <label for="addName" class="form-label">Name</label>
+                <input
+                  class="col-12 border-dark border rounded-1 p-0 px-2"
+                  class="p-0"
+                  type="text"
+                  class="form-control"
+                  id="exampleAddName"
+                  placeholder="type coffee name"
+                />
+              </div>
+              <button
+                class="btn btn-primary p-0 col-12 rounded-1"
+                type="submit"
+                class="btn btn-primary"
+              >
+                Submit
+              </button>
+            </form>
             <!-- section adding coffee ends here -->
           </div>
           <!-- page's right column ends here -->
