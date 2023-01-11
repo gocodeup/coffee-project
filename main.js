@@ -3,8 +3,8 @@
 function renderCoffee(coffee) {
     var html = '<div class="coffee">';
     // html += '<td>' + coffee.id + '</td>';
-    html += '<div>' + coffee.name + '</div>';
-    html += '<div>' + coffee.roast + '</div>';
+    html += '<div class="coffeeName" id="' + coffee.name + '">' + coffee.name + '</div>';
+    html += '<div class="' + coffee.roast + '">' + coffee.roast + '</div>';
     html += '</div>';
 
     return html;

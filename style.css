@@ -1,17 +1,15 @@
-table {
-    border-collapse: collapse;
-    margin: 15px 0;
-}
-
-td, th {
-    border: 1px solid black;
-    padding: 5px 10px;
-}
-
 .coffee {
     display: flex;
 }
 
 .coffee > div {
-    padding: 1em;
+    padding: 1em .5em;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.coffeeName {
+    font-size: 1.5em;
+    font-weight: bolder;
 }
