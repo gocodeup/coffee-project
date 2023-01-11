@@ -3,10 +3,8 @@
 }
 
 .coffee > div {
-    padding: 1em .5em;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
+    padding: .5em;
+    align-self: center;
 }
 
 .coffeeName {
