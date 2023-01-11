@@ -17,10 +17,13 @@ h1 {
     justify-content: center;
 }
 #coffees {
-    width: 50vw;
+    width: 50%;
 }
 form {
-    width: 50vw;
+    width: 50%;
+}
+select {
+    width: 100%;
 }
 .coffee {
     display: flex;
