@@ -26,6 +26,18 @@ function updateCoffees(e) {
         if (coffee.roast === selectedRoast) {
             filteredCoffees.push(coffee);
         }
+        else{searchInput.addEventListener("input", function() {
+            let searchValue = this.value.toLowerCase();
+            let filteredData = coffees.filter(item => {
+                return item.name.toLowerCase().indexOf(searchValue) !== -1;
+            })
+            tbody.innerHTML = renderCoffees(filteredData);
+
+
+            console.log(filteredData);
+        });
+
+        }
     });
     tbody.innerHTML = renderCoffees(filteredCoffees);
 }
@@ -47,6 +59,39 @@ var coffees = [
     {id: 13, name: 'Italian', roast: 'dark'},
     {id: 14, name: 'French', roast: 'dark'},
 ];
+
+// working on search bar
+
+
+// test 2
+
+let searchInput = document.getElementById("searchInput");
+
+// searchInput.addEventListener("input", function() {
+//     let searchValue = this.value.toLowerCase();
+//     let filteredData = coffees.filter(item => {
+//         return item.name.toLowerCase().indexOf(searchValue) !== -1;
+//     })
+//     // let filterRoast = coffees.filter(item => {
+//     //     return item.roast.toLowerCase().indexOf(searchValue) !== -1;
+//     // })
+//
+//     // filteredData will contain the results
+//
+//     tbody.innerHTML = renderCoffees(filteredData);
+//
+//
+//     console.log(filteredData);
+// });
+
+
+
+
+
+
+//end search bar
+
+
 
 var tbody = document.querySelector('#coffees');
 var submitButton = document.querySelector('#submit');
