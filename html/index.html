@@ -17,13 +17,16 @@
         <div class = "col-6 flex-row">
             <table>
                 <thead>
+
                 <tr>
                     <th>ID</th>
                     <th>NAME</th>
                     <th>ROAST</th>
                 </tr>
+
                 </thead>
                 <tbody id="coffees"></tbody>
+           
             </table>
         </div>
 
@@ -32,14 +35,15 @@
                 <form>
                     <label class="form-label text-bold fw-bold">Roast</label>
                     <label for="roast-selection"></label>
-                    <select class="form-select" id="roast-selection">
-                        <option id="all">all</option>
-                        <option id="light">light</option>
-                        <option id="medium">medium</option>
-                        <option id="dark">dark</option>
-                    </select>
+                            <select class="form-select" id="roast-selection">
+                                <option id="all">all</option>
+                                <option id="light">light</option>
+                                <option id="medium">medium</option>
+                                <option id="dark">dark</option>
+                            </select>
+
                     <label class="form-label text-bold fw-bold mt-2">Coffee Name</label>
-                    <input class="form-control">
+                    <input class="coffee-name form-control" id = "coffee-search">
                     <input class="btn bg-primary color-white text-white mt-2" id="submit" type="submit" />
 
                 </form>
