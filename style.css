@@ -1,0 +1,39 @@
+.title {
+    display:grid;
+    place-content: center;
+}
+hr {
+    width: 90%;
+    opacity:60%;
+}
+
+.divContainer {
+    display: grid;
+    grid-template-areas:
+    "left right"
+}
+#left-div {
+    grid-area: left;
+
+}
+
+/*div containing forms*/
+#right-div {
+    grid-area: right;
+}
+ #coffees {
+     display: flex;
+     flex-direction: column;
+     height: 50vh;
+     flex-wrap: wrap;
+ }
+ .coffee {
+     display: inline-flex;
+ }
+ p {
+     margin-top:27px;
+     margin-left: 10px;
+     color: darkgray;
+ }
+
+

@@ -6,37 +6,43 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<h1>Coffee!</h1>
+<h1 class="title">Coffee!</h1>
+<hr>
 <!--This is for filtering the coffee list-->
-<form>
-    <label for="roast-selection">Roast</label>
-    <select id="roast-selection">
-        <option>all</option>
-        <option>light</option>
-        <option>medium</option>
-        <option>dark</option>
-    </select>
-    <label for="name-selection">Coffee Name</label>
-    <input type="text" id="name-selection" placeholder="Enter coffee name">
+<div class="divContainer">
+    <div id="right-div">
+        <form>
+            <label for="roast-selection">Roast</label>
+            <select id="roast-selection">
+                <option>all</option>
+                <option>light</option>
+                <option>medium</option>
+                <option>dark</option>
+            </select>
+            <label for="name-selection">Coffee Name</label>
+            <input type="text" id="name-selection" placeholder="Enter coffee name">
 
-    <input id="submit" type="submit" />
-</form>
-<!--This is for creating another coffee item to the list-->
-<form>
-    <h1>Add a Coffee:</h1>
-    <label for="coffee-addition">Roast</label>
-    <select id="coffee-addition">
-        <option>light</option>
-        <option>medium</option>
-        <option>dark</option>
-    </select>
-    <label for="name-addition">Coffee Name</label>
-    <input type="text" id="name-addition" placeholder="add coffee name">
+            <input id="submit" type="submit"/>
+        </form>
+        <!--This is for creating another coffee item to the list-->
+        <form>
+            <h1>Add a Coffee:</h1>
+            <label for="coffee-addition">Roast</label>
+            <select id="coffee-addition">
+                <option>light</option>
+                <option>medium</option>
+                <option>dark</option>
+            </select>
+            <label for="name-addition">Coffee Name</label>
+            <input type="text" id="name-addition" placeholder="add coffee name">
 
-    <input id="submit1" type="submit" />
-</form>
-<div id="coffees" style="display: flex; flex-direction: column;"></div>
-
+            <input id="submit1" type="submit"/>
+        </form>
+    </div>
+    <div id="left-div">
+        <div id="coffees"></div>
+    </div>
+</div>
 <script src="main.js"></script>
 </body>
 </html>
