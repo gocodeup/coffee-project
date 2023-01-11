@@ -17,25 +17,22 @@
         <div class="row">
             <h1 class="container d-flex justify-content-center">Coffee!</h1>
         </div>
-            <hr>
+        <hr>
     </header>
     <!--***** end header *****-->
 
     <!--***** section 1 *****-->
-    <div class="container">
+    <div class="container mt-3">
         <div class="row">
 
             <!--***** container 1 *****-->
             <div class="container col-6">
                 <div class="row">
-                    <table>
-                        <div class="thead">
-                            <div class="tr d-flex">
-                                <tbody id="coffees"></tbody>
-                            </div>
-
-                        </div>
-                    </table>
+                    <div class="col">
+                        <table>
+                            <tbody id="coffees"></tbody>
+                        </table>
+                    </div>
                 </div>
             </div>
             <!--***** end container 1-->
@@ -44,29 +41,29 @@
             <div class="container col-6">
                 <div class="row">
                     <form>
-                        <label class="col-12" for="roast-selection">Roast</label>
+                        <label class="col-12" for="roast-selection"><strong>Roast</strong></label>
                         <select class="col-12" id="roast-selection">
                             <option>all</option>
                             <option>light</option>
                             <option>medium</option>
                             <option>dark</option>
                         </select>
-                        <label for="coffee-name-input" class="col-12">Coffee Name</label>
+                        <label for="coffee-name-input" class="col-12 mt-3"><strong>Coffee Name</strong></label>
                         <input id="coffee-name-input" type="text" class="col-12"/>
-                        <input class="col-12 text-bg-primary text-white" id="submit" type="submit"/>
+                        <input class="col-12 text-bg-primary text-white mt-3" id="submit" type="submit"/>
                     </form>
-                    <hr class="col-12 mt-5">
-                    <h1 class="col-12">Add a Coffee!</h1>
+                    <hr class="col-12 mt-4">
+                    <h1 class="col-12 mt-3 d-flex justify-content-center">Add a Coffee!</h1>
                     <form>
-                        <label class="col-12" for="roast-selection">Roast</label>
-                        <select class="col-12" id="roast-selection">
+                        <label class="col-12" for="roast-selection2"><strong>Roast</strong></label>
+                        <select class="col-12" id="roast-selection2">
                             <option>light</option>
                             <option>medium</option>
                             <option>dark</option>
                         </select>
-                        <label for="name-input">Name</label>
+                        <label class="mt-3" for="name-input"><strong>Name</strong></label>
                         <input id="name-input" type="text" class="col-12"/>
-                        <input class="col-12 text-bg-primary text-white" id="submit" type="submit"/>
+                        <input class="col-12 text-bg-primary text-white mt-3" id="submit2" type="submit"/>
                     </form>
                 </div>
             </div>
