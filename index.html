@@ -50,14 +50,15 @@
           <div class="col-6">
             <!-- section searching for coffee starts here -->
             <form class="col-12">   
-              <label class="" for="roast-selection"> Roast</label>
+              <label for="roast-selection"> Roast</label>
               <select class="col-12 rounded-1" id="roast-selection">
+                <option>all</option>
                 <option>light</option>
                 <option>medium</option>
                 <option>dark</option>
               </select>
               <label class="mt-2" for="coffee-name"> Coffee Name</label>
-              <input class="form-control mb-3 py-0 px-2 border-dark rounded-1" type="text" placeholder="coffee name" aria-label="form-control-sm example">
+              <input class="form-control mb-3 py-0 px-2 border-dark rounded-1" type="text" placeholder="coffee name" aria-label="form-control-sm example" id="search-coffee">
               <input class="btn btn-primary col-12 rounded-1 fs-6 p-0" id="submit" type="submit" />
 
             </form>
@@ -78,7 +79,7 @@
                 </div>
                 <div class="mb-3">
                   <label for="addName" class="form-label">Name</label>
-                  <input class="col-12 border-dark border rounded-1 p-0 px-2" class="p-0" type="text" class="form-control" id="exampleAddName">
+                  <input class="col-12 border-dark border rounded-1 p-0 px-2" class="p-0" type="text" class="form-control" id="exampleAddName" placeholder="type coffee name">
                 </div>
                 <button class="btn btn-primary p-0 col-12 rounded-1" type="submit" class="btn btn-primary">Submit</button>
               </form>
