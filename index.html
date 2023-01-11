@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <title></title>
-    <link rel="stylesheet" href="style.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
           integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
@@ -15,7 +15,7 @@
     <!--***** header *****-->
     <header class="container d-flex justify-content-center">
         <div class="row">
-            <h1 class="col-12">Coffee!</h1>
+            <h1>Coffee!</h1>
             <hr class="col-12">
         </div>
     </header>
@@ -46,37 +46,31 @@
 
             <!--***** container 2 *****-->
             <div class="container col-6">
-                <div class="row d-flex flex-column">
-                    <div class="col">
-                        <form>
-                            <label class="col-12" for="roast-selection">Roast</label>
-                            <select class="col-12" id="roast-selection">
-                                <option>light</option>
-                                <option>medium</option>
-                                <option>dark</option>
-                            </select>
-                            <label class="col-12" for="coffee-name-input">Coffee Name</label>
-                            <input class="col-12" id="coffee-name-input" type="text" placeholder=""/>
-                            <input class="col-12 submit-btn text-white" id="submit" type="submit"/>
-                        </form>
-                    </div>
-                    <div class="col">
-                        <hr class="col-12 mt-4">
-                        <h1 class="col-12 align-self-center">Add a Coffee!</h1>
-                    </div>
-                    <div class="col">
-                        <form>
-                            <label class="col-12" for="roast-selection">Roast</label>
-                            <select class="col-12" id="roast-selection-add">
-                                <option>light</option>
-                                <option>medium</option>
-                                <option>dark</option>
-                            </select>
-                            <label class="col-12" for="name-input">Name</label>
-                            <input class="col-12" id="name-input" type="text" placeholder=""/>
-                            <input class="col-12 submit-btn text-white" id="submit2" type="submit"/>
-                        </form>
-                    </div>
+                <div class="row">
+                    <form>
+                        <label class="col-12" for="roast-selection">Roast</label>
+                        <select class="col-12" id="roast-selection">
+                            <option>light</option>
+                            <option>medium</option>
+                            <option>dark</option>
+                        </select>
+                        <label for="coffee-name-input">Coffee Name</label>
+                        <textarea id="coffee-name-input"></textarea>
+                        <input class="col-12 text-bg-primary text-white" id="submit" type="submit"/>
+                    </form>
+                    <hr class="col-12 mt-5">
+                    <h1 class="col-12">Add a Coffee!</h1>
+                    <form>
+                        <label class="col-12" for="roast-selection">Roast</label>
+                        <select class="col-12" id="roast-selection">
+                            <option>light</option>
+                            <option>medium</option>
+                            <option>dark</option>
+                        </select>
+                        <label for="name-input">Name</label>
+                        <textarea id="name-input"></textarea>
+                        <input class="col-12 text-bg-primary text-white" id="submit" type="submit"/>
+                    </form>
                 </div>
             </div>
             <!--***** end container 2 *****-->
