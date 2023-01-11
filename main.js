@@ -49,14 +49,6 @@ let coffees = [
     {id: 14, name: 'French', roast: 'dark'},
 ];
 
-// let content = document.querySelector('#coffees');
-// let submitButton = document.querySelector('#submit1');
-// let roastSelection = document.querySelector('#roast-selection');
-//
-// content.innerHTML = renderCoffees(coffees);
-//
-// submitButton.addEventListener('click', updateCoffees);
-
 let content = document.querySelector('#coffees');
 let submitButton = document.querySelector('#submit1');
 let roastSelection = document.querySelector('#roast-selection');
@@ -64,3 +56,5 @@ let roastSelection = document.querySelector('#roast-selection');
 content.innerHTML = renderCoffees(coffees);
 
 submitButton.addEventListener('click', updateCoffees);
+
+// change
