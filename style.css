@@ -1,6 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Abel&family=Anton&family=Lato:wght@300&family=Montserrat&family=Roboto&family=Source+Code+Pro&family=Work+Sans&display=swap');
 * {
     box-sizing: border-box;
     margin: 0;
+    font-family: 'Montserrat', sans-serif;
+;
+}
+body {
+    margin: 0 1em;
+}
+.container {
+    display: flex;
 }
 h1 {
     padding-top: .5em;
@@ -10,18 +19,20 @@ h1 {
 #coffees {
     width: 50vw;
 }
-
-
+form {
+    width: 50vw;
+}
 .coffee {
     display: flex;
 }
-
 .coffee > div {
     padding: .5em;
     align-self: center;
 }
-
 .coffeeName {
     font-size: 1.5em;
     font-weight: bolder;
+}
+.light, .medium, .dark {
+    color: gray;
 }
