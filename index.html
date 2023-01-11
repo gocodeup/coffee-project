@@ -6,9 +6,8 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<body>
 <h1>Coffee!</h1>
-
+<!--This is for filtering the coffee list-->
 <form>
     <label for="roast-selection">Roast</label>
     <select id="roast-selection">
@@ -22,11 +21,21 @@
 
     <input id="submit" type="submit" />
 </form>
+<!--This is for creating another coffee item to the list-->
+<form>
+    <h1>Add a Coffee:</h1>
+    <label for="coffee-addition">Roast</label>
+    <select id="coffee-addition">
+        <option>light</option>
+        <option>medium</option>
+        <option>dark</option>
+    </select>
+    <label for="name-addition">Coffee Name</label>
+    <input type="text" id="name-addition" placeholder="add coffee name">
 
-<div id="coffees"></div>
-
-<script src="main.js"></script>
-</body>
+    <input id="submit1" type="submit" />
+</form>
+<div id="coffees" style="display: flex; flex-direction: column;"></div>
 
 <script src="main.js"></script>
 </body>
