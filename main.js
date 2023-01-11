@@ -1,37 +1,7 @@
 "use strict"
-// -- Table Render
-function renderCoffee(coffee) {
-    var html = '<tr class="coffee">';
-    html += '<td>' + coffee.id + '</td>';
-    html += '<td>' + coffee.name + '</td>';
-    html += '<td>' + coffee.roast + '</td>';
-    html += '</tr>';
 
-    return html;
-}
 
-function renderCoffees(coffees) {
-    var html = '';
-    for(var i =  0; i < coffees.length; i++) {
-        html += renderCoffee(coffees[i]);
-    }
-    return html;
-}
 
-// Drop Down Sort List Function
-function updateCoffees(e) {
-    e.preventDefault(); // don't submit the form, we just want to update the data
-    var selectedRoast = roastSelection.value;
-    var filteredCoffees = [];
-    coffees.forEach(function(coffee) {
-        if (coffee.roast === selectedRoast) {
-            filteredCoffees.push(coffee);
-        } else if (selectedRoast === 'all'){
-            filteredCoffees.push(coffee)
-        }
-    });
-    tbody.innerHTML = renderCoffees(filteredCoffees);
-}
 
 // from http://www.ncausa.org/About-Coffee/Coffee-Roasts-Guide
 var coffees = [
@@ -55,18 +25,33 @@ var tbody = document.querySelector('#coffees');
 var submitButton = document.querySelector('#submit');
 var addButton = document.querySelector('#addbutton');
 var roastSelection = document.querySelector('#roast-selection');
-var searchBar = document.querySelector('#search');
+var searchBar = document.querySelector('#coffeeSearch');
 
-// Initial Page Load
+//---- Initial Page Load-----
 tbody.innerHTML = renderCoffees(coffees);
 
-submitButton.addEventListener('click', updateCoffees);
 
 
+// -- Table Render-----
+function renderCoffee(coffee) {
+    var html = '<tr class="coffee">';
+    html += '<td>' + coffee.id + '</td>';
+    html += '<td>' + coffee.name + '</td>';
+    html += '<td>' + coffee.roast + '</td>';
+    html += '</tr>';
 
+    return html;
+}
 
+function renderCoffees(coffees) {
+    var html = '';
+    for(var i =  0; i < coffees.length; i++) {
+        html += renderCoffee(coffees[i]);
+    }
+    return html;
+}
 
-// add coffee function below
+// -----Add coffee function below------
 function addCoffee() {
 
     var coffeeName = document.querySelector("#add-coffee-name").value;
@@ -80,11 +65,13 @@ function addCoffee() {
 addButton.addEventListener('click', addCoffee);
 
 
+// ----Coffee Search Function-----
 function searchCoffee() {
-    var searchInput = document.querySelector("#search").value;
+    var searchInput = searchBar.value
+    console.log(searchInput)
     var filteredCoffees = [];
     coffees.forEach(function(coffee) {
-        if (coffee.name === searchInput) {
+        if (coffee.name.includes(searchInput)){
             filteredCoffees.push(coffee);
         }
     });
@@ -92,3 +79,20 @@ function searchCoffee() {
 }
 
 searchBar.addEventListener('keydown', searchCoffee);
+
+// Drop Down Sort List Function
+function updateCoffees(e) {
+    e.preventDefault(); // don't submit the form, we just want to update the data
+    var selectedRoast = roastSelection.value;
+    var filteredCoffees = [];
+    coffees.forEach(function(coffee) {
+        if (coffee.roast === selectedRoast) {
+            filteredCoffees.push(coffee);
+        } else if (selectedRoast === 'all'){
+            filteredCoffees.push(coffee)
+        }
+    });
+    tbody.innerHTML = renderCoffees(filteredCoffees);
+}
+
+roastSelection.addEventListener('mouseout' , updateCoffees);
