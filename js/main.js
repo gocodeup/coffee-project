@@ -6,13 +6,14 @@ function select (event){
 
 //-----------Create the tables ------------------//
 function renderCoffee(coffee) {
-    var html = '<tr class="coffee">';   
+    
+    var html = '<div class="coffee col-6 d-flex text-align">';   
 
-    html += '<td>' + coffee.id + '</td>';       //creates row for the ID
-    html += '<td>' + coffee.name + '</td>';     //creates row for the name
-    html += '<td>' + coffee.roast + '</td>';    //creates row for the roast
+       //creates row for the ID
+    html += '<h1>'+coffee.name+ '</h1>';   //creates row for the name
+    html += '<p>' + coffee.roast + '</p>';    //creates row for the roast
    
-    html += '</tr>';                            
+    html += '</div>';                            
 
     return html; //Pushes to the html
 }
