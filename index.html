@@ -3,32 +3,46 @@
 <head>
     <meta charset="UTF-8">
     <title></title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+          integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=League+Gothic&family=Rubik+Dirt&display=swap" rel="stylesheet">
+    <style> @import url('https://fonts.googleapis.com/css2?family=League+Gothic&family=Rubik+Dirt&display=swap'); </style>
 </head>
 <body>
-    <h1>Coffee!</h1>
-
-    <form>
+<nav class="white-text navbar navbar-expand-lg sticky-top">
+    <img
+</nav>
+<h1>Cowabunga Coffee Company</h1>
+<h1>Coffee!</h1>
+    <form class="d-flex justify-content-between">
+        <div>
         <label for="roast-selection"></label>
         <select id="roast-selection">
+            <option>all</option>
             <option>light</option>
             <option>medium</option>
             <option>dark</option>
         </select>
-        <input id="submit" type="submit" />
-    </form>
+        <input id="submit" type="submit"/>
+        </div>
 
-    <table>
-        <thead>
-            <tr>
-                <th>ID</th>
-                <th>NAME</th>
-                <th>ROAST</th>
-            </tr>
-        </thead>
-        <tbody id="coffees"></tbody>
-    </table>
+        <div>
+        <input id="search-coffee" type="text" class="input-coffee justify-content-end" placeholder="search coffee"/>
+        <button id="submit-coffee-search" class="submit-search">Search</button>
+        </div>
+    </form>
+<div id="coffees" class="container">
+    <div>
+
+    </div>
+
+
+
+</div>
+
 
     <script src="main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
 </body>
 </html>
