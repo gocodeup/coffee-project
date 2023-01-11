@@ -67,18 +67,18 @@ addButton.addEventListener('click', addCoffee);
 
 // ----Coffee Search Function-----
 function searchCoffee() {
-    var searchInput = searchBar.value
+    var searchInput = searchBar.value.toLowerCase()
     console.log(searchInput)
     var filteredCoffees = [];
     coffees.forEach(function(coffee) {
-        if (coffee.name.includes(searchInput)){
+        if (coffee.name.toLowerCase().includes(searchInput)){
             filteredCoffees.push(coffee);
         }
     });
     tbody.innerHTML = renderCoffees(filteredCoffees);
 }
 
-searchBar.addEventListener('keydown', searchCoffee);
+searchBar.addEventListener('keyup', searchCoffee);
 
 // Drop Down Sort List Function
 function updateCoffees(e) {
