@@ -1,5 +1,10 @@
 "use strict"
 
+function select (event){
+
+}
+
+//------------------------------
 function renderCoffee(coffee) {
     var html = '<tr class="coffee">';
     html += '<td>' + coffee.id + '</td>';
@@ -24,6 +29,8 @@ function updateCoffees(e) {
     var filteredCoffees = [];
     coffees.forEach(function(coffee) {
         if (coffee.roast === selectedRoast) {
+            filteredCoffees.push(coffee);
+        }else if(selectedRoast === 'all'){
             filteredCoffees.push(coffee);
         }
     });
@@ -53,5 +60,9 @@ var submitButton = document.querySelector('#submit');
 var roastSelection = document.querySelector('#roast-selection');
 
 tbody.innerHTML = renderCoffees(coffees);
+
+
+roastSelection.addEventListener('change', updateCoffees);
+
 
 submitButton.addEventListener('click', updateCoffees);
