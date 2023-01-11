@@ -1,5 +1,5 @@
 "use strict"
-
+// -- Table Render
 function renderCoffee(coffee) {
     var html = '<tr class="coffee">';
     html += '<td>' + coffee.id + '</td>';
@@ -12,12 +12,13 @@ function renderCoffee(coffee) {
 
 function renderCoffees(coffees) {
     var html = '';
-    for(var i = coffees.length - 1; i >= 0; i--) {
+    for(var i =  0; i < coffees.length; i++) {
         html += renderCoffee(coffees[i]);
     }
     return html;
 }
 
+// Drop Down Sort List Function
 function updateCoffees(e) {
     e.preventDefault(); // don't submit the form, we just want to update the data
     var selectedRoast = roastSelection.value;
@@ -25,10 +26,11 @@ function updateCoffees(e) {
     coffees.forEach(function(coffee) {
         if (coffee.roast === selectedRoast) {
             filteredCoffees.push(coffee);
+        } else if (selectedRoast === 'all'){
+            filteredCoffees.push(coffee)
         }
     });
     tbody.innerHTML = renderCoffees(filteredCoffees);
-    console.log(filteredCoffees)
 }
 
 // from http://www.ncausa.org/About-Coffee/Coffee-Roasts-Guide
@@ -55,13 +57,13 @@ var addButton = document.querySelector('#addbutton');
 var roastSelection = document.querySelector('#roast-selection');
 var searchBar = document.querySelector('#search');
 
+// Initial Page Load
 tbody.innerHTML = renderCoffees(coffees);
 
 submitButton.addEventListener('click', updateCoffees);
-searchBar.addEventListener("keyup",updateCoffees);
 
 
-//search bar function
+
 
 
 // add coffee function below
@@ -77,6 +79,16 @@ function addCoffee() {
 
 addButton.addEventListener('click', addCoffee);
 
-//
 
+function searchCoffee() {
+    var searchInput = document.querySelector("#search").value;
+    var filteredCoffees = [];
+    coffees.forEach(function(coffee) {
+        if (coffee.name === searchInput) {
+            filteredCoffees.push(coffee);
+        }
+    });
+    tbody.innerHTML = renderCoffees(filteredCoffees);
+}
 
+searchBar.addEventListener('keydown', searchCoffee);
