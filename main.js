@@ -23,20 +23,36 @@ var tbody = document.querySelector('#coffees'),
     roastSelection = document.querySelector('#roast-selection');
 //custom var
 var coffeeName = document.querySelector('#name-selection'),
-    coffeeAddition = document.querySelector('#coffee-addition'),
+    coffeeAddition = document.querySelector('#roast-addition'),
+    nameAddition = document.querySelector('#name-addition'),
     submitButton2 = document.querySelector('#submit1');
 
 tbody.innerHTML = renderCoffees(coffees);
-submitButton1.addEventListener('click', updateCoffees);//first button
-submitButton2.addEventListener('click', console.log(coffeeAddition.innerHTML))
+// submitButton1.addEventListener('click', updateCoffees);//first button
+roastSelection.addEventListener('input', updateCoffees);
+coffeeName.addEventListener('input', updateCoffees);
+submitButton2.addEventListener('click', createCoffee);
+//temp function
+function createCoffee(){
+    var newRoast = coffeeAddition.value,
+        newName = nameAddition.value,
+        idCoffee = coffees.length + 1,
+        // ||above outlines  the established parameters|| for the ||new coffee object below||
+        newCoffee = {
+        id: idCoffee,
+        name: newName,
+        roast: newRoast
+    };
+    coffees.push(newCoffee);
+    tbody.innerHTML = renderCoffees(coffees);
+}
 //Functions here -------------
 function renderCoffee(coffee) {
-    var html = '<div class="coffee">';
-    html += '<h2>' + coffee.name + '</h2>';
-    html += '<p>' + coffee.roast + '</p>' + '</div>';
-
-    return html;
-}//this is used to turn the coffee into lines of HTML
+    return `<div class="coffee">
+              <h2>${coffee.name}</h2>
+              <p>${coffee.roast}</p>
+            </div>`;
+} //this is used to input the proper HTML tags (template literals make it easier to read/manipulate)
 
 function renderCoffees(coffees) {
     var html = '';
@@ -48,20 +64,14 @@ function renderCoffees(coffees) {
 
 function updateCoffees(e) {
     e.preventDefault();
-    var selectedRoast = roastSelection.value;
-    // let name-selection
-    var filteredCoffees = [];
+    var selectedRoast = roastSelection.value,
+        filteredCoffees = [];
     if ((selectedRoast === "all")&&(coffeeName.value === '')) {
         filteredCoffees = coffees;
     } else {
-        coffees.forEach(function(coffee) {
-            if ((coffee.roast === selectedRoast) && (coffeeName.value === '')) {
-                filteredCoffees.push(coffee);
-            } else if(coffeeName.value.toLowerCase() === coffee.name.toLowerCase()){
-                filteredCoffees.push(coffee);
-            }
+        filteredCoffees = coffees.filter(coffee => {
+            return ((coffee.roast === selectedRoast) && (coffeeName.value === '')) || ((coffeeName.value !== '')&&(coffee.name.toLowerCase().startsWith(coffeeName.value.toLowerCase())));
         });
     }
     tbody.innerHTML = renderCoffees(filteredCoffees);
-    // console.log(coffeeName.value) //used for testing
-} //this filters the list to show only what is desired.
+}//this filters the list to show only what is desired.
