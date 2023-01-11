@@ -2,10 +2,11 @@
 
 function renderCoffee(coffee) {
     var html = '<tr class="coffee">';
-    html += '<td>' + coffee.id + '</td>';
-    html += '<td>' + coffee.name + '</td>';
+    // html += '<td>' + coffee.id + '</td>';
+       html += '<td>' + coffee.name + '</td>';
     html += '<td>' + coffee.roast + '</td>';
     html += '</tr>';
+
 
     return html;
 }
@@ -19,7 +20,7 @@ function renderCoffees(coffees) {
 
 function renderSearchedCoffee(coffee) {
     var html = '<tr class="coffee">';
-    html += '<td>' + coffee.id + '</td>';
+    // html += '<td>' + coffee.id + '</td>';
     html += '<td>' + coffee.name + '</td>';
     html += '<td>' + coffee.roast + '</td>';
     html += '</tr>';
@@ -39,7 +40,8 @@ function renderSearchedCoffees(coffees) {
 function updateCoffeesOnType(e){
     e.preventDefault();
     var selectedRoastForSearch = roastSelection.value;
-    var selectCoffeeOnSearch = coffeeSearch.value;
+    var selectCoffeeOnSearch = coffeeSearch.value.toLowerCase();
+    console.log(selectCoffeeOnSearch)
     var searchedCoffee = [];
 
     if(selectedRoastForSearch === 'all' & selectCoffeeOnSearch === ''){
@@ -48,7 +50,7 @@ function updateCoffeesOnType(e){
         });
     }else if(selectedRoastForSearch === 'all' & selectCoffeeOnSearch !== ''){
         coffees.forEach(function(coffee){
-            if(coffee.name.includes(selectCoffeeOnSearch)){
+            if(coffee.name.toLowerCase().includes(selectCoffeeOnSearch)){
                 searchedCoffee.push(coffee)
             }
         });
@@ -74,7 +76,7 @@ function updateCoffees(e) {
     e.preventDefault(); // don't submit the form, we just want to update the data
     var selectedRoast = roastSelection.value;
     var filteredCoffees = [];
-    if(selectedRoast === 'all'){   //if the roast matches with value of selectedRoast.vlaue(all)
+    if(selectedRoast === 'all'){   //if the roast matches with value of selectedRoast.value(all)
         coffees.forEach(function(coffee){
             filteredCoffees.push(coffee);
         });   
@@ -109,12 +111,13 @@ var coffees = [
 var tbody = document.querySelector('#coffees');
 var submitButton = document.querySelector('#submit');
 var roastSelection = document.querySelector('#roast-selection');
-
 var roastOnSelection = document.querySelector('#roast-selection');
 var coffeeSearch = document.querySelector('#search-coffee');
 
+// tbody.style.display="none";
 tbody.innerHTML = renderCoffees(coffees);
 // Event listeners
 submitButton.addEventListener('click', updateCoffees);
 roastOnSelection.addEventListener('change', updateCoffees);
 coffeeSearch.addEventListener('keyup', updateCoffeesOnType);a
+
