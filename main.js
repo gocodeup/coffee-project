@@ -9,7 +9,6 @@ function renderCoffee(coffee) {
 
     return html;
 }
-
 function renderCoffees(coffees) {
     var html = '';
     for(var i = coffees.length - 1; i >= 0; i--) {
@@ -18,15 +17,74 @@ function renderCoffees(coffees) {
     return html;
 }
 
+function renderSearchedCoffee(coffee) {
+    var html = '<tr class="coffee">';
+    html += '<td>' + coffee.id + '</td>';
+    html += '<td>' + coffee.name + '</td>';
+    html += '<td>' + coffee.roast + '</td>';
+    html += '</tr>';
+
+    return html;
+}
+function renderSearchedCoffees(coffees) {
+    var html = '';
+    for(var i = coffees.length - 1; i >= 0; i--) {
+        html += renderSearchedCoffee(coffees[i]);
+    }
+    return html;
+}
+
+
+// ##### the function that works on keyups ######
+function updateCoffeesOnType(e){
+    e.preventDefault();
+    var selectedRoastForSearch = roastSelection.value;
+    var selectCoffeeOnSearch = coffeeSearch.value;
+    var searchedCoffee = [];
+
+    if(selectedRoastForSearch === 'all' & selectCoffeeOnSearch === ''){
+        coffees.forEach(function(coffee){
+            searchedCoffee.push(coffee)
+        });
+    }else if(selectedRoastForSearch === 'all' & selectCoffeeOnSearch !== ''){
+        coffees.forEach(function(coffee){
+            if(coffee.name.includes(selectCoffeeOnSearch)){
+                searchedCoffee.push(coffee)
+            }
+        });
+    }
+
+    if(selectCoffeeOnSearch === ''){
+        coffees.forEach(function(coffee){
+            searchedCoffee.push(coffee)
+        });
+    }else if(selectCoffeeOnSearch !== ""){
+        coffees.forEach(function(coffee){
+            if(coffee.name.includes(selectCoffeeOnSearch) & coffee.roast === selectedRoastForSearch){
+                searchedCoffee.push(coffee)
+            }
+        });
+    }
+    tbody.innerHTML = renderSearchedCoffees(searchedCoffee);
+}
+
+
+
 function updateCoffees(e) {
     e.preventDefault(); // don't submit the form, we just want to update the data
     var selectedRoast = roastSelection.value;
     var filteredCoffees = [];
-    coffees.forEach(function(coffee) {
-        if (coffee.roast === selectedRoast) {
+    if(selectedRoast === 'all'){   //if the roast matches with value of selectedRoast.vlaue(all)
+        coffees.forEach(function(coffee){
             filteredCoffees.push(coffee);
-        }
-    });
+        });   
+     }else if(selectedRoast !== 'all'){
+        coffees.forEach(function(coffee) {
+            if (coffee.roast === selectedRoast) {
+                filteredCoffees.push(coffee);
+            }
+        });
+    }
     tbody.innerHTML = renderCoffees(filteredCoffees);
 }
 
@@ -52,6 +110,11 @@ var tbody = document.querySelector('#coffees');
 var submitButton = document.querySelector('#submit');
 var roastSelection = document.querySelector('#roast-selection');
 
-tbody.innerHTML = renderCoffees(coffees);
+var roastOnSelection = document.querySelector('#roast-selection');
+var coffeeSearch = document.querySelector('#search-coffee');
 
+tbody.innerHTML = renderCoffees(coffees);
+// Event listeners
 submitButton.addEventListener('click', updateCoffees);
+roastOnSelection.addEventListener('change', updateCoffees);
+coffeeSearch.addEventListener('keyup', updateCoffeesOnType);
