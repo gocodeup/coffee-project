@@ -1,28 +1,21 @@
+
+(function() {
+
 "use strict"
-
-function select (event){
-
-}
 
 //-----------Create the tables ------------------//
 function renderCoffee(coffee) {
     
     var html = '<div class="coffee col-6 d-flex text-align">';   
-
-       //creates row for the ID
     html += '<h1>'+coffee.name+ '</h1>';   //creates row for the name
     html += '<p>' + coffee.roast + '</p>';    //creates row for the roast
-   
     html += '</div>';                            
-
     return html; //Pushes to the html
 }
 
 
-
-
 //---------Pushes the coffees into the table---------/
-function renderCoffees(coffees) {
+function renderCoffees(coffees) {  
     var html = '';
     for(var i = coffees.length - 1; i >= 0; i--) {
         html += renderCoffee(coffees[i]);    // Use the function above to  
@@ -30,19 +23,10 @@ function renderCoffees(coffees) {
     return html;
 }
 
-//----------------------------------------------------------------//
-
-
-
-
-
-
-
-
 
 //--------function that displays the selected groups of the drop down------//
 function updateCoffees(e) {
-    e.preventDefault(); // don't submit the form, we just want to update the data
+    e.preventDefault();
     var selectedRoast = roastSelection.value;
     var filteredCoffees = [];
     coffees.forEach(function(coffee) {          // if the roast is = to the selectedRoast display the selected in the table
@@ -55,54 +39,74 @@ function updateCoffees(e) {
     tbody.innerHTML = renderCoffees(filteredCoffees);
 }
 
+
 //------- Function that finds Coffee----------//
-function findCoffee(e){
-    e.preventDefault();
+
+function allChosen(){
     let coffeeNew = [];
     let coffeeInput = coffeeSearch.value;
+    
+    coffees.forEach(function(coffee){
+        if(coffee.name.toLowerCase().includes(coffeeInput)){
+            coffeeNew.push(coffee);
+        }
+    });
+    tbody.innerHTML = renderCoffees(coffeeNew);
+}
+//-----Functions that finds light coffees--//
+function lightChosen(){
+    let coffeeNew = [];
+    let coffeeInput = coffeeSearch.value;
+    coffees.forEach(function(coffee){
+        if(coffee.name.toLowerCase().includes(coffeeInput) && coffee.roast === 'light'){
+            coffeeNew.push(coffee);
+        }
+    });
+    tbody.innerHTML = renderCoffees(coffeeNew);
+}
+//-----Functions that finds Medium--//
+function mediumChosen(){
+    let coffeeNew = [];
+    let coffeeInput = coffeeSearch.value;
+    coffees.forEach(function(coffee){
+        if(coffee.name.toLowerCase().includes(coffeeInput) && coffee.roast === 'medium'){
+            coffeeNew.push(coffee);
+        }
+    });
+    tbody.innerHTML = renderCoffees(coffeeNew);
+}
+//-----Functions that finds Dark Coffee--//
+function darkChosen(){
+    let coffeeNew = [];
+    let coffeeInput = coffeeSearch.value;
+    coffees.forEach(function(coffee){
+        if(coffee.name.toLowerCase().includes(coffeeInput) && coffee.roast === 'dark'){
+            coffeeNew.push(coffee);
+        }
+    });
+    tbody.innerHTML = renderCoffees(coffeeNew);
+}
+//-----Functions that finds all the coffees--//
+function findCoffee(e){
+    e.preventDefault();
     let selectedRoast = roastSelection.value;
     if(selectedRoast === 'all'){
-        coffees.forEach(function(coffee){
-            if(coffee.name.toLowerCase().includes(coffeeInput)){
-                coffeeNew.push(coffee);
-            }
-        });
-        tbody.innerHTML = renderCoffees(coffeeNew);
+        allChosen();
     }else if(selectedRoast === 'light'){
-        coffees.forEach(function(coffee){
-            if(coffee.name.toLowerCase().includes(coffeeInput) && coffee.roast === 'light'){
-                coffeeNew.push(coffee);
-            }
-        });
-        tbody.innerHTML = renderCoffees(coffeeNew);
+        lightChosen();
     }else if(selectedRoast === 'medium'){
-        coffees.forEach(function(coffee){
-            if(coffee.name.toLowerCase().includes(coffeeInput) && coffee.roast === 'medium'){
-                coffeeNew.push(coffee);
-            }
-        });
-        tbody.innerHTML = renderCoffees(coffeeNew);
+        mediumChosen();
     }else if(selectedRoast === 'dark'){
-        coffees.forEach(function(coffee){
-            if(coffee.name.toLowerCase().includes(coffeeInput) && coffee.roast === 'dark'){
-                coffeeNew.push(coffee);
-            }
-        });
-        tbody.innerHTML = renderCoffees(coffeeNew);
+        darkChosen();
     }
 }
 
+//---Function that Creates new Coffees---//
 function createCoffees(e){
     e.preventDefault();
-    // let newCoffee = [];
     let coffeeInput = coffeeAdd.value;
     let selectedRoast = selectionAdd.value;
 
-    // newCoffee.push( {
-    //     id: coffees.length+1,
-    //     name: coffeeInput,
-    //     roast: selectedRoast
-    // });
 
     coffees.push({
         id: coffees.length+1,
@@ -113,13 +117,7 @@ function createCoffees(e){
     tbody.innerHTML = renderCoffees(coffees);
 }
 
-
-
-
-
-
-// from http://www.ncausa.org/About-Coffee/Coffee-Roasts-Guide
-
+//------------Array Data-------------//
 var coffees = [
     {id: 1, name: 'Light City', roast: 'light'},
     {id: 2, name: 'Half City', roast: 'light'},
@@ -137,35 +135,31 @@ var coffees = [
     {id: 14, name: 'French', roast: 'dark'},
 ];
 
-// coffees.createCoffee = function (e){
-//     e.preventDefault();
-//     let coffeeInput = coffeeAdd.value;
-//     let selectedRoast = selectionAdd.value;
-//     this.push({id: coffees.length-1, name: coffeeInput, roast: selectedRoast});
-//     console.log(coffees);
-// }
-// coffees.createCoffee();
-
-
 
 var tbody = document.querySelector('#coffees');
 var submitButton = document.querySelector('#submit');
 var roastSelection = document.querySelector('#roast-selection');
 const coffeeSearch = document.getElementById ("coffee-search");
-
 const selectionAdd = document.querySelector('#add-roast');
 const coffeeAdd = document.getElementById("new-coffee");
 const submitNew = document.getElementById("submit-new-coffee");
 
-tbody.innerHTML = renderCoffees(coffees);
 
+
+
+//Puts the Coffees Object into the html document//
+tbody.innerHTML = renderCoffees(coffees);
+//-----Roast Selection dropdown menu-----//
 roastSelection.addEventListener('change', updateCoffees);
 
-submitButton.addEventListener('click', updateCoffees);
-//---Coffee Name input---//
+//---Coffee Search Name input Field-----//
 coffeeSearch.addEventListener('keyup', findCoffee);
 
+//---Submit button for choose coffee Section----//
+submitButton.addEventListener('click', updateCoffees);
+
+//--Coffee add submit button----------//
 submitNew.addEventListener('click', createCoffees);
         
       
-
+})();
