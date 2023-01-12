@@ -1,8 +1,8 @@
 "use strict"
 function renderCoffee(coffee) {
     let html = '<div class="coffee col-6 d-flex align-items-end">';
-    html += `<h1 class="coffee-name">` + coffee.name + `</h1>`;
-    html +=  `<p style="color: grey">` + coffee.roast + `</p>`;
+    html += `<h1 class="coffee-name text-white ">` + coffee.name + `</h1>`;
+    html +=  `<p style="color: black">` + coffee.roast + `</p>`;
     html += '</div>';
 
     return html;
@@ -91,5 +91,6 @@ submitButton.addEventListener('click', updateCoffees);
 roastSelection.addEventListener(`change`, updateCoffees);
 coffeeInput.addEventListener(`keyup`, updateCoffeesNames);
 submitButton2.addEventListener(`click`, addName)
+roastSelection.addEventListener(`change`,changeBg)
 
 
