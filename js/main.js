@@ -20,30 +20,20 @@
         return html;
     }
 
-// SPECIFY COFFEE BY COFFEE NAME //
-    function coffeeSearch(e) {
-        e.preventDefault();
-        let inputSearch = searchInput.value.toLowerCase();
+    // SPECIFY COFFEE BY COFFEE NAME //
+    function coffeeSearch() {
+        tbody.innerHTML = '';
         let selectedRoast = roastSelection.value;
+        let inputSearch = searchInput.value.toLowerCase();
         let filteredCoffees = [];
-        coffees.forEach(function (coffee) {
-            if (inputSearch === '' && selectedRoast === 'all') {
+        coffees.forEach(function(coffee) {
+            if ((coffee.roast === selectedRoast || selectedRoast === 'all') &&
+                coffee.name.toLowerCase().includes(inputSearch)) {
                 filteredCoffees.push(coffee)
-            } else {
-                if (inputSearch === '' && coffee.roast === selectedRoast) {
-                    filteredCoffees.push(coffee)
-                } else if (inputSearch !== '' && selectedRoast === 'all') {
-                    if (coffee.name.toLowerCase().includes(inputSearch)) {
-                        filteredCoffees.push(coffee)
-                    }
-                } else if (inputSearch !== '' && coffee.roast === selectedRoast) {
-                    if (coffee.name.toLowerCase().includes(inputSearch)) {
-                        filteredCoffees.push(coffee)
-                    }
-                }
+                tbody.innerHTML = renderCoffees(filteredCoffees);
             }
-            tbody.innerHTML = renderCoffees(filteredCoffees);
-        })
+
+        });
     }
 
 
@@ -71,13 +61,36 @@
     let submitButton = document.querySelector('#submit');
     let roastSelection = document.querySelector('#roast-selection');
 
-// EVENT LISTENER TO UPDATE SEARCH INPUT //
-    searchInput.addEventListener("keyup", coffeeSearch);
 
-// ADDS SEARCH RESULTS TO HTML //
+    // ADDS SEARCH RESULTS TO HTML //
     tbody.innerHTML = renderCoffees(coffees);
 
-// EVENT LISTENER TO SPECIFY ROAST //
-    submitButton.addEventListener('click', coffeeSearch);
+    // EVENT LISTENER TO UPDATE SEARCH INPUT //
+    searchInput.addEventListener("keyup", coffeeSearch);
+
+    //EVENT LISTENER FOR SUBMIT BUTTON
+    submitButton.addEventListener('input', coffeeSearch);
+
+    // EVENT LISTENER TO SPECIFY ROAST //
+    roastSelection.addEventListener('input', coffeeSearch)
+
+
+
+
+    let addRoast = document.querySelector('#add-roast')
+    let addName = document.querySelector('#add-name')
+    let addSubmit = document.querySelector('#add-submit')
+
+
+    addRoast.addEventListener("input",function (){
+        console.log("hi")
+    })
+    addName.addEventListener('keyup',function (){
+        console.log("hi")
+    })
+    addSubmit.addEventListener('click',function (){
+        console.log("hi")
+    })
+
 
 })();
