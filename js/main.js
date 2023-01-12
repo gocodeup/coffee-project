@@ -36,6 +36,18 @@
         });
     }
 
+    function addCoffee(e){
+        e.preventDefault()
+        let roastValue = addRoast.value
+        let nameValue = addName.value
+        let newCoffee = {id: coffees.length + 1, name: nameValue, roast:roastValue}
+        coffees.push(newCoffee)
+        return coffeeSearch(newCoffee)
+
+        console.log(coffees)
+    }
+
+
 
 // from http://www.ncausa.org/About-Coffee/Coffee-Roasts-Guide
     // COFFEE LIST//
@@ -82,15 +94,12 @@
     let addSubmit = document.querySelector('#add-submit')
 
 
-    addRoast.addEventListener("input",function (){
-        console.log("hi")
-    })
-    addName.addEventListener('keyup',function (){
-        console.log("hi")
-    })
-    addSubmit.addEventListener('click',function (){
-        console.log("hi")
-    })
+    addSubmit.addEventListener('click',addCoffee)
+
+    // addRoast.addEventListener("input",addCoffee)
+    // addName.addEventListener('keyup',addCoffee)
+
+
 
 
 })();
