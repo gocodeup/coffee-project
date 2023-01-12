@@ -59,9 +59,9 @@
 // creates a html string for a single coffee
     function renderCoffee(coffee) {
         return `
-    <div class="coffee">
-     <div>${coffee.name}</div>
-     <div>${coffee.roast}</div>
+    <div id="coffees" class="row">
+     <div class="col-2 text-capitalize d-flex fs-4">${coffee.name}</div>
+     <div class="col-1">${coffee.roast}</div>
     </div>`;
     }
 
