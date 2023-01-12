@@ -7,5 +7,19 @@ td, th {
     border: 1px solid black;
     padding: 5px 10px;
 }
-
-
+.outline{
+    background-color: black;
+    padding: 1em;
+    justify-content: center;
+}
+.roast{
+    background-color: red;
+    font-size: 24px;
+}
+.name{
+    background-color: green;
+    font-size: 24px;
+}
+.wrapper{
+    display: 100vh;
+}
