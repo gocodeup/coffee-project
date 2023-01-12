@@ -20,7 +20,7 @@
         return html;
     }
 
-    // SPECIFY COFFEE BY COFFEE NAME //
+    // SPECIFY COFFEE//
     function coffeeSearch() {
         tbody.innerHTML = '';
         let selectedRoast = roastSelection.value;
@@ -86,6 +86,8 @@
 
     // EVENT LISTENER TO SPECIFY ROAST //
     roastSelection.addEventListener('input', coffeeSearch)
+
+
 
     // ADD COFFEE SECTION//
     let addRoast = document.querySelector('#add-roast')
