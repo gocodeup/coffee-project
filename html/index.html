@@ -7,64 +7,85 @@
     <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
+<div class = "page-wrapper">
 
-<div class ="container">
-    <h1 class = "text-center">Coffee!</h1>
-    <hr>
+    <!------NavBar----->
+           <nav class="nav-bar d-flex ">
+                <header>
+                    <a href="https://github.com/randychu7"class = "logo" target="_blank">Coffee!</a>
+                
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#">Coffees</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                    
+                </header>
+            </nav>    
+            <!----Top Section----->
+            <div class = "hero-page container-fluid">   
+                <div class = "hero">
+                    <div class ="info">
+                        <h1 style = "font-size: 2.9rem;" class = "mt-2">Wake up <br>with our premium blends.</h1>
+                        <div class = "coffee-info pt-3"> <p>"Get your daily fix of premium coffee at our shop. Sourced from top regions and roasted to perfection, our blends cater to every taste. Wake up and smell the coffee with us."
+                        </p></div>
+                    </div>
+                </div>
+                      <div class = "hero-image"><img src = "/images/Randy_a_coffee_shop_website_that_sells_various_coffee_ux_ui_use_d7f0eb8b-0b8c-402a-83e3-0114c5ff0fb4.png"></div>   
+             </div>   
+             
+             <!----------Main Page-------------->
+            <div class ="container-fluid col-12">
+                         
+                          <div class ="row mt-5 p-5 data-box">
+                                    <!-------Data Table------------->
+                                    <div class = "data-table col-8">
+                                                <table>                    
+                                                    <tbody id="coffees" class = "d-flex flex-wrap">
+                                                    </tbody>
 
-    <div class ="row">
+                                                </table>
+                                     </div>
+                                     <!-----------Form Group--------------------->
+                                    <div class = "container-formgroup col-4">
+                                            <div class = "container-form" style = "width:80%">
+                                                <form>
+                                                    <h2 class="text-center text-bold fs-4 fw-bold"> Choose a coffee</h2>
+                                                    <label class="form-label text-bold fw-bold">Roast</label>
+                                                    <label for="roast-selection"></label>
+                                                    <select class="form-select" id="roast-selection">
+                                                        <option id="all">all</option>
+                                                        <option id="light">light</option>
+                                                        <option id="medium">medium</option>
+                                                        <option id="dark">dark</option>
+                                                    </select>
 
-        <div class = " col-6  ">
-            
-            <table >
-            
-                <tbody id="coffees" class = "d-flex flex-wrap">
-           
-
-                </tbody>
-
-            </table>
-        </div>
-
-        <div class = "col-6 flex-row ">
-            <div class = "container-form ">
-                <form>
-                    <label class="form-label text-bold fw-bold">Roast</label>
-                    <label for="roast-selection"></label>
-                    <select class="form-select" id="roast-selection">
-                        <option id="all">all</option>
-                        <option id="light">light</option>
-                        <option id="medium">medium</option>
-                        <option id="dark">dark</option>
-                    </select>
-
-                    <label class="form-label text-bold fw-bold mt-2">Coffee Name</label>
-                    <input class="coffee-name form-control" id = "coffee-search">
-                    <input class="btn bg-primary color-white text-white mt-2" id="submit" type="submit" />
-
-                </form>
+                                                    <label class="form-label text-bold fw-bold mt-2">Coffee Name</label>
+                                                    <input class="coffee-name form-control" id = "coffee-search">
+                                                    <input class="btn mt-2" id="submit" style="color: white; background-color: #87683e;" type="submit" />
+                                                </form>
+                                            </div>
+                                            <hr>
+                                            <div class="container-form" style = "width:80%">
+                                                <h2 class="text-center text-bold fs-4 fw-bold"> Add a coffee</h2>
+                                                <form>
+                                                    <label class="form-label text-bold fw-bold">Roast</label>
+                                                    <label for="add-roast"></label>
+                                                    <select class="form-select" id="add-roast">
+                                                        <option id="light-add">light</option>
+                                                        <option id="medium-add">medium</option>
+                                                        <option id="dark-add">dark</option>
+                                                    </select>
+                                                    <label class="form-label text-bold fw-bold mt-2">Name</label>
+                                                    <input id="new-coffee" class="form-control">
+                                                    <input id="submit-new-coffee" class="btn mt-2" style="color: white; background-color: #87683E;" id="submit2" type="submit" />
+                                                </form>
+                                            </div>
+                                     </div>
+                </div>
             </div>
-            <hr>
-
-            <div class="container-form ">
-                <h2 class="text-center text-bold fs-4 fw-bold"> Add a coffee</h2>
-                <form>
-                    <label class="form-label text-bold fw-bold">Roast</label>
-                    <label for="add-roast"></label>
-                    <select class="form-select" id="add-roast">
-                        <option id="light-add">light</option>
-                        <option id="medium-add">medium</option>
-                        <option id="dark-add">dark</option>
-                    </select>
-                    <label class="form-label text-bold fw-bold mt-2">Name</label>
-                    <input id="new-coffee" class="form-control">
-                    <input id="submit-new-coffee" class="btn bg-primary color-white text-white mt-2" id="submit2" type="submit" />
-
-                </form>
-            </div>
         </div>
-    </div>
-</div>
 
 <script src="../js/main.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
