@@ -134,8 +134,6 @@
             let str = localStorage.getItem(`${i+1}`);
             //turns from a json string to an obj
             const parsedObj = JSON.parse(str);
-            // TODO: remove this console log
-            console.log(parsedObj)
             coffeeList.push(parsedObj);
         }
         return coffeeList;
