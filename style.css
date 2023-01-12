@@ -2,8 +2,8 @@
 * {
     font-family: 'Montserrat', sans-serif;
 }
-body {
-    background-image: url("img/farm.png");
+h1 {
+    font-size: 3em;
 }
 h1, h3 {
     padding-top: .5em;
@@ -32,7 +32,7 @@ h1, h3, label {
 }
     /*START KENBURNS BACKGROUND*/
 .bg-image {
-    min-height: 430px;
+    min-height: 100vh;
     position: relative;
     padding: 7px;
 }
@@ -47,7 +47,8 @@ h1, h3, label {
 }
 
 .kenburns {
-    opacity: 50%;
+    z-index: -10;
+    opacity: 75%;
     position: absolute;
     top: -999px;
     bottom: -999px;
