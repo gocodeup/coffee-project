@@ -34,10 +34,10 @@ tbody.innerHTML = renderCoffees(coffees);
 
 // -- Table Render-----
 function renderCoffee(coffee) {
-    var html = '<div class="coffee">';
+    var html = '<div class="coffee row outline">';
     // html += '<div>' + coffee.id + '</div>';
-    html += '<div>' + coffee.name + '</div>';
-    html += '<div>' + coffee.roast + '</div>';
+    html += '<div class="col-6 name">' + coffee.name + '</div>';
+    html += '<div class="col-6 roast">' + coffee.roast + '</div>';
     html += '</div>';
 
     return html;
