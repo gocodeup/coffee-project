@@ -88,9 +88,11 @@ var coffeeSearch = document.querySelector('#search-coffee')
 var roastAdd = document.querySelector('#roast-add')
 var addName = document.querySelector('#addName')
 var addButton = document.querySelector('#submitAdd')
-tbody.innerHTML = renderCoffees(coffees)
+tbody.innerHTML = renderCoffees(coffees);
+
 // Event listeners
 submitButton.addEventListener('click', updateCoffees)
 roastSelection.addEventListener('change', updateCoffees)
 coffeeSearch.addEventListener('keyup', updateCoffees)
 addButton.addEventListener('click', addCoffee)
+
