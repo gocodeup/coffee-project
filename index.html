@@ -15,21 +15,24 @@
 <div class="container">
 
     <div class="row">
-        <div class="col-6">
+        <div class="col-6 px-0">
             <div id="coffees"></div>
         </div>
 
         <div class="col-6">
             <div class="row">
-                <div class="col-12">
-                    <div class="col-12 mb-2 d-flex justify-content-center">
-                        <div><strong>Roast</strong></div>
-                        <div class="form-group" id="Roast_Search">
+                <div class="col-12 px-0">
+                    <div><strong>Roast</strong></div>
+                </div>
+                <div class="col-12 px-0">
+                    <div class="col-12 mb-2 mw-100">
+                        <div class="row">
+                        <div class="form-group col-12 mw-100" id="Roast_Search">
                             <!--search coffee section-->
-                            <form>
+                            <form >
                                 <!--    roast selection-->
                                 <label for="roast-selection"></label>
-                                <select id="roast-selection">
+                                <select class="form-select form-select-lg mb-3" id="roast-selection">
                                     <option>all</option>
                                     <option>light</option>
                                     <option>medium</option>
@@ -38,12 +41,13 @@
 
                             </form>
                         </div>
+                        </div>
                     </div>
 
                     <!--    coffee name selection-->
-                    <div class="col-12 mb-2 d-flex justify-content-center">
+                    <div class="col-12 mb-2 px-0">
                         <div class="row">
-                        <div class="col-12 d-flex justify-content-center"><label for="coffeeName"><strong>Coffee Name</strong> </label></div>
+                        <div class="col-5  mb-2 mx-0"><label for="coffeeName"><strong>Coffee Name</strong> </label></div>
                         <div class="col-12"><textarea class="form-control" id="coffeeName" rows="1"></textarea></div>
                         </div>
                     </div>
@@ -52,16 +56,20 @@
 
                 <hr>
                 <div class="col-12">
-                    <div class="col-4">
+                    <div class="row">
+                    <div class="col-12 d-flex justify-content-center mb-2">
                         <br/>
                         <h4> Add a Coffee!</h4>
 
                     </div>
-                    <div class="col-4" >
+                    <div class="col-12 px-0" >
+                        <div class="col-12 px-0">
+                            <div><strong>Roast</strong></div>
+                        </div>
                         <form>
                             <!--    roast to add-->
                             <label for="roastAdd"></label>
-                            <select id="roastAdd">
+                            <select class="form-select form-select-lg mb-3 px-0" id="roastAdd">
                                 <option>light</option>
                                 <option>medium</option>
                                 <option>dark</option>
@@ -69,13 +77,13 @@
                         </form>
                     </div>
                     <!--    coffee search-->
-                    <div class="form-group col-4">
-                        <label for="coffeeNameAdd"><strong>Coffee to Add</strong></label>
+                        <div class="col-4 px-0"><label for="coffeeName"><strong>Name</strong> </label></div>
+                    <div class="form-group col-12 mb-3 px-0">
                         <textarea class="form-control" id="coffeeNameAdd" rows="1"></textarea>
                     </div>
                     <input id="newCoffeeAdd" type="submit">
 
-
+                    </div>
                 </div>
             </div>
 
