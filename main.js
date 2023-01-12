@@ -1,7 +1,7 @@
 "use strict"
 function renderCoffee(coffee) {
     let html = '<div class="coffee col-6 d-flex align-items-end">';
-    html += `<h1>` + coffee.name + `</h1>`;
+    html += `<h1 class="coffee-name">` + coffee.name + `</h1>`;
     html +=  `<p style="color: grey">` + coffee.roast + `</p>`;
     html += '</div>';
 
