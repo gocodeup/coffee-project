@@ -16,7 +16,7 @@
 <main class="container"> <!-- START main container for all body elements -->
 
     <section class="container"> <!-- START web title text -->
-        <div class="d-flex justify-content-center m-5 fs-1" style="font-family: Italiana, sarif">
+        <div class="d-flex justify-content-center m-5 fs-1">
             <div class="main-header">
                 Cool Bean's Hot Brews
             </div>
@@ -25,9 +25,11 @@
 
     <section class="container"> <!-- START 'Coffee!' header -->
 
-        <div class="d-flex justify-content-center mb-5 fs-2" style="font-family: 'Cormorant SC', serif">
+        <div class="d-flex justify-content-center mb-5 fs-2">
             <p class="sub-header">Coffee!</p>
         </div>
+        <div class="d-none d-md-block custom-hr"></div>
+
 
     </section> <!-- END 'Coffee!' header -->
 
@@ -35,19 +37,19 @@
 
         <div class="coffee-box row"> <!-- START row for content -->
 
-            <div class="coffee-results search-results d-flex col-6"> <!-- START search results column (left) -->
-                <div class="d-flex" style="font-family: 'Cormorant SC', serif;">
-                    <div id="coffees" ></div>
+            <div class="coffee-results search-results d-flex col-8"> <!-- START search results column (left) -->
+                <div class="d-flex">
+                    <div id="coffees" class="row col-12" ></div>
                 </div>
             </div> <!-- END search results column (left) -->
 
-            <div class="search-form d-flex justify-content-center col-6"> <!-- START search form column (right) -->
+            <div class="search-form d-flex justify-content-end col-4"> <!-- START search form column (right) -->
                 <div class="coffee-form">
                     <div class="row">
                         <form>
                             <div class="row">
                                 <label class="rostOne p-0" for="roast-selection">Roast</label>
-                                <select id="roast-selection" class="fs-5" style="font-family: 'Cormorant SC', serif;">
+                                <select id="roast-selection" class="fs-5" >
                                     <option>all</option>
                                     <option>light</option>
                                     <option>medium</option>
@@ -60,11 +62,11 @@
                                 <input id="coffee-selection" type="text">
                             </div>
                             <div class="row">
-                                <input  id="submit" class="submit-coffee fs-5" style="font-family: 'Cormorant SC', serif;" type="submit" />
+                                <input  id="submit" class="submit-coffee fs-5" type="submit" />
                             </div>
                         </form>
                     </div>
-                    <div class="addCoffee row d-flex justify-content-center col-6" >
+                    <div class="addCoffee row d-flex justify-content-center align-content-center col-12 fs-5" >
                         Add a Coffee
                     </div>
                     <div class="new-coffee-form">
@@ -72,7 +74,7 @@
                             <form>
                                 <div class="row p-0">
                                     <label class="roast" for="new-roast">Roast</label>
-                                    <select id="new-roast" class="fs-5" style="font-family: 'Cormorant SC', serif;">
+                                    <select id="new-roast" class="fs-5">
                                         <option>light</option>
                                         <option>medium</option>
                                         <option>dark</option>
@@ -83,7 +85,7 @@
                                     <input id="new-coffee" type="text">
                                 </div>
                                 <div class="row">
-                                    <input  id="submit-new-coffee" class="submit-coffee fs-5" style="font-family: 'Cormorant SC', serif;" type="submit" />
+                                    <input  id="submit-new-coffee" class="submit-coffee fs-5" type="submit" />
                                 </div>
                             </form>
                         </div>
