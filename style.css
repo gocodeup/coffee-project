@@ -1,24 +1,19 @@
-table {
-    border-collapse: collapse;
-    margin: 15px 0;
-}
 
-td, th {
-    border: 1px solid black;
-    padding: 5px 10px;
-}
 .outline{
-    background-color: black;
+    background-color: #58705b;
     padding: 1em;
     justify-content: center;
+
 }
 .roast{
-    background-color: red;
+    color: white;
     font-size: 24px;
+    font-family: Chalkduster;
 }
 .name{
-    background-color: green;
+    color: white;
     font-size: 24px;
+    font-family: Chalkduster;
 }
 .wrapper{
     display: 100vh;
