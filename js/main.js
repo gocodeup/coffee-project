@@ -44,7 +44,7 @@ function updateCoffees(e) {
 
 function allChosen(){
     let coffeeNew = [];
-    let coffeeInput = coffeeSearch.value;
+    let coffeeInput = coffeeSearch.value.toLowerCase();
     
     coffees.forEach(function(coffee){
         if(coffee.name.toLowerCase().includes(coffeeInput)){
@@ -56,7 +56,7 @@ function allChosen(){
 //-----Functions that finds light coffees--//
 function lightChosen(){
     let coffeeNew = [];
-    let coffeeInput = coffeeSearch.value;
+    let coffeeInput = coffeeSearch.value.toLowerCase();
     coffees.forEach(function(coffee){
         if(coffee.name.toLowerCase().includes(coffeeInput) && coffee.roast === 'light'){
             coffeeNew.push(coffee);
@@ -67,7 +67,7 @@ function lightChosen(){
 //-----Functions that finds Medium--//
 function mediumChosen(){
     let coffeeNew = [];
-    let coffeeInput = coffeeSearch.value;
+    let coffeeInput = coffeeSearch.value.toLowerCase();
     coffees.forEach(function(coffee){
         if(coffee.name.toLowerCase().includes(coffeeInput) && coffee.roast === 'medium'){
             coffeeNew.push(coffee);
@@ -78,7 +78,7 @@ function mediumChosen(){
 //-----Functions that finds Dark Coffee--//
 function darkChosen(){
     let coffeeNew = [];
-    let coffeeInput = coffeeSearch.value;
+    let coffeeInput = coffeeSearch.value.toLowerCase();
     coffees.forEach(function(coffee){
         if(coffee.name.toLowerCase().includes(coffeeInput) && coffee.roast === 'dark'){
             coffeeNew.push(coffee);
@@ -86,10 +86,12 @@ function darkChosen(){
     });
     tbody.innerHTML = renderCoffees(coffeeNew);
 }
+
 //-----Functions that finds all the coffees--//
 function findCoffee(e){
     e.preventDefault();
     let selectedRoast = roastSelection.value;
+    
     if(selectedRoast === 'all'){
         allChosen();
     }else if(selectedRoast === 'light'){
@@ -101,21 +103,58 @@ function findCoffee(e){
     }
 }
 
-//---Function that Creates new Coffees---//
+
+// function toUpper(e){
+//     e.preventDefault();
+//     let coffeeArray = coffeeInput.split(" ");
+//     let coffeeInput = coffeeAdd.value;
+//     let coffeeString = '';
+//     for(var i=0; i<coffeeArray.length; i++){
+//         coffeeString += coffeeArray[i][0].toUpperCase() + coffeeArray[i].slice(1) + " ";
+//     }
+//     return coffeeString;
+// }
+
+
+
+
+
+// //---Function that Creates new Coffees---//
+// function createCoffees(e){
+//     e.preventDefault();
+//     let coffeeInput = coffeeAdd.value;
+//     let selectedRoast = selectionAdd.value;
+
+
+//     coffees.push({
+//         id: coffees.length+1,
+//         name: coffeeInput,
+//         roast: selectedRoast
+//     });
+
+//     tbody.innerHTML = renderCoffees(coffees);
+// }
+
 function createCoffees(e){
     e.preventDefault();
     let coffeeInput = coffeeAdd.value;
     let selectedRoast = selectionAdd.value;
+    
+    let coffeeArray = coffeeInput.split(" ");
+    let coffeeString = '';
 
-
+    for(var i=0; i<coffeeArray.length; i++){
+        coffeeString += coffeeArray[i][0].toUpperCase() + coffeeArray[i].slice(1) + " ";
+    }
     coffees.push({
         id: coffees.length+1,
-        name: coffeeInput,
+        name: coffeeString,
         roast: selectedRoast
     });
 
     tbody.innerHTML = renderCoffees(coffees);
 }
+
 
 //------------Array Data-------------//
 var coffees = [
