@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>Coffee Project</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Italiana&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Cormorant+SC:wght@300&display=swap" rel="stylesheet">
 </head>
@@ -16,36 +16,29 @@
 <main class="container"> <!-- START main container for all body elements -->
 
     <section class="container"> <!-- START web title text -->
-        <div class="d-flex justify-content-center m-5 fs-1 text-color-" style="font-family: Italiana, sarif">
-            <div class="title-text">
-                Kailan's Brews
+        <div class="d-flex justify-content-center m-5 fs-1" style="font-family: Italiana, sarif">
+            <div class="main-header">
+                Cool Bean's Hot Brews
             </div>
         </div>
     </section> <!-- END web title text -->
 
     <section class="container"> <!-- START 'Coffee!' header -->
 
-        <div class="d-flex justify-content-center mb-5 fs-1" style="font-family: 'Cormorant SC', serif">
-            <p class="table-title">Coffee!</p>
+        <div class="d-flex justify-content-center mb-5 fs-2" style="font-family: 'Cormorant SC', serif">
+            <p class="sub-header">Coffee!</p>
         </div>
 
     </section> <!-- END 'Coffee!' header -->
 
     <section class="container"> <!-- START table title, form, and table (with search results) -->
 
-        <div class="row"> <!-- START row for content -->
+        <div class="coffee-box row"> <!-- START row for content -->
 
-            <div class="search-results d-flex justify-content-center col-6"> <!-- START search results column (left) -->
-                <table class="table table-hover table-bordered fs-5" style="font-family: 'Cormorant SC', serif;">
-                    <thead>
-                    <tr>
-                        <th hidden="hidden">ID</th>
-                        <th>NAME</th>
-                        <th>ROAST</th>
-                    </tr>
-                    </thead>
-                    <tbody id="coffees"></tbody>
-                </table>
+            <div class="coffee-results search-results d-flex col-6"> <!-- START search results column (left) -->
+                <div class="d-flex" style="font-family: 'Cormorant SC', serif;">
+                    <div id="coffees" ></div>
+                </div>
             </div> <!-- END search results column (left) -->
 
             <div class="search-form d-flex justify-content-center col-6"> <!-- START search form column (right) -->
@@ -53,7 +46,7 @@
                     <div class="row">
                         <form>
                             <div class="row">
-                                <label for="roast-selection">Roast</label>
+                                <label class="rostOne p-0" for="roast-selection">Roast</label>
                                 <select id="roast-selection" class="fs-5" style="font-family: 'Cormorant SC', serif;">
                                     <option>all</option>
                                     <option>light</option>
@@ -62,23 +55,23 @@
                                 </select>
                             </div>
                             <div class="row">
-                                <label for="coffee-selection">Coffee Name</label>
-                            <!-- Edit input to update displayed coffees as user types -->
+                                <label class="rostOne p-0" for="coffee-selection">Coffee Name</label>
+                                <!-- Edit input to update displayed coffees as user types -->
                                 <input id="coffee-selection" type="text">
                             </div>
                             <div class="row">
-                                <input  id="submit" class="fs-5" style="font-family: 'Cormorant SC', serif;" type="submit" />
+                                <input  id="submit" class="submit-coffee fs-5" style="font-family: 'Cormorant SC', serif;" type="submit" />
                             </div>
                         </form>
                     </div>
-                    <div class="row d-flex justify-content-center col-6">
+                    <div class="addCoffee row d-flex justify-content-center col-6" >
                         Add a Coffee
                     </div>
                     <div class="new-coffee-form">
                         <div class="row">
                             <form>
-                                <div class="row">
-                                    <label for="new-roast">Roast</label>
+                                <div class="row p-0">
+                                    <label class="roast" for="new-roast">Roast</label>
                                     <select id="new-roast" class="fs-5" style="font-family: 'Cormorant SC', serif;">
                                         <option>light</option>
                                         <option>medium</option>
@@ -90,20 +83,20 @@
                                     <input id="new-coffee" type="text">
                                 </div>
                                 <div class="row">
-                                    <input  id="submit-new-coffee" class="fs-5" style="font-family: 'Cormorant SC', serif;" type="submit" />
+                                    <input  id="submit-new-coffee" class="submit-coffee fs-5" style="font-family: 'Cormorant SC', serif;" type="submit" />
                                 </div>
                             </form>
                         </div>
-                </div>
+                    </div>
 
-            </div> <!-- END search form column (right) -->
+                </div> <!-- END search form column (right) -->
 
-        </div><!-- START row for content -->
-
+            </div><!-- START row for content -->
+        </div>
     </section> <!-- START table title, form, and table (with search results) -->
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
-    <script src="main.js"></script>
+    <script src="js/main.js"></script>
 
 </main> <!-- END main container for all body elements -->
 </body>
