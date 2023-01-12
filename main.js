@@ -76,3 +76,27 @@ function updateCoffees(e) {
     tbody.innerHTML = renderCoffees(filteredCoffees);
 }//this filters the list to show only what is desired.
 
+// document.querySelectorAll("#email-form.div-email").addEventListener("submit", function(e) {
+//     e.preventDefault();
+//     this.style.display = "none";
+// });
+// $(document).ready(function() {
+//     const form = document.querySelector("#email-form.div-email");
+//     form.addEventListener("submit", function(e) {
+//         e.preventDefault();
+//         this.style.display = "none";
+//     });
+// });
+
+
+
+// function shiftElementsOver(arr) {
+//     let last = arr[arr.length - 1];
+//     for (let i = arr.length - 1; i > 0; i--) {
+//         arr[i] = arr[i - 1];
+//     }
+//     arr[0] = last;
+//     return arr;
+// }
+//
+// console.log(shiftElementsOver(["mary","john","tito"]))

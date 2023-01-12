@@ -3,27 +3,33 @@
     place-content: center;
 }
 
-/*body {*/
-/*    background-image: linear-gradient(to right, #1e5799 0%, #2989d8 50%, #207cca 51%, #7db9e8 100%);*/
-/*    background-size: cover;*/
-/*    animation: gradient-animation 5s ease-in-out infinite;*/
-/*}*/
+body {
+    background: linear-gradient(270deg, #f5f5dc, #8b5e3c);
+    background-size: 600% 600%;
+    -webkit-animation: Gradient 5s ease-in infinite;
+    -moz-animation: Gradient 5s ease-in infinite;
+    animation: Gradient 5s ease-in infinite;
+}
 
-/*@keyframes gradient-animation {*/
-/*    0% {*/
-/*        background-position: 0% 50%;*/
-/*    }*/
-/*    50% {*/
-/*        background-position: 100% 50%;*/
-/*    }*/
-/*    100% {*/
-/*        background-position: 0% 50%;*/
-/*    }*/
-/*}*/
 
+@-webkit-keyframes Gradient {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+@-moz-keyframes Gradient {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+@keyframes Gradient {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
 
 hr {
-    width: 90%;
+    width: 80%;
     opacity:60%;
 }
 
@@ -69,16 +75,70 @@ input[type="button"]  {
  #coffees {
      display: flex;
      flex-direction: column;
-     height: 50vh;
+     height: 68vh;
      flex-wrap: wrap;
+     margin-left: 20px;
  }
  .coffee {
      display: inline-flex;
  }
 p {
-     margin-top:27px;
+     margin-top:13px;
      margin-left: 10px;
      color: darkgray;
 }
 
+img {
+    height:120px;
+    width:120px ;
+    border-radius: 20%;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    margin-top: 10px;
+    margin-left: 20px;
+}
 
+
+.title-div {
+    height: 20vh;
+}
+/*#email-form {*/
+/*display: grid;*/
+/*    place-content: center;*/
+/*}*/
+
+
+/*.email-h2 {*/
+/*    margin-left: 50px;*/
+/*    margin-top: 20px;*/
+/*}*/
+
+/*.div-email {*/
+/*    height:200px ;*/
+/*    width: 600px;*/
+/*    position: absolute;*/
+/*    top: 50%;*/
+/*    left: 50%;*/
+/*    transform: translate(-50%, -50%);*/
+/*    background: linear-gradient(270deg, #f5f5dc, #8b5e3c);*/
+/*    background-size: 600% 600%;*/
+/*    -webkit-animation: Gradient 5s ease-in infinite;*/
+/*    -moz-animation: Gradient 5s ease-in infinite;*/
+/*    animation: Gradient 5s ease-in infinite;*/
+/*}*/
+
+
+/*@-webkit-keyframes Gradient {*/
+/*    0%{background-position:0% 50%}*/
+/*    50%{background-position:100% 50%}*/
+/*    100%{background-position:0% 50%}*/
+/*}*/
+/*@-moz-keyframes Gradient {*/
+/*    0%{background-position:0% 50%}*/
+/*    50%{background-position:100% 50%}*/
+/*    100%{background-position:0% 50%}*/
+/*}*/
+/*@keyframes Gradient {*/
+/*    0%{background-position:0% 50%}*/
+/*    50%{background-position:100% 50%}*/
+/*    100%{background-position:0% 50%}*/
+/*}*/
