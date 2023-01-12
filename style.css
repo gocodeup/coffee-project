@@ -1,9 +1,9 @@
 .page-wrapper{
     min-height: 100vh;
 }
-table {
-    border-collapse: collapse;
-    margin: 15px 0;
+
+table, caption, tbody, tfoot, thead, tr, th, td {
+    all: unset;
 }
 
 .submit-btn{
