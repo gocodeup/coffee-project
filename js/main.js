@@ -21,7 +21,7 @@
     }
 
 // SPECIFY COFFEE BY COFFEE NAME //
-    function updateCoffeesType(e) {
+    function coffeeSearch(e) {
         e.preventDefault();
         let inputSearch = searchInput.value.toLowerCase();
         let filteredCoffees = [];
@@ -35,21 +35,17 @@
     }
 
     // SPECIFY COFFEE BY ROAST //
-    function updateCoffees(e) {
+    function coffeeRoast(e) {
         e.preventDefault(); //
         let selectedRoast = roastSelection.value;
         let filteredCoffees = [];
-        if (selectedRoast === 'all') {
-            coffees.forEach(function (coffee) {
+        coffees.forEach(function (coffee){
+            if(coffee.roast === selectedRoast){
+                filteredCoffees.push(coffee)
+            } else if (roastSelection.value === 'all'){
                 filteredCoffees.push(coffee);
+            }
             });
-        } else if (selectedRoast !== 'all') {
-            coffees.forEach(function (coffee) {
-                if (coffee.roast === selectedRoast) {
-                    filteredCoffees.push(coffee);
-                }
-            });
-        }
         tbody.innerHTML = renderCoffees(filteredCoffees);
     }
 
@@ -78,12 +74,12 @@
     let roastSelection = document.querySelector('#roast-selection');
 
 // EVENT LISTENER TO UPDATE SEARCH INPUT //
-    searchInput.addEventListener("keyup", updateCoffeesType);
+    searchInput.addEventListener("keyup", coffeeSearch);
 
 // ADDS SEARCH RESULTS TO HTML //
     tbody.innerHTML = renderCoffees(coffees);
 
 // EVENT LISTENER TO SPECIFY ROAST //
-    submitButton.addEventListener('click', updateCoffees);
+    submitButton.addEventListener('click', coffeeRoast);
 
 })();
