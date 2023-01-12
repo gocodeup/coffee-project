@@ -10,6 +10,7 @@
 <body>
 <div class="container">
 
+    <!--HEADING-->
     <div class="header d-flex justify-content-center">
         <h1>Coffee!</h1>
     </div>
@@ -19,7 +20,7 @@
     <div class="container1">
         <div class="row">
 
-
+            <!--COFFEE LIST -->
             <div class="col-6">
 
                 <div class="table">
@@ -32,14 +33,17 @@
 
             </div>
 
-
+            <!--START OF COFFEE SELECTORS-->
             <div class="col-6">
 
                 <div class="row">
+
+                    <!--COFFEE SEARCH-->
                     <div class="col-12">
                         <form autocomplete="off">
                             <label for="roast-selection"></label>
 
+                            <!--COFFEE ROAST DROPDOWN-->
                             <h5>Roast</h5>
                             <select id="roast-selection" class="w-100 p-2 mb-4">
                                 <option>all</option>
@@ -48,11 +52,13 @@
                                 <option>dark</option>
                             </select>
 
+                            <!--COFFEE NAME SEARCH -->
                             <label class="w-100">
                                 <span class="fs-5 fw-bold">Coffee Name</span>
                                 <input type="text" id="search-input" placeholder="Search" class="w-100 p-2 mb-4">
                             </label>
 
+                            <!--COFFEE SEARCH SUBMIT BUTTON-->
                             <input id="submit" type="submit"
                                    class="submit-button w-100 p-2 mb-2 bg-primary text-white"/>
 
@@ -63,12 +69,14 @@
                 </div>
 
                 <hr>
-
+                <!--ADD COFFEE SECTION -->
 
                 <div class="row">
                     <div class="col-12">
                         <h2 class="text-center">Add a Coffee</h2>
                         <form>
+
+                            <!--ADD ROAST SELECTION-->
                             <label for="roast-selection"></label>
 
                             <h5>Roast</h5>
@@ -79,11 +87,12 @@
                                 <option>dark</option>
                             </select>
 
+                            <!--ADD COFFEE NAME-->
                             <label class="w-100">
                                 <span class="fs-5 fw-bold">Name</span>
                                 <input type="text" id="add-name" class="w-100 p-2 mb-4">
                             </label>
-
+                            <!--NEW COFFEE SUBMIT BUTTON-->
                             <input id="add-submit" type="submit"
                                    class="submit-button w-100 p-2 mb-2 bg-primary text-white"/>
                         </form>
