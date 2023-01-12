@@ -26,7 +26,7 @@
         let selectedRoast = roastSelection.value;
         let inputSearch = searchInput.value.toLowerCase();
         let filteredCoffees = [];
-        coffees.forEach(function(coffee) {
+        coffees.forEach(function (coffee) {
             if ((coffee.roast === selectedRoast || selectedRoast === 'all') &&
                 coffee.name.toLowerCase().includes(inputSearch)) {
                 filteredCoffees.push(coffee)
@@ -36,17 +36,17 @@
         });
     }
 
-    function addCoffee(e){
+// ADD NEW COFFEE//
+    function addCoffee(e) {
         e.preventDefault()
         let roastValue = addRoast.value
         let nameValue = addName.value
-        let newCoffee = {id: coffees.length + 1, name: nameValue, roast:roastValue}
+        let newCoffee = {id: coffees.length + 1, name: nameValue, roast: roastValue}
         coffees.push(newCoffee)
         return coffeeSearch(newCoffee)
 
         console.log(coffees)
     }
-
 
 
 // from http://www.ncausa.org/About-Coffee/Coffee-Roasts-Guide
@@ -68,6 +68,7 @@
         {id: 14, name: 'French', roast: 'dark'},
     ];
 
+    //COFFEE SELECTION//
     let tbody = document.querySelector('#coffees');
     let searchInput = document.querySelector('#search-input')
     let submitButton = document.querySelector('#submit');
@@ -86,20 +87,13 @@
     // EVENT LISTENER TO SPECIFY ROAST //
     roastSelection.addEventListener('input', coffeeSearch)
 
-
-
-
+    // ADD COFFEE SECTION//
     let addRoast = document.querySelector('#add-roast')
     let addName = document.querySelector('#add-name')
     let addSubmit = document.querySelector('#add-submit')
 
-
-    addSubmit.addEventListener('click',addCoffee)
-
-    // addRoast.addEventListener("input",addCoffee)
-    // addName.addEventListener('keyup',addCoffee)
-
-
+    // ADD COFFEE SUBMIT BUTTON//
+    addSubmit.addEventListener('click', addCoffee)
 
 
 })();
