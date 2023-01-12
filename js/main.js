@@ -24,30 +24,28 @@
     function coffeeSearch(e) {
         e.preventDefault();
         let inputSearch = searchInput.value.toLowerCase();
-        let filteredCoffees = [];
-        coffees.forEach(function (coffee) {
-            if (coffee.name.toLowerCase().includes(inputSearch)) {
-                filteredCoffees.push(coffee);
-                console.log(filteredCoffees);
-                tbody.innerHTML = renderCoffees(filteredCoffees);
-            }
-        });
-    }
-
-    // SPECIFY COFFEE BY ROAST //
-    function coffeeRoast(e) {
-        e.preventDefault(); //
         let selectedRoast = roastSelection.value;
         let filteredCoffees = [];
-        coffees.forEach(function (coffee){
-            if(coffee.roast === selectedRoast){
+        coffees.forEach(function (coffee) {
+            if (inputSearch === '' && selectedRoast === 'all') {
                 filteredCoffees.push(coffee)
-            } else if (roastSelection.value === 'all'){
-                filteredCoffees.push(coffee);
+            } else {
+                if (inputSearch === '' && coffee.roast === selectedRoast) {
+                    filteredCoffees.push(coffee)
+                } else if (inputSearch !== '' && selectedRoast === 'all') {
+                    if (coffee.name.toLowerCase().includes(inputSearch)) {
+                        filteredCoffees.push(coffee)
+                    }
+                } else if (inputSearch !== '' && coffee.roast === selectedRoast) {
+                    if (coffee.name.toLowerCase().includes(inputSearch)) {
+                        filteredCoffees.push(coffee)
+                    }
+                }
             }
-            });
-        tbody.innerHTML = renderCoffees(filteredCoffees);
+            tbody.innerHTML = renderCoffees(filteredCoffees);
+        })
     }
+
 
 // from http://www.ncausa.org/About-Coffee/Coffee-Roasts-Guide
     // COFFEE LIST//
@@ -80,6 +78,6 @@
     tbody.innerHTML = renderCoffees(coffees);
 
 // EVENT LISTENER TO SPECIFY ROAST //
-    submitButton.addEventListener('click', coffeeRoast);
+    submitButton.addEventListener('click', coffeeSearch);
 
 })();
