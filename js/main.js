@@ -23,7 +23,7 @@ var coffees = [
 
 var tbody = document.querySelector('#coffees');
 var submitButton = document.querySelector('#submit');
-var addButton = document.querySelector('#addbutton');
+var addButton = document.querySelector('#addButton');
 var roastSelection = document.querySelector('#roast-selection');
 var searchBar = document.querySelector('#coffeeSearch');
 
@@ -35,7 +35,6 @@ tbody.innerHTML = renderCoffees(coffees);
 // -- Table Render-----
 function renderCoffee(coffee) {
     var html = '<div class="coffee row outline">';
-    // html += '<div>' + coffee.id + '</div>';
     html += '<div class="col-6 name">' + coffee.name + '</div>';
     html += '<div class="col-6 roast">' + coffee.roast + '</div>';
     html += '</div>';
