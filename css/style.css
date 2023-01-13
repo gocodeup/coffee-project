@@ -1,7 +1,7 @@
 
 .background-image{
 
-    background-image: url("./img/Coffee.jpg");
+    background-image: url("./../img/Coffee.jpg");
     background-size: cover;
     display: block;
     filter: blur(5px);
@@ -13,9 +13,6 @@
     right: 0;
     z-index: 1;
     background-position: center;
-    /*background-repeat: no-repeat;*/
-
-;
 }
 .container{
     position: relative;
