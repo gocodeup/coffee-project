@@ -4,11 +4,10 @@
 }
 
 body {
-    background: linear-gradient(270deg, #f5f5dc, #8b5e3c);
+    background: linear-gradient(45deg, #f5f5dc, #8b5e3c);
     background-size: 600% 600%;
     -webkit-animation: Gradient 5s ease-in infinite;
-    -moz-animation: Gradient 5s ease-in infinite;
-    animation: Gradient 5s ease-in infinite;
+
 }
 
 
@@ -17,16 +16,7 @@ body {
     50%{background-position:100% 50%}
     100%{background-position:0% 50%}
 }
-@-moz-keyframes Gradient {
-    0%{background-position:0% 50%}
-    50%{background-position:100% 50%}
-    100%{background-position:0% 50%}
-}
-@keyframes Gradient {
-    0%{background-position:0% 50%}
-    50%{background-position:100% 50%}
-    100%{background-position:0% 50%}
-}
+
 
 hr {
     width: 80%;
@@ -94,7 +84,7 @@ img {
     border-radius: 20%;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     margin-top: 10px;
-    margin-left: 20px;
+    margin-left: 120px;
 }
 
 

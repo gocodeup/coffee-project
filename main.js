@@ -50,9 +50,7 @@ function createCoffee(){
     var form = document.querySelector("form");
     form.addEventListener("submit", function(event) {
         event.preventDefault(); // prevent the form from submitting
-        frm.submit(); // Submit the form
-        frm.reset();  // Reset all form data
-        return false; // Prevent page refresh
+        form.reset(); // clear all the form fields
     });
 
 
