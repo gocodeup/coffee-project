@@ -46,6 +46,15 @@ function createCoffee(){
     coffees.push(newCoffee);
     tbody.innerHTML = renderCoffees(coffees);
     localStorage.setItem('coffees', JSON.stringify(coffees));
+    document.querySelector("form").reset()
+    var form = document.querySelector("form");
+    form.addEventListener("submit", function(event) {
+        event.preventDefault(); // prevent the form from submitting
+        frm.submit(); // Submit the form
+        frm.reset();  // Reset all form data
+        return false; // Prevent page refresh
+    });
+
 
 
 }
