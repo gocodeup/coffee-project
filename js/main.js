@@ -4,7 +4,7 @@
     function renderCoffee(coffee) {
         var html = '<div class="coffee d-flex col-6">';
         html += '<div hidden="hidden">' + coffee.id + '</div>';
-        html += '<div class="px-3 fs-1">' + coffee.name  + '</div>';
+        html += '<div class="  fs-1">' + coffee.name  + '</div>';
         html += '<div class="px-2 pt-1 fs-3 ">' + coffee.roast + '</div>';
         html += '</div>';
         return html;

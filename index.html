@@ -24,28 +24,26 @@
     </section> <!-- END web title text -->
 
     <section class="container"> <!-- START 'Coffee!' header -->
-
         <div class="d-flex justify-content-center mb-5 fs-2">
             <p class="sub-header">Coffee!</p>
         </div>
         <div class="d-none d-md-block custom-hr"></div>
-
-
     </section> <!-- END 'Coffee!' header -->
 
     <section class="container"> <!-- START table title, form, and table (with search results) -->
 
         <div class="coffee-box row"> <!-- START row for content -->
 
-            <div class="coffee-results search-results d-flex col-8"> <!-- START search results column (left) -->
+            <div class="coffee-results search-results d-flex col-8 p-0 m-0"> <!-- START search results column (left) -->
                 <div class="d-flex">
-                    <div id="coffees" class="row col-12" ></div>
+                    <div id="coffees" class="row col-12 " ></div>
                 </div>
             </div> <!-- END search results column (left) -->
 
             <div class="search-form d-flex justify-content-end col-4"> <!-- START search form column (right) -->
                 <div class="coffee-form">
-                    <div class="row">
+
+                    <div class="row"> <!-- START coffee filter roast select and coffee filter -->
                         <form>
                             <div class="row">
                                 <label class="rostOne p-0" for="roast-selection">Roast</label>
@@ -58,18 +56,19 @@
                             </div>
                             <div class="row">
                                 <label class="rostOne p-0" for="coffee-selection">Coffee Name</label>
-                                <!-- Edit input to update displayed coffees as user types -->
                                 <input id="coffee-selection" type="text">
                             </div>
                             <div class="row">
                                 <input  id="submit" class="submit-coffee fs-5" type="submit" />
                             </div>
                         </form>
-                    </div>
-                    <div class="addCoffee row d-flex justify-content-center align-content-center col-12 fs-5" >
+                    </div> <!-- END coffee filter roast select and coffee filter -->
+
+                    <div class="addCoffee row d-flex justify-content-center align-content-center col-12 fs-3" > <!-- START 'ADD A COFFEE' line -->
                         Add a Coffee
-                    </div>
-                    <div class="new-coffee-form">
+                    </div><!-- START 'ADD A COFFEE' line -->
+
+                    <div class="new-coffee-form"> <!-- START add new coffee form -->
                         <div class="row">
                             <form>
                                 <div class="row p-0">
@@ -89,12 +88,11 @@
                                 </div>
                             </form>
                         </div>
-                    </div>
+                    </div> <!-- END add new coffee form -->
 
-                </div> <!-- END search form column (right) -->
-
-            </div><!-- START row for content -->
-        </div>
+                </div>
+            </div> <!-- END search form column (right) -->
+        </div> <!-- START row for content -->
     </section> <!-- START table title, form, and table (with search results) -->
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
