@@ -1,5 +1,7 @@
-'use strict'
 
+(function (){
+// localStorage.clear();
+'use strict'
 function renderCoffee(coffee) {
   let html =
     '<div class="coffee col-xl-6 col-lg-6 col-xs-12 col-sm-6 col-md-6 coffee d-flex">'
@@ -8,50 +10,33 @@ function renderCoffee(coffee) {
   html += '</div>'
   return html
 }
-function renderCoffees(coffees) {
-
-  let html = ''
-  for (let i = coffees.length - 1; i >= 0; i--) {
-    html += renderCoffee(coffees[i])
+// function renderCoffees(coffees) {
+  function renderCoffees(addToLocal) {
+  let html = '';
+  for (let i = 0; i < addToLocal.length; i++) {
+    html += renderCoffee(addToLocal[i]);
   }
   return html
 }
 
 function updateCoffees(e) {
   e.preventDefault() // don't submit the form, we just want to update the data
-
   let selectedRoast = roastSelection.value
-  let selectCoffeeOnSearch = coffeeSearch.value.toLowerCase()
+  let selectCoffeeOnSearch = coffeeSearch.value.toLowerCase();
   let filteredCoffees = []
-  if ((selectedRoast === 'all') && (selectCoffeeOnSearch === '')) {
-    coffees.forEach(function (coffee) {
-      filteredCoffees.push(coffee)
-    })
-  } else if ((selectedRoast === 'all') && (selectCoffeeOnSearch !== '')) {
-    coffees.forEach(function (coffee) {
-      if (coffee.name.toLowerCase().includes(selectCoffeeOnSearch)) {
+  addToLocal(coffees).forEach(function(coffee){
+    if ((selectedRoast === 'all'|| coffee.roast === selectedRoast) && (selectCoffeeOnSearch === '')) {
         filteredCoffees.push(coffee)
-      }
-    });
-  } else if (selectedRoast !== 'all') {
-    coffees.forEach(function (coffee) {
-      if ((coffee.roast === selectedRoast) && (selectCoffeeOnSearch === '')) {
-        filteredCoffees.push(coffee)
-      } else if (
-        (coffee.roast === selectedRoast) &&
-        (selectCoffeeOnSearch !== '')
-      ) {
+    } else if ((selectedRoast === 'all' || coffee.roast === selectedRoast) && (selectCoffeeOnSearch !== '')) {
         if (coffee.name.toLowerCase().includes(selectCoffeeOnSearch)) {
           filteredCoffees.push(coffee)
         }
-      }
-    });
-  }
-  tbody.innerHTML = renderCoffees(filteredCoffees);
-  // tbody.innerHTML = renderCoffees(getItemFromLocal);
+    } 
+  });
+  // tbody.innerHTML = renderCoffees(filteredCoffees);
+  //===============> Local Storage <===============
+  tbody.innerHTML = renderCoffees(addToLocal(filteredCoffees));
 }
-
-
 
 function addCoffee(e) {
   e.preventDefault()
@@ -66,21 +51,8 @@ function addCoffee(e) {
     roast: roast,
     });
   }
-  tbody.innerHTML = renderCoffees(coffees);
-  // tbody.innerHTML = renderCoffees(uploadToLocalStorage);
-}
-
-
-function exist(){ 
-  let existingName = addName.value;
-  existingName = existingName.charAt(0).toUpperCase() + existingName.slice(1);
-  coffees.forEach(function(coffee){
-  if(coffee.name === existingName){
-    alert("Exists");
-      // console.log(existingName);
-      // console.log(coffee.name);
-   }
- });
+  //===============> Local Storage <===============
+   tbody.innerHTML = renderCoffees(addToLocal(coffees));
 }
 
 // from http://www.ncausa.org/About-Coffee/Coffee-Roasts-Guide
@@ -102,8 +74,6 @@ let coffees = [
 ]
 
 
-let uploadToLocalStorage = localStorage.setItem('coffee', JSON.stringify(coffees));
-let getItemFromLocal = localStorage.getItem("coffee");
 let tbody = document.querySelector('#coffees')
 let submitButton = document.querySelector('#submit')
 let roastSelection = document.querySelector('#roast-selection')
@@ -112,12 +82,37 @@ let roastAdd = document.querySelector('#roast-add')
 let addName = document.querySelector('#addName')
 let addButton = document.querySelector('#submitAdd')
 
-tbody.innerHTML = renderCoffees(coffees);
+//===============> Local Storage <===============
+ let addToLocal = function (coffee){
+  let coffeeArrayToLocal = localStorage.setItem("id", JSON.stringify(coffee));
+  let getCoffeeFromLocal = JSON.parse(localStorage.getItem("id"));
+  return getCoffeeFromLocal;
+}
+//===============>Above is Local Storage <===============
+
+//=========> Bellow Will be worked on later <===========
+  // let addToLocal = function(list){
+  //   var coffeeList = [];
+  //   const getCoffeeStorage = localStorage.getItem('id');
+  //   if(getCoffeeStorage){
+  //     coffeeList = JSON.parse(localStorage.getItem('id'))
+  //     coffeeList.push(list)
+  //     localStorage.setItem('id', JSON.stringify(coffeeList))
+  //   } else{
+  //     coffeeList.push(list)
+  //     localStorage.setItem('id', JSON.stringify(coffeeList))
+  //   }
+  //   return coffeeList;
+  // }
+  //=========> Above Will be worked on later <===========
+
+tbody.innerHTML = renderCoffees(addToLocal(coffees));
 
 // Event listeners
 submitButton.addEventListener('click', updateCoffees)
 roastSelection.addEventListener('change', updateCoffees)
 coffeeSearch.addEventListener('keyup', updateCoffees)
 addButton.addEventListener('click', addCoffee)
-// addButton.addEventListener('click', exist);
+
+})();
 
