@@ -54,16 +54,63 @@
     const coffeeAdd = document.querySelector('#coffeeNameAdd');
     const submitCoffeeAdd = document.querySelector("#newCoffeeAdd");
 
+    //added eventlistener to make Roast, Coffee Size Bigger
+    const CoffeeRoastLarger =document.querySelectorAll("#CoffeeRoastList")
+    const CoffeeNameLarger  =document.querySelectorAll("#CoffeeNameList")
     submitCoffeeAdd.addEventListener("click", addCoffee);
+
+
 
 // creates a html string for a single coffee
     function renderCoffee(coffee) {
         return `
     <div id="coffees" class="row">
-     <div class="col-2 text-capitalize d-flex fs-4">${coffee.name}</div>
-     <div class="col-1">${coffee.roast}</div>
+     <div class="col-7 text-capitalize d-flex fs-4 text-light " id="CoffeeNameList">${coffee.name}</div>
+     <div class="col-5 text-light" id="CoffeeRoastList">${coffee.roast}</div>
     </div>`;
     }
+
+    //
+
+    // for loops to add evenlistern to every roast tag
+    for (var i=0;i<CoffeeRoastLarger.length;i++){
+        CoffeeRoastLarger[i].addEventListener("mouseover",Roasttextbigger)
+        CoffeeRoastLarger[i].addEventListener("mouseout", Roasttextnormal)
+        console.log(CoffeeRoastLarger[i],555)
+    }
+
+
+    //function to mouseout
+    function Roasttextnormal(event){
+        for (var i=0;i<CoffeeRoastLarger.length;i++){
+            CoffeeRoastLarger[i].classList.remove("h2")
+        }
+    }
+    //function for mouse over
+    function Roasttextbigger(event){
+        for (var i=0;i<CoffeeRoastLarger.length;i++){
+            CoffeeRoastLarger[i].classList.add("h2")
+        }}
+
+
+    for (var i=0;i<CoffeeNameLarger.length;i++){
+        CoffeeNameLarger[i].addEventListener("mouseover",Nametextlarger)
+        CoffeeNameLarger[i].addEventListener("mouseout", Nametextnormal)
+        console.log(CoffeeRoastLarger[i],555)
+    }
+
+    function Nametextlarger(event){
+        for (var i=0;i<CoffeeNameLarger.length;i++){
+            CoffeeNameLarger[i].classList.add("h2")
+        }
+    }
+
+    function Nametextnormal(event){
+        for (var i=0;i<CoffeeNameLarger.length;i++){
+            CoffeeNameLarger[i].classList.remove("h2")
+        }
+    }
+
 
 // connects the single coffee html into one html string
     function renderCoffees(coffees) {
@@ -76,11 +123,11 @@
 
 //updates coffee view to show filtered coffees from search and selected roast
     function updateCoffees(event) {
+
         event.preventDefault(); // don't submit the form, we just want to update the data
         let selectedRoast = roastSelection.value;
         let searchCoffee = coffeeSearch.value;
         let filteredCoffees = [];
-
         //if "all", will not check a roast value
         //otherwise if statement will check to make sure coffee item will match both roast and search
         coffeesLocalStorage.forEach(function(coffee) {
@@ -95,8 +142,9 @@
                 }
             }
         });
-
         coffeeView.innerHTML = renderCoffees(filteredCoffees);
+
+
     }
 
 //adds coffee to local storage
@@ -135,9 +183,11 @@
             //turns from a json string to an obj
             const parsedObj = JSON.parse(str);
             // TODO: remove this console log
-            console.log(parsedObj)
+            console.log(parsedObj,111)
             coffeeList.push(parsedObj);
         }
         return coffeeList;
     }
+
+
 })();
