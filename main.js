@@ -32,7 +32,13 @@ tbody.innerHTML = renderCoffees(coffees);
 roastSelection.addEventListener('input', updateCoffees);
 coffeeName.addEventListener('input', updateCoffees);
 submitButton2.addEventListener('click', createCoffee);
-//temp function
+
+var form = document.querySelector("form");
+form.addEventListener("submit", function(event) {
+    event.preventDefault(); // prevent the form from submitting
+    form.reset(); // clear all the form fields
+});
+//Functions here -------------
 function createCoffee(){
     var newRoast = coffeeAddition.value,
         newName = nameAddition.value,
@@ -46,24 +52,14 @@ function createCoffee(){
     coffees.push(newCoffee);
     tbody.innerHTML = renderCoffees(coffees);
     localStorage.setItem('coffees', JSON.stringify(coffees));
-    document.querySelector("form").reset()
-    var form = document.querySelector("form");
-    form.addEventListener("submit", function(event) {
-        event.preventDefault(); // prevent the form from submitting
-        form.reset(); // clear all the form fields
-    });
-
-
-
 }
+
 const retrievedObject = JSON.parse(localStorage.getItem("coffees"));
 if(retrievedObject !== null) {
     coffees = retrievedObject;
     tbody.innerHTML = renderCoffees(coffees);
 }
 
-
-//Functions here -------------
 function renderCoffee(coffee) {
     return `<div class="coffee">
               <h2>${coffee.name}</h2>
@@ -91,31 +87,4 @@ function updateCoffees(e) {
         });
     }
     tbody.innerHTML = renderCoffees(filteredCoffees);
-
-
-}//this filters the list to show only what is desired.
-
-// document.querySelectorAll("#email-form.div-email").addEventListener("submit", function(e) {
-//     e.preventDefault();
-//     this.style.display = "none";
-// });
-// $(document).ready(function() {
-//     const form = document.querySelector("#email-form.div-email");
-//     form.addEventListener("submit", function(e) {
-//         e.preventDefault();
-//         this.style.display = "none";
-//     });
-// });
-
-
-
-// function shiftElementsOver(arr) {
-//     let last = arr[arr.length - 1];
-//     for (let i = arr.length - 1; i > 0; i--) {
-//         arr[i] = arr[i - 1];
-//     }
-//     arr[0] = last;
-//     return arr;
-// }
-//
-// console.log(shiftElementsOver(["mary","john","tito"]))
+}

@@ -1,15 +1,8 @@
-.title {
-    display:grid;
-    place-content: center;
-}
-
 body {
     background: linear-gradient(45deg, #f5f5dc, #8b5e3c);
     background-size: 600% 600%;
     -webkit-animation: Gradient 5s ease-in infinite;
-
 }
-
 
 @-webkit-keyframes Gradient {
     0%{background-position:0% 50%}
@@ -17,9 +10,7 @@ body {
     100%{background-position:0% 50%}
 }
 
-
 hr {
-    width: 80%;
     opacity:60%;
 }
 
@@ -30,22 +21,24 @@ hr {
 }
 #left-div {
     grid-area: left;
-
 }
 
 /*div containing forms*/
 #right-div {
     grid-area: right;
 }
+
 .column {
     display: flex;
     flex-direction: column;
     padding: 0 100px 0 10px;
 }
+
 label {
     margin: 5px;
     font-weight: bold;
 }
+
 input[type="button"]  {
     color: white;
     background-color: rgb(59,137,201);
@@ -69,9 +62,11 @@ input[type="button"]  {
      flex-wrap: wrap;
      margin-left: 20px;
  }
+
  .coffee {
      display: inline-flex;
  }
+
 p {
      margin-top:13px;
      margin-left: 10px;
@@ -86,49 +81,3 @@ img {
     margin-top: 10px;
     margin-left: 120px;
 }
-
-
-.title-div {
-    height: 20vh;
-}
-/*#email-form {*/
-/*display: grid;*/
-/*    place-content: center;*/
-/*}*/
-
-
-/*.email-h2 {*/
-/*    margin-left: 50px;*/
-/*    margin-top: 20px;*/
-/*}*/
-
-/*.div-email {*/
-/*    height:200px ;*/
-/*    width: 600px;*/
-/*    position: absolute;*/
-/*    top: 50%;*/
-/*    left: 50%;*/
-/*    transform: translate(-50%, -50%);*/
-/*    background: linear-gradient(270deg, #f5f5dc, #8b5e3c);*/
-/*    background-size: 600% 600%;*/
-/*    -webkit-animation: Gradient 5s ease-in infinite;*/
-/*    -moz-animation: Gradient 5s ease-in infinite;*/
-/*    animation: Gradient 5s ease-in infinite;*/
-/*}*/
-
-
-/*@-webkit-keyframes Gradient {*/
-/*    0%{background-position:0% 50%}*/
-/*    50%{background-position:100% 50%}*/
-/*    100%{background-position:0% 50%}*/
-/*}*/
-/*@-moz-keyframes Gradient {*/
-/*    0%{background-position:0% 50%}*/
-/*    50%{background-position:100% 50%}*/
-/*    100%{background-position:0% 50%}*/
-/*}*/
-/*@keyframes Gradient {*/
-/*    0%{background-position:0% 50%}*/
-/*    50%{background-position:100% 50%}*/
-/*    100%{background-position:0% 50%}*/
-/*}*/
