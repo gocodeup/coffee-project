@@ -45,7 +45,17 @@ function createCoffee(){
         };
     coffees.push(newCoffee);
     tbody.innerHTML = renderCoffees(coffees);
+    localStorage.setItem('coffees', JSON.stringify(coffees));
+
+
 }
+const retrievedObject = JSON.parse(localStorage.getItem("coffees"));
+if(retrievedObject !== null) {
+    coffees = retrievedObject;
+    tbody.innerHTML = renderCoffees(coffees);
+}
+
+
 //Functions here -------------
 function renderCoffee(coffee) {
     return `<div class="coffee">
@@ -74,6 +84,8 @@ function updateCoffees(e) {
         });
     }
     tbody.innerHTML = renderCoffees(filteredCoffees);
+
+
 }//this filters the list to show only what is desired.
 
 // document.querySelectorAll("#email-form.div-email").addEventListener("submit", function(e) {
