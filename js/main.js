@@ -1,4 +1,5 @@
 
+(function () {
 
 "use strict"
 
@@ -94,3 +95,6 @@ function updateCoffees(e) {
 }
 
 roastSelection.addEventListener('mouseout' , updateCoffees);
+
+
+})();
