@@ -2,7 +2,7 @@
     "use strict"
 
 // TODO: maybe add a clear button for local storage
-// localStorage.clear();
+//localStorage.clear();
 
 // from http://www.ncausa.org/About-Coffee/Coffee-Roasts-Guide
 //our coffee samples
