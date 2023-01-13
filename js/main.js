@@ -2,7 +2,7 @@
     "use strict"
 
 // TODO: maybe add a clear button for local storage
-//localStorage.clear();
+// localStorage.clear();
 
 // from http://www.ncausa.org/About-Coffee/Coffee-Roasts-Guide
 //our coffee samples
@@ -54,15 +54,58 @@
     const coffeeAdd = document.querySelector('#coffeeNameAdd');
     const submitCoffeeAdd = document.querySelector("#newCoffeeAdd");
 
+//added eventlistener to make Roast, Coffee Size Bigger
+    const CoffeeRoastLarger =document.querySelectorAll("#CoffeeRoastList")
+    const CoffeeNameLarger  =document.querySelectorAll("#CoffeeNameList")
     submitCoffeeAdd.addEventListener("click", addCoffee);
 
 // creates a html string for a single coffee
     function renderCoffee(coffee) {
         return `
     <div id="coffees" class="row">
-     <div class="col-2 text-capitalize d-flex fs-4">${coffee.name}</div>
-     <div class="col-1">${coffee.roast}</div>
+     <div class="col-7 text-capitalize d-flex fs-4 text-light " id="CoffeeNameList">${coffee.name}</div>
+     <div class="col-5 text-light" id="CoffeeRoastList">${coffee.roast}</div>
     </div>`;
+    }
+
+// for loops to add evenlistern to every roast tag
+    for (var i=0;i<CoffeeRoastLarger.length;i++){
+        CoffeeRoastLarger[i].addEventListener("mouseover",Roasttextbigger)
+        CoffeeRoastLarger[i].addEventListener("mouseout", Roasttextnormal)
+        console.log(CoffeeRoastLarger[i],555)
+    }
+
+//function to mouseout
+    function Roasttextnormal(event){
+        for (var i=0;i<CoffeeRoastLarger.length;i++){
+            CoffeeRoastLarger[i].classList.remove("h2")
+        }
+    }
+
+//function for mouse over
+    function Roasttextbigger(event){
+        for (var i=0;i<CoffeeRoastLarger.length;i++){
+            CoffeeRoastLarger[i].classList.add("h2")
+        }}
+//event listener for coffee name
+    for (var i=0;i<CoffeeNameLarger.length;i++){
+        CoffeeNameLarger[i].addEventListener("mouseover",Nametextlarger)
+        CoffeeNameLarger[i].addEventListener("mouseout", Nametextnormal)
+        console.log(CoffeeRoastLarger[i],555)
+    }
+
+//change text to large
+    function Nametextlarger(event){
+        for (var i=0;i<CoffeeNameLarger.length;i++){
+            CoffeeNameLarger[i].classList.add("h2")
+        }
+    }
+
+//change text to normal size
+    function Nametextnormal(event){
+        for (var i=0;i<CoffeeNameLarger.length;i++){
+            CoffeeNameLarger[i].classList.remove("h2")
+        }
     }
 
 // connects the single coffee html into one html string
@@ -80,7 +123,6 @@
         let selectedRoast = roastSelection.value;
         let searchCoffee = coffeeSearch.value;
         let filteredCoffees = [];
-
         //if "all", will not check a roast value
         //otherwise if statement will check to make sure coffee item will match both roast and search
         coffeesLocalStorage.forEach(function(coffee) {
@@ -95,8 +137,9 @@
                 }
             }
         });
-
         coffeeView.innerHTML = renderCoffees(filteredCoffees);
+
+
     }
 
 //adds coffee to local storage
