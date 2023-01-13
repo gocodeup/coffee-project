@@ -1,3 +1,6 @@
+
+(function () {
+
 "use strict"
 
 // from http://www.ncausa.org/About-Coffee/Coffee-Roasts-Guide
@@ -92,3 +95,6 @@ function updateCoffees(e) {
 }
 
 roastSelection.addEventListener('mouseout' , updateCoffees);
+
+
+})();
