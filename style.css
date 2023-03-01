@@ -7,3 +7,9 @@ td, th {
     border: 1px solid black;
     padding: 5px 10px;
 }
+select {
+    width: 100%;
+}
+input {
+    width: 100%;
+}
