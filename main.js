@@ -1,6 +1,8 @@
 "use strict"
 
 // creates divs for each coffee
+
+
 function renderCoffee(coffee) {
     var html = '<div class="coffee col-6">';
     // html += '<td>' + coffee.id + '</td>';
@@ -25,11 +27,17 @@ function updateCoffees(e) {
     var selectedRoast = roastSelection.value;
     var filteredCoffees = [];
     coffees.forEach(function(coffee) {
-        if (coffee.roast === selectedRoast) {
+        if (coffee.roast === selectedRoast && (coffee.name == coffeeList)) {
+            filteredCoffees.push(coffee);
+        } else if (selectedRoast === 'All') {
             filteredCoffees.push(coffee);
         }
     });
     tbody.innerHTML = renderCoffees(filteredCoffees);
+    console.log(coffees[1].name == coffeeList);
+    console.log(typeof (coffeeList));
+    console.log(typeof ());
+
 }
 
 // from http://www.ncausa.org/About-Coffee/Coffee-Roasts-Guide
@@ -57,3 +65,10 @@ var roastSelection = document.querySelector('#roast-selection');
 tbody.innerHTML = renderCoffees(coffees);
 
 submitButton.addEventListener('click', updateCoffees);
+
+
+function coffeeList() {
+    document.getElementById('search').value;
+}
+let submit = document.getElementById('submit');
+submit.addEventListener('click', coffeeList);
