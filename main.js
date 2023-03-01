@@ -1,5 +1,17 @@
 "use strict"
 
+// based on input
+
+// grab the input text when that click happens
+// btn listens forclick
+// loop coffees
+// ***
+// // if coffee.titel == input, renderCoffees(ARR COFFEE IF MATCHES)
+// // then: render: that coffee
+
+
+
+// render /build 1 coffee
 function renderCoffee(coffee) {
     var html = '<tr class="coffee">';
     html += '<td>' + coffee.id + '</td>';
@@ -10,6 +22,7 @@ function renderCoffee(coffee) {
     return html;
 }
 
+// renders list of coffees
 function renderCoffees(coffees) {
     var html = '';
     for(var i = coffees.length - 1; i >= 0; i--) {
