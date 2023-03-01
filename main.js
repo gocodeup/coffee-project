@@ -1,5 +1,7 @@
 "use strict"
 
+
+// This function displays the table
 function renderCoffee(coffee) {
     var html = '<tr class="coffee">';
     html += '<td>' + coffee.id + '</td>';
@@ -10,6 +12,8 @@ function renderCoffee(coffee) {
     return html;
 }
 
+// Affects the array list
+
 function renderCoffees(coffees) {
     var html = '';
     for(var i = coffees.length - 1; i >= 0; i--) {
@@ -17,6 +21,8 @@ function renderCoffees(coffees) {
     }
     return html;
 }
+
+// This function affects search option, only renders what is selected from drop down menu
 
 function updateCoffees(e) {
     e.preventDefault(); // don't submit the form, we just want to update the data
@@ -48,10 +54,18 @@ var coffees = [
     {id: 14, name: 'French', roast: 'dark'},
 ];
 
+// Searches and returns the first element of the coffee id, can manipulate to pull all 14 ids
+
 var tbody = document.querySelector('#coffees');
+
+
 var submitButton = document.querySelector('#submit');
+
+// Drop down menu
 var roastSelection = document.querySelector('#roast-selection');
 
+// Changes innerHTML once you select the roast
 tbody.innerHTML = renderCoffees(coffees);
 
+// This is for the Coffee Name iput bar (Will use this for "Name" for Add a Coffee Section
 submitButton.addEventListener('click', updateCoffees);
