@@ -2,21 +2,71 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title></title>
+    <title>Coffee Project</title>
+    <!-- BOOTSTRAP LINK -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <!-- CSS LINK -->
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Coffee!</h1>
 
-    <form>
-        <label for="roast-selection"></label>
-        <select id="roast-selection">
-            <option>light</option>
-            <option>medium</option>
-            <option>dark</option>
-        </select>
-        <input id="submit" type="submit" />
-    </form>
+<!-- NAV BAR -->
+<nav class="navbar navbar-light bg-light ">
+    <div class="container-fluid d-flex justify-content-center">
+        <span class="navbar-brand mb-0 h1"><h1>Coffee!</h1></span>
+    </div>
+</nav>
+
+<div class="container">
+    <div class="row">
+        <div class="col">
+
+        </div>
+
+
+<!-- RIGHT COLUMN- DROPDOWNS AND SEARCH BOXES-->
+
+        <div class="col">
+            <div class="row">
+                <span>ROAST</span>
+                <div class="col-12">
+                    <select class="form-select bg-light" aria-label="Default select example">
+                        <option selected>All</option>
+                        <option value="1">Light</option>
+                        <option value="2">Medium</option>
+                        <option value="3">Dark</option>
+                    </select>
+                    <p>COFFEE NAME</p>
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+
+                    <div class="d-grid gap-2 my-3">
+                        <button class="btn btn-primary" type="button">Submit</button>
+                    </div>
+                </div>
+
+                <hr class="my-3">
+
+                <h2 class="text-center"> ADD A COFFEE</h2>
+
+                <span>ROAST</span>
+                <div class="col-12">
+                    <select class="form-select bg-light" aria-label="Default select example">
+                        <option selected>All</option>
+                        <option value="1">Light</option>
+                        <option value="2">Medium</option>
+                        <option value="3">Dark</option>
+                    </select>
+                    <p>COFFEE NAME</p>
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <div class="d-grid gap-2 my-3">
+                        <button class="btn btn-primary" type="button">Submit</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
 
     <table>
         <thead>
@@ -30,5 +80,7 @@
     </table>
 
     <script src="main.js"></script>
+<!-- JAVASCRIPT BOOTSTRAP LINK -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 </body>
 </html>
