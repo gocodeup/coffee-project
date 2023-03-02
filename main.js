@@ -1,21 +1,23 @@
 "use strict"
 
 function renderCoffee(coffee) {
+    // {id: 14, name: American, roast: medium}
     var html = '<div class="coffee d-flex align-items-baseline">';
-    html += '<div class="card">';
-    html += '<h2>' + coffee.name + '</h2>';
+    html += '<h2>' + coffee.name + '</h2>'; // '<div><div><h2>American</h2></div></div>'
     html += '<p>' + coffee.roast + '</p>';
     html += '</div>';
     html += '</div>';
 
-    return html;
+    return html; //'<div><div><h2>American</h2></div></div>'
 }
 
 function renderCoffees(coffees) {
     var html = '';
     for(var i = coffees.length - 1; i >= 0; i--) {
+        console.log(coffees[i]); // {id: 14, name: American, roast: medium}
         html += renderCoffee(coffees[i]);
     }
+    console.log(html) //'<div><div><h2>American</h2></div></div>'
     return html;
 }
 
@@ -26,11 +28,9 @@ function updateCoffees(e) {
 
     var filteredCoffees = [];
     coffees.forEach(function(coffee) {
-        // if (coffee.roast === selectedRoast) {
-        //     filteredCoffees.push(coffee);
-        // }
-        coffee.name.foreach(function (coffeeName){
-            console.log("test test");
+        if (coffee.roast === selectedRoast) {
+            filteredCoffees.push(coffee);
+        }
         })
     });
     tbody.innerHTML = renderCoffees(filteredCoffees);
@@ -57,33 +57,8 @@ var coffees = [
 var tbody = document.querySelector('#coffees');
 var submitButton = document.querySelector('#submit');
 var roastSelection = document.querySelector('#roast-selection');
+
 tbody.innerHTML = renderCoffees(coffees);
 submitButton.addEventListener('click', updateCoffees);
-const searchCoffee = document.querySelector("[data-search]")
 
-// This get value from search box HTML
-// searchCoffee.addEventListener("input", (e) => {
-//     const value = e.target.value;
-// });
-
-// coffees.forEach(function(name1) {
-//     searchCoffee.addEventListener("keydown", (e) => {
-//         const value = e.target.value;
-//         if (name1.name === value) {
-//             console.log("this is correct");
-//         } else {
-//             console.log("this int NOT");
-//         }
-//     });
-// });
-
-searchCoffee.addEventListener("input", (e) => {
-    const value = e.target.value.toLowerCase();
-    coffees.forEach(coffee => {
-        const coffeeSearchBar =
-        coffee.name.toLowerCase().includes(value) || coffee.roast.toLowerCase().includes(value)
-        coffees.id.classList.toggle('hide', !coffeeSearchBar)
-    })
-
-});
 
