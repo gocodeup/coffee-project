@@ -16,7 +16,7 @@ function renderCoffee(coffee) {
 
 function renderCoffees(coffees) {
     var html = ''; //affects the table contents
-    for(var i = coffees.length - 1; i >= 0; i--) { // looping through coffees array from 14 -> 0
+    for(var i = 0; i <= coffees.length - 1; i++) { // looping through coffees array from 14 -> 0
         console.log(coffees[i]);
         html += renderCoffee(coffees[i]); //affects the table contents
     }
@@ -24,6 +24,11 @@ function renderCoffees(coffees) {
 //     <div class="content col-6"><h2>american</h2></div> <div class="content col-6"><h2>espresso</h2></div>
     return html; //tells it what to print/show if not included result is undefined
 }
+// (var i < coffees.length) {
+//     console.log(coffees[i]);
+//     i++;
+// }
+
 
 // This function affects search option, only renders what is selected from drop down menu
 
