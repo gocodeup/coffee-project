@@ -1,8 +1,6 @@
 "use strict"
 
 // creates divs for each coffee
-
-
 function renderCoffee(coffee) {
 	let html = '<div class="coffee col-6 overflow-auto card">';
 	// html += '<td>' + coffee.id + '</td>';
@@ -13,6 +11,8 @@ function renderCoffee(coffee) {
 	return html;
 }
 
+
+
 // listing coffees in order
 function renderCoffees(coffees) {
 	let html = '';
@@ -22,38 +22,53 @@ function renderCoffees(coffees) {
 	return html;
 }
 
+
+// shows coffees by roast type from the local storage
 function updateCoffees(e) {
 	e.preventDefault(); // don't submit the form, we just want to update the data
 	let selectedRoast = roastSelection.value;
 	let filteredCoffees = [];
 	let x = JSON.parse(localStorage.getItem('newCoffeesList'));
-	x.forEach(function (coffee) {
-		
-		if (coffee.roast === selectedRoast || selectedRoast === 'All') {
-			filteredCoffees.push(coffee);
-		}
-		
-		// if (coffee.roast === selectedRoast && (coffee.name === searchCoffee.value)) {
-		// 	filteredCoffees.push(coffee);
-		// } else if (selectedRoast === 'All') {
-		// 	filteredCoffees.push(coffee);
-		// }
-	});
+	if(localStorage.getItem("newCoffeesList") === null) {
+		coffees.forEach(function (coffee) {
+			if (coffee.roast === selectedRoast || selectedRoast === 'All') {
+				filteredCoffees.push(coffee);
+			}
+		});
+	} else {
+		x.forEach(function (coffee) {
+			if (coffee.roast === selectedRoast || selectedRoast === 'All') {
+				filteredCoffees.push(coffee);
+			}
+		});
+	}
 	tbody.innerHTML = renderCoffees(filteredCoffees);
 }
 
+
+
+//shows coffees by name from local storage
 function shownCoffee(e) {
 	e.preventDefault();
 	let userInput = searchCoffee.value;
 	let lowerCaseInput = userInput.toLowerCase();
 	let filteredCoffees = [];
 	let x = JSON.parse(localStorage.getItem('newCoffeesList'));
-	x.forEach(function (coffee) {
-		let namedCoffee = (coffee.name).toLowerCase();
-		if (namedCoffee.indexOf(lowerCaseInput) > -1) {
-			filteredCoffees.push(coffee);
-		}
-	});
+	if(localStorage.getItem("newCoffeesList") === null) {
+		coffees.forEach(function (coffee) {
+			let namedCoffee = (coffee.name).toLowerCase();
+			if (namedCoffee.indexOf(lowerCaseInput) > -1) {
+				filteredCoffees.push(coffee);
+			}
+		});
+	} else {
+		x.forEach(function (coffee) {
+			let namedCoffee = (coffee.name).toLowerCase();
+			if (namedCoffee.indexOf(lowerCaseInput) > -1) {
+				filteredCoffees.push(coffee);
+			}
+		});
+	}
 	tbody.innerHTML = renderCoffees(filteredCoffees);
 }
 
@@ -86,7 +101,7 @@ tbody.innerHTML = renderCoffees(coffees.reverse());
 
 // submitButton.addEventListener('click', updateCoffees);
 
-
+//on keyup 'refreshes' coffee list
 let searchCoffee = document.getElementById('search');
 searchCoffee.addEventListener('keyup', shownCoffee);
 
@@ -97,12 +112,17 @@ let roastType = document.getElementById('roastType');
 let addSubmit = document.getElementById('newCoffee');
 addSubmit.addEventListener('click', addNewCoffee);
 
+
+
 window.addEventListener('load', newList);
 function newList() {
+	// localStorage.setItem('newCoffeesList', JSON.stringify(coffees));
 	let x = JSON.parse(localStorage.getItem('newCoffeesList'));
 	tbody.innerHTML = renderCoffees(x);
-
 }
+
+
+
 function addNewCoffee(e) {
 	e.preventDefault();
 	let newId = coffees.length +1;
@@ -112,6 +132,7 @@ function addNewCoffee(e) {
 	let filteredCoffees = [];
 	coffees.unshift(newCoffee);
 	tbody.innerHTML = renderCoffees(coffees);
+	console.log(coffees);
 	localStorage.setItem('newCoffeesList', JSON.stringify(coffees));
 	JSON.parse(localStorage.getItem('newCoffeesList'));
 }
