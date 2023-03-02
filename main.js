@@ -56,6 +56,17 @@ function shownCoffee(e) {
 	tbody.innerHTML = renderCoffees(filteredCoffees);
 }
 
+
+function newCoffee(name, roast) {
+	// this.name = addCoffee.value;
+	// this.roast = roastType.value;
+	return {
+		name: name,
+		roast: roast,
+	}
+}
+
+
 // from http://www.ncausa.org/About-Coffee/Coffee-Roasts-Guide
 let coffees = [
 	{id: 1, name: 'Light City', roast: 'light'},
@@ -88,3 +99,8 @@ searchCoffee.addEventListener('keyup', shownCoffee);
 
 roastSelection.addEventListener('change', updateCoffees);
 
+let addCoffee = document.getElementById('addCoffee');
+let roastType = document.getElementById('roastType');
+let addSubmit = document.getElementById('newCoffee');
+
+addSubmit.addEventListener('click', newCoffee);
