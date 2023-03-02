@@ -19,101 +19,22 @@
 
 <div class="container">
     <div class="row">
+
+
         <div class="col-6">
-            <div>
-<!--                <div id="coffees"></div>-->
-                <div class="container">
-                    <div id="light">
-                        <div class="card" id="1" style="width: auto; border:none">
-                            <div class="card-body">
-                                <span class="card-title fs-3">Light City</span>
-                                <span class="card-subtitle mb-2 text-muted ms-2"> Light</span>
-                            </div>
-                        </div>
-                        <div class="card" id="2" style="width: auto; border:none">
-                            <div class="card-body">
-                                <span class="card-title fs-3">Half City</span>
-                                <span class="card-subtitle mb-2 text-muted ms-2"> Light</span>
-                            </div>
-                        </div>
-                        <div class="card" id="3" style="width: auto; border:none">
-                            <div class="card-body">
-                                <span class="card-title fs-3">Cinnamon</span>
-                                <span class="card-subtitle mb-2 text-muted ms-2"> Light</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div id="medium">
-                        <div class="card" id="4" style="width: auto; border:none">
-                            <div class="card-body">
-                                <span class="card-title fs-3">City</span>
-                                <span class="card-subtitle mb-2 text-muted ms-2"> Light</span>
-                            </div>
-                        </div>
-                        <div class="card" id="5" style="width: auto; border:none">
-                            <div class="card-body">
-                                <span class="card-title fs-3">American</span>
-                                <span class="card-subtitle mb-2 text-muted ms-2"> Light</span>
-                            </div>
-                        </div>
-                        <div class="card" id="6" style="width: auto; border:none">
-                            <div class="card-body">
-                                <span class="card-title fs-3">Breakfast</span>
-                                <span class="card-subtitle mb-2 text-muted ms-2"> Light</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div id="dark">
-                        <div class="card" id="7" style="width: auto; border:none">
-                            <div class="card-body">
-                                <span class="card-title fs-3">High</span>
-                                <span class="card-subtitle mb-2 text-muted ms-2"> Light</span>
-                            </div>
-                        </div>
-                        <div class="card" id="8" style="width: auto; border:none">
-                            <div class="card-body">
-                                <span class="card-title fs-3">Continental</span>
-                                <span class="card-subtitle mb-2 text-muted ms-2"> Light</span>
-                            </div>
-                        </div>
-                        <div class="card" id="9" style="width: auto; border:none">
-                            <div class="card-body">
-                                <span class="card-title fs-3">New Orleans</span>
-                                <span class="card-subtitle mb-2 text-muted ms-2"> Light</span>
-                            </div>
-                        </div>
-                        <div class="card" id="10" style="width: auto; border:none">
-                            <div class="card-body">
-                                <span class="card-title fs-3">European</span>
-                                <span class="card-subtitle mb-2 text-muted ms-2"> Light</span>
-                            </div>
-                        </div>
-                        <div class="card" id="11" style="width: auto; border:none">
-                            <div class="card-body">
-                                <span class="card-title fs-3">Espresso</span>
-                                <span class="card-subtitle mb-2 text-muted ms-2"> Light</span>
-                            </div>
-                        </div>
-                        <div class="card" id="12" style="width: auto; border:none">
-                            <div class="card-body">
-                                <span class="card-title fs-3">Viennese</span>
-                                <span class="card-subtitle mb-2 text-muted ms-2"> Light</span>
-                            </div>
-                        </div>
-                        <div class="card" id="13" style="width: auto; border:none">
-                            <div class="card-body">
-                                <span class="card-title fs-3">Italian</span>
-                                <span class="card-subtitle mb-2 text-muted ms-2"> Light</span>
-                            </div>
-                        </div>
-                        <div class="card" id="14" style="width: auto; border:none">
-                            <div class="card-body">
-                                <span class="card-title fs-3">French</span>
-                                <span class="card-subtitle mb-2 text-muted ms-2"> Light</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+            <div class="row">
+                <table>
+                    <thead>
+                    <tr>
+<!--                        <th>ID</th>-->
+<!--                        <th>NAME</th>-->
+<!--                        <th>ROAST</th>-->
+                    </tr>
+                    </thead>
+                    <tbody id="coffees"></tbody>
+                </table>
+
+
             </div>
         </div>
 
@@ -124,15 +45,15 @@
             <div class="row">
                 <span>ROAST</span>
                 <div class="col-12">
-                    <select class="form-select bg-light" aria-label="Default select example">
+                    <select class="form-select bg-light" id="roast-selection" aria-label="Default select example">
                         <option selected>All</option>
-                        <option value="1">Light</option>
-                        <option value="2">Medium</option>
-                        <option value="3">Dark</option>
+                        <option class="roast-type1" value="1">Light</option>
+                        <option class="roast-type1" value="2">Medium</option>
+                        <option class="roast-type1" value="3">Dark</option>
                     </select>
                     <p>COFFEE NAME</p>
-                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-
+                    <input class="form-control me-2" type="text" placeholder="Search" id="submit" aria-label="Search">
+                    <!-- REMEMBER TO add this with DOM doc onkeyup="" -->
                     <div class="d-grid gap-2 my-3">
                         <button class="btn btn-primary" type="button">Submit</button>
                     </div>
@@ -144,7 +65,7 @@
 
                 <span>ROAST</span>
                 <div class="col-12">
-                    <select class="form-select bg-light" aria-label="Default select example">
+                    <select class="form-select bg-light roast-options" aria-label="Default select example">
                         <option selected>All</option>
                         <option value="1">Light</option>
                         <option value="2">Medium</option>
