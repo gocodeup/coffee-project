@@ -12,7 +12,6 @@ function renderCoffee(coffee) {
 
 function renderCoffees(coffees) {
     var html = '';
-    coffees.reverse()
     for(var i = coffees.length - 1; i >= 0; i--) {
         html += renderCoffee(coffees[i]);
     }
@@ -48,6 +47,7 @@ var coffees = [
     {id: 13, name: 'Italian', roast: 'dark'},
     {id: 14, name: 'French', roast: 'dark'},
 ];
+coffees.reverse()
 
 var tbody = document.querySelector('#coffees');
 var submitButton = document.querySelector('#submit');
