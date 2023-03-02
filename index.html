@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Coffee Project</title>
 	
 	<!--Bootstrap-->
@@ -11,18 +12,19 @@
 	<link rel="stylesheet" href="style.css">
 </head>
 <body>
-<div class="container text-center">
+<section>
+<div class="container card text-center">
 	
 	<h1>Coffee!</h1>
 
 </div>
-
+</section>
 <section class="container-fluid">
 	
 	<div class="row">
 		
-		<div class="col-6">
-			<form>
+		<div class="col col-md-6 card">
+			<form class="card-body">
 				<label for="roast-selection">Roast</label>
 				<select id="roast-selection">
 					<option>All</option>
@@ -36,7 +38,7 @@
 			</form>
 		</div>
 		
-		<div class="col-6">
+		<div class="col col-md-6">
 			<div class="row" id="coffees">
 				<!--populated by renderCoffee function-->
 			</div>

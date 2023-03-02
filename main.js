@@ -4,7 +4,7 @@
 
 
 function renderCoffee(coffee) {
-	let html = '<div class="coffee col-6 overflow-auto">';
+	let html = '<div class="coffee col-6 overflow-auto card">';
 	// html += '<td>' + coffee.id + '</td>';
 	html += '<h3>' + coffee.name + '</h3>';
 	html += '<p>' + coffee.roast + '</p>';
