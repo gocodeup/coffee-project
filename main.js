@@ -94,16 +94,6 @@ let roastType = document.getElementById('roastType');
 let addSubmit = document.getElementById('newCoffee');
 addSubmit.addEventListener('click', addNewCoffee);
 
-// function newCoffee(id, name, roast) {
-// 	this.id = coffees.length + 1;
-// 	this.name = name;
-// 	this.roast = roast
-// }
-//
-// function newCoffeeFunction(newId, addCoffee, roastType) {
-// 	let x = new newCoffee(newId, addCoffee, roastType);
-// 	coffees.push(x);
-// }
 
 function addNewCoffee(e) {
 	e.preventDefault();
