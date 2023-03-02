@@ -23,7 +23,7 @@ function renderCoffees(coffees) {
 }
 
 
-// shows coffees by roast type from the local storage
+// shows coffees by roast type from the coffees array or from the local storage if it exists
 function updateCoffees(e) {
 	e.preventDefault(); // don't submit the form, we just want to update the data
 	let selectedRoast = roastSelection.value;
@@ -47,7 +47,7 @@ function updateCoffees(e) {
 
 
 
-//shows coffees by name from local storage
+//shows coffees by name from the coffees array or from the local storage if it exists
 function shownCoffee(e) {
 	e.preventDefault();
 	let userInput = searchCoffee.value;
@@ -104,7 +104,7 @@ tbody.innerHTML = renderCoffees(coffees.reverse());
 //on keyup 'refreshes' coffee list
 let searchCoffee = document.getElementById('search');
 searchCoffee.addEventListener('keyup', shownCoffee);
-
+//refreshes list when there is change in the roast selection
 roastSelection.addEventListener('change', updateCoffees);
 
 let addCoffee = document.getElementById('addCoffee');
@@ -113,16 +113,16 @@ let addSubmit = document.getElementById('newCoffee');
 addSubmit.addEventListener('click', addNewCoffee);
 
 
-
+//on the load of the window the coffee list is loaded from the local storage
 window.addEventListener('load', newList);
 function newList() {
-	// localStorage.setItem('newCoffeesList', JSON.stringify(coffees));
 	let x = JSON.parse(localStorage.getItem('newCoffeesList'));
 	tbody.innerHTML = renderCoffees(x);
 }
 
 
 
+//adds users new coffee to the coffees array and stores the new array in local storage
 function addNewCoffee(e) {
 	e.preventDefault();
 	let newId = coffees.length +1;
@@ -137,5 +137,3 @@ function addNewCoffee(e) {
 	JSON.parse(localStorage.getItem('newCoffeesList'));
 }
 
-// console.log(JSON.stringify(coffees));
-// let coffeeString = JSON.stringify(coffees);
