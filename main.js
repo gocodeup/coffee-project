@@ -24,11 +24,6 @@ function renderCoffees(coffees) {
 //     <div class="content col-6"><h2>american</h2></div> <div class="content col-6"><h2>espresso</h2></div>
     return html; //tells it what to print/show if not included result is undefined
 }
-// (var i < coffees.length) {
-//     console.log(coffees[i]);
-//     i++;
-// }
-
 
 // This function affects search option, only renders what is selected from drop down menu
 
@@ -43,6 +38,8 @@ function updateCoffees(e) {
     });
     tbody.innerHTML = renderCoffees(filteredCoffees);
 }
+
+function coffeeNames
 
 // from http://www.ncausa.org/About-Coffee/Coffee-Roasts-Guide
 var coffees = [
@@ -62,6 +59,8 @@ var coffees = [
     {id: 14, name: 'French', roast: 'dark'},
 ];
 
+
+
 // Searches and returns the first element of the coffee id, can manipulate to pull all 14 ids
 
 var tbody = document.querySelector('#coffees');
@@ -76,3 +75,12 @@ var roastSelection = document.querySelector('#roast-selection');
 tbody.innerHTML = renderCoffees(coffees); // <div class="content col-6"><h2>american</h2></div>
 // This is for the Coffee Name iput bar (Will use this for "Name" for Add a Coffee Section
 submitButton.addEventListener('click', updateCoffees);
+
+
+// TO DO LIST
+
+// Add functionality to search through the coffees by name, and display only the coffees that match the provided search term (You will need to add an input field to the existing form for this)
+
+// Add functionality to update the displayed coffee as the user types into the search box, or as soon as they select an option from the select.
+
+
