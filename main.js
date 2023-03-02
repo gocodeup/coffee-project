@@ -1,23 +1,26 @@
 "use strict"
 
 function renderCoffee(coffee) {
+    // {id: 14, name: American, roast: medium}
     var html = '<div class="coffee d-flex align-items-baseline">';
-    html += '<div class="card">';
-    html += '<h2>' + coffee.name + '</h2>';
+    html += '<h2>' + coffee.name + '</h2>'; // '<div><div><h2>American</h2></div></div>'
     html += '<p>' + coffee.roast + '</p>';
     html += '</div>';
     html += '</div>';
 
-    return html;
+    return html; //'<div><div><h2>American</h2></div></div>'
 }
 
 function renderCoffees(coffees) {
     var html = '';
     for(var i = coffees.length - 1; i >= 0; i--) {
+        console.log(coffees[i]); // {id: 14, name: American, roast: medium}
         html += renderCoffee(coffees[i]);
     }
+    console.log(html) //'<div><div><h2>American</h2></div></div>'
     return html;
 }
+
 
 function updateCoffees(e) {
     e.preventDefault(); // don't submit the form, we just want to update the data
@@ -28,15 +31,7 @@ function updateCoffees(e) {
         if (coffee.roast === selectedRoast) {
             filteredCoffees.push(coffee);
         }
-        searchCoffee.addEventListener("input", (e) => {
-
-            const value = e.target.value;
-            if (name.name === value) {
-                filteredCoffees.push(name);
-                console.log("still working")
-            }
-        });
-
+        })
     });
     tbody.innerHTML = renderCoffees(filteredCoffees);
 };
@@ -62,8 +57,8 @@ var coffees = [
 var tbody = document.querySelector('#coffees');
 var submitButton = document.querySelector('#submit');
 var roastSelection = document.querySelector('#roast-selection');
-var addRoast = document.querySelector('#add-roast-selection');
-var addName = document.querySelector('#add-coffeeName')
+
 tbody.innerHTML = renderCoffees(coffees);
 submitButton.addEventListener('click', updateCoffees);
-const searchCoffee = document.querySelector("[data-search]")
+
+
