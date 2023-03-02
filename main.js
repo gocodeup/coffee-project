@@ -19,24 +19,19 @@ function renderCoffees(coffees) {
     return html;
 }
 
+
 function updateCoffees(e) {
     e.preventDefault(); // don't submit the form, we just want to update the data
     var selectedRoast = roastSelection.value;
 
     var filteredCoffees = [];
     coffees.forEach(function(coffee) {
-        if (coffee.roast === selectedRoast) {
-            filteredCoffees.push(coffee);
-        }
-        searchCoffee.addEventListener("input", (e) => {
-
-            const value = e.target.value;
-            if (name.name === value) {
-                filteredCoffees.push(name);
-                console.log("still working")
-            }
-        });
-
+        // if (coffee.roast === selectedRoast) {
+        //     filteredCoffees.push(coffee);
+        // }
+        coffee.name.foreach(function (coffeeName){
+            console.log("test test");
+        })
     });
     tbody.innerHTML = renderCoffees(filteredCoffees);
 };
@@ -62,8 +57,33 @@ var coffees = [
 var tbody = document.querySelector('#coffees');
 var submitButton = document.querySelector('#submit');
 var roastSelection = document.querySelector('#roast-selection');
-var addRoast = document.querySelector('#add-roast-selection');
-var addName = document.querySelector('#add-coffeeName')
 tbody.innerHTML = renderCoffees(coffees);
 submitButton.addEventListener('click', updateCoffees);
 const searchCoffee = document.querySelector("[data-search]")
+
+// This get value from search box HTML
+// searchCoffee.addEventListener("input", (e) => {
+//     const value = e.target.value;
+// });
+
+// coffees.forEach(function(name1) {
+//     searchCoffee.addEventListener("keydown", (e) => {
+//         const value = e.target.value;
+//         if (name1.name === value) {
+//             console.log("this is correct");
+//         } else {
+//             console.log("this int NOT");
+//         }
+//     });
+// });
+
+searchCoffee.addEventListener("input", (e) => {
+    const value = e.target.value.toLowerCase();
+    coffees.forEach(coffee => {
+        const coffeeSearchBar =
+        coffee.name.toLowerCase().includes(value) || coffee.roast.toLowerCase().includes(value)
+        coffees.id.classList.toggle('hide', !coffeeSearchBar)
+    })
+
+});
+
