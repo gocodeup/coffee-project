@@ -25,8 +25,8 @@ improvements to it.
 - When the page loads, the coffees should be sorted by their ids in ascending
   order
 
-- Add functionality to search through the coffees by name, and display only the
-  coffees that match the provided search term (You will need to add an input
+-  Add functionality to search through the coffees by name, and display only the
+  coffees that match the provided searchterm (You will need to add an input
   field to the existing form for this)
 
 - Add functionality to update the displayed coffee as the user types into the
