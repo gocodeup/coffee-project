@@ -14,7 +14,7 @@
         <div class="col-6">
             <form>
                 <div>
-                    <label for="roast-selection"><h6>Roast</h6></label><br>
+                    <label for="roast-selection">Roast</label><br>
                     <select id="roast-selection">
                         <option>all</option>
                         <option>light</option>
@@ -23,8 +23,10 @@
                     </select>
                 </div>
                 <br>
-                <label for="coffeeName"><h6>Coffee Name</h6></label><br>
-                <input type="text" id="coffeeName">
+                <div>
+                    <label for="search">Coffee Name</label><br>
+                    <input type="search" id="search" data-search>
+                </div>
                 <br>
                 <br>
                 <input class="d-grid gap-2 bg-primary text-white" id="submit" type="submit" />
@@ -60,6 +62,6 @@
         </div>
     </div>
 </div>
-    <script src="main.js"></script>
+    <script src="main.js" defer></script>
 </body>
 </html>
