@@ -8,10 +8,17 @@
           rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 </head>
 <body>
+
+    <h1 style="text-align:center">Coffee!</h1>
+    <h2>Testing!</h2>
+    <hr>
+    <form>
+
 <h1 style="text-align:center">Coffee!</h1>
 <hr>
 <form class="col-7">
     <div>
+
         <label for="roast-selection"></label>
         <select class="form-select" aria-label="Default select example" id="roast-selection">
             <option>light</option>
@@ -36,6 +43,28 @@
             <option>medium</option>
             <option>dark</option>
         </select>
+
+
+    <div class="divTable">
+        <div class="divTableHeading">
+            <div class="divTableRow">
+                <div class="divTableHead">NAME</div>
+                <div class="divTableHead">ROAST</div>
+            </div>
+        </div>
+        <div class="divTableBody" id="coffees"></div>
+    </div>
+
+<!--  /  <table>-->
+<!--        <thead>-->
+<!--            <tr>-->
+<!--                <th>ID</th>-->
+<!--                <th>NAME</th>-->
+<!--                <th>ROAST</th>-->
+<!--            </tr>-->
+<!--        </thead>-->
+<!--        <tbody id="coffees"></tbody>-->
+<!--    </table>-->
 
         <br>
         <br>
@@ -88,6 +117,7 @@
                 <span><p>dark</p></span>
             </tr>
         </table>
+
 
     </form>
 <!--    <tbody id="coffees"></tbody>-->
