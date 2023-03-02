@@ -1,9 +1,11 @@
-table {
-    border-collapse: collapse;
-    margin: 15px 0;
+
+/*[type=text] in case the search doesn't register what input specifically*/
+input [type=text]{
+    -webkit-transition: width 0.15s ease-in-out;
+    transition: width 0.15s ease-in-out;
 }
 
-td, th {
-    border: 1px solid black;
-    padding: 5px 10px;
+.coffee-type {
+    display: list-item;
 }
+
