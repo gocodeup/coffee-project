@@ -26,7 +26,8 @@ function updateCoffees(e) {
 	e.preventDefault(); // don't submit the form, we just want to update the data
 	let selectedRoast = roastSelection.value;
 	let filteredCoffees = [];
-	coffees.forEach(function (coffee) {
+	let x = JSON.parse(localStorage.getItem('newCoffeesList'));
+	x.forEach(function (coffee) {
 		
 		if (coffee.roast === selectedRoast || selectedRoast === 'All') {
 			filteredCoffees.push(coffee);
@@ -44,10 +45,10 @@ function updateCoffees(e) {
 function shownCoffee(e) {
 	e.preventDefault();
 	let userInput = searchCoffee.value;
-	let lowerCaseInput = userInput.toLowerCase()
+	let lowerCaseInput = userInput.toLowerCase();
 	let filteredCoffees = [];
-	let selectedRoast = roastSelection.value;
-	coffees.forEach(function (coffee) {
+	let x = JSON.parse(localStorage.getItem('newCoffeesList'));
+	x.forEach(function (coffee) {
 		let namedCoffee = (coffee.name).toLowerCase();
 		if (namedCoffee.indexOf(lowerCaseInput) > -1) {
 			filteredCoffees.push(coffee);
