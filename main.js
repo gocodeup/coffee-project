@@ -3,23 +3,26 @@
 
 // This function displays the table
 function renderCoffee(coffee) {
-    var html = '<tr class="coffee">';
-    html += '<td>' + coffee.id + '</td>';
-    html += '<td>' + coffee.name + '</td>';
-    html += '<td>' + coffee.roast + '</td>';
-    html += '</tr>';
-
+    console.log(coffee) //  {id: 14, name: american, roast: light}
+    // <div class="content col-6"><h2>american</h2></div>
+    var html = '<div class="content col-6">'; //controls the table
+    html += '<h2>' + coffee.name + '<span>' + coffee.roast + '</span>' + '</h2>'; //shows the name
+    html += '</div>';
+//    console.log(html);
     return html;
 }
 
 // Affects the array list
 
 function renderCoffees(coffees) {
-    var html = '';
-    for(var i = coffees.length - 1; i >= 0; i--) {
-        html += renderCoffee(coffees[i]);
+    var html = ''; //affects the table contents
+    for(var i = coffees.length - 1; i >= 0; i--) { // looping through coffees array from 14 -> 0
+        console.log(coffees[i]);
+        html += renderCoffee(coffees[i]); //affects the table contents
     }
-    return html;
+    console.log('html in renderCoffeeS: ', html)
+//     <div class="content col-6"><h2>american</h2></div> <div class="content col-6"><h2>espresso</h2></div>
+    return html; //tells it what to print/show if not included result is undefined
 }
 
 // This function affects search option, only renders what is selected from drop down menu
@@ -27,7 +30,7 @@ function renderCoffees(coffees) {
 function updateCoffees(e) {
     e.preventDefault(); // don't submit the form, we just want to update the data
     var selectedRoast = roastSelection.value;
-    var filteredCoffees = [];
+    var filteredCoffees = []; //affects the dropdown selection menu
     coffees.forEach(function(coffee) {
         if (coffee.roast === selectedRoast) {
             filteredCoffees.push(coffee);
@@ -65,7 +68,6 @@ var submitButton = document.querySelector('#submit');
 var roastSelection = document.querySelector('#roast-selection');
 
 // Changes innerHTML once you select the roast
-tbody.innerHTML = renderCoffees(coffees);
-
+tbody.innerHTML = renderCoffees(coffees); // <div class="content col-6"><h2>american</h2></div>
 // This is for the Coffee Name iput bar (Will use this for "Name" for Add a Coffee Section
 submitButton.addEventListener('click', updateCoffees);
