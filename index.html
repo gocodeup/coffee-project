@@ -8,20 +8,42 @@
           rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 </head>
 <body>
+
     <h1 style="text-align:center">Coffee!</h1>
     <h2>Testing!</h2>
     <hr>
     <form>
+
+<h1 style="text-align:center">Coffee!</h1>
+<hr>
+<form class="col-7">
+    <div>
+
         <label for="roast-selection"></label>
-        <select id="roast-selection">
+        <select class="form-select" aria-label="Default select example" id="roast-selection">
             <option>light</option>
             <option>medium</option>
             <option>dark</option>
         </select>
-        <input id="submit" type="submit" />
-        <div class="lightroast">
+
+        <br>
+        <br>
+        <div class="mb-3">
+            <label for="formGroupExampleInput" class="form-label"><strong>Coffee Name</strong></label>
+            <input type="text" class="form-control" id="formGroupExampleInput">
+            <input id="submit" type="submit" />
         </div>
-    </form>
+    </div>
+
+    <h1>Add A Coffee</h1>
+    <div class="col">
+        <label for="roast-selection"></label>
+        <select class="form-select" aria-label="Default select example" id="roast-selection">
+            <option>light</option>
+            <option>medium</option>
+            <option>dark</option>
+        </select>
+
 
     <div class="divTable">
         <div class="divTableHeading">
@@ -44,6 +66,64 @@
 <!--        <tbody id="coffees"></tbody>-->
 <!--    </table>-->
 
-    <script src="main.js"></script>
+        <br>
+        <br>
+        <!--        <div class="divTable">-->
+        <!--            <div class="divTableHeading">-->
+        <!--                <div class="divTableRow">-->
+        <!--                    <div class="divTableHead">NAME</div>-->
+        <!--                    <div class="divTableHead">ROAST</div>-->
+        <!--                </div>-->
+        <!--            </div>-->
+        <!--            <div class="divTableBody" id="coffees"></div>-->
+        <!--        </div>-->
+        <table id="Table">
+            <tbody id="coffees"></tbody>
+            <tr>
+                <!--            <tr>    {id: 1, name: 'Light City', roast: 'light'},-->
+                <!--                {id: 2, name: 'Half City', roast: 'light'},-->
+                <!--                {id: 3, name: 'Cinnamon', roast: 'light'},-->
+                <th class="lightCoffee"><h1>Light City</h1><th>
+                <span><p>light</p></span>
+                <th class="lightCoffee"><h1>Half City</h1><th>
+                <span><p>light</p></span>
+                <th class="lightCoffee"><h1>Cinnamon</h1><th>
+                <span><p>light</p></span>
+            </tr>
+            <tr>
+                <th class="mediumCoffee"><h1>City</h1><th>
+                <span><p>medium</p></span>
+                <th class="mediumCoffee"><h1>American</h1><th>
+                <span><p>medium</p></span>
+                <th class="mediumCoffee"><h1>Breakfast</h1><th>
+                <span><p>medium</p></span>
+            </tr>
+            <tr>
+                <th class="darkCoffee"><h1>Continental</h1><th>
+                <span><p>dark</p></span>
+                <th class="darkCoffee"><h1>New Orleans</h1><th>
+                <span><p>dark</p></span>
+                <th class="darkCoffee"><h1>Espresso</h1><th>
+                <span><p>dark</p></span>
+                <th class="darkCoffee"><h1>European</h1><th>
+                <span><p>dark</p></span>
+                <th class="darkCoffee"><h1>Viennese</h1><th>
+                <span><p>dark</p></span>
+                <th class="darkCoffee"><h1>High</h1><th>
+                <span><p>dark</p></span>
+                <th class="darkCoffee"><h1>French</h1><th>
+                <span><p>dark</p></span>
+                <th class="darkCoffee"><h1>Italian</h1><th>
+                <span><p>dark</p></span>
+            </tr>
+        </table>
+
+
+    </form>
+<!--    <tbody id="coffees"></tbody>-->
+</table>
+
+<script src="main.js"></script>
 </body>
 </html>
+

@@ -56,8 +56,9 @@ tbody.innerHTML = renderCoffees(coffees);
 
 submitButton.addEventListener('click', updateCoffees);
 
-var lightRoast = [
-    {id: 1, name: 'Light City', roast: 'light'},
-    {id: 2, name: 'Half City', roast: 'light'},
-    {id: 3, name: 'Cinnamon', roast: 'light'},
-    ]
+// var lightRoast = document.getElementById("lightRoast");
+// lightRoast.addEventListener("click", myFunction);
+// function myFunction(){
+//     lightRoast.style.backgroundColor= "blue"
+// }
+

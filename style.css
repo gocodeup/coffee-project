@@ -9,6 +9,7 @@ td, th {
 }
 
 
+
 .divTable{
 	display: table;
 	width: 100%;
@@ -38,3 +39,9 @@ td, th {
 .divTableBody {
 	display: table-row-group;
 }
+
+#coffees {
+    font-weight: bolder;
+    font-size: 2em;
+}
+
