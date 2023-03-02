@@ -10,25 +10,50 @@
 <body>
     <h1 style="text-align:center">Coffee!</h1>
     <hr>
-    <form>
+    <form class="col-7">
+        <div>
         <label for="roast-selection"></label>
-        <select id="roast-selection">
+        <select class="form-select" aria-label="Default select example" id="roast-selection">
             <option>light</option>
             <option>medium</option>
             <option>dark</option>
         </select>
-        <input id="submit" type="submit" />
-        <div class="lightroast">
+
+        <br>
+        <br>
+        <div class="mb-3">
+            <label for="formGroupExampleInput" class="form-label"><strong>Coffee Name</strong></label>
+            <input type="text" class="form-control" id="formGroupExampleInput">
+            <input id="submit" type="submit" />
+        </div>
+        </div>
+
+        <h1>Add A Coffee</h1>
+        <div class="col">
+            <label for="roast-selection"></label>
+            <select class="form-select" aria-label="Default select example" id="roast-selection">
+                <option>light</option>
+                <option>medium</option>
+                <option>dark</option>
+            </select>
+
+            <br>
+            <br>
+            <div class="mb-3">
+                <label for="formGroupExampleInput" class="form-label"><strong>Coffee Name</strong></label>
+                <input type="text" class="form-control" id="formGroupExampleInput">
+                <input id="submit" type="submit" />
+            </div>
+        </div>
         </div>
     </form>
-
-    <table>
+    <table class="col">
         <thead>
-            <tr>
-                <th>ID</th>
-                <th>NAME</th>
-                <th>ROAST</th>
-            </tr>
+        <tr>
+            <th id="th1">ID</th>
+            <th id="th2">NAME</th>
+            <th id="th3">ROAST</th>
+        </tr>
         </thead>
         <tbody id="coffees"></tbody>
     </table>
