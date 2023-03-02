@@ -1,40 +1,33 @@
 "use strict"
 
 function renderCoffee(coffee) {
-    // {id: 14, name: American, roast: medium}
-    var html = '<div class="coffee d-flex align-items-baseline">';
-    html += '<h2>' + coffee.name + '</h2>'; // '<div><div><h2>American</h2></div></div>'
+    var html = '<div class="coffee">';
+    html += '<h1>' + coffee.name + '</h1>';
     html += '<p>' + coffee.roast + '</p>';
     html += '</div>';
-    html += '</div>';
 
-    return html; //'<div><div><h2>American</h2></div></div>'
+    return html;
 }
 
 function renderCoffees(coffees) {
     var html = '';
     for(var i = coffees.length - 1; i >= 0; i--) {
-        console.log(coffees[i]); // {id: 14, name: American, roast: medium}
         html += renderCoffee(coffees[i]);
     }
-    console.log(html) //'<div><div><h2>American</h2></div></div>'
     return html;
 }
-
 
 function updateCoffees(e) {
     e.preventDefault(); // don't submit the form, we just want to update the data
     var selectedRoast = roastSelection.value;
-
     var filteredCoffees = [];
     coffees.forEach(function(coffee) {
         if (coffee.roast === selectedRoast) {
             filteredCoffees.push(coffee);
         }
-        })
     });
     tbody.innerHTML = renderCoffees(filteredCoffees);
-};
+}
 
 // from http://www.ncausa.org/About-Coffee/Coffee-Roasts-Guide
 var coffees = [
@@ -58,7 +51,22 @@ var tbody = document.querySelector('#coffees');
 var submitButton = document.querySelector('#submit');
 var roastSelection = document.querySelector('#roast-selection');
 
+var coffeeSelection = document.querySelector('#coffee-selection')
+
+
+coffeeSelection.addEventListener('input', e => {
+    var choosenCoffee = []
+    const searchValue = e.target.value.toLowerCase();
+    coffees.forEach(function (nameArray){
+        var lowerNameArray = nameArray.name.toLowerCase()
+
+        if (lowerNameArray.includes(searchValue)){
+
+            choosenCoffee.push(nameArray);
+        }
+    })
+        tbody.innerHTML = renderCoffees(choosenCoffee);
+})
 tbody.innerHTML = renderCoffees(coffees);
+
 submitButton.addEventListener('click', updateCoffees);
-
-
