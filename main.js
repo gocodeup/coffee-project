@@ -81,6 +81,8 @@ let roastSelection = document.querySelector('#roast-selection');
 
 tbody.innerHTML = renderCoffees(coffees.reverse());
 
+
+
 // submitButton.addEventListener('click', updateCoffees);
 
 
@@ -94,7 +96,12 @@ let roastType = document.getElementById('roastType');
 let addSubmit = document.getElementById('newCoffee');
 addSubmit.addEventListener('click', addNewCoffee);
 
+window.addEventListener('load', newList);
+function newList() {
+	let x = JSON.parse(localStorage.getItem('newCoffeesList'));
+	tbody.innerHTML = renderCoffees(x);
 
+}
 function addNewCoffee(e) {
 	e.preventDefault();
 	let newId = coffees.length +1;
@@ -103,5 +110,10 @@ function addNewCoffee(e) {
 	let newCoffee = {id: newId, name: newName, roast: newRoast};
 	let filteredCoffees = [];
 	coffees.unshift(newCoffee);
-	tbody.innerHTML = renderCoffees(coffees)
+	tbody.innerHTML = renderCoffees(coffees);
+	localStorage.setItem('newCoffeesList', JSON.stringify(coffees));
+	JSON.parse(localStorage.getItem('newCoffeesList'));
 }
+
+// console.log(JSON.stringify(coffees));
+// let coffeeString = JSON.stringify(coffees);
