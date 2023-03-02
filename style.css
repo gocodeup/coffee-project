@@ -7,3 +7,23 @@ td, th {
     border: 1px solid black;
     padding: 5px 10px;
 }
+
+h2 {
+    display: inline;
+
+ }
+
+span{
+    margin-left: .5em;
+    font-size:14px;
+    color: grey;
+}
+
+.content {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.row-rev {
+  flex-direction: row-reverse;
+}
