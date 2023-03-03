@@ -95,7 +95,7 @@ let tbody = document.querySelector('#coffees');
 let submitButton = document.querySelector('#submit');
 let roastSelection = document.querySelector('#roast-selection');
 
-// tbody.innerHTML = renderCoffees(coffees.reverse());
+tbody.innerHTML = renderCoffees(coffees.reverse());
 
 
 
@@ -125,15 +125,29 @@ function newList() {
 //adds users new coffee to the coffees array and stores the new array in local storage
 function addNewCoffee(e) {
 	e.preventDefault();
-	let newId = coffees.length +1;
-	let newName = addCoffee.value;
-	let newRoast = roastType.value;
-	let newCoffee = {id: newId, name: newName, roast: newRoast};
-	let filteredCoffees = [];
-	coffees.unshift(newCoffee);
-	tbody.innerHTML = renderCoffees(coffees);
-	console.log(coffees);
-	localStorage.setItem('newCoffeesList', JSON.stringify(coffees));
-	JSON.parse(localStorage.getItem('newCoffeesList'));
+
+	// localStorage.setItem('newCoffeesList', JSON.stringify(coffees)); //i think this is resetting the list
+	if(localStorage.getItem("newCoffeesList") === null) {
+		let newId = coffees.length +1;
+		let newName = addCoffee.value;
+		let newRoast = roastType.value;
+		let newCoffee = {id: newId, name: newName, roast: newRoast};
+		coffees.unshift(newCoffee); // ok ok so we add coffees to the array with  this BUT on reload the array is reset and line 134 is just using the reset array which is why everything resets
+		localStorage.setItem('newCoffeesList', JSON.stringify(coffees));
+		tbody.innerHTML = renderCoffees(coffees);
+	} else {
+		let newId = JSON.parse(localStorage.getItem('newCoffeesList')).length +1;
+		let newName = addCoffee.value;
+		let newRoast = roastType.value;
+		let newCoffee = {id: newId, name: newName, roast: newRoast};
+		coffees.unshift(newCoffee); // ok ok so we add coffees to the array with this BUT on reload the array is reset and line 134 is just using the reset array which is why everything resets.....FIXED
+		let z = JSON.parse(localStorage.getItem('newCoffeesList') || '[]');
+		z.unshift(newCoffee);
+		localStorage.setItem('newCoffeesList', JSON.stringify(z));  //well it's persisting...but it's loading weird
+
+
+	}
+	tbody.innerHTML = renderCoffees(JSON.parse(localStorage.getItem('newCoffeesList')));
+
 }
 

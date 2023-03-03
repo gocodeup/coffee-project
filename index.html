@@ -27,13 +27,14 @@
             <form class="card-body border">
                 <label for="roast-selection">Choice of Roast</label><br>
                 <select class="form-select" id="roast-selection">
+                    <option>Choice of Roast</option>
                     <option>All</option>
                     <option>light</option>
                     <option>medium</option>
                     <option>dark</option>
                 </select><br>
-<!--				used span to include tooltip        -->
-<!--				<label for="search">Coffee Name</label><br>-->
+                <!--				used span to include tooltip        -->
+                <!--				<label for="search">Coffee Name</label><br>-->
                 <span class="tt" data-bs-placement="top" title="Search our list of coffees by coffee name">
 				<div class="input-group">
                 <input class="btn btn-outline-secondary" id="submit" type="submit"/>
@@ -45,16 +46,19 @@
 
             <form class="card-body border">
                 <h3>You can also add your own coffee!</h3>
-                <label for="roastType">Roast</label><br>
-                <select id="roastType">
+                <label for="roastType">Choose the Roast of your Coffee</label><br>
+                <select class="form-select" id="roastType">
                     <option>light</option>
                     <option>medium</option>
                     <option>dark</option>
                 </select><br>
-                <label for="addCoffee">Add A New Coffee</label><br>
-				<span class="tt" data-bs-placement="right" title="Type in the coffee name you would like to add">
-					<input type="text" id="addCoffee" name="search"/><br></span>
-                <input id="newCoffee" type="submit"/>
+                <span class="tt" data-bs-placement="top" title="Type in the new coffee you would like to add">
+                    <div class="input-group">
+
+                <input class="btn btn-outline-secondary" id="newCoffee" type="submit"/>
+					<input class="form-control" placeholder="Coffee Name" type="text" id="addCoffee" name="search"/><br>
+                    </div>
+                </span>
             </form>
 
 
@@ -89,11 +93,11 @@
         crossorigin="anonymous"></script>
 <script src="main.js"></script>
 <script>
-	//finds all classes with the class tt and adds a new bootstrap.tooltip
+    //finds all classes with the class tt and adds a new bootstrap.tooltip
     const tooltips = document.querySelectorAll('.tt');
-	tooltips.forEach(x => {
-		new bootstrap.Tooltip(x);
-	})
+    tooltips.forEach(x => {
+        new bootstrap.Tooltip(x);
+    })
 </script>
 </body>
 </html>
