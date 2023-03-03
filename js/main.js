@@ -3,7 +3,7 @@
 
 // creates divs for each coffee
 	function renderCoffee(coffee) {
-		let html = '<div class="coffee col-6 overflow-auto card d-flex">';
+		let html = '<div class="coffee col-6 card">';
 		// html += '<td>' + coffee.id + '</td>';
 		html += '<h3 class="d-inline" >' + coffee.name + '</h3>';
 		html += '<p class="d-inline">' + coffee.roast + '</p>';

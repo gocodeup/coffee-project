@@ -13,9 +13,9 @@
 </head>
 <body>
 <section>
-	<div class="container text-center">
+	<div class="container mt-5">
 		
-		<h1>Coffee!</h1>
+		<h1 class="d-flex justify-content-center">Coffee!</h1>
 	
 	</div>
 </section>
@@ -23,45 +23,48 @@
 	
 	<div class="row">
 		
-		<div class="col-md-6 cards">
-			<form class="card">
-				<label class="card-title" for="roast-selection">Choice of Roast</label><br>
-				<select class="form-select card-body" id="roast-selection">
-					<option>Choice of Roast</option>
-					<option>All</option>
-					<option>light</option>
-					<option>medium</option>
-					<option>dark</option>
-				</select><br>
-				<!--				used span to include tooltip        -->
-				<span class="tt" data-bs-placement="top" title="Search our list of coffees by coffee name">
+		<div class="col-md-6 cards" id="user-menu">
+			<div class="card pb-3 mt-5">
+				<form class="card-body">
+					<h3 class="card-header">Search our coffees!</h3>
+					<label class="card-title" for="roast-selection">Choice of Roast</label><br>
+					<select class="form-select card-body" id="roast-selection">
+						<option>Choice of Roast</option>
+						<option>All</option>
+						<option>light</option>
+						<option>medium</option>
+						<option>dark</option>
+					</select><br>
+					<!--				used span to include tooltip        -->
+					<span class="tt" data-bs-placement="top" title="Search our list of coffees by coffee name">
 				<div class="input-group">
                 <input class="btn btn-outline-secondary" id="submit" type="submit"/>
                 <input class="form-control" placeholder="Coffee Name" type="text" id="search" name="search"/><br>
 				</div>
 				</span>
-			</form>
-			
-			<form class="card-body">
-				<h3>You can also add your own coffee!</h3>
-				<label for="roastType">Choose the Roast of your Coffee</label><br>
-				<select class="form-select" id="roastType">
-					<option>light</option>
-					<option>medium</option>
-					<option>dark</option>
-				</select><br>
-				<span class="tt" data-bs-placement="top" title="Type in the new coffee you would like to add">
+				</form>
+			</div>
+			<div class="card pb-3 mt-5">
+				<form class="card-body">
+					<h3 class="card-header">You can also add your own coffee!</h3>
+					<label for="roastType">Choose the Roast of your Coffee</label><br>
+					<select class="form-select" id="roastType">
+						<option>light</option>
+						<option>medium</option>
+						<option>dark</option>
+					</select><br>
+					<span class="tt" data-bs-placement="top" title="Type in the new coffee you would like to add">
                     <div class="input-group">
 
                 <input class="btn btn-outline-secondary" id="newCoffee" type="submit"/>
 					<input class="form-control" placeholder="Coffee Name" type="text" id="addCoffee" name="search"/><br>
                     </div>
                 </span>
-			</form>
-			
+				</form>
+			</div>
 		</div>
 		
-		<div class="col-md-6">
+		<div class="col-md-6 mt-5 overflow-scroll" id="coffee-div">
 			<div class="row overflow-auto" id="coffees">
 				<!--populated by renderCoffee function-->
 			</div>
