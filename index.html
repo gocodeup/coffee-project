@@ -10,11 +10,15 @@
 <h1>Coffee!</h1>
 <hr>
 <div class="container">
+
+    <!-- different coffees layout -->
     <div class="row">
         <div class="col-8 text-white bg-black opacity-50 rounded-4">
             <div class="d-flex justify-content-between flex-wrap" id="coffees"></div>
         </div>
         <div class="col-4 text-white">
+
+            <!-- form to select current menu of roasts and names -->
             <form>
                 <label class="d-flex" for="roast-selection">Roast</label>
                 <select id="roast-selection">
@@ -26,6 +30,7 @@
                 <label class="d-flex mt-1" for="coffee-selection">Coffee Name</label>
                 <input id="coffee-selection" type="input"/>
                 <input class="my-3 bg-warning text-white" id="submit" type="submit" />
+                <!-- form to add new roasts and names to menu -->
             </form>
             <h2><strong>Add a Coffee<strong></strong></h2>
             <form>
@@ -44,8 +49,10 @@
     </div>
 </div>
 
-
+<!-- BOOTSTRAP -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+
+<!-- JS -->
 <script src="main.js"></script>
 </body>
 </html>
