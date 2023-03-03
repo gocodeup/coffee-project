@@ -95,7 +95,7 @@ let tbody = document.querySelector('#coffees');
 let submitButton = document.querySelector('#submit');
 let roastSelection = document.querySelector('#roast-selection');
 
-tbody.innerHTML = renderCoffees(coffees.reverse());
+// tbody.innerHTML = renderCoffees(coffees.reverse());
 
 
 
