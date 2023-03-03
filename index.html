@@ -12,13 +12,15 @@
 <h1 class="d-flex justify-content-center">Coffee!</h1>
 
 <div class="row">
+    <div class="col">
     <div class="d-flex justify-content-end col">
     <form>
         <label for="roast-selection"></label>
         <select id="roast-selection">
-            <option>light</option>
-            <option>medium</option>
-            <option>dark</option>
+            <option value="all">all</option>
+            <option value="light">light</option>
+            <option value="medium">medium</option>
+            <option value="dark">dark</option>
         </select>
 
     </form>
@@ -27,25 +29,41 @@
             <input id="submit" type="submit"/>
         </form>
     </div>
-</div>
+        <!--ADD COFFEE -->
+    <div class="d-flex justify-content-end col">
+        <form>
+            <label for="roast-selection"></label>
+            <select id="roast-add">
+                <option value="light">light</option>
+                <option value="medium">medium</option>
+                <option value="dark">dark</option>
+            </select>
 
-<div class="col">
-<!--<table>-->
-<!--    <thead>-->
-<!--    <tr>-->
-<!--        <th>ID</th>-->
-<!--        <th>NAME</th>-->
-<!--        <th>ROAST</th>-->
-<!--    </tr>-->
-<!--    </thead>-->
-    <div id="coffees"></div>
-<!--</table>-->
+        </form>
+        <form class="d-flex" role="search">
+            <input class="form-control me-2" id="coffee-add" type="text" placeholder="search" aria-label="search">
+            <input id="submit2" type="submit"/>
+        </form>
+    </div>
+    </div>
 </div>
+<div class="col">
+
+    <div id="coffees"></div>
+
+</div>
+<!--<br>-->
+<!--<hr>-->
+<!--<br>-->
+
+
+
+
+
 
 <script src="main.js"></script>
 </body>
-    </div>
-</div>
+
 
 
 
