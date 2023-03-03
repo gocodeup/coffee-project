@@ -34,12 +34,13 @@ function updateCoffees(e) {
     coffees.forEach(function(coffee) {
         if (coffee.roast === selectedRoast) {
             filteredCoffees.push(coffee);
+        }else if (selectedRoast === "all"){
+              filteredCoffees.push(coffee);
         }
 //        console.log(option[0]);
     });
     tbody.innerHTML = renderCoffees(filteredCoffees);
 }
-
 
 // from http://www.ncausa.org/About-Coffee/Coffee-Roasts-Guide
 var coffees = [
@@ -59,8 +60,6 @@ var coffees = [
     {id: 14, name: 'French', roast: 'dark'},
 ];
 
-
-
 // Searches and returns the first element of the coffee id, can manipulate to pull all 14 ids
 
 var tbody = document.querySelector('#coffees');
@@ -77,12 +76,7 @@ var searching = document.querySelector('#search-bar');
 searching.addEventListener('keyup', (e) =>{
     e.preventDefault();
     var searched = e.target.value;
-
     var array = [];
-
-
-//           console.log("searched input value:" +  searched);
-
     for(var i = 0; i <= coffees.length - 1; i++){
 
         if(coffees[i].name.toLowerCase() === searched.toLowerCase()){
@@ -93,34 +87,11 @@ searching.addEventListener('keyup', (e) =>{
              array.push(coffees[i]);
         }
     }
-
-
-//    console.log(array);
-
     tbody.innerHTML = renderCoffees(array);
 
 
 })
-//var searchInput = document.querySelector(["data-search"]);
-//searchInput.addEventListener("input", (e) => {
-//    var value = e.target.value;
-//    console.log(value);
-//})
 
-//var searchInput = document.forms['data-search'].querySelector('input');
-//searchInput.addEventListener('keyup', function(e){
-//    var term = e.target.value.toLowerCase();
-//    var names = coffees.name;
-//    var filteredCoffees = [];
-//    coffees.forEach(function(coffee) {
-//            if (names === terms) {
-//                filteredCoffees.push(coffee);
-//            }
-//        });
-//        tbody.innerHTML = renderCoffees(filteredCoffees);
-//})
-
-//var names = document.querySelector(".input");
 // Changes innerHTML once you select the roast
 tbody.innerHTML = renderCoffees(coffees); // <div class="content col-6"><h2>american</h2></div>
 // This is for the Coffee Name iput bar (Will use this for "Name" for Add a Coffee Section
@@ -134,9 +105,6 @@ submitButton.addEventListener('click',function(e){
     var filteredCoffees = []; //affects the dropdown selection menu
     coffees.forEach(function(coffee) {
         if (coffee.roast === selectedRoast) {
-            filteredCoffees.push(coffee);
-        }
-        else if (selectedRoast === "all"){
             filteredCoffees.push(coffee);
         }
 
@@ -168,7 +136,6 @@ submitButton2.addEventListener('click',function(e){
         else if (selectedRoast === "all"){
             filteredCoffees.push(coffee);
         }
-
     });
     tbody.innerHTML = renderCoffees(filteredCoffees);
 }
@@ -183,16 +150,10 @@ submit2.addEventListener('click', (e) =>{ // on click of submit add coffee
     var input = document.querySelector('#input').value;
         console.log(roastselection2);
         console.log(input);
-
         // create new coffee object with those values
         console.log(coffees.length);
         var addedCoffee = {id: coffees.length + 1, name:input, roast:roastselection2}
         // push that new object into existing coffees
          coffees.push(addedCoffee);
-        // render coffees ( updated coffees list )
-//    coffees.push(JSON.stringify({id:++coffees.id, name:input, roast:roastselection2}))
-//coffees[coffees.length] = JSON.stringify({id: coffees.length, name: input, roast:roastselection2})
-
-
     tbody.innerHTML = renderCoffees(coffees);
 })
