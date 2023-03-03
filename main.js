@@ -52,9 +52,7 @@ var coffees = [
 var tbody = document.querySelector('#coffees');
 var submitButton = document.querySelector('#submit');
 var roastSelection = document.querySelector('#roast-selection');
-
 var coffeeSelection = document.querySelector('#coffee-selection')
-
 
 coffeeSelection.addEventListener('input', e => {
     var choosenCoffee = []
@@ -70,5 +68,31 @@ coffeeSelection.addEventListener('input', e => {
         tbody.innerHTML = renderCoffees(choosenCoffee);
 })
 tbody.innerHTML = renderCoffees(coffees.reverse());
-
 submitButton.addEventListener('click', updateCoffees);
+
+
+// submit button  listens for click
+// on click of submit -> trigger 'addCoffees()'
+// // grab vlaue of input fieldds
+// // create a new coffee object with those values (id, name, roast)
+// // push the new coffee to existing c offees
+// // set local storage to updatedd list
+// // renderCoffees ( updatedd coffees)
+//
+function addCoffees(e) {
+    e.preventDefault();
+    console.log('add coffee submit clicked!')
+    var newRoast = document.querySelector("#added-roast-selection")
+    console.log(newRoast);
+    var newCoffee = document.querySelector("#added-coffee-selection");
+    console.log(newCoffee)
+    var newCoffees = [
+        {id: coffees.length - 1, name: newCoffee, roast: newRoast}
+    ];
+// window.localStorage.setItem('roast', JSON.stringify(newRoast))
+// window.localStorage.setItem('coffee', JSON.stringify(newCoffee));
+
+    // window.localStorage.getItem('coffee');
+}
+var submit2Button = document.getElementById("submit2");
+submit2Button.addEventListener("click", addCoffees);
