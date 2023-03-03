@@ -1,8 +1,10 @@
 body {
     background-color: sandybrown;
+    background-image: url("https://images.pexels.com/photos/3020919/pexels-photo-3020919.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2");
 }
 h1 {
     text-align: center;
+    color: white;
 }
 hr {
     border: 5px solid saddlebrown;
