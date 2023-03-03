@@ -1,8 +1,8 @@
 "use strict"
 
 function renderCoffee(coffee) {
-    var html = '<div class="coffee d-flex align-items-baseline">';
-    html += '<h1>' + coffee.name + '</h1>';
+    var html = '<div class="coffee d-flex align-items-baseline mx-5" width:40%>';
+    html += '<h2>' + coffee.name + '</h2>';
     html += '<p>' + coffee.roast + '</p>';
     html += '</div>';
 
@@ -23,6 +23,8 @@ function updateCoffees(e) {
     var filteredCoffees = [];
     coffees.forEach(function(coffee) {
         if (coffee.roast === selectedRoast) {
+            filteredCoffees.push(coffee);
+        } else if (selectedRoast === "all"){
             filteredCoffees.push(coffee);
         }
     });
@@ -67,6 +69,6 @@ coffeeSelection.addEventListener('input', e => {
     })
         tbody.innerHTML = renderCoffees(choosenCoffee);
 })
-tbody.innerHTML = renderCoffees(coffees);
+tbody.innerHTML = renderCoffees(coffees.reverse());
 
 submitButton.addEventListener('click', updateCoffees);
