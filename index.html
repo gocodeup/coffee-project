@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title></title>
+    <title>Coffee Project</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
 </head>
@@ -11,21 +11,21 @@
 <hr>
 <div class="container">
     <div class="row">
-        <div class="col-6">
-            <div class="d-table" id="coffees"></div>
+        <div class="col-8">
+            <div class="d-flex justify-content-between flex-wrap" id="coffees"></div>
         </div>
-        <div class="col-6">
+        <div class="col-4">
             <form>
                 <label class="d-flex" for="roast-selection">Roast</label>
                 <select id="roast-selection">
-                    <option>all</option>
+                    <option id="all-roast">all</option>
                     <option>light</option>
                     <option>medium</option>
                     <option>dark</option>
                 </select>
                 <label class="d-flex mt-1" for="coffee-selection">Coffee Name</label>
                 <input id="coffee-selection" type="input"/>
-                <input class="my-3 bg-warning text-white" id="submit1" type="submit" />
+                <input class="my-3 bg-warning text-white" id="submit" type="submit" />
             </form>
             <h2><strong>Add a Coffee<strong></strong></h2>
             <form>
