@@ -1,26 +1,23 @@
-/*table {*/
-/*    border-collapse: collapse;*/
-/*    margin: 15px 0;*/
-/*}*/
-
-/*td, th {*/
-/*    border: 1px solid black;*/
-/*    padding: 5px 10px;*/
-/*}*/
-
 * {
     padding: 0;
     margin: 0;
 }
 
-/*div {*/
-/*    border: solid 1px red;*/
-/*}*/
-
-/*section {*/
-/*    border: 1px solid blue;*/
-/*}*/
-
 #coffee-div, #user-menu {
-    height: 31rem
+    height: 29.5rem
+}
+
+.coffee {
+    transition: all 0.2s ease;
+    cursor: pointer;
+}
+
+.coffee:hover {
+    box-shadow: 5px 6px 6px 2px #e9ecef;
+    transform: scale(1.1);
+}
+
+.coffee {
+    width: 49%;
+    z-index: 1000;
 }
