@@ -35,11 +35,11 @@ function updateCoffees(e) {
         if (coffee.roast === selectedRoast) {
             filteredCoffees.push(coffee);
         }
+//        console.log(option[0]);
     });
     tbody.innerHTML = renderCoffees(filteredCoffees);
 }
 
-function coffeeNames
 
 // from http://www.ncausa.org/About-Coffee/Coffee-Roasts-Guide
 var coffees = [
@@ -71,10 +71,79 @@ var submitButton = document.querySelector('#submit');
 // Drop down menu
 var roastSelection = document.querySelector('#roast-selection');
 
+//make an element
+var searching = document.querySelector('#search-bar');
+//when a key is pressed down and released
+searching.addEventListener('keyup', (e) =>{
+    e.preventDefault();
+    var searched = e.target.value;
+
+    var array = [];
+
+
+//           console.log("searched input value:" +  searched);
+
+    for(var i = 0; i <= coffees.length - 1; i++){
+
+        if(coffees[i].name.toLowerCase() === searched.toLowerCase()){
+//        This === will only be exact matches
+// did we learn any string methods perhaps that could search part of a name? food for thought / v2 starts with
+            array.push(coffees[i]);
+        } else if(coffees[i].name.toLowerCase().includes(searched)){
+             array.push(coffees[i]);
+        }
+    }
+
+
+//    console.log(array);
+
+    tbody.innerHTML = renderCoffees(array);
+
+
+})
+//var searchInput = document.querySelector(["data-search"]);
+//searchInput.addEventListener("input", (e) => {
+//    var value = e.target.value;
+//    console.log(value);
+//})
+
+//var searchInput = document.forms['data-search'].querySelector('input');
+//searchInput.addEventListener('keyup', function(e){
+//    var term = e.target.value.toLowerCase();
+//    var names = coffees.name;
+//    var filteredCoffees = [];
+//    coffees.forEach(function(coffee) {
+//            if (names === terms) {
+//                filteredCoffees.push(coffee);
+//            }
+//        });
+//        tbody.innerHTML = renderCoffees(filteredCoffees);
+//})
+
+//var names = document.querySelector(".input");
 // Changes innerHTML once you select the roast
 tbody.innerHTML = renderCoffees(coffees); // <div class="content col-6"><h2>american</h2></div>
 // This is for the Coffee Name iput bar (Will use this for "Name" for Add a Coffee Section
-submitButton.addEventListener('click', updateCoffees);
+roastSelection.addEventListener("change", updateCoffees);
+submitButton.addEventListener('click',function(e){
+{
+
+    e.preventDefault(); // don't submit the form, we just want to update the data
+    var selectedRoast = roastSelection.value;
+//    up here let's add in some tests for "what is roastSelection"
+    var filteredCoffees = []; //affects the dropdown selection menu
+    coffees.forEach(function(coffee) {
+        if (coffee.roast === selectedRoast) {
+            filteredCoffees.push(coffee);
+        }
+        else if (selectedRoast === "all"){
+            filteredCoffees.push(coffee);
+        }
+
+    });
+    tbody.innerHTML = renderCoffees(filteredCoffees);
+}
+});
 
 
 // TO DO LIST
@@ -84,3 +153,46 @@ submitButton.addEventListener('click', updateCoffees);
 // Add functionality to update the displayed coffee as the user types into the search box, or as soon as they select an option from the select.
 
 
+var submitButton2 = document.querySelector('#submit2');
+submitButton2.addEventListener('click',function(e){
+{
+
+    e.preventDefault(); // don't submit the form, we just want to update the data
+    var selectedRoast = roastSelection.value;
+//    up here let's add in some tests for "what is roastSelection"
+    var filteredCoffees = []; //affects the dropdown selection menu
+    coffees.forEach(function(coffee) {
+        if (coffee.roast === selectedRoast) {
+            filteredCoffees.push(coffee);
+        }
+        else if (selectedRoast === "all"){
+            filteredCoffees.push(coffee);
+        }
+
+    });
+    tbody.innerHTML = renderCoffees(filteredCoffees);
+}
+});
+
+
+var submit2 = document.querySelector('#submit2');
+submit2.addEventListener('click', (e) =>{ // on click of submit add coffee
+    e.preventDefault();
+    // grab values of dropdown & input text
+    var roastselection2 = document.querySelector('#roast-selection2').value;
+    var input = document.querySelector('#input').value;
+        console.log(roastselection2);
+        console.log(input);
+
+        // create new coffee object with those values
+        console.log(coffees.length);
+        var addedCoffee = {id: coffees.length + 1, name:input, roast:roastselection2}
+        // push that new object into existing coffees
+         coffees.push(addedCoffee);
+        // render coffees ( updated coffees list )
+//    coffees.push(JSON.stringify({id:++coffees.id, name:input, roast:roastselection2}))
+//coffees[coffees.length] = JSON.stringify({id: coffees.length, name: input, roast:roastselection2})
+
+
+    tbody.innerHTML = renderCoffees(coffees);
+})
