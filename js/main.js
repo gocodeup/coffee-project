@@ -5,8 +5,8 @@
 	function renderCoffee(coffee) {
 		let html = '<div class="coffee col-6 card">';
 		// html += '<td>' + coffee.id + '</td>';
-		html += '<h3 class="d-inline" >' + coffee.name + '</h3>';
-		html += '<p class="d-inline">' + coffee.roast + '</p>';
+		html += '<h3 class="" >' + coffee.name + '</h3>';
+		html += '<p class="">' + coffee.roast + '</p>';
 		html += '</div>';
 		
 		return html;
@@ -150,5 +150,14 @@
 	tooltips.forEach(x => {
 		new bootstrap.Tooltip(x);
 	});
+	
+	
+	let clearButton = document.querySelector("#clearCoffee");
+	clearButton.addEventListener('click', clearCoffee)
+	
+	function clearCoffee (){
+		localStorage.clear();
+		window.location.reload();
+	}
 	
 })();
