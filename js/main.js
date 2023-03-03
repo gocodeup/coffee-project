@@ -3,11 +3,13 @@
 
 // creates divs for each coffee
 	function renderCoffee(coffee) {
-		let html = '<div class="coffee col-6 card">';
+		let html = '<div class="coffee col-auto card bg-light d-flex">';
 		// html += '<td>' + coffee.id + '</td>';
-		html += '<h3 class="" >' + coffee.name + '</h3>';
-		html += '<p class="">' + coffee.roast + '</p>';
+		// html += '<div>'
+		html += '<h3 class="d-flex p-2 m-0" >' + coffee.name + '</h3>';
+		html += '<p class="d-flex p-2 m-0">' + coffee.roast + '</p>';
 		html += '</div>';
+		// html += '</div>';
 		
 		return html;
 	}
@@ -155,7 +157,7 @@
 	let clearButton = document.querySelector("#clearCoffee");
 	clearButton.addEventListener('click', clearCoffee)
 	
-	function clearCoffee (){
+	function clearCoffee() {
 		localStorage.clear();
 		window.location.reload();
 	}

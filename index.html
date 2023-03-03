@@ -11,17 +11,19 @@
 	
 	<link rel="stylesheet" href="css/style.css">
 </head>
-<body>
-<section>
-	<div class="container mt-5">
+<body class="bg-light">
+
+<section class="container-fluid">
+	<div class="mt-5">
 		
 		<h1 class="d-flex justify-content-center">Welcome to the B & G's Coffee</h1>
-	
+		<hr class="mt-4">
 	</div>
 </section>
-<section class="container-fluid">
+
+<section class="container">
 	
-	<div class="row">
+	<div class="container-fluid row">
 		
 		<div class="col-md-6 cards" id="user-menu">
 			<div class="card pb-3 mt-5">
@@ -46,9 +48,9 @@
 				</span>
 				</form>
 			</div>
-			<div class="card pb-3 mt-5">
+			<div class="card pb-3 mt-4">
 				<form class="card-body">
-					<h3 class="card-header">You can also add your own coffee!</h3>
+					<h3 class="card-header">Add your own coffee!</h3>
 					<br>
 					<span class="tt" data-bs-placement="top" title="Choose the roast of your coffee">
 					<select class="form-select" id="roastType">
@@ -67,21 +69,21 @@
                 </span>
 				</form>
 			</div>
-			
-			
+		
+		
 		</div>
 		
 		<div class="col-md-6 mt-5 overflow-scroll" id="coffee-div">
-			<div class="row overflow-auto" id="coffees">
+			<div class="row row-cols-md-2 g-3 d-flex justify-content-between" id="coffees">
 				<!--populated by renderCoffee function-->
 			</div>
 		</div>
-		
-		
+	
+	
 	</div>
 	
 	<div class="col-md my-3">
-		<button class="btn btn-outline-primary w-100" id="clearCoffee" type="submit">Clear added coffees </button>
+		<button class="btn btn-outline-primary w-100" id="clearCoffee" type="submit">Clear added coffees</button>
 	</div>
 
 </section>
