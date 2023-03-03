@@ -3,11 +3,11 @@
 
 // creates divs for each coffee
 	function renderCoffee(coffee) {
-		let html = '<div class="coffee col-6 card bg-light d-flex">';
+		let html = '<div class="coffee col-6 overflow-hidden card bg-light d-flex mt-3">';
 		// html += '<td>' + coffee.id + '</td>';
 		// html += '<div>'
-		html += '<h3 class="d-flex p-2 m-0" >' + coffee.name + '</h3>';
-		html += '<p class="d-flex p-2 m-0">' + coffee.roast + '</p>';
+		html += '<h3 class="card-title d-flex p-2 m-0" >' + coffee.name + '</h3>';
+		html += '<p class="card-subtitle d-flex p-2 m-0">' + coffee.roast + '</p>';
 		html += '</div>';
 		// html += '</div>';
 		
