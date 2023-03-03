@@ -1,64 +1,76 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Coffee Project</title>
-	
-	<!--Bootstrap-->
-	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
-	      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-	
-	<link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coffee Project</title>
+
+    <!--Bootstrap-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 <section>
-<div class="container card text-center">
-	
-	<h1>Coffee!</h1>
+    <div class="container text-center">
 
-</div>
+        <h1>Coffee!</h1>
+
+    </div>
 </section>
 <section class="container-fluid">
-	
-	<div class="row">
-		
-		<div class="col col-md-6 card">
-			<form class="card-body">
-				<label for="roast-selection">Roast</label><br>
-				<select id="roast-selection">
-					<option>All</option>
-					<option>light</option>
-					<option>medium</option>
-					<option>dark</option>
-				</select><br>
-				<label for="search">Coffee Name</label><br>
-				<input type="text" id="search" name="search"/><br>
-				<input id="submit" type="submit"/>
-			</form>
-			
-			<form class="card-body">
-				<label for="roastType">Roast</label><br>
-				<select id="roastType">
-					<option>light</option>
-					<option>medium</option>
-					<option>dark</option>
-				</select><br>
-				<label for="addCoffee">Add A New Coffee</label><br>
-				<input type="text" id="addCoffee" name="search"/><br>
-				<input id="newCoffee" type="submit"/>
-			</form>
-			
-			
-		</div>
-		
-		<div class="col col-md-6">
-			<div class="row" id="coffees">
-				<!--populated by renderCoffee function-->
-			</div>
-		</div>
-	
-	</div>
+
+    <div class="row">
+
+        <div class="col-md-6 card">
+            <form class="card-body border">
+                <label for="roast-selection">Choice of Roast</label><br>
+                <select class="form-select" id="roast-selection">
+                    <option>Choice of Roast</option>
+                    <option>All</option>
+                    <option>light</option>
+                    <option>medium</option>
+                    <option>dark</option>
+                </select><br>
+                <!--				used span to include tooltip        -->
+                <!--				<label for="search">Coffee Name</label><br>-->
+                <span class="tt" data-bs-placement="top" title="Search our list of coffees by coffee name">
+				<div class="input-group">
+                <input class="btn btn-outline-secondary" id="submit" type="submit"/>
+                <input class="form-control" placeholder="Coffee Name" type="text" id="search" name="search"/><br>
+				</div>
+				</span>
+
+            </form>
+
+            <form class="card-body border">
+                <h3>You can also add your own coffee!</h3>
+                <label for="roastType">Choose the Roast of your Coffee</label><br>
+                <select class="form-select" id="roastType">
+                    <option>light</option>
+                    <option>medium</option>
+                    <option>dark</option>
+                </select><br>
+                <span class="tt" data-bs-placement="top" title="Type in the new coffee you would like to add">
+                    <div class="input-group">
+
+                <input class="btn btn-outline-secondary" id="newCoffee" type="submit"/>
+					<input class="form-control" placeholder="Coffee Name" type="text" id="addCoffee" name="search"/><br>
+                    </div>
+                </span>
+            </form>
+
+
+        </div>
+
+        <div class="col-md-6">
+            <div class="row" id="coffees">
+                <!--populated by renderCoffee function-->
+            </div>
+        </div>
+
+    </div>
 
 </section>
 
@@ -80,5 +92,12 @@
         integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
         crossorigin="anonymous"></script>
 <script src="main.js"></script>
+<script>
+    //finds all classes with the class tt and adds a new bootstrap.tooltip
+    const tooltips = document.querySelectorAll('.tt');
+    tooltips.forEach(x => {
+        new bootstrap.Tooltip(x);
+    })
+</script>
 </body>
 </html>
