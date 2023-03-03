@@ -15,9 +15,10 @@
 .coffee:hover {
     box-shadow: 5px 6px 6px 2px #e9ecef;
     transform: scale(1.1);
+    overflow: visible;
 }
 
 .coffee {
-    width: 49%;
+    width: 43.9%;
     z-index: 1000;
 }
