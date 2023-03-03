@@ -11,14 +11,13 @@ function renderCoffee(coffee) {
 }
 
 function renderCoffees(coffees) {
-    console.log(coffees)
     var html = '';
-    for(var i = coffees.length - 1; i >= 0; i--) {
-        html += renderCoffee(coffees[i]);
-    }
-    console.log(html)
+    coffees.forEach(function (coffee) {
+        html += renderCoffee(coffee);
+    })
     return html;
 }
+
 
 function updateCoffees(e) {
     e.preventDefault(); // don't submit the form, we just want to update the data
@@ -33,27 +32,26 @@ function updateCoffees(e) {
 }
 
 var coffeeSearch = document.getElementById('coffee-search');
-console.log(coffeeSearch)
+
 var submitButton = document.querySelector('#submit');
 
 submitButton.addEventListener('click', (e) => {
     e.preventDefault()
     var inputSearch = coffeeSearch.value
-    console.log(inputSearch)
     searchBar(inputSearch);
 })
 
 //when you submit
 function searchBar(input){
     // input.preventDefault();
-    console.log(coffees)
+    // console.log(coffees)
     var emptyArray = [];
     for (let i = 0; i <= coffees.length - 1; i++) {
         if (coffees[i].name.toLowerCase() === input.toLowerCase()){
             emptyArray.push(coffees[i]);
 
         }}
-        console.log(emptyArray)
+        // console.log(emptyArray)
     tbody.innerHTML= renderCoffees(emptyArray)
 
 }
