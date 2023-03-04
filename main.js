@@ -34,57 +34,6 @@ function updateCoffees(e) {
     tbody.innerHTML = renderCoffees(filteredCoffees);
 }
 
-
-
-// on 'click' of submit button, trigger 'search' function
-// function search(){
-    // // get the value of the input field as the user thypes and save it to a variable
-    // looping through coffees and seeing if any of the coffee.name match the user input
-//     var searchBox = document.getElementById('searchbar').value.toLowerCase();
-//     console.log('searchBox', searchBox)
-//     var coffeeSelect = document.getElementById(submit)
-//
-//     console.log(coffeeSelect)
-//     var coffee = document.querySelectorAll(".coffee")
-//     console.log(coffee);
-//     var coffeeName = document.getElementsByTagName("h2")
-//     console.log(coffeeName);
-//
-//     for(var i =0; i < coffeeName.length; i++){
-//         var match = coffee[i].getElementsByTagName(h2)[0]
-//
-//         if(match) {
-//             var textvalue = match.textContent || match.innerHTML
-//             if (textvalue.toLowerCase().indexOf(searchBox) > -1)
-//                 coffee[i].style.displavy = "";
-//         }else{
-//             coffee[i].style.display = "none";
-//         }
-//     }
-// }
-//almost done code
-// JavaScript code
-// function searchCoffees() {
-//     var input = document.getElementById('searchbar').value
-//     input = input.toLowerCase();
-//      var coffeeSelection = [];
-//      coffees.forEach(function (coffee) {
-//          if(coffee.name === input){
-//             coffeeSelection.push(coffee);
-//          }
-//      })
-//     tbody.innerHTML = renderCoffees(coffeeSelection)
-// }
-    // for (i = 0; i < x.length; i++) {
-    //     if (!x[i].innerHTML.toLowerCase().includes(input)) {
-    //         x[i].style.display="none";
-    //     }
-    //     else {
-    //         x[i].style.display="list-item";
-
-    // }
-// }
-
 // from http://www.ncausa.org/About-Coffee/Coffee-Roasts-Guide
 var coffees = [
     {id: 1, name: 'Light City', roast: 'light'},
@@ -107,7 +56,18 @@ coffees.reverse()
 var tbody = document.querySelector('#coffees');
 var submitButton = document.querySelector('#submit');
 var roastSelection = document.querySelector('#roast-selection');
+var coffeeSelection = document.querySelector('#coffee-selection');
 
+coffeeSelection.addEventListener('input',e => {
+    var coffeeOfChoice = [];
+    var coffeeValue = e.target.value.toLowerCase();
+    coffees.forEach(function (coffeeArray){
+        var lcCofArr = coffeeArray.name.toLowerCase();
+        if (lcCofArr.includes(coffeeValue)){
+            coffeeOfChoice.push(coffeeArray);
+        }
+    })
+    tbody.innerHTML = renderCoffees(coffeeOfChoice);
+})
 tbody.innerHTML = renderCoffees(coffees);
-
 submitButton.addEventListener('click', updateCoffees);
