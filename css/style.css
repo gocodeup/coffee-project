@@ -8,7 +8,7 @@ body {
     border-radius: 1em;
 }
 
-.nav-link, .fa-brands, .all-rights{
+.nav-link, .fa-brands, .all-rights {
     color: #8B4513;
 }
 
@@ -23,14 +23,16 @@ body {
 footer {
     background-color: #efdecd;
 }
+
 .nav-title, .nav-pill {
-     background-color: #e9967a;
+    background-color: #e9967a;
 }
 
 .nav-picture {
     background-image: url("../img/pexels-lukas-942803.png.jpg");
     background-size: cover;
 }
+
 .icons {
     padding-right: 1em;
 

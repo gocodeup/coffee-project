@@ -2,7 +2,7 @@
 
 function renderCoffee(coffee) {
     var html = '<div class="coffee d-flex">';
-    html += '<h3 class="fw-lighter">' + coffee.name+'</h3>' + '<p' +
+    html += '<h3 class="fw-lighter">' + coffee.name + '</h3>' + '<p' +
         ' class="d-flex' +
         ' pt-2 ps-2 text-muted fw-light">' + coffee.roast + '</p>';
     html += '</div>';
@@ -18,16 +18,14 @@ function renderCoffees(coffees) {
 }
 
 
-
-
 function updateCoffees(e) {
     e.preventDefault(); // don't submit the form, we just want to update the data
     var selectedRoast = roastSelection.value;
     var filteredCoffees = [];
-    coffees.forEach(function(coffee) {
+    coffees.forEach(function (coffee) {
         if (coffee.roast === selectedRoast) {
             filteredCoffees.push(coffee);
-        } else if (selectedRoast === "all"){
+        } else if (selectedRoast === "all") {
             filteredCoffees.push(coffee);
         }
     });
@@ -44,15 +42,17 @@ coffeeSearch.addEventListener('input', (e) => {
 
 
 //when you submit
-function searchBar(input){
+function searchBar(input) {
     var emptyArray = [];
     for (let i = 0; i <= coffees.length - 1; i++) {
-        if (coffees[i].name.toLowerCase().startsWith(input.toLowerCase())  ){
+        if (coffees[i].name.toLowerCase().startsWith(input.toLowerCase())) {
             emptyArray.push(coffees[i]);
-        }}
-    tbody.innerHTML= renderCoffees(emptyArray)
+        }
+    }
+    tbody.innerHTML = renderCoffees(emptyArray)
     console.log(tbody.innerHTML = renderCoffees(emptyArray))
 }
+
 //ADD COFFEE
 
 var coffeeAdd = document.getElementById('coffee-add');
@@ -74,7 +74,6 @@ submitButton2.addEventListener('click', (e) => {
     coffees.push(coffeeType);
     tbody.innerHTML = renderCoffees(coffees)
 })
-
 
 
 // from http://www.ncausa.org/About-Coffee/Coffee-Roasts-Guide
