@@ -12,21 +12,23 @@
     <link href="https://fonts.googleapis.com/css2?family=Quicksand&family=Tilt+Warp&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Quicksand&family=Tilt+Warp&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500;600&display=swap" rel="stylesheet">
+    <!-- FONT AWESOME -->
+    <script src="https://kit.fontawesome.com/3cb0df1ee3.js" crossorigin="anonymous"></script>
     <!-- CSS LINK -->
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 <!--NAV BAR-->
-<nav class="navbar navbar-light bg-light">
+<nav class="navbar navbar-light bg-light nav-title nav-picture" <img src="img/pexels-lukas-942803.png.jpg">
     <div class="container-fluid d-flex justify-content-center">
-        <a class="navbar-brand fs-1" style="font-family: Tilt Warp, cursive" href="#">
+        <a class="navbar-brand fs-1" style="font-family: Tilt Warp, cursive; color: #efdecd" href="#">
             <img src="img/coffee-logo-png-7501.png" alt="" width="50" height="48" class="d-inline-block align-text-center justify-content-center">
             COFFEE!
         </a>
     </div>
 </nav>
 <!-- TAB PILLS -->
-<ul class="nav nav-fill bg-light" style="font-family: Quicksand, sans-serif">
+<ul class="nav nav-fill bg-light nav-pill" style="font-family: Quicksand, sans-serif">
     <li class="nav-item">
         <a class="nav-link active" aria-current="page" href="https://www.pbs.org/food/the-history-kitchen/history-coffee/">History of Coffee</a>
     </li>
@@ -40,22 +42,27 @@
         <a class="nav-link" href="https://halo.coffee/blogs/discover/coffee-regions-a-quick-guide-to-coffee-growing-regions" tabindex="-1" aria-disabled="true">Where The Coffee Happens</a>
     </li>
 </ul>
-<div class="container pt-4">
+<div class="container py-4">
     <div class="row">
-        <div class="col-12 col-lg-6 mt-4 order-last order-lg-first">
+
+        <!-- COFFEES COLUMNS -->
+
+        <div class="col-12 col-lg-6 mt-4 order-last order-lg-first coffee-box">
             <div style="font-family: Quicksand, sans-serif">
                 <div class="d-flex flex-wrap flex-column" id="coffees"></div>
             </div>
         </div>
 
         <div class="col-12 col-lg-6 mt-4">
+
+        <!-- FORMS -->
+
     <div class="col-12">
+        <h3 class="fw-bolder coffee-box py-2" style="text-align: center; font-family: Quicksand, sans-serif; font-weight: 600">ROAST</h3>
 
-        <h3 class="fw-bolder" style="text-align: center; font-family: Quicksand, sans-serif; font-weight: 600">ROAST</h3>
-
-        <form class="">
+        <form>
             <label for="roast-selection"></label>
-                <select id="roast-selection" class="form-select col-12" aria-label="Default select example" style="font-family: Quicksand, sans-serif">
+                <select id="roast-selection" class="form-select col-12 bg-color-#efdecd" aria-label="Default select example" style="font-family: Quicksand, sans-serif">
                     <option value="all">All</option>
                     <option value="light">Light</option>
                     <option value="medium">Medium</option>
@@ -64,15 +71,15 @@
 
         </form>
         <form  role="search">
-            <input class="form-control my-2 col-12" id="coffee-search" type="text" placeholder="Search" aria-label="search">
-            <button class="btn btn-primary  my-2 col-12" id="submit" type="submit">Submit </button>
+            <input class="form-control my-2 col-12" id="coffee-search" type="text" aria-label="search" placeholder="Search">
+            <button class="btn btn-secondary  my-2 col-12" id="submit" type="submit">Submit </button>
         </form>
     </div>
             <hr>
         <!--ADD COFFEE -->
     <div class="col-12">
 
-        <h3 class="fw-bolder" style="text-align: center; font-family: Quicksand, sans-serif; font-weight: 500">ADD A COFFEE</h3>
+        <h3 class="fw-bolder coffee-box py-2" style="text-align: center; font-family: Quicksand, sans-serif; font-weight: 500">ADD A COFFEE</h3>
 
         <form class="col-12">
             <label for="roast-selection"></label>
@@ -83,17 +90,24 @@
             </select>
         </form>
         <form class="col-12" role="search">
-            <input class="form-control my-2 col-12" id="coffee-add" type="text" placeholder="search" aria-label="search">
-            <button class="btn btn-primary  my-2 col-12" id="submit2" type="submit">Submit</button>
+            <input class="form-control my-2 col-12" id="coffee-add" type="text" placeholder="Search" aria-label="search">
+            <button class="btn btn-secondary  my-2 col-12" id="submit2" type="submit">Submit</button>
         </form>
     </div>
         </div>
 
     </div>
 </div>
+<footer class="pt-3 d-flex justify-content-between align-items-center">
+    <p class="all-rights ps-3">© 2023 All rights reserved</p>
+    <div id="social-media-links" class="fs-4 mb-2">
+        <a href="https://twitter.com/Starbucks" class="icons"><i class="fa-brands fa-twitter"></i></a>
+        <a href="https://www.facebook.com/DutchBros" class="icons"><i class="fa-brands fa-facebook"></i></i></a>
+        <a href="https://www.instagram.com/dunkin/" class="icons"><i class="fa-brands fa-instagram"></i></a>
+    </div>
+</footer>
 
-
-<script src="main.js"></script>
+<script src="js/main.js"></script>
 </body>
 
 
