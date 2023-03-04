@@ -1,0 +1,37 @@
+body {
+    background-color: #704241;
+}
+
+.coffee-box {
+    background-color: #efdecd;
+    padding-top: 2em;
+    border-radius: 1em;
+}
+
+.nav-link, .fa-brands, .all-rights{
+    color: #8B4513;
+}
+
+.nav-link:hover, .fa-brands:hover, .all-rights:hover {
+    color: goldenrod;
+}
+
+#coffees {
+    height: 400px;
+}
+
+footer {
+    background-color: #efdecd;
+}
+.nav-title, .nav-pill {
+     background-color: #e9967a;
+}
+
+.nav-picture {
+    background-image: url("../img/pexels-lukas-942803.png.jpg");
+    background-size: cover;
+}
+.icons {
+    padding-right: 1em;
+
+}
