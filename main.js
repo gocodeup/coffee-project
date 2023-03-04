@@ -2,7 +2,8 @@
 
 function renderCoffee(coffee) {
     var html = '<div class="coffee d-flex">';
-    html += '<h3>' + coffee.name+'</h3>' + '<p class="d-flex' +
+    html += '<h3 class="fw-lighter">' + coffee.name+'</h3>' + '<p' +
+        ' class="d-flex' +
         ' pt-2 ps-2 text-muted fw-light">' + coffee.roast + '</p>';
     html += '</div>';
     return html;

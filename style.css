@@ -1,13 +1,5 @@
 
-/*[type=text] in case the search doesn't register what input specifically*/
-/*input [type=text]{*/
-/*    -webkit-transition: width 0.15s ease-in-out;*/
-/*    transition: width 0.15s ease-in-out;*/
-/*}*/
 
-/*.coffee-type {*/
-/*    display: list-item;*/
-/*}*/
 
 table {
     border-collapse: collapse;
@@ -17,4 +9,12 @@ table {
 td, th {
     border: 1px solid black;
     padding: 5px 10px;
+}
+
+.nav-link {
+    color: #8B4513;
+}
+
+.nav-link:hover {
+    color: goldenrod;
 }
