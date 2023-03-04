@@ -21,12 +21,14 @@
 	</div>
 </section>
 
-<section class="container">
+<br>
+
+<section class="container-fluid">
 	
 	<div class="container-fluid row m-0">
 		
 		<div class="col-md-6 cards" id="user-menu">
-			<div class="card pb-3 mt-5">
+			<div class="card pb-3">
 				<form class="card-body">
 					<h3 class="card-header">Search our coffees!</h3>
 					<br>
@@ -47,6 +49,7 @@
 				</span>
 				</form>
 			</div>
+			
 			<div class="card pb-3 mt-4">
 				<form class="card-body">
 					<h3 class="card-header">Add your own coffee!</h3>
@@ -68,20 +71,21 @@
                 </span>
 				</form>
 			</div>
-		
-		
 		</div>
 		
-		<div class="col-md-6 mt-5 overflow-scroll" id="coffee-div">
+		<div class="d-block d-md-none">
+			<br>
+		</div>
+		
+		<div class="col-md-6 overflow-scroll" id="coffee-div">
 			<div class="row d-flex justify-content-evenly" id="coffees">
 				<!--populated by renderCoffee function-->
 			</div>
 		</div>
 	
-	
 	</div>
 	
-	<div class="col-md my-3">
+	<div class="col-md my-4">
 		<button class="btn btn-outline-primary w-100" id="clearCoffee" type="submit">Clear added coffees</button>
 	</div>
 
