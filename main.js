@@ -26,9 +26,10 @@ function updateCoffees(e) {
     var filteredCoffees = [];
     coffees.forEach(function(coffee) {
         // if equalsl roast AND input value matches name of coffee ...
-        if (coffee.roast === selectedRoast || coffee.name === inputCoffee ) {
+        if (coffee.roast === selectedRoast) {
             filteredCoffees.push(coffee);
-        }
+        } else if (selectedRoast==='all')
+            filteredCoffees.push(coffee)
     });
     tbody.innerHTML = renderCoffees(filteredCoffees);
 }
