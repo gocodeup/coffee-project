@@ -18,3 +18,13 @@ td, th {
 .nav-link:hover {
     color: goldenrod;
 }
+
+#coffees {
+    height: 400px;
+}
+
+@media screen and (max-width:992px) {
+    hr {
+        display: none;
+    }
+}
