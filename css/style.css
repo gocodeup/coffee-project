@@ -38,7 +38,7 @@ form {
 }
 
 .coffee:hover {
-    box-shadow: 5px 6px 6px 2px #d58a33;
+    box-shadow: 5px 6px 6px 2px rgba(213, 138, 51, 0.6);
     transform: scale(1.1);
     overflow: visible;
 }
@@ -52,4 +52,7 @@ img {
     max-width: 100%;
     height: auto;
     width: auto;
+    opacity: 85%;
+    border: 2px solid black;
+    border-radius: 25px;
 }
