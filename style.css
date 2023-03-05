@@ -1,3 +1,8 @@
+body {
+    background-image: url("images/coffee-background.jpeg");
+    background-size: cover;
+}
+
 table {
     border-collapse: collapse;
     margin: 15px 0;
@@ -19,6 +24,10 @@ span{
     color: grey;
 }
 
+.center{
+    display:flex;
+    justify-content:center;
+}
 .content {
   display: flex;
   flex-wrap: wrap;
@@ -28,3 +37,69 @@ span{
   flex-direction: row-reverse;
 }
 
+select#roast-selection{
+    width: 40em;
+    margin-bottom: 1em;
+}
+
+select#roast-selection2{
+    width: 40em;
+    margin-bottom: 1em;
+}
+
+input#search-bar{
+    width: 40em;
+    margin-bottom: 1em;
+}
+
+input#input{
+    width: 40em;
+    margin-bottom: 1em;
+}
+
+button#submit.btn.btn-dark{
+     margin-left: .7em;
+     margin-bottom: 2.5em;
+     width: 40em;
+}
+
+button#submit2.btn.btn-dark{
+     margin-left: .7em;
+     width: 40em;
+}
+
+div.col-6{
+    padding-left: 3em;
+}
+
+h1{
+    display: flex;
+    justify-content: center;
+    padding-top: .4em;
+    font-family: 'Kanit', sans-serif;
+    font-weight: 600;
+}
+
+h2{
+    font-family: 'Kanit', sans-serif;
+}
+
+h3{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2.5em;
+    font-family: 'Kanit', sans-serif;
+}
+
+h5{
+     font-family: 'Kanit', sans-serif;
+}
+
+hr{
+    padding-bottom: 1em;
+}
+
+span{
+    font-family: 'Kanit', sans-serif;
+    font-style: italic;
+}
