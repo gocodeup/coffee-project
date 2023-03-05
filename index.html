@@ -15,8 +15,9 @@
 
 <section class="container-fluid">
 	<div class="mt-5">
-		
-		<h1 class="d-flex justify-content-center">Welcome to the B & G's Coffee</h1>
+		<div class="d-flex justify-content-center">
+			<img src="assests/bandg_logo.png" alt="logo">
+		</div>
 		<hr class="mt-4">
 	</div>
 </section>
@@ -30,7 +31,7 @@
 		<div class="col-md-6 cards" id="user-menu">
 			<div class="card pb-3">
 				<form class="card-body">
-					<h3 class="card-header">Search our coffees!</h3>
+					<h3 class="card-header">Coffee Search</h3>
 					<br>
 					<select class="form-select" id="roast-selection">
 						<option value="All">Choice of Roast</option>
@@ -52,7 +53,7 @@
 			
 			<div class="card pb-3 mt-4">
 				<form class="card-body">
-					<h3 class="card-header">Add your own coffee!</h3>
+					<h3 class="card-header">Add Your Brew</h3>
 					<br>
 					<span class="tt" data-bs-placement="top" title="Choose the roast of your coffee">
 					<select class="form-select" id="roastType">
@@ -65,7 +66,7 @@
 					<span class="tt" data-bs-placement="top" title="Type in the new coffee you would like to add">
                     <div class="input-group">
 
-                <input class="btn btn-outline-primary" id="newCoffee" type="submit"/>
+                <input class="btn btn-secondary" id="newCoffee" type="submit"/>
 					<input class="form-control" placeholder="Coffee Name" type="text" id="addCoffee" name="search"/><br>
                     </div>
                 </span>
@@ -86,7 +87,9 @@
 	</div>
 	
 	<div class="col-md my-4">
-		<button class="btn btn-outline-primary w-100" id="clearCoffee" type="submit">Clear added coffees</button>
+		<button class="btn btn-secondary w-100" id="clearCoffee" type="submit">Clear added
+			coffees
+		</button>
 	</div>
 
 </section>
