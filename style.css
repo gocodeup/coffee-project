@@ -28,3 +28,53 @@ span{
   flex-direction: row-reverse;
 }
 
+select#roast-selection{
+    width: 40em;
+    margin-bottom: 1em;
+}
+
+select#roast-selection2{
+    width: 40em;
+    margin-bottom: 1em;
+}
+
+input#search-bar{
+    width: 40em;
+    margin-bottom: 1em;
+}
+
+input#input{
+    width: 40em;
+    margin-bottom: 1em;
+}
+
+button#submit.btn.btn-primary{
+     margin-left: .7em;
+     margin-bottom: 2.5em;
+     width: 40em;
+}
+
+button#submit2.btn.btn-primary{
+     margin-left: .7em;
+     width: 40em;
+}
+
+div.col-6{
+    padding-left: 3em;
+}
+
+h1{
+    display: flex;
+    justify-content: center;
+    padding-top: .4em;
+}
+
+h3{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2.5em;
+}
+
+hr{
+    padding-bottom: 1em;
+}
