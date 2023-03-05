@@ -1,3 +1,8 @@
+body {
+    background-image: url("images/coffee-background.jpeg");
+    background-size: cover;
+}
+
 table {
     border-collapse: collapse;
     margin: 15px 0;
@@ -19,6 +24,10 @@ span{
     color: grey;
 }
 
+.center{
+    display:flex;
+    justify-content:center;
+}
 .content {
   display: flex;
   flex-wrap: wrap;
@@ -48,13 +57,13 @@ input#input{
     margin-bottom: 1em;
 }
 
-button#submit.btn.btn-primary{
+button#submit.btn.btn-dark{
      margin-left: .7em;
      margin-bottom: 2.5em;
      width: 40em;
 }
 
-button#submit2.btn.btn-primary{
+button#submit2.btn.btn-dark{
      margin-left: .7em;
      width: 40em;
 }
@@ -67,14 +76,30 @@ h1{
     display: flex;
     justify-content: center;
     padding-top: .4em;
+    font-family: 'Kanit', sans-serif;
+    font-weight: 600;
+}
+
+h2{
+    font-family: 'Kanit', sans-serif;
 }
 
 h3{
     display: flex;
     justify-content: center;
     margin-bottom: 2.5em;
+    font-family: 'Kanit', sans-serif;
+}
+
+h5{
+     font-family: 'Kanit', sans-serif;
 }
 
 hr{
     padding-bottom: 1em;
+}
+
+span{
+    font-family: 'Kanit', sans-serif;
+    font-style: italic;
 }
