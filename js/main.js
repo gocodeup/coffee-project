@@ -3,14 +3,10 @@
 
 // creates divs for each coffee
 	function renderCoffee(coffee) {
-		let html = '<div class="coffee col-6 overflow-hidden card bg-light d-flex mt-1">';
-		// html += '<td>' + coffee.id + '</td>';
-		// html += '<div>'
+		let html = '<div class="coffee col-6 overflow-hidden card d-flex mt-1">';
 		html += '<h3 class="card-title d-flex p-2 m-0" >' + coffee.name + '</h3>';
-		html += '<p class="card-subtitle d-flex p-2 m-0">' + coffee.roast + '</p>';
+		html += '<p class="card-subtitle d-flex p-2 m-0 fst-italic">' + coffee.roast + '</p>';
 		html += '</div>';
-		// html += '</div>';
-		
 		return html;
 	}
 
@@ -111,6 +107,7 @@
 
 //on the load of the window the coffee list is loaded from the local storage
 	window.addEventListener('load', newList);
+	
 	function newList() {
 		let x = JSON.parse(localStorage.getItem('newCoffeesList'));
 		tbody.innerHTML = renderCoffees(x);
@@ -144,10 +141,11 @@
 		new bootstrap.Tooltip(x);
 	});
 	
-
+	
 	// used with the clear added coffees btn to clear the storage and refresh the page
 	let clearButton = document.querySelector("#clearCoffee");
 	clearButton.addEventListener('click', clearCoffee)
+	
 	function clearCoffee() {
 		localStorage.clear();
 		window.location.reload();
