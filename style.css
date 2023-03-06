@@ -3,12 +3,18 @@ table {
     margin: 15px 0;
 }
 
-td, th {
+tr, td {
     border: 1px solid black;
     padding: 5px 10px;
+    width:50%;
+}
+#coffees {
+    width: 100%;
 }
 
-
+#submit {
+    width:100%;
+}
 
 .divTable{
     display: table;
@@ -40,9 +46,84 @@ td, th {
     display: table-row-group;
 }
 
+.roastName {
+    align-self: self-end;
+}
 #coffees {
     font-weight: bolder;
     font-size: 2em;
 }
 
+
+
+/* Style the header */
+header {
+    background-color: #2B2D42;
+    padding: 20px;
+    color: white;
+    text-align: center;
+}
+
+/* Style the h1 inside the header */
+header h1 {
+    font-size: 48px;
+    margin: 0;
+    font-family: 'Pacifico', cursive;
+}
+
+
+.form-container {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Style for the label */
+label {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+    color: #444;
+}
+
+/* Style for the select element */
+select {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    appearance: none;
+    background-image: linear-gradient(to bottom, #f9f9f9, #f1f1f1);
+}
+
+/* Style for the input element */
+input[type="text"] {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+/* Style for the submit button */
+input[type="submit"] {
+    background-color: Blue;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+input[type="submit"]:hover {
+    background-color: #444;
+}
 

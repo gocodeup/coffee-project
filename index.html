@@ -13,78 +13,47 @@
 <hr>
 <section class="container">
     <div class="row">
-        <div class="col-6 text-center d-flex style="position=absolute;">
-            <table id="coffees">
-                <tr>
-                    <th class="lightCoffee"><h3>Light City</h3><th>
-                    <span><p>light</p></span>
-                    <th class="lightCoffee"><h3>Half City</h3><th>
-                    <span><p>light</p></span>
-                    <th class="lightCoffee"><h3>Cinnamon</h3><th>
-                    <span><p>light</p></span>
-                </tr>
-                <tr>
-                    <th class="mediumCoffee"><h3>City</h3><th>
-                    <span><p>medium</p></span>
-                    <th class="mediumCoffee"><h3>American</h3><th>
-                    <span><p>medium</p></span>
-                    <th class="mediumCoffee"><h3>Breakfast</h3><th>
-                    <span><p>medium</p></span>
-                </tr>
-                <tr>
-                    <td class="darkCoffee"><h3>Continental</h3><td>
-                    <span><p>dark</p></span>
-                    <th class="darkCoffee"><h3>New Orleans</h3><th>
-                    <span><p>dark</p></span>
-                    <th class="darkCoffee"><h3>Espresso</h3><th>
-                    <span><p>dark</p></span>
-                    <th class="darkCoffee"><h3>European</h3><th>
-                    <span><p>dark</p></span>
-                    <th class="darkCoffee"><h3>Viennese</h3><th>
-                    <span><p>dark</p></span>
-                    <th class="darkCoffee"><h3>High</h3><th>
-                    <span><p>dark</p></span>
-                    <th class="darkCoffee"><h3>French</h3><th>
-                    <span><p>dark</p></span>
-                    <th class="darkCoffee"><h3>Italian</h3><th>
-                    <span><p>dark</p></span>
-                </tr>
-            </table>
+        <div class="col-6 text-center d-flex">
+            <div class="divTable">
+                <div class="divTableBody" id="coffees"></div>
+            </div>
         </div>
-        <div class="col-6 text-center">
+        <div class="col-6">
             <div>
-                <label for="roast-selection"></label>
-                <select class="form-select" aria-label="Default select example" id="roast-selection">
+                <label for="roast-selection"><strong>Roast</strong></label>
+                <select class="form-select my-3" aria-label="Default select example" id="roast-selection">
+                    <option>All</option>
                     <option>light</option>
                     <option>medium</option>
                     <option>dark</option>
                 </select>
-
-                <div class="mb-3">
+                <div>
                     <label for="formGroupExampleInput" class="form-label"><strong>Coffee Name</strong></label>
                     <input type="text" class="form-control" id="formGroupExampleInput">
                     <input id="submit" type="submit" />
                 </div>
             </div>
 
-            <h1>Add A Coffee</h1>
-            <div class="col">
-                <label for="roast-selection"></label>
-                <select class="form-select" aria-label="Default select example" id="roast-selection">
+            <h1 class="text-center">Add A Coffee</h1>
+            <div>
+                <label for="roast-selection"><strong>Roast</strong></label>
+                <select class="form-select my-3" aria-label="Default select example" id="roast-selection">
+                    <option>All</option>
                     <option>light</option>
                     <option>medium</option>
                     <option>dark</option>
                 </select>
-
-                <div class="mb-3">
-                    <label for="formGroupExampleInput" class="form-label"><strong>Coffee Name</strong></label>
-                    <input type="text" class="form-control" id="formGroupExampleInput">
+                <div>
+                    <label for="coffee-Flavor" class="form-label"><strong> Name</strong></label>
+                    <input type="text" id="coffee-Flavor" placeholder="search Coffee">
                     <input id="submit" type="submit" />
+                </div>
                 </div>
             </div>
         </div>
     </div>
 </section>
+
 <script src="main.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
 </body>
