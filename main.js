@@ -3,25 +3,20 @@
 
 // This function displays the table
 function renderCoffee(coffee) {
-    console.log(coffee) //  {id: 14, name: american, roast: light}
-    // <div class="content col-6"><h2>american</h2></div>
+    console.log(coffee)
     var html = '<div class="content col-6">'; //controls the table
     html += '<h2>' + coffee.name + '<span>' + coffee.roast + '</span>' + '</h2>'; //shows the name
     html += '</div>';
-//    console.log(html);
     return html;
 }
 
 // Affects the array list
-
 function renderCoffees(coffees) {
     var html = ''; //affects the table contents
     for(var i = 0; i <= coffees.length - 1; i++) { // looping through coffees array from 14 -> 0
         console.log(coffees[i]);
         html += renderCoffee(coffees[i]); //affects the table contents
     }
-    console.log('html in renderCoffeeS: ', html)
-//     <div class="content col-6"><h2>american</h2></div> <div class="content col-6"><h2>espresso</h2></div>
     return html; //tells it what to print/show if not included result is undefined
 }
 
@@ -37,7 +32,6 @@ function updateCoffees(e) {
         }else if (selectedRoast === "all"){
               filteredCoffees.push(coffee);
         }
-//        console.log(option[0]);
     });
     tbody.innerHTML = renderCoffees(filteredCoffees);
 }
@@ -80,20 +74,16 @@ searching.addEventListener('keyup', (e) =>{
     for(var i = 0; i <= coffees.length - 1; i++){
 
         if(coffees[i].name.toLowerCase() === searched.toLowerCase()){
-//        This === will only be exact matches
-// did we learn any string methods perhaps that could search part of a name? food for thought / v2 starts with
             array.push(coffees[i]);
         } else if(coffees[i].name.toLowerCase().includes(searched)){
              array.push(coffees[i]);
         }
     }
     tbody.innerHTML = renderCoffees(array);
-
-
 })
 
 // Changes innerHTML once you select the roast
-tbody.innerHTML = renderCoffees(coffees); // <div class="content col-6"><h2>american</h2></div>
+tbody.innerHTML = renderCoffees(coffees);
 // This is for the Coffee Name iput bar (Will use this for "Name" for Add a Coffee Section
 roastSelection.addEventListener("change", updateCoffees);
 submitButton.addEventListener('click',function(e){
@@ -101,33 +91,21 @@ submitButton.addEventListener('click',function(e){
 
     e.preventDefault(); // don't submit the form, we just want to update the data
     var selectedRoast = roastSelection.value;
-//    up here let's add in some tests for "what is roastSelection"
     var filteredCoffees = []; //affects the dropdown selection menu
     coffees.forEach(function(coffee) {
         if (coffee.roast === selectedRoast) {
             filteredCoffees.push(coffee);
         }
-
     });
     tbody.innerHTML = renderCoffees(filteredCoffees);
 }
 });
 
-
-// TO DO LIST
-
-// Add functionality to search through the coffees by name, and display only the coffees that match the provided search term (You will need to add an input field to the existing form for this)
-
-// Add functionality to update the displayed coffee as the user types into the search box, or as soon as they select an option from the select.
-
-
 var submitButton2 = document.querySelector('#submit2');
 submitButton2.addEventListener('click',function(e){
 {
-
     e.preventDefault(); // don't submit the form, we just want to update the data
     var selectedRoast = roastSelection.value;
-//    up here let's add in some tests for "what is roastSelection"
     var filteredCoffees = []; //affects the dropdown selection menu
     coffees.forEach(function(coffee) {
         if (coffee.roast === selectedRoast) {
@@ -140,7 +118,6 @@ submitButton2.addEventListener('click',function(e){
     tbody.innerHTML = renderCoffees(filteredCoffees);
 }
 });
-
 
 var submit2 = document.querySelector('#submit2');
 submit2.addEventListener('click', (e) =>{ // on click of submit add coffee

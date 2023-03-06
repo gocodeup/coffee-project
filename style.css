@@ -15,7 +15,6 @@ td, th {
 
 h2 {
     display: inline;
-
  }
 
 span{
@@ -28,6 +27,7 @@ span{
     display:flex;
     justify-content:center;
 }
+
 .content {
   display: flex;
   flex-wrap: wrap;
