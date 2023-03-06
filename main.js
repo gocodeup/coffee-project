@@ -76,14 +76,10 @@
 
     function addCoffees(e) {
         e.preventDefault();
-        console.log('add coffee submit clicked!')
         var newRoast = document.querySelector("#added-roast-selection").value;
-        console.log(newRoast);
         var newCoffee = document.querySelector("#added-coffee-selection").value;
-        console.log(newCoffee)
         var newCoffees = {id: coffees.length + 1, name: newCoffee, roast: newRoast};
         coffees.unshift(newCoffees);
-        console.log(coffees)
         localStorage.setItem('renderCoffees', JSON.stringify(coffees));
         var updatedCoffee = localStorage.getItem('renderCoffees');
         tbody.innerHTML = renderCoffees(JSON.parse(updatedCoffee));
