@@ -3,8 +3,8 @@
 function renderCoffee(coffee) {
     var html = '<div class="coffee">';
     // html += '<td>' + coffee.id + '</td>';
-    html += '<h3>' + coffee.name + '  ' + coffee.roast +'</h3>';
-    // html += '<p><h6>' + coffee.roast + '</h6></p>';
+    html += '<h3>' + coffee.name + '</h3>';
+    html += '<p><h6>' + coffee.roast + '</h6></p>';
     html += '</div>';
 
     return html;
@@ -62,25 +62,10 @@ roastSelection.addEventListener('change', updateCoffees)
 submitButton.addEventListener('click', updateCoffees);
 
 
-// coffeeSelection.addEventListener('input', listener: (e => ) {
-//     var coffeeOfChoice = [];
-//     var coffeeValue = e.target.value.toLowerCase();
-//     coffees.forEach(function (coffeeArray: {...}) {
-//         var lcCofArr = coffeeArray.name.toLowerCase();
-//         if (lcCofArr.includes(coffeeValue)) {
-//             coffeeOfChoice.push(coffeeArray);
-//         }
-//     })
-// };
 
 
 
 
-// var lightRoast = document.getElementById("lightRoast");
-// lightRoast.addEventListener("click", myFunction);
-// function myFunction(){
-//     lightRoast.style.backgroundColor= "blue"
-// }
 
 
 
