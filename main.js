@@ -31,6 +31,7 @@ function updateCoffees(e) {
         } else if (selectedRoast==='all')
             filteredCoffees.push(coffee)
     });
+    // displays all upon page loading
     tbody.innerHTML = renderCoffees(filteredCoffees);
 }
 
@@ -52,12 +53,14 @@ var coffees = [
     {id: 14, name: 'French', roast: 'dark'},
 ];
 coffees.reverse()
-
+// Captures DOM to display coffee
 var tbody = document.querySelector('#coffees');
+
 var submitButton = document.querySelector('#submit');
 var roastSelection = document.querySelector('#roast-selection');
 var coffeeSelection = document.querySelector('#coffee-selection');
 
+// Adds event listener to the dropdown
 coffeeSelection.addEventListener('input',e => {
     var coffeeOfChoice = [];
     var coffeeValue = e.target.value.toLowerCase();

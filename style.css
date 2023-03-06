@@ -1,13 +1,21 @@
 body{
     background-color: burlywood;
-    background-image: url("imgs/whitebackground.jpeg");
-    background-size: 100% 110%;
-
+}
+/*Class for styling of background video*/
+.steaming {
+    height: 100%;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    object-fit: cover;
+    opacity: 50%;
 }
 h1,form{
     text-align: center;;
+    font: larger; font: bold; color: blue;
 }
 
 .divTable {
     text-align: center;
+    font: bold; color: blue;
 }
