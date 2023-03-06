@@ -53,10 +53,19 @@ var coffees = [
 ];
 coffees.reverse();
 
+var searchValue = document.querySelector('#searchBar')
 var tbody = document.querySelector('#coffees');
 var submitButton = document.querySelector('#submit');
 var roastSelection = document.querySelector('#roast-selection');
-var coffeeSelection = document.querySelector('#coffee-Flavor');
+
+function searchBox () {
+    coffees.forEach(function (getName) {
+        if (getName.name.includes(searchValue)) {
+            updateCoffees.push(getName)
+        }
+        tbody.innerHTML = renderCoffees(coffees);
+    })
+}
 tbody.innerHTML = renderCoffees(coffees);
 roastSelection.addEventListener('change', updateCoffees)
 submitButton.addEventListener('click', updateCoffees);
