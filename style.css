@@ -1,5 +1,8 @@
 body{
     background-color: burlywood;
+    background-image: url("imgs/whitebackground.jpeg");
+    background-size: 100% 110%;
+
 }
 h1,form{
     text-align: center;
