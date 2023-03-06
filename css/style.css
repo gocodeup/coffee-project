@@ -6,7 +6,7 @@
 }
 
 body {
-    background-image: url("../assests/background.jpeg");
+    background-image: url("../assets/background.jpeg");
     background-size: cover;
     font-family: 'Crimson Text', serif;
 }
@@ -58,4 +58,10 @@ img {
     opacity: 85%;
     border: 2px solid black;
     border-radius: 25px;
+}
+
+@media screen and (max-width: 374px) {
+    #coffees h3 {
+        font-size: 1.2em;
+    }
 }
