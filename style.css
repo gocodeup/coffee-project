@@ -12,10 +12,27 @@ td, th {
     border-bottom: 1px solid #e5e5e5;
 }
 
+/*make border bottoms*/
+
 .formBorder {
     border-bottom: 1px solid #e5e5e5;
 }
 
 .thick {
     margin-bottom: 15px;
+}
+
+
+/*Centers add a coffee header*/
+.headerAddCoffee {
+    display:flex;
+    justify-content: center;
+}
+
+label {
+    display: none;
+}
+
+.ID {
+    display: none;
 }
