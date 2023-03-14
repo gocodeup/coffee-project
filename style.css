@@ -1,9 +1,40 @@
-table {
-    border-collapse: collapse;
-    margin: 15px 0;
+body {
+    width: 90vw;
+}
+.header {
+    border-bottom: 1px solid #F2F2F2;
+    margin-bottom: 10px;
 }
 
-td, th {
-    border: 1px solid black;
-    padding: 5px 10px;
+
+form {
+    display: flex;
+    flex-direction: column;
+    margin: 10px 0px;
+}
+.roast-label, .coffee-name {
+    font-weight: bold;
+    padding-bottom: 5px;
+}
+.roast-dropdown select {
+    min-height: 35px;
+}
+.coffee-name-input {
+    min-height: 30px;
+}
+.submit-btn {
+    min-height: 35px;
+    margin-top: 5px;
+    background-color: #3C89CB;
+    color: white;
+    border: none;
+    border-radius: 6px;
+}
+.add-coffee-label {
+    display: flex;
+    justify-content: center;
+    border-top: 1px solid #F2F2F2;
+    padding-top: 25px;
+    margin-top: 30px;
+
 }
