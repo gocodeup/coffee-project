@@ -1,6 +1,6 @@
 "use strict"
 function renderCoffee(coffee) {
-    let html = '<div class="coffee row">';
+    let html = '<div class="coffee show row">';
     html += '<div>' + coffee.id + '</div>';
     html += '<div>' + coffee.name + '</div>';
     html += '<div>' + coffee.roast + '</div>';
@@ -11,7 +11,7 @@ function renderCoffee(coffee) {
 
 function renderCoffees(coffees) {
     let html = '';
-    for(let i = coffees.length - 1; i >= 0; i--) {
+    for(let i = 0; i < coffees.length; i++) {
         html += renderCoffee(coffees[i]);
     }
     return html;
@@ -26,6 +26,8 @@ function updateCoffees(e) {
     coffees.forEach(function(coffee) {
         if (coffee.roast === selectedRoast) {
             filteredCoffees.push(coffee);
+        } else if (selectedRoast === 'all') {
+            filteredCoffees = coffees;
         }
     });
     tableBody.innerHTML = renderCoffees(filteredCoffees);
@@ -56,3 +58,16 @@ let roastSelection = document.querySelector('#roast-selection');
 tbody.innerHTML = renderCoffees(coffees);
 
 submitButton.addEventListener('click', updateCoffees);
+
+let userSearch = document.querySelector(".coffee-search")
+const coffeesSearch = () => {
+    let currentSearch = userSearch.value.toLowerCase();
+    let userCoffees = [];
+    coffees.forEach((coffee) => {
+        if (coffee.name.toLowerCase().includes(currentSearch)) {
+            userCoffees.push(coffee);
+        }
+        tableBody.innerHTML = renderCoffees(userCoffees);
+    })
+}
+userSearch.addEventListener('keyup', coffeesSearch);
