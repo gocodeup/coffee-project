@@ -3,32 +3,56 @@
 <head>
     <meta charset="UTF-8">
     <title></title>
+    <link rel="stylesheet" href="css/layout.css">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Coffee!</h1>
+<div class="page-wrapper">
+    <div class="container">
+        <div class="row header justify-center">
+            <h1>Coffee!</h1>
+        </div>
+    </div>
+    <div class="container grow">
+        <div class="row">
+            <div class="column">
 
-    <form>
-        <label for="roast-selection"></label>
-        <select id="roast-selection">
-            <option>light</option>
-            <option>medium</option>
-            <option>dark</option>
-        </select>
-        <input id="submit" type="submit" />
-    </form>
+            </div>
+            <div class="column justify-center">
+                <form class="roast-dropdown">
+                    <label class="roast-label" for="roast1">Roast</label>
+                    <select id="roast1">
+                        <option value="all">all</option>
+                        <option value="light">light</option>
+                        <option value="medium">medium</option>
+                        <option value="dark">dark</option>
+                    </select>
+                </form>
+                <form>
+                    <label class="coffee-name" for="coffee-name">Coffee Name</label>
+                    <input class="coffee-name-input" type="text" id="coffee-name">
+                </form>
+                <input class="submit-btn" type="submit">
 
-    <table>
-        <thead>
-            <tr>
-                <th>ID</th>
-                <th>NAME</th>
-                <th>ROAST</th>
-            </tr>
-        </thead>
-        <tbody id="coffees"></tbody>
-    </table>
+                <h1 class="add-coffee-label">Add a Coffee</h1>
 
-    <script src="main.js"></script>
+                <form class="roast-dropdown">
+                    <label class="roast-label" for="roast2">Roast</label>
+                    <select id="roast2">
+                        <option value="all">all</option>
+                        <option value="light">light</option>
+                        <option value="medium">medium</option>
+                        <option value="dark">dark</option>
+                    </select>
+                </form>
+                <form>
+                    <label class="coffee-name" for="coffee-name">Name</label>
+                    <input class="coffee-name-input" type="text" id="custom-coffee-name">
+                </form>
+                <input class="submit-btn" type="submit">
+            </div>
+        </div>
+    </div>
+</div>
 </body>
 </html>
