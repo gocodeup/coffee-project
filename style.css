@@ -7,3 +7,15 @@ td, th {
     border: 1px solid black;
     padding: 5px 10px;
 }
+
+.headerContainer {
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.formBorder {
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.thick {
+    margin-bottom: 15px;
+}
