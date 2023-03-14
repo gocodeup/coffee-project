@@ -3,32 +3,50 @@
 <head>
     <meta charset="UTF-8">
     <title></title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="/css/resets.css">
+    <link rel="stylesheet" href="/css/layout.css">
+    <link rel="stylesheet" href="/css/style.css">
+
 </head>
 <body>
-    <h1>Coffee!</h1>
-
-    <form>
-        <label for="roast-selection"></label>
-        <select id="roast-selection">
-            <option>light</option>
-            <option>medium</option>
-            <option>dark</option>
-        </select>
-        <input id="submit" type="submit" />
-    </form>
-
-    <table>
-        <thead>
-            <tr>
-                <th>ID</th>
-                <th>NAME</th>
-                <th>ROAST</th>
-            </tr>
-        </thead>
-        <tbody id="coffees"></tbody>
-    </table>
-
+<div class="page-wrapper">
+    <div class="container grow">
+        <!-- HEADER -->
+        <div class="row justify-center align-center text-center grow">
+            <h1>Coffee!</h1>
+        </div>
+        <div class="row justify-center align-center grow">
+            <hr class="header-line grow">
+        </div>
+        <div class="row">
+            <!-- COLUMN 1 COFFEE TABLE -->
+            <div class="column">
+                <table>
+                    <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>NAME</th>
+                        <th>ROAST</th>
+                    </tr>
+                    </thead>
+                    <tbody id="coffees"></tbody>
+                </table>
+            </div>
+            <!-- COLUMN 2 for FORM  -->
+            <div class="column">
+                <form>
+                    <label for="roast-selection"></label>
+                    <select id="roast-selection">
+                        <option>light</option>
+                        <option>medium</option>
+                        <option>dark</option>
+                    </select>
+                    <input id="submit" type="submit" />
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
     <script src="main.js"></script>
 </body>
 </html>

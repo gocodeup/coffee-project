@@ -7,3 +7,10 @@ td, th {
     border: 1px solid black;
     padding: 5px 10px;
 }
+
+.header-line {
+    width:50%;
+    color: #000;
+    border: 1px solid darkgrey;
+    width: 100%;
+}

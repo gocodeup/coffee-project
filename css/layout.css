@@ -1,0 +1,123 @@
+/*
+    The "page wrapper" is the outermost container for the page. It mimics
+    the behavior of the body tag, but is a div so that it can be styled
+    with more flexibility than the body tag.
+*/
+.page-wrapper {
+    min-height: 100vh;
+    display:flex;
+    flex-direction: column;
+}
+
+/*
+    The "container", sometimes referred to as a "section", is a container
+    element (semantic when applicable) that vertically separates different
+    areas on the page based on their purpose or topic. It can allow different
+    background colors and properties for each section that help users associate
+    content within it as belonging to the same subject.
+*/
+.container {
+    display:flex;
+    flex-direction: column;
+    align-items:center;
+    row-gap: 20px;
+}
+/* Combo classes to extend the container's versatility */
+/* 1 ; flex grow; 0 flex shrink; 0 flex basis*/
+.container.grow {
+    flex: 1 0 0;
+}
+.container.justify-center {
+    justify-content: center;
+}
+
+/*
+    The "row" is a container element that horizontally separates its
+    children, which are usually columns. It also performs a secondary role
+    of keeping the content of the site within a reasonable width, so that
+    wider screens don't disrupt the intended layout.
+*/
+.row {
+    width: 100%;
+    max-width: 1100px;
+    display:flex; /* flex direction by default is row */
+    padding: 0 20px;
+    gap:20px;
+}
+/* Combo classes to extend the row's versatility */
+.row.full-width {
+    max-width: unset;
+}
+.row.align-center {
+    align-items:center;
+}
+.row.align-top {
+    align-items: start;
+}
+
+.row.align-bottom {
+    align-items: end;
+}
+
+.row.justify-center {
+    justify-content:center;
+}
+
+.row.justify-right {
+    justify-content:end;
+}
+
+.row.justify-space-between {
+    justify-content: space-between;
+}
+.row.no-padding {
+    padding:unset;
+}
+.row.no-gap {
+    gap: unset;
+}
+
+.row.grow {
+    flex: 1 0 0;
+}
+
+/*
+    The "column" is a container element that vertically separates its
+    children, which are usually content elements. When paired with sibling columns,
+    it allows for the creation of a flexible grid system that can be used
+    to create a variety of layouts.
+*/
+.column {
+    display:flex;
+    flex-direction: column;
+    flex: 1 0 0;
+}
+/* Combo classes to extend the column's versatility */
+.column.shrink {
+    flex: 0 1 80px;
+}
+.column.align-center {
+    align-items:center;
+}
+.column.align-left {
+    align-items: start;
+}
+
+.column.align-right {
+    align-items: end;
+}
+.column.text-center{
+    text-align: center;
+}
+.column.justify-center {
+    justify-content: center;
+}
+.column.justify-bottom {
+    justify-content: end;
+}
+.column.justify-top {
+    justify-content: start;
+}
+.column.justify-space-between {
+    justifty-content:space-between
+}
