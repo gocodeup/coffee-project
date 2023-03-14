@@ -1,0 +1,39 @@
+table {
+    border-collapse: collapse;
+    margin: 15px 0;
+}
+
+td, th {
+    border: 1px solid black;
+    padding: 5px 10px;
+}
+
+header {
+    border-bottom: #e4e4e4 1px solid;
+}
+
+.page-wrapper {
+    padding: 0 50px;
+}
+
+.coffee-wrapper {
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+    align-items: center;
+    font-size: 15px;
+}
+
+p.roast {
+    opacity: 0.5;
+
+}
+
+.column.coffees {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    max-width: 50vh;
+    align-content: space-between;
+    justify-content: space-between;
+}
