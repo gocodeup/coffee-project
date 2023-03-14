@@ -1,0 +1,57 @@
+/*table {*/
+/*    border-collapse: collapse;*/
+/*    margin: 15px 0;*/
+/*}*/
+
+/*td, th {*/
+/*    border: 1px solid black;*/
+/*    padding: 5px 10px;*/
+/*}*/
+
+/* PAGE LAYOUT/POSITIONING */
+
+.page-wrapper {
+    /*justify-content: center;*/
+}
+
+header {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #c5c5c5;
+}
+
+h1 {
+    display: flex;
+    margin: 10px 0px;
+}
+
+body {
+    width: 1400px;
+    margin-left: 20px;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+}
+
+/* COLUMN ONE */
+
+.column.coffee-roast {
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+/* COLUMN ONE */
+
+.column.forms {
+    display: flex;
+    text-align: center;
+    align-items: center;
+}
+
+
