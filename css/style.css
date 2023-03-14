@@ -1,0 +1,251 @@
+/***********  VARIABLES  ***********/
+:root {
+    --light-shadow-color: rgba(0, 0, 0, 0.3);
+    --light-grey: #e7e7e7;
+    --light-shadow: 5px 5px 5px var(--light-shadow-color)
+}
+
+/***********  GLOBAL PROPERTIES  ***********/
+table {
+    border-collapse: collapse;
+    margin: 15px 0;
+}
+
+td, th {
+    border: 1px solid black;
+    padding: 5px 10px;
+}
+
+.page-wrapper {
+    overflow-x: hidden;
+    background-color: antiquewhite;
+}
+
+form {
+    display: flex;
+    flex: 3;
+    flex-direction: column;
+    justify-content: space-around;
+    row-gap: 5px;
+    align-items: start;
+    max-height: 100%;
+    max-width: 100%;
+}
+
+h1 {
+    font-size: 4rem;
+}
+
+/***********  HEADER SECTION  ***********/
+.container.header {
+    max-height: 100%;
+    flex-shrink: 1;
+}
+
+header .row {
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+/***********  COFFEE DISPLAY SECTION  ***********/
+section.container.coffee-display {
+    max-height: 100%;
+    flex: 2;
+}
+
+.coffee-display-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    align-content: space-between;
+    max-height: 100%;
+}
+
+.coffee-list-divs {
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    align-content: space-evenly;
+    flex-wrap: wrap;
+    gap: 10px;
+    max-height: 100%;
+}
+
+.coffee {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    column-gap: 10px;
+    flex: 1 0 auto;
+    max-height: 200px;
+    height: 200px;
+    max-width: 150px;
+    width: 150px;
+    background-color: floralwhite;
+    border: 1px solid var(--light-shadow-color);
+    box-shadow: var(--light-shadow);
+    border-radius: 10px;
+    transition: transform ease-out .3s;
+}
+
+.coffee:hover {
+    transform: scale(1.1);
+}
+
+.coffee .coffee-name-wrapper {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.coffee .coffee-roast-wrapper {
+    display: flex;
+    flex: 1;
+    padding: 0;
+    height: 25px;
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+    background-color: var(--light-grey);
+    border-radius: 0 0 10px 10px;
+}
+
+/***********  CUSTOMER SEARCH AND ADD WRAPPER ***********/
+section.container.customer-search-add {
+    max-height: 100%;
+    flex: 1;
+}
+
+section.container.customer-search-add .row {
+    justify-content: center;
+}
+
+/***********  CUSTOMER SEARCH  ***********/
+.customer-search-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: space-between;
+    flex: 1;
+    border: 1px solid black;
+    box-shadow: var(--light-shadow);
+    border-radius: 10px;
+    padding: 2px;
+    height: 85%;
+}
+
+.coffee-search-wrapper {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    max-height: 100%;
+    margin: 8px;
+    width: 100%;
+    max-width: 100%;
+}
+
+.coffee-roast-wrapper {
+    display: flex;
+    flex-direction: column;
+    margin: 8px;
+    width: 100%;
+}
+
+.coffee-roast-wrapper select {
+    padding: 2px 1px;
+    width: 100%;
+    flex: 1;
+}
+
+.search-button-wrapper {
+    display: flex;
+    flex: 1;
+    width: 100%;
+    flex-direction: column;
+    margin: 1px;
+}
+
+.search-button-wrapper button {
+    font-size: x-large;
+    height: 100%;
+    width: 100%;
+    writing-mode: vertical-lr;
+    text-orientation: upright;
+    border-radius: 8px;
+    border: 1px solid var(--light-shadow-color);
+    transition: all ease-out .3s;
+}
+
+.search-button-wrapper button:hover {
+    transform: scale(1.1)
+}
+
+/***********  CUSTOMER ADDITIONS  ***********/
+.customer-additions-wrapper {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    border: 1px solid black;
+    box-shadow: var(--light-shadow);
+    border-radius: 10px;
+    padding: 2px;
+    height: 85%;
+}
+
+.customer-coffee-name-wrapper {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    margin: 8px;
+    width: 100%;
+}
+
+.customer-coffee-roast-wrapper {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    margin: 8px;
+    width: 100%;
+}
+
+.add-button-wrapper {
+    display: flex;
+    flex: 1;
+    width: 100%;
+    flex-direction: column;
+    margin: 1px;
+}
+
+.add-button-wrapper button {
+    font-size: x-large;
+    height: 100%;
+    width: 100%;
+    writing-mode: vertical-lr;
+    text-orientation: upright;
+    border-radius: 8px;
+    border: 1px solid var(--light-shadow-color);
+    transition: all ease-out .3s;
+}
+
+.add-button-wrapper button:hover {
+    transform: scale(1.1)
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
