@@ -37,18 +37,31 @@ body {
     flex-direction: row;
 }
 
-/* COLUMN ONE */
+/*  */
 
-.column.coffee-roast {
+.coffee-type {
     display: flex;
+    max-width: 350px;
     text-align: center;
     align-items: center;
-    justify-content: center;
 }
 
 /* COLUMN ONE */
 
+.column.coffee-roast-one {
+    width: 700px;
+    height: 500px;
+    display: flex;
+    flex-wrap: wrap;
+    text-align: start;
+    align-items: center;
+    justify-content: start;
+}
+
+/* COLUMN TWO */
+
 .column.forms {
+    width: 700px;
     display: flex;
     text-align: center;
     align-items: center;
