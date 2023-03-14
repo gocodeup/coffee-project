@@ -2,33 +2,41 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title></title>
-    <link rel="stylesheet" href="style.css">
+    <title>Coffee Project</title>
+    <link rel="stylesheet" href="css/resets.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <h1>Coffee!</h1>
-
-    <form>
-        <label for="roast-selection"></label>
-        <select id="roast-selection">
-            <option>light</option>
-            <option>medium</option>
-            <option>dark</option>
-        </select>
-        <input id="submit" type="submit" />
-    </form>
-
-    <table>
-        <thead>
-            <tr>
-                <th>ID</th>
-                <th>NAME</th>
-                <th>ROAST</th>
-            </tr>
-        </thead>
-        <tbody id="coffees"></tbody>
-    </table>
-
+    <div class="page-wrapper">
+        <header class="container">
+            <div class="row align-center">
+                <div class="column align-center">
+                    <h1>Coffee!</h1>
+                </div>
+            </div>
+        </header>
+        <hr>
+        <div class="container menu">
+            <div class="row shrink">
+                <div class="column menu-items">
+                    <div id="coffees"></div>
+                </div>
+                <div class="column navigation grow">
+                    <form>
+                        <label for="roast-selection"></label>
+                        <select id="roast-selection">
+                            <option>all</option>
+                            <option>light</option>
+                            <option>medium</option>
+                            <option>dark</option>
+                        </select>
+<!--                        <input id="submit" type="submit" />-->
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
     <script src="main.js"></script>
 </body>
 </html>

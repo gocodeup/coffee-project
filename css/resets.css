@@ -1,0 +1,93 @@
+/* More intuitive box-sizing model */
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+/* Remove default margin */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* Add accessible line-height
+    Improve text rendering
+*/
+body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+    display: block;
+    max-width: 100%;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    overflow-wrap: break-word;
+}
+
+/*Change the font styles in all browsers, and remove the margin in Firefox and Safari.*/
+button,
+input,
+optgroup,
+select,
+textarea {
+    font-family: inherit; /* 1 */
+    font-size: 100%; /* 1 */
+    line-height: 1.15; /* 1 */
+    margin: 0; /* 2 */
+}
+
+button {
+    border: unset;
+}
+
+input {
+    outline: unset;
+}
+
+/* hand cursor on clickable elements */
+.clickable,
+label,
+input[type=button],
+input[type=submit],
+input[type=file],
+button {
+    cursor: pointer;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    border-color: inherit;
+}
+
+textarea {
+    white-space: revert;
+}
+
+::placeholder {
+    color: unset;
+    font: inherit;
+}
+
+:where(pre) {
+    font-family: monospace, monospace; /* 1 */
+    font-size: 1em; /* 2 */
+    overflow: auto; /* 3 */
+}
+
+a, a:visited {
+    text-decoration: none;
+    color: unset;
+}
