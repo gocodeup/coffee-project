@@ -3,31 +3,74 @@
 <head>
     <meta charset="UTF-8">
     <title></title>
+    <link rel="stylesheet" href="layout.css">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Coffee!</h1>
+<!-- coffee and first row-->
+    <div class="container headerContainer">
+        <div class="row justify-center">
+            <h1>Coffee!</h1>
+        </div>
+    </div>
 
-    <form>
-        <label for="roast-selection"></label>
-        <select id="roast-selection">
-            <option>light</option>
-            <option>medium</option>
-            <option>dark</option>
-        </select>
-        <input id="submit" type="submit" />
-    </form>
+<div class="container">
+    <div class="row">
 
+<!-- table-->
+<div class="column">
     <table>
         <thead>
-            <tr>
-                <th>ID</th>
-                <th>NAME</th>
-                <th>ROAST</th>
-            </tr>
+        <tr>
+            <th>ID</th>
+            <th>NAME</th>
+            <th>ROAST</th>
+        </tr>
         </thead>
         <tbody id="coffees"></tbody>
     </table>
+
+</div>
+
+
+    <!-- form 1-->
+        <div class="column">
+            <div class="row formBorder">
+                <form>
+                    <h3>Roast</h3>
+                    <label for="roast-selection"></label>
+                    <select id="roast-selection">
+                        <option>light</option>
+                        <option>medium</option>
+                        <option>dark</option>
+                    </select>
+                    <h3>Coffee Name</h3>
+                        <label for="comments">Coffee something</label>
+                        <textarea name="comments" id="comments" cols="45" rows="1" placeholder="Coffee!"></textarea><br>
+                    <input class="thick" id="submit" type="submit" />
+                </form>
+            </div>
+<!-- form 2 -->
+        <div class="row">
+            <form>
+                <h2>Add a Coffee</h2>
+                <h3>Roast</h3>
+                <label for="roast-selection"></label>
+                <select id="roast-selection">
+                    <option>light</option>
+                    <option>medium</option>
+                    <option>dark</option>
+                </select>
+                <h3>Name</h3>
+                <label for="comments">Coffee something</label>
+                <textarea name="comments" id="comments" cols="45" rows="1" placeholder="Coffee!"></textarea><br>
+                <input id="submit" type="submit" />
+            </form>
+        </div>
+    </div>
+</div>
+
+
 
     <script src="main.js"></script>
 </body>
