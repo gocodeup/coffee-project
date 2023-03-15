@@ -36,7 +36,6 @@ const createNewCoffee = ({ id: coffeeID, name: coffeeName, roast: coffeeRoast })
     </div>
     `;
     coffeeListWrapper.appendChild(newCoffee);
-    window.localStorage.setItem(`${newCoffee.id}`, JSON.stringify(newCoffee));
 };
 const removeContent = (parent) => {
     while (parent.firstElementChild) {
@@ -63,13 +62,11 @@ let coffees = [
     { id: 14, name: "French", roast: "dark" }
 ];
 
-
-
 //--      --////--    DISPLAY FUNCTIONS  --////--      --//
 const sortedCoffees = sortedArrayByID(coffees);
-
 sortedCoffees.forEach(coffee => {
     createNewCoffee(coffee);
+    window.localStorage.setItem(JSON.stringify(coffee.id), JSON.stringify(coffee));
 });
 
 //--      --////--    EVENT LISTENERS  --////--      --//
@@ -79,7 +76,7 @@ addForm.addEventListener("submit", e => {
     console.log("function connected");
     let id = sortedCoffees[sortedCoffees.length - 1].id + 1;
     const name = document.querySelector("#customer-coffee-input").value;
-    const roast = document.querySelector("#customer-roast-input").value;
+    const roast = document.querySelector("#customer-roast-input").value.toLowerCase();
     const coffee = { id, name, roast };
     sortedCoffees.push(coffee);
     let lastCoffee = sortedCoffees[sortedCoffees.length - 1];
@@ -101,7 +98,6 @@ searchInput.addEventListener("input", (e) => {
     }
 );
 
-console.log(window.localStorage);
 
 // searchSubmitBtn.addEventListener("click", (e) => {
 //     e.preventDefault();
