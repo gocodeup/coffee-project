@@ -69,3 +69,13 @@ p.bold {
 .spacing {
     width: 100%;
 }
+.right {
+    display: flex;
+    flex-direction: column;
+}
+
+.addCoffee {
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+}
