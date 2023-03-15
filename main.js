@@ -1,15 +1,24 @@
 "use strict"
 
-
-
 function renderCoffee(coffee) {
-    let html = '<div class="coffee">';
-    html += '<div class="ID">' + coffee.id + '</div>';
-    html += '<h4>' + coffee.name + '</h4>';
-    html += '<p>' + coffee.roast + '</p>';
-
+    let html = `
+        <div class="coffee"> 
+        <h4 class="id">${coffee.id}</h4>
+            <h4>${coffee.name}</h4> 
+            <p>${coffee.roast}</p>
+        </div>`
     return html;
 }
+
+// function renderCoffee(coffee) {
+//     let html =
+//         '<div class="coffee">';
+//     html += '<div class="ID">' + coffee.id + '</div>';
+//     html += '<h4>' + coffee.name + '</h4>';
+//     html += '<p>' + coffee.roast + '</p>';
+//
+//     return html;
+// }
 
 // function renderCoffee(coffee) {
 //     let html = `<div>
@@ -38,8 +47,11 @@ function updateCoffees(e) {
     let selectedRoast = roastSelection.value;
     let filteredCoffees = [];
     coffees.forEach(function(coffee) {
-        if (coffee.roast === selectedRoast) {
-            filteredCoffees.push(coffee);
+        if (selectedRoast === 'all') {
+            filteredCoffees = coffees;
+        } else {
+            filteredCoffees = coffees.filter(coffee => coffee.roast === selectedRoast)
+
         }
     });
     tbody.innerHTML = renderCoffees(filteredCoffees);
@@ -70,3 +82,33 @@ let roastSelection = document.querySelector('#roast-selection');
 tbody.innerHTML = renderCoffees(coffees);
 
 submitButton.addEventListener('click', updateCoffees);
+
+const searchInput = document.querySelector("[data-search]")
+//inputs the entered value by key
+searchInput.addEventListener("input", (e) =>{
+    const value = e.target.value
+    const matchingCoffees = []
+    coffees.forEach(coffee => {
+        if (coffee.name.toLowerCase().includes(value)){
+            console.log(coffee)
+            matchingCoffees.push(coffee)
+        }
+    })
+    renderCoffees(matchingCoffees)
+})
+
+
+
+
+
+
+// let input = document.getElementById("myInput");
+//
+// //Execute a function when the user presses a key on the keyboard
+// input.addEventListener("keypress", function(event) {
+//     if (event.key === "Enter") {
+//         event.preventDefault();
+//         document.getElementById("myBtn").click();
+//     }
+// });
+

@@ -19,10 +19,10 @@
 
 <!-- table-->
 <div class="column" id="coffees">
-    <div class="ID">
-        <h4 class="NAME"></h4>
-        <p class="ROAST"></p>
-    </div>
+<!--    <div class="ID">-->
+<!--        <h4 class="NAME"></h4>-->
+<!--        <p class="ROAST"></p>-->
+<!--    </div>-->
 <!--    <table>-->
 <!--        <thead>-->
 <!--        <tr>-->
@@ -42,16 +42,20 @@
             <div class="row formBorder">
                 <form>
                     <h3>Roast</h3>
-                    <label for="roast-selection"></label>
+<!--                    <label for="roast-selection"></label>-->
                     <select id="roast-selection">
                         <option>light</option>
                         <option>medium</option>
                         <option>dark</option>
+                        <option>all</option>
                     </select>
                     <h3>Coffee Name</h3>
-                        <label for="comments">Coffee something</label>
-                        <textarea name="comments" id="comments" cols="45" rows="1" placeholder="Coffee!"></textarea><br>
+                        <div class="search-wrapper">
+                            <label for="search">Coffee</label>
+                            <input type='search' id="search" data-search placeholder="Coffee!"><br>
+                        </div>
                     <input class="thick" id="submit" type="submit" />
+
                 </form>
             </div>
 <!-- form 2 -->
@@ -59,19 +63,21 @@
             <form>
                 <h2 class="headerAddCoffee">Add a Coffee</h2>
                 <h3>Roast</h3>
-                <label for="roast-selection"></label>
-                <select id="roast-selection">
+                <label for="roast-selection2"></label>
+                <select id="roast-selection2">
                     <option>light</option>
                     <option>medium</option>
                     <option>dark</option>
+                    <option>all</option>
                 </select>
                 <h3>Name</h3>
-                <label for="comments">Coffee something</label>
-                <textarea name="comments" id="comments" cols="45" rows="1" placeholder="Coffee!"></textarea><br>
-                <input id="submit" type="submit" />
+                <label for="search2">Coffee</label>
+                <input type='search' id="search2" placeholder="Coffee!"><br>
+                <input class="thick" id="submit2" type="submit" />
             </form>
         </div>
     </div>
+</div>
 </div>
 
 
