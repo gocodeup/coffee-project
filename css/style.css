@@ -1,17 +1,178 @@
-table {
-    border-collapse: collapse;
-    margin: 15px 0;
+* {
+    font-family: "Helvetica Neue", sans-serif;
 }
 
-td, th {
-    border: 1px solid black;
-    padding: 5px 10px;
-}
-
+/*JS DOM Event selectors*/
 .show {
     display: flex;
 }
 
 .hide {
     display: none;
+}
+
+.black, .bold  {
+    color: black;
+    font-weight: bold;
+}
+
+.white {
+    color: white;
+}
+
+/*SPECIFIC LAYOUT*/
+
+/*DELETE  DELETE DELETE  DELETE DELETE  DELETE DELETE  DELETE*/
+/*FOR INSPECT GUIDE*/
+/*.row {*/
+/*    padding: 0;*/
+/*    border-top: 1px solid pink;*/
+/*    border-bottom: 1px solid pink;*/
+/*}*/
+
+/*.column {*/
+/*    border-left: 2px dashed deepskyblue;*/
+/*    border-right: 2px dashed deepskyblue;*/
+/*}*/
+/*DELETE  DELETE DELETE  DELETE DELETE  DELETE DELETE  DELETE*/
+
+
+h3 {
+    margin: 0;
+}
+
+/*STYLE SUGAR*/
+body {
+    background-image: url("/coffee-project/images/abstract-bg.webp");
+    background-repeat: repeat;
+}
+
+label {
+    margin-bottom: 5px;
+}
+
+form {
+    margin-bottom: 15px
+}
+
+button[type="button"] {
+    background-color: darkred;
+    border-radius: 5px;
+    border: none;
+    color: white;
+    padding: 4px;
+    margin: 5px 0;
+}
+
+h1 {
+    font-weight: bold;
+}
+
+span {
+    font-weight: unset;
+    color: tan;
+    font-size: 20px;
+}
+
+p {
+    font-style: italic;
+    color: tan;
+    font-size: 12px;
+}
+
+.head-row {
+    border-bottom: 2px solid white;
+    border-radius: 10px;
+}
+
+.main-section {
+    min-width: 90vw;
+    background: linear-gradient(to left, rgba(0, 0, 0, 0.8) 75%, rgba(63, 0, 0, 0.5));
+    max-height: 80vh;
+    padding: 5px 20px;
+}
+
+.content {
+    justify-content: space-around;
+}
+
+.search-section-wrapper {
+    flex: unset;
+    background-color: tan;
+    border-radius: 10px;
+    width: 400px;
+    padding: 15px;
+}
+
+.roast-search {
+    margin-bottom: 15px;
+}
+
+.coffeebody {
+    flex-wrap: wrap;
+    width: 500px;
+}
+
+.coffee {
+    align-items: baseline;
+    width: 200px;
+    gap: 5px;
+}
+
+.coffee-name {
+    font-size: 28px;
+}
+.coffee-roast {
+    font-size: 16px;
+    color: tan;
+}
+
+#live-search {
+    min-width: 500px;
+    max-width: 500px;
+}
+
+
+@media screen and (max-width: 800px) {
+    .main-section {
+        max-width: 90vw;
+        min-height: 50vh;
+        background: linear-gradient(to top, rgba(0, 0, 0, 0.8) 75%, rgba(63, 0, 0, 0.5));
+        position: relative;
+    }
+    .content {
+        flex-wrap: wrap;
+        position: absolute;
+        align-items: center;
+        justify-content: center;
+    }
+    .search-section-wrapper {
+        flex: unset;
+        background-color: tan;
+        border-radius: 10px;
+        width: 91vw;
+        padding: 15px;
+    }
+
+    #live-search {
+        all: unset;
+        color: white;
+    }
+
+    .coffeebody {
+        justify-content: center;
+    }
+}
+
+@media screen and (max-width: 549px) {
+    .head-row > h1, span {
+        width: 200px
+    }
+    .coffee-name {
+        font-size: 20px;
+    }
+    .coffee-roast {
+        font-size: 12px;
+        color: tan;
+    }
 }

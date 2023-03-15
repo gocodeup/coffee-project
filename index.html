@@ -9,33 +9,51 @@
 <body>
 <div class="page-wrapper">
     <div class="container">
-        <div class="row">
-            <div class="column">
-                <h1>Coffee!</h1>
-                <form>
-                    <label>
-                        <input class="coffee-search" type="text" placeholder="Search Coffee">
-                    </label>
-                    <button type="submit">Search</button>
-                </form>
-                <form>
-                    <label for="roast-selection"></label>
-                    <select id="roast-selection">
-                        <option>light</option>
-                        <option>medium</option>
-                        <option>dark</option>
-                        <option>all</option>
-                    </select>
-                    <input id="submit" type="submit">
-                </form>
-
-                <div class="column">
-                    <div class="row">
-                        <div>ID</div>
-                        <div>NAME</div>
-                        <div>ROAST</div>
+<!--HEADER-->
+        <div class="head-row row justify-space-between align-bottom white">
+            <h1>JAVA-DOM <span>[coffee palace]</span></h1>
+            <p>"Brewing the best java in the 'dom."</p>
+        </div>
+<!--MAIN SECTION-->
+        <div class="main-section row justify-center">
+<!--COFFEE LIVE SEARCH-->
+            <div class="content row">
+                <div id="live-search" class="white column">
+                    <div class="coffeebody row" id="coffees"></div>
+                </div>
+<!--USER SEARCH SECTION-->
+                <div class="search-section-wrapper column">
+                    <div id="search-wrapper" class="column white">
+                        <form class="roast-search-wrapper column">
+                            <label class="bold" for="roast-selection"> Roast</label>
+                            <select class="roast" id="roast-selection">
+                                <option>light</option>
+                                <option>medium</option>
+                                <option>dark</option>
+                                <option>all</option>
+                            </select>
+                        </form>
+                        <form class="coffee-search-wrapper column shrink">
+                            <label class="bold" for="coffee-search"> Search Coffee</label>
+                            <input id="coffee-search" type="text" placeholder="Find a brew...">
+                        </form>
                     </div>
-                    <div class="coffeebody column" id="coffees"></div>
+                    <div id="suggestion-wrapper" class="column white">
+                        <h3>Add a Coffee</h3>
+                        <form class="roast-search-wrapper column shrink">
+                            <label class="bold" for="new-roast-selection"> Roast</label>
+                            <select class="roast" id="new-roast-selection">
+                                <option>light</option>
+                                <option>medium</option>
+                                <option>dark</option>
+                            </select>
+                        </form>
+                        <form class="coffee-submit-wrapper column shrink">
+                            <label class="bold" for="new-coffee"> Coffee Name</label>
+                            <input id="new-coffee" type="text" placeholder="Claim your brew...">
+                            <button id="new-coffee-button" class="submit-suggestion" type="button">Submit</button>
+                        </form>
+                    </div>
                 </div>
             </div>
         </div>

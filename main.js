@@ -1,9 +1,9 @@
 "use strict"
 function renderCoffee(coffee) {
-    let html = '<div class="coffee show row">';
-    html += '<div>' + coffee.id + '</div>';
-    html += '<div>' + coffee.name + '</div>';
-    html += '<div>' + coffee.roast + '</div>';
+    let html = '<div class="coffee show">';
+    // html += '<div>' + coffee.id + '</div>';
+    html += '<div class="coffee-name">' + coffee.name + '</div>';
+    html += '<div class="coffee-roast">' + coffee.roast + '</div>';
     html += '</div>';
 
     return html;
@@ -52,14 +52,15 @@ let coffees = [
 ];
 
 let tbody = document.querySelector('#coffees');
-let submitButton = document.querySelector('#submit');
+// let submitSearch = document.querySelector('#submitSearch');
 let roastSelection = document.querySelector('#roast-selection');
 
 tbody.innerHTML = renderCoffees(coffees);
 
-submitButton.addEventListener('click', updateCoffees);
+// submitSearch.addEventListener('click', updateCoffees)
+roastSelection.addEventListener('change', updateCoffees);
 
-let userSearch = document.querySelector(".coffee-search")
+let userSearch = document.querySelector("#coffee-search")
 const coffeesSearch = () => {
     let currentSearch = userSearch.value.toLowerCase();
     let userCoffees = [];
@@ -71,3 +72,26 @@ const coffeesSearch = () => {
     })
 }
 userSearch.addEventListener('keyup', coffeesSearch);
+
+
+//USER ENTER NEW COFFEE FORM JS
+let newCoffeeName = document.querySelector("#new-coffee");
+let newCoffeeRoast = document.querySelector("#new-roast-selection");
+//FUNCTION TO CREATE AND PUSH NEW COFFEE OBJECT TO COFFEES ARRAY
+function addNewCoffee () {
+    let userCoffee = {id: coffees.length + 1, name: newCoffeeName.value, roast: newCoffeeRoast.value};
+    if (newCoffeeName.value === "") {
+        alert("Please enter a coffee name!");
+    } else {
+        coffees.push(userCoffee);
+        newCoffeeName.value = "";
+        console.log(`Added new coffee "${userCoffee.name}"`);
+    }
+}
+// ADD NEW COFFEE OBJECT TO THE COFFEES ARRAY AND REFRESHING COFFEE LIST ON BUTTON CLICK
+let submitCoffeeButton = document.querySelector("#new-coffee-button");
+submitCoffeeButton.addEventListener("click", () => {
+    addNewCoffee();
+    coffeesSearch();
+});
+//END USER ENTER NEW COFFEE FORM JS
