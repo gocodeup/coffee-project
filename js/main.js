@@ -2,11 +2,9 @@
 // (() => {
 "use strict";
 //--      --////--    VARIABLES  --////--      --//
-const searchSubmitBtn = document.querySelector("#search-submit");
 const roastSelection = document.querySelector("#roast-selection");
 const coffeeListWrapper = document.querySelector(".coffee-list-divs");
 const searchInput = document.querySelector(("#coffee-search"));
-const searchForm = document.querySelector("#search-form");
 const addForm = document.querySelector("#add-form");
 
 //--      --////--    UTILITY FUNCTIONS  --////--      --//
@@ -73,7 +71,6 @@ sortedCoffees.forEach(coffee => {
 
 addForm.addEventListener("submit", e => {
     e.preventDefault();
-    console.log("function connected");
     let id = sortedCoffees[sortedCoffees.length - 1].id + 1;
     const name = document.querySelector("#customer-coffee-input").value;
     const roast = document.querySelector("#customer-roast-input").value.toLowerCase();
@@ -87,59 +84,26 @@ addForm.addEventListener("submit", e => {
 searchInput.addEventListener("input", (e) => {
         e.preventDefault();
         let input = searchInput.value;
-        console.log(`event listener active`);
-        console.log(searchInput.value);
         removeContent(coffeeListWrapper);
         let filteredCoffees = sortedCoffees.filter(coffee => coffee.name.toLowerCase().includes(input.toLowerCase()));
-        console.log(filteredCoffees);
         filteredCoffees.forEach(coffee => {
             createNewCoffee(coffee);
         });
     }
 );
 
-
-// searchSubmitBtn.addEventListener("click", (e) => {
-//     e.preventDefault();
-//     let input = searchInput.value;
-//     console.log(`event listener active`);
-//     console.log(searchInput.value);
-//     removeContent(coffeeListWrapper);
-//     let filteredCoffees = sortedCoffees.filter(coffee => coffee.name === input.toLowerCase());
-//     filteredCoffees.forEach(coffee => {
-//         createNewCoffee(coffee);
-//     });
-// });
-
-roastSelection.addEventListener("input", (e) => {
+roastSelection.addEventListener("change", (e) => {
     e.preventDefault();
-    let input = roastSelection.value;
-    console.log(`roast event listener active`);
-    console.log(input);
+    let input = roastSelection.value.toLowerCase();
     removeContent(coffeeListWrapper);
-    console.log(`remove content working`);
-    console.log(sortedCoffees);
-    let filteredCoffees = sortedCoffees.filter(coffee => coffee.roast === input.toLowerCase());
-    console.log(filteredCoffees);
-    filteredCoffees.forEach(coffee => {
-        createNewCoffee(coffee);
-    });
-    console.log(`works though entire event`);
+    if (input === 'all') {
+        sortedCoffees.forEach(coffee => {
+            createNewCoffee(coffee)
+        })
+    } else {
+        let filteredCoffees = sortedCoffees.filter(coffee => coffee.roast === input.toLowerCase());
+        filteredCoffees.forEach(coffee => {
+            createNewCoffee(coffee);
+        });
+    }
 });
-
-// function updateCoffees(e) {
-//     e.preventDefault(); // don't submit the form, we just want to update the data
-//     let selectedRoast = roastSelection.value;
-//     let filteredCoffees = [];
-//     coffees.forEach(function (coffee) {
-//         if (coffee.roast === selectedRoast) {
-//             filteredCoffees.push(coffee);
-//         }
-//     });
-//     tbody.innerHTML = renderCoffees(filteredCoffees);
-// }
-
-// tbody.innerHTML = renderCoffees(coffees);
-
-// submitButton.addEventListener("click", updateCoffees);
-// })();
