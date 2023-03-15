@@ -1,35 +1,34 @@
 "use strict"
 
 function renderCoffee(coffee) {
-    let html = '<tr class="coffee">';
-    html += '<td>' + coffee.id + '</td>';
-    html += '<td>' + coffee.name + '</td>';
-    html += '<td>' + coffee.roast + '</td>';
-    html += '</tr>';
+    let html = '<div class="row coffee-type">';
+    html += '<h1>' + coffee.name + '</h1>';
+    html += '<p>' + coffee.roast + '</p>';
+    html += '</div>';
 
     return html;
 }
 
-// function renderCoffees(coffees) {
-//     let html = '';
-//     for(let i = coffees.length - 1; i >= 0; i--) {
-//         html += renderCoffee(coffees[i]);
-//     }
-//     return html;
-// }
-//
-// function updateCoffees(e) {
-//     e.preventDefault(); // don't submit the form, we just want to update the data
-//     let selectedRoast = roastSelection.value;
-//     let filteredCoffees = [];
-//     coffees.forEach(function(coffee) {
-//         if (coffee.roast === selectedRoast) {
-//             filteredCoffees.push(coffee);
-//         }
-//     });
-//     tbody.innerHTML = renderCoffees(filteredCoffees);
-// }
-//
+function renderCoffees(coffees) {
+    let html = '';
+    for(let i = coffees.length - 1; i >= 0; i--) {
+        html += renderCoffee(coffees[i]);
+    }
+    return html;
+}
+
+function updateCoffees(e) {
+    e.preventDefault(); // don't submit the form, we just want to update the data
+    selectedRoast = selectedRoast.value;
+    let filteredCoffees = [];
+    coffees.forEach(function(coffee) {
+        if (coffee.roast === selectedRoast) {
+            filteredCoffees.push(coffee);
+        }
+    });
+    coffeeList.innerHTML = renderCoffees(filteredCoffees);
+}
+
 // from http://www.ncausa.org/About-Coffee/Coffee-Roasts-Guide
 let coffees = [
     {id: 1, name: 'Light City', roast: 'light'},
@@ -47,50 +46,10 @@ let coffees = [
     {id: 13, name: 'Italian', roast: 'dark'},
     {id: 14, name: 'French', roast: 'dark'},
 ];
-//
-// let tbody = document.querySelector('#coffees');
-// let submitButton = document.querySelector('#submit');
-// let roastSelection = document.querySelector('#roast-selection');
-
-// tbody.innerHTML = renderCoffees(coffees);
-
-// submitButton.addEventListener('click', updateCoffees);
-let pageWrapper = document.querySelector('.page-wrapper');
-
-let topButton = document.querySelector('#top-submit-btn');
-
-let lightValue = document.querySelector('#light-value');
-let mediumValue = document.querySelector('#medium-value');
-let darkValue = document.querySelector('#dark');
 
 let coffeeList = document.querySelector('#coffee-list');
+let topSubmitBtn = document.querySelector('#top-submit-btn');
+let selectedRoast = document.querySelector('#roast1');
 
-let firstDropdown = document.querySelector('#roast1');
-
-let lightRoasts = document.querySelectorAll(".light");
-let mediumRoasts = document.querySelectorAll('.medium');
-console.log(mediumRoasts)
-let darkRoasts = document.querySelectorAll('.dark');
-
-
-firstDropdown.addEventListener('change', function () {
-    let result = document.querySelector('.result');
-        return result.textContent = `You like ${event.target.value}`;
-});
-
-firstDropdown.addEventListener('change', function () {
-    if (firstDropdown.value === 'light') {
-
-    }
-})
-
-
-// for (let i = 0; i < lightRoasts.length; i++) {
-//     console.log(lightRoasts);
-// }
-
-// document.querySelector('#top-submit-btn').addEventListener('click', listener);
-
-// document.querySelectorAll('.light').forEach(function(el) {
-//     // el.style.display = 'none';
-
+coffeeList.innerHTML = renderCoffees(coffees);
+topSubmitBtn.addEventListener('click', updateCoffees);
