@@ -8,9 +8,28 @@ td, th {
     padding: 5px 10px;
 }
 
-div {
-
+#roast-selection {
+    width: 100%;
 }
+
+input#search {
+    width: 100%;
+}
+
 div#coffees {
     border: 1px solid black;
+}
+
+p {
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+}
+div {
+    row-gap: 10px;
+}
+div.card {
+    border: 1px solid black;
+    padding: 5px;
+    row-gap: 50px;
 }

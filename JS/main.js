@@ -1,12 +1,14 @@
 "use strict"
 
 function renderCoffee(coffee) {
-    let html = `<h1 id =coffees>
-                    ${coffee.name}
-                </h1>    
-                <p>
-                    ${coffee.roast}
-                 </p>`
+    let html = `<div class="card">
+                    <h1 class="coffee-name" =coffees>
+                        ${coffee.name}
+                    </h1>    
+                    <p>
+                        ${coffee.roast}
+                    </p>
+                </div>`
     return html;
 }
 
@@ -18,24 +20,33 @@ function renderCoffees(coffees) {
     return html;
 }
 
-function updateCoffees(e) {
+function updateRoast(e) {
     e.preventDefault(); // don't submit the form, we just want to update the data
     let selectedRoast = roastSelection.value;
     let filteredCoffees = [];
     coffees.forEach(function(coffee) {
-        if (coffee.roast === selectedRoast) {
-            filteredCoffees.push(coffee);
-        }
         if (selectedRoast === "all") {
+            filteredCoffees = coffees
+        }else
+        if(coffee.roast === selectedRoast) {
             filteredCoffees.push(coffee)
         }
     });
     tbody.innerHTML = renderCoffees(filteredCoffees);
 }
-// function searchCoffee() {
-//     let userInput = ''
-//     if(userInput === )
-// }
+
+function updateCoffees(e) {
+    e.preventDefault(); // don't submit the form, we just want to update the data
+    let searchInput = coffeeSelection.value;
+    let filteredCoffees = [];
+    coffees.forEach(coffee => {
+        if (coffee.name.toLowerCase().includes(searchInput)){
+            filteredCoffees.push(coffee);
+        }
+    });
+    tbody.innerHTML = renderCoffees(filteredCoffees);
+}
+
 // from http://www.ncausa.org/About-Coffee/Coffee-Roasts-Guide
 let coffees = [
     {id: 1, name: 'Light City', roast: 'light'},
@@ -56,7 +67,9 @@ let coffees = [
 
 let tbody = document.querySelector('#coffees');
 let roastSelection = document.querySelector('#roast-selection');
-// document.querySelector("all");
-tbody.innerHTML = renderCoffees(coffees);
+let coffeeSelection = document.querySelector('#search')
 
-roastSelection.addEventListener('change', updateCoffees);
+document.querySelector('#search')
+tbody.innerHTML = renderCoffees(coffees);
+roastSelection.addEventListener('change', updateRoast);
+coffeeSelection.addEventListener('input', updateCoffees)
