@@ -17,13 +17,13 @@ hr{
 }
 
 section{
-    display: flex;
+
 }
 
 .column-coffee{
     display: flex;
     flex-wrap: wrap;
-    gap: 60px;
+    gap: 50px;
 }
 #coffees p, h1{
     display: inline-block;
@@ -50,4 +50,23 @@ input[type="submit"] {
     border: none;
     box-shadow: none;
     text-shadow: none;
+}
+
+.column-form2 h2 {
+    text-align: center;
+}
+
+.form-container .row {
+    flex-direction: column;
+}
+
+.column-form, .column-form2 {
+    display: block;
+}
+
+.row {
+   padding: 0 82px;
+}
+
+.column-coffee {
 }

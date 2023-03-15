@@ -29,7 +29,6 @@
 .container.justify-center {
     justify-content: center;
 }
-
 /*
     The "row" is a container element that horizontally separates its
     children, which are usually columns. It also performs a secondary role
@@ -62,11 +61,13 @@
 .row.no-gap {
     gap: unset;
 }
+
 .row.align-top{
     align-items: start;
 }
 .row.align-bottom{
     align-items: end;
+
 }
 /*
     The "column" is a container element that vertically separates its

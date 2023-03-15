@@ -24,32 +24,42 @@
             <h1>NAME</h1>
             <p>ROAST</p>
         </div>
-        <div class="column-form">
-            <form>
-                <legend><h4><label for="roast-selection">Roast</label></h4></legend>
-                <select id="roast-selection">
-                    <option>all</option>
-                    <option>light</option>
-                    <option>medium</option>
-                    <option>dark</option>
-                </select>
-                <legend><h4><label for="coffeeName">Coffee Name</label></h4></legend>
-                <input id="coffeeName" type="text" placeholder="...">
-                <input id="submit" type="submit" />
-                <legend><h4><label for="roast-selection">Roast</label></h4></legend>
-                <select id="roast-selection">
-                    <option>all</option>
-                    <option>light</option>
-                    <option>medium</option>
-                    <option>dark</option>
-                </select>
-                <legend><h4><label for="newName">Name</label></h4></legend>
-                <input id="newName" type="text">
-                <input id="submit" type="submit" />
-            </form>
+    <div class="form-container">
+        <div class="row">
+            <div class="column-form">
+                <form id="searchCoffees">
+                    <h4><label for="roast-selection">Roast</label></h4>
+                        <select id="roast-selection">
+                            <option>all</option>
+                            <option>light</option>
+                            <option>medium</option>
+                            <option>dark</option>
+                        </select>
+                    <h4><label for="coffeeName">Coffee Name</label></h4>
+                        <input id="coffeeName" type="text" placeholder="..." autocomplete="off">
+                        <input id="searchSubmit" type="submit">
+                </form>
+            </div>
+        <!-- ADD A COFFEE -->
+            <div class="column-form2">
+                <h2>Add a Coffee</h2>
+                <form id="addCoffees">
+                    <h4><label for="roast-selection">Roast</label></h4>
+                        <select id="add-coffee-roast-selection">
+                            <option>all</option>
+                            <option>light</option>
+                            <option>medium</option>
+                            <option>dark</option>
+                        </select>
+                    <h4><label for="newName">Name</label></h4>
+                        <input id="newName" type="text">
+                        <input id="add-coffee-submit" type="submit">
+                </form>
+            </div>
+        </div>
+    </div>
     </div>
      <script src="main.js"></script>
-    </div>
 </section>
 </div>
 </body>

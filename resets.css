@@ -38,41 +38,16 @@ table {
     border-collapse: collapse;
 }
 
-/* Revert white space for safari */
+
 textarea {
     white-space: revert;
 }
 
+
+/* reset default text opacity of input placeholder */
 ::placeholder {
     color: unset;
-    font: inherit;
 }
-
-/* Reset list styles */
-/*ul, ol {*/
-/*    list-style: none;*/
-/*}*/
-
-a, a:visited {
-    text-decoration: none;
-    color: unset;
-}
-
-.clickable,
-label,
-input[type=button],
-input[type=submit],
-input[type=file],
-button {
-    cursor: pointer;
-}
-
-/* Matches default `<td>` alignment by inheriting from the `<body>`, or the*/
-/* closest parent with a set `text-align`.*/
-th {
-    text-align: inherit;
-}
-
 
 
 /*!*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css *!*/
@@ -424,3 +399,4 @@ th {
 /*[hidden] {*/
 /*    display: none;*/
 /*}*/
+
