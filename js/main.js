@@ -87,11 +87,8 @@ addForm.addEventListener("submit", e => {
 searchInput.addEventListener("input", (e) => {
         e.preventDefault();
         let input = searchInput.value;
-        console.log(`event listener active`);
-        console.log(searchInput.value);
         removeContent(coffeeListWrapper);
         let filteredCoffees = sortedCoffees.filter(coffee => coffee.name.toLowerCase().includes(input.toLowerCase()));
-        console.log(filteredCoffees);
         filteredCoffees.forEach(coffee => {
             createNewCoffee(coffee);
         });
