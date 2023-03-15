@@ -25,15 +25,29 @@ section{
     flex-wrap: wrap;
     gap: 60px;
 }
+#coffees p, h1{
+    display: inline-block;
+}
 
-h1, p{
-    display: flex;
+#coffees p{
+    color: #9FA4A8;
+    padding-left: 10px;
 }
 
 .column-form{
     display: flex;
 }
 
-form{
-    max-width: 300px;
+input, select{
+    width: 680px;
+}
+
+input[type="submit"] {
+    background: #3C89CB;
+    color: white;
+    border-radius: 5px;
+    font-family: sans-serif;
+    border: none;
+    box-shadow: none;
+    text-shadow: none;
 }
