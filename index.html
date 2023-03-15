@@ -8,13 +8,14 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+<!---------- HEADER ---------->
 <header class="container">
     <h1>Coffee!</h1>
 </header>
 <div class="page-wrapper">
     <div class="container justify-center">
         <div class="column coffee-roast-one">
-            <!---------- COLUMN 1 ---------->
+            <!---------- COFFEE LIST / COLUMN 1 ---------->
             <div class="row coffee-type">
                 <h1>Light City</h1>
                 <p>Light</p>
@@ -74,41 +75,50 @@
             <div class="column coffee-roast-two"></div>
         </div>
     <div class="container justify-center">
-        <!---------- COLUMN 2 ---------->
+        <!---------- COFFEE DROPDOWN / COLUMN 2 ---------->
         <div class="column forms">
             <div class="row">
-              <form>
-                  <textarea>hello</textarea>
-              </form>
+                <div class="container grow">
+                    <div class="column justify-center">
+                        <form class="roast-dropdown">
+                            <label class="roast-label" for="roast1">Roast</label>
+                            <select id="roast1">
+                                <option value="all">all</option>
+                                <option value="light">light</option>
+                                <option value="medium">medium</option>
+                                <option value="dark">dark</option>
+                            </select>
+                        </form>
+                        <form>
+                            <label class="coffee-name" for="coffee-name">Coffee Name</label>
+                            <input class="coffee-name-input" type="text" id="coffee-name">
+                        </form>
+                        <input class="submit-btn" type="submit">
+
+                        <h1 class="add-coffee-label">Add a Coffee</h1>
+
+                        <form class="roast-dropdown">
+                            <label class="roast-label" for="roast2">Roast</label>
+                            <select id="roast2">
+                                <option value="all">all</option>
+                                <option value="light">light</option>
+                                <option value="medium">medium</option>
+                                <option value="dark">dark</option>
+                            </select>
+                        </form>
+                        <form>
+                            <label class="coffee-name" for="coffee-name">Name</label>
+                            <input class="coffee-name-input" type="text" id="custom-coffee-name">
+                        </form>
+                        <input class="submit-btn" type="submit">
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
-
-
         <script src="main.js"></script>
     </div>
 </div>
 </body>
-
-<!--<form>-->
-<!--    <label for="roast-selection"></label>-->
-<!--    <select id="roast-selection">-->
-<!--        <option>light</option>-->
-<!--        <option>medium</option>-->
-<!--        <option>dark</option>-->
-<!--    </select>-->
-<!--    <input id="submit" type="submit" />-->
-<!--</form>-->
-
-<!--<table>-->
-<!--    <thead>-->
-<!--    <tr>-->
-<!--        <th>ID</th>-->
-<!--        <th>NAME</th>-->
-<!--        <th>ROAST</th>-->
-<!--    </tr>-->
-<!--    </thead>-->
-<!--    <tbody id="coffees"></tbody>-->
-<!--</table>-->
-
 </html>
 
