@@ -38,16 +38,16 @@
 
 
     <!-- form 1-->
-        <div class="column">
-            <div class="row formBorder">
+        <div class="column grow">
+            <div class="row formBorder max-width">
                 <form>
                     <h3>Roast</h3>
 <!--                    <label for="roast-selection"></label>-->
                     <select id="roast-selection">
+                        <option>all</option>
                         <option>light</option>
                         <option>medium</option>
                         <option>dark</option>
-                        <option>all</option>
                     </select>
                     <h3>Coffee Name</h3>
                         <div class="search-wrapper">
@@ -59,7 +59,7 @@
                 </form>
             </div>
 <!-- form 2 s-->
-        <div class="row">
+        <div class="row max-width">
             <form>
                 <h2 class="headerAddCoffee">Add a Coffee</h2>
                 <h3>Roast</h3>
@@ -68,12 +68,11 @@
                     <option>light</option>
                     <option>medium</option>
                     <option>dark</option>
-                    <option>all</option>
                 </select>
                 <h3>Name</h3>
                 <label for="search2">Coffee</label>
                 <input type='search' id="search2" placeholder="Coffee!"><br>
-                <input class="thick" id="submit2" type="submit" />
+                <button class="thick" id="submit2" type="button" >Submit new coffee</button>
             </form>
         </div>
     </div>
