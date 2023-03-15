@@ -1,4 +1,6 @@
-
+.page-wrapper {
+    font-family: sans-serif;
+}
 header .column {
     display: flex;
     flex-direction: column;
