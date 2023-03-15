@@ -36,8 +36,11 @@ function updateCoffees(e) {
 }
 function searchCoffee(e) {
     e.preventDefault(); // don't submit the form, we just want to update the data
-    let coffeeArray = []
-    coffees.forEach()
+    let userInput = coffeeName.value.toLowerCase();
+    let filteredCoffees = coffees.filter(function(coffee) {
+        return coffee.name.toLowerCase().includes(userInput);
+    });
+    tbody.innerHTML = renderCoffees(filteredCoffees);
 }
 
 // from http://www.ncausa.org/About-Coffee/Coffee-Roasts-Guide
