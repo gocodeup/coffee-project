@@ -7,16 +7,42 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<!-- coffee and first row-->
+<!-- nav bar and first row-->
     <div class="container headerContainer">
-        <div class="row justify-center">
-            <h1>Coffee!</h1>
+        <div class="row justify-start">
+            <div class="column">
+                 <h1 class="storeName">Grumpy Dragons Coffee</h1>
+            </div>
+                <div class="column navbar-nav">
+                    <div class="nav-item">
+                        <a href="#">Order Online</a>
+                    </div>
+                    <div class="nav-item">
+                        <a href="#">Locations</a>
+                    </div>
+                    <div class="nav-item">
+                        <a href="#">Contact Us</a>
+                    </div>
+                    <div class="nav-item">
+                        <a href="#">Account</a>
+                    </div>
+                </div>
         </div>
     </div>
 
-<div class="container">
-    <div class="row">
+<!-- jumbo tron image -->
+    <div class="container jumbotronContainer">
+        <div class="row">
+            <div class="column">
+                <img class="jumbo img-responsive" src="jumboimage.avif" alt="coffee and grounds. a coders life force">
+            </div>
+        </div>
+    </div>
 
+
+<div class="container onlineOrder">
+    <h2>Place Online Order</h2>
+    <div class="row">
 <!-- table-->
 <div class="column" id="coffees">
 <!--    <div class="ID">-->
@@ -39,7 +65,7 @@
 
     <!-- form 1-->
         <div class="column grow">
-            <div class="row formBorder max-width">
+            <div class="row formBorder max-width justify-right">
                 <form>
                     <h3>Roast</h3>
 <!--                    <label for="roast-selection"></label>-->
@@ -54,12 +80,12 @@
                             <label for="search">Coffee</label>
                             <input type='search' id="search" data-search placeholder="Coffee!"><br>
                         </div>
-                    <input class="thick" id="submit" type="submit" />
+                    <input class="thick button" id="submit" type="submit" />
 
                 </form>
             </div>
 <!-- form 2 s-->
-        <div class="row max-width">
+        <div class="row max-width justify-right">
             <form>
                 <h2 class="headerAddCoffee">Add a Coffee</h2>
                 <h3>Roast</h3>
@@ -72,15 +98,35 @@
                 <h3>Name</h3>
                 <label for="addCoffeeInput">Coffee</label>
                 <input type='search' id="addCoffeeInput" placeholder="Coffee!"><br>
-                <button class="thick" id="addCoffeeSubmit" type="button" >Submit new coffee</button>
+                <button class="thick button" id="addCoffeeSubmit" type="button" >Submit new coffee</button>
             </form>
         </div>
     </div>
 </div>
 </div>
 
-
-
+<footer class="container bottomOfPage">
+    <div class="row ">
+        <div class="column">
+            <h4 class="bottomOfPage">contact us</h4>
+                <p class="contactUsBottom">something here</p>
+                <p class="contactUsBottom">something here</p>
+                <p class="contactUsBottom">something here</p>
+        </div>
+        <div class="column">
+            <h4 class="bottomOfPage">contact us</h4>
+            <p class="contactUsBottom">something here</p>
+            <p class="contactUsBottom">something here</p>
+            <p class="contactUsBottom">something here</p>
+        </div>
+        <div class="column">
+            <h4 class="bottomOfPage">contact us</h4>
+            <p class="contactUsBottom">something here</p>
+            <p class="contactUsBottom">something here</p>
+            <p class="contactUsBottom">something here</p>
+        </div>
+    </div>
+</footer>
     <script src="main.js"></script>
 </body>
 </html>

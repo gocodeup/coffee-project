@@ -123,7 +123,42 @@ function addANewCoffee(){
         coffeeName.value = "";
         console.log(`Added new coffee "${newCoffee.name}"`);
         tbody.innerHTML = renderCoffees(coffees); // update the array with the new coffee
+        localStorage.setItem('newCoffees', JSON.stringify(coffees)); //stores it locally
     }
 }
 
-submitACoffee.addEventListener('click', addANewCoffee);
+// sessionStorage and adds button
+
+function updateStorage() {
+    sessionStorage.setItem('oldCoffees', JSON.stringify(coffees));
+}
+
+submitACoffee.addEventListener('click', function() {
+    addANewCoffee();
+    updateStorage();
+});
+
+coffeeName.addEventListener('keydown', function(event) {
+    if (event.key === 'Enter') {
+        event.preventDefault();
+        addANewCoffee();
+        updateStorage();
+    }
+});
+
+window.addEventListener('load', function() {
+    let oldCoffees = JSON.parse(sessionStorage.getItem('oldCoffees'));
+    if (oldCoffees !== null) {
+        coffees = oldCoffees;
+        tbody.innerHTML = renderCoffees(coffees);
+    }
+});
+
+
+
+
+
+
+
+
+
