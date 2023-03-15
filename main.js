@@ -51,17 +51,7 @@ function updateCoffees(e) {
         });
         coffeeList.innerHTML = renderCoffees(filteredCoffees);
     }
-    // if (nameSelected !== '') {
-    //     coffees.forEach(function (coffee) {
-    //         if (coffee.roast === nameSelected && coffees.name.toLowerCase().includes(nameSelected.toLowerCase())) {
-    //             filteredCoffees.push(coffee);
-    //         }
-    //         if (selectedRoast === 'all' && coffees.name.toLowerCase().includes(nameSelected.toLowerCase())) {
-    //             filteredCoffees.push(coffee);
-    //         }
-    //     });
-    //     coffeeList.innerHTML = renderCoffees(filteredCoffees);
-    // }
+
 }
 function searchCoffees() {
     let searchRoast = nameSelected.value.toUpperCase();
