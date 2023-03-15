@@ -8,6 +8,7 @@ const coffeeListWrapper = document.querySelector(".coffee-list-divs");
 const searchInput = document.querySelector(("#coffee-search"));
 const searchForm = document.querySelector("#search-form");
 const addForm = document.querySelector("#add-form");
+
 //--      --////--    UTILITY FUNCTIONS  --////--      --//
 const sortedArrayByID = (arr) => {
     return arr.sort((a, b) => {
@@ -22,7 +23,6 @@ const sortedArrayByID = (arr) => {
         }
     });
 };
-
 const createNewCoffee = ({ id: coffeeID, name: coffeeName, roast: coffeeRoast }) => {
     let newCoffee = document.createElement("div");
     newCoffee.classList.add("coffee");
@@ -36,9 +36,8 @@ const createNewCoffee = ({ id: coffeeID, name: coffeeName, roast: coffeeRoast })
     </div>
     `;
     coffeeListWrapper.appendChild(newCoffee);
-    window.localStorage.setItem(`coffee${newCoffee.id}`, JSON.stringify(newCoffee));
+    window.localStorage.setItem(`${newCoffee.id}`, JSON.stringify(newCoffee));
 };
-
 const removeContent = (parent) => {
     while (parent.firstElementChild) {
         parent.removeChild(parent.firstElementChild);
@@ -85,7 +84,7 @@ addForm.addEventListener("submit", e => {
     sortedCoffees.push(coffee);
     let lastCoffee = sortedCoffees[sortedCoffees.length - 1];
     createNewCoffee(lastCoffee);
-    window.localStorage.setItem(`coffee${lastCoffee.id}`, JSON.stringify(lastCoffee));
+    window.localStorage.setItem(`${lastCoffee.id}`, JSON.stringify(lastCoffee));
 });
 
 searchInput.addEventListener("input", (e) => {
