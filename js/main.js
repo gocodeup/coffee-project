@@ -111,20 +111,20 @@ searchInput.addEventListener("input", (e) => {
 //     });
 // });
 
-roastSelection.addEventListener("input", (e) => {
+roastSelection.addEventListener("change", (e) => {
     e.preventDefault();
-    let input = roastSelection.value;
-    console.log(`roast event listener active`);
-    console.log(input);
+    let input = roastSelection.value.toLowerCase();
     removeContent(coffeeListWrapper);
-    console.log(`remove content working`);
-    console.log(sortedCoffees);
-    let filteredCoffees = sortedCoffees.filter(coffee => coffee.roast === input.toLowerCase());
-    console.log(filteredCoffees);
-    filteredCoffees.forEach(coffee => {
-        createNewCoffee(coffee);
-    });
-    console.log(`works though entire event`);
+    if (input === 'all') {
+        sortedCoffees.forEach(coffee => {
+            createNewCoffee(coffee)
+        })
+    } else {
+        let filteredCoffees = sortedCoffees.filter(coffee => coffee.roast === input.toLowerCase());
+        filteredCoffees.forEach(coffee => {
+            createNewCoffee(coffee);
+        });
+    }
 });
 
 // function updateCoffees(e) {
