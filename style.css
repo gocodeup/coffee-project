@@ -1,15 +1,19 @@
-table {
-    border-collapse: collapse;
-    margin: 15px 0;
-}
+/*table {*/
+/*    border-collapse: collapse;*/
+/*    margin: 15px 0;*/
+/*}*/
 
-td, th {
-    border: 1px solid black;
-    padding: 5px 10px;
-}
+/*td, th {*/
+/*    border: 1px solid black;*/
+/*    padding: 5px 10px;*/
+/*}*/
 
+body {
+    background-color: #826450;
+}
 .headerContainer {
-    border-bottom: 1px solid #e5e5e5;
+    border-bottom: 1px solid #837d7d;
+    width: 100vw;
 }
 
 /*make border bottoms*/
@@ -52,3 +56,80 @@ label {
     height: 434px;
 }
 
+.headerContainer {
+    background-color: #6B3321;
+    padding: 0px 0px;
+    margin: 0px 0px;
+}
+
+.storeName {
+    color: #d2c1c1;
+}
+.navbar-nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    align-items: center;
+}
+
+a:link {
+    color: #a89898;
+    text-decoration: none;
+}
+a:visited {
+    color: #a89898;
+    text-decoration: none;
+}
+
+a:hover {
+    color: red;
+}
+
+.nav-item {
+    margin: 5px 20px;
+}
+
+.jumbotronContainer {
+    width: 99vw;
+    height: 500px;
+    display: block;
+    position: relative;
+    overflow: hidden;
+    margin: 25px 5px 25px 0px;
+}
+
+.jumbo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+
+.onlineOrder {
+    background-color: #D1C1C0;
+}
+
+.button {
+    background-color: #6C3320;
+    color: #eee;
+}
+
+.button:hover{
+    background: #eee;
+    color: #6C3320;
+}
+
+.bottomOfPage {
+    background-color: #6C3320;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin: 5px 10px;
+}
+
+.contactUsBottom {
+    display: flex;
+    justify-content: center;
+    margin: 5px 20px;
+}
