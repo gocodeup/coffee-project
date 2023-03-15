@@ -25,20 +25,48 @@
                 </div>
                 <div class="column forms-column">
                     <form class="search-coffees">
-                        <feildset>
+                        <div  class="fieldset">
                             <legend><p><lable>Roast</lable></p></legend>
-                            <select>
-                                <option>all</option>
-                                <option>light</option>
-                                <option>medium</option>
-                                <option>dark</option>
-                            </select>
-                        </feildset>
+                            <div class="selection-wrapper">
+<!--                                <div class="dropdown-wrapper">-->
+<!--                                    <img src="img/dropdown-ing.png" alt="dropdown-img" class="dropdown">-->
+<!--                                </div>-->
+                                <select class="selection">
+                                    <option>all</option>
+                                    <option>light</option>
+                                    <option>medium</option>
+                                    <option>dark</option>
+                                </select>
+                            </div>
+                        </div>
 
-                        <input type="search">
+                        <div class="search-bar-wrapper">
+                            <legend><p><lable>Coffee Name</lable></p></legend>
+                            <input class="search coffee-search"  type="search">
+                        </div>
+                        <button class="button coffee-submit">submit</button>
                     </form>
                     <form class="add-coffees">
+                        <div class="fieldset">
+                            <legend><p><lable>Roast</lable></p></legend>
+                            <div class="selection-wrapper">
+<!--                                <div class="dropdown-wrapper">-->
+<!--                                    <img src="img/dropdown-ing.png" alt="dropdown-img" class="dropdown">-->
+<!--                                </div>-->
+                                <select class="selection">
+                                    <option>all</option>
+                                    <option>light</option>
+                                    <option>medium</option>
+                                    <option>dark</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="search-bar-wrapper">
+                            <legend><p><lable>Name</lable></p></legend>
+                            <input class="search add-coffee" type="search">
 
+                        </div>
+                        <button class="button coffee-submit">submit</button>
                     </form>
                 </div>
             </div>
