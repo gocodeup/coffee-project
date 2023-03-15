@@ -107,23 +107,23 @@ input.addEventListener("keypress", function(event) {
     }
 });
 
-let coffeeName = document.querySelector('#input2')
+let coffeeName = document.querySelector('#addCoffeeInput')
 let roastAddition = document.querySelector("#roast-selection2")
-let submitACoffee = document.querySelector('#submit2')
-let newCoffee;
+let submitACoffee = document.querySelector('#addCoffeeSubmit')
+// let newCoffee;
 
-
+let newCoffee = {id: coffees.length + 1, name: coffeeName.value, roast: roastAddition.value}
 function addANewCoffee(){
-    let newCoffee = {id: coffees.length + 1, name: coffeeName.value, roast: roastAddition.value}
     if (coffeeName.value === "") {
-        alert("Please eneter a coffee name!");
+        alert("Please enter a coffee name!");
     } else {
         coffees.push(newCoffee);
         coffeeName.value = "";
         console.log(`Added new coffee "${newCoffee.name}"`);
     }
+    return newCoffee;
 }
 
 submitACoffee.addEventListener('click', function(){
-    addANewCoffee();
+    tbody.insertAdjacentHTML("afterbegin", newCoffee);
 })
