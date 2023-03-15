@@ -2,8 +2,7 @@
 // (() => {
 "use strict";
 //--      --////--    VARIABLES  --////--      --//
-const tbody = document.querySelector("#coffees");
-const submitButton = document.querySelector("#submit");
+const searchSubmitBtn = document.querySelector("#search-submit");
 const roastSelection = document.querySelector("#roast-selection");
 const coffeeListWrapper = document.querySelector(".coffee-list-divs");
 const searchInput = document.querySelector(("#coffee-search"));
@@ -24,7 +23,29 @@ const sortedArrayByID = (arr) => {
     });
 };
 
-//--      --////--    CONTENT SOURCES  --////--      --//
+const createNewCoffee = ({ id: coffeeID, name: coffeeName, roast: coffeeRoast }) => {
+    let newCoffee = document.createElement("div");
+    newCoffee.classList.add("coffee");
+    newCoffee.id = `coffee${coffeeID}`;
+    newCoffee.innerHTML = `
+    <div class="coffee-name-wrapper">
+        <h2>${coffeeName}</h2>
+    </div>
+    <div>
+        <p>${coffeeRoast}</p>
+    </div>
+    `;
+    coffeeListWrapper.appendChild(newCoffee);
+    window.localStorage.setItem(`coffee${newCoffee.id}`, JSON.stringify(newCoffee));
+};
+
+const removeContent = (parent) => {
+    while (parent.firstElementChild) {
+        parent.removeChild(parent.firstElementChild);
+    }
+};
+
+//--      --////--    DATA SOURCES  --////--      --//
 // from http://www.ncausa.org/About-Coffee/Coffee-Roasts-Guide
 let coffees = [
     { id: 1, name: "Light City", roast: "light" },
@@ -43,26 +64,16 @@ let coffees = [
     { id: 14, name: "French", roast: "dark" }
 ];
 
+
+
 //--      --////--    DISPLAY FUNCTIONS  --////--      --//
 const sortedCoffees = sortedArrayByID(coffees);
-const createNewCoffee = ({ id: coffeeID, name: coffeeName, roast: coffeeRoast }) => {
-    let newCoffee = document.createElement("div");
-    newCoffee.classList.add("coffee");
-    newCoffee.id = `coffee${coffeeID}`;
-    newCoffee.innerHTML = `
-    <div class="coffee-name-wrapper">
-        <h2>${coffeeName}</h2>
-    </div>
-    <div>
-        <p>${coffeeRoast}</p>
-    </div>
-    `;
-    coffeeListWrapper.appendChild(newCoffee);
-};
 
 sortedCoffees.forEach(coffee => {
-    createNewCoffee(coffee)
+    createNewCoffee(coffee);
 });
+
+//--      --////--    EVENT LISTENERS  --////--      --//
 
 addForm.addEventListener("submit", e => {
     e.preventDefault();
@@ -74,26 +85,36 @@ addForm.addEventListener("submit", e => {
     sortedCoffees.push(coffee);
     let lastCoffee = sortedCoffees[sortedCoffees.length - 1];
     createNewCoffee(lastCoffee);
+    window.localStorage.setItem(`coffee${lastCoffee.id}`, JSON.stringify(lastCoffee));
 });
-
-const removeContent = (parent) => {
-    while (parent.firstElementChild) {
-        parent.removeChild(parent.firstElementChild);
-    }
-};
 
 searchInput.addEventListener("input", (e) => {
         e.preventDefault();
-        let input = searchInput.value
+        let input = searchInput.value;
         console.log(`event listener active`);
         console.log(searchInput.value);
         removeContent(coffeeListWrapper);
-        let filteredCoffees = sortedCoffees.filter(coffee => coffee.name.toLowerCase().includes(input));
+        let filteredCoffees = sortedCoffees.filter(coffee => coffee.name.toLowerCase().includes(input.toLowerCase()));
+        console.log(filteredCoffees);
         filteredCoffees.forEach(coffee => {
             createNewCoffee(coffee);
         });
     }
 );
+
+console.log(window.localStorage);
+
+// searchSubmitBtn.addEventListener("click", (e) => {
+//     e.preventDefault();
+//     let input = searchInput.value;
+//     console.log(`event listener active`);
+//     console.log(searchInput.value);
+//     removeContent(coffeeListWrapper);
+//     let filteredCoffees = sortedCoffees.filter(coffee => coffee.name === input.toLowerCase());
+//     filteredCoffees.forEach(coffee => {
+//         createNewCoffee(coffee);
+//     });
+// });
 
 roastSelection.addEventListener("input", (e) => {
     e.preventDefault();
@@ -109,53 +130,7 @@ roastSelection.addEventListener("input", (e) => {
         createNewCoffee(coffee);
     });
     console.log(`works though entire event`);
-})
-
-// searchInput.addEventListener('input', e  => {
-//     e.preventDefault();
-//     console.log('event connected');
-//     removeContent(coffeeListWrapper);
-//     console.log(coffeeListWrapper);
-//     let filteredCoffees = sortedCoffees.filter(coffee => coffee.name.toLowerCase().includes(userSearch))
-//     filteredCoffees.forEach(({ id: coffeeID, name: coffeeName, roast: coffeeRoast }) => {
-//         let newCoffee = document.createElement("div");
-//         newCoffee.classList.add(`coffee`);
-//         newCoffee.id = `coffee${coffeeID}`;
-//         newCoffee.innerHTML = `
-// <div class="coffee-name-wrapper">
-// <h2>${coffeeName}</h2>
-// </div>
-// <div class="coffee-roast-wrapper">
-// <p>${coffeeRoast}</p>
-// </div>
-// `;
-//         coffeeListWrapper.appendChild(newCoffee);
-//     });
-// });
-
-//--      --////--    FETCH  --////--      --//
-// fetch('data/db.json')
-//     .then((response) => response.json())
-//     .then((json) => console.log(json));
-
-//
-// function renderCoffee(coffee) {
-//     let html = "<tr class=\"coffee\">";
-//     html += "<td>" + coffee.id + "</td>";
-//     html += "<td>" + coffee.name + "</td>";
-//     html += "<td>" + coffee.roast + "</td>";
-//     html += "</tr>";
-//
-//     return html;
-// }
-
-// function renderCoffees(coffees) {
-//     let html = "";
-//     for (let i = coffees.length - 1; i >= 0; i--) {
-//         html += renderCoffee(coffees[i]);
-//     }
-//     return html;
-// }
+});
 
 // function updateCoffees(e) {
 //     e.preventDefault(); // don't submit the form, we just want to update the data
