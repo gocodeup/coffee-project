@@ -52,6 +52,14 @@ let tbody = document.querySelector('#coffees');
 let submitButton = document.querySelector('#submit');
 let roastSelection = document.querySelector('#roast-selection');
 
-tbody.innerHTML = renderCoffees(coffees);
+// tbody.innerHTML = renderCoffees(coffees);
 
-submitButton.addEventListener('click', updateCoffees);
+// submitButton.addEventListener('click', updateCoffees);
+
+let lightRoasts = document.getElementsByClassName('light');
+let mediumRoasts = document.getElementsByClassName('medium');
+let darkRoasts = document.getElementsByClassName('dark');
+
+for (let i = 0; i < lightRoasts.length; i++) {
+    console.log()
+}
