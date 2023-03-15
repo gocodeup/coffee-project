@@ -8,116 +8,48 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-<!---------- HEADER ---------->
-<header class="container">
-    <h1>Coffee!</h1>
-</header>
 <div class="page-wrapper">
-    <div class="container justify-center">
-        <div class="column coffee-roast-one">
-            <!---------- COFFEE LIST / COLUMN 1 ---------->
-            <div class="row coffee-type light">
-                <h1>Light City</h1>
-                <p>Light</p>
+    <header class="container">
+        <h1>Coffee!</h1>
+    </header>
+    <div class="container grow">
+        <div class="full-width row main-row">
+            <div class="column coffee-roast-one" id="coffee-list">
+                <!---------- COFFEE LIST / COLUMN 1 ---------->
             </div>
-            <div class="row coffee-type light">
-                <h1>Half City</h1>
-                <p>Light</p>
-            </div>
-            <div class="row coffee-type light">
-                <h1>Cinnamon</h1>
-                <p>Light</p>
-            </div>
-            <div class="row coffee-type medium">
-                <h1>City</h1>
-                <p>Medium</p>
-            </div>
-            <div class="row coffee-type medium">
-                <h1>American</h1>
-                <p>Medium</p>
-            </div>
-            <div class="row coffee-type medium">
-                <h1>Breakfast</h1>
-                <p>Medium</p>
-            </div>
-            <div class="row coffee-type dark">
-                <h1>High</h1>
-                <p>Dark</p>
-            </div>
-            <div class="row coffee-type dark">
-                <h1>Continental</h1>
-                <p>Dark</p>
-            </div>
-            <div class="row coffee-type dark">
-                <h1>New Orleans</h1>
-                <p>Dark</p>
-            </div>
-            <div class="row coffee-type dark">
-                <h1>European</h1>
-                <p>Dark</p>
-            </div>
-            <div class="row coffee-type dark">
-                <h1>Espresso</h1>
-                <p>Dark</p>
-            </div>
-            <div class="row coffee-type dark">
-                <h1>Viennese</h1>
-                <p>Dark</p>
-            </div>
-            <div class="row coffee-type dark">
-                <h1>Italian</h1>
-                <p>Dark</p>
-            </div>
-            <div class="row coffee-type dark">
-                <h1>French</h1>
-                <p>Dark</p>
-            </div>
-            <div class="column coffee-roast-two"></div>
-        </div>
-        <div class="container justify-center">
             <!---------- COFFEE DROPDOWN / COLUMN 2 ---------->
-            <div class="column forms">
-                <div class="row">
-                    <div class="container grow">
-                        <div class="column justify-center">
-                            <form class="roast-dropdown">
-                                <label class="roast-label" for="roast1">Roast</label>
-                                <select id="roast1">
-                                    <option value="all">all</option>
-                                    <option value="light">light</option>
-                                    <option value="medium">medium</option>
-                                    <option value="dark">dark</option>
-                                </select>
-                            </form>
-                            <form>
-                                <label class="coffee-name" for="coffee-name">Coffee Name</label>
-                                <input class="coffee-name-input" type="text" id="coffee-name">
-                            </form>
-                            <input class="submit-btn" type="submit">
+            <div class="column">
+                <form name= "roast-dropdown1" class="roast-dropdown1">
+                    <label class="roast-label" for="roast1">Roast</label>
+                    <select id="roast1">
+                        <option value="all">all</option>
+                        <option value="light">light</option>
+                        <option value="medium">medium</option>
+                        <option value="dark">dark</option>
+                    </select>
+                    <label class="coffee-name" for="coffee-name">Coffee Name</label>
+                    <input class="coffee-name-input" type="text" id="coffee-name">
+                    <input id="top-submit-btn" class="submit-btn" type="submit">
+                </form>
 
-                            <h1 class="add-coffee-label">Add a Coffee</h1>
+                <h1 class="add-coffee-label">Add a Coffee</h1>
 
-                            <form class="roast-dropdown">
-                                <label class="roast-label" for="roast2">Roast</label>
-                                <select id="roast2">
-                                    <option value="all">all</option>
-                                    <option value="light">light</option>
-                                    <option value="medium">medium</option>
-                                    <option value="dark">dark</option>
-                                </select>
-                            </form>
-                            <form>
-                                <label class="coffee-name" for="coffee-name">Name</label>
-                                <input class="coffee-name-input" type="text" id="custom-coffee-name">
-                            </form>
-                            <input class="submit-btn" type="submit">
-                        </div>
-                    </div>
-                </div>
+                <form class="roast-dropdown2">
+                    <label class="roast-label" for="roast2">Roast</label>
+                    <select id="roast2">
+                        <option value="all">all</option>
+                        <option value="light">light</option>
+                        <option value="medium">medium</option>
+                        <option value="dark">dark</option>
+                    </select>
+                    <label class="coffee-name" for="coffee-name">Name</label>
+                    <input class="coffee-name-input" type="text" id="custom-coffee-name">
+                    <input class="submit-btn" type="submit">
+                </form>
             </div>
         </div>
-        <script src="main.js"></script>
     </div>
 </div>
+<script src="main.js"></script>
 </body>
 </html>
