@@ -52,4 +52,4 @@ let topSubmitBtn = document.querySelector('#top-submit-btn');
 let selectedRoast = document.querySelector('#roast1');
 
 coffeeList.innerHTML = renderCoffees(coffees);
-topSubmitBtn.addEventListener('click', updateCoffees);
+selectedRoast.addEventListener("change", updateCoffees);
