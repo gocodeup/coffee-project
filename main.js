@@ -19,21 +19,32 @@ function renderCoffees(coffees) {
     return html;
 }
 
-function updateCoffees(e) {
+function updateRoasts(e) {
     e.preventDefault(); // don't submit the form, we just want to update the data
     let selectedRoast = roastSelection.value;
     let filteredCoffees = [];
     if (selectedRoast === 'all') {
         filteredCoffees = coffees;
     } else {
-        // coffees.forEach(function (coffee) {
-        //     if (coffee.roast === selectedRoast) {
-        //         filteredCoffees.push(coffee);
-        //     }
-        // });
         filteredCoffees = coffees.filter(coffee => coffee.roast === selectedRoast)
     }
-    tbody.innerHTML = renderCoffees(filteredCoffees);
+    body.innerHTML = renderCoffees(filteredCoffees);
+}
+
+function updateCoffees(e) {
+    e.preventDefault(); // don't submit the form, we just want to update the data
+    let searchInput = coffeeSelection.value;
+    let filteredCoffees = [];
+    coffees.forEach(coffee => {
+       if (coffee.name.toLowerCase().includes(searchInput)){
+           filteredCoffees.push(coffee);
+       }
+    });
+    body.innerHTML = renderCoffees(filteredCoffees);
+}
+
+function addCoffee() {
+
 }
 
 // from http://www.ncausa.org/About-Coffee/Coffee-Roasts-Guide
@@ -54,11 +65,11 @@ let coffees = [
     {id: 14, name: 'French', roast: 'dark'},
 ];
 
-let tbody = document.querySelector('#coffees');
-let submitButton = document.querySelector('#submit');
+let body = document.querySelector('#coffees');
+let coffeeSelection = document.querySelector('#coffee-selection')
 let roastSelection = document.querySelector('#roast-selection');
 
-tbody.innerHTML = renderCoffees(coffees);
+body.innerHTML = renderCoffees(coffees);
 
-// submitButton.addEventListener('click', updateCoffees);
-roastSelection.addEventListener('change', updateCoffees)
+coffeeSelection.addEventListener('input', updateCoffees)
+roastSelection.addEventListener('change', updateRoasts)

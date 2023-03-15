@@ -3,6 +3,10 @@ hr {
     margin-left: 50px;
 }
 
+.menu {
+    margin: 15px 0;
+}
+
 .coffee-name {
     font-size: 30px;
     font-weight: bold;
@@ -22,6 +26,25 @@ hr {
     gap: 10px;
     width: calc(50% - 5px);
     border-radius: 5px;
-    background-color: #eee;
+    background-color: #b9b9b9;
 }
 
+.coffee-card .roast {
+    color: #4d4d4d;
+}
+
+.navigation {
+    margin: 100px 50px;
+}
+
+.navigation form{
+    margin-bottom: 15px;
+}
+
+.drop-search {
+    width: 100%;
+}
+
+.navigation hr {
+    margin: 10px 0;
+}
