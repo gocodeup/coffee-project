@@ -2,7 +2,6 @@
 let tbody = document.querySelector('.coffee');
 function renderCoffee(coffee) {
     var html = '<div class="coffee">';
-    // html += '<td>' + coffee.id + '</td>';
     html += '<h2>' + coffee.name + '</h2>';
     html += '<p class="p2">' + coffee.roast + '</p>';
     html += '</div>';
@@ -35,6 +34,11 @@ function updateCoffees(e) {
     }
     tbody.innerHTML = renderCoffees(filteredCoffees);
 }
+function searchCoffee(e) {
+    e.preventDefault(); // don't submit the form, we just want to update the data
+    let coffeeArray = []
+    coffees.forEach()
+}
 
 // from http://www.ncausa.org/About-Coffee/Coffee-Roasts-Guide
 var coffees = [
@@ -57,8 +61,11 @@ var coffees = [
 // var tbody = document.querySelector('#coffees');
 var submitButton = document.querySelector('#submit');
 var roastSelection = document.querySelector('#roast-selection');
+let coffeeName = document.querySelector('#coffeeName')
 
 tbody.innerHTML = renderCoffees(coffees);
 
 // submitButton.addEventListener('click', updateCoffees);
 roastSelection.addEventListener('change', updateCoffees);
+coffeeName.addEventListener('keyup', searchCoffee)
+// keyup
