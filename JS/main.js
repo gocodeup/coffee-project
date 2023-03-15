@@ -1,12 +1,12 @@
 "use strict"
 
 function renderCoffee(coffee) {
-    let html =
-        `<div id =coffees>
-            ${coffee.name}
-            ${coffee.roast}
-        </div>`
-
+    let html = `<h1 id =coffees>
+                    ${coffee.name}
+                </h1>    
+                <p>
+                    ${coffee.roast}
+                 </p>`
     return html;
 }
 
@@ -26,10 +26,16 @@ function updateCoffees(e) {
         if (coffee.roast === selectedRoast) {
             filteredCoffees.push(coffee);
         }
+        if (selectedRoast === "all") {
+            filteredCoffees.push(coffee)
+        }
     });
     tbody.innerHTML = renderCoffees(filteredCoffees);
 }
-
+// function searchCoffee() {
+//     let userInput = ''
+//     if(userInput === )
+// }
 // from http://www.ncausa.org/About-Coffee/Coffee-Roasts-Guide
 let coffees = [
     {id: 1, name: 'Light City', roast: 'light'},
@@ -49,9 +55,8 @@ let coffees = [
 ];
 
 let tbody = document.querySelector('#coffees');
-// let submitButton = document.querySelector('#submit');
 let roastSelection = document.querySelector('#roast-selection');
-
+// document.querySelector("all");
 tbody.innerHTML = renderCoffees(coffees);
 
 roastSelection.addEventListener('change', updateCoffees);
