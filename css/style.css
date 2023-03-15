@@ -6,16 +6,6 @@
 }
 
 /***********  GLOBAL PROPERTIES  ***********/
-table {
-    border-collapse: collapse;
-    margin: 15px 0;
-}
-
-td, th {
-    border: 1px solid black;
-    padding: 5px 10px;
-}
-
 .page-wrapper {
     overflow-x: hidden;
     background-image: url("/images/Coffee_background.jpg");
@@ -142,18 +132,18 @@ section.container.customer-search-add .row {
     box-shadow: var(--light-shadow);
     border-radius: 10px;
     padding: 2px;
-    height: 85%;
+    max-height: 85%;
+    min-height: 138px;
     margin-top: 40px;
+    margin-bottom: 40px;
     background-color: blanchedalmond;
 }
 
 .coffee-search-wrapper {
     display: flex;
-    /* flex: 1; */
     flex-direction: column;
     padding: 2px;
     max-height: 100%;
-    /* margin: 8px; */
     width: 100%;
     max-width: 100%;
 }
@@ -161,8 +151,8 @@ section.container.customer-search-add .row {
 .coffee-roast-wrapper {
     display: flex;
     flex-direction: column;
+    max-height: 100%;
     padding: 2px;
-    /* margin: 8px; */
     width: 100%;
     max-width: 100%;
 }
@@ -173,29 +163,6 @@ section.container.customer-search-add .row {
     flex: 1;
 }
 
-/* .search-button-wrapper { */
-/*     display: flex; */
-/*     flex: 1; */
-/*     width: 100%; */
-/*     flex-direction: column; */
-/*     margin: 1px; */
-/* } */
-
-/* .search-button-wrapper button { */
-/*     font-size: x-large; */
-/*     height: 100%; */
-/*     width: 100%; */
-/*     writing-mode: vertical-lr; */
-/*     text-orientation: upright; */
-/*     border-radius: 8px; */
-/*     border: 1px solid var(--light-shadow-color); */
-/*     transition: all ease-out .3s; */
-/* } */
-
-/* .search-button-wrapper button:hover { */
-/*     transform: scale(1.1) */
-/* } */
-
 /***********  CUSTOMER ADDITIONS  ***********/
 .customer-additions-wrapper {
     display: flex;
@@ -205,7 +172,8 @@ section.container.customer-search-add .row {
     box-shadow: var(--light-shadow);
     border-radius: 10px;
     padding: 2px;
-    height: 85%;
+    max-height: 85%;
+    min-height: 138px;
     background-color: blanchedalmond;
     margin-top: 40px;
     margin-bottom: 40px;
