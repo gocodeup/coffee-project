@@ -1,11 +1,28 @@
 "use strict"
 
+let coffees = [
+	{id: 1, name: 'Light City', roast: 'light'},
+	{id: 2, name: 'Half City', roast: 'light'},
+	{id: 3, name: 'Cinnamon', roast: 'light'},
+	{id: 4, name: 'City', roast: 'medium'},
+	{id: 5, name: 'American', roast: 'medium'},
+	{id: 6, name: 'Breakfast', roast: 'medium'},
+	{id: 7, name: 'High', roast: 'dark'},
+	{id: 8, name: 'Continental', roast: 'dark'},
+	{id: 9, name: 'New Orleans', roast: 'dark'},
+	{id: 10, name: 'European', roast: 'dark'},
+	{id: 11, name: 'Espresso', roast: 'dark'},
+	{id: 12, name: 'Viennese', roast: 'dark'},
+	{id: 13, name: 'Italian', roast: 'dark'},
+	{id: 14, name: 'French', roast: 'dark'},
+];
+
+coffees.push(JSON.parse(localStorage.getItem(`userCoffee`)));
 function renderCoffee(coffee) {
     let html = '<div class="coffee-wrapper">';
     html += '<h2>' + coffee.name + '</h2>';
     html += '<p class="roast">' + coffee.roast + '</p>';
     html += '</div>';
-
     return html;
 }
 
@@ -16,15 +33,17 @@ function renderCoffees(coffees) {
     }
     return html;
 }
-function addCoffees(name, roast) {
-    this.name=name;
-    this.roast=roast;
+function Coffee(id, name, roast) {
+	this.id = id;
+	this.name = name;
+    this.roast = roast;
 }
+
+
 function updateCoffees(e) {
     e.preventDefault();
     let selectedRoast = roastSelection.value;
     let searchedName = nameSelection.value;
-    console.log(searchedName)
     let filteredCoffees = [];
     if (searchedName === ``) {
         coffees.forEach(function (coffee) {
@@ -45,37 +64,24 @@ function updateCoffees(e) {
 				filteredCoffees.push(coffee);
 			}
 		});
-		// filteredCoffees.forEach(function (coffee) {
-		// 	if (coffee.name.toLowerCase().includes(searchedName.toLowerCase())){
-		// 		// superFilteredCoffees.push(coffee);
-		// 	}
-		// });
 	}
     tbody.innerHTML = renderCoffees(filteredCoffees);
-    // tbody.innerHTML = renderCoffees(superFilteredCoffees);
 }
 
 
 
+function addCoffee(e){
+	e.preventDefault();
+	coffees.push(new Coffee(coffees.length + 1, addName.value, addRoastSelection.value));
+	let lastObject = coffees[coffees.length-1];
+	localStorage.setItem('userCoffee', JSON.stringify(lastObject));
+	updateCoffees(e);
+}
+
 
 
 // from http://www.ncausa.org/About-Coffee/Coffee-Roasts-Guide
-const coffees = [
-    {id: 1, name: 'Light City', roast: 'light'},
-    {id: 2, name: 'Half City', roast: 'light'},
-    {id: 3, name: 'Cinnamon', roast: 'light'},
-    {id: 4, name: 'City', roast: 'medium'},
-    {id: 5, name: 'American', roast: 'medium'},
-    {id: 6, name: 'Breakfast', roast: 'medium'},
-    {id: 7, name: 'High', roast: 'dark'},
-    {id: 8, name: 'Continental', roast: 'dark'},
-    {id: 9, name: 'New Orleans', roast: 'dark'},
-    {id: 10, name: 'European', roast: 'dark'},
-    {id: 11, name: 'Espresso', roast: 'dark'},
-    {id: 12, name: 'Viennese', roast: 'dark'},
-    {id: 13, name: 'Italian', roast: 'dark'},
-    {id: 14, name: 'French', roast: 'dark'},
-];
+
 
 let tbody = document.querySelector('#coffees');
 let submitButton = document.querySelector('#submit');
@@ -87,8 +93,9 @@ let addName = document.querySelector('#add-coffee-name');
 
 tbody.innerHTML = renderCoffees(coffees);
 
-nameSelection.addEventListener('keyup', updateCoffees)
-roastSelection.addEventListener('change', updateCoffees)
+nameSelection.addEventListener('keyup', updateCoffees);
+roastSelection.addEventListener('change', updateCoffees);
 submitButton.addEventListener('click', updateCoffees);
-addNewCoffee.addEventListener("click", coffees.push(new addCoffees(addName.value, addRoastSelection.value )))
+addNewCoffee.addEventListener("click", addCoffee);
 
+localStorage.setItem('userCoffees', `${coffees}`);
