@@ -18,7 +18,9 @@ td, th {
 
 .page-wrapper {
     overflow-x: hidden;
-    background-color: antiquewhite;
+    background-image: url("/images/Coffee_background.jpg");
+    background-size: 800px;
+    
 }
 
 form {
@@ -34,6 +36,7 @@ form {
 
 h1 {
     font-size: 4rem;
+    color: blanchedalmond;
 }
 
 /***********  HEADER SECTION  ***********/
@@ -84,10 +87,12 @@ section.container.coffee-display {
     height: 200px;
     max-width: 150px;
     width: 150px;
-    background-color: floralwhite;
-    border: 1px solid var(--light-shadow-color);
+    background-image: url("/images/coffee_pour.jpg");
+    background-size: contain;
+    border: 5px solid;
+    border-color: blanchedalmond;
     box-shadow: var(--light-shadow);
-    border-radius: 10px;
+    border-radius: 15px;
     transition: transform ease-out .3s;
 }
 
@@ -99,7 +104,7 @@ section.container.coffee-display {
     display: flex;
     text-align: center;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
     height: 100%;
 }
 
@@ -138,6 +143,8 @@ section.container.customer-search-add .row {
     border-radius: 10px;
     padding: 2px;
     height: 85%;
+    margin-top: 40px;
+    background-color: blanchedalmond;
 }
 
 .coffee-search-wrapper {
@@ -199,6 +206,9 @@ section.container.customer-search-add .row {
     border-radius: 10px;
     padding: 2px;
     height: 85%;
+    background-color: blanchedalmond;
+    margin-top: 40px;
+    margin-bottom: 40px;
 }
 
 .customer-coffee-name-wrapper {
@@ -240,8 +250,19 @@ section.container.customer-search-add .row {
     transform: scale(1.1)
 }
 
+h2 {
+    border-width: 3px;
+    border-color: #0e0e0e;
+    background-color: blanchedalmond;
+    border-radius: 25px;
+}
 
-
+p {
+    border-width: 3px;
+    border-color: #0e0e0e;
+    background-color: blanchedalmond;
+    border-radius: 25px;
+}
 
 
 
