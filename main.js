@@ -44,8 +44,25 @@ function updateCoffees(e) {
 }
 
 function addCoffee() {
+    // let newRoast = newRoast.value
+    // let newCoffee = newCoffee.value
+    let addedCoffee = { id: coffees.length + 1 , name: newCoffee.value, roast: newRoast.value }
+    console.log(newCoffee.value);
+    if ( newCoffee.value === ""){
+        alert(`Please add the coffee before submitting`)
+    } else {
+        coffees.push(addedCoffee)
+        newCoffee.value = ""
+        console.log(`New Coffee Added`)
+        const newCoffeeHTML = renderCoffees(coffees);
+        body.innerHTML = newCoffeeHTML;
+    }
 
 }
+
+//coffees.id = coffees.length + 1
+//coffees.name = searchinput
+//coffees.rost =
 
 // from http://www.ncausa.org/About-Coffee/Coffee-Roasts-Guide
 let coffees = [
@@ -63,13 +80,20 @@ let coffees = [
     {id: 12, name: 'Viennese', roast: 'dark'},
     {id: 13, name: 'Italian', roast: 'dark'},
     {id: 14, name: 'French', roast: 'dark'},
-];
+].reverse();
 
 let body = document.querySelector('#coffees');
 let coffeeSelection = document.querySelector('#coffee-selection')
 let roastSelection = document.querySelector('#roast-selection');
 
+let newRoast = document.querySelector('#add-roast')
+let newCoffee = document.querySelector('#add-coffee')
+let submitted = document.querySelector('#submit')
+
+
+
 body.innerHTML = renderCoffees(coffees);
 
+submitted.addEventListener('click', addCoffee )
 coffeeSelection.addEventListener('input', updateCoffees)
 roastSelection.addEventListener('change', updateRoasts)
