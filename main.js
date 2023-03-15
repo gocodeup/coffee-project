@@ -102,6 +102,7 @@ searchInput.addEventListener("input", (e) =>{
 
 
 
+
 // let input = document.getElementById("myInput");
 //
 // //Execute a function when the user presses a key on the keyboard
