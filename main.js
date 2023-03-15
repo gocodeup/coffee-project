@@ -62,28 +62,27 @@ function updateCoffees(e) {
     //     });
     //     coffeeList.innerHTML = renderCoffees(filteredCoffees);
     // }
-    function searchCoffees() {
-        let searchRoast = nameSelected.value.toUpperCase();
-        let filteredCoffees = [];
-        // console.log(searchRoast);
-        coffees.forEach(function(coffee) {
-            if (coffee.name.toUpperCase().includes(searchRoast)) {
-                filteredCoffees.push(coffee);
-                console.log(filteredCoffees);
-            }
-        });
-        coffeeList.innerHTML = renderCoffees(filteredCoffees);
-    }
 }
-
+function searchCoffees() {
+    let searchRoast = nameSelected.value.toUpperCase();
+    let filteredCoffees = [];
+    console.log(searchRoast);
+    coffees.forEach(function(coffee) {
+        if (coffee.name.toUpperCase().includes(searchRoast)) {
+            filteredCoffees.push(coffee);
+            console.log(filteredCoffees);
+        }
+    });
+    coffeeList.innerHTML = renderCoffees(filteredCoffees);
+}
 
 
 let coffeeList = document.querySelector('#coffee-list');
 let topSubmitBtn = document.querySelector('#top-submit-btn');
 let selectedRoast = document.querySelector('#roast1');
 let nameSelected = document.querySelector('#coffee-name');
+// let searchBox = document.querySelector('#searchBox');
 
 coffeeList.innerHTML = renderCoffees(coffees);
 selectedRoast.addEventListener('change', updateCoffees);
-let searchBox = document.querySelector('#searchBox');
-searchBox.addEventListener('keyup', searchCoffees);
+nameSelected.addEventListener('keyup', searchCoffees);
