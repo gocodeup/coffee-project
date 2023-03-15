@@ -33,6 +33,20 @@ label {
     display: none;
 }
 
-.ID {
+.id {
     display: none;
+}
+
+.coffee {
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: center;
+    gap: 5px;
+}
+
+#coffees {
+    display:  flex;
+    flex-wrap: wrap;
+    max-height: 55vh;
 }
