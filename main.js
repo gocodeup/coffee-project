@@ -43,7 +43,7 @@ function renderCoffees(coffees) {
 }
 
 function updateCoffees(e) {
-    e.preventDefault(); // don't submit the form, we just want to update the data
+    // e.preventDefault(); // don't submit the form, we just want to update the data
     let selectedRoast = roastSelection.value;
     let filteredCoffees = [];
     coffees.forEach(function(coffee) {
@@ -51,11 +51,12 @@ function updateCoffees(e) {
             filteredCoffees = coffees;
         } else {
             filteredCoffees = coffees.filter(coffee => coffee.roast === selectedRoast)
-
         }
+
     });
     tbody.innerHTML = renderCoffees(filteredCoffees);
 }
+
 
 // from http://www.ncausa.org/About-Coffee/Coffee-Roasts-Guide
 let coffees = [
@@ -78,38 +79,51 @@ let coffees = [
 let submitButton = document.querySelector('#submit');
 let tbody = document.querySelector('#coffees');
 let roastSelection = document.querySelector('#roast-selection');
+let input = document.getElementById("search");
 
 tbody.innerHTML = renderCoffees(coffees);
 
 submitButton.addEventListener('click', updateCoffees);
 
+
+//inputs the entered value by key or coffee and filters by coffee name. Replaces previous array with current array.
 const searchInput = document.querySelector("[data-search]")
-//inputs the entered value by key
 searchInput.addEventListener("input", (e) =>{
     const value = e.target.value
-    const matchingCoffees = []
+    let matchingCoffees = []
     coffees.forEach(coffee => {
         if (coffee.name.toLowerCase().includes(value)){
-            console.log(coffee)
             matchingCoffees.push(coffee)
         }
     })
-    renderCoffees(matchingCoffees)
+    tbody.innerHTML = renderCoffees(matchingCoffees)
+});
+
+//Execute a function when the user presses a key on the keyboard
+input.addEventListener("keypress", function(event) {
+    if (event.key === "Enter") {
+        event.preventDefault();
+        document.getElementById("myBtn").click();
+    }
+});
+
+let coffeeName = document.querySelector('#input2')
+let roastAddition = document.querySelector("#roast-selection2")
+let submitACoffee = document.querySelector('#submit2')
+let newCoffee;
+
+
+function addANewCoffee(){
+    let newCoffee = {id: coffees.length + 1, name: coffeeName.value, roast: roastAddition.value}
+    if (coffeeName.value === "") {
+        alert("Please eneter a coffee name!");
+    } else {
+        coffees.push(newCoffee);
+        coffeeName.value = "";
+        console.log(`Added new coffee "${newCoffee.name}"`);
+    }
+}
+
+submitACoffee.addEventListener('click', function(){
+    addANewCoffee();
 })
-
-
-
-
-
-
-
-// let input = document.getElementById("myInput");
-//
-// //Execute a function when the user presses a key on the keyboard
-// input.addEventListener("keypress", function(event) {
-//     if (event.key === "Enter") {
-//         event.preventDefault();
-//         document.getElementById("myBtn").click();
-//     }
-// });
-

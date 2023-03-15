@@ -49,4 +49,6 @@ label {
     display:  flex;
     flex-wrap: wrap;
     max-height: 55vh;
+    height: 434px;
 }
+
