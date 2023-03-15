@@ -42,20 +42,22 @@ function renderCoffees(coffees) {
     return html;
 }
 
-function updateCoffees(e) {
-    // e.preventDefault(); // don't submit the form, we just want to update the data
-    let selectedRoast = roastSelection.value;
-    let filteredCoffees = [];
-    coffees.forEach(function(coffee) {
-        if (selectedRoast === 'all') {
-            filteredCoffees = coffees;
-        } else {
-            filteredCoffees = coffees.filter(coffee => coffee.roast === selectedRoast)
-        }
 
-    });
+function updateCoffees(e) {
+    e.preventDefault(); // don't submit the form, we just want to update the data
+    let roastSelection = document.querySelector('#roast-selection');
+    let selectedRoast = roastSelection.options[roastSelection.selectedIndex].value;
+    let filteredCoffees = [];
+    if (selectedRoast === 'all') {
+        filteredCoffees = coffees;
+    } else {
+        filteredCoffees = coffees.filter(function(coffee) {
+            return coffee.roast === selectedRoast;
+        });
+    }
     tbody.innerHTML = renderCoffees(filteredCoffees);
 }
+
 
 
 // from http://www.ncausa.org/About-Coffee/Coffee-Roasts-Guide
@@ -110,20 +112,18 @@ input.addEventListener("keypress", function(event) {
 let coffeeName = document.querySelector('#addCoffeeInput')
 let roastAddition = document.querySelector("#roast-selection2")
 let submitACoffee = document.querySelector('#addCoffeeSubmit')
-// let newCoffee;
 
-let newCoffee = {id: coffees.length + 1, name: coffeeName.value, roast: roastAddition.value}
 function addANewCoffee(){
+    let newCoffee = {id: coffees.length + 1, name: coffeeName.value, roast: roastAddition.value}
+    console.log(newCoffee)
     if (coffeeName.value === "") {
         alert("Please enter a coffee name!");
     } else {
         coffees.push(newCoffee);
         coffeeName.value = "";
         console.log(`Added new coffee "${newCoffee.name}"`);
+        tbody.innerHTML = renderCoffees(coffees); // update the array with the new coffee
     }
-    return newCoffee;
 }
 
-submitACoffee.addEventListener('click', function(){
-    tbody.insertAdjacentHTML("afterbegin", newCoffee);
-})
+submitACoffee.addEventListener('click', addANewCoffee);
