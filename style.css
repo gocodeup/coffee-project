@@ -1,9 +1,39 @@
-table {
-    border-collapse: collapse;
-    margin: 15px 0;
+body{
+    font-family: sans-serif;
 }
 
-td, th {
-    border: 1px solid black;
-    padding: 5px 10px;
+h1, h2, h3, h4, h5{
+    font-family: sans-serif;
+}
+
+.row{
+    max-width: unset;
+}
+
+hr{
+    margin: 0 60px;
+    border-style: solid;
+    border-color: #EEEEEE;
+}
+
+section{
+    display: flex;
+}
+
+.column-coffee{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 60px;
+}
+
+h1, p{
+    display: flex;
+}
+
+.column-form{
+    display: flex;
+}
+
+form{
+    max-width: 300px;
 }
