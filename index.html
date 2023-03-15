@@ -3,33 +3,49 @@
 <head>
     <meta charset="UTF-8">
     <title></title>
+    <link rel="stylesheet" href="css-utils/layout.css">
+    <link rel="stylesheet" href="css-utils/resets.css">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Coffee!</h1>
-
-    <form>
-        <label for="roast-selection"></label>
-        <select id="roast-selection">
-            <option>all</option>
-            <option>light</option>
-            <option>medium</option>
-            <option>dark</option>
-        </select>
-<!--        <input id="submit" type="submit" />-->
-    </form>
-
-    <table>
-        <thead>
-            <tr>
-                <th>ID</th>
-                <th>NAME</th>
-                <th>ROAST</th>
-            </tr>
-        </thead>
-        <tbody id="coffees"></tbody>
-    </table>
-
+<div class="page-wrapper">
+    <header class="container head">
+        <div class="row">
+            <div class="column">
+                <h1>Coffee!</h1>
+            </div>
+        </div>
+    </header>
+    <div class="container body">
+        <div class="row">
+            <div class="column">
+                <p class="bold" >Roast</p>
+                <form class="options">
+                    <label for="roast-selection"></label>
+                    <select class="options" id="roast-selection">
+                        <option>all</option>
+                        <option>light</option>
+                        <option>medium</option>
+                        <option>dark</option>
+                    </select>
+                    <!--        <input id="submit" type="submit" />-->
+                </form>
+                <p class="margin-top bold">Coffee Name</p>
+                <div class="search options">
+                    <input class="options" type="search" id="query" name="q">
+                <button class="submit margin-top">Submit</button>
+                </div>
+            </div>
+        </div>
+        <div class="row spacing">
+            <div class="column grow">
+                <div class="coffee grow">
+                    <tbody id="coffees"></tbody>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
     <script src="main.js"></script>
 </body>
 </html>

@@ -7,3 +7,64 @@ td, th {
     border: 1px solid black;
     padding: 5px 10px;
 }
+
+header .column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 1 0 0;
+    border-bottom: 1px solid darkgrey;
+    padding-bottom: 15px;
+}
+.body {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: flex-start;
+    padding: 15px;
+    height: 100vh;
+}
+
+.options {
+    display: flex;
+    justify-content: center;
+    flex: 1 0 0;
+}
+
+.search {
+    display: flex;
+    flex-direction: column;
+}
+
+.margin-top {
+   margin-top: 15px;
+}
+
+.submit {
+    background-color: #3C89CB;
+    color: white;
+    border-radius: 7px;
+}
+p {
+    font-family: sans-serif;
+
+}
+p.bold {
+    font-weight: bold;
+}
+.p2 {
+    color: #B1AFA8;
+    align-self: end;
+    padding: 4px;
+}
+
+
+.coffee {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px;
+    flex: 1 0 50%;
+    font-family: sans-serif;
+}
+.spacing {
+    width: 100%;
+}
