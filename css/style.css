@@ -1,0 +1,27 @@
+hr {
+    max-width: 90vw;
+    margin-left: 50px;
+}
+
+.coffee-name {
+    font-size: 30px;
+    font-weight: bold;
+}
+
+#coffees {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.coffee-card {
+    display:flex;
+    flex-direction: column;
+    border: 1px solid rgba(0,0,0,0.5);
+    padding: 15px;
+    gap: 10px;
+    width: calc(50% - 5px);
+    border-radius: 5px;
+    background-color: #eee;
+}
+
