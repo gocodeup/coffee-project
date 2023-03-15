@@ -71,7 +71,6 @@ let coffeeList = document.querySelector('#coffee-list');
 let topSubmitBtn = document.querySelector('#top-submit-btn');
 let selectedRoast = document.querySelector('#roast1');
 let nameSelected = document.querySelector('#coffee-name');
-// let searchBox = document.querySelector('#searchBox');
 
 coffeeList.innerHTML = renderCoffees(coffees);
 selectedRoast.addEventListener('change', updateCoffees);
