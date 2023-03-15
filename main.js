@@ -51,18 +51,31 @@ function updateCoffees(e) {
         });
         coffeeList.innerHTML = renderCoffees(filteredCoffees);
     }
-    if (nameSelected !== '') {
-        coffees.forEach(function (coffee) {
-            if (coffee.roast === nameSelected && coffees.name.toLowerCase().includes(nameSelected.toLowerCase())) {
+    // if (nameSelected !== '') {
+    //     coffees.forEach(function (coffee) {
+    //         if (coffee.roast === nameSelected && coffees.name.toLowerCase().includes(nameSelected.toLowerCase())) {
+    //             filteredCoffees.push(coffee);
+    //         }
+    //         if (selectedRoast === 'all' && coffees.name.toLowerCase().includes(nameSelected.toLowerCase())) {
+    //             filteredCoffees.push(coffee);
+    //         }
+    //     });
+    //     coffeeList.innerHTML = renderCoffees(filteredCoffees);
+    // }
+    function searchCoffees() {
+        let searchRoast = nameSelected.value.toUpperCase();
+        let filteredCoffees = [];
+        // console.log(searchRoast);
+        coffees.forEach(function(coffee) {
+            if (coffee.name.toUpperCase().includes(searchRoast)) {
                 filteredCoffees.push(coffee);
-            }
-            if (selectedRoast === 'all' && coffees.name.toLowerCase().includes(nameSelected.toLowerCase())) {
-                filteredCoffees.push(coffee);
+                console.log(filteredCoffees);
             }
         });
         coffeeList.innerHTML = renderCoffees(filteredCoffees);
     }
 }
+
 
 
 let coffeeList = document.querySelector('#coffee-list');
@@ -72,3 +85,5 @@ let nameSelected = document.querySelector('#coffee-name');
 
 coffeeList.innerHTML = renderCoffees(coffees);
 selectedRoast.addEventListener('change', updateCoffees);
+let searchBox = document.querySelector('#searchBox');
+searchBox.addEventListener('keyup', searchCoffees);
