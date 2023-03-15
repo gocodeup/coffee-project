@@ -16,11 +16,14 @@ function renderCoffees(coffees) {
     }
     return html;
 }
-
+function addCoffees(name, roast) {
+    this.name=name;
+    this.roast=roast;
+}
 function updateCoffees(e) {
-    e.preventDefault(); // don't submit the form, we just want to update the data
+    e.preventDefault();
     let selectedRoast = roastSelection.value;
-    let searchedName = nameSelection.value
+    let searchedName = nameSelection.value;
     console.log(searchedName)
     let filteredCoffees = [];
     if (searchedName === ``) {
@@ -29,27 +32,29 @@ function updateCoffees(e) {
                 filteredCoffees.push(coffee);
             }
             if (selectedRoast === `all`) {
-                filteredCoffees.push(coffee)
+                filteredCoffees.push(coffee);
             }
         });
     }
 	if (searchedName !== ``) {
 		coffees.forEach(function (coffee) {
-			if (coffee.roast === selectedRoast) {
+			if (coffee.roast === selectedRoast && coffee.name.toLowerCase().includes(searchedName.toLowerCase())) {
 				filteredCoffees.push(coffee);
 			}
-			if (selectedRoast === `all`) {
-				filteredCoffees.push(coffee)
-			}
-		});
-		filteredCoffees.forEach(function (coffee) {
-			if (coffee.name.toLowerCase().includes(searchedName.toLowerCase())){
+			if (selectedRoast === `all` && coffee.name.toLowerCase().includes(searchedName.toLowerCase())) {
 				filteredCoffees.push(coffee);
 			}
 		});
+		// filteredCoffees.forEach(function (coffee) {
+		// 	if (coffee.name.toLowerCase().includes(searchedName.toLowerCase())){
+		// 		// superFilteredCoffees.push(coffee);
+		// 	}
+		// });
 	}
     tbody.innerHTML = renderCoffees(filteredCoffees);
+    // tbody.innerHTML = renderCoffees(superFilteredCoffees);
 }
+
 
 
 
@@ -75,12 +80,15 @@ const coffees = [
 let tbody = document.querySelector('#coffees');
 let submitButton = document.querySelector('#submit');
 let roastSelection = document.querySelector(`#roast-selection`);
-let nameSelection = document.querySelector(`#name-selection`)
-
+let nameSelection = document.querySelector(`#name-selection`);
+let addRoastSelection = document.querySelector('#add-roast-selection');
+let addNewCoffee = document.querySelector('#add-new-coffee');
+let addName = document.querySelector('#add-coffee-name');
 
 tbody.innerHTML = renderCoffees(coffees);
 
 nameSelection.addEventListener('keyup', updateCoffees)
 roastSelection.addEventListener('change', updateCoffees)
 submitButton.addEventListener('click', updateCoffees);
+addNewCoffee.addEventListener("click", coffees.push(new addCoffees(addName.value, addRoastSelection.value )))
 
