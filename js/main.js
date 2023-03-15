@@ -6,8 +6,9 @@ const tbody = document.querySelector("#coffees");
 const submitButton = document.querySelector("#submit");
 const roastSelection = document.querySelector("#roast-selection");
 const coffeeListWrapper = document.querySelector(".coffee-list-divs");
-const userSearch = document.querySelector("#coffee-search");
-
+const searchInput = document.querySelector(("#coffee-search"));
+const searchForm = document.querySelector("#search-form");
+const addForm = document.querySelector("#add-form");
 //--      --////--    UTILITY FUNCTIONS  --////--      --//
 const sortedArrayByID = (arr) => {
     return arr.sort((a, b) => {
@@ -43,28 +44,99 @@ let coffees = [
 ];
 
 //--      --////--    DISPLAY FUNCTIONS  --////--      --//
-let sortedCoffees = sortedArrayByID(coffees);
-
-sortedCoffees.forEach(({ id: coffeeID, name: coffeeName, roast: coffeeRoast }) => {
+const sortedCoffees = sortedArrayByID(coffees);
+const createNewCoffee = ({ id: coffeeID, name: coffeeName, roast: coffeeRoast }) => {
     let newCoffee = document.createElement("div");
-    newCoffee.classList.add(`coffee`);
+    newCoffee.classList.add("coffee");
     newCoffee.id = `coffee${coffeeID}`;
     newCoffee.innerHTML = `
-<div class="coffee-name-wrapper">
-<h2>${coffeeName}</h2>
-</div>
-<div class="coffee-roast-wrapper">
-<p>${coffeeRoast}</p>
-</div>
-`;
+    <div class="coffee-name-wrapper">
+        <h2>${coffeeName}</h2>
+    </div>
+    <div>
+        <p>${coffeeRoast}</p>
+    </div>
+    `;
     coffeeListWrapper.appendChild(newCoffee);
+};
+
+sortedCoffees.forEach(coffee => {
+    createNewCoffee(coffee)
 });
 
-//--      --////--    FETCH  --////--      --//
-fetch('data/db.json')
-    .then((response) => response.json())
-    .then((json) => console.log(json));
+addForm.addEventListener("submit", e => {
+    e.preventDefault();
+    console.log("function connected");
+    let id = sortedCoffees[sortedCoffees.length - 1].id + 1;
+    const name = document.querySelector("#customer-coffee-input").value;
+    const roast = document.querySelector("#customer-roast-input").value;
+    const coffee = { id, name, roast };
+    sortedCoffees.push(coffee);
+    let lastCoffee = sortedCoffees[sortedCoffees.length - 1];
+    createNewCoffee(lastCoffee);
+});
 
+const removeContent = (parent) => {
+    while (parent.firstElementChild) {
+        parent.removeChild(parent.firstElementChild);
+    }
+};
+
+searchInput.addEventListener("input", (e) => {
+        e.preventDefault();
+        let input = searchInput.value
+        console.log(`event listener active`);
+        console.log(searchInput.value);
+        removeContent(coffeeListWrapper);
+        let filteredCoffees = sortedCoffees.filter(coffee => coffee.name.toLowerCase().includes(input));
+        filteredCoffees.forEach(coffee => {
+            createNewCoffee(coffee);
+        });
+    }
+);
+
+roastSelection.addEventListener("input", (e) => {
+    e.preventDefault();
+    let input = roastSelection.value;
+    console.log(`roast event listener active`);
+    console.log(input);
+    removeContent(coffeeListWrapper);
+    console.log(`remove content working`);
+    console.log(sortedCoffees);
+    let filteredCoffees = sortedCoffees.filter(coffee => coffee.roast === input.toLowerCase());
+    console.log(filteredCoffees);
+    filteredCoffees.forEach(coffee => {
+        createNewCoffee(coffee);
+    });
+    console.log(`works though entire event`);
+})
+
+// searchInput.addEventListener('input', e  => {
+//     e.preventDefault();
+//     console.log('event connected');
+//     removeContent(coffeeListWrapper);
+//     console.log(coffeeListWrapper);
+//     let filteredCoffees = sortedCoffees.filter(coffee => coffee.name.toLowerCase().includes(userSearch))
+//     filteredCoffees.forEach(({ id: coffeeID, name: coffeeName, roast: coffeeRoast }) => {
+//         let newCoffee = document.createElement("div");
+//         newCoffee.classList.add(`coffee`);
+//         newCoffee.id = `coffee${coffeeID}`;
+//         newCoffee.innerHTML = `
+// <div class="coffee-name-wrapper">
+// <h2>${coffeeName}</h2>
+// </div>
+// <div class="coffee-roast-wrapper">
+// <p>${coffeeRoast}</p>
+// </div>
+// `;
+//         coffeeListWrapper.appendChild(newCoffee);
+//     });
+// });
+
+//--      --////--    FETCH  --////--      --//
+// fetch('data/db.json')
+//     .then((response) => response.json())
+//     .then((json) => console.log(json));
 
 //
 // function renderCoffee(coffee) {
