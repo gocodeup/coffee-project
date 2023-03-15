@@ -5,9 +5,10 @@
 */
 .page-wrapper {
     min-height: 100vh;
-    display:flex;
+    display: flex;
     flex-direction: column;
 }
+
 /*
     The "container", sometimes referred to as a "section", is a container
     element (semantic when applicable) that vertically separates different
@@ -48,17 +49,8 @@
 .row.align-center {
     align-items: center;
 }
-.row.align-top {
-    align-items: start;
-}
-.row.align-bottom {
-    align-items: end;
-}
 .row.justify-center {
     justify-content: center;
-}
-.row.justify-right {
-    justify-content: end;
 }
 .row.justify-space-between {
     justify-content: space-between;
@@ -70,8 +62,12 @@
     gap: unset;
 }
 
-.row.grow {
-    flex: 1 0 0;
+.row.align-top{
+    align-items: start;
+}
+.row.align-bottom{
+    align-items: end;
+
 }
 /*
     The "column" is a container element that vertically separates its
@@ -85,22 +81,22 @@
     flex: 1 0 0;
 }
 /* Combo classes to extend the column's versatility */
+.column.direction-row{
+    flex-direction: row;
+}
 .column.shrink {
     flex: 0 1 auto;
 }
-
-.left-column-right-border {
-    width: 20px;
-    color: deepskyblue;
-}
-
-.column.text-center {
+.column.text-center{
     text-align: center;
+}
+.column.text-left{
+    text-align: start;
 }
 .column.align-center {
     align-items: center;
 }
-.column.align-right {
+.column.align-right{
     align-items: end;
 }
 .column.justify-center {
@@ -109,4 +105,9 @@
 .column.justify-space-between {
     justify-content: space-between;
 }
-
+.column.justify-end{
+    justify-content: end;
+}
+.column.justify-bottom{
+    justify-content: end;
+}

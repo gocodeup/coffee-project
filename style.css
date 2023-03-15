@@ -1,33 +1,53 @@
-
-/*@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');*/
-
-body {
-    /*font-family: open-sans, sans-serif*/
-}
-h1 {
-    font-weight: bold;
-    font-family: open-sans, sans-serif;
-    font-size: 35px;
-
+body{
+    font-family: sans-serif;
 }
 
-
-
-
-table {
-    border-collapse: collapse;
-    margin: 15px 0;
+h1, h2, h3, h4, h5{
+    font-family: sans-serif;
 }
 
-td, th {
-    border: 1px solid black;
-    padding: 5px 10px;
+.row{
+    max-width: unset;
 }
 
-hr {
-    /*rgba( 237, 237, 237, 0.5)*/
-    background-color: #EEEEEE;
-    height: 1px;
-    border: 0;
-    /*background-color: #EEEEEE*/
+hr{
+    margin: 0 60px;
+    border-style: solid;
+    border-color: #EEEEEE;
+}
+
+section{
+    display: flex;
+}
+
+.column-coffee{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 60px;
+}
+#coffees p, h1{
+    display: inline-block;
+}
+
+#coffees p{
+    color: #9FA4A8;
+    padding-left: 10px;
+}
+
+.column-form{
+    display: flex;
+}
+
+input, select{
+    width: 680px;
+}
+
+input[type="submit"] {
+    background: #3C89CB;
+    color: white;
+    border-radius: 5px;
+    font-family: sans-serif;
+    border: none;
+    box-shadow: none;
+    text-shadow: none;
 }
