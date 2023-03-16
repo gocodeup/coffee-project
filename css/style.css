@@ -155,14 +155,14 @@ section.container.customer-search-add .row {
     max-height: 100%;
     margin: 8px;
     width: 100%;
-    max-width: 100%;
+    max-width: 90%;
 }
 
 .coffee-roast-wrapper {
     display: flex;
     flex-direction: column;
     margin: 8px;
-    width: 100%;
+    width: 90%;
 }
 
 .coffee-roast-wrapper select {
