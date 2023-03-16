@@ -2,12 +2,8 @@
 
 function renderCoffee(coffee) {
     let html = `<div class="card">
-                    <h1 class="coffee-name" =coffees>
-                        ${coffee.name}
-                    </h1>    
-                    <p>
-                        ${coffee.roast}
-                    </p>
+                     <header class="coffee-name" id=coffees>${coffee.name}</header>
+                     <p class="coffee-roast" id="roast-selection">${coffee.roast}</p>
                 </div>`
     return html;
 }
