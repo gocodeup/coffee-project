@@ -46,7 +46,7 @@ a:hover {
     display: block;
     position: relative;
     overflow: hidden;
-    margin: 25px 5px 25px 0px;
+    margin: 25px 5px 25px 0;
     border-radius: 5px;
 }
 
@@ -171,14 +171,14 @@ h2 {
 }
 
 #coffee p {
-    transition: all ease 0.5s;
+    transition: all ease 0.3s;
 }
 
 h4 {
     color:#6C3320;
     font-weight: bolder;
     font-size: 15px;
-    transition: all ease 0.5s;
+    transition: all ease 0.3s;
 }
 
 select {
