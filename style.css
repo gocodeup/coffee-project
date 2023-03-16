@@ -26,6 +26,23 @@ body {
     margin-bottom: 15px;
 }
 
+.coffeeAd {
+    background-color: rgba(255, 255, 255, 0.5);
+    padding-left: 20px;
+
+}
+
+.ViewMenu {
+    margin-left: 20px;
+    font-size: large;
+    padding: 10px 5px;
+    border-radius: 10px;
+    cursor: pointer;
+    background-color: #6C3320;
+    color: #eee;
+}
+
+
 
 /*Centers add a coffee header*/
 .headerAddCoffee {
@@ -58,8 +75,6 @@ label {
 
 .headerContainer {
     background-color: #6B3321;
-    padding: 0px 0px;
-    margin: 0px 0px;
 }
 
 .storeName {
@@ -82,7 +97,7 @@ a:visited {
 }
 
 a:hover {
-    color: red;
+    color: #b21f1f;
 }
 
 .nav-item {
@@ -122,6 +137,7 @@ a:hover {
 
 .bottomOfPage {
     background-color: #6C3320;
+    color: #D1C1C0;
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
@@ -130,6 +146,8 @@ a:hover {
 
 .contactUsBottom {
     display: flex;
+    color: #D1C1C0;
+    cursor: pointer;
     justify-content: center;
     margin: 5px 20px;
 }
