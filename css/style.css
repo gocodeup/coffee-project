@@ -18,7 +18,7 @@ h1 {
     align-items: center;
 }
 .column.coffee-roast-one {
-    height: 500px;
+    height: 75vh;
     flex-wrap: wrap;
 }
 form {
@@ -30,8 +30,8 @@ form {
     padding-top: 15px;
     text-align: start;
 }
-.roast-dropdown select {
-    min-height: 35px;
+select {
+    min-height: 30px;
 }
 .coffee-name-input {
     min-height: 30px;
