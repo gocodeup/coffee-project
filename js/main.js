@@ -1,5 +1,7 @@
 "use strict"
 
+
+//creates the html for us
 function renderCoffee(coffee) {
     let html = `
         <div class="coffee "> 
@@ -19,7 +21,6 @@ function renderCoffees(coffees) {
     }
     return html;
 }
-
 
 function updateCoffees(e) {
     e.preventDefault(); // don't submit the form, we just want to update the data
@@ -56,13 +57,15 @@ let coffees = [
     {id: 14, name: 'French', roast: 'dark'},
 ];
 
+
+//grabs form1 attributes by ID
 let submitButton = document.querySelector('#submit');
 let tbody = document.querySelector('#coffees');
 let roastSelection = document.querySelector('#roast-selection');
 let input = document.getElementById("search");
 
 tbody.innerHTML = renderCoffees(coffees);
-
+// Updates coffee when you hit the submit button
 submitButton.addEventListener('click', updateCoffees);
 
 
@@ -106,8 +109,7 @@ function addANewCoffee(){
     }
 }
 
-// sessionStorage and adds button
-
+// sessionStorage and with event listener button functions
 function updateStorage() {
     sessionStorage.setItem('oldCoffees', JSON.stringify(coffees));
 }
