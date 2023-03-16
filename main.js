@@ -34,7 +34,7 @@ function renderCoffees(coffees) {
     }
     return html;
 }
-
+// FIRST DROPDOWN MENU FUNCTION
 function updateCoffees(e) {
     e.preventDefault(); // don't submit the form, we just want to update the data
     selectedRoast = selectedRoast.value;
@@ -51,8 +51,28 @@ function updateCoffees(e) {
         });
         coffeeList.innerHTML = renderCoffees(filteredCoffees);
     }
-
 }
+
+// SECOND DROPDOWN MENU FUNCTION
+function updateCoffeesTwo(e) {
+    e.preventDefault();
+    selectedRoastTwo = selectedRoastTwo.value;
+    // nameSelected = nameSelected.value;
+    let filteredCoffees = [];
+    if (nameSelected === ''); {
+        coffees.forEach(function(coffee) {
+            if (coffee.roast === selectedRoastTwo) {
+                filteredCoffees.push(coffee);
+            }
+            if (selectedRoastTwo === 'all') {
+                filteredCoffees.push(coffee);
+            }
+        });
+        coffeeList.innerHTML = renderCoffees(filteredCoffees);
+    }
+}
+
+// FIRST SEARCH BAR FUNCTION
 function searchCoffees() {
     let searchRoast = nameSelected.value.toUpperCase();
     let filteredCoffees = [];
@@ -66,12 +86,31 @@ function searchCoffees() {
     coffeeList.innerHTML = renderCoffees(filteredCoffees);
 }
 
+// SECOND SEARCH BAR FUNCTION
+function searchCoffeesTwo() {
+    let searchRoastTwo = secondNameSelected.value.toUpperCase();
+    let filteredCoffees = [];
+    console.log(searchRoastTwo);
+    coffees.forEach(function(coffee) {
+        if (coffee.name.toUpperCase().includes(searchRoastTwo)) {
+            filteredCoffees.push(coffee);
+            console.log(filteredCoffees);
+        }
+    });
+    coffeeList.innerHTML = renderCoffees(filteredCoffees);
+}
 
+
+// let topSubmitBtn = document.querySelector('#top-submit-btn');
 let coffeeList = document.querySelector('#coffee-list');
-let topSubmitBtn = document.querySelector('#top-submit-btn');
-let selectedRoast = document.querySelector('#roast1');
 let nameSelected = document.querySelector('#coffee-name');
+let secondNameSelected = document.querySelector('#custom-coffee-name');
+let selectedRoast = document.querySelector('#roast1');
+let selectedRoastTwo = document.querySelector('#roast2');
 
+// EVENT LISTENERS
 coffeeList.innerHTML = renderCoffees(coffees);
 selectedRoast.addEventListener('change', updateCoffees);
+selectedRoastTwo.addEventListener('change', updateCoffeesTwo);
 nameSelected.addEventListener('keyup', searchCoffees);
+secondNameSelected.addEventListener('keyup', searchCoffeesTwo);
