@@ -1,14 +1,18 @@
 .page-wrapper {
     display: flex;
     background-image: url("/images/coffe-bg.png");
-    background-size: 1440px 800px;
+    background-size: 1500px 850px;
     background-repeat: no-repeat;
 }
 
+header h1 {
+    font-size: 50px;
+}
+
 body {
-    font-family: "Helvetica Neue", sans-serif;
     font-family: Rockwell;
 }
+
 .main-row {
     padding: 25px 50px;
 }
@@ -47,20 +51,31 @@ select {
 .submit-btn {
     min-height: 35px;
     margin-top: 15px;
-    background-color: #3C89CB;
+    background-color: #2570a9;
     color: white;
     border: none;
     border-radius: 6px;
+    font-size: 20px;
+    text-align: center;
 }
 .add-coffee-label {
     display: flex;
     justify-content: center;
     border-top: 1px solid #F2F2F2;
     padding-top: 25px;
+    margin-bottom: 0px;
     margin-top: 30px;
+    font-size: 40px;
+    height: 70px;
 }
 .coffee-type p {
     color: #A3A19F;
+}
+
+#roast1, #roast2 {
+    border: 2px solid black;
+    text-align: center;
+    font-size: 18px;
 }
 
 #roast1, #roast2, .coffee-name-input {
@@ -71,6 +86,12 @@ select {
     font-size: 20px;
 }
 
-.roast-type {
-    color: white;
+.row.coffee-type p {
+    color: #252424;
+}
+
+.row.coffee-type h1 {
+    color: black;
+    font-size: 28px;
+    border-bottom: 4px dotted black;
 }
