@@ -1,5 +1,13 @@
+.page-wrapper {
+    display: flex;
+    background-image: url("/images/coffe-bg.png");
+    background-size: 1440px 800px;
+    background-repeat: no-repeat;
+}
+
 body {
     font-family: "Helvetica Neue", sans-serif;
+    font-family: Rockwell;
 }
 .main-row {
     padding: 25px 50px;
@@ -55,3 +63,14 @@ select {
     color: #A3A19F;
 }
 
+#roast1, #roast2, .coffee-name-input {
+    border-radius: 10px;
+}
+
+.coffee-name, .roast-label {
+    font-size: 20px;
+}
+
+.roast-type {
+    color: white;
+}
