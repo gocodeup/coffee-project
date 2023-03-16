@@ -14,9 +14,9 @@
     </header>
     <div class="container grow">
         <div class="full-width row main-row">
-            <!---------- COFFEE LIST / COLUMN 1 ---------->
+            <!---------- COLUMN 1: List of Coffees ---------->
             <div class="column coffee-roast-one" id="coffee-list"></div>
-            <!---------- COFFEE DROPDOWN / COLUMN 2 ---------->
+            <!---------- COLUMN 2 Search for Coffee / Add a Coffee ---------->
             <div class="column">
                 <form name= "roast-dropdown1" class="roast-dropdown1">
                     <label class="roast-label" for="roast1">Roast</label>
@@ -43,9 +43,11 @@
                         <option value="medium">medium</option>
                         <option value="dark">dark</option>
                     </select>
+
                     <label class="coffee-name" for="custom-coffee-name">Name</label>
                     <input class="coffee-name-input" type="text" id="custom-coffee-name">
-                    <input class="submit-btn" type="submit">
+
+                    <input class="submit-btn" id="bottom-submit-btn" type="submit">
                 </form>
             </div>
         </div>

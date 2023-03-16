@@ -19,28 +19,24 @@ let coffees = [
 ];
 
 let coffeeInput = document.querySelector('#coffee-name');
-let secondCoffeeInput = document.querySelector('#custom-coffee-name');
 let coffeeList = document.querySelector('#coffee-list');
 let topSubmitBtn = document.querySelector('#top-submit-btn');
 let selectedRoast = document.querySelector('#roast1');
-let secondSelectedRoast = document.querySelector('#roast2');
+let newRoast = document.querySelector('#roast2');
+let newCoffee = document.querySelector('#custom-coffee-name');
+let bottomSubmitBtn = document.querySelector('#bottom-submit-btn');
 
 
 // adds coffees to left column of screen
 coffeeList.innerHTML = renderCoffees(coffees);
 // Roast dropdown menu
 selectedRoast.addEventListener('change', updateCoffees);
-// Second Roast Dropdown Menu
-secondSelectedRoast.addEventListener('change', updateCoffees);
-
 // submit button for choosing a coffee
 topSubmitBtn.addEventListener('click', updateCoffees);
-
 // Coffee search input
-coffeeInput.addEventListener('keyup', coffeeSearch);
-// Second Coffee Search Input
-secondCoffeeInput.addEventListener('keyup', coffeeSearch);
-
+coffeeInput.addEventListener('keyup',  coffeeSearch);
+// submit button for adding new coffee
+bottomSubmitBtn.addEventListener('click', createNewCoffee);
 
 
 function renderCoffee(coffee) {
@@ -63,12 +59,11 @@ function renderCoffees(coffees) {
 function updateCoffees(e) {
     e.preventDefault(); // don't submit the form, we just want to update the data
     let roast = selectedRoast.value;
-    let secondRoast = secondSelectedRoast.value;
     let filteredCoffees = [];
     coffees.forEach(function(coffee) {
-        if (coffee.roast === roast || coffee.roast === secondSelectedRoast) {
+        if (coffee.roast === roast) {
             filteredCoffees.push(coffee);
-        }else if(roast === 'all' || roast === secondSelectedRoast) {
+        }else if(roast === 'all'){
             filteredCoffees.push(coffee);
         }
     });
@@ -78,105 +73,86 @@ function updateCoffees(e) {
 function coffeeSearch(e){
     e.preventDefault();
     let roast = selectedRoast.value;
-    let secondRoast = secondSelectedRoast.value;
-    if(roast === 'all' || secondRoast === 'all'){
+    if(roast === 'all'){
         allRoasts();
-    }else if(roast === 'light' || secondRoast === 'light'){
+    }else if(roast === 'light'){
         lightRoast();
-    }else if(roast === 'medium' || secondRoast === 'medium'){
+    }else if(roast === 'medium'){
         mediumRoast();
-    }else if(roast === 'dark' || secondRoast === 'dark'){
+    }else if(roast === 'dark'){
         darkRoast();
     }
 }
 
 function allRoasts() {
     let coffeeArr = [];
-    let coffeeArr2 = [];
     console.log(coffeeInput.value)
-    console.log(secondCoffeeInput.value);
     let input = (coffeeInput.value).toLowerCase();
-    let input2 = (secondCoffeeInput.value).toLowerCase();
 
     coffees.forEach(function (coffee) {
         if (coffee.name.toLowerCase().includes(input)) {
             coffeeArr.push(coffee);
         }
     });
-    coffees.forEach(function (coffee) {
-        if (coffee.name.toLowerCase().includes(input2)) {
-            coffeeArr2.push(coffee);
-        }
-    });
     coffeeList.innerHTML = renderCoffees(coffeeArr);
-    coffeeList.innerHTML = renderCoffees(coffeeArr2);
 }
 
 function lightRoast (){
     let coffeeArr = [];
-    let coffeeArr2 = [];
     let input = coffeeInput.value.toLowerCase();
-    let input2 = secondCoffeeInput.value.toLowerCase();
     coffees.forEach(function(coffee){
         if(coffee.name.toLowerCase().includes(input) && coffee.roast === 'light'){
             coffeeArr.push(coffee);
         }
     });
-    coffees.forEach(function(coffee){
-        if(coffee.name.toLowerCase().includes(input2) && coffee.roast === 'light'){
-            coffeeArr2.push(coffee);
-        }
-    });
     coffeeList.innerHTML = renderCoffees(coffeeArr);
-    coffeeList.innerHTML = renderCoffees(coffeeArr2);
 }
 
 function mediumRoast (){
     let coffeeArr = [];
-    let coffeeArr2 = [];
     let input = coffeeInput.value.toLowerCase();
-    let input2 = secondCoffeeInput.value.toLowerCase();
     coffees.forEach(function(coffee){
         if(coffee.name.toLowerCase().includes(input) && coffee.roast === 'medium'){
             coffeeArr.push(coffee);
         }
     });
-    coffees.forEach(function(coffee){
-        if(coffee.name.toLowerCase().includes(input2) && coffee.roast === 'medium'){
-            coffeeArr2.push(coffee);
-        }
-    });
     coffeeList.innerHTML = renderCoffees(coffeeArr);
-    coffeeList.innerHTML = renderCoffees(coffeeArr2);
 }
 
 function darkRoast (){
     let coffeeArr = [];
-    let coffeeArr2 = [];
     let input = coffeeInput.value.toLowerCase();
-    let input2 = secondCoffeeInput.value.toLowerCase();
     coffees.forEach(function(coffee){
         if(coffee.name.toLowerCase().includes(input) && coffee.roast === 'dark'){
             coffeeArr.push(coffee);
         }
     });
-    coffees.forEach(function(coffee){
-        if(coffee.name.toLowerCase().includes(input2) && coffee.roast === 'dark'){
-            coffeeArr2.push(coffee);
-        }
-    });
     coffeeList.innerHTML = renderCoffees(coffeeArr);
-    coffeeList.innerHTML = renderCoffees(coffeeArr2);
+}
+function createNewCoffee(e){
+    e.preventDefault();
+    let coffeeName = newCoffee.value;
+    let roast = newRoast.value;
+
+    let coffeeArr = coffeeName.split(" ");
+    let coffeeString = '';
+
+    // coffeeArr[i][0].toUppercase takes the first letter of the word and makes it uppercase
+    // coffeeArr[i].slice(1) + " " creates a new array without the first word deleted
+    for(let i = 0; i < coffeeArr.length; i++){
+        coffeeString += coffeeArr[i][0].toUpperCase() + coffeeArr[i].slice(1) + " ";
+    }
+    coffees.push({
+        id: coffees.length + 1,
+        name: coffeeString,
+        roast: roast
+    });
+
+    coffeeList.innerHTML = renderCoffees(coffees);
 }
 
-function searchCoffeesInput() {
-    let searchRoast = nameSelected.value.toUpperCase();
-    let filteredCoffees = [];
-    console.log(searchRoast);
-    coffees.forEach(function(coffee) {
-        if (coffee.name.toUpperCase().includes(searchRoast)) {
-            filteredCoffees.push(coffee);
-            console.log(filteredCoffees);
-        }
-    });
-    coffeeList.innerHTML = renderCoffees(filteredCoffees);
+
+
+
+
+

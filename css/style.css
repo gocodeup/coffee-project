@@ -5,12 +5,9 @@ body {
     padding: 25px 50px;
 }
 header {
-    display: flex;
-    justify-content: center;
     border-bottom: 1px solid #c5c5c5;
-    margin: 25px 50px;
+    margin: 0px 50px;
 }
-
 h1 {
     display: flex;
     margin: 10px 0px;
@@ -21,7 +18,7 @@ h1 {
     align-items: center;
 }
 .column.coffee-roast-one {
-    height: 500px;
+    height: 75vh;
     flex-wrap: wrap;
 }
 form {
@@ -33,8 +30,8 @@ form {
     padding-top: 15px;
     text-align: start;
 }
-.roast-dropdown select {
-    min-height: 35px;
+select {
+    min-height: 30px;
 }
 .coffee-name-input {
     min-height: 30px;
