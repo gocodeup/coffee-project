@@ -6,6 +6,9 @@
     <link rel="stylesheet" href="css/resets.css">
     <link rel="stylesheet" href="css/layout.css">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oxygen&display=swap" rel="stylesheet">
 </head>
 <body>
     <div class="page-wrapper">
@@ -16,22 +19,26 @@
         </header>
         <!-- MAIN SECTION -->
         <section class="container">
+
             <div class="row coffee-columns">
+                <div class="top-title Menu"><h2>Menu</h2></div>
                 <div id="coffees" class="column coffees">
                     <div class="coffee-wrapper">
+<!--                     this is where the coffees are popped                    -->
                         <h2>NAME</h2>
                         <p>ROAST</p>
                     </div>
                 </div>
+            </div>
+            <div class="row form-columns">
+                <div class="top-title filter-coffee"><h2>Filter Coffee</h2></div>
                 <div class="column forms-column">
                     <form class="search-coffees">
                         <div class="fieldset">
                             <legend><p><lable>Roast</lable></p></legend>
                             <div class="selection-wrapper">
-<!--                                <div class="dropdown-wrapper">-->
-<!--                                    <img src="img/dropdown-ing.png" alt="dropdown-img" class="dropdown">-->
-<!--                                </div>-->
                                 <select id="roast-selection" class="selection">
+<!--                                    this is where the drop down is -->
                                     <option>all</option>
                                     <option>light</option>
                                     <option>medium</option>
@@ -41,6 +48,7 @@
                         </div>
                         <div class="search-bar-wrapper">
                             <legend><p><lable>Coffee Name</lable></p></legend>
+<!--                            search bar here -->
                             <input id="name-selection" class="search coffee-search"  type="search">
                         </div>
                         <button id="submit" class="button coffee-submit">submit</button>
@@ -49,10 +57,8 @@
                         <div class="fieldset">
                             <legend><p><lable>Roast</lable></p></legend>
                             <div class="selection-wrapper">
-<!--                                <div class="dropdown-wrapper">-->
-<!--                                    <img src="img/dropdown-ing.png" alt="dropdown-img" class="dropdown">-->
-<!--                                </div>-->
                                 <select id="add-roast-selection" class="selection">
+<!--                                    this is the users add drop down-->
                                     <option>light</option>
                                     <option>medium</option>
                                     <option>dark</option>
@@ -61,6 +67,7 @@
                         </div>
                         <div class="search-bar-wrapper">
                             <legend><p><lable>Name</lable></p></legend>
+<!--                            user add search bar here -->
                             <input id="add-coffee-name" class="search add-coffee" type="text">
                         </div>
                         <button id='add-new-coffee' class="button coffee-submit">submit</button>
@@ -69,28 +76,6 @@
             </div>
         </section>
     </div>
-<!--    <form>-->
-<!--        <label for="roast-selection"></label>-->
-<!--        <select id="roast-selection">-->
-<!--            <option>light</option>-->
-<!--            <option>medium</option>-->
-<!--            <option>dark</option>-->
-<!--        </select>-->
-<!--        <input id="submit" type="submit" />-->
-<!--    </form>-->
-
-<!--    <table>-->
-<!--        <thead>-->
-<!--            <tr>-->
-<!--                <th>ID</th>-->
-<!--                <th>NAME</th>-->
-<!--                <th>ROAST</th>-->
-<!--            </tr>-->
-<!--        </thead>-->
-<!--        <tbody id="coffees"></tbody>-->
-<!--    </table>-->
-
-
 <script src="js/utils.js"></script>
 <script src="js/main.js"></script>
 </body>
