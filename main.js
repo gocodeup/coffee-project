@@ -1,7 +1,7 @@
 "use strict"
 let tbody = document.querySelector('.coffee');
 function renderCoffee(coffee) {
-    let html = '<div class="coffee">';
+    let html = '<div class="coffee coffeeStyle">';
     html += '<h2>' + coffee.name + '</h2>';
     html += '<p class="p2">' + coffee.roast + '</p>';
     html += '</div>';
