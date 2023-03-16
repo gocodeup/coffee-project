@@ -1,7 +1,8 @@
+(function(){
 "use strict"
 let tbody = document.querySelector('.coffee');
 function renderCoffee(coffee) {
-    let html = '<div class="coffee coffeeStyle">';
+    let html = '<div class="coffee zoom coffeeStyle">';
     html += '<h2>' + coffee.name + '</h2>';
     html += '<p class="p2">' + coffee.roast + '</p>';
     html += '</div>';
@@ -82,4 +83,6 @@ submitButton.addEventListener('click', function(event) {
     addNewCoffee(name, roast);
 });
 roastSelection.addEventListener('change', updateCoffees);
-coffeeName.addEventListener('keyup', searchCoffee)
+coffeeName.addEventListener('keyup', searchCoffee);
+
+})();

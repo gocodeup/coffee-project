@@ -1,6 +1,6 @@
 .page-wrapper {
     font-family: sans-serif;
-    background-image: url("images/coffee-background.webp");
+    background-image: url("../images/coffee-background.webp");
 
 }
 .coffeeStyle {
@@ -110,4 +110,18 @@ p.bold {
     background-color: #5C5B25;
     border-radius: 6px;
     box-shadow: -3px -3px 17px 2px black;
+}
+.zoom {
+    transition: transform .2s;
+}
+.zoom:hover {
+    transform: scale(1.5);
+    cursor: pointer;
+}
+.zoomBtn {
+    transition: transform .2s;
+}
+.zoomBtn:hover {
+    transform: scale(1.1);
+    cursor: pointer;
 }
