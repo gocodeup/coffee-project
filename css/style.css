@@ -4,7 +4,7 @@ hr {
 }
 
 .menu {
-    /*margin: 15px 0;*/
+
 }
 
 .coffee-name {
@@ -19,6 +19,8 @@ hr {
     gap: 10px;
     max-height: 450px;
     overflow: scroll;
+    border: 2px solid darkslategrey;
+    border-radius: 10px;
 }
 
 .coffee-card {
@@ -29,7 +31,6 @@ hr {
     gap: 10px;
     width: calc(50% - 5px);
     border-radius: 5px;
-    /*background-color: darkseagreen;*/
     background-image:url("/img/coffeecardbackground.jpeg");
     background-size: cover;
 
@@ -93,10 +94,6 @@ body    {
     width: 300px;
 }
 
-#caca {
-    flex-direction: column;
-
-}
 
 p {
     padding: 10px;
@@ -115,9 +112,15 @@ p {
 }
 
 .add-coffee-style {
-    /*border-radius: 50px;*/
     min-width: 50px;
     max-width: 250px;
     background-color: darkslategrey;
     color: wheat;
 }
+
+#forms-Wraps {
+    border: 2px solid darkslategrey;
+    border-radius: 40px;
+
+}
+
