@@ -3,42 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <title></title>
-    <link rel="stylesheet" href="layout.css">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 <!-- nav bar and first row-->
-    <div class="container headerContainer">
-        <div class="row justify-start">
-            <div class="column">
-                 <h1 class="storeName">Grumpy Dragons Coffee</h1>
+<div class="container headerContainer">
+    <div class="row justify-start">
+        <div class="column">
+            <h1 class="storeName">Grumpy Dragons Coffee</h1>
+        </div>
+        <div class="column navbar-nav">
+            <div class="nav-item">
+                <a href="#">Order Online</a>
             </div>
-                <div class="column navbar-nav">
-                    <div class="nav-item">
-                        <a href="#">Order Online</a>
-                    </div>
-                    <div class="nav-item">
-                        <a href="#">Locations</a>
-                    </div>
-                    <div class="nav-item">
-                        <a href="#">Contact Us</a>
-                    </div>
-                    <div class="nav-item">
-                        <a href="#">Account</a>
-                    </div>
-                </div>
+            <div class="nav-item">
+                <a href="#">Locations</a>
+            </div>
+            <div class="nav-item">
+                <a href="#">Contact Us</a>
+            </div>
+            <div class="nav-item">
+                <a href="#">Account</a>
+            </div>
         </div>
     </div>
+</div>
 
-<!-- jumbo tron image -->
-<!--    <div class="container jumbotronContainer">-->
-<!--        <div class="row">-->
-<!--            <div class="column">-->
-<!--                <img class="jumbo img-responsive" src="jumboimage.avif" alt="coffee and grounds. a coders life force">-->
-<!--            </div>-->
-<!--        </div>-->
-<!--    </div>-->
-<header class="container jumbotronContainer" style="background-image: url('jumboimage.avif'); background-size: cover; background-position: center center">
+<!--Hero picture and hero scene!-->
+<header class="container jumbotronContainer"
+        style="background-image: url('images/jumboimage.avif'); background-size: cover; background-position: center center">
     <div class="coffeeAd">
         <h1>Create Your own coffee concoctions</h1>
         <p>Add your own coffee to our list for quick access to you're preferred drink! </p>
@@ -46,36 +40,21 @@
     <a href="#menu" class="ViewMenu">See the Menu</a>
 </header>
 
-
+<!--Order menu starts/Middle portion of the page-->
 <div class="container onlineOrder">
     <h2>Place Online Order</h2>
     <div class="row">
-<!-- table-->
-<div class="column" id="coffees">
-<!--    <div class="ID">-->
-<!--        <h4 class="NAME"></h4>-->
-<!--        <p class="ROAST"></p>-->
-<!--    </div>-->
-<!--    <table>-->
-<!--        <thead>-->
-<!--        <tr>-->
-<!--            <th>ID</th>-->
-<!--            <th>NAME</th>-->
-<!--            <th>ROAST</th>-->
-<!--        </tr>-->
-<!--        </thead>-->
-<!--        <tbody id="coffees"></tbody>-->
-<!--    </table>-->
-
-</div>
+        <!-- Pulls in coffees!-->
+        <div class="column justify-center grow" id="coffees"></div>
 
 
-    <!-- form 1-->
-        <div class="column grow">
-            <div class="row formBorder max-width justify-right">
+        <!--forms start-->
+        <div class="column forms justify-center grow">
+            <!-- form 1-->
+            <div class="row formBorder max-width justify-center grow">
                 <form>
                     <h3>Roast</h3>
-<!--                    <label for="roast-selection"></label>-->
+                    <!--<labels for="roast-selection"></label>-->
                     <select id="roast-selection">
                         <option>all</option>
                         <option>light</option>
@@ -83,50 +62,52 @@
                         <option>dark</option>
                     </select>
                     <h3>Coffee Name</h3>
-                        <div class="search-wrapper">
-                            <label for="search">Coffee</label>
-                            <input type='search' id="search" data-search placeholder="Coffee!"><br>
-                        </div>
-                    <input class="thick button" id="submit" type="submit" />
+                    <div class="search-wrapper grow">
+                        <label for="search">Coffee</label>
+                        <input type='search' id="search" data-search placeholder="Coffee!"><br>
+                    </div>
+                    <input class="thick button " id="submit" type="submit"/>
 
                 </form>
             </div>
-<!-- form 2 s-->
-        <div class="row max-width justify-right">
-            <form>
-                <h2 class="headerAddCoffee">Add a Coffee</h2>
-                <h3>Roast</h3>
-                <label for="roast-selection2"></label>
-                <select id="roast-selection2">
-                    <option>light</option>
-                    <option>medium</option>
-                    <option>dark</option>
-                </select>
-                <h3 id="menu">Name</h3>
-                <label for="addCoffeeInput">Coffee</label>
-                <input type='search' id="addCoffeeInput" placeholder="Coffee!"><br>
-                <button class="thick button" id="addCoffeeSubmit" type="button" >Submit new coffee</button>
-            </form>
+            <!-- form 2 s-->
+            <div class="row max-width justify-center grow">
+                <form>
+                    <h2 class="headerAddCoffee">Add a Coffee</h2>
+                    <h3>Roast</h3>
+                    <label for="roastIntensity"></label>
+                    <select id="roastIntensity">
+                        <option>light</option>
+                        <option>medium</option>
+                        <option>dark</option>
+                    </select>
+                    <h3 id="menu">Name</h3>
+                    <label for="addCoffeeInput">Coffee</label>
+                    <input type='search' id="addCoffeeInput" placeholder="Coffee!"><br>
+                    <button class="thick button" id="addCoffeeSubmit" type="button">Submit new coffee</button>
+                </form>
+            </div>
         </div>
     </div>
 </div>
-</div>
 
-<footer class="container bottomOfPage">
-    <div class="row ">
-        <div class="column">
+
+<!--bottom of the page! LINKS!-->
+<footer class="container bottomOfPage grow">
+    <div class="row shrink">
+        <div class="column grow">
             <h4 class="bottomOfPage">Support</h4>
-                <a class="contactUsBottom">Careers</a>
-                <a class="contactUsBottom">Contact us</a>
-                <a class="contactUsBottom">Partnerships</a>
+            <a class="contactUsBottom">Careers</a>
+            <a class="contactUsBottom">Contact us</a>
+            <a class="contactUsBottom">Partnerships</a>
         </div>
-        <div class="column">
+        <div class="column grow">
             <h4 class="bottomOfPage">My Grumpy Dragon</h4>
             <a class="contactUsBottom">My Account</a>
             <a class="contactUsBottom">Mobile App</a>
             <a class="contactUsBottom">Gift Card Balance</a>
         </div>
-        <div class="column">
+        <div class="column grow">
             <h4 class="bottomOfPage">Resources</h4>
             <a class="contactUsBottom">Nutrition Facts</a>
             <a class="contactUsBottom">Privacy Policy</a>
@@ -134,6 +115,6 @@
         </div>
     </div>
 </footer>
-    <script src="main.js"></script>
+<script src="js/main.js"></script>
 </body>
 </html>

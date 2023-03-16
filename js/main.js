@@ -2,32 +2,13 @@
 
 function renderCoffee(coffee) {
     let html = `
-        <div class="coffee"> 
+        <div class="coffee "> 
         <h4 class="id">${coffee.id}</h4>
             <h4>${coffee.name}</h4> 
             <p>${coffee.roast}</p>
         </div>`
     return html;
 }
-
-// function renderCoffee(coffee) {
-//     let html =
-//         '<div class="coffee">';
-//     html += '<div class="ID">' + coffee.id + '</div>';
-//     html += '<h4>' + coffee.name + '</h4>';
-//     html += '<p>' + coffee.roast + '</p>';
-//
-//     return html;
-// }
-
-// function renderCoffee(coffee) {
-//     let html = `<div>
-// <h4>${coffee.name}</h4>
-// <p>${coffee.roast}</p>
-// </div>`
-// }
-
-
 
 function renderCoffees(coffees) {
     let html = '';
@@ -36,9 +17,6 @@ function renderCoffees(coffees) {
     for(let i = 0; i < coffees.length; i++) {
         html += renderCoffee(coffees[i]);
     }
-    // for(let i = coffees.length - 1; i >= 0; i--) {
-    //     html += renderCoffee(coffees[i]);
-    // }
     return html;
 }
 
@@ -109,8 +87,9 @@ input.addEventListener("keypress", function(event) {
     }
 });
 
+//Grabs the following classes from HTML
 let coffeeName = document.querySelector('#addCoffeeInput')
-let roastAddition = document.querySelector("#roast-selection2")
+let roastAddition = document.querySelector("#roastIntensity")
 let submitACoffee = document.querySelector('#addCoffeeSubmit')
 
 function addANewCoffee(){
