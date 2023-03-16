@@ -31,13 +31,20 @@
     </div>
 
 <!-- jumbo tron image -->
-    <div class="container jumbotronContainer">
-        <div class="row">
-            <div class="column">
-                <img class="jumbo img-responsive" src="jumboimage.avif" alt="coffee and grounds. a coders life force">
-            </div>
-        </div>
+<!--    <div class="container jumbotronContainer">-->
+<!--        <div class="row">-->
+<!--            <div class="column">-->
+<!--                <img class="jumbo img-responsive" src="jumboimage.avif" alt="coffee and grounds. a coders life force">-->
+<!--            </div>-->
+<!--        </div>-->
+<!--    </div>-->
+<header class="container jumbotronContainer" style="background-image: url('jumboimage.avif'); background-size: cover; background-position: center center">
+    <div class="coffeeAd">
+        <h1>Create Your own coffee concoctions</h1>
+        <p>Add your own coffee to our list for quick access to you're preferred drink! </p>
     </div>
+    <a href="#menu" class="ViewMenu">See the Menu</a>
+</header>
 
 
 <div class="container onlineOrder">
@@ -95,7 +102,7 @@
                     <option>medium</option>
                     <option>dark</option>
                 </select>
-                <h3>Name</h3>
+                <h3 id="menu">Name</h3>
                 <label for="addCoffeeInput">Coffee</label>
                 <input type='search' id="addCoffeeInput" placeholder="Coffee!"><br>
                 <button class="thick button" id="addCoffeeSubmit" type="button" >Submit new coffee</button>
@@ -108,22 +115,22 @@
 <footer class="container bottomOfPage">
     <div class="row ">
         <div class="column">
-            <h4 class="bottomOfPage">contact us</h4>
-                <p class="contactUsBottom">something here</p>
-                <p class="contactUsBottom">something here</p>
-                <p class="contactUsBottom">something here</p>
+            <h4 class="bottomOfPage">Support</h4>
+                <a class="contactUsBottom">Careers</a>
+                <a class="contactUsBottom">Contact us</a>
+                <a class="contactUsBottom">Partnerships</a>
         </div>
         <div class="column">
-            <h4 class="bottomOfPage">contact us</h4>
-            <p class="contactUsBottom">something here</p>
-            <p class="contactUsBottom">something here</p>
-            <p class="contactUsBottom">something here</p>
+            <h4 class="bottomOfPage">My Grumpy Dragon</h4>
+            <a class="contactUsBottom">My Account</a>
+            <a class="contactUsBottom">Mobile App</a>
+            <a class="contactUsBottom">Gift Card Balance</a>
         </div>
         <div class="column">
-            <h4 class="bottomOfPage">contact us</h4>
-            <p class="contactUsBottom">something here</p>
-            <p class="contactUsBottom">something here</p>
-            <p class="contactUsBottom">something here</p>
+            <h4 class="bottomOfPage">Resources</h4>
+            <a class="contactUsBottom">Nutrition Facts</a>
+            <a class="contactUsBottom">Privacy Policy</a>
+            <a class="contactUsBottom">Terms of Use</a>
         </div>
     </div>
 </footer>
