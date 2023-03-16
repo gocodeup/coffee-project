@@ -1,9 +1,15 @@
+.page-wrapper{
+    background-image: url("images/pexels-burst-374147.jpg");
+    background-size: cover;
+}
+
 body{
     font-family: sans-serif;
 }
 
 h1, h2, h3, h4, h5{
     font-family: sans-serif;
+    color: navajowhite;
 }
 
 .row{
@@ -20,18 +26,34 @@ section{
 
 }
 
-.column-coffee{
-    display: flex;
-    flex-wrap: wrap;
-    gap: 50px;
-}
-#coffees p, h1{
-    display: inline-block;
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 10px;
 }
 
-#coffees p{
-    color: #9FA4A8;
+.coffees {
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+    gap: 5px;
+    width: 200px;
+}
+
+.column-coffee{
+    min-width: 590px;
+}
+
+.grid-container p{
+    color: antiquewhite;
     padding-left: 10px;
+
+}
+#searchCoffees h4{
+    color: white;
+}
+#addCoffees h4{
+    color: black;
 }
 
 .column-form{
@@ -39,7 +61,8 @@ section{
 }
 
 input, select{
-    width: 680px;
+    max-width: 680px;
+    min-width: 680px;
 }
 
 input[type="submit"] {
@@ -64,9 +87,6 @@ input[type="submit"] {
     display: block;
 }
 
-.row {
-   padding: 0 82px;
-}
-
-.column-coffee {
+.column-coffee{
+   margin: 0 82px 0 0;
 }

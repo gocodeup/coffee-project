@@ -2,11 +2,10 @@
 
 function renderCoffee(coffee) {
     let html = '<div class="coffees">';
-    // html += '<td>' + coffee.id + '</td>';
     html += '<h1>' + coffee.name + '</h1>';
     html += '<p>' + coffee.roast + '</p>';
     html += '</div>';
-
+    console.log(html)
     return html;
 }
 
@@ -55,9 +54,36 @@ function updateCoffees(e) {
         }
 
     });
-    console.log(filteredCoffees);
+    // console.log(filtered Coffees);
     // then we run the renderCoffees function and set the html of tbody to equal its return value
     coffeeNames.innerHTML = renderCoffees(filteredCoffees);
+}
+
+function addCoffee(e){
+    e.preventDefault();
+    //give variable to user input
+    let coffeeInput = newCoffeeName.value;
+    console.log(coffeeInput);
+    //give variable to roast user chooses
+    let addedRoast = addRoast.value
+    console.log(addedRoast)
+    //Gives array formatting to the user's input and roast selection
+    let addedCoffee = { id: coffees.length + 1, name: coffeeInput, roast: addedRoast }
+    //log what the user typed
+    console.log(addedCoffee);
+    //if user doesn't give a coffee name, say "try again"
+    if (coffeeInput.value === ""){
+        alert("You didn't add a coffee before submitting :( Try again!")
+    } else {
+        //if they do type something, add it into the array with correct formatting
+        coffees.push(addedCoffee)
+        // coffeeInput.value = ""
+        console.log('Added a Coffee')
+        // renderCoffees(coffees)
+        const addedCoffeeHTML = renderCoffees(coffees);
+        console.log(addedCoffeeHTML);
+        coffeeNames.innerHTML = addedCoffeeHTML;
+    }
 }
 
 // from http://www.ncausa.org/About-Coffee/Coffee-Roasts-Guide
@@ -82,11 +108,13 @@ let coffees = [
 let coffeeNames = document.querySelector('#coffees');
 let submitButton = document.querySelector('#searchSubmit');
 let roastSelection = document.querySelector('#roast-selection');
-
+let addRoast = document.querySelector('#add-coffee-roast-selection');
+let submitCoffee = document.querySelector('#add-coffee-submit');
+let newCoffeeName = document.querySelector('#newName');
 coffeeNames.innerHTML = renderCoffees(coffees);
 
 submitButton.addEventListener('click', updateCoffees);
-
+submitCoffee.addEventListener('click', addCoffee);
 // every time there is a keyup event on the element with the id of coffeeName
 // trigger the search function
 document.querySelector("#coffeeName").addEventListener('keyup', search);
