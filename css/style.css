@@ -5,9 +5,8 @@ body {
     padding: 25px 50px;
 }
 header {
-    display: flex;
-    justify-content: center;
     border-bottom: 1px solid #c5c5c5;
+    margin: 0px 50px;
 }
 h1 {
     display: flex;
