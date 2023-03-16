@@ -17,7 +17,7 @@ body {
     padding: 25px 50px;
 }
 header {
-    border-bottom: 1px solid #c5c5c5;
+    border-bottom: 1px solid black;
     margin: 0px 50px;
 }
 h1 {
@@ -61,7 +61,7 @@ select {
 .add-coffee-label {
     display: flex;
     justify-content: center;
-    border-top: 1px solid #F2F2F2;
+    border-top: 1px solid black;
     padding-top: 25px;
     margin-bottom: 0px;
     margin-top: 30px;
@@ -70,6 +70,7 @@ select {
 }
 .coffee-type p {
     color: #A3A19F;
+    opacity: 75%;
 }
 
 #roast1, #roast2 {
