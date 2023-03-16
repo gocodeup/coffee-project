@@ -5,6 +5,12 @@
     background-repeat: no-repeat;
 }
 
+.right-col {
+    border: 1px solid #000;
+    border-radius: 6px;
+    background-color: rgba(0, 0, 0, 30%)
+}
+
 header h1 {
     font-size: 50px;
 }
@@ -17,12 +23,12 @@ body {
     padding: 25px 50px;
 }
 header {
-    border-bottom: 1px solid black;
-    margin: 0px 50px;
+    border-bottom: 1px solid #000;
+    margin: 0 50px;
 }
 h1 {
     display: flex;
-    margin: 10px 0px;
+    margin: 10px 0;
 }
 .coffee-type {
     display: flex;
@@ -36,6 +42,7 @@ h1 {
 form {
     display: flex;
     flex-direction: column;
+    margin: 10px;
 }
 .roast-label, .coffee-name {
     font-weight: bold;
@@ -58,19 +65,14 @@ select {
     font-size: 20px;
     text-align: center;
 }
-.add-coffee-label {
+.add-coffee-label, .search-coffee-label {
     display: flex;
     justify-content: center;
-    border-top: 1px solid black;
-    padding-top: 25px;
-    margin-bottom: 0px;
-    margin-top: 30px;
     font-size: 40px;
-    height: 70px;
 }
 .coffee-type p {
     color: #A3A19F;
-    opacity: 75%;
+    opacity: 65%;
 }
 
 #roast1, #roast2 {
@@ -96,3 +98,8 @@ select {
     font-size: 28px;
     border-bottom: 4px dotted black;
 }
+.coffee-type:hover {
+    transition: all 0.25s ease-in 0ms;
+    transform: scale(1.33);
+}
+

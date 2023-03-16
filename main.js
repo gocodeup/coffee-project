@@ -50,6 +50,7 @@
     }
 
     function renderCoffees(coffees) {
+        coffees = coffees.sort((a, b) => b.id - a.id);
         let html = '';
         for (let i = coffees.length - 1; i >= 0; i--) {
             html += renderCoffee(coffees[i]);
