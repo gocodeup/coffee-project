@@ -51,3 +51,7 @@ function arrayOfRandomNumbers(lengthOfArray){
     }
     return array;
 }
+
+function removeDuplicates(arr) {
+    return arr.filter((name, index) => arr.indexOf(name) === index);
+}

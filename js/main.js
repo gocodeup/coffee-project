@@ -17,7 +17,31 @@ let coffees = [
 	{id: 14, name: 'French', roast: 'dark'},
 ];
 
-coffees.push(JSON.parse(localStorage.getItem(`userCoffee`)));
+let userCoffees = JSON.parse(localStorage.getItem(`userCoffee`)) || [];
+
+// Remove any null elements from userCoffees array
+userCoffees = userCoffees.filter(function(coffee) {
+	return coffee !== null;
+});
+
+console.log(userCoffees)
+
+
+let test = userCoffees.concat(coffees);
+
+function removeDuplicateObjects(arr) {
+	return arr.filter(
+		(obj, index, self) =>
+			index ===
+			self.findIndex((t) => t.name === obj.name)
+	);
+}
+
+test = removeDuplicateObjects(test);
+
+
+console.log(test)
+
 function renderCoffee(coffee) {
     let html = '<div class="coffee-wrapper">';
     html += '<h2>' + coffee.name + '</h2>';
@@ -39,31 +63,53 @@ function Coffee(id, name, roast) {
     this.roast = roast;
 }
 
-
 function updateCoffees(e) {
     e.preventDefault();
     let selectedRoast = roastSelection.value;
     let searchedName = nameSelection.value;
     let filteredCoffees = [];
-    if (searchedName === ``) {
-        coffees.forEach(function (coffee) {
-            if (coffee.roast === selectedRoast) {
-                filteredCoffees.push(coffee);
-            }
-            if (selectedRoast === `all`) {
-                filteredCoffees.push(coffee);
-            }
-        });
-    }
-	if (searchedName !== ``) {
-		coffees.forEach(function (coffee) {
-			if (coffee.roast === selectedRoast && coffee.name.toLowerCase().includes(searchedName.toLowerCase())) {
-				filteredCoffees.push(coffee);
-			}
-			if (selectedRoast === `all` && coffee.name.toLowerCase().includes(searchedName.toLowerCase())) {
-				filteredCoffees.push(coffee);
-			}
-		});
+	if (typeof test === null) {
+		if (searchedName === ``) {
+			coffees.forEach(function (coffee) {
+				if (coffee.roast === selectedRoast) {
+					filteredCoffees.push(coffee);
+				}
+				if (selectedRoast === `all`) {
+					filteredCoffees.push(coffee);
+				}
+			});
+		}
+		if (searchedName !== ``) {
+			coffees.forEach(function (coffee) {
+				if (coffee.roast === selectedRoast && coffee.name.toLowerCase().includes(searchedName.toLowerCase())) {
+					filteredCoffees.push(coffee);
+				}
+				if (selectedRoast === `all` && coffee.name.toLowerCase().includes(searchedName.toLowerCase())) {
+					filteredCoffees.push(coffee);
+				}
+			});
+		}
+	} else {
+		if (searchedName === ``) {
+			test.forEach(function (coffee) {
+				if (coffee.roast === selectedRoast) {
+					filteredCoffees.push(coffee);
+				}
+				if (selectedRoast === `all`) {
+					filteredCoffees.push(coffee);
+				}
+			});
+		}
+		if (searchedName !== ``) {
+			test.forEach(function (coffee) {
+				if (coffee.roast === selectedRoast && coffee.name.toLowerCase().includes(searchedName.toLowerCase())) {
+					filteredCoffees.push(coffee);
+				}
+				if (selectedRoast === `all` && coffee.name.toLowerCase().includes(searchedName.toLowerCase())) {
+					filteredCoffees.push(coffee);
+				}
+			});
+		}
 	}
     tbody.innerHTML = renderCoffees(filteredCoffees);
 }
@@ -72,10 +118,12 @@ function updateCoffees(e) {
 
 function addCoffee(e){
 	e.preventDefault();
-	coffees.push(new Coffee(coffees.length + 1, addName.value, addRoastSelection.value));
-	let lastObject = coffees[coffees.length-1];
-	localStorage.setItem('userCoffee', JSON.stringify(lastObject));
-	updateCoffees(e);
+	let lastObject = new Coffee(coffees.length + userCoffees.length + 1, addName.value, addRoastSelection.value);
+	userCoffees.push(lastObject);
+	localStorage.setItem('userCoffee', JSON.stringify(userCoffees.concat(coffees)));
+	let newnew = userCoffees.concat(coffees)
+	newnew = removeDuplicateObjects(newnew)
+	tbody.innerHTML = renderCoffees(newnew);
 }
 
 
@@ -91,11 +139,10 @@ let addRoastSelection = document.querySelector('#add-roast-selection');
 let addNewCoffee = document.querySelector('#add-new-coffee');
 let addName = document.querySelector('#add-coffee-name');
 
-tbody.innerHTML = renderCoffees(coffees);
+tbody.innerHTML = renderCoffees(test);
 
 nameSelection.addEventListener('keyup', updateCoffees);
 roastSelection.addEventListener('change', updateCoffees);
 submitButton.addEventListener('click', updateCoffees);
 addNewCoffee.addEventListener("click", addCoffee);
 
-localStorage.setItem('userCoffees', `${coffees}`);
