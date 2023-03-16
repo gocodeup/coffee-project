@@ -153,7 +153,7 @@ section.container.customer-search-add .row {
     flex: 1;
     flex-direction: column;
     max-height: 100%;
-    margin: 8px;
+    margin: 6px;
     width: 100%;
     max-width: 90%;
 }
