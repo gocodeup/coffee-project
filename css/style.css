@@ -8,6 +8,9 @@ body{
     font-family: 'Oxygen', sans-serif;
 
 }
+.name {
+    max-width: unset;
+}
 header {
     border-bottom: #e4e4e4 1px solid;
 }
