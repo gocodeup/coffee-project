@@ -4,18 +4,21 @@ hr {
 }
 
 .menu {
-    margin: 15px 0;
+    /*margin: 15px 0;*/
 }
 
 .coffee-name {
-    font-size: 30px;
+    font-size: 25px;
     font-weight: bold;
+    color: wheat;
 }
 
 #coffees {
     display: flex;
     flex-wrap: wrap;
     gap: 10px;
+    max-height: 450px;
+    overflow: scroll;
 }
 
 .coffee-card {
@@ -26,11 +29,14 @@ hr {
     gap: 10px;
     width: calc(50% - 5px);
     border-radius: 5px;
-    background-color: #b9b9b9;
+    /*background-color: darkseagreen;*/
+    background-image:url("/img/coffeecardbackground.jpeg");
+    background-size: cover;
+
 }
 
 .coffee-card .roast {
-    color: #4d4d4d;
+    color: wheat;
 }
 
 .navigation {
@@ -51,4 +57,67 @@ hr {
 
 #submit {
     margin-top: 10px;
+    background-color: darkslategrey;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    -border-radius: 15px;
+    max-width: 100px;
+    min-width: 100px;
+    color: wheat;
+}
+
+h1 {
+    padding: 20px 10px 10px 10px;
+    color: wheat;
+    font-style: oblique;
+
+}
+
+.menu-items {
+    padding-top: 130px;
+
+}
+
+
+h1, p, .coffee-card {
+    font-family: Georgia, 'sans-serif';
+}
+
+body    {
+    background-image:url("../img/coffeebackpic.jpeg");
+    background-size: cover;
+
+}
+
+#forms-Wraps {
+    width: 300px;
+}
+
+#caca {
+    flex-direction: column;
+
+}
+
+p {
+    padding: 10px;
+}
+
+.border-menu {
+    border-radius: 50px;
+    min-width: 50px;
+    max-width: 150px;
+    background-color: darkslategrey;
+    color: wheat;
+
+}
+.menu-row{
+    padding: 10px;
+}
+
+.add-coffee-style {
+    /*border-radius: 50px;*/
+    min-width: 50px;
+    max-width: 250px;
+    background-color: darkslategrey;
+    color: wheat;
 }

@@ -12,7 +12,7 @@
         <header class="container">
             <div class="row align-center">
                 <div class="column align-center">
-                    <h1>Coffee!</h1>
+                    <h1>Café Tacvba</h1>
                 </div>
             </div>
         </header>
@@ -22,8 +22,13 @@
                 <div class="column menu-items">
                     <div id="coffees"></div>
                 </div>
-                <div class="column navigation grow">
-                    <p>Roast</p>
+                <div class="column navigation shrink" id="forms-Wraps">
+                    <div class="row justify-center menu-row">
+                        <div class="column align-center border-menu">
+                            <p>Roast</p>
+                        </div>
+                    </div>
+
                     <form>
                         <label for="roast-selection"></label>
                         <select class="drop-search" id="roast-selection">
@@ -33,11 +38,31 @@
                             <option>dark</option>
                         </select>
                     </form>
-                    <p>Coffee Name</p>
+
+                    <div class="row justify-center menu-row">
+                        <div class="border-menu column align-center" >
+                            <p>Coffee Name</p>
+                        </div>
+                    </div>
+
                     <label for="coffee-selection"></label>
                     <input type="text" id='coffee-selection'>
+
                     <hr>
-                    <p>Roast</p>
+
+                    <div class="row justify-center">
+                        <div class="add-coffee-style column align-center">
+                            <p> Add a Coffee Below! </p>
+                        </div>
+                    </div>
+
+                    <hr>
+
+                    <div class="row justify-center menu-row">
+                        <div class="border-menu column align-center">
+                            <p>Roast</p>
+                        </div>
+                    </div>
                     <form>
                         <label for="add-roast"></label>
                         <select class="drop-search" id="add-roast">
@@ -46,10 +71,17 @@
                             <option>dark</option>
                         </select>
                     </form>
-                    <p>Coffee Name</p>
-                    <label for="add-coffee"></label>
-                    <input type="text" id='add-coffee'>
-                    <input id="submit" type="submit">
+                    <div class="row justify-center menu-row">
+                        <div class="border-menu column align-center">
+                            <p>Coffee Name</p>
+                        </div>
+                    </div>
+                        <label for="add-coffee"></label>
+                        <input type="text" id='add-coffee'>
+                    <div class="row justify-center">
+                            <input id="submit" type="submit">
+                    </div>
+<!--                        <input id="submit" type="submit">-->
                 </div>
             </div>
         </div>
