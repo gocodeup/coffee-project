@@ -18,6 +18,31 @@ let coffees = [
     {id: 14, name: 'French', roast: 'dark'},
 ];
 
+let coffeeInput = document.querySelector('#coffee-name');
+let secondCoffeeInput = document.querySelector('#custom-coffee-name');
+let coffeeList = document.querySelector('#coffee-list');
+let topSubmitBtn = document.querySelector('#top-submit-btn');
+let selectedRoast = document.querySelector('#roast1');
+let secondSelectedRoast = document.querySelector('#roast2');
+
+
+// adds coffees to left column of screen
+coffeeList.innerHTML = renderCoffees(coffees);
+// Roast dropdown menu
+selectedRoast.addEventListener('change', updateCoffees);
+// Second Roast Dropdown Menu
+secondSelectedRoast.addEventListener('change', updateCoffees);
+
+// submit button for choosing a coffee
+topSubmitBtn.addEventListener('click', updateCoffees);
+
+// Coffee search input
+coffeeInput.addEventListener('keyup', coffeeSearch);
+// Second Coffee Search Input
+secondCoffeeInput.addEventListener('keyup', coffeeSearch);
+
+
+
 function renderCoffee(coffee) {
     let html = '<div class="row coffee-type">';
     html += '<h1>' + coffee.name + '</h1>';
@@ -34,46 +59,117 @@ function renderCoffees(coffees) {
     }
     return html;
 }
-// FIRST DROPDOWN MENU FUNCTION
+
 function updateCoffees(e) {
     e.preventDefault(); // don't submit the form, we just want to update the data
-    selectedRoast = selectedRoast.value;
-    nameSelected = nameSelected.value;
+    let roast = selectedRoast.value;
+    let secondRoast = secondSelectedRoast.value;
     let filteredCoffees = [];
-    if (nameSelected === ''); {
-        coffees.forEach(function(coffee) {
-            if (coffee.roast === selectedRoast) {
-                filteredCoffees.push(coffee);
-            }
-            if (selectedRoast === 'all') {
-                filteredCoffees.push(coffee);
-            }
-        });
-        coffeeList.innerHTML = renderCoffees(filteredCoffees);
-    }
+    coffees.forEach(function(coffee) {
+        if (coffee.roast === roast || coffee.roast === secondSelectedRoast) {
+            filteredCoffees.push(coffee);
+        }else if(roast === 'all' || roast === secondSelectedRoast) {
+            filteredCoffees.push(coffee);
+        }
+    });
+    coffeeList.innerHTML = renderCoffees(filteredCoffees);
 }
 
-// SECOND DROPDOWN MENU FUNCTION
-function updateCoffeesTwo(e) {
+function coffeeSearch(e){
     e.preventDefault();
-    selectedRoastTwo = selectedRoastTwo.value;
-    // nameSelected = nameSelected.value;
-    let filteredCoffees = [];
-    if (nameSelected === ''); {
-        coffees.forEach(function(coffee) {
-            if (coffee.roast === selectedRoastTwo) {
-                filteredCoffees.push(coffee);
-            }
-            if (selectedRoastTwo === 'all') {
-                filteredCoffees.push(coffee);
-            }
-        });
-        coffeeList.innerHTML = renderCoffees(filteredCoffees);
+    let roast = selectedRoast.value;
+    let secondRoast = secondSelectedRoast.value;
+    if(roast === 'all' || secondRoast === 'all'){
+        allRoasts();
+    }else if(roast === 'light' || secondRoast === 'light'){
+        lightRoast();
+    }else if(roast === 'medium' || secondRoast === 'medium'){
+        mediumRoast();
+    }else if(roast === 'dark' || secondRoast === 'dark'){
+        darkRoast();
     }
 }
 
-// FIRST SEARCH BAR FUNCTION
-function searchCoffees() {
+function allRoasts() {
+    let coffeeArr = [];
+    let coffeeArr2 = [];
+    console.log(coffeeInput.value)
+    console.log(secondCoffeeInput.value);
+    let input = (coffeeInput.value).toLowerCase();
+    let input2 = (secondCoffeeInput.value).toLowerCase();
+
+    coffees.forEach(function (coffee) {
+        if (coffee.name.toLowerCase().includes(input)) {
+            coffeeArr.push(coffee);
+        }
+    });
+    coffees.forEach(function (coffee) {
+        if (coffee.name.toLowerCase().includes(input2)) {
+            coffeeArr2.push(coffee);
+        }
+    });
+    coffeeList.innerHTML = renderCoffees(coffeeArr);
+    coffeeList.innerHTML = renderCoffees(coffeeArr2);
+}
+
+function lightRoast (){
+    let coffeeArr = [];
+    let coffeeArr2 = [];
+    let input = coffeeInput.value.toLowerCase();
+    let input2 = secondCoffeeInput.value.toLowerCase();
+    coffees.forEach(function(coffee){
+        if(coffee.name.toLowerCase().includes(input) && coffee.roast === 'light'){
+            coffeeArr.push(coffee);
+        }
+    });
+    coffees.forEach(function(coffee){
+        if(coffee.name.toLowerCase().includes(input2) && coffee.roast === 'light'){
+            coffeeArr2.push(coffee);
+        }
+    });
+    coffeeList.innerHTML = renderCoffees(coffeeArr);
+    coffeeList.innerHTML = renderCoffees(coffeeArr2);
+}
+
+function mediumRoast (){
+    let coffeeArr = [];
+    let coffeeArr2 = [];
+    let input = coffeeInput.value.toLowerCase();
+    let input2 = secondCoffeeInput.value.toLowerCase();
+    coffees.forEach(function(coffee){
+        if(coffee.name.toLowerCase().includes(input) && coffee.roast === 'medium'){
+            coffeeArr.push(coffee);
+        }
+    });
+    coffees.forEach(function(coffee){
+        if(coffee.name.toLowerCase().includes(input2) && coffee.roast === 'medium'){
+            coffeeArr2.push(coffee);
+        }
+    });
+    coffeeList.innerHTML = renderCoffees(coffeeArr);
+    coffeeList.innerHTML = renderCoffees(coffeeArr2);
+}
+
+function darkRoast (){
+    let coffeeArr = [];
+    let coffeeArr2 = [];
+    let input = coffeeInput.value.toLowerCase();
+    let input2 = secondCoffeeInput.value.toLowerCase();
+    coffees.forEach(function(coffee){
+        if(coffee.name.toLowerCase().includes(input) && coffee.roast === 'dark'){
+            coffeeArr.push(coffee);
+        }
+    });
+    coffees.forEach(function(coffee){
+        if(coffee.name.toLowerCase().includes(input2) && coffee.roast === 'dark'){
+            coffeeArr2.push(coffee);
+        }
+    });
+    coffeeList.innerHTML = renderCoffees(coffeeArr);
+    coffeeList.innerHTML = renderCoffees(coffeeArr2);
+}
+
+function searchCoffeesInput() {
     let searchRoast = nameSelected.value.toUpperCase();
     let filteredCoffees = [];
     console.log(searchRoast);
@@ -84,33 +180,3 @@ function searchCoffees() {
         }
     });
     coffeeList.innerHTML = renderCoffees(filteredCoffees);
-}
-
-// SECOND SEARCH BAR FUNCTION
-function searchCoffeesTwo() {
-    let searchRoastTwo = secondNameSelected.value.toUpperCase();
-    let filteredCoffees = [];
-    console.log(searchRoastTwo);
-    coffees.forEach(function(coffee) {
-        if (coffee.name.toUpperCase().includes(searchRoastTwo)) {
-            filteredCoffees.push(coffee);
-            console.log(filteredCoffees);
-        }
-    });
-    coffeeList.innerHTML = renderCoffees(filteredCoffees);
-}
-
-
-// let topSubmitBtn = document.querySelector('#top-submit-btn');
-let coffeeList = document.querySelector('#coffee-list');
-let nameSelected = document.querySelector('#coffee-name');
-let secondNameSelected = document.querySelector('#custom-coffee-name');
-let selectedRoast = document.querySelector('#roast1');
-let selectedRoastTwo = document.querySelector('#roast2');
-
-// EVENT LISTENERS
-coffeeList.innerHTML = renderCoffees(coffees);
-selectedRoast.addEventListener('change', updateCoffees);
-selectedRoastTwo.addEventListener('change', updateCoffeesTwo);
-nameSelected.addEventListener('keyup', searchCoffees);
-secondNameSelected.addEventListener('keyup', searchCoffeesTwo);

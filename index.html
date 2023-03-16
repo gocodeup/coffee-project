@@ -9,15 +9,14 @@
 </head>
 <body>
 <div class="page-wrapper">
-    <header class="container">
+    <header class="container justify-center">
         <h1>Coffee!</h1>
     </header>
-    <!---------- COFFEE DROPDOWN / COLUMN 1 ---------->
     <div class="container grow">
-        <div id="coffee-body" class="full-width row main-row">
-            <div class="column coffee-roast-one" id="coffee-list">
-            </div>
-            <!---------- COFFEE LIST / COLUMN 2 ---------->
+        <div class="full-width row main-row">
+            <!---------- COFFEE LIST / COLUMN 1 ---------->
+            <div class="column coffee-roast-one" id="coffee-list"></div>
+            <!---------- COFFEE DROPDOWN / COLUMN 2 ---------->
             <div class="column">
                 <form name= "roast-dropdown1" class="roast-dropdown1">
                     <label class="roast-label" for="roast1">Roast</label>
@@ -27,9 +26,10 @@
                         <option value="medium">medium</option>
                         <option value="dark">dark</option>
                     </select>
+
                     <label class="coffee-name" for="coffee-name">Coffee Name</label>
                     <input class="coffee-name-input" type="text" id="coffee-name">
-                    <p class="log"></p>
+
                     <input id="top-submit-btn" class="submit-btn" type="submit">
                 </form>
 
@@ -43,7 +43,7 @@
                         <option value="medium">medium</option>
                         <option value="dark">dark</option>
                     </select>
-                    <label class="coffee-name" for="coffee-name">Name</label>
+                    <label class="coffee-name" for="custom-coffee-name">Name</label>
                     <input class="coffee-name-input" type="text" id="custom-coffee-name">
                     <input class="submit-btn" type="submit">
                 </form>
