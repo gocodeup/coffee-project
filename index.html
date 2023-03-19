@@ -2,7 +2,6 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Coffee</title>
     <link rel="stylesheet" href="CSS/layout.css">
     <link rel="stylesheet" href="CSS/resets.css">
@@ -10,13 +9,17 @@
 </head>
 <body>
     <div class="page-wrapper">
+<!--        Stand-alone Banner Div outside of page container-->
+        <div class="banner"><h1>Coffee!</h1></div>
+<!--        page container-->
         <div class="container">
-            <div class="banner">
-                <h1>Coffee!</h1>
-            </div>
             <div class="row">
-                <div class="column" id="coffees"></div>
-                <div class="column">
+<!--                coffee populated here-->
+                <div class="popCoffee">
+                    <div id="coffees"></div>
+                </div>
+<!--                selection column-->
+                <div class="search">
                     <form>
                         <h4>Roast Selection</h4>
                         <label for="roast-selection"></label>
@@ -26,11 +29,11 @@
                             <option>medium</option>
                             <option>dark</option>
                         </select>
-                        <div>
-                            <h4>Coffee Name</h4>
-                            <label for="search"></label>
-                            <input id="search"  type="text" placeholder="Search">
-                        </div>
+                    <div>
+                        <h4>Coffee Name</h4>
+                        <label for="search"></label>
+                        <input id="search"  type="text" placeholder="Search">
+                    </div>
                     </form>
                 </div>
             </div>
