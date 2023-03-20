@@ -1,35 +1,67 @@
-table {
-    border-collapse: collapse;
-    margin: 15px 0;
-}
-
-td, th {
-    /*border: 1px solid black;*/
-    padding: 5px 10px;
-}
-
-#roast-selection {
-    width: 100%;
-}
-
-input#search {
-    width: 100%;
-}
-
-div#coffees {
-    border: 1px solid black;
+header{
+    font-weight: bolder;
+    font-size: 30px;
 }
 
 p {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: end;
+    font-size: large;
+    font-size: 20px;
+    font-weight: bold;
+    opacity: 70%;
+
+
 }
+
+h1 {
+    color: navajowhite;
+    text-align: center;
+    padding-top: 40px ;
+}
+
+h4 {
+    font-size: 20px;
+}
+
+
 div {
     row-gap: 10px;
+    display: inline;
 }
+
 div.card {
-    border: 1px solid black;
     padding: 5px;
     row-gap: 50px;
+    display: inline-flex;
+    width: 50vw;
+    background-color: navajowhite;
+    border-radius: 15px;
 }
+
+div.card header {
+    padding-right: 2rem;
+}
+
+div.column {
+    width: 50vw;
+}
+div.banner {
+    background-image: url("img/banner.img");
+    height: 20vh;
+    border-radius: 40px;
+
+}
+
+
+.container {
+    background-image: url("img/beanzzz.img");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+
+}
+
+
+
