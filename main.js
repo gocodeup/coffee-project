@@ -1,14 +1,14 @@
 "use strict"
 
 function renderCoffee(coffees) {
-    let html = '<div class="coffee"> ' + coffees.name + ' ' + coffees.roast + ' </div>';
+    let html = `<div class="coffee col-6"> <span class="coffeeName">${coffees.name}</span> <span class="coffeeRoast">${coffees.roast}</span> </div>`;
 
     return html;
 }
 
 function renderCoffees(coffees) {
     let html = '';
-    for(let i = coffees.length - 1; i >= 0; i--) {
+    for (let i = coffees.length - 1; i >= 0; i--) {
         html += renderCoffee(coffees[i]);
     }
     return html;
@@ -17,17 +17,15 @@ function renderCoffees(coffees) {
 // JavaScript code
 function searchCoffees() {
     let input = document.getElementById('searchbar').value
-    input=input.toLowerCase();
+    input = input.toLowerCase();
     let x = document.getElementsByClassName('coffee');
 
     for (let i = 0; i < x.length; i++) {
         if (!x[i].innerHTML.toLowerCase().includes(input)) {
-            x[i].style.display="none";
-        }
-        else {
-            x[i].style.display="list-item";
+            x[i].style.display = "none";
         }
     }
+
 }
 
 
@@ -35,7 +33,7 @@ function updateCoffees(e) {
     e.preventDefault(); // don't submit the form, we just want to update the data
     let selectedRoast = roastSelection.value;
     let filteredCoffees = [];
-    coffees.forEach(function(coffee) {
+    coffees.forEach(function (coffee) {
         if (coffee.roast === selectedRoast) {
             filteredCoffees.push(coffee);
         }
