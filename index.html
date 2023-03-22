@@ -11,52 +11,61 @@
 
     <hr>
 <!--SELECT A COFFEE-->
+
     <div class="container text-center">
         <div class="row">
-            <div class="selectors col-6">
-                <form>
-                    <label for="roast-selection"></label>
-                    <select id="roast-selection">
-                        <option>all</option>
-                        <option>light</option>
-                        <option>medium</option>
-                        <option>dark</option>
-                    </select>
-                    <input id="submit" type="submit" />
+            <div class="col-6">
+                <div class="selectors">
+                    <form>
+                        <label for="roast-selection"></label>
+                        <select id="roast-selection">
+                            <option>all</option>
+                            <option>light</option>
+                            <option>medium</option>
+                            <option>dark</option>
+                        </select>
+                        <input id="submit" type="submit" />
 
-                    <label for="roast-selection"></label>
-                    <input id="search" />
-                </form>
+                        <label for="roast-selection"></label>
+                        <input id="search">
 
-                <!--ADD A COFFEE-->
-                <form>
-                    <label for="add-selection"></label>
-                    <select id="add-selection">
-                        <option>light</option>
-                        <option>medium</option>
-                        <option>dark</option>
-                    </select>
-                    <input id="submit" type="submit" />
+                    </form>
 
-                    <label for="roast-selection"></label>
-                    <input id="search" />
-                </form>
+                    <!--ADD A COFFEE-->
+                    <form>
+                        <label for="add-selection"></label>
+                        <select id="add-selection">
+                            <option>light</option>
+                            <option>medium</option>
+                            <option>dark</option>
+                        </select>
+                        <input id="submit" type="submit" />
+
+                        <label for="roast-selection"></label>
+                        <input id="search">
+                    </form>
+
+                </div>
             </div>
+            <div class="col-6">
+                <div class="coffees">
+                    <table>
+                        <thead>
+                        <tr>
+                            <!--                        <th>ID</th>-->
+                            <!--                        <th>NAME</th>-->
+                            <!--                        <th>ROAST</th>-->
+                        </tr>
+                        </thead>
+                        <tbody id="coffees"></tbody>
+                    </table>
+                </div>
 
-            <div class="coffees col-6">
-                <table>
-                    <thead>
-                    <tr>
-                        <th>ID</th>
-                        <th>NAME</th>
-                        <th>ROAST</th>
-                    </tr>
-                    </thead>
-                    <tbody id="coffees"></tbody>
-                </table>
             </div>
         </div>
     </div>
+
+
 
 
 
