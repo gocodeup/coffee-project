@@ -11,3 +11,12 @@ td, th {
 h1 {
     text-align: center;
 }
+body{
+    background-image: url("/img/gunsandcoffee2.jpg");
+
+
+}
+
+* {
+    font-family: 'Zeyada', cursive;
+}

@@ -3,8 +3,8 @@
 function renderCoffee(coffee) {
     var html = '<div class="coffee row">';
     // html += '<td>' + coffee.id + '</td>';
-    html += '<h3 class="col-6">' + coffee.name + '</h3>';
-    html += '<p class="col-6">' + coffee.roast + '</p>';
+    html += '<h3 class="col-3">' + coffee.name + '</h3>';
+    html += '<p class="col-3">' + coffee.roast + '</p>';
     html += '</div>';
 
     return html;
@@ -12,7 +12,7 @@ function renderCoffee(coffee) {
 
 function renderCoffees(coffees) {
     var html = '';
-    for (var i = coffees.length - 1; i >= 0; i--) {
+    for (let i = 0; i < coffees.length; i++) {
         html += renderCoffee(coffees[i]);
     }
     return html;
@@ -47,7 +47,6 @@ var coffees = [
     {id: 13, name: 'Italian', roast: 'dark'},
     {id: 14, name: 'French', roast: 'dark'},
 ];
-
 
 
 var tbody = document.querySelector('#coffees');
