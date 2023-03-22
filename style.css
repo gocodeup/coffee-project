@@ -1,9 +1,20 @@
+body{
+    margin: 20px;
+}
 table {
+
     border-collapse: collapse;
     margin: 15px 0;
+
+
 }
 
 td, th {
     border: 1px solid black;
     padding: 5px 10px;
+}
+h1 {
+    text-align: center;
+    font-size: 50px;
+    margin-bottom: 0;
 }
