@@ -2,15 +2,44 @@ h1{
     display: flex;
     justify-content: center;
     font-size: 50px;
+
+}
+.row{
+    display: flex;
+    flex-direction: column;
+}
+
+#submit{
+    display: flex;
+    box-sizing: content-box;
+    width: 50%;
+    background-color: blue;
+    color: white;
+}
+#search{
+    display: flex;
+    box-sizing: content-box;
+    width: 50%;
+}
+#roast-selection{
+    display: flex;
+    box-sizing: content-box;
+    width: 50%;
+}
+#add-selection{
+    display: flex;
+    box-sizing: content-box;
+    width: 50%;
 }
 
 
 table {
     border-collapse: collapse;
     margin: 15px 0;
+    border: none;
 }
 
 td, th {
-    border: 1px solid black;
+    border: none;
     padding: 5px 10px;
 }
