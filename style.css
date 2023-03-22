@@ -1,34 +1,55 @@
+
 h1{
     display: flex;
     justify-content: center;
     font-size: 50px;
-
 }
-
-.row{
+#myInput{
+    width: 100%;
+}
+.submitBtn{
+    width: 50%;
+    background-color: lightblue;
+}
+.coffee{
     display: flex;
-    flex-direction: column;
+    text-align: center;
 }
+.coffees{
+display: flex;
+}
+p{
+    display: flex;
+    align-items: center;
+    padding-left: 10px;
+}
+
+
+/*.selectors{*/
+/*  display: flex;*/
+/*    justify-content: flex-end;*/
+/*}*/
+/*form{*/
+/*    display: flex;*/
+/*    justify-content: flex-end;*/
+/*}*/
+
 
 #submit{
-    display: flex;
     box-sizing: content-box;
     width: 50%;
     background-color: blue;
     color: white;
 }
 #search{
-    display: flex;
     box-sizing: content-box;
     width: 50%;
 }
 #roast-selection{
-    display: flex;
     box-sizing: content-box;
     width: 50%;
 }
 #add-selection{
-    display: flex;
     box-sizing: content-box;
     width: 50%;
 }
