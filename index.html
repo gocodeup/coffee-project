@@ -12,8 +12,11 @@
 <hr>
 <!--SELECT A COFFEE-->
 
+
 <div class="selectors">
-    <form>
+    <div class="row">
+        <div class="col-4">
+        <form class="1">
         <label for="roast-selection"></label>
         <select id="roast-selection">
             <option>all</option>
@@ -29,7 +32,7 @@
     </form>
 
     <!--ADD A COFFEE-->
-    <form>
+    <form class="2">
         <label for="add-selection"></label>
         <select id="add-selection">
             <option>light</option>
@@ -40,20 +43,25 @@
 
         <label for="roast-selection"></label>
         <input id="search">
-    </form>
+        </form>
+        </div>
+    </div>
 </div>
-
 <div class="coffees">
+    <div class="row">
+        <div class="col-8">
     <table>
         <thead>
         <tr>
-            <th>ID</th>
-            <th>NAME</th>
-            <th>ROAST</th>
-        </tr>
-        </thead>
-        <tbody id="coffees"></tbody>
-    </table>
+<!--            <th>ID</th>-->
+<!--            <th>NAME</th>-->
+<!--            <th>ROAST</th>-->
+            </tr>
+            </thead>
+            <tbody id="coffees"></tbody>
+            </table>
+        </div>
+    </div>
 </div>
 
 
