@@ -1,12 +1,4 @@
-table {
-    border-collapse: collapse;
-    margin: 15px 0;
-}
 
-td, th {
-    border: 1px solid black;
-    padding: 5px 10px;
-}
 h1 {
     text-align: center;
 }
@@ -17,13 +9,6 @@ hr {
 h2 {
     text-align: center;
     margin: 25px;
-}
-table{
-    display: flex;
-
-}
-thead{
-    display: none;
 }
 
 form {
@@ -40,8 +25,17 @@ form {
     flex-direction: column;
 }
 
-#submit{
-    display:flex;
+#submit {
+    display: flex;
     justify-content: flex-end;
     margin-top: 1rem;
     margin-bottom: 1rem;
+}
+#coffees{
+/*display: flex;*/
+/*flex-wrap: wrap-reverse;*/
+
+
+
+
+}
