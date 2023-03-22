@@ -1,20 +1,80 @@
 body{
-    margin: 20px;
+    margin: 0;
+    font-family: 'Nunito', sans-serif;;
+    font-weight: bold;
+    width: 100%;
 }
 table {
 
     border-collapse: collapse;
     margin: 15px 0;
 
-
 }
-
 td, th {
     border: 1px solid black;
     padding: 5px 10px;
+
+}
+td:first-child{
+    display: none;
+}
+td:nth-child(2){
+    font-size: 30px;
+}
+td:last-child{
+    font-size: 20px;
+    color: lightgrey;;
 }
 h1 {
     text-align: center;
     font-size: 50px;
     margin-bottom: 0;
+}
+h3 {
+    text-align: center;
+    margin: 0;
+}
+.idSection {
+    display: none;
+}
+hr{
+    border-color: red; !important;
+    border-width: 3px;
+    max-width: 100%;
+}
+select{
+    width: 100%;
+    height: 40px;
+    border-radius: 10px;
+    padding-left: 10px;
+    box-shadow: 5px 10px 8px dodgerblue;
+    margin: 10px 0;
+
+}
+#search {
+    width: 100%;
+    height: 40px;
+    border-radius: 10px;
+    padding: 10px;
+    box-shadow: 5px 10px 8px dodgerblue;
+
+}
+#addName{
+    width: 100%;
+    height: 40px;
+    border-radius: 10px;
+    padding: 10px;
+    box-shadow: 5px 10px 8px dodgerblue;
+}
+.button{
+   width: 100%;
+    margin: 14px 0;
+    box-shadow: 5px 10px 8px dodgerblue;
+}
+label{
+    margin: 10px 0 0 5px;
+}
+.rightSide{
+    width: 100%;
+    padding-left: 30px;
 }
