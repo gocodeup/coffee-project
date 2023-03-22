@@ -1,0 +1,25 @@
+*{
+    font-family: 'Raleway', sans-serif;
+}
+
+h1{
+    text-align: center;
+    color: lightgray;
+    font-size: 60px;
+    margin-bottom: 5px;
+}
+
+body{
+    background-image: url("IMG/coffee wallpaper.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
+}
+
+.coffeeName{
+    font-size: 24px;
+}
+
+.coffeeRoast{
+    color: tan;
+}
