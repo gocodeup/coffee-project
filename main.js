@@ -1,3 +1,5 @@
+<<<<<<< HEAD
+=======
 "use strict"
 
 function renderCoffee(coffee) {
@@ -55,8 +57,4 @@ var roastSelection = document.querySelector('#roast-selection');
 tbody.innerHTML = renderCoffees(coffees);
 
 submitButton.addEventListener('click', updateCoffees);
-
-let light = document.getElementsByClassName("all light");
-document.getElementById("submit").addEventListener("click", function (){
-    light.style.display = "none"
-})
+>>>>>>> da0348076a3a2fa2bc5120f26a4fabc5f9ccfd77
