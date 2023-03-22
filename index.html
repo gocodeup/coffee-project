@@ -8,49 +8,73 @@
           integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 </head>
 <body>
-<h1>Coffee!</h1>
-<label for="Roast1">Roast</label>
-<select id="Roast1" class="form-control">
-    <option>All</option>
-    <option>Light</option>
-    <option>Medium</option>
-    <option>Dark</option>
-</select>
+<h1 class="text-center">Coffee!</h1>
 
-<form>
-    <div class="form-group">
-        <label for="exampleInputPassword1">Coffee Name</label>
-        <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Coffee Name">
+<div class="container">
+    <div class="row">
+
+        <div class="col">
+
+            <table>
+                <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>NAME</th>
+                    <th>ROAST</th>
+                </tr>
+                </thead>
+                <tbody id="coffees"></tbody>
+            </table>
+        </div>
+
+
+        <div class="col">
+
+
+            <form>
+                <label for="Roast1">Roast</label>
+                <select id="Roast1" class="form-control">
+                    <option>All</option>
+                    <option>Light</option>
+                    <option>Medium</option>
+                    <option>Dark</option>
+                </select>
+
+                <div class="form-group">
+                    <label for="exampleInputPassword1">Coffee Name</label>
+                    <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Coffee Name">
+                </div>
+                <button type="submit" class="btn btn-primary button">Submit</button>
+
+                <hr>
+
+                <h2 class="text-center mt-4">Add a Coffee</h2>
+
+                <label for="Roast2">Roast</label>
+                <select id="Roast2" class="form-control">
+                    <option>Light</option>
+                    <option>Medium</option>
+                    <option>Dark</option>
+                </select>
+
+                <div class="form-group">
+                    <label for="exampleInputPassword1">Coffee Name</label>
+                    <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Coffee Name">
+                </div>
+                <button type="submit" class="btn btn-primary button">Submit</button>
+
+            </form>
+
+
+        </div>
+
     </div>
-    <button type="submit" class="btn btn-primary">Submit</button>
-</form>
 
-<label for="Roast2">Roast</label>
-<select id="Roast2" class="form-control">
-    <option>Light</option>
-    <option>Medium</option>
-    <option>Dark</option>
-</select>
+</div>
 
-<form>
-    <div class="form-group">
-        <label for="exampleInputPassword1">Coffee Name</label>
-        <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Coffee Name">
-    </div>
-    <button type="submit" class="btn btn-primary">Submit</button>
-</form>
 
-<table>
-    <thead>
-    <tr>
-        <th>ID</th>
-        <th>NAME</th>
-        <th>ROAST</th>
-    </tr>
-    </thead>
-    <tbody id="coffees"></tbody>
-</table>
+<script src="main.js">
 
-<script src="main.js"></script>
+</script>
 </body>
 </html>
