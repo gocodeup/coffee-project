@@ -16,12 +16,24 @@ let coffees = [
     {id: 13, name: 'Italian', roast: 'dark'},
     {id: 14, name: 'French', roast: 'dark'},
 ];
+
+coffees.sort(function(a, b) {
+    if (a.id > b.id) {
+        return -1;
+    } else if (a.id < b.id) {
+        return 1;
+    } else {
+        return 0;
+    }
+});
+console.log(coffees);
 function renderCoffee(coffee) {
-    let html = '<tr class="coffee">';
-    html += '<td>' + coffee.id + '</td>';
-    html += '<td>' + coffee.name + '</td>';
-    html += '<td>' + coffee.roast + '</td>';
-    html += '</tr>';
+    let html = '<ul class="coffee">';
+    html += '<li>' + coffee.id + '</li>';
+    html += '<li>' + coffee.name + '</li>';
+    html += '<li>' + coffee.roast + '</li>';
+    html += '</ul>';
+
     return html;
 }
 function renderCoffees(coffees) {
@@ -29,7 +41,6 @@ function renderCoffees(coffees) {
     for(let i = coffees.length -1; i >= 0; i--) {
         html += renderCoffee(coffees[i]);
     }
-    console.log(coffees)
     return html;
 }
 let roastSelection = document.getElementById('roast-selection');
@@ -64,18 +75,7 @@ searchBox.addEventListener('keyup', function searchCoffees() {
 
 let tbody = document.getElementById('coffees');
 tbody.innerHTML = renderCoffees(coffees);
-
-
-//let addCoffee = document.getElementById('createCoffee');
-// function addCoffees (e){
-//     e.preventDefault();
-//     let newCoffee = {
-//         id: coffees.length +1,
-//         name: addCoffeeName.value,
-//         roast: addCoffeeRoast.value,
-//     }
-//     addCoffee.addEventListener('submit', addCoffees);
-// }
+// <-------------------------------------------Coffee Form-------------------------------------------------------->
 const form = document.getElementById('createCoffee');
 form.addEventListener('submit', function (event) {
     event.preventDefault();
@@ -87,4 +87,17 @@ form.addEventListener('submit', function (event) {
     console.log(coffeeRoast);
     coffees[count] = {id: (coffees.length) +1 , name: coffeeName, roast: coffeeRoast};
     form.reset();
+    coffees.sort(function(a, b) {
+        if (a.roast < b.roast) {
+            return -1;
+        } else if (a.roast > b.roast) {
+            return 1;
+        } else {
+            return 0;
+        }
+    });
+    let tbody = document.getElementById('coffees');
+    tbody.innerHTML = renderCoffees(coffees);
 });
+
+
