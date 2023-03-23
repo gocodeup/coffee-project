@@ -47,7 +47,6 @@ var coffees = [
     {id: 13, name: 'Italian', roast: 'dark'},
     {id: 14, name: 'French', roast: 'dark'},
 ];
-
 // reference selected roast
 // reference the name they input
 // add id for new coffee
@@ -65,9 +64,12 @@ function addNewCoffee (input) {
     let addRoast = addNewRoast.value.toString();
     input = {id: addID, name: addName, roast: addRoast};
     coffees.push(input);
-    console.log(coffees);
+    console.log(typeof coffees);
     tbody.innerHTML= renderCoffees(coffees);
+
+    localStorage.setItem('newCoffees', JSON.stringify(coffees));
 }
+
 
 addCoffeeButton.addEventListener('click', addNewCoffee)
 
