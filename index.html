@@ -10,7 +10,20 @@
 <h1>Coffee!</h1>
 <hr>
 <!--these are our forms-->
-<form>
+<div class="container">
+<div class="row">
+  <div class="card" style="width: 50%;">
+    <div class="card-body">
+      <div class="col-6 coffee1">
+            <div class="coffeerow">
+                <div id="coffees"></div>
+            </div>
+      </div>
+    </div>
+  </div>
+<!-------------Form 1------------->
+     <div class="col-6">
+  <form>
     <label for="roast-selection">Roast</label>
     <select id="roast-selection" aria-label="Default select example">
         <option selected></option>
@@ -26,9 +39,7 @@
     <input id="submit" type="submit" />
     <!--        </div>-->
 </form>
-
-
-
+<!-------------Form 2------------->
 <form>
     <h2>Add a Coffee</h2>
 
@@ -47,83 +58,19 @@
     </div>
     <input id="submit2" type="submit" />
 </form>
-<!--    <div class="input-group">-->
+    </div>
+<!------------------coffee section----------------->
+<!--        <div class="col">-->
+<!--<div class="coffeerow">-->
+<!--    <div id="coffees"></div>-->
+<!--</div>-->
+<!--        </div>-->
 
-<!--    </div>-->
-
-<!--<table class="col-6">-->
-<!--    <thead>-->
-<!--    <tr class="coffee">-->
-<!--        <td>Light City</td>-->
-<!--        <td>Light</td>-->
-<!--    </tr>-->
-<!--    <tr class="coffee">-->
-<!--        <td>Half City</td>-->
-<!--        <td>Light</td>-->
-<!--    </tr>-->
-<!--    <tr class="coffee">-->
-<!--        <td>Cinnamon</td>-->
-<!--        <td>Light</td>-->
-<!--    </tr>-->
-<!--    <tr class="coffee">-->
-
-<!--        <td>City</td>-->
-<!--        <td>Medium</td>-->
-<!--    </tr>-->
-<!--    <tr class="coffee">-->
-<!--        <td>American</td>-->
-<!--        <td>Medium</td>-->
-<!--    </tr>-->
-<!--    <tr class="coffee">-->
-
-<!--        <td>Breakfast</td>-->
-<!--        <td>Medium</td>-->
-<!--    </tr>-->
-<!--    <tr class="coffee">-->
-<!--        <td>High</td>-->
-<!--        <td>Dark</td>-->
-<!--    </tr>-->
-<!--    <tr class="coffee">-->
-<!--       <td>Continental</td>-->
-<!--       <td>Dark</td>-->
-<!--   </tr>-->
-<!--    <tr class="coffee">-->
-<!--        <td>New Orleans</td>-->
-<!--        <td>Dark</td>-->
-<!--    </tr>-->
-<!--    <tr class="coffee">-->
-<!--        <td>European</td>-->
-<!--        <td>Dark</td>-->
-<!--    </tr>-->
-<!--    <tr class="coffee" >-->
-<!--        <td>Espresso</td>-->
-<!--        <td>Dark</td>-->
-<!--    </tr>-->
-<!--    <tr class="coffee">-->
-<!--            <td>Viennese</td>-->
-<!--            <td>Dark</td>-->
-<!--    </tr>-->
-<!--    <tr class="coffee">-->
-
-<!--            <td>Italian</td>-->
-<!--            <td>Dark</td>-->
-<!--   </tr>-->
-<!--   <tr class="coffee">-->
-<!--       <td>French</td>-->
-<!--       <td>Dark</td>-->
-<!--   </tr>-->
-<!--    </thead>-->
-<!--</table>-->
-
-<div class="col-6">
-    <div>
-        <div id="coffees" ></div>
+<!---------------Mandatory Closing------------>
+  </div>
 </div>
-
 <!--<tbody id="coffees"></tbody>-->
-
 <script src="main.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
-
 </body>
 </html>

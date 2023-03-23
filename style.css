@@ -1,41 +1,5 @@
-
-h1 {
-    text-align: center;
-}
-hr {
-    border: .5px solid gray;
-
-}
-h2 {
-    text-align: center;
-    margin: 25px;
+.row{
+    height: 25px;
 }
 
-form {
-    display: flex;
-    justify-content: flex-end;
-    flex-direction: column;
-    margin-right: 25px;
-    margin-left: 50%;
-    padding: 15px;
-}
-.form-outline{
-    display: flex;
-    justify-content: flex-end;
-    flex-direction: column;
-}
 
-#submit {
-    display: flex;
-    justify-content: flex-end;
-    margin-top: 1rem;
-    margin-bottom: 1rem;
-}
-#coffees{
-/*display: flex;*/
-/*flex-wrap: wrap-reverse;*/
-
-
-
-
-}
