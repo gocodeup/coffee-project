@@ -8,13 +8,12 @@ body{
     background-image: url("https://club.atlascoffeeclub.com/wp-content/uploads/2020/11/cup-of-coffee-on-black-scaled.jpg");
     background-repeat: no-repeat;
     background-size: 120%;
-
 }
 
 
 .p{
     font-size: 50px;
-    color: black;
+    color: #af7f72;
     text-align: center;
     font-weight: bold;
     width: 95%;
@@ -60,16 +59,17 @@ h5{
     display: flex;
     align-self: center;
     width: 90%;
+    color: #af7f72;
 }
 h2{
     width: 100%;
     padding: 5px;
-    color: yellow;
+    color: #995320;
 }
 
 p{
     width: 30%;
-    color: orange;
+    color: #8c8b94 ;
     padding-bottom: 15px;
     padding-left: 10px;
     /*background-color: white;*/
@@ -79,7 +79,11 @@ p{
     display: flex;
     align-self: center;
     width: 90%;
-    margin: 20px 5px 20px 20px;
+    margin: 20px;
+    background-color: #af7f72;
+}
+.hr1{
+    background-color: #af7f72;
 }
 
 #submit{
@@ -88,7 +92,7 @@ p{
     align-items: center;
     justify-content: center;
     width: 90%;
-    background-color: blue;
+    background-color: #8c8b94 ;
     color: white;
     margin: 5px;
     border-radius: 5px;
@@ -99,10 +103,10 @@ p{
     display: flex;
     align-self: center;
     width: 90%;
-    background-color: blue;
     color: white;
     margin: 5px;
     border-radius: 5px;
+    background-color: #995320 ;
 }
 #newCoffee{
     display: flex;
@@ -111,15 +115,22 @@ p{
     margin: 5px;
     border-radius: 5px;
     height: 30px;
+    background-color: #995320;
 }
-#search{
+#search {
     display: flex;
     align-self: center;
     width: 90%;
     margin: 5px;
     border-radius: 5px;
     height: 30px;
+    background-color: #995320 ;
 }
+::placeholder{
+    color: black;
+
+}
+
 #roast-selection{
     display: flex;
     align-self: center;
@@ -127,6 +138,7 @@ p{
     margin: 5px;
     border-radius: 5px;
     height: 30px;
+    background-color: #995320 ;
 }
 #add-selection{
     display: flex;
@@ -135,10 +147,11 @@ p{
     margin: 5px;
     border-radius: 5px;
     height: 30px;
+    background-color: #995320 ;
 }
 
 .h1 {
-    color: black;
+    color: #af7f72;
     text-align: center;
     font-weight: bold;
     width: 95%;
