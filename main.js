@@ -46,10 +46,10 @@ function updateCoffees(e) {
 let userInput = document.getElementById("search");
 
 userInput.addEventListener('keyup', function () {
-    let searchBoxInput = userInput.value;
+    let searchBoxInput = userInput.value.toLowerCase(); // convert searchBoxInput to lowercase
     let filteredCoffees = [];
     for(let i = 0; i < coffees.length; i++){
-        if(coffees[i].name.includes(searchBoxInput))
+        if(coffees[i].name.toLowerCase().includes(searchBoxInput)) // convert coffee name to lowercase and compare
             filteredCoffees.push(coffees[i])
     }
     tbody.innerHTML = renderCoffees(filteredCoffees);
