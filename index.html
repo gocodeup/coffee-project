@@ -15,7 +15,7 @@
 
     <div class="col-6">
         <div>
-            <div class="pop" id="coffees"></div>
+            <div id="coffees"></div>
         </div>
     </div>
 <!-------------Form 1------------->
@@ -24,16 +24,17 @@
     <label for="roast-selection">Roast</label>
     <select id="roast-selection" aria-label="Default select example">
         <option selected></option>
-        <option value="1">Light</option>
-        <option value="2">Medium</option>
-        <option value="3">Dark</option>
+        <option value="all">All</option>
+        <option value="light">Light</option>
+        <option value="medium">Medium</option>
+        <option value="dark">Dark</option>
     </select>
     <!--        <div class="input-group">-->
-    <div class="form-outline">Coffee Name
-        <input type="search" id="form1" class="form-control"/>
-        <label class="form-label" for="form1"></label>
-    </div>
-    <input id="submit" type="submit"/>
+      <div class="form1">
+          <label for="searchroast1" class="form-label">Example label</label>
+          <input type="text" class="form-control" id="searchroast1" placeholder="Example input placeholder">
+      </div>
+    <button id="submit" type="submit">Submit</button>
     <!--        </div>-->
 </form>
 <!-------------Form 2------------->
@@ -44,16 +45,17 @@
     <select id="roast-selection2" aria-label="Default select example">
 
         <option selected></option>
-        <option value="1">Light</option>
-        <option value="2">Medium</option>
-        <option value="3">Dark</option>
+
+        <option value="light">Light</option>
+        <option value="medium">Medium</option>
+        <option value="dark">Dark</option>
     </select>
 
-    <div class="form-outline">Name
-        <input type="search" id="form2" class="form-control"/>
-        <label class="form-label" for="form1"></label>
+    <div class="form1">
+        <label for="searchroast2" class="form-label">Example label</label>
+        <input type="text" class="form-control" id="searchroast2" placeholder="Example input placeholder">
     </div>
-    <input id="submit2" type="submit" />
+    <button id="submit1" type="button" >Submit</button>
 </form>
     </div>
 <!------------------coffee section----------------->
@@ -62,7 +64,8 @@
 <!---------------Mandatory Closing------------>
 
 
-<!--<tbody id="coffees"></tbody>-->
+<!--<tbody id="coffee"></tbody>-->
+
 <script src="main.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
 </div>

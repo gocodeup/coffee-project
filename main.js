@@ -1,7 +1,7 @@
 "use strict"
 
 function renderCoffee(coffee) {
-    var html = '<div id="java">';
+    var html = '<div id="coffee">';
     // html += '<h1 id="idnumber">' + coffee.id + '</h1>';
     html += '<h1>'+  coffee.name + '</h1>';
     html += '<p>' + coffee.roast + '</p>';
@@ -12,29 +12,37 @@ function renderCoffee(coffee) {
 function renderCoffees(coffees) {
     var html = '';
     for(var i = coffees.length - 1; i >= 0; i--) {
+
+
+
+
         html += renderCoffee(coffees[i]);
     }
 
-    var roastSelection= document.getElementById("roast-selection")
-    roastSelection.addEventListener('type',renderCoffees)
     return html;
-
-
 }
 
 
+var roastSelection = document.querySelector('#roast-selection');
 
-function updateCoffees(e) {
+roastSelection.addEventListener('change', function updateCoffees(e) {
     e.preventDefault(); // don't submit the form, we just want to update the data
+
     var selectedRoast = roastSelection.value;
+
     var filteredCoffees = [];
     coffees.forEach(function(coffee) {
+
         if (coffee.roast === selectedRoast) {
+
             filteredCoffees.push(coffee);
+        } else if (roastSelection.value === 'All') {
+            filteredCoffees.push(coffee)
         }
     });
+    console.log(filteredCoffees)
     tbody.innerHTML = renderCoffees(filteredCoffees);
-}
+});
 
 // from http://www.ncausa.org/About-Coffee/Coffee-Roasts-Guide
 var coffees = [
@@ -54,10 +62,64 @@ var coffees = [
     {id: 14, name: 'French', roast: 'dark'},
 ];
 
+document.querySelector('#submit1').addEventListener('click', function (event) {
+
+    //declare new coffee object that will be structured the same as all the other objects in the coffee array
+    // let newCoffee = {
+    // set the values of my properties to the input what my user types in
+    // id: "",(this will be equal to my array length + 1)
+        // name: "",(this will have a value of what my user types in which i can get via dom selector)
+        // roast: ""(this will have a value of what my user types in which i can get via dom selector)
+    // };
+
+
+    //push to coffees array
+    // coffees.push(newCoffee)
+
+
+});
+
+// document.getElementById('searchroast1').addEventListener('click',function (){
+//     window.localStorage.setItem('name','roast');
+// });
+
+
+
+
 var tbody = document.querySelector('#coffees');
 var submitButton = document.querySelector('#submit');
-var roastSelection = document.querySelector('#roast-selection');
+
+
+let searchbox = document.getElementById('searchroast1');
+searchbox.addEventListener('keydown',function searchRoast(){
+    let searchInput = searchbox.value.toUpperCase();
+    let filteredCoffees = [];
+
+
+
+    coffees.forEach(function (coffee){
+        if(coffee.name.toUpperCase().includes(searchInput)){
+            filteredCoffees.push(coffee);
+        }
+    });
+    tbody.innerHTML=renderCoffees(filteredCoffees)
+});
+
 
 tbody.innerHTML = renderCoffees(coffees);
 
-submitButton.addEventListener('click', updateCoffees);
+// submitButton.addEventListener('click',updateCoffees);
+
+
+// coffees.forEach(function(coffee) {
+//
+//     if (coffee.roast === selectedRoast) {
+//
+//         filteredCoffees.push(coffee);
+//     }
+// let searchRoast = document.getElementById('searchroast1');
+
+// searchRoast.addEventListener('keydown',
+
+
+
