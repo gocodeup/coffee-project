@@ -1,5 +1,34 @@
 "use strict"
 
+function renderCoffee(coffee) {
+    var html = '<div class="coffee row">';
+    // html += '<td>' + coffee.id + '</td>';
+    html += '<h3 class="col-3">' + coffee.name + '</h3>';
+    html += '<p class="col-3">' + coffee.roast + '</p>';
+    html += '</div>';
+
+    return html;
+}
+
+function renderCoffees(coffees) {
+    var html = '';
+    for (let i = 0; i < coffees.length; i++) {
+        html += renderCoffee(coffees[i]);
+    }
+    return html;
+}
+
+function updateCoffees(e) {
+    e.preventDefault(); // don't submit the form, we just want to update the data
+    var selectedRoast = roastSelection.value;
+    var filteredCoffees = [];
+    coffees.forEach(function(coffee) {
+        if (coffee.roast === selectedRoast) {
+            filteredCoffees.push(coffee);
+        }
+    });
+    tbody.innerHTML = renderCoffees(filteredCoffees);
+}
 
 
 // from http://www.ncausa.org/About-Coffee/Coffee-Roasts-Guide
@@ -49,6 +78,11 @@ function updateCoffees(e) {
     });
     tbody.innerHTML = renderCoffees(filteredCoffees);
 }
+
+var tbody = document.querySelector('#coffees');
+var submitButton = document.querySelector('#submit');
+var roastSelection = document.querySelector('#roast-selection');
+
 
 
 

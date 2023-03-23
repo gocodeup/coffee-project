@@ -15,3 +15,14 @@ h1 {
 #coffees {
 
 }
+
+body{
+    background-image: url("/img/gunsandcoffee2.jpg");
+
+
+}
+
+* {
+    font-family: 'Zeyada', cursive;
+}
+
