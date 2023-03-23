@@ -30,20 +30,6 @@ function updateCoffees(e) {
     tbody.innerHTML = renderCoffees(filteredCoffees);
 }
 
-// 3rd TODO: instead of rendering all of the coffees we need to grab the value from the
-// search bar and "filter" the coffee that we render
-// const searchBar = document.querySelector('#search')
-// const searchTerm = searchBar.value;
-
-//No filter the coffees based off of the value
-// Use this https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter
-// just copy the example and paste below
-// so use the include methond?
-// const result = coffees.filter(singleCoffee => singleCoffee.value.includes());// Im looking at examples right now ;If I was a junior at your level
-// I would look up "How to check if string is inside of string js"
-//                                              ^ Now write and expression that returns true if that coffee
-// console.log(result);
-
 let userInput = document.getElementById("search");
 
 userInput.addEventListener('keyup', function () {
@@ -56,7 +42,6 @@ userInput.addEventListener('keyup', function () {
     tbody.innerHTML = renderCoffees(filteredCoffees);
 })
 //                   ^ We are rendering coffee here
-
 
 // from http://www.ncausa.org/About-Coffee/Coffee-Roasts-Guide
 let coffees = [
@@ -75,6 +60,11 @@ let coffees = [
     {id: 13, name: 'Italian', roast: 'dark'},
     {id: 14, name: 'French', roast: 'dark'},
 ];
+let newCoffeeInput = document.getElementById("submit");
+newCoffeeInput.addEventListener("click", function (e){
+    let newCoffee = document.getElementById("newCoffee").value
+    newCoffee.push(coffees)
+})
 
 
 // 1st TODO: You need to make a querySelector for getting the search bar.
