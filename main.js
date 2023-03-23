@@ -63,7 +63,21 @@ let container = document.querySelector('#container');
 let submitButton = document.querySelector('#submit');
 let roastSelection = document.querySelector('#roast-selection');
 
+//This changes the color of the roast(based on strength) on window load.
+let roastColor;
+window.onload = (event) => {
+    roastColor = document.querySelectorAll(".coffeeRoast")
 
+    roastColor.forEach( (element) => {
+        if(element.innerHTML === 'dark'){
+            element.style.color = "#7d4820"
+        }else if (element.innerHTML === 'medium'){
+            element.style.color = "#af6d35"
+        }else{
+            element.style.color = "#efc49e"
+        }
+    })
+};
 
 container.innerHTML = renderCoffees(coffees);
 
