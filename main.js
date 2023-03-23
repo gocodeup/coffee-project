@@ -48,6 +48,30 @@ var coffees = [
     {id: 14, name: 'French', roast: 'dark'},
 ];
 
+// reference selected roast
+// reference the name they input
+// add id for new coffee
+// push those inputs into the array
+//render array
+
+let addNewRoast = document.getElementById('addRoastSelection');
+let addCoffeeName = document.getElementById('name');
+let addCoffeeButton = document.getElementById('addNew');
+
+
+function addNewCoffee (input) {
+    let addID = (coffees.length + 1)
+    let addName = addCoffeeName.value.toString();
+    let addRoast = addNewRoast.value.toString();
+    input = {id: addID, name: addName, roast: addRoast};
+    coffees.push(input);
+    console.log(coffees);
+    tbody.innerHTML= renderCoffees(coffees);
+}
+
+addCoffeeButton.addEventListener('click', addNewCoffee)
+
+
 
 function coffeeSearch () {
     let newSearch = searchBox.value.toLowerCase();
