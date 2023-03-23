@@ -21,32 +21,57 @@
         <div class="col-6 container">
             <div class="row" id="container"></div>
         </div>
-        <div class="col-5 card" style="width: 45%">
-            <div class="card-header">
-                <label for="roast-selection">Roast</label>
+        <div class="col-6" style="width: 50%">
+            <div class="card">
+                <div class="card-header">
+                    <label for="roast-selection">Roast</label>
+                </div>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item"><select id="roast-selection">
+                        <option selected="selected">all</option>
+                        <option>light</option>
+                        <option>medium</option>
+                        <option>dark</option>
+                    </select>
+                    </li>
+                </ul>
+                <div class="card-header">
+                    <label for="roast-selection">Coffee Name</label>
+                </div>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">
+                        <input id="searchbar" onkeyup="searchCoffees()" type="text"
+                               name="search" placeholder="Search Coffee">
+                    </li>
+                    <li class="list-group-item">
+                        <button id="submit" type="submit"><img src="IMG/btn.png"></button>
+                    </li>
+                </ul>
+                <h2>Add a Coffee</h2>
+                <div class="card-header">
+                    <label for="roast-selection">Roast</label>
+                </div>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item"><select id="roast-selection">
+                        <option>light</option>
+                        <option>medium</option>
+                        <option>dark</option>
+                    </select>
+                    </li>
+                </ul>
+                <div class="card-header">
+                    <label for="roast-selection">Name</label>
+                </div>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">
+                        <input id="addBar" type="text"
+                               name="add" placeholder="Coffee Name">
+                    </li>
+                    <li class="list-group-item">
+                        <button id="addBtn" type="submit"><img src="IMG/btn.png"></button>
+                    </li>
+                </ul>
             </div>
-            <ul class="list-group list-group-flush">
-                <li class="list-group-item"><select id="roast-selection">
-                    <option selected="selected">all</option>
-                    <option>light</option>
-                    <option>medium</option>
-                    <option>dark</option>
-                </select>
-                </li>
-            </ul>
-            <div class="card-header">
-                <label for="roast-selection">Coffee Name</label>
-            </div>
-            <ul class="list-group list-group-flush">
-                <li class="list-group-item">
-                    <input id="searchbar" onkeyup="searchCoffees()" type="text"
-                           name="search" placeholder="Search Coffee">
-                </li>
-                <li class="list-group-item">
-                    <button id="submit"  type="submit"><img src="IMG/btn.png"></button>
-                </li>
-
-            </ul>
         </div>
     </div>
 </div>

@@ -8,6 +8,12 @@ h1{
     font-size: 60px;
     margin-bottom: 5px;
 }
+h2{
+    text-align: center;
+    color: lightgray;
+    font-size: 45px;
+    margin-bottom: 5px;
+}
 
 body{
     background-image: url("IMG/coffee wallpaper.jpeg");
@@ -42,16 +48,16 @@ body{
 .card-header{
     background: none;
     font-size: 25px;
+    text-align: left;
     /*color: black;*/
-
 }
 
-.list-group-item{
+.list-group-item {
     background: none;
     color: black;
     font-size: 20px;
-
 }
+
 
 #container{
     text-align: left;
@@ -62,6 +68,12 @@ body{
     background: none;
 }
 
+#addBtn{
+    border: none;
+    background: none;
+}
+
+
 #roast-selection{
     width: 100%;
     text-align: center;
@@ -69,6 +81,12 @@ body{
 }
 
 #searchbar{
+    width: 100%;
+    text-align: center;
+    height: 35px;
+}
+
+#addBar{
     width: 100%;
     text-align: center;
     height: 35px;
