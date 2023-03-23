@@ -1,16 +1,21 @@
-table {
-    border-collapse: collapse;
-    margin: 15px 0;
-}
+/*table {*/
+/*    border-collapse: collapse;*/
+/*    margin: 15px 0;*/
+/*}*/
 
-td, th {
-    border: 1px solid black;
-    padding: 5px 10px;
-}
+/*td, th {*/
+/*    border: 1px solid black;*/
+/*    padding: 5px 10px;*/
+/*}*/
 
 h1 {
     text-align: center;
 }
+
+#coffees {
+
+}
+
 body{
     background-image: url("/img/gunsandcoffee2.jpg");
 
@@ -20,3 +25,4 @@ body{
 * {
     font-family: 'Zeyada', cursive;
 }
+
