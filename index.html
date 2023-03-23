@@ -15,36 +15,93 @@
 
         <div class="col">
 
-            <table>
-                <thead>
-                <tr>
-                    <th>ID</th>
-                    <th>NAME</th>
-                    <th>ROAST</th>
-                </tr>
-                </thead>
-                <tbody id="coffees"></tbody>
-            </table>
-        </div>
 
+            <div class="row">
+                <div class="col-3">
+                    <div>
+                        <h3>Light City</h3>
+                        <p>Light</p>
+                    </div>
+                    <div>
+                        <h3>Half City</h3>
+                        <p>Light</p>
+                    </div>
+                    <div>
+                        <h3>Cinnamon</h3>
+                        <p>Light</p>
+                    </div>
+                    <div>
+                        <h3>City</h3>
+                        <p>Medium</p>
+                    </div>
+                    <div>
+                        <h3>American</h3>
+                        <p>Medium</p>
+                    </div>
+                    <div>
+                        <h3>Breakfast</h3>
+                        <p>Medium</p>
+                    </div>
+                    <div>
+                        <h3>High</h3>
+                        <p>Dark</p>
+                    </div>
+                </div>
+                <div class="col-3">
+                    <div>
+                        <h3>Continental</h3>
+                        <p>Dark</p>
+                    </div>
+                    <div>
+                        <h3>New Orleans</h3>
+                        <p>Dark</p>
+                    </div>
+                    <div>
+                        <h3>European</h3>
+                        <p>Dark</p>
+                    </div>
+                    <div>
+                        <h3>Expresso</h3>
+                        <p>Dark</p>
+                    </div>
+                    <div>
+                        <h3>Viennese</h3>
+                        <p>Dark</p>
+                    </div>
+                    <div>
+                        <h3>Italian</h3>
+                        <p>Light</p>
+                    </div>
+                    <div>
+                        <h3>French</h3>
+                        <p>Dark</p>
+                    </div>
+
+
+                </div>
+
+            </div>
+        </div>
 
         <div class="col">
 
 
-            <form>
+            <form class="Form">
                 <label for="Roast1">Roast</label>
-                <select id="Roast1" class="form-control">
+                <select id="roast-selection" class="form-control">
                     <option>All</option>
-                    <option>Light</option>
-                    <option>Medium</option>
-                    <option>Dark</option>
+                    <option>light</option>
+                    <option>medium</option>
+                    <option>dark</option>
                 </select>
 
                 <div class="form-group">
                     <label for="exampleInputPassword1">Coffee Name</label>
-                    <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Coffee Name">
+                    <input id='inputbox1' type="text" class="form-control" id="exampleInputPassword1"
+                           placeholder="Coffee Name">
                 </div>
-                <button type="submit" class="btn btn-primary button">Submit</button>
+                <button type="submit" id="submit" class="btn btn-primary button">Submit</button>
+
 
                 <hr>
 
@@ -57,6 +114,7 @@
                     <option>Dark</option>
                 </select>
 
+
                 <div class="form-group">
                     <label for="exampleInputPassword1">Coffee Name</label>
                     <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Coffee Name">
@@ -64,7 +122,6 @@
                 <button type="submit" class="btn btn-primary button">Submit</button>
 
             </form>
-
 
         </div>
 

@@ -8,12 +8,16 @@ td, th {
     padding: 5px 10px;
 }
 
-#roast-selection{
-    width:200px;
-}
+/*#roast-selection{*/
+/*    width:200px;*/
+/*}*/
 
 
 .button {
+    width: 100%
+}
+
+.Form{
     width: 100%
 }
 
