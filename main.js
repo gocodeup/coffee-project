@@ -27,6 +27,7 @@ function updateCoffees(e) {
             filteredCoffees.push(coffee);
         }
     });
+    tbody.innerHTML = renderCoffees(filteredCoffees);
 }
 
 // 3rd TODO: instead of rendering all of the coffees we need to grab the value from the
