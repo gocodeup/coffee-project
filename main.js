@@ -1,9 +1,9 @@
 "use strict"
 
 function renderCoffee(coffee) {
-    var html = '<div id="coffees">';
+    var html = '<div id="java">';
     // html += '<h1 id="idnumber">' + coffee.id + '</h1>';
-    html += '<h1>'+ '<id="coffeename">' +  coffee.name + '</>';
+    html += '<h1>'+  coffee.name + '</h1>';
     html += '<p>' + coffee.roast + '</p>';
 
     return html;
@@ -14,8 +14,15 @@ function renderCoffees(coffees) {
     for(var i = coffees.length - 1; i >= 0; i--) {
         html += renderCoffee(coffees[i]);
     }
+
+    var roastSelection= document.getElementById("roast-selection")
+    roastSelection.addEventListener('type',renderCoffees)
     return html;
+
+
 }
+
+
 
 function updateCoffees(e) {
     e.preventDefault(); // don't submit the form, we just want to update the data

@@ -1,5 +1,26 @@
-.row{
-    height: 25px;
+
+
+/*.pop{*/
+
+/*    white-space: pre-wrap;*/
+/*    !*white-space: -moz-pre-wrap;*!*/
+/*    white-space: -o-pre-wrap;*/
+/*    overflow-wrap: break-word;*/
+/*    color: blue;*/
+/*    word-break: break-all;*/
+/*}*/
+
+/*.pop{*/
+/*    overflow-wrap: break-word;*/
+
+/*}*/
+#coffees{
+    -webkit-columns: 2;
+    -moz-columns: 2;
+    columns: 2;
 }
 
+.title{
+    text-align: center;
+}
 
