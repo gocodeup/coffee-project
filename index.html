@@ -21,20 +21,31 @@
         <div class="col-6 container">
             <div class="row" id="container"></div>
         </div>
-        <div class="col-6">
-            <form>
+        <div class="col-5 card" style="width: 45%">
+            <div class="card-header">
                 <label for="roast-selection">Roast</label>
-                <select id="roast-selection">
+            </div>
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item"><select id="roast-selection">
                     <option>light</option>
                     <option>medium</option>
                     <option>dark</option>
                 </select>
-                <br>
-                <label>Coffee Name</label>
-                <input id="searchbar" onkeyup="searchCoffees()" type="text"
-                       name="search" placeholder="Search Coffee">
-                <input id="submit" type="submit"/>
-            </form>
+                </li>
+            </ul>
+            <div class="card-header">
+                <label for="roast-selection">Coffee Name</label>
+            </div>
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item">
+                    <input id="searchbar" onkeyup="searchCoffees()" type="text"
+                           name="search" placeholder="Search Coffee">
+                </li>
+                <li class="list-group-item">
+                    <button id="submit"  type="submit"><img src="IMG/btn.png"></button>
+                </li>
+
+            </ul>
         </div>
     </div>
 </div>
@@ -47,3 +58,4 @@
 
 </body>
 </html>
+

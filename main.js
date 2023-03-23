@@ -63,6 +63,8 @@ let container = document.querySelector('#container');
 let submitButton = document.querySelector('#submit');
 let roastSelection = document.querySelector('#roast-selection');
 
+
+
 container.innerHTML = renderCoffees(coffees);
 
 submitButton.addEventListener('click', updateCoffees);
