@@ -66,13 +66,25 @@ let tbody = document.getElementById('coffees');
 tbody.innerHTML = renderCoffees(coffees);
 
 
-let addCoffee = document.getElementById('createCoffee');
-function addCoffees (e){
-    e.preventDefault();
-    let newCoffee = {
-        id: coffees.length +1,
-        name: addCoffeeName.value,
-        roast: addCoffeeRoast.value,
-    }
-    addCoffee.addEventListener('submit', addCoffees);
-})
+//let addCoffee = document.getElementById('createCoffee');
+// function addCoffees (e){
+//     e.preventDefault();
+//     let newCoffee = {
+//         id: coffees.length +1,
+//         name: addCoffeeName.value,
+//         roast: addCoffeeRoast.value,
+//     }
+//     addCoffee.addEventListener('submit', addCoffees);
+// }
+const form = document.getElementById('createCoffee');
+form.addEventListener('submit', function (event) {
+    event.preventDefault();
+    const coffeeName = document.getElementById('addName').value;
+    const coffeeRoast = document.getElementById('roast-selection2').value;
+    const count = coffees.length;
+    console.log(count);
+    console.log(coffeeName);
+    console.log(coffeeRoast);
+    coffees[count] = {id: (coffees.length) +1 , name: coffeeName, roast: coffeeRoast};
+    form.reset();
+});
