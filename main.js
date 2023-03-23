@@ -1,7 +1,7 @@
 "use strict"
 
 function renderCoffee(coffee) {
-    var html = '<div class="coffee row">';
+    var html = '<div class="coffee row" style="justify-content: center">';
     // html += '<td>' + coffee.id + '</td>';
     html += '<h3 class="col-3">' + coffee.name + '</h3>';
     html += '<p class="col-3">' + coffee.roast + '</p>';
