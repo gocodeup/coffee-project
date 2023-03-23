@@ -6,29 +6,40 @@ body{
 .allContainer{
     margin:10px;
 
-}
-table {
+} ul{
+      display: flex;
+      width: 100%;
+      align-items: center;
+      justify-content: center;
+  }
+.coffeeTable{
     background-image: url("img/img3.jpg");
     background-size: cover;
-    width: 100%;
-    height: 100%;
 }
-tbody {
+span {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     flex-wrap: wrap;
     align-items: center;
-    height: 600px;
+    justify-content: center;
+
+
+}
+li {
+    list-style: none;
+    margin-bottom: 0;
+    align-items: center;
+    justify-content: center;
 }
 
-td:first-child{
+li:first-child{
     display: none;
 }
-td:nth-child(2){
+li:nth-child(2){
     font-size: 35px;
     color: darkslateblue;
 }
-td:last-child{
+li:last-child{
     font-size: 20px;
     color: brown;
 }
@@ -71,7 +82,7 @@ select{
     box-shadow: 5px 10px 8px dodgerblue;
 }
 .button{
-   width: 100%;
+    width: 100%;
     margin: 14px 0;
     box-shadow: 5px 10px 8px dodgerblue;
 }

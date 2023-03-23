@@ -17,48 +17,39 @@
 
     <div class="row">
         <div class="coffeeTable w-50">
-            <table>
-    <!--            <thead>-->
-    <!--            <tr class="idSection">-->
-    <!--                <th>ID</th>-->
-    <!--                <th>NAME</th>-->
-    <!--                <th>ROAST</th>-->
-    <!--            </tr>-->
-    <!--            </thead>-->
-                <tbody id="coffees"></tbody>
-            </table>
+            <span id="coffees"></span>
         </div>
 
         <form class="w-50">
-             <div class="rightSide">
-                 <div>
-                 <h3>Search Coffee<img src="img/coffee-search.gif" alt="search"></h3><br>
-                 <label for="roast-selection">Roast</label><br>
-                <select id="roast-selection">
-                    <option>All</option>
+            <div class="rightSide">
+                <div>
+                    <h3>Search Coffee<img src="img/coffee-search.gif" alt="search"></h3><br>
+                    <label for="roast-selection">Roast</label><br>
+                    <select id="roast-selection">
+                        <option>All</option>
+                        <option>light</option>
+                        <option>medium</option>
+                        <option>dark</option>
+                    </select>
+                    <br>
+                    <label>Coffee Names</label><br>
+                    <input id="search" type="text" placeholder="Search your coffee!"><br>
+                    <input id="update" type="submit" class="button btn btn-primary btn-lg btn-block">
+                </div>
+        </form>
+        <hr>
+        <form id="createCoffee">
+            <div>
+                <h3>Add a Coffee<img src="img/coffee-time.gif" alt="add"></h3><br>
+                <label for="roast-selection2">Roast</label><br>
+                <select id="roast-selection2" name="roast">
                     <option>light</option>
                     <option>medium</option>
                     <option>dark</option>
-                </select>
-                <br>
-                <label>Coffee Names</label><br>
-                <input id="search" type="text" placeholder="Search your coffee!"><br>
-                <input id="update" type="submit" class="button btn btn-primary btn-lg btn-block">
-             </div>
-        </form>
-            <hr>
-        <form id="createCoffee">
-            <div>
-            <h3>Add a Coffee<img src="img/coffee-time.gif" alt="add"></h3><br>
-            <label for="roast-selection2">Roast</label><br>
-            <select id="roast-selection2" name="roast">
-                <option>light</option>
-                <option>medium</option>
-                <option>dark</option>
-            </select><br>
-            <label>Name</label><br>
-            <input id="addName" type="text"><br>
-            <input id="submit" type="submit"class="button btn btn-primary btn-lg">
+                </select><br>
+                <label>Name</label><br>
+                <input id="addName" type="text"><br>
+                <input id="submit" type="submit"class="button btn btn-primary btn-lg">
             </div>
 
         </form>

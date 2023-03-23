@@ -28,7 +28,7 @@ coffees.sort(function(a, b) {
 });
 console.log(coffees);
 function renderCoffee(coffee) {
-    let html = '<ul class="coffee">';
+    let html = '<ul class="coffee col-6">';
     html += '<li>' + coffee.id + '</li>';
     html += '<li>' + coffee.name + '</li>';
     html += '<li>' + coffee.roast + '</li>';
