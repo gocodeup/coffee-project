@@ -18,6 +18,7 @@ function renderCoffees(coffees) {
     return html;
 }
 
+
 function updateCoffees(e) {
     e.preventDefault(); // don't submit the form, we just want to update the data
     let selectedRoast = roastSelection.value;
@@ -25,6 +26,9 @@ function updateCoffees(e) {
     coffees.forEach(function(coffee) {
         if (coffee.roast === selectedRoast) {
             filteredCoffees.push(coffee);
+        }else if(roastSelection.value === "all"){
+            filteredCoffees.push(coffee)
+
         }
     });
     tbody.innerHTML = renderCoffees(filteredCoffees);
@@ -60,11 +64,12 @@ let coffees = [
     {id: 13, name: 'Italian', roast: 'dark'},
     {id: 14, name: 'French', roast: 'dark'},
 ];
-let newCoffeeInput = document.getElementById("submit");
-newCoffeeInput.addEventListener("click", function (e){
-    let newCoffee = document.getElementById("newCoffee").value
-    newCoffee.push(coffees)
-})
+// let newCoffeeInput = document.getElementById("submit");
+// newCoffeeInput.addEventListener("click", function (e){
+//     let newCoffee = document.getElementById("newCoffee").value
+//     newCoffee.push(coffees)
+// })
+
 
 
 // 1st TODO: You need to make a querySelector for getting the search bar.
@@ -78,7 +83,16 @@ tbody.innerHTML = renderCoffees(coffees);
 
 // 2nd TODO: You need to create and event listener that listens for when
 // --> the user has put something in the search bar.
-roastSelection.addEventListener('input', updateCoffees)
-searchBar.addEventListener('input', updateCoffees)
+roastSelection.addEventListener('input', updateCoffees);
 submitButton.addEventListener('click', updateCoffees);
 
+let addCoffeeButton = document.querySelector('#add-coffee-button');
+addCoffeeButton.addEventListener('click', function(e) {
+    e.preventDefault(); // prevent form submission
+    let newCoffeeName = document.querySelector('#new-coffee-name').value;
+    let newCoffeeRoast = document.querySelector('#new-coffee-roast').value;
+    let newCoffee = {id: coffees.length + 1, name: newCoffeeName, roast: newCoffeeRoast};
+    coffees.push(newCoffee);
+    updateCoffees(e);
+    tbody.innerHTML = renderCoffees(coffees);
+});

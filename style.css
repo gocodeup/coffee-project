@@ -97,7 +97,18 @@ p{
     margin: 5px;
     border-radius: 5px;
     height: 40px;
-
+}
+#add-coffee-button{
+    display: flex;
+    align-self: center;
+    align-items: center;
+    justify-content: center;
+    width: 90%;
+    background-color: #8c8b94 ;
+    color: white;
+    margin: 5px;
+    border-radius: 5px;
+    height: 40px;
 }
 #addNewCoffee{
     display: flex;
@@ -108,7 +119,16 @@ p{
     border-radius: 5px;
     background-color: #995320 ;
 }
-#newCoffee{
+#new-coffee-roast{
+    display: flex;
+    align-self: center;
+    width: 90%;
+    margin: 5px;
+    border-radius: 5px;
+    height: 30px;
+    background-color: #995320;
+}
+#new-coffee-name{
     display: flex;
     align-self: center;
     width: 90%;

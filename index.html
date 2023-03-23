@@ -34,25 +34,39 @@
         <input id="search" type="search" name="search" placeholder="Choose Coffee" onkeyup="filterCoffees()">
         <button id="submit" type="submit">Search</button>
         <hr class="hr2" size="10">
-
+   =
 
 
         <!--ADD A COFFEE-->
 
 
         <h1 class="h1">Add a Coffee</h1>
-        <h5>Roast</h5>
-        <label for="add-selection"></label>
-        <select id="add-selection">
-            <option>light</option>
-            <option>medium</option>
-            <option>dark</option>
+        <h5>Coffee name</h5>
+<!--        <label for="add-selection"></label>-->
+<!--        <select id="add-selection">-->
+<!--            <option>light</option>-->
+<!--            <option>medium</option>-->
+<!--            <option>dark</option>-->
+<!--        </select>-->
+<!--        <h5>Name</h5>-->
+<!--        <label for="new-coffee-name"></label>-->
+<!--        <input id="new-coffee-name" type="text" name="new-coffee-name" placeholder="Enter New Coffee" onkeyup="newCoffee()">-->
+<!--        <button id="add-coffee-button" type="submit">Add A Coffee</button>-->
+
+        <label for="new-coffee-name"></label>
+        <input type="text" id="new-coffee-name" name="new-coffee-name">
+
+        <h5>Roast level</h5>
+        <label for="new-coffee-roast"></label>
+        <select id="new-coffee-roast" name="new-coffee-roast">
+            <option value="light">Light</option>
+            <option value="medium">Medium</option>
+            <option value="dark">Dark</option>
         </select>
-        <h5>Name</h5>
-        <label for="newCoffee"></label>
-        <input id="newCoffee" type="text" name="newCoffee" placeholder="Enter New Coffee" onkeyup="newCoffee()">
-        <button id="submit" type="submit">Add A Coffee</button>
+
+        <button type="submit" id="add-coffee-button">Add coffee</button>
     </form>
+
 
 </div>
 
