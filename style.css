@@ -91,5 +91,6 @@ label{
 }
 .rightSide{
     width: 100%;
+    align-items: flex-end;
 
 }
