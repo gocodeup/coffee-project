@@ -149,55 +149,67 @@
           integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 </head>
 <body>
-<h1 class="text-center">Coffee!</h1>
+<h1 class="text-center">Better Coffee</h1>
 
 
 <div class="container">
     <div class="row">
 
-        <form class="Form">
-            <label for="roast-selection">Roast</label>
-            <select id="roast-selection" class="form-control">
-                <option>All</option>
-                <option>light</option>
-                <option>medium</option>
-                <option>dark</option>
-            </select>
 
-            <div class="form-group">
-                <label for="inputbox">Coffee Name</label>
-                <input id='inputbox' type="text" class="form-control"
-                       placeholder="Coffee Name">
-            </div>
-            <button type="button" id="button1" class="btn btn-primary button">Submit</button>
-
-
-            <hr>
-
-            <h2 class="text-center mt-4">Add a Coffee</h2>
-
-            <label for="roast">Roast</label>
-            <select id="roast" class="form-control">
-                <option>Light</option>
-                <option>Medium</option>
-                <option>Dark</option>
-            </select>
-
-
-            <div class="form-group">
-                <label for="exampleInputPassword1">Name</label>
-                <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Coffee Name">
-            </div>
-            <button type="button" id="button2" class="btn btn-primary button">Submit</button>
-
-        </form>
-
-
-        <div>
+        <div class="col">
             <h3 id="coffees"></h3>
         </div>
 
 
-        <script src="main.js"></script>
+        <div class="col">
+
+
+            <form class="Form">
+                <label for="roast-selection">Roast</label>
+                <select id="roast-selection" class="form-control">
+                    <option>All</option>
+                    <option>light</option>
+                    <option>medium</option>
+                    <option>dark</option>
+                </select>
+
+                <div class="form-group">
+                    <label for="inputbox">Coffee Name</label>
+                    <input id='inputbox' type="text" class="form-control"
+                           placeholder="Coffee Name">
+                </div>
+                <button type="button" id="button1" class="btn btn-primary button">Submit</button>
+
+
+                <hr>
+
+                <h2 class="text-center mt-4">Add a Coffee</h2>
+
+                <label for="roast">Roast</label>
+                <select id="roast" class="form-control">
+                    <option>Light</option>
+                    <option>Medium</option>
+                    <option>Dark</option>
+                </select>
+
+
+                <div class="form-group">
+                    <label for="exampleInputPassword1">Name</label>
+                    <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Coffee Name">
+                </div>
+                <button type="button" id="button2" class="btn btn-primary button">Submit</button>
+
+
+            </form>
+
+            <h2 class="text-center mt-5">Coffee runs on sustainability</h2>
+            <img src="img/coffee_pollfinal-copy3.webp">
+
+        </div>
+    </div>
+</div>
+
+
+<script src="main.js"></script>
 </body>
 </html>
