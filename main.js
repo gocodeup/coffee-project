@@ -59,32 +59,48 @@ var coffees = [
     {id: 14, name: 'French', roast: 'dark'},
 ];
 
-document.querySelector('#submit1').addEventListener('click', function (event) {
-
-    //declare new coffee object that will be structured the same as all the other objects in the coffee array
-    // let newCoffee = {
-    // set the values of my properties to the input what my user types in
-    // id: "",(this will be equal to my array length + 1)
-        // name: "",(this will have a value of what my user types in which i can get via dom selector)
-        // roast: ""(this will have a value of what my user types in which i can get via dom selector)
-    // };
 
 
-    //push to coffees array
-    // coffees.push(newCoffee)
 
+
+
+//declare new coffee object that will be structured the same as all the other objects in the coffee array
+// let newCoffee = {
+// set the values of my properties to the input of what my user types in
+// id: "",(this will be equal to my array length + 1)
+// name: "",(this will have a value of what my user types in which i can get via dom selector)
+// roast: ""(this will have a value of what my user types in which i can get via dom selector)
+// };
+
+
+//push to coffees array
+// coffees.push(newCoffee)
+
+let newRoast= document.querySelector('#roast-selection2')
+let newName=document.querySelector('#searchroast2')
+
+
+
+document.getElementById('submit1').addEventListener("click",function() {
+    let newCoffee = {
+        id: coffees.length + (1),
+        name: newName.value,
+        roast: newRoast.value,
+    };
+
+    coffees.push(newCoffee);
+    tbody.innerHTML = renderCoffees(coffees);
+
+
+    // localStorage.setItem('searchroast2',newName);
 
 });
 
-// document.getElementById('searchroast1').addEventListener('click',function (){
-//     window.localStorage.setItem('name','roast');
-// });
-
-
-
 
 var tbody = document.querySelector('#coffees');
-var submitButton = document.querySelector('#submit');
+var submitButton = document.querySelector('#submit1');
+
+
 
 
 let searchbox = document.getElementById('searchroast1');
@@ -118,5 +134,15 @@ tbody.innerHTML = renderCoffees(coffees);
 
 // searchRoast.addEventListener('keydown',
 
+// let newCoffee = {
+//     id: coffees.length + (1),
+//     name: newName.value,
+//     roast: newRoast.value,
+// };
 
 
+
+//
+// localStorage.setItem("Coffees",coffees);
+//
+// console.log(coffees_deserialized);

@@ -1,26 +1,84 @@
-
-
-/*.pop{*/
-
-/*    white-space: pre-wrap;*/
-/*    !*white-space: -moz-pre-wrap;*!*/
-/*    white-space: -o-pre-wrap;*/
-/*    overflow-wrap: break-word;*/
-/*    color: blue;*/
-/*    word-break: break-all;*/
-/*}*/
-
-/*.pop{*/
-/*    overflow-wrap: break-word;*/
-
-/*}*/
+body{
+    background-color: #FBF6F4;
+}
 #coffees{
     -webkit-columns: 2;
     -moz-columns: 2;
     columns: 2;
 }
 
-.title{
-    text-align: center;
+.navbar-toggler{
+    margin-left: auto;
+    margin-right: 2em;
+    height: 3.5em;
+    width: 3.5em;
+    border: 0px;
+}
+img.logo{
+    margin-left: 3rem;
+    width: 12rem;
+}
+nav{
+    background-color: #411530;
+    margin: 0;
+    height: 90px;
 }
 
+span.navbar-toggler-icon{
+    width: 1.5em;
+    height: 1.5em;
+}
+
+.first{
+    margin: 4em;
+}
+
+h1,h2{
+    font-family: 'Abril Fatface', cursive;
+    color: rgb(232, 68, 26);
+}
+
+.formtitle1{
+    text-align: center;
+    margin: 0em;
+}
+
+.formtitle2{
+    text-align: center;
+    margin: .5em;
+}
+p{
+    color: #411530;
+    font-family: "ofelia-text", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+}
+
+select{
+    width: 100%;
+    height: 30px;
+    border: 1px solid rgba(232, 68, 26, 0.73);
+    margin-bottom: 20px;
+}
+
+#searchroast1,#searchroast2{
+    border: 1px solid rgba(232, 68, 26, 0.73);
+}
+
+#submit1,#submit{
+    margin: 2rem;
+    padding: .5em 15em;
+    border: 2px solid rgba(232, 68, 26, 0.73);
+    box-shadow: 10px 12px 5px 0px rgba(0,0,0,0.49);
+    -webkit-box-shadow: 10px 12px 5px 0px rgba(0,0,0,0.49);
+    -moz-box-shadow: 10px 12px 5px 0px rgba(0,0,0,0.49);
+    background-color: #411530;
+    font-family: 'Abril Fatface', cursive;
+    color: white;
+
+}
+
+label{
+    font-family: 'Abril Fatface', cursive;
+    color:  #411530;
+}
