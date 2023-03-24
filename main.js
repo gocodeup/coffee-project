@@ -162,17 +162,18 @@ let NewCoffee = document.getElementById('exampleInputPassword1')
 
 let btn = document.getElementById('button2')
 
-btn.addEventListener('click', function () {
-    let newCoffee = {
-        id: "",
-        name: '',
-        roast: ''
-    }
-    coffees.push(newCoffee);
-    tbody.innerHTML = renderCoffees(filteredCoffees);
+btn.addEventListener('click',
+    function () {
+        let newCoffee = {
+            id: "",
+            name: '',
+            roast: ''
+        }
+        coffees.push(newCoffee);
+        tbody.innerHTML = renderCoffees(filteredCoffees);
 
 
-});
+    });
 
 var tbody = document.querySelector('#coffees');
 var submitButton = document.querySelector('#submit');
