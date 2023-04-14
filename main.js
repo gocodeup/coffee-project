@@ -1,5 +1,7 @@
 // (function() {
     "use strict"
+
+    // generates html
     function renderCoffee(coffee) {
         var html = '<div class="coffee">';
         html += '<p>' + coffee.id + '</p>';
