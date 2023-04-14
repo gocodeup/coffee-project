@@ -3,11 +3,11 @@
 // provides html for individual coffee objects.
 //Template to build other functions
 function renderCoffee(coffee) {
-    var html = '<tr class="coffee">';
-    html += '<td>' + coffee.id + '</td>';
-    html += '<td>' + coffee.name + '</td>';
-    html += '<td>' + coffee.roast + '</td>';
-    html += '</tr>';
+    var html = '<div class=" row coffee">';
+    html += '<div class="col">' + coffee.id + '</div>';
+    html += '<div class="col">' + coffee.name + '</div>';
+    html += '<div class="col">' + coffee.roast + '</div>';
+    html += '</div class="row">';
 
     console.log(html);
     return html;
