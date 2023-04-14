@@ -1,5 +1,7 @@
 "use strict"
 
+// provides html for individual coffee objects.
+//Template to build other functions
 function renderCoffee(coffee) {
     var html = '<tr class="coffee">';
     html += '<td>' + coffee.id + '</td>';
@@ -7,17 +9,23 @@ function renderCoffee(coffee) {
     html += '<td>' + coffee.roast + '</td>';
     html += '</tr>';
 
+    console.log(html);
     return html;
+
+
 }
 
+// provides the html for All coffee objects
+//uses above function to create all coffee objects
 function renderCoffees(coffees) {
     var html = '';
     for(var i = coffees.length - 1; i >= 0; i--) {
         html += renderCoffee(coffees[i]);
     }
+    console.log(html);
     return html;
 }
-
+//displays filtered list of coffees based on roast
 function updateCoffees(e) {
     e.preventDefault(); // don't submit the form, we just want to update the data
     var selectedRoast = roastSelection.value;
