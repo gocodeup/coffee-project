@@ -46,7 +46,6 @@ function coffeeNames(event){
 
 
 
-
 }
 
 // from http://www.ncausa.org/About-Coffee/Coffee-Roasts-Guide
