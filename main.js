@@ -1,5 +1,16 @@
 "use strict"
+function addCoffees (input) {
+    var addID = coffees.length+1;
+    var addName = inputName.value.toString();
+    var addRoast = inputRoast.value.toString();
+    input = {id: addID, name: addName, roast: addRoast};
+    coffees.push(input);
+    console.log(coffees);
+    coffeeList.innerHTML = renderCoffees(coffees);
 
+}
+
+console.log(addCoffees())
 // displays individual coffees
 function renderCoffee(coffee) {
     var html = '<tr class="coffee">';
@@ -19,7 +30,40 @@ function renderCoffees(coffees) {
     }
     return html;
 }
+// "EXPORTS" DATA INTO TABLE OF HTML //
+var coffeeList = document.querySelector('#coffees');
+coffeeList.innerHTML = renderCoffees(coffees);
 
+// SUBMIT SECTION //
+var roastSelection = document.querySelector('#roast-selection');
+
+function updateCoffees(e) {
+    e.preventDefault(); // don't submit the form, we just want to update the data
+    var selectedRoast = roastSelection.value;
+    var filteredCoffees = [];
+    coffees.forEach(function(coffee) {
+        if (coffee.roast === selectedRoast) {
+            filteredCoffees.push(coffee);
+        } else if(roastSelection.value === 'all'){
+            filteredCoffees.push(coffee);
+        }
+    });
+    coffeeList.innerHTML = renderCoffees(filteredCoffees);
+}
+
+// LIVE SEARCH FUNCTION //
+function searchCoffees() {
+    var searchRoast = searchBox.value.toUpperCase();
+    var filteredCoffees = [];
+    console.log(searchRoast);
+    coffees.forEach(function(coffee) {
+        if (coffee.name.toUpperCase().includes(searchRoast)) {
+            filteredCoffees.push(coffee);
+            console.log(filteredCoffees);
+        }
+    });
+    coffeeList.innerHTML = renderCoffees(filteredCoffees);
+}
 // shows filtered coffees by input and roast
 function updateCoffees(e) {
     e.preventDefault(); // don't submit the form, we just want to update the data
