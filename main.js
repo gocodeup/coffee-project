@@ -60,4 +60,34 @@ tbody.innerHTML = renderCoffees(coffees);
 
 submitButton.addEventListener('click', updateCoffees);
 
-//test test
+//Add coffees to list
+
+function addCoffees (input) {
+    var addID = coffees.length+1;
+    var addName = inputName.value.toString();
+    var addRoast = inputRoast.value.toString();
+    input = {id: addID, name: addName, roast: addRoast};
+    coffees.push(input);
+    console.log(coffees);
+    coffeeList.innerHTML = renderCoffees(coffees);
+
+}
+
+//Export data to HTML doc
+var coffeeList = document.querySelector('#coffees');
+coffeeList.innerHTML = renderCoffees(coffees);
+
+//Live search
+
+function searchCoffees() {
+    var searchRoast = searchBox.value.toUpperCase();
+    var filteredCoffees = [];
+    console.log(searchRoast);
+    coffees.forEach(function(coffee) {
+        if (coffee.name.toUpperCase().includes(searchRoast)) {
+            filteredCoffees.push(coffee);
+            console.log(filteredCoffees);
+        }
+    });
+    coffeeList.innerHTML = renderCoffees(filteredCoffees);
+}
