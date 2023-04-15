@@ -8,8 +8,21 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+<!--TODOS
+-fix layout-coffee list is on left, two forms are on right
+-change the filtered coffee form: add a space to type the coffee wanted, it needs to auto select roast type (removing submit button), add dropdown option for all roasts + styling
+-add other form to add a coffee to list - local storage
+-When the page loads, the coffees should be sorted by their ids in ascending order
+-style it - make it pretty
+-of course - add easter egg
+-->
+
+
+
+
     <h1>Coffee!</h1>
 
+<!--    form to select coffee-->
     <form>
         <label for="roast-selection"></label>
         <select id="roast-selection">
@@ -19,10 +32,18 @@
         </select>
         <input id="submit" type="submit" />
     </form>
+<!--    end of select form -->
 
+
+<!--add a coffee form-->
+
+<!--edd of coffee form-->
+
+<!--    place where coffees get displayed-->
     <div>
-
-        <div id="coffees"></div>
+        <div id="coffees">
+<!--            javascript generated html to display coffees-->
+        </div>
     </div>
 
     <script src="main.js"></script>
