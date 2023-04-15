@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
-          rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+          rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+          crossorigin="anonymous">
     <title></title>
     <link rel="stylesheet" href="style.css">
 </head>
@@ -18,44 +19,82 @@
 -->
 
 
-
-
-    <h1>Coffee!</h1>
+<h1>Coffee!</h1>
 
 <!--    form to select coffee-->
-    <form>
-        <label for="roast-selection"></label>
-        <select id="roast-selection">
-            <option>light</option>
-            <option>medium</option>
-            <option>dark</option>
-        </select>
-        <input id="submit" type="submit" />
-    </form>
+<!--<form>-->
+<!--    <label for="roast-selection"></label>-->
+<!--    <select id="roast-selection">-->
+<!--        <option>light</option>-->
+<!--        <option>medium</option>-->
+<!--        <option>dark</option>-->
+<!--    </select>-->
+<!--    <input id="submit" type="submit"/>-->
+<!--</form>-->
 <!--    end of select form -->
 
 
 <!--add a coffee form-->
-
+<!--FIRST FORM-->
+<div class="container">
     <!-- col- elements here -->
-<div class="row">
-    <div class="col-sm"></div>
-    <div class="col-sm">1 of 3</div>
-</div>
-    <!-- col- elements here -->
-
-
-<!--edd of coffee form-->
-<
     <div class="row">
-        <div class="col-sm">1 of 3</div>
-        <div class="col-sm">1 of 3</div>
+        <div class="col">
+        <form>
+        <div class="mb-3">
+            <label form="formGroupExampleInput" class="form-label">Roast</label>
+            <select class="form-select" id="roast-selection" aria-label="Default select">
+                <option selected="">All</option>
+                <option>Light</option>
+                <option>Medium</option>
+                <option>Dark</option>
+            </select>
+        </div>
+        <div class="mb-3">
+            <label for="formGroupExampleInput1" class="form-label">Coffee Name</label>
+            <input type="text" class="form-control" id="formGroupExampleInput1" placeholder="Enter Coffee Name">
+        </div>
+        <div class="d-grid gap-2">
+            <button class="btn btn-primary" id="submit" type="submit">Submit</button>
     </div>
+        </form>
+            </div>
+    </div>
+    <!-- col- elements here -->
+    <!-- HEADER   -->
+    <div class="row">
+        <div class="col d-flex justify-content-center mt-4">
+    <h2>Add a Coffee!</h2>
+        </div>
+        </div>
+    <!-- SECOND FORM  -->
+    <div class="row">
+        <div class="col">
+        </div>
+        <div class="mb-3">
+            <label form="formGroupExampleInput" class="form-label">Roast</label>
+            <select class="form-select" aria-label="Default select">
+                <option selected="">All</option>
+                <option>Light</option>
+                <option>Medium</option>
+                <option>Dark</option>
+            </select>
+        </div>
+        <div class="mb-3">
+            <label for="formGroupExampleInput2" class="form-label">Name</label>
+            <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Enter Coffee Name">
+        </div>
+        <div class="d-grid gap-2">
+            <button class="btn btn-primary" type="button">Submit</button>
+        </div>
+    </div>
+</div>
 
-<!--    place where coffees get displayed-->
+
+    <!--    place where coffees get displayed-->
     <div>
         <div id="coffees">
-<!--            javascript generated html to display coffees-->
+            <!--            javascript generated html to display coffees-->
         </div>
     </div>
 
