@@ -55,8 +55,11 @@ var coffees = [
     {id: 14, name: 'French', roast: 'dark'},
 ];
 
+// this line is injecting the javascript generated html into the div
 var tbody = document.querySelector('#coffees');
+// grabbing the submit button for filtered coffee list
 var submitButton = document.querySelector('#submit');
+// grabbing the selection of light, med, or dark for filtered list
 var roastSelection = document.querySelector('#roast-selection');
 
 tbody.innerHTML = renderCoffees(coffees);
