@@ -34,70 +34,68 @@
 <!--    end of select form -->
 
 
-<!--add a coffee form-->
-<!--FIRST FORM-->
+<!--container for both forms-->
 <div class="container">
-    <!-- col- elements here -->
+    <!--FIRST FORM-->
     <div class="row">
         <div class="col">
-        <form>
-        <div class="mb-3">
-            <label form="formGroupExampleInput" class="form-label">Roast</label>
-            <select class="form-select" id="roast-selection" aria-label="Default select">
-                <option selected="">All</option>
-                <option>Light</option>
-                <option>Medium</option>
-                <option>Dark</option>
-            </select>
+            <form>
+                <div class="mb-3">
+                    <label for="roast-selection" form="formGroupExampleInput" class="form-label">Roast</label>
+                    <select class="form-select" id="roast-selection">
+                        <option selected>all</option>
+                        <option>light</option>
+                        <option>medium</option>
+                        <option>dark</option>
+                    </select>
+                </div>
+                <div class="mb-3">
+                    <label for="search-coffee-name" class="form-label">Coffee Name</label>
+                    <input type="text" class="form-control" id="search-coffee-name" placeholder="Enter Coffee Name">
+                </div>
+                <div class="d-grid gap-2">
+                    <button class="btn btn-primary" id="submit" type="submit">Submit</button>
+                </div>
+            </form>
         </div>
-        <div class="mb-3">
-            <label for="formGroupExampleInput1" class="form-label">Coffee Name</label>
-            <input type="text" class="form-control" id="formGroupExampleInput1" placeholder="Enter Coffee Name">
-        </div>
-        <div class="d-grid gap-2">
-            <button class="btn btn-primary" id="submit" type="submit">Submit</button>
     </div>
-        </form>
-            </div>
-    </div>
-    <!-- col- elements here -->
-    <!-- HEADER   -->
-    <div class="row">
-        <div class="col d-flex justify-content-center mt-4">
-    <h2>Add a Coffee!</h2>
-        </div>
-        </div>
+
     <!-- SECOND FORM  -->
     <div class="row">
+        <div class="col d-flex justify-content-center mt-4">
+            <h2>Add a Coffee!</h2>
+        </div>
+    </div>
+    <div class="row">
         <div class="col">
         </div>
         <div class="mb-3">
-            <label form="formGroupExampleInput" class="form-label">Roast</label>
-            <select class="form-select" aria-label="Default select">
-                <option selected="">All</option>
-                <option>Light</option>
-                <option>Medium</option>
-                <option>Dark</option>
+            <label for="create-roast-selection" class="form-label">Roast</label>
+            <select class="form-select" id="create-roast-selection">
+                <option>light</option>
+                <option>medium</option>
+                <option>dark</option>
             </select>
         </div>
         <div class="mb-3">
-            <label for="formGroupExampleInput2" class="form-label">Name</label>
-            <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Enter Coffee Name">
+            <label for="coffeeName" class="form-label">Name</label>
+            <input type="text" class="form-control" id="coffeeName" placeholder="Enter Coffee Name">
         </div>
         <div class="d-grid gap-2">
-            <button class="btn btn-primary" type="button">Submit</button>
+            <button class="btn btn-primary" id="coffee-submit" type="submit">Submit</button>
+            <button class="btn btn-primary" id="clear">Clear All New Coffees</button>
         </div>
     </div>
 </div>
 
 
-    <!--    place where coffees get displayed-->
-    <div>
-        <div id="coffees">
-            <!--            javascript generated html to display coffees-->
-        </div>
-    </div>
+<!--    place where coffees get displayed-->
 
-    <script src="main.js"></script>
+<div id="coffees">
+    <!--javascript generated html to display coffees-->
+</div>
+
+
+<script src="main.js"></script>
 </body>
 </html>
