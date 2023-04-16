@@ -144,7 +144,7 @@ function addCoffees(e) {
 var combinedArray = coffees.concat(secondArray);
 
 // this displays the combined arrays into the html div
-tbody.innerHTML = renderCoffees(combinedArray);
+tbody.innerHTML = renderCoffees(combinedArray.reverse());
 
 // event listeners for the filter coffee button and the create coffee button
 creationSubmitButton.addEventListener('click', addCoffees);

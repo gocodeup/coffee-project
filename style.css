@@ -11,7 +11,11 @@ h1 {
     display: flex;
     justify-content: center;
     align-items: center;
+    color: #3E2D27;
 }
-h2 {
 
+
+#submit{
+    background-color: #CC7A3F;
+    color: #3E2D27;
 }
