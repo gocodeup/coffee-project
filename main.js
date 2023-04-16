@@ -8,7 +8,6 @@ function renderCoffee(coffee) {
     html += '<div class="col col-2"><p>' + coffee.roast + '</p></div>';
     html += '</div class="row">';
 
-    console.log(html);
     return html;
 
 
@@ -22,7 +21,6 @@ function renderCoffees(coffees) {
     for(var i = coffees.length - 1; i >= 0; i--) {
         html += renderCoffee(coffees[i]);
     }
-    console.log(html);
     return html;
 }
 
@@ -70,6 +68,32 @@ var tbody = document.querySelector('#coffees');
 var submitButton = document.querySelector('#submit');
 // grabbing the selection of light, med, or dark for filtered list
 var roastSelection = document.querySelector('#roast-selection');
+
+
+// search by typing coffee name
+var coffeeNameSearch = document.querySelector('#search-coffee-name');
+//adding event listener to refresh with every letter types
+coffeeNameSearch.addEventListener('keyup', function() {
+    updateCoffeesByName();
+})
+//function to update coffee list based on user typing
+function updateCoffeesByName(e) {
+    var selectedName = coffeeNameSearch.value;
+    var filteredCoffees = [];
+        combinedArray.forEach(function(coffee) {
+            if (coffee.name.toLowerCase().includes(selectedName.toLowerCase())) {
+                filteredCoffees.push(coffee);
+            }
+        });
+    console.log(filteredCoffees);
+        tbody.innerHTML = renderCoffees(filteredCoffees);
+
+}
+
+
+
+
+
 
 
 
