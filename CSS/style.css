@@ -1,28 +1,42 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+
+
 header{
     font-weight: bolder;
-    font-size: 30px;
+    font-size: 25px;
+    font-family: 'Montserrat', sans-serif;
+    color: #4f6a39;
+
 }
 
 p {
     display: flex;
     flex-direction: column;
     justify-content: end;
-    font-size: large;
-    font-size: 20px;
-    font-weight: bold;
+    font-weight: bolder;
     opacity: 70%;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 15px;
 
 
 }
 
 h1 {
-    color: navajowhite;
+    color:#612d22;
     text-align: center;
-    padding-top: 40px ;
+    padding-left: 30px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 40px;
+
 }
 
 h4 {
     font-size: 20px;
+    color:#612d22;
+    font-family: 'Montserrat', sans-serif;
 }
 
 
@@ -32,36 +46,115 @@ div {
 }
 
 div.card {
-    padding: 5px;
-    row-gap: 50px;
-    display: inline-flex;
-    width: 50vw;
+
     background-color: navajowhite;
-    border-radius: 15px;
+    border-radius: 50px;
+    box-shadow: 0 5px 10px 0 rgba(0,0,0,0.2);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 20px;
+    margin-bottom: 20px;
+
+}
+div.coffees {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 0px;
+
 }
 
-div.card header {
-    padding-right: 2rem;
+.card-header {
+    font-size: 24px;
+    font-weight: bold;
+    margin-right: 10px;
+
 }
 
 div.column {
     width: 50vw;
 }
 div.banner {
-    background-image: url("img/banner.img");
-    height: 20vh;
-    border-radius: 40px;
-
-}
-
-
-.container {
-    background-image: url("img/beanzzz.img");
-    background-repeat: no-repeat;
-    background-attachment: fixed;
+    background-image: url("img/oop.img");
+    /*display: ;*/
+    background-size: cover;
     background-position: center;
+    height: 200px; /* or your desired height */
+    width: 100%;
+}
+
+ body{
+    background-image: url("img/wtc.img");
+     background-size: cover;
+     background-position: center;
+}
+
+
+form{
+    display: grid;
+    margin-top: -10px;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+}
+
+
+div.hub{
+    background-color: navajowhite;
+    padding: 5px;
+    border-radius: 10px;
+    float: right;
+
 
 }
+
+div.popCoffee{
+    color:#612d22;
+
+}
+
+
+div{
+    row-gap: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+div.motto{
+    background-color: #4f6a39;
+    color: navajowhite;
+    border-radius: 10px;
+    font-family: 'Montserrat', sans-serif;
+    font-style: italic;
+    padding: 10px;
+    font-size: 20px;
+
+}
+
+input,select{
+    background-color: #4f6a39;
+    color: navajowhite;
+    font-family: 'Montserrat', sans-serif;
+}
+
+
+
+.banner h1 {
+    margin-right: 20px;
+}
+
+.banner img {
+    max-height: 100px;
+}
+
+.banner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
 
 
 

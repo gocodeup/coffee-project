@@ -1,45 +1,54 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Coffee</title>
-    <link rel="stylesheet" href="CSS/layout.css">
-    <link rel="stylesheet" href="CSS/resets.css">
-    <link rel="stylesheet" href="CSS/style.css">
-</head>
-<body>
-    <div class="page-wrapper">
-<!--        Stand-alone Banner Div outside of page container-->
-        <div class="banner"><h1>Coffee!</h1></div>
-<!--        page container-->
-        <div class="container">
-            <div class="row">
-<!--                coffee populated here-->
-                <div class="popCoffee">
-                    <div id="coffees"></div>
-                </div>
-<!--                selection column-->
-                <div class="search">
-                    <form>
-                        <h4>Roast Selection</h4>
-                        <label for="roast-selection"></label>
-                        <select id="roast-selection">
-                            <option>all</option>
-                            <option>light</option>
-                            <option>medium</option>
-                            <option>dark</option>
-                        </select>
-                    <div>
-                        <h4>Coffee Name</h4>
-                        <label for="search"></label>
-                        <input id="search"  type="text" placeholder="Search">
+        <!DOCTYPE html>
+        <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <title>Coffee</title>
+            <link rel="stylesheet" href="CSS/layout.css">
+            <link rel="stylesheet" href="CSS/resets.css">
+            <link rel="stylesheet" href="CSS/style.css">
+        </head>
+        <body>
+            <div class="page-wrapper">
+        <!--        page container-->
+                <div class="container">
+                    <div class="row">
+                        <div class="banner">
+                                <div class="banner-contents">
+                                <h1>Berry To Bean<br>Coffee Roasters</h1>
+                                <img src="CSS/img/cuppa.img" alt="Banner icon"></div>
+                            </div>
+                        <!--  body-->
+                        <div class="background-img"></div>
+                            <div class=slogan>
+                                <div class="motto">From berry to bean, we're passionate about crafting the perfect roast!<br>Browse our fresh selection of roasts:</div>
+                            </div>
+                        <!--                coffee populated here-->
+                            <div class="popCoffee">
+                            <div id="coffees"></div>
+                            </div>
+        <!--                selection column-->
+                        <div class="search">
+                            <div class="hub">
+                            <form>
+                                <h4>Roast Selection</h4>
+                                <label for="roast-selection"></label>
+                                <select id="roast-selection">
+                                    <option>all</option>
+                                    <option>light</option>
+                                    <option>medium</option>
+                                    <option>dark</option>
+                                </select>
+                                <div>
+                            </div>
+                                <h4>Coffee Name</h4>
+                                <label for="search"></label>
+                                <input id="search"  type="text" placeholder="Search">
+                            </form>
+                        </div>
                     </div>
-                    </form>
                 </div>
             </div>
         </div>
-    </div>
-
-    <script src="JS/main.js"></script>
-</body>
-</html>
+            <script src="JS/main.js"></script>
+        </body>
+        </html>
