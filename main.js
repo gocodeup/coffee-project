@@ -32,11 +32,11 @@ function updateCoffees(e) {
     var selectedRoast = roastSelection.value;
     var filteredCoffees = [];
     // if statement to check if all coffees are wanted or a specific roast
-    if(selectedRoast == "all") {
+    if(selectedRoast.toLowerCase() == "all") {
         tbody.innerHTML = renderCoffees(combinedArray);
     } else {
         combinedArray.forEach(function(coffee) {
-            if (coffee.roast === selectedRoast) {
+            if (coffee.roast === selectedRoast.toLowerCase()) {
                 filteredCoffees.push(coffee);
             }
         });
@@ -95,7 +95,6 @@ clearBtn.addEventListener('click', function() {
 
 // this checks if there is stored input (user created coffees), and if so, adds it to the second array
 if(storedInput) {
-    console.log("i found stored input: " + storedInput);
     secondArray = storedInput;
 }
 
@@ -112,7 +111,6 @@ function createCoffeeObject(inputName, inputRoast) {
 // this function adds the new coffees to the second array and saves them to local storage
 function addCoffees(e) {
     e.preventDefault();
-    console.log('this function ran')
     secondArray.push(createCoffeeObject(coffeeName.value, createRoastSelection.value));
     localStorage.setItem('storedArry', JSON.stringify(secondArray));
     document.location.reload();
