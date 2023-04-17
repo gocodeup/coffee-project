@@ -16,16 +16,15 @@
     <h1 class="d-flex justify-content-center">Caffeine addicts welcome here!</h1>
 </div>
 
-<!--<div id="heading-divider">-->
-<!--    <hr/>-->
-<!--</div>-->
-
-<div id="main-content" class="container-fluid">
+<div id="main-content" class="container">
     <div id="content-row" class="row d-flex justify-content-center">
-
-
+        <div id="roast-list-pane" class="coffee-list container col-sm-5 col-12">
+            <div id="roast-results" class="col .order-first " style="height: 20em; overflow-y: scroll">
+            </div>
+        </div>
+        <div class='col-sm-3 col-12'>
         <div id="pick-roast">
-            <form id="roast-search" class="pl-4">
+            <form id="roast-search">
                 <label for="roast-selection">Roasting type:</label>
                 <select class="custom-select col-11 mb-2" id="roast-selection">
                     <option value="all" selected>all</option>
@@ -37,10 +36,9 @@
                 <input id="search" type="text" class="col-11 mb-2 rounded">
                 <button id="roast-me" type="button" class="btn btn-primary col-11">Roast Me!</button>
             </form>
-            <hr class="ml-3">
         </div>
-        <div class="add-coffee d-flex align-content-center">
-            <form id="coffee-input" class="pl-4">
+        <div class="add-coffee d-flex align-content-center col-sm-8 col-12">
+            <form id="coffee-input">
                 <label for="roast-type">Roast</label>
                 <select class="custom-select col-11 mb-2" id="roast-type">
                     <option value="light">Light</option>
@@ -52,15 +50,9 @@
                 <button id="coffee-create" type="button" class="btn btn-primary col-11" onclick="addCoffee()">Brew It! <i class="fa-solid fa-mug-hot"></i></button>
             </form>
         </div>
-        <div id="roast-list-pane" class="coffee-list container col-sm-5 col-12">
-            <div id="roast-results" class="row">
-
-            </div>
         </div>
 
-
     </div>
-
 </div>
 
 
