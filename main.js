@@ -27,6 +27,7 @@ function renderCoffees(coffees) {
 function updateCoffees(e) {
     e.preventDefault(); // don't submit the form, we just want to update the data
     var selectedRoast = roastSelection.value;
+    var selectedName = coffeeNameSearch.value;
     var filteredCoffees = [];
     // if statement to check if all coffees are wanted or a specific roast
     if(selectedRoast.toLowerCase() == "all") {
@@ -39,6 +40,12 @@ function updateCoffees(e) {
         });
         tbody.innerHTML = renderCoffees(filteredCoffees);
     }
+
+    combinedArray.forEach(function(coffee) {
+        var capital = coffee.roast.charAt(0).toUpperCase() + coffee.roast.slice(1);
+        if (coffee.name.toLowerCase().includes(selectedName.toLowerCase())) {
+            console.log('You ordered a ' + capital + " " + coffee.name);
+        }  });
 
 }
 
@@ -84,7 +91,6 @@ function updateCoffeesByName(e) {
                 filteredCoffees.push(coffee);
             }
         });
-    console.log(filteredCoffees);
         tbody.innerHTML = renderCoffees(filteredCoffees);
 
 }
@@ -133,11 +139,16 @@ function createCoffeeObject(inputName, inputRoast) {
 
 // this function adds the new coffees to the second array and saves them to local storage
 function addCoffees(e) {
-    e.preventDefault();
+    // e.preventDefault();
     secondArray.push(createCoffeeObject(coffeeName.value, createRoastSelection.value));
     localStorage.setItem('storedArry', JSON.stringify(secondArray));
-    document.location.reload();
+    // document.location.reload();
+    console.log('This is where we would add the gif');
+    var timeout = setTimeout(function() {
+        document.location.reload();
+    }, 5000)
 }
+
 
 // this creates a combined array of both the original coffees and user supplied coffees
 var combinedArray = coffees.concat(secondArray);
@@ -146,5 +157,5 @@ var combinedArray = coffees.concat(secondArray);
 tbody.innerHTML = renderCoffees(combinedArray.reverse());
 
 // event listeners for the filter coffee button and the create coffee button
-creationSubmitButton.addEventListener('click', addCoffees);
+creationSubmitButton.addEventListener('click', addCoffees)
 submitButton.addEventListener('click', updateCoffees);
