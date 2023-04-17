@@ -1,8 +1,12 @@
  .coffee{
      display: flex;
      justify-content: space-between;
-     flex-wrap: wrap;
-     font-size: x-large;
+     font-size: 30px;
      text-align: center;
      align-items: center;
+     text-decoration: underline ;
+      margin: 50px;
+      padding-left: 30px;
+      padding-right: 30px;
  }
+
