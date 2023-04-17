@@ -1,3 +1,14 @@
-.coffee {
-    display: flex;
-}
+
+ .coffee{
+     display: flex;
+     justify-content: space-between;
+     font-size: 30px;
+     text-align: center;
+     align-items: center;
+     text-decoration: underline ;
+      margin: 50px;
+      padding-left: 30px;
+      padding-right: 30px;
+ }
+
+
