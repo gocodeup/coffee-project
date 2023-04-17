@@ -9,7 +9,17 @@ function renderCoffee(coffee) {
 
     return html;
 }
+// PUTS COFFEE DATA INTO TABLE WITHIN JS //
+function renderCoffee(coffee) {
 
+    var html = '<div class="coffee">';
+    var html = '<div class="coffee d-block col-4 mx-auto p-auto">';
+    // html += '<span>' + coffee.id + '</span>';
+    html += '<h1>' + coffee.name + '</h1>';
+    html += '<p>' + coffee.roast + '</p>';
+    html += '</div>';
+    return html;
+}
 function renderCoffees(coffees) {
     var html = '';
     for(var i = coffees.length - 1; i >= 0; i--) {

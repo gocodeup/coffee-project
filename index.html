@@ -10,7 +10,53 @@
 
     <h1>Coffee!</h1>
 
-            <table>
+
+            
+
+    
+
+<!--    <form>-->
+<!--        <label for="roast-selection"></label>-->
+<!--        <select id="roast-selection">-->
+<!--            <option>light</option>-->
+<!--            <option>medium</option>-->
+<!--            <option>dark</option>-->
+<!--        </select>-->
+<!--        <input id="submit" type="submit" />-->
+<!--    </form>-->
+    <div id="main-content" class="container-fluid">
+        <div id="content-row" class="row d-flex justify-content-center">
+
+
+            <div id="pick-roast" class="mb-2 mb-sm-2 col-sm-5 col-12 order-sm-2 mr-2 mb-md-0 bg-light
+    border-3 border border-dark pb-5 pt-3">
+                <form id="roast-search" class="pl-4">
+                    <label for="roast-selection1">Roasting type:</label>
+                    <select class="custom-select col-11 mb-2" id="roast-selection1">
+                        <option value="all" selected>all</option>
+                        <option value="light">light</option>
+                        <option value="medium">medium</option>
+                        <option value="dark">dark</option>
+                    </select>
+                    <label for="search1">Search by name:</label>
+                    <input id="search1" type="text" class="col-11 mb-2 rounded">
+                    <button id="roast-me" type="button" class="btn btn-primary col-11">Roast Me!</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>NAME</th>
+                <th>ROAST</th>
+            </tr>
+        </thead>
+        <tbody id="coffees"></tbody>
+    </table>
+    
+    <table>
                 <thead>
                 <tr>
                     <th>ID</th>
@@ -36,7 +82,8 @@
         </div>
     </form>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
     <script src="main.js"></script>
 </body>
 </html>
