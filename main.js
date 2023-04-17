@@ -3,9 +3,9 @@
 
 // generates html
     function renderCoffee(coffee) {
-        let html = '<div class="coffee">';
+        let html = '<div class="item">';
         html += '<p>' + coffee.name + '</p>';
-        html += '<p class="roast text-secondary">' + coffee.roast + '</p>';
+        html += '<p>' + coffee.roast + '</p>';
         html += '</div>';
 
         return html;

@@ -4,33 +4,34 @@
     box-sizing: border-box;
 }
 
-/*.coffee{*/
-/*    display:inline-flex;*/
-/*    justify-content: space-around;*/
-/*    flex-wrap: wrap;*/
-/*    font-weight: bold;*/
-/*    font-size: 30px;*/
-/*     margin: 40px;*/
-/*     padding-left: 30px;*/
-/*     padding-right: 30px;*/
-/*}*/
-
-
-.coffee {
+#coffees {
     display: flex;
-    align-items: center;
-    gap: 10px;
+    flex-wrap: wrap;
 }
 
-/*form{*/
-/*    display: flex;*/
-/*    justify-content: end;*/
-/*    align-items: center;*/
+#coffees > div {
+    flex: 50%; /* or - flex: 0 50% - or - flex-basis: 50% - */
+    /*demo*/
+    margin-bottom: 10px;
+}
 
-/*}*/
 .roast {
     font-size: 18px;
-
-
 }
+
+
+.item {
+    width: 100%;
+    display: flex;
+    gap: 7px;
+    /*justify-content: center;*/
+}
+
+
+
+
+
+
+
+
 
