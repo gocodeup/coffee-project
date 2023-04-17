@@ -47,7 +47,6 @@ function coffeeNames(event){
         tbody.innerHTML = renderCoffees(filtered);
 
 
-
 }
 
 // from http://www.ncausa.org/About-Coffee/Coffee-Roasts-Guide
