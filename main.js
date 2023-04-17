@@ -40,7 +40,7 @@ function coffeeNames(event){
         //print on html
         var filtered = [];
         for(var i = 0; i<coffees.length; i++){
-            if(coffees[i].name.indexOf(name)!==-1 && coffees[i].name.indexOf(name)<1)
+            if((coffees[i].name.toLowerCase()).indexOf(name.toLowerCase())!==-1 && (coffees[i].name.toLowerCase()).indexOf(name.toLowerCase())<1)
                 filtered.push(coffees[i]);
         }
         if(filtered.length>0)
