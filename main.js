@@ -55,3 +55,35 @@ var roastSelection = document.querySelector('#roast-selection');
 tbody.innerHTML = renderCoffees(coffees);
 
 submitButton.addEventListener('click', updateCoffees);
+
+
+// ------add coffee------
+var newName = document.getElementById('inputNewCoffee');
+var newRoast = document.getElementById('roast-selection-new');
+var submitNew = document.getElementById('submitNewCoffee');
+submitNew.addEventListener('click', submitCoffeeInfo);
+
+function submitCoffeeInfo (e){
+    e.preventDefault()
+
+    console.log(newName.value);
+    console.log(newRoast.value);
+
+    var newCoffee = {
+        id: coffees.length + 1,
+        name: newName.value,
+        roast: newRoast.value
+    }
+
+    console.log(newCoffee);
+    coffees.push(newCoffee);
+    tbody.innerHTML = renderCoffees(coffees);
+};
+
+
+
+
+
+
+
+

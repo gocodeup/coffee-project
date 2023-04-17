@@ -22,7 +22,7 @@
 
         <div class="row">
 
-            <!--            coffe column-->
+            <!--            coffee column-->
             <div class="col-6">
                 <table>
                     <thead>
@@ -38,6 +38,7 @@
 
             <!--            filters column-->
             <div class="col-6">
+
                 <form>
                     <label for="roast-selection"></label>
                     <select id="roast-selection">
@@ -47,6 +48,30 @@
                     </select>
                     <input id="submit" type="submit"/>
                 </form>
+
+<!--                add coffee-->
+                <hr>
+                <div>
+                <form id="createCoffeeForm">
+
+                    <div>
+                    <label for="roast-selection-new" class="form-label">Roast</label>
+                    <select id="roast-selection-new" name="roast">
+                        <option>light</option>
+                        <option>medium</option>
+                        <option>dark</option>
+                    </select>
+                    </div>
+
+                    <div>
+                    <label for="inputNewCoffee">Name</label>
+                    <input type="text" class="form-control" id="inputNewCoffee" name="name">
+                    <input id="submitNewCoffee" type="submit"/>
+                    </div>
+
+                </form>
+                </div>
+
             </div>
 
 
