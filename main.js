@@ -26,9 +26,9 @@ function updateCoffees(e) {
     var selectedRoast = roastSelection.value;
     var filteredCoffees = [];
     coffees.forEach(function(coffee) {
-        if (coffee.roast === selectedRoast) {
+        if (coffee.roast === selectedRoast.toLowerCase()) {
             filteredCoffees.push(coffee);
-        } else if (selectedRoast === 'all') {
+        } else if (selectedRoast.toLowerCase() === 'all') {
             filteredCoffees.push(coffee);
         }
     });

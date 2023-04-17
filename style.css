@@ -14,6 +14,6 @@ td, th {
     padding: 5px 10px;
 }
 
-h1{
+select, span, input{
     font-family: 'Chivo Mono';
 }
