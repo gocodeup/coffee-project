@@ -1,7 +1,6 @@
 "use strict"
 //not sure what JSON does but it works?
 var  allCoffee = JSON.parse(localStorage.getItem("coffeeList"));
-console.log(allCoffee);
 var coffees = [];
 
 function getCoffees() {
@@ -105,6 +104,8 @@ function searchFilter() {
     }
     return renderCoffees(filteredCoffees);
 }
+
+//Brew Portion
 
 let roastType = document.querySelector('#roast-type');
 let create = document.querySelector('#create');
