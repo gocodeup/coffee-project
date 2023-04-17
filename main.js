@@ -19,33 +19,63 @@ function renderCoffees(coffees) {
     return html;
 }
 
+
 function updateCoffees(e) {
     e.preventDefault(); // don't submit the form, we just want to update the data
     var selectedRoast = roastSelection.value;
-    var filteredCoffees = [];
+    filteredCoffees = [];
 
     // If the selected option is all then push each coffee
     if (selectedRoast === 'all') {
         coffees.forEach(coffee => {
             filteredCoffees.push(coffee)
         })
-    // If the roast is selected, filter by roast
+        tbody.innerHTML = renderCoffees(coffees);
     } else {
         coffees.forEach(function (coffee) {
                 if (coffee.roast === selectedRoast) {
                     filteredCoffees.push(coffee);
                 }
+                tbody.innerHTML = renderCoffees(filteredCoffees);
             }
         )
     }
-    // render html to body
-    tbody.innerHTML = renderCoffees(filteredCoffees);
-
 }
 
 //Function to run on select change
-const triggerInput = function (e) {
+const triggerSelect = function (e) {
     updateCoffees(e)
+}
+
+//function to run on input on change
+// function returnText() {
+//
+//     var selectedName = nameSelection.value;
+//     var input = '';
+//     input += selectedName
+//
+//     let filteredNames = coffees.filter((e) => {
+//
+//         return Object.values(e).some((value) => {
+//             return value.toString().toLowerCase().includes(input);
+//         });
+//     });
+//
+//     console.log(filteredNames);
+// };
+
+function filterName(e) {
+
+    var selectedName = nameSelection.value;
+    var input = '';
+    input += selectedName
+    let result = filteredCoffees.filter(coffee => {
+        return coffee.name.toLowerCase().includes(input)
+    })
+
+    tbody.innerHTML = renderCoffees(result)
+
+    console.log(result)
 }
 
 
@@ -67,14 +97,22 @@ var coffees = [
     {id: 14, name: 'French', roast: 'dark'},
 ];
 
+var filteredCoffees = coffees
+
+// selectors
 var tbody = document.querySelector('#coffees');
 var submitButton = document.querySelector('#submit');
 var roastSelection = document.querySelector('#roast-selection');
+var nameSelection = document.querySelector('#name-selection');
 
+//render all coffees to body
 tbody.innerHTML = renderCoffees(coffees);
 
+
+//Event listeners
 submitButton.addEventListener('click', updateCoffees);
-roastSelection.addEventListener('change', triggerInput)
+roastSelection.addEventListener('change', triggerSelect);
+nameSelection.addEventListener('keyup', filterName)
 
 // })
 
