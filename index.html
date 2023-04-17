@@ -9,52 +9,29 @@
 
 </head>
 <body>
+    <h1 class="">Coffee!</h1>
+<!--    can I finally work?-->
 
-<h1 class="text-center">Coffee!</h1>
-<hr>
-<div class="container">
-    <div class="row" >
-        <div class="col-6 d-flex">
-                <h2>Fresh Brewed Coffee</h2>
-        </div>
-            <div class="col-6 d-flex justify-content-end">
-                <h2>Roast Selection</h2>
-            </div>
-        </div>
-        </div>
+    <form>
+        <label for="roast-selection"></label>
+        <select id="roast-selection">
+            <option>all</option>
+            <option>light</option>
+            <option>medium</option>
+            <option>dark</option>
+        </select>
+        <input id="name-selection">
+        <input id="submit" type="submit" />
+    </form>
+
+
+
+
+    <div id="coffees">
+
     </div>
 
-
-<div class="container">
-    <div class="row">
-        <div id="coffees">
-
-
-
-        </div>
-    </div>
-
-
-
-
-
-
-           </div>
-        </div>
-        <form>
-            <label for="roast-selection"></label>
-            <select id="roast-selection">
-                <option>all</option>
-                <option>light</option>
-                <option>medium</option>
-                <option>dark</option>
-            </select>
-            <input id="name-selection">
-            <input id="submit" type="submit"/>
-        </form>
-
-
-        <script src="bootstrap/js/bootstrap.js"></script>
-        <script src="main.js"></script>
+    <script src="bootstrap/js/bootstrap.js"></script>
+    <script src="main.js"></script>
 </body>
 </html>
