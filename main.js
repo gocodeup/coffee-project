@@ -20,7 +20,6 @@
     }
 
 
-
     function updateCoffees(e) {
         e.preventDefault(); // don't submit the form, we just want to update the data
         const selectedRoast = roastSelection.value;
@@ -64,21 +63,48 @@
         e.preventDefault()
         const inputRoast = roastType.value
         const inputCoffee = nameCoffee.value
-        addedCoffees.push({id: coffees.length + 1, name: inputCoffee, roast: inputRoast})
-
-        tbody.innerHTML = renderCoffees(addedCoffees)
+        //add new coffee object to addedCoffee array
+        addedCoffees.push({id: addedCoffees.length + 1, name: inputCoffee, roast: inputRoast})
+        // tbody.innerHTML = renderCoffees(addedCoffees)
         //clears input
         nameCoffee.value = ''
+        //sets select input to selected roast
         roastSelection.value = inputRoast
+        //set added coffees array to Local storage
+        localStorage.setItem("coffees", JSON.stringify(addedCoffees));
+
+        //run update coffees function
         updateCoffees(e)
 
 
     }
 
+    console.log(localStorage.getItem("coffees"));
+
+
 //toggle order functionality
     const toggleOrder = (e) => {
-        addedCoffees.reverse()
-        updateCoffees(e)
+        if (storedCoffees) {
+            console.log('somethin')
+            addedCoffees = storedCoffees
+            storedCoffees.reverse()
+            updateCoffees(e)
+
+        } else {
+            addedCoffees.reverse()
+            updateCoffees(e)
+
+        }
+    }
+
+// Clear local button
+    const clearLocal = () => {
+        //clear local storage
+        localStorage.clear();
+        //reset added coffees to default
+        addedCoffees = coffees
+        //render default coffees
+        tbody.innerHTML = renderCoffees(coffees)
     }
 
 
@@ -101,6 +127,7 @@
     ];
 
     let addedCoffees = [...coffees]
+    let storedCoffees = JSON.parse(localStorage.getItem("coffees"))
 
 
 // selectors
@@ -111,7 +138,8 @@
     const nameSelection = document.querySelector('#name-selection');
     const roastType = document.querySelector('#roast-type');
     const nameCoffee = document.querySelector('#name-coffee');
-    const toggleBtn = document.querySelector('#ascend')
+    const toggleBtn = document.querySelector('#toggle')
+    const clearBtn = document.querySelector('#clear-local')
 
 
 //Event listeners
@@ -120,17 +148,10 @@
     roastSelection.addEventListener('change', triggerSelect);
     nameSelection.addEventListener('keyup', filterName);
     toggleBtn.addEventListener('click', toggleOrder)
+    clearBtn.addEventListener('click', clearLocal)
 
-    //render all coffees to body
-
-    tbody.innerHTML = renderCoffees(coffees);
-
-    //Local storage
-
-    localStorage.setItem('myCoffees', 'added coffees here')
-    const storedCoffees = localStorage.getItem("myCoffees");
-    console.log(storedCoffees)
-
+//render original coffees to body if there is no local storage
+    tbody.innerHTML = renderCoffees(storedCoffees || addedCoffees);
 
 })()
 
