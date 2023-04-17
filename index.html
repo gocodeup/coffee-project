@@ -7,7 +7,7 @@
           integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
 </head>
-<body id="body-color">
+<body id="body-bg-color">
 <!--HEADER CONTAINER-->
 <div class="container">
     <p class="text-center display-2 fw-bold">Coffee!</p>
@@ -38,11 +38,11 @@
     <!--CONTAINER WRAPPING THE CHOOSE COFFEE AND ADD COFFEE SECTIONS-->
     <div class="container">
         <!--CHOOSE COFFEE NAME AND ROAST-->
-        <section class="container d-flex flex-column ">
+        <section class="container d-flex flex-column">
             <form>
                 <div class="container d-flex flex-column">
                     <label for="roast-selection" class="fw-bold mb-1">Roast</label>
-                    <select id="roast-selection" class="custom-select">
+                    <select id="roast-selection" class="custom-select py-1">
                         <option id="all">all</option>
                         <option id="light">light</option>
                         <option id="medium">medium</option>
@@ -66,10 +66,7 @@
             <form class="add-new-coffee">
                 <div class="container d-flex flex-column">
                     <label for="roast-selection" class="fw-bold mb-1">Roast</label>
-
-                    <select id="roast-selection-2" class="custom-select">
-                        <option>all</option>
-
+                    <select id="roast-selection-2" class="custom-select py-1">
                         <option>light</option>
                         <option>medium</option>
                         <option>dark</option>
@@ -90,10 +87,10 @@
     <!--END OF CONTAINER FOR ALL THREE SECTIONS-->
 </div>
 <div class="container mt-2 d-flex flex-column justify-content-center w-100">
-    <hr class="w-75 mx-auto">
+    <hr class=" w-100 mx-auto">
 
     <div class="form-check form-switch mx-auto">
-        <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
+        <input class="form-check-input" type="checkbox" role="switch" id="dark-mode-switch">
         <label class="form-check-label me-2" for="flexSwitchCheckDefault">Day </label><i
             class="fa-regular fa-lightbulb"></i>
     </div>
