@@ -48,22 +48,6 @@ const triggerSelect = function (e) {
 }
 
 //function to run on input on change
-// function returnText() {
-//
-//     var selectedName = nameSelection.value;
-//     var input = '';
-//     input += selectedName
-//
-//     let filteredNames = coffees.filter((e) => {
-//
-//         return Object.values(e).some((value) => {
-//             return value.toString().toLowerCase().includes(input);
-//         });
-//     });
-//
-//     console.log(filteredNames);
-// };
-
 function filterName(e) {
 
     var selectedName = nameSelection.value;
@@ -72,7 +56,7 @@ function filterName(e) {
     let result = filteredCoffees.filter(coffee => {
         return coffee.name.toLowerCase().includes(input)
     })
-
+    // render the Coffees with result
     tbody.innerHTML = renderCoffees(result)
 
     console.log(result)
