@@ -107,3 +107,21 @@ function searchFilter() {
     return renderCoffees(filteredCoffees);
 }
 
+let roastType = document.querySelector('#roast-type');
+let create = document.querySelector('#create');
+
+function addCoffee(){
+    let newCoffee = {
+        id: coffees[coffees.length-1].id +1,
+        roast: roastType.value,
+        name: create.value
+    };
+    coffees.push(newCoffee);
+    let x = [];
+
+    for (let i = 0; i < coffees.length; i++){
+        x = x + coffees[i];
+    }
+    alert(`Your ${newCoffee.name} ${newCoffee.roast} has been added!`);
+    updateCoffees();
+}
