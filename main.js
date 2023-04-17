@@ -1,12 +1,12 @@
-"use strict"
+// "use strict"
 
 // displays individual coffees
 function renderCoffee(coffee) {
-    var html = '<tr class="coffee">';
-    html += '<td>' + coffee.id + '</td>';
-    html += '<td>' + coffee.name + '</td>';
-    html += '<td>' + coffee.roast + '</td>';
-    html += '</tr>';
+    var html = '<div class="coffee w-50 d-flex flex-nowrap my-2">';
+    // html += '<td>' + coffee.id + '</td>';
+    html += '<h4 class=" text-nowrap mb-0 ">' + coffee.name +  '</h4>';
+    html += '<p class="ms-1 mt-1" style="color: slategray">' + coffee.roast + '</p>';
+    html += '</div>';
 
     return html;
 }
@@ -14,7 +14,7 @@ function renderCoffee(coffee) {
 // displays all coffees
 function renderCoffees(coffees) {
     var html = '';
-    for(var i= coffees.length + 1; i >= 0; i++) {
+    for(var i = 0; i < coffees.length; i++) {
         html += renderCoffee(coffees[i]);
     }
     return html;
@@ -55,9 +55,9 @@ var coffees = [
 var tbody = document.querySelector('#coffees');
 var submitButton = document.querySelector('#submit');
 var roastSelection = document.querySelector('#roast-selection');
-
+//
 tbody.innerHTML = renderCoffees(coffees);
-
+//
 submitButton.addEventListener('click', updateCoffees);
 
 //Add coffees to list
@@ -70,15 +70,15 @@ function addCoffees (input) {
     coffees.push(input);
     console.log(coffees);
     coffeeList.innerHTML = renderCoffees(coffees);
-
 }
+var addCoffeeBtn = document.getElementById('add-coffee');
 
-//Export data to HTML doc
+
+// //Export data to HTML doc
 var coffeeList = document.querySelector('#coffees');
-coffeeList.innerHTML = renderCoffees(coffees);
+// coffeeList.innerHTML = renderCoffees(coffees);
 
 //Live search
-
 function searchCoffees() {
     var searchRoast = searchBox.value.toUpperCase();
     var filteredCoffees = [];
@@ -91,4 +91,26 @@ function searchCoffees() {
     });
     coffeeList.innerHTML = renderCoffees(filteredCoffees);
 }
-console.log(renderCoffees());
+// console.log(renderCoffees(coffees));
+
+// JS CODE FOR DARK MODE
+var bodyColor  = document.getElementById('body-color');
+var modeSwitch = document.getElementById('flexSwitchCheckDefault');
+var modeText = document.getElementsByClassName('form-check-label')
+modeSwitch.addEventListener("click", function (){
+    var onOff = modeSwitch.checked;
+    if (onOff === true){
+        bodyColor.style.backgroundColor = 'black';
+        bodyColor.style.color = 'white';
+        modeText[0].innerText = 'Night '
+    } else if (onOff === false){
+        bodyColor.style.backgroundColor = 'white';
+        bodyColor.style.color = 'black';
+        modeText[0].innerText = 'Day ';
+
+    }
+})
+// END OF JS CODE FOR DARK MODE
+
+
+
