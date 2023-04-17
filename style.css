@@ -1,25 +1,36 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
- .coffee{
-     display:inline-flex;
-     justify-content: space-around;
-     flex-wrap: wrap;
-     font-weight: bold;
-     font-size: 30px;
-     text-decoration: underline ;
-      margin: 40px;
-      padding-left: 30px;
-      padding-right: 30px;
- }
+/*.coffee{*/
+/*    display:inline-flex;*/
+/*    justify-content: space-around;*/
+/*    flex-wrap: wrap;*/
+/*    font-weight: bold;*/
+/*    font-size: 30px;*/
+/*     margin: 40px;*/
+/*     padding-left: 30px;*/
+/*     padding-right: 30px;*/
+/*}*/
 
- form{
-     display: flex;
-     justify-content: end;
-     align-items: center;
 
- }
+.coffee {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
 
- p{
-     padding: 5px;
+/*form{*/
+/*    display: flex;*/
+/*    justify-content: end;*/
+/*    align-items: center;*/
 
- }
+/*}*/
+.roast {
+    font-size: 18px;
+
+
+}
 
