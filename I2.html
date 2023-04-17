@@ -39,13 +39,29 @@
             <hr class="ml-3">
         </div>
 
+
         <div id="roast-list-pane" class="container col-sm-5 col-12 order-sm-1 bg-light border border-3 border-dark pb-3 mr-sm-1 mr-2 ml-0 ml-md-1 pt-3">
             <div id="roast-results" class="row">
 
             </div>
         </div>
+        <div class="add-coffee d-flex align-content-center">
+            <form id="coffee-input" class="pl-4">
+                <label for="roast-selection1">Roast</label>
+                <select class="custom-select col-11 mb-2" id="roast-type">
+                    <option value="light">Light</option>
+                    <option value="medium">Medium</option>
+                    <option value="dark">Dark</option>
+                </select>
+                <label for="create">Name</label>
+                <input id="create" type="text" class="col-11 mb-2 rounded">
+                <button id="coffee-create" type="button" class="btn btn-primary col-11">Make It!</button>
+            </form>
+            <hr class="ml-3">
+        </div>
 
     </div>
+
 </div>
 
 
