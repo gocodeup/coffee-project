@@ -3,6 +3,14 @@
     margin: 0;
     padding: 0;
 }
+body{
+    /*background-image: url('assets/espresso.gif');*/
+    background-size: 100%;
+    background-color: lightgreen;
+}
+.container-fluid{
+    background-image: url("https://gifdb.com/gif/good-morning-coffee-beans-wansfo3marb0r0m4.html?");
+}
 h1, h2 {
     font-family: Arial;
     font-weight: bolder;

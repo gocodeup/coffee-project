@@ -4,7 +4,7 @@ var  allCoffee = JSON.parse(localStorage.getItem("coffeeList"));
 console.log(allCoffee);
 var coffees = [];
 
-function getStoredCoffees() {
+function getCoffees() {
     if (allCoffee) {
         coffees = allCoffee;
     } else if (!allCoffee) {
@@ -26,8 +26,7 @@ function getStoredCoffees() {
         ]
     }
 }
-
-getStoredCoffees();
+getCoffees()
 //variables for event listeners
 var roast = document.querySelector('#roast-selection1');
 var search = document.querySelector('#search1');
