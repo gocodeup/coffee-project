@@ -1,10 +1,11 @@
 "use strict"
+"use strict"
 
 function renderCoffee(coffee) {
-    var html = '<div class="coffee row">';
+    var html = '<div class="coffee col">';
     html += '<p class="d-none">' + coffee.id + '</p>';
-    html += '<div class="col-6">' + coffee.name + '</div>';
-    html += '<div class="col-6">' + coffee.roast + '</div>';
+    html += '<div class="fs-2 ms-2 me-5 text-uppercase col-6">' + coffee.name + '</div>'+'<div></div>';
+    html += '<div class="fs-3 ms-2 mb-5 text-black-50 col-6">' + coffee.roast + '</div>';
     html += '</div>';
 
     return html;
@@ -38,18 +39,18 @@ function updateCoffees(e) {
 
 function coffeeNames(event){
     var name = searchName.value;
-        //make one for all***
-        //filter the coffees by roast
-        //filter coffees by name
-        //print on html
-        var filtered = [];
-        for(var i = 0; i<coffees.length; i++){
-            if((coffees[i].name.toLowerCase()).indexOf(name.toLowerCase())!==-1 && (coffees[i].name.toLowerCase()).indexOf(name.toLowerCase())<1)
-                filtered.push(coffees[i]);
-        }
-        if(filtered.length>0) {
-            tbody.innerHTML = renderCoffees(filtered);
-        }
+    //make one for all***
+    //filter the coffees by roast
+    //filter coffees by name
+    //print on html
+    var filtered = [];
+    for(var i = 0; i<coffees.length; i++){
+        if((coffees[i].name.toLowerCase()).indexOf(name.toLowerCase())!==-1 && (coffees[i].name.toLowerCase()).indexOf(name.toLowerCase())<1)
+            filtered.push(coffees[i]);
+    }
+    if(filtered.length>0) {
+        tbody.innerHTML = renderCoffees(filtered);
+    }
 
 }
 // new function that adds a new coffee
@@ -64,7 +65,7 @@ function coffeeNew(event){
         roast: roastLvl.value
     };
     if (newCoffee.name.length>0)
-    coffees.push(newCoffee);
+        coffees.push(newCoffee);
     tbody.innerHTML = renderCoffees(coffees);
 
 }
