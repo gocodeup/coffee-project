@@ -4,7 +4,7 @@
     padding: 0;
 }
 body{
-    /*background-image: url('assets/espresso.gif');*/
+    <img src="pics"
     background-size: 100%;
     background-color: lightgreen;
 }
@@ -23,11 +23,6 @@ h1, h2 {
 #heading-divider {
     display: flex;
     justify-content: center;
-}
-/*.java-search {*/
-/*    padding: 1em;*/
-}
-.java-display {
 }
 label {
     font-weight: bold;
@@ -49,42 +44,23 @@ label {
     align-items: center;
     margin-top: 0;
 }
-
-
-/*.border-3 {*/
-/*    border-width: 2.5em;*/
-}
-
 #pick-roast, #roast-list-pane, .add-coffee {
     border-radius: 3%;
-    max-width: 40%;
-    margin: 1em;
+    /*max-width: 40%;*/
 }
-
-/*#pick-roast{*/
-/*    max-width: 30%;*/
-/*}*/
-/*.add-coffee{*/
-/*    max-width: 30%;*/
-}
-.roast-box {
-    display: flex;
-
-}
-#main-heading {
+/*#main-heading {
     border-radius: 15%;
 }
-/*@media screen and (max-width:676px) {*/
-/*    .roast-subtitle {*/
-/*        overflow-wrap: break-word;*/
-/*    }*/
-/*}*/
+*/
 .coffee-list{
     background-color: whitesmoke;
     border-width: 5px;
     border-color: black;
     padding: 3px;
 }
-.add-coffee{
-    padding: 1em 0 2em 0;
+#roast-search{
+    margin: 1em;
+}
+#roast-list-pane{
+    margin-top: 2.5em;
 }
