@@ -12,6 +12,7 @@ function renderCoffee(coffee) {
 
 function renderCoffees(coffees) {
     var html = '';
+
     for(var i = 0; i < coffees.length ; i++) {
         html += renderCoffee(coffees[i]);
     }
