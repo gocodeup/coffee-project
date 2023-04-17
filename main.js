@@ -27,9 +27,6 @@
 
         // If the selected option is all then push each coffee
         if (selectedRoast === 'all') {
-            coffees.forEach(coffee => {
-                filteredCoffees.push(coffee)
-            })
             tbody.innerHTML = renderCoffees(coffees);
         } else {
             coffees.forEach(function (coffee) {
@@ -71,6 +68,13 @@
         nameCoffee.value = ''
     }
 
+//Ascend functionality
+    const toggleOrder = () => {
+       const revCoffee =  filteredCoffees.reverse()
+        tbody.innerHTML = renderCoffees(revCoffee)
+    }
+
+
 
 // from http://www.ncausa.org/About-Coffee/Coffee-Roasts-Guide
     const coffees = [
@@ -100,14 +104,15 @@
     const nameSelection = document.querySelector('#name-selection');
     const roastType = document.querySelector('#roast-type');
     const nameCoffee = document.querySelector('#name-coffee');
-
+    const toggleBtn = document.querySelector('#ascend')
 
 
 //Event listeners
     submitSearch.addEventListener('click', updateCoffees);
     submitAdd.addEventListener('click', addCoffee);
     roastSelection.addEventListener('change', triggerSelect);
-    nameSelection.addEventListener('keyup', filterName)
+    nameSelection.addEventListener('keyup', filterName);
+    toggleBtn.addEventListener('click', toggleOrder)
 
     //render all coffees to body
 
