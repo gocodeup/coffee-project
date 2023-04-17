@@ -9,30 +9,35 @@
 
 </head>
 <body>
-    <h1 class="">Coffee!</h1>
-
-
 <h1 class="text-center">Coffee!</h1>
+<form>
+    <label for="roast-selection"></label>
+    <select id="roast-selection">
+        <option>all</option>
+        <option>light</option>
+        <option>medium</option>
+        <option>dark</option>
+    </select>
+    <input id="name-selection">
+    <input id='submit-search' type="submit"/>
+</form>
+<h1 class="text-center">Add Coffee!</h1>
+<form>
+    <label for="roast-type"></label>
+    <select id="roast-type">
+        <option>light</option>
+        <option>medium</option>
+        <option>dark</option>
+    </select>
+    <input id="name-coffee">
+    <input id='submit-add' type="submit"/>
+</form>
 
+<div id="coffees">
 
+</div>
 
-    <form>
-        <label for="roast-selection"></label>
-        <select id="roast-selection">
-            <option>all</option>
-            <option>light</option>
-            <option>medium</option>
-            <option>dark</option>
-        </select>
-        <input id="name-selection">
-        <input id="submit" type="submit" />
-    </form>
-
-    <div id="coffees">
-
-    </div>
-
-    <script src="bootstrap/js/bootstrap.js"></script>
-    <script src="main.js"></script>
+<script src="bootstrap/js/bootstrap.js"></script>
+<script src="main.js"></script>
 </body>
 </html>
