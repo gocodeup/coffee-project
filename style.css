@@ -24,6 +24,7 @@ h1 {
 #submit{
     background-color: #99532D;
     color: #F4E2CA;
+
     border-color: brown;
 }
 
@@ -41,4 +42,19 @@ h1 {
 
 body{
     background-color: #F4E8DA;
+
+}
+
+#test-menu {
+    /*width: 500px;*/
+    /*height: 500px;*/
+    background-image: url("assets/plain-chalkboard-bg.jpeg");
+    background-size: cover;
+    border: 15px solid #99532d;
+}
+
+#coffees {
+    color: white;
+    column-count: 3;
+
 }
