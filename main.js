@@ -56,7 +56,18 @@ function coffeeNames(event){
 // add 1 to last id
 // add a thing to get what was input into the bar
 // add a roast selector and way to get access to it
+function coffeeNew(event){
+    event.preventDefault();
+    var newCoffee = {
+        id: coffees.length+1,
+        name: coffeeName.value,
+        roast: roastLvl.value
+    };
+    if (newCoffee.name.length>0)
+    coffees.push(newCoffee);
+    tbody.innerHTML = renderCoffees(coffees);
 
+}
 
 
 
@@ -78,10 +89,14 @@ var coffees = [
     {id: 14, name: 'French', roast: 'dark'},
 ];
 
+var newCoffee = document.querySelector('#newCoffee');
+var roastLvl = document.querySelector('#roast-lvl');
+var coffeeName = document.querySelector('#new-coffee-name')
 var tbody = document.querySelector('#coffees');
 var submitButton = document.querySelector('#roast-selection');
 var roastSelection = document.querySelector('#roast-selection');
 var searchName = document.querySelector('#searchName')
 tbody.innerHTML = renderCoffees(coffees);
 submitButton.addEventListener('change', updateCoffees);
-searchName.addEventListener('keyup', coffeeNames)
+searchName.addEventListener('keyup', coffeeNames);
+newCoffee.addEventListener('click', coffeeNew);
