@@ -71,3 +71,12 @@ label {
 /*        overflow-wrap: break-word;*/
 /*    }*/
 /*}*/
+.coffee-list{
+    background-color: whitesmoke;
+    border-width: 5px;
+    border-color: black;
+    padding: 3px 1em;
+}
+.add-coffee{
+    padding: 1em 0 2em 0;
+}
