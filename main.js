@@ -4,8 +4,8 @@
 // generates html
     function renderCoffee(coffee) {
         let html = '<div class="item">';
-        html += '<p>' + coffee.name + '</p>';
-        html += '<p>' + coffee.roast + '</p>';
+        html += '<p class="nameOfCoffee">' + coffee.name + '</p>';
+        html += '<p class="nameOfRoast">' + coffee.roast + '</p>';
         html += '</div>';
 
         return html;

@@ -15,8 +15,15 @@
     margin-bottom: 10px;
 }
 
-.roast {
-    font-size: 18px;
+p.nameOfCoffee {
+    font-size: 30px;
+    font-weight: bold;
+
+}
+p.nameOfRoast{
+  font-size: 25px;
+    margin-top: 4px;
+    color: lightgray;
 }
 
 
