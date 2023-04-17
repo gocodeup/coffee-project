@@ -20,16 +20,17 @@
     }
 
 
+
     function updateCoffees(e) {
         e.preventDefault(); // don't submit the form, we just want to update the data
         const selectedRoast = roastSelection.value;
-        filteredCoffees = [];
+        let filteredCoffees = [];
 
         // If the selected option is all then push each coffee
         if (selectedRoast === 'all') {
-            tbody.innerHTML = renderCoffees(coffees);
+            tbody.innerHTML = renderCoffees(addedCoffees);
         } else {
-            coffees.forEach(function (coffee) {
+            addedCoffees.forEach(function (coffee) {
                     if (coffee.roast === selectedRoast) {
                         filteredCoffees.push(coffee);
                     }
@@ -48,8 +49,8 @@
     function filterName() {
         const selectedName = nameSelection.value;
         let input = '';
-        input += selectedName
-        let result = filteredCoffees.filter(coffee => {
+        input += selectedName.toLowerCase()
+        let result = addedCoffees.filter(coffee => {
             return coffee.name.toLowerCase().includes(input)
         })
         // render the Coffees with result
@@ -57,23 +58,28 @@
         // console.log(result)
     }
 
+
 //add a coffee function
     const addCoffee = (e) => {
         e.preventDefault()
         const inputRoast = roastType.value
         const inputCoffee = nameCoffee.value
-        coffees.push({id: coffees.length + 1, name: inputCoffee, roast: inputRoast})
-        tbody.innerHTML = renderCoffees(coffees)
+        addedCoffees.push({id: coffees.length + 1, name: inputCoffee, roast: inputRoast})
+
+        tbody.innerHTML = renderCoffees(addedCoffees)
         //clears input
         nameCoffee.value = ''
+        roastSelection.value = inputRoast
+        updateCoffees(e)
+
+
     }
 
-//Ascend functionality
-    const toggleOrder = () => {
-       const revCoffee =  filteredCoffees.reverse()
-        tbody.innerHTML = renderCoffees(revCoffee)
+//toggle order functionality
+    const toggleOrder = (e) => {
+        addedCoffees.reverse()
+        updateCoffees(e)
     }
-
 
 
 // from http://www.ncausa.org/About-Coffee/Coffee-Roasts-Guide
@@ -94,7 +100,8 @@
         {id: 14, name: 'French', roast: 'dark'},
     ];
 
-    let filteredCoffees = coffees
+    let addedCoffees = [...coffees]
+
 
 // selectors
     const tbody = document.querySelector('#coffees');
@@ -117,6 +124,12 @@
     //render all coffees to body
 
     tbody.innerHTML = renderCoffees(coffees);
+
+    //Local storage
+
+    localStorage.setItem('myCoffees', 'added coffees here')
+    const storedCoffees = localStorage.getItem("myCoffees");
+    console.log(storedCoffees)
 
 
 })()
