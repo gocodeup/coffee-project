@@ -55,3 +55,12 @@ var roastSelection = document.querySelector('#roast-selection');
 tbody.innerHTML = renderCoffees(coffees);
 
 submitButton.addEventListener('click', updateCoffees);
+
+
+function addCoffee(){
+    var newCoffee = {
+        id: coffees[coffees.length-1].id+1,
+        name: inputRoast.value,
+
+    }
+}
