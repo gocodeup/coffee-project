@@ -54,7 +54,8 @@ function coffeeNames(event){
 }
 // new function that adds a new coffee
 // add 1 to last id
-//
+// add a thing to get what was input into the bar
+// add a roast selector and way to get access to it
 
 
 
