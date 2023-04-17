@@ -1,0 +1,65 @@
+
+* {
+    margin: 0;
+    padding: 0;
+}
+h1, h2 {
+    font-family: Arial;
+    font-weight: bolder;
+    text-decoration: underline;
+    color: darkslategrey;
+}
+.btn-primary {
+    background-color: saddlebrown;
+}
+#heading-divider {
+    display: flex;
+    justify-content: center;
+}
+.java-search {
+    padding: 1em;
+}
+.java-display {
+}
+label {
+    font-weight: bold;
+    padding-left: 0;
+}
+#roast-selection {
+    margin: .5em 0;
+}
+.roast-title {
+    font-size: 1.5em;
+    font-weight: bolder;
+    margin-bottom: 0;
+}
+.roast-subtitle {
+    font-weight: bold;
+    font-style: italic;
+    font-size: .7em;
+    display: flex;
+    align-items: center;
+    margin-top: 0;
+}
+
+
+.border-3 {
+    border-width: 2.5em;
+}
+
+#pick-roast, #roast-list-pane {
+    border-radius: 3%;
+}
+
+.roast-box {
+    display: flex;
+
+}
+#main-heading {
+    border-radius: 15%;
+}
+/*@media screen and (max-width:676px) {*/
+/*    .roast-subtitle {*/
+/*        overflow-wrap: break-word;*/
+/*    }*/
+/*}*/
