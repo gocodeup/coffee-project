@@ -11,13 +11,38 @@ h1 {
     display: flex;
     justify-content: center;
     align-items: center;
-    color: #3E2D27;
+    color: #552214;
 }
 
+.form-select {
+    border-color: brown;
+}
 
+.form-control{
+    border-color: brown;
+}
 #submit{
     background-color: #99532D;
     color: #F4E2CA;
+
+    border-color: brown;
+}
+
+#coffee-submit{
+    background-color: #99532D;
+    color: #F4E2CA;
+    border-color: brown;
+}
+
+#clear{
+    background-color: #99532D;
+    color: #F4E2CA;
+    border-color: brown;
+}
+
+body{
+    background-color: #F4E8DA;
+
 }
 
 #test-menu {
@@ -31,4 +56,5 @@ h1 {
 #coffees {
     color: white;
     column-count: 3;
+
 }
