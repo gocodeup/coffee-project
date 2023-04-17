@@ -62,6 +62,15 @@ function filterName(e) {
     console.log(result)
 }
 
+//add a coffee function
+const addCoffee = (e) => {
+    e.preventDefault()
+    const inputRoast = roastType.value
+    const inputCoffee = nameCoffee.value
+    coffees.push({id: coffees.length + 1, name: inputCoffee, roast: inputRoast})
+    tbody.innerHTML = renderCoffees(coffees)
+}
+
 
 // from http://www.ncausa.org/About-Coffee/Coffee-Roasts-Guide
 var coffees = [
@@ -85,18 +94,23 @@ var filteredCoffees = coffees
 
 // selectors
 var tbody = document.querySelector('#coffees');
-var submitButton = document.querySelector('#submit');
+var submitSearch = document.querySelector('#submit-search');
+var submitAdd = document.querySelector('#submit-add');
 var roastSelection = document.querySelector('#roast-selection');
 var nameSelection = document.querySelector('#name-selection');
+var roastType = document.querySelector('#roast-type');
+var nameCoffee = document.querySelector('#name-coffee');
 
 //render all coffees to body
 tbody.innerHTML = renderCoffees(coffees);
 
 
 //Event listeners
-submitButton.addEventListener('click', updateCoffees);
+submitSearch.addEventListener('click', updateCoffees);
+submitAdd.addEventListener('click', addCoffee);
 roastSelection.addEventListener('change', triggerSelect);
 nameSelection.addEventListener('keyup', filterName)
+
 
 // })
 
