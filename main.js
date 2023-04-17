@@ -54,9 +54,8 @@ function searchCoffees() {
     var filteredCoffees = [];
     console.log(searchRoast);
     coffees.forEach(function (coffee) {
-        if (coffee.name.toUpperCase().includes(searchRoast)) {
-            filteredCoffees.push(coffee);
-            console.log(filteredCoffees);
+        if (coffee.name.toUpperCase().includes(searchRoast)){
+                filteredCoffees.push(coffee);
         }
     });
     coffeeList.innerHTML = renderCoffees(filteredCoffees);
@@ -73,7 +72,6 @@ function darkModeToggle() {
         bodyBgColor.style.backgroundColor = 'white';
         bodyBgColor.style.color = 'black';
         modeText[0].innerText = 'Day ';
-
     }
 }
 
