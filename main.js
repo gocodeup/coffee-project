@@ -48,8 +48,7 @@ const triggerSelect = function (e) {
 }
 
 //function to run on input on change
-function filterName(e) {
-
+function filterName() {
     var selectedName = nameSelection.value;
     var input = '';
     input += selectedName
@@ -58,8 +57,7 @@ function filterName(e) {
     })
     // render the Coffees with result
     tbody.innerHTML = renderCoffees(result)
-
-    console.log(result)
+    // console.log(result)
 }
 
 //add a coffee function
@@ -69,6 +67,8 @@ const addCoffee = (e) => {
     const inputCoffee = nameCoffee.value
     coffees.push({id: coffees.length + 1, name: inputCoffee, roast: inputRoast})
     tbody.innerHTML = renderCoffees(coffees)
+    //clears input
+    nameCoffee.value = ''
 }
 
 
