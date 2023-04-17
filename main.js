@@ -27,9 +27,13 @@ function updateCoffees(e) {
     coffees.forEach(function(coffee) {
         if (coffee.roast === selectedRoast) {
             filteredCoffees.push(coffee);
+        } else if (selectedRoast === 'all') {
+            filteredCoffees.push(coffee);
         }
     });
-    tbody.innerHTML = renderCoffees(filteredCoffees);
+    console.log(filteredCoffees)
+    tbody.innerHTML = renderCoffees(filteredCoffees)
+
 }
 
 function coffeeNames(event){
