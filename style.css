@@ -19,3 +19,16 @@ h1 {
     background-color: #99532D;
     color: #F4E2CA;
 }
+
+#test-menu {
+    /*width: 500px;*/
+    /*height: 500px;*/
+    background-image: url("assets/plain-chalkboard-bg.jpeg");
+    background-size: cover;
+    border: 15px solid #99532d;
+}
+
+#coffees {
+    color: white;
+    column-count: 3;
+}
