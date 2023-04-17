@@ -24,8 +24,8 @@ h1, h2 {
     display: flex;
     justify-content: center;
 }
-.java-search {
-    padding: 1em;
+/*.java-search {*/
+/*    padding: 1em;*/
 }
 .java-display {
 }
@@ -51,14 +51,22 @@ label {
 }
 
 
-.border-3 {
-    border-width: 2.5em;
+/*.border-3 {*/
+/*    border-width: 2.5em;*/
 }
 
-#pick-roast, #roast-list-pane {
+#pick-roast, #roast-list-pane, .add-coffee {
     border-radius: 3%;
+    max-width: 40%;
+    margin: 1em;
 }
 
+/*#pick-roast{*/
+/*    max-width: 30%;*/
+/*}*/
+/*.add-coffee{*/
+/*    max-width: 30%;*/
+}
 .roast-box {
     display: flex;
 
@@ -75,7 +83,7 @@ label {
     background-color: whitesmoke;
     border-width: 5px;
     border-color: black;
-    padding: 3px 1em;
+    padding: 3px;
 }
 .add-coffee{
     padding: 1em 0 2em 0;
