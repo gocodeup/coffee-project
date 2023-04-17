@@ -1,5 +1,5 @@
 "use strict"
-//not sure what JSON does but it works?
+//not sure what JSON does but it works? Data persistence using local storage:
 var  allCoffee = JSON.parse(localStorage.getItem("coffeeList"));
 var coffees = [];
 
@@ -27,11 +27,10 @@ function getCoffees() {
 }
 getCoffees()
 //variables for event listeners
-var roast = document.querySelector('#roast-selection1');
-var search = document.querySelector('#search1');
+var roast = document.querySelector('#roast-selection');
+var search = document.querySelector('#search');
 var results = document.querySelector('#roast-results');
 var selector = document.querySelector('#roast-me');
-
 
 results.innerHTML = updateCoffees();
 
@@ -46,15 +45,14 @@ selector.addEventListener('click', function () {
     results.innerHTML = updateCoffees()
 });
 
-
 function renderCoffee(coffeeName, coffeeRoast) {
     var html = '';
-    var roastDef = '<div class="roast-box col-md-6 col-12">';
-    var roastTitleDef = '<span class="roast-title float-md-left">';
-    var roastSubtitleDef = '<span class="roast-subtitle ml-1 text-muted">';
+    var roasted = '<div class="roasted-box">';
+    var roastedTitle = '<span class="roasted-title">';
+    var roastedSub = '<span class="roasted-subtitle">';
 
-    html += roastDef + roastTitleDef + coffeeName + '</span>';
-    html += roastSubtitleDef + coffeeRoast + '</span></div>';
+    html += roasted + roastedTitle + coffeeName + '</span>';
+    html += roastedSub + coffeeRoast + '</span></div>';
 
     // html += '<td>' + coffee.id + '</td>';
     // html += '<td>' + coffee.name + '</td>';
@@ -92,7 +90,7 @@ function updateCoffees() {
     // roastResults.innerHTML = showMeTheFilter(filteredCoffees);
     return renderCoffees(filteredCoffees);
 }
-
+//search function without being case specific
 function searchFilter() {
     var filteredCoffees = [];
     var searchString = search.value;

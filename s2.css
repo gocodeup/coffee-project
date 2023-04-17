@@ -33,15 +33,15 @@ label {
     font-weight: bold;
     padding-left: 0;
 }
-#roast-selection {
+#roasted-selection {
     margin: .5em 0;
 }
-.roast-title {
+.roasted-title {
     font-size: 1.5em;
     font-weight: bolder;
     margin-bottom: 0;
 }
-.roast-subtitle {
+.roasted-subtitle {
     font-weight: bold;
     font-style: italic;
     font-size: .7em;
