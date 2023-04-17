@@ -1,14 +1,25 @@
 
  .coffee{
-     display: flex;
-     justify-content: space-between;
+     display:inline-flex;
+     justify-content: space-around;
+     flex-wrap: wrap;
+     font-weight: bold;
      font-size: 30px;
-     text-align: center;
-     align-items: center;
      text-decoration: underline ;
-      margin: 50px;
+      margin: 40px;
       padding-left: 30px;
       padding-right: 30px;
  }
 
+ form{
+     display: flex;
+     justify-content: end;
+     align-items: center;
+
+ }
+
+ p{
+     padding: 5px;
+
+ }
 
