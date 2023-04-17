@@ -47,11 +47,18 @@ function coffeeNames(event){
             if((coffees[i].name.toLowerCase()).indexOf(name.toLowerCase())!==-1 && (coffees[i].name.toLowerCase()).indexOf(name.toLowerCase())<1)
                 filtered.push(coffees[i]);
         }
-        if(filtered.length>0)
-        tbody.innerHTML = renderCoffees(filtered);
-
+        if(filtered.length>0) {
+            tbody.innerHTML = renderCoffees(filtered);
+        }
 
 }
+// new function that adds a new coffee
+// add 1 to last id
+//
+
+
+
+
 
 // from http://www.ncausa.org/About-Coffee/Coffee-Roasts-Guide
 var coffees = [
