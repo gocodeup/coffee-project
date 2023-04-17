@@ -36,6 +36,19 @@ function updateCoffees(input) {
 
 }
 
+//Add coffees to list
+function addCoffees(input) {
+    input.preventDefault(); // don't submit the form, we just want to update the data
+    var addID = coffees.length + 1;
+    var addName = newCoffeeName.value.toString();
+    var addRoast = newCoffeeRoastSelection.value.toString();
+    input = {id: addID, name: addName, roast: addRoast};
+    coffees.push(input);
+    console.log(coffees);
+    coffeeList.innerHTML = renderCoffees(coffees);
+    console.log(coffees);
+}
+
 // from http://www.ncausa.org/About-Coffee/Coffee-Roasts-Guide
     var coffees = [
         {id: 1, name: 'Light City', roast: 'light'},
@@ -58,26 +71,15 @@ function updateCoffees(input) {
     var tbody = document.querySelector('#coffees');
     var submitButton = document.querySelector('#submit');
     var roastSelection = document.querySelector('#roast-selection');
+    var newCoffeeRoastSelection = document.querySelector('#roast-selection-2');
+    var newCoffeeSubmitButton = document.querySelector('#add-coffee');
+    var newCoffeeName = document.querySelector('.new-coffee-added');
 //
     tbody.innerHTML = renderCoffees(coffees);
 //
     submitButton.addEventListener('click', updateCoffees);
     roastSelection.addEventListener('click', updateCoffees);
-
-//Add coffees to list
-
-    function addCoffees(input) {
-        var addID = coffees.length + 1;
-        var addName = inputName.value.toString();
-        var addRoast = inputRoast.value.toString();
-        input = {id: addID, name: addName, roast: addRoast};
-        coffees.push(input);
-        console.log(coffees);
-        coffeeList.innerHTML = renderCoffees(coffees);
-    }
-
-    var addCoffeeBtn = document.getElementById('add-coffee');
-
+    newCoffeeSubmitButton.addEventListener('click', addCoffees)
 
 // //Export data to HTML doc
     var coffeeList = document.querySelector('#coffees');
@@ -102,7 +104,7 @@ function updateCoffees(input) {
 // JS CODE FOR DARK MODE
     var bodyColor = document.getElementById('body-color');
     var modeSwitch = document.getElementById('flexSwitchCheckDefault');
-    var modeText = document.getElementsByClassName('form-check-label')
+    var modeText = document.getElementsByClassName('form-check-label');
     modeSwitch.addEventListener("click", function () {
         var onOff = modeSwitch.checked;
         if (onOff === true) {
@@ -116,8 +118,4 @@ function updateCoffees(input) {
 
         }
     })
-
 // END OF JS CODE FOR DARK MODE
-
-
-
