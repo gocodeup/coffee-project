@@ -93,10 +93,11 @@ var submitButton = document.querySelector('#submit');
 var roastSelection = document.querySelector('#roast-selection');
 var findCoffeeInput = document.querySelector('#find-coffee');
 
+
 tbody.innerHTML = renderCoffees(coffees);
 
 submitButton.addEventListener('click', updateCoffees);
-
+roastSelection.addEventListener('change', updateCoffees);
 findCoffeeInput.addEventListener('keyup', findCoffee);
 
 // ------add coffee------
