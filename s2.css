@@ -3,19 +3,18 @@
     margin: 0;
     padding: 0;
 }
-body{
-    <img src="pics"
-    background-size: 100%;
-    background-color: lightgreen;
+body {
+    background-image: url('pics/coffeephoto.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
 }
-.container-fluid{
-    background-image: url("https://gifdb.com/gif/good-morning-coffee-beans-wansfo3marb0r0m4.html?");
-}
-h1, h2 {
-    font-family: Arial;
-    font-weight: bolder;
+.opening{
+    background-color: saddlebrown;
+    border-radius: 30%;
+    color: white;
+    font-family: 'Marck Script', cursive;
     text-decoration: underline;
-    color: darkslategrey;
 }
 .btn-primary {
     background-color: saddlebrown;
@@ -25,8 +24,11 @@ h1, h2 {
     justify-content: center;
 }
 label {
-    font-weight: bold;
+    font-family: 'Secular One', sans-serif;
     padding-left: 0;
+    color: white;
+    background-color: saddlebrown;
+    border-radius: 30%;
 }
 #roasted-selection {
     margin: .5em 0;
