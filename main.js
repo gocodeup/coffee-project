@@ -42,7 +42,7 @@ function addCoffees(input) {
     input.preventDefault(); // don't submit the form, we just want to update the data
     var addID = coffees.length + 1;
     var addName = newCoffeeName.value.toString();
-    var addRoast = newCoffeeRoastSelection.value.toString();
+    var addRoast = newCoffeeRoastSelection.value.toLowerCase().toString();
     input = {id: addID, name: addName, roast: addRoast};
     coffees.push(input);
     coffeeList.innerHTML = renderCoffees(coffees);
