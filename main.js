@@ -23,7 +23,7 @@
     function updateCoffees(e) {
         e.preventDefault(); // don't submit the form, we just want to update the data
         const selectedRoast = roastSelection.value;
-        let filteredCoffees = [];
+        filteredCoffees = [];
 
         // If the selected option is all then push each coffee
         if (selectedRoast === 'all') {
@@ -42,13 +42,25 @@
 //function to run on input on change
     function filterName() {
         const selectedName = nameSelection.value;
-        let input = '';
-        input += selectedName.toLowerCase()
-        // const selectedRoast = roastSelection.value
 
-        let result = addedCoffees.filter(coffee => {
-            return coffee.name.toLowerCase().includes(input)
-        })
+        let input = '';
+        let result;
+        input += selectedName.toLowerCase()
+        console.log(filteredCoffees)
+        if (filteredCoffees === undefined) {
+            result = coffees.filter(coffee => {
+                return coffee.name.toLowerCase().includes(input)
+            })
+        } else if (roastSelection.value === 'all'){
+            result = addedCoffees.filter(coffee => {
+                return coffee.name.toLowerCase().includes(input)
+            })
+        } else {
+            result = filteredCoffees.filter(coffee => {
+                return coffee.name.toLowerCase().includes(input)
+            })
+        }
+
         // render the Coffees with result
         tbody.innerHTML = renderCoffees(result)
         // console.log(result)
@@ -67,7 +79,6 @@
         nameCoffee.value = ''
         //sets select input to selected roast
         roastSelection.value = inputRoast
-        storedCoffees = addedCoffees
         //set added coffees array to Local storage
         localStorage.setItem("coffees", JSON.stringify(addedCoffees));
 
@@ -124,6 +135,7 @@
 
     //global variables
     let addedCoffees = [...coffees]
+    let filteredCoffees
     let storedCoffees = JSON.parse(localStorage.getItem("coffees"))
 
 
