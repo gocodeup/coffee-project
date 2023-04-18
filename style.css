@@ -47,3 +47,7 @@ select.custom-select {
     background-color: #CC9966;
 
 }
+.btn-primary {
+    background-color: #4CAF50;
+    border-color: brown;
+}
