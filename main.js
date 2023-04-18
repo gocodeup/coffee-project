@@ -44,7 +44,7 @@ function findCoffee(e) {
         tbody.innerHTML = renderCoffees(coffees);
     } else {
         coffees.forEach(function (coffee) {
-            if (coffee.name === selectedCoffee) {
+            if (coffee.name.toLowerCase().includes(selectedCoffee)) {
                 filteredCoffees.push(coffee);
             }
         });
@@ -97,6 +97,7 @@ tbody.innerHTML = renderCoffees(coffees);
 
 submitButton.addEventListener('click', updateCoffees);
 
+findCoffeeInput.addEventListener('keyup', findCoffee);
 
 // ------add coffee------
 var newName = document.getElementById('inputNewCoffee');
