@@ -39,11 +39,6 @@
         }
     }
 
-//Function to run on select change
-    const triggerSelect = function (e) {
-        updateCoffees(e)
-    }
-
 //function to run on input on change
     function filterName() {
         const selectedName = nameSelection.value;
@@ -85,7 +80,6 @@
 //toggle order functionality
     const toggleOrder = (e) => {
         if (storedCoffees) {
-            console.log('somethin')
             addedCoffees = storedCoffees
             storedCoffees.reverse()
             updateCoffees(e)
@@ -93,7 +87,6 @@
         } else {
             addedCoffees.reverse()
             updateCoffees(e)
-
         }
     }
 
@@ -126,6 +119,7 @@
         {id: 14, name: 'French', roast: 'dark'},
     ];
 
+    //global variables
     let addedCoffees = [...coffees]
     let storedCoffees = JSON.parse(localStorage.getItem("coffees"))
 
@@ -145,7 +139,7 @@
 //Event listeners
     submitSearch.addEventListener('click', updateCoffees);
     submitAdd.addEventListener('click', addCoffee);
-    roastSelection.addEventListener('change', triggerSelect);
+    roastSelection.addEventListener('change', updateCoffees);
     nameSelection.addEventListener('keyup', filterName);
     toggleBtn.addEventListener('click', toggleOrder)
     clearBtn.addEventListener('click', clearLocal)
