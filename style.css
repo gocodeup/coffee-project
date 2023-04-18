@@ -37,3 +37,7 @@ select.custom-select {
 .body-bg-color {
     background-color: #CC9966;
 }
+
+.bg-image {
+    background-image: linear-gradient(#CC9966);
+}
