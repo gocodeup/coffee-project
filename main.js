@@ -28,10 +28,10 @@ function updateCoffees(e) {
     var selectedRoast = roastSelection.value;
     var filteredCoffees = [];
     coffees.forEach(function (coffee) {
-        if (coffee.roast === selectedRoast) {
+        if (coffee.roast.toUpperCase() === selectedRoast.toUpperCase()) {
             filteredCoffees.push(coffee);
             tbody.innerHTML = renderCoffees(filteredCoffees);
-        } else if (selectedRoast === 'all') {
+        } else if (selectedRoast === 'All') {
             tbody.innerHTML = renderCoffees(coffees);
         }
     })
