@@ -47,20 +47,24 @@
         let result;
         input += selectedName.toLowerCase()
         console.log(filteredCoffees)
-        // if (filteredCoffees === undefined) {
-        //     result = coffees.filter(coffee => {
-        //         return coffee.name.toLowerCase().includes(input)
-        //     })
-        // }
-         if (roastSelection.value === 'all'){
+        if (filteredCoffees === undefined) {
             result = storedCoffees.filter(coffee => {
                 return coffee.name.toLowerCase().includes(input)
             })
-        } else {
+        } else if (roastSelection.value === 'all') {
             result = storedCoffees.filter(coffee => {
+                return coffee.name.toLowerCase().includes(input)
+            })
+        } else if (roastSelection.value !== 'all') {
+            result = filteredCoffees.filter(coffee => {
                 return coffee.name.toLowerCase().includes(input)
             })
         }
+        // else {
+        //     result = storedCoffees.filter(coffee => {
+        //         return coffee.name.toLowerCase().includes(input)
+        //     })
+        // }
 
         // render the Coffees with result
         tbody.innerHTML = renderCoffees(result)
