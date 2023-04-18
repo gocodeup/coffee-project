@@ -9,74 +9,75 @@
 
 </head>
 <body>
-<div class="container-fluid">
+<div class="container-lg">
 
     <!--    header-->
-    <div>
+    <div class="d-flex justify-content-center mt-4">
         <h1>Coffee!</h1>
     </div>
     <hr>
 
     <!--    grid layout-->
-    <div class="container">
 
         <div class="row">
 
             <!--            coffee column-->
             <div class="col-6">
-                <table>
-                    <thead>
-                    <tr>
-                        <th>ID</th>
-                        <th>NAME</th>
-                        <th>ROAST</th>
-                    </tr>
-                    </thead>
-                    <tbody id="coffees"></tbody>
-                </table>
+                <div class="row row-cols-2">
+                        <div id="coffees" class="col"></div>
+                </div>
             </div>
 
             <!--            filters column-->
-            <div class="col-6">
+            <div class="col-6 m-0">
 
                 <form>
-                    <label for="roast-selection"></label>
-                    <select id="roast-selection">
-                        <option>light</option>
-                        <option>medium</option>
-                        <option>dark</option>
-                    </select>
-                    <input id="submit" type="submit"/>
+                    <div class="d-grid gap-2">
+                        <label for="roast-selection" class="form-label fw-bold">Roast</label>
+                        <select id="roast-selection" class="form-select">
+                            <option>all</option>
+                            <option>light</option>
+                            <option>medium</option>
+                            <option>dark</option>
+                        </select>
+                        <div class="d-grid gap-2">
+                            <label for="find-coffee" class="fw-bold">Coffee Name</label>
+                            <input type="text" class="form-control" id="find-coffee" name="name">
+                            <input class="btn btn-primary" id="submit" type="submit"/>
+                        </div>
                 </form>
+            </div>
 
-<!--                add coffee-->
+                <!--                add coffee-->
                 <hr>
+                <div class="d-flex justify-content-center">
+                    <h2>Add a Coffee</h2>
+                </div>
                 <div>
-                <form id="createCoffeeForm">
+                    <form>
+                        <div class="d-grid gap-2">
+                            <label for="roast-selection-new" class="form-label fw-bold">Roast</label>
+                            <select id="roast-selection-new" name="roast" class="form-select">
+                                <option>light</option>
+                                <option>medium</option>
+                                <option>dark</option>
+                            </select>
+                        </div>
 
-                    <div>
-                    <label for="roast-selection-new" class="form-label">Roast</label>
-                    <select id="roast-selection-new" name="roast">
-                        <option>light</option>
-                        <option>medium</option>
-                        <option>dark</option>
-                    </select>
-                    </div>
+                        <div class="d-grid gap-2">
+                            <label for="inputNewCoffee" class="fw-bold">Name</label>
+                            <input type="text" class="form-control" id="inputNewCoffee" name="name">
+                            <input class="btn btn-primary" id="submitNewCoffee" type="submit"/>
+                        </div>
 
-                    <div>
-                    <label for="inputNewCoffee">Name</label>
-                    <input type="text" class="form-control" id="inputNewCoffee" name="name">
-                    <input id="submitNewCoffee" type="submit"/>
-                    </div>
-
-                </form>
+                    </form>
                 </div>
 
             </div>
 
 
             <!--            row closing div-->
-        </div>
+
         <!--        grid closing div-->
     </div>
 
