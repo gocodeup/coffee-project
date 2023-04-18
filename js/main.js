@@ -1,4 +1,7 @@
+(function (){
+
 "use strict"
+
 
 function renderCoffee(coffee) {
     var html = '<div class="coffee col-6 d-flex align-items-baseline">';
@@ -145,6 +148,8 @@ function submitCoffeeInfo(e) {
     tbody.innerHTML = renderCoffees(coffees);
 };
 
+
+})();
 
 
 
