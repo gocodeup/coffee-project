@@ -24,6 +24,9 @@
         e.preventDefault(); // don't submit the form, we just want to update the data
         const selectedRoast = roastSelection.value;
         filteredCoffees = [];
+        if (!storedCoffees) {
+            storedCoffees = addedCoffees
+        }
 
         // If the selected option is all then push each coffee
         if (selectedRoast === 'all') {
@@ -116,6 +119,11 @@
         localStorage.clear();
         //reset added coffees to default
         addedCoffees = coffees
+        filteredCoffees = coffees
+        storedCoffees = localStorage.setItem("coffees", JSON.stringify(coffees));
+
+
+
         //render default coffees
         tbody.innerHTML = renderCoffees(coffees)
     }
@@ -166,7 +174,9 @@
     clearBtn.addEventListener('click', clearLocal)
 
 //render original coffees to body if there is no local storage
-    tbody.innerHTML = renderCoffees(storedCoffees || addedCoffees);
+    localStorage.setItem("coffees", JSON.stringify(coffees));
+
+    tbody.innerHTML = renderCoffees(storedCoffees);
 
 })()
 
