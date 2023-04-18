@@ -26,7 +26,14 @@ select.custom-select {
     background-repeat: no-repeat;
 }
 
-/*select.custom-select:focus {*/
-/*    border-color: blue;*/
-/*    outline: 0;*/
-/*}*/
+.header-style {
+    font-family: Bebas Neue;
+}
+
+.add-a-coffee {
+    font-family: Bebas Neue;
+}
+
+.body-bg-color {
+    background-color: #CC9966;
+}
