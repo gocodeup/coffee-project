@@ -21,3 +21,11 @@ select, span, input ,h1, div{
 div>span{
     font-size: 50px;
 }
+
+.body-img{
+    width: 600px;
+    height: 400px;
+    border-radius: 20%;
+    border: solid saddlebrown 3px;
+    padding: 0px;
+}
