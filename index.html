@@ -17,71 +17,65 @@
     </div>
     <hr>
 
-    <!--    grid layout-->
+    <!--grid layout-->
 
-        <div class="row">
+    <div class="row">
 
-            <!--            coffee column-->
-            <div class="col-6">
-                <div class="row row-cols-2">
-                        <div id="coffees" class="col"></div>
+        <!--coffee column-->
+        <div class="col-6">
+            <div class="d-flex row row-col-2" id="coffees"></div>
+        </div>
+
+        <!--forms column-->
+        <div class="col-6">
+
+            <!--filter form-->
+            <form>
+                <div class="d-grid gap-2">
+                    <label for="roast-selection" class="form-label fw-bold">Roast</label>
+                    <select id="roast-selection" class="form-select">
+                        <option>all</option>
+                        <option>light</option>
+                        <option>medium</option>
+                        <option>dark</option>
+                    </select>
+                    <div class="d-grid gap-2">
+                        <label for="find-coffee" class="fw-bold">Coffee Name</label>
+                        <input type="text" class="form-control" id="find-coffee" name="name">
+                        <input class="btn btn-primary" id="submit" type="submit"/>
+                    </div>
                 </div>
+            </form>
+
+
+        <!--add coffee form-->
+            <hr>
+
+            <div class="d-flex justify-content-center">
+                <h2>Add a Coffee</h2>
             </div>
-
-            <!--            filters column-->
-            <div class="col-6 m-0">
-
+            <div>
                 <form>
                     <div class="d-grid gap-2">
-                        <label for="roast-selection" class="form-label fw-bold">Roast</label>
-                        <select id="roast-selection" class="form-select">
-                            <option>all</option>
+                        <label for="roast-selection-new" class="form-label fw-bold">Roast</label>
+                        <select id="roast-selection-new" name="roast" class="form-select">
                             <option>light</option>
                             <option>medium</option>
                             <option>dark</option>
                         </select>
-                        <div class="d-grid gap-2">
-                            <label for="find-coffee" class="fw-bold">Coffee Name</label>
-                            <input type="text" class="form-control" id="find-coffee" name="name">
-                            <input class="btn btn-primary" id="submit" type="submit"/>
-                        </div>
+                    </div>
+                    <div class="d-grid gap-2">
+                        <label for="inputNewCoffee" class="fw-bold">Name</label>
+                        <input type="text" class="form-control" id="inputNewCoffee" name="name">
+                        <input class="btn btn-primary" id="submitNewCoffee" type="submit"/>
+                    </div>
                 </form>
             </div>
-
-                <!--                add coffee-->
-                <hr>
-                <div class="d-flex justify-content-center">
-                    <h2>Add a Coffee</h2>
-                </div>
-                <div>
-                    <form>
-                        <div class="d-grid gap-2">
-                            <label for="roast-selection-new" class="form-label fw-bold">Roast</label>
-                            <select id="roast-selection-new" name="roast" class="form-select">
-                                <option>light</option>
-                                <option>medium</option>
-                                <option>dark</option>
-                            </select>
-                        </div>
-
-                        <div class="d-grid gap-2">
-                            <label for="inputNewCoffee" class="fw-bold">Name</label>
-                            <input type="text" class="form-control" id="inputNewCoffee" name="name">
-                            <input class="btn btn-primary" id="submitNewCoffee" type="submit"/>
-                        </div>
-
-                    </form>
-                </div>
-
-            </div>
-
-
-            <!--            row closing div-->
-
-        <!--        grid closing div-->
+            <!--forms closing div-->
+        </div>
+        <!--grid closing div-->
     </div>
-
-    <!--    page closing div-->
+    <!--container closing div-->
 </div>
 
 <script src="main.js"></script>
