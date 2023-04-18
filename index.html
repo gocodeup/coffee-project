@@ -1,13 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>Coffee Project</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
-          integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
 <div class="container">
     <h1 class="text-center">Coffee!</h1>
     <hr>
@@ -15,31 +17,61 @@
         <div class="row">
             <div class="col-6">
                 <div id="coffees">
-<!--DYNAMIC HTML-->
+                    <!--DYNAMIC HTML-->
                 </div>
             </div>
             <div class="col-6 ">
                 <form>
-                    <label for="roast-selection"></label>
-                    <select id="roast-selection">
-                        <option>all</option>
-                        <option>light</option>
-                        <option>medium</option>
-                        <option>dark</option>
-                    </select>
-                    <input id="name-selection">
-                    <input id='submit-search' type="submit"/>
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                            <select id="roast-selection" class="custom-select custom-select-lg p-2">
+                                <option value="all" selected>All</option>
+                                <option value="light">Light</option>
+                                <option value="medium">Medium</option>
+                                <option value="dark">Dark</option>
+                            </select>
+                        </div>
+                        <input id="name-selection" type="text" class="form-control"
+                               aria-label="Text input with dropdown button">
+                        <button id="submit-search" type="button" class="btn btn-primary">Filter</button>
+                    </div>
                 </form>
+
+                <!--                    OLD HTML BEFORE BOOTSTRAP-->
+                <!--                <form>-->
+                <!--                    <label for="roast-selection"></label>-->
+                <!--                    <select id="roast-selection">-->
+                <!--                        <option>all</option>-->
+                <!--                        <option>light</option>-->
+                <!--                        <option>medium</option>-->
+                <!--                        <option>dark</option>-->
+                <!--                    </select>-->
+                <!--                    <input id="name-selection">-->
+                <!--                    <input id='submit-search' type="submit"/>-->
+                <!--                </form>-->
                 <h1 class="text-center">Add Coffee!</h1>
                 <form>
-                    <label for="roast-type"></label>
-                    <select id="roast-type">
-                        <option>light</option>
-                        <option>medium</option>
-                        <option>dark</option>
-                    </select>
-                    <input id="name-coffee">
-                    <input id='submit-add' type="submit"/>
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                            <select id="roast-type" class="custom-select custom-select-lg p-2">
+                                <option value="light" selected >Light</option>
+                                <option value="medium">Medium</option>
+                                <option value="dark">Dark</option>
+                            </select>
+                        </div>
+                        <input id="name-coffee" type="text" class="form-control"
+                               aria-label="Text input with dropdown button">
+                        <button id="submit-add" type="submit" class="btn btn-primary">Add</button>
+                    </div>
+<!--                    OLD HTML BEFORE BOOTSTRAP-->
+<!--                    <label for="roast-type"></label>-->
+<!--                    <select id="roast-type">-->
+<!--                        <option>light</option>-->
+<!--                        <option>medium</option>-->
+<!--                        <option>dark</option>-->
+<!--                    </select>-->
+<!--                    <input id="name-coffee">-->
+<!--                    <input id='submit-add' type="submit"/>-->
                 </form>
             </div>
         </div>
@@ -48,9 +80,9 @@
     <button id="clear-local">Clear Local</button>
 
 
-    <script src="main.js"></script>
-    <script src="bootstrap/js/bootstrap.js"></script>
 </div>
+<script src="main.js"></script>
+<script src="bootstrap/js/bootstrap.js"></script>
 </body>
 </html>
 
