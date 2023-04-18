@@ -65,5 +65,6 @@ select.custom-select {
 
 input, select {
     background-color: transparent;
+    color: inherit;
 }
 
