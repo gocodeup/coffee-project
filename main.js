@@ -69,7 +69,7 @@ function darkModeToggle() {
         bodyBgColor.style.color = 'white';
         modeText[0].innerText = 'Night '
     } else if (onOff === false) {
-        bodyBgColor.style.backgroundColor = 'white';
+        bodyBgColor.style.backgroundColor = '#CC9966';
         bodyBgColor.style.color = 'black';
         modeText[0].innerText = 'Day ';
     }
