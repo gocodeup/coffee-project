@@ -16,8 +16,7 @@ function renderCoffee(coffee) {
 //     return html;
 // }
 
-
-// -------in order-------
+// -------in order of ID-------
 function renderCoffees(coffees) {
     var html = '';
     for (let i = 0; i < coffees.length; i++) {
