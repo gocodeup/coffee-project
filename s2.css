@@ -15,16 +15,20 @@ body {
     color: white;
     font-family: 'Marck Script', cursive;
     text-decoration: underline;
+    font-size: 2em;
 }
-.btn-primary {
+.btn {
     background-color: saddlebrown;
+    color: whitesmoke;
+    transition: .7s;
+
 }
 #heading-divider {
     display: flex;
     justify-content: center;
 }
 label {
-    font-family: 'Secular One', sans-serif;
+    font-family: "Marck Script", sans-serif;
     padding-left: 0;
     color: white;
     background-color: saddlebrown;
@@ -48,12 +52,7 @@ label {
 }
 #pick-roast, #roast-list-pane, .add-coffee {
     border-radius: 3%;
-    /*max-width: 40%;*/
 }
-/*#main-heading {
-    border-radius: 15%;
-}
-*/
 .coffee-list{
     background-color: whitesmoke;
     border-width: 5px;

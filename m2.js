@@ -1,3 +1,4 @@
+// (function(){
 "use strict"
 //not sure what JSON does but it works? Data persistence using local storage:
 var  allCoffee = JSON.parse(localStorage.getItem("coffeeList"));
@@ -23,9 +24,9 @@ function getCoffees() {
             {id: 13, name: 'Italian', roast: 'dark'},
             {id: 14, name: 'French', roast: 'dark'},
         ]
-    }
-}
-getCoffees()
+    };
+};
+getCoffees();
 //variables for event listeners
 var roast = document.querySelector('#roast-selection');
 var search = document.querySelector('#search');
@@ -53,43 +54,35 @@ function renderCoffee(coffeeName, coffeeRoast) {
 
     html += roasted + roastedTitle + coffeeName + '</span>';
     html += roastedSub + coffeeRoast + '</span></div>';
-
-    // html += '<td>' + coffee.id + '</td>';
-    // html += '<td>' + coffee.name + '</td>';
-    // html += '<td>' + coffee.roast + '</td>';
-    // html += '</tr>';
-    //
     return html;
-}
+};
 
 function renderCoffees(coffees) {
     var html = '';
     for (var i = 0; i <= coffees.length - 1; i++) {
         html += renderCoffee(coffees[i].name, coffees[i].roast);
-    }
+    };
     return html;
-}
+};
 
 function updateCoffees() {
-    //e.preventDefault(); // don't submit the form, we just want to update the data
-    //var selectedRoast = roastSelected;
+ // don't submit the form, we just want to update the data
     var filteredCoffees = [];
     var roastSelected = roast.value;
     if (roastSelected === "all") {
         for (let i = 0; i < coffees.length; i++) {
             filteredCoffees.push(coffees[i]);
-        }
-    }
+        };
+    };
     // coffees.forEach(function(coffee) {
     for (let i = 0; i < coffees.length; i++) {
         if (coffees[i].roast === roastSelected) {
             console.log(coffees[i].name + ": " + coffees[i].roast);
             filteredCoffees.push(coffees[i]);
-        }
-    }
-    // roastResults.innerHTML = showMeTheFilter(filteredCoffees);
+        };
+    };
     return renderCoffees(filteredCoffees);
-}
+};
 //search function without being case specific
 function searchFilter() {
     var filteredCoffees = [];
@@ -98,10 +91,10 @@ function searchFilter() {
     for (let i = 0; i < coffees.length; i++) {
         if (coffees[i].name.toUpperCase().includes(searchUC)) {
             filteredCoffees.push(coffees[i]);
-        }
-    }
+        };
+    };
     return renderCoffees(filteredCoffees);
-}
+};
 
 //Brew Portion
 
@@ -121,5 +114,6 @@ function addCoffee(){
         x = x + coffees[i];
     }
     alert(`Your ${newCoffee.name} ${newCoffee.roast} has been added!`);
-    updateCoffees();
-}
+    results.innerHTML= updateCoffees();
+};
+// })();

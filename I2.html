@@ -16,16 +16,17 @@
 <body>
 
 <div id="main-heading" class="container border-dark mt-3">
-    <h1 class="opening d-flex justify-content-center">Caffeine Addicts Welcome Here!</h1>
+    <h1 class="opening d-flex justify-content-center">Caffeine Addicts:
+        Welcome!</h1>
 </div>
 
 <div id="main-content" class="container">
     <div id="content" class="row">
         <div id="roast-list-pane" class="coffee-list container col-3 h-50">
-            <div id="roast-results" class="col .order-first " style="height: 20em; overflow-y: scroll">
+            <div id="roast-results" class="col .order-first " style="height: 22.75em; overflow-y: scroll">
             </div>
         </div>
-        <div class='subtle col'>
+        <div class='roast col'>
         <div id="pick-roast">
             <form id="roast-search">
                 <label for="roast-selection">~Roasting Type~</label>
@@ -37,7 +38,7 @@
                 </select>
                 <label for="search">~Search by Name~</label>
                 <input id="search" type="text" class="col mb-2 rounded">
-                <button id="roast-me" type="button" class="btn btn-primary col">Roast Me! <i class="fa-sharp fa-solid fa-fire-flame-curved"></i></button>
+                <button id="roast-me" type="button" class="btn col">Roast Me! <i class="fa-sharp fa-solid fa-fire-flame-curved"></i></button>
             </form>
         </div>
         <div class="add-coffee col">
@@ -50,7 +51,7 @@
                 </select>
                 <label for="create">~Name~</label>
                 <input id="create" type="text" class="col mb-2 rounded">
-                <button id="coffee-create" type="button" class="btn btn-primary col" onclick="addCoffee()">Brew It! <i class="fa-solid fa-mug-hot"></i></button>
+                <button id="coffee-create" type="button" class="btn col" onclick="addCoffee()">Brew It! <i class="fa-solid fa-mug-hot"></i></button>
             </form>
         </div>
         </div>
