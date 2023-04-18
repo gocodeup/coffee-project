@@ -9,30 +9,54 @@ function renderCoffee(coffee) {
     return html;
 }
 
+// function renderCoffees(coffees) {
+//     var html = '';
+//     for (var i = coffees.length - 1; i >= 0; i--) {
+//         html += renderCoffee(coffees[i]);
+//     }
+//     return html;
+// }
+
+
+// -------in order-------
 function renderCoffees(coffees) {
     var html = '';
-    for (var i = coffees.length - 1; i >= 0; i--) {
+    for (let i = 0; i < coffees.length; i++) {
         html += renderCoffee(coffees[i]);
     }
     return html;
 }
+
 
 function updateCoffees(e) {
     e.preventDefault(); // don't submit the form, we just want to update the data
     var selectedRoast = roastSelection.value;
     var filteredCoffees = [];
 
-    if (selectedRoast === "all") {
-        tbody.innerHTML = renderCoffees(coffees);
-    } else {
-        coffees.forEach(function (coffee) {
-            if (coffee.roast === selectedRoast) {
+    // if (selectedRoast === "all") {
+    //     tbody.innerHTML = renderCoffees(coffees);
+    // } else {
+    //     coffees.forEach(function (coffee) {
+    //         if (coffee.roast === selectedRoast) {
+    //             filteredCoffees.push(coffee);
+    //         }
+    //     });
+
+    coffees.forEach(function (coffee) {
+
+        if (coffee.roast === selectedRoast || selectedRoast === "all") {
+
+            if ((findCoffeeInput.value !== "" || findCoffeeInput.value !== null) && coffee.name.includes(findCoffeeInput.value)) {
+
                 filteredCoffees.push(coffee);
             }
-        });
-        tbody.innerHTML = renderCoffees(filteredCoffees);
-    }
+
+        }
+
+    });
+    tbody.innerHTML = renderCoffees(filteredCoffees);
 }
+
 
 // ----find coffee----
 function findCoffee(e) {
@@ -72,21 +96,21 @@ var coffees = [
     {id: 14, name: 'French', roast: 'dark'},
 ];
 
-function sortById(){
-    return function(coffee1, coffee2) {
-        if (coffee1.id < coffee2.id) {
-            return -1;
-        }else if (coffee1.id > coffee2.id) {
-            return 1;
-        }else{
-            return 0;
-        }
-    }
-}
-
-var sortCoffees = coffees.sort(sortById());
-
-console.log(sortCoffees);
+// function sortById() {
+//     return function (coffee1, coffee2) {
+//         if (coffee1.id < coffee2.id) {
+//             return -1;
+//         } else if (coffee1.id > coffee2.id) {
+//             return 1;
+//         } else {
+//             return 0;
+//         }
+//     }
+// }
+//
+// var sortCoffees = coffees.sort(sortById());
+//
+// console.log(sortCoffees);
 
 var tbody = document.querySelector('#coffees');
 var submitButton = document.querySelector('#submit');
