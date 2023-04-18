@@ -27,9 +27,9 @@
 
         // If the selected option is all then push each coffee
         if (selectedRoast === 'all') {
-            tbody.innerHTML = renderCoffees(addedCoffees);
+            tbody.innerHTML = renderCoffees(storedCoffees);
         } else {
-            addedCoffees.forEach(function (coffee) {
+            storedCoffees.forEach(function (coffee) {
                     if (coffee.roast === selectedRoast) {
                         filteredCoffees.push(coffee);
                     }
@@ -47,16 +47,17 @@
         let result;
         input += selectedName.toLowerCase()
         console.log(filteredCoffees)
-        if (filteredCoffees === undefined) {
-            result = coffees.filter(coffee => {
-                return coffee.name.toLowerCase().includes(input)
-            })
-        } else if (roastSelection.value === 'all'){
-            result = addedCoffees.filter(coffee => {
+        // if (filteredCoffees === undefined) {
+        //     result = coffees.filter(coffee => {
+        //         return coffee.name.toLowerCase().includes(input)
+        //     })
+        // }
+         if (roastSelection.value === 'all'){
+            result = storedCoffees.filter(coffee => {
                 return coffee.name.toLowerCase().includes(input)
             })
         } else {
-            result = filteredCoffees.filter(coffee => {
+            result = storedCoffees.filter(coffee => {
                 return coffee.name.toLowerCase().includes(input)
             })
         }
