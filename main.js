@@ -84,6 +84,7 @@
         nameCoffee.value = ''
         //sets select input to selected roast
         roastSelection.value = inputRoast
+        storedCoffees = addedCoffees
         //set added coffees array to Local storage
         localStorage.setItem("coffees", JSON.stringify(addedCoffees));
 
