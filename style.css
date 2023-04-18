@@ -26,6 +26,13 @@ select.custom-select {
     background-repeat: no-repeat;
 }
 
+
+.container1 {
+    background-image: url(https://img.freepik.com/free-photo/coffee-beans-with-props-making-coffee_1220-4536.jpg?w=996&t=st=1681827614~exp=1681828214~hmac=5d1dd7697ce094d408f773ac700d4081098d084e294a45f98a32683a72c63458);
+    background-repeat: no-repeat;
+    background-size: 100%, auto;
+    background-position: center;
+
 .header-style {
     font-family: Bebas Neue;
 }
@@ -36,4 +43,5 @@ select.custom-select {
 
 .body-bg-color {
     background-color: #CC9966;
+
 }
