@@ -51,3 +51,7 @@ select.custom-select {
     background-color: #4CAF50;
     border-color: brown;
 }
+
+.switch-color {
+    background-color: #CC9966;
+}
