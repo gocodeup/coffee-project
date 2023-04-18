@@ -37,6 +37,7 @@ select.custom-select {
 .header-style {
     font-family: Bebas Neue;
     color: white;
+
 }
 
 .add-a-coffee {
@@ -52,6 +53,12 @@ select.custom-select {
     border-color: brown;
 }
 
+
 .switch-color {
     background-color: #CC9966;
+}
+
+.text-1 {
+    color: #4CAF50;
+    text-shadow: 0 0 3px #FF0000, 0 0 5px #0000FF;
 }
