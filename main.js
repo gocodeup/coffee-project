@@ -44,6 +44,8 @@
         const selectedName = nameSelection.value;
         let input = '';
         input += selectedName.toLowerCase()
+        // const selectedRoast = roastSelection.value
+
         let result = addedCoffees.filter(coffee => {
             return coffee.name.toLowerCase().includes(input)
         })
@@ -65,6 +67,7 @@
         nameCoffee.value = ''
         //sets select input to selected roast
         roastSelection.value = inputRoast
+        storedCoffees = addedCoffees
         //set added coffees array to Local storage
         localStorage.setItem("coffees", JSON.stringify(addedCoffees));
 

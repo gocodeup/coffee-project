@@ -19,8 +19,7 @@ h1{
 }
 
 #coffees > div {
-    flex: 50%; /* or - flex: 0 50% - or - flex-basis: 50% - */
-    /*demo*/
+    flex: 50%;
     margin-bottom: 10px;
 }
 
