@@ -4,9 +4,9 @@
 
 // displays individual coffees
 function renderCoffee(coffee) {
-    var html = '<div class="coffee w-50 d-flex flex-nowrap my-2">';
+    var html = '<div class="coffee w-50 d-flex flex-wrap my-2">';
     // html += '<td>' + coffee.id + '</td>';
-    html += '<h4 class=" text-nowrap mb-0 ">' + coffee.name + '</h4>';
+    html += '<h4 class=" text-wrap mb-0 ">' + coffee.name + '</h4>';
     html += '<p class="ms-1 mt-1 text-light" >' + coffee.roast + '</p>';
     html += '</div>';
 
@@ -67,7 +67,7 @@ function darkModeToggle() {
     if (onOff === true) {
         bodyBgColor.style.backgroundColor = 'black';
         bodyBgColor.style.color = 'white';
-        modeText[0].innerText = 'Night '
+        modeText[0].innerText = 'Night';
     } else if (onOff === false) {
         bodyBgColor.style.backgroundColor = '#CC9966';
         bodyBgColor.style.color = 'black';
@@ -105,6 +105,7 @@ var bodyBgColor = document.getElementById('body-bg-color');
 var darkModeSwitch = document.getElementById('dark-mode-switch');
 var modeText = document.getElementsByClassName('form-check-label');
 var coffeeDisplay = document.getElementById('coffeeDisplay');
+var inputBoxes = document.querySelector('input');
 
 // displays the array of coffees onto the html page
 tbody.innerHTML = renderCoffees(coffees);
