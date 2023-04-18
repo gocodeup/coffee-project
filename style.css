@@ -4,22 +4,12 @@ body {
     background-color: #F5F5DC;
 }
 
-table {
-    border-collapse: collapse;
-    margin: 15px 0;
-}
-
-td, th {
-    border: 1px solid black;
-    padding: 5px 10px;
-}
-
 select, span, input ,h1, div{
     font-family: 'Chivo Mono';
 }
 
 div>span{
-    font-size: 50px;
+    font-size: 40px;
 }
 
 .body-img{
@@ -28,4 +18,8 @@ div>span{
     border-radius: 20%;
     border: solid saddlebrown 3px;
     padding: 0px;
+}
+
+.logo{
+    border: solid saddlebrown 3px;
 }
