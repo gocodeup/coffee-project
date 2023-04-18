@@ -4,6 +4,15 @@
     box-sizing: border-box;
 }
 
+body{
+    background: #DBC0BD;
+}
+
+h1{
+    color:#1A100E;
+    font-weight: bold;
+}
+
 #coffees {
     display: flex;
     flex-wrap: wrap;
@@ -18,12 +27,13 @@
 p.nameOfCoffee {
     font-size: 30px;
     font-weight: bold;
+    color: #1A100E;
 
 }
 p.nameOfRoast{
   font-size: 25px;
     margin-top: 4px;
-    color: lightgray;
+    color: #F8F3F2;
 }
 
 
@@ -34,7 +44,20 @@ p.nameOfRoast{
     /*justify-content: center;*/
 }
 
+img{
+    width: 100%;
+    object-fit: cover;
+    height: 300px;
 
+}
+.btn{
+    background-color: #764741;
+
+}
+
+.btn:hover{
+    background-color: #35201C;
+}
 
 
 
