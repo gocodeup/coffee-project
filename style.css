@@ -1,0 +1,13 @@
+    body{
+        background-image: url('https://i.pinimg.com/originals/31/ca/2b/31ca2bcf105003bf97be1aaf9e564df6.jpg');
+    }
+   .coffeelist{
+    background: linear-gradient(to bottom, #eeba95, #5087ec);
+    border-radius: 10px;
+    padding: 20px;
+   } 
+   .cc{
+    background: linear-gradient(to bottom, #eeba95, #5087ec);
+    border-radius: 10px;
+    
+   }

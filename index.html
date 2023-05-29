@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Coffee Management</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+  <script src="main.js"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body onload="search()">
+  <div class="container mt-2">
+    <div class="row">
+    <div class="col"></div>
+    <div class="col"><h1 class="mb-4 text-center cc">Coffee Shop</h1></div>
+    <div class="col"></div>
+</div>
+  
+    <div class="row coffeelist">
+      <div class="col-md-6">
+        <h4>Roast</h4>
+        <div class="form-group">
+          <select class="form-control" id="search-1" onchange="search()">
+            <option value="">all</option>
+            <option value="light">light</option>
+            <option value="medium">medium</option>
+            <option value="dark">dark</option>
+        
+          </select>
+        </div>
+        <h4>Coffee Name</h4>
+        <input type="text" class="form-control" id="search" placeholder="Enter Coffee Name" oninput="search()">
+        <button class="mt-2 mb-4 btn btn-primary" onclick="search()">Search</button>
+        
+       <h3>Add a Coffee</h3>
+        <h4>Roast</h4>
+        <div class="form-group">
+          <select class="form-control mb-2" id="add-1">
+            <option value="">all</option>
+            <option value="light">light</option>
+            <option value="medium">medium</option>
+            <option value="dark">dark</option>
+        
+          </select>
+          <h4>Coffee Name</h4>
+        <div class="form-group">
+          <input type="text" class="form-control" id="add" placeholder="Enter Coffee Name">
+        </div>
+        <button class="btn btn-success" onclick="add()">Add</button>
+      </div>
+  
+
+ 
+    </div>
+    <div class="col-md-6 mt-3">
+        <div id="coffeeList" class="row  mx-3"></div>
+    </div>
+</div>
+</body>
+
+</html>
+
