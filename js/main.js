@@ -1,4 +1,12 @@
-"use strict"
+"use strict";
+
+let body = document.querySelector('#coffees');
+let coffeeSelection = document.querySelector('#coffee-selection');
+let roastSelection = document.querySelector('#roast-selection');
+
+let newRoast = document.querySelector('#add-roast');
+let newCoffee = document.querySelector('#add-coffee');
+let submitted = document.querySelector('#submit');
 
 function renderCoffee(coffee) {
     let html = `
@@ -26,7 +34,7 @@ function updateRoasts(e) {
     if (selectedRoast === 'all') {
         filteredCoffees = coffees;
     } else {
-        filteredCoffees = coffees.filter(coffee => coffee.roast === selectedRoast)
+        filteredCoffees = coffees.filter(coffee => coffee.roast === selectedRoast);
     }
     body.innerHTML = renderCoffees(filteredCoffees);
 }
@@ -51,9 +59,9 @@ function addCoffee() {
     if ( newCoffee.value === ""){
         alert(`Please add the coffee before submitting`)
     } else {
-        coffees.push(addedCoffee)
-        newCoffee.value = ""
-        console.log(`New Coffee Added`)
+        coffees.push(addedCoffee);
+        newCoffee.value = "";
+        console.log(`New Coffee Added`);
         const newCoffeeHTML = renderCoffees(coffees);
         body.innerHTML = newCoffeeHTML;
     }
@@ -81,15 +89,6 @@ let coffees = [
     {id: 13, name: 'Italian', roast: 'dark'},
     {id: 14, name: 'French', roast: 'dark'},
 ].reverse();
-
-let body = document.querySelector('#coffees');
-let coffeeSelection = document.querySelector('#coffee-selection')
-let roastSelection = document.querySelector('#roast-selection');
-
-let newRoast = document.querySelector('#add-roast')
-let newCoffee = document.querySelector('#add-coffee')
-let submitted = document.querySelector('#submit')
-
 
 
 body.innerHTML = renderCoffees(coffees);
