@@ -1,11 +1,13 @@
 body {
     font-family: sans-serif;
     margin: 0;
-    background-color: #F5F5DC;
+    background-color: #f6b9b9;
 }
 
 select, span, input ,h1, div{
-    font-family: 'Chivo Mono';
+    font-family: 'Chivo Mono', serif;
+
+    color: #367037;
 }
 
 div>span{
@@ -16,10 +18,10 @@ div>span{
     width: 600px;
     height: 400px;
     border-radius: 20%;
-    border: solid saddlebrown 3px;
+    border: solid #367037 3px;
     padding: 0px;
 }
 
 .logo{
-    border: solid saddlebrown 3px;
+    border: solid #367037 3px;
 }
