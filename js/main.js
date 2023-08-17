@@ -1,5 +1,7 @@
 "use strict";
 
+// initialize variables
+
 let body = document.querySelector('#coffees');
 let coffeeSelection = document.querySelector('#coffee-selection');
 let roastSelection = document.querySelector('#roast-selection');
@@ -7,6 +9,8 @@ let roastSelection = document.querySelector('#roast-selection');
 let newRoast = document.querySelector('#add-roast');
 let newCoffee = document.querySelector('#add-coffee');
 let submitted = document.querySelector('#submit');
+
+// render functions for html elements
 
 function renderCoffee(coffee) {
     let html = `
@@ -26,6 +30,8 @@ function renderCoffees(coffees) {
     }
     return html;
 }
+
+// update functions for html elements
 
 function updateRoasts(e) {
     e.preventDefault(); // don't submit the form, we just want to update the data
@@ -51,6 +57,8 @@ function updateCoffees(e) {
     body.innerHTML = renderCoffees(filteredCoffees);
 }
 
+// add coffee function
+
 function addCoffee() {
     // let newRoast = newRoast.value
     // let newCoffee = newCoffee.value
@@ -73,6 +81,9 @@ function addCoffee() {
 //coffees.rost =
 
 // from http://www.ncausa.org/About-Coffee/Coffee-Roasts-Guide
+
+// Original Coffee list
+
 let coffees = [
     {id: 1, name: 'Light City', roast: 'light'},
     {id: 2, name: 'Half City', roast: 'light'},
@@ -89,6 +100,7 @@ let coffees = [
     {id: 13, name: 'Italian', roast: 'dark'},
     {id: 14, name: 'French', roast: 'dark'},
 ].reverse();
+
 
 
 body.innerHTML = renderCoffees(coffees);
