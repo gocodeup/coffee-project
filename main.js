@@ -1,5 +1,17 @@
 "use strict"
+//TODO main
+//1. Update the HTML
+//Tables are a little old school, you need to refactor the code so that each coffee is displayed in a div that contains a heading displaying the coffee name, and the type of roast in a paragraph. Don't display the ids, these are only for our application's internal use
+//2. When the page loads, the coffees should be sorted by their ids in ascending order
+//3. Add functionality to search through the coffees by name, and display only the coffees that match the provided search term (You will need to add an input field to the existing form for this)
+//4. Add functionality to update the displayed coffee as the user types into the search box, or as soon as they select an option from the select.
 
+//TODO Additional features
+//1. Make your name search case insensitive
+//2. Style it!
+
+
+// this function prints the coffee froms the coffees's object'
 function renderCoffee(coffee) {
     var html = '<div>';
     html += '<h1>' + coffee.name + '</h1>';
@@ -8,7 +20,6 @@ function renderCoffee(coffee) {
 
     return html;
 }
-
 function renderCoffees(coffees) {
     var html = '';
     for(var i = 0; i < coffees.length; i++) {
@@ -27,26 +38,6 @@ function updateCoffees(e) {
         }
     });
     div.innerHTML = renderCoffees(filteredCoffees);
-}
-
-let searchInput = document.querySelector('.input');
-
-function displayCoffees (coffees){
-    let htmlDisplay
-}
-searchInput.addEventListener("input", (displayCoffees) => {
-    let searchValue = target.value
-    // 2. check: if input exists and if input is larger than 0
-    if (searchValue && searchValue.trim().length > 0){
-        // 3. redefine 'value' to exclude white space and change input to all lowercase
-        searchValue = searchValue.trim().toLowerCase()
-        // 4. return the results only if the value of the search is included in the person's name
-        // we need to write code (a function for filtering through our data to include the search input value)
-    } else {
-        // 5. return nothing
-        // input is invalid -- show an error message or show no results
-
-    }
 }
 
 // from http://www.ncausa.org/About-Coffee/Coffee-Roasts-Guide

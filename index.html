@@ -6,26 +6,32 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <!--Header-->
     <h1>Coffee!</h1>
+    <!--Search input to search the coffee's object-->
+    <div class="form-box">
+        <form>
+            <input id="search-bar" onkeyup="search-coffee()" type="text" class="search-bar" placeholder="Search for a Coffee...">
+            <button id="clear-button" class="clear-button">Clear</button>
+        </form>
 
-    <form>
-        <input class="input" type="text" id="search" placeholder="search for coffee" onkeyup="search_coffee()">
-    </form>
+    <!--Label sort for the coffees-->
+        <form>
+            <label for="roast-selection"></label>
+            <select id="roast-selection">
+                <option>light</option>
+                <option>medium</option>
+                <option>dark</option>
+            </select>
+            <input id="submit" type="submit" />
+        </form>
+    </div>
+    <!--div for the coffees to be displayed-->
+    <div class="coffee-search-box">
+        <div id="coffees" class="coffees">
 
-    <form>
-        <label for="roast-selection"></label>
-        <select id="roast-selection">
-            <option>light</option>
-            <option>medium</option>
-            <option>dark</option>
-        </select>
-        <input id="submit" type="submit" />
-    </form>
-
-<div id="coffees" class="coffees">
-
-</div>
-
+        </div>
+    </div>
     <script src="main.js"></script>
 </body>
 </html>
