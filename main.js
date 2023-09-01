@@ -22,13 +22,16 @@ function updateCoffees(e) {
     e.preventDefault(); // don't submit the form, we just want to update the data
     var selectedRoast = roastSelection.value;
     var filteredCoffees = [];
-    coffees.forEach(function (coffee) {
-        if (coffee.roast === selectedRoast) {
+    coffees.forEach(function(coffee) {
+        if (selectedRoast === "all") {
+            tbody.innerHTML = renderCoffees(coffees);
+        } else if (coffee.roast === selectedRoast) {
             filteredCoffees.push(coffee);
+            tbody.innerHTML = renderCoffees(filteredCoffees);
         }
     });
-    tbody.innerHTML = renderCoffees(filteredCoffees);
 }
+
 
 // from http://www.ncausa.org/About-Coffee/Coffee-Roasts-Guide
 var coffees = [
@@ -55,32 +58,20 @@ var roastSelection = document.querySelector('#roast-selection');
 tbody.innerHTML = renderCoffees(coffees);
 
 submitButton.addEventListener('click', updateCoffees);
-
+roastSelection.addEventListener(`change`, updateCoffees)
 
 let coffeSearch = document.getElementById("coffee-name");
-
-coffeSearch.addEventListener("input", (event) => {
-    // event.preventDefault()
-    // let userInput = event.data;
-    // // console.log(userInput);
-    // // for (let eventElement of event) {
-    // //
-    // // }
-    // for (let i = 0; i < coffees.length; i++) {
-    //     userInput+= userInput
-    //     if (coffees.name[i] === userInput){
-    //         console.log(coffees[i]);
-    //
-    //     }
-    // }
-    // return renderCoffee();
+function searchCoffee(event){
     event.preventDefault(); // don't submit the form, we just want to update the data
-    var searchRoast = coffeSearch.value;
+    var searchName = coffeSearch.value;
     var filteredSearchCoffees = [];
+
     coffees.forEach(function (coffee) {
-        if (coffee.roast === searchRoast) {
+        if (coffee.name === searchName) {
             filteredSearchCoffees.push(coffee);
         }
     });
     tbody.innerHTML = renderCoffees(filteredSearchCoffees);
-})
+}
+
+coffeSearch.addEventListener(`input`, searchCoffee)
