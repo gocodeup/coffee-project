@@ -9,6 +9,10 @@
     <h1>Coffee!</h1>
 
     <form>
+        <input class="input" type="text" id="search" placeholder="search for coffee" onkeyup="search_coffee()">
+    </form>
+
+    <form>
         <label for="roast-selection"></label>
         <select id="roast-selection">
             <option>light</option>
@@ -18,16 +22,9 @@
         <input id="submit" type="submit" />
     </form>
 
-    <table>
-        <thead>
-            <tr>
-                <th>ID</th>
-                <th>NAME</th>
-                <th>ROAST</th>
-            </tr>
-        </thead>
-        <tbody id="coffees"></tbody>
-    </table>
+<div id="coffees" class="coffees">
+
+</div>
 
     <script src="main.js"></script>
 </body>
