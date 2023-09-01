@@ -1,5 +1,5 @@
 "use strict";
-
+// puts cards on the screen
 function renderCoffee(coffee) {
     var html = "<div class=\"coffee\">";
     // html += '<div>' + coffee.id + '</div>';
@@ -32,7 +32,6 @@ function updateCoffees(e) {
     });
 }
 
-
 // from http://www.ncausa.org/About-Coffee/Coffee-Roasts-Guide
 var coffees = [
     {id: 1, name: "Light City", roast: "light"},
@@ -57,10 +56,14 @@ var roastSelection = document.querySelector("#roast-selection");
 
 tbody.innerHTML = renderCoffees(coffees);
 
+// Event listener
+
 submitButton.addEventListener("click", updateCoffees);
 roastSelection.addEventListener(`change`, updateCoffees);
 
 let coffeSearch = document.getElementById("coffee-name");
+let matchedCoffee= "";
+let filteredCoffeeNames = [];
 
 function searchCoffee(event) {
     event.preventDefault(); // don't submit the form, we just want to update the data
@@ -77,16 +80,31 @@ function searchCoffee(event) {
 
 function updateValue(event) {
     event.preventDefault();
-    var roastName = coffeSearch.value;
+    // var roastName = coffeSearch.value;
     // var filteredCoffeeNames = [];
+    console.log(event.target.value);
     for (let i = 0; i < coffees.length; i++) {
-        if (roastName.includes(coffees[i].name[i])) {
-            renderCoffees(coffees);
+        if (coffees[i].name.toLowerCase().includes(event.target.value.toLowerCase())) {
+            filteredCoffeeNames.push(coffees[i]);
         }
+
     }
+
+    // for (let i = 0; i < filteredCoffeeNames.length; i++) {
+    //
+    //   matchedCoffee +=
+    //     `<div class="coffee">
+    //     <h1>${coffees[i].name}</h1>
+    //     <p>${coffees[i].roast}</p>
+    //     </div>`
+    //
+    // }
+    tbody.innerHTML = renderCoffees(filteredCoffeeNames);
+    // document.getElementById("coffees").innerHTML = matchedCoffee;
+    matchedCoffee= "";
+    filteredCoffeeNames = [];
 }
 
 
 coffeSearch.addEventListener(`input`, searchCoffee);
 coffeSearch.addEventListener(`input`, updateValue);
-
