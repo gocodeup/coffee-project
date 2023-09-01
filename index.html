@@ -9,6 +9,7 @@
 </head>
 <body>
 <div class="page-wrapper">
+<!--    Header   -->
     <div class="container">
         <div class="row">
             <div class="col">
@@ -17,12 +18,25 @@
             </div>
         </div>
     </div>
+<!--    Main Body  -->
     <div class="container">
-        <div class="row">
+        <div class="row ">
+
+            <!--            first column (coffee types)   -->
+
+            <div class="col">
+                <div>
+                    <div id="coffees"></div>
+                </div>
+            </div>
+
+
+            <!--           second column (filter)    -->
             <div class="col">
                 <form class="d-flex flex-column gap-2">
                     <label for="roast-selection">Roast</label>
                     <select id="roast-selection">
+                        <option>all</option>
                         <option>light</option>
                         <option>medium</option>
                         <option>dark</option>
@@ -35,6 +49,7 @@
                 <form class="d-flex flex-column gap-2">
                     <label for="add-roast-selection">Roast</label>
                     <select id="add-roast-selection">
+                        <option>all</option>
                         <option>light</option>
                         <option>medium</option>
                         <option>dark</option>
@@ -44,11 +59,7 @@
                     <button id="submit" type="submit">Submit</button>
                 </form>
             </div>
-            <div class="col">
-                <div>
-                    <div id="coffees"></div>
-                </div>
-            </div>
+
         </div>
     </div>
 </div>
