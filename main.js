@@ -1,13 +1,12 @@
-"use strict"
 //TODO main
 //1. Update the HTML
-//Tables are a little old school, you need to refactor the code so that each coffee is displayed in a div that contains a heading displaying the coffee name, and the type of roast in a paragraph. Don't display the ids, these are only for our application's internal use
-//2. When the page loads, the coffees should be sorted by their ids in ascending order
-//3. Add functionality to search through the coffees by name, and display only the coffees that match the provided search term (You will need to add an input field to the existing form for this)
-//4. Add functionality to update the displayed coffee as the user types into the search box, or as soon as they select an option from the select.
+//Tables are a little old school, you need to refactor the code so that each coffee is displayed in a div that contains a heading displaying the coffee name, and the type of roast in a paragraph. Don't display the ids, these are only for our application's internal use DONE
+//2. When the page loads, the coffees should be sorted by their ids in ascending order DONE
+//3. Add functionality to search through the coffees by name, and display only the coffees that match the provided search term (You will need to add an input field to the existing form for this) DONE
+//4. Add functionality to update the displayed coffee as the user types into the search box, or as soon as they select an option from the select. DONE
 
 //TODO Additional features
-//1. Make your name search case insensitive
+//1. Make your name search case insensitive DONE
 //2. Style it!
 
 
@@ -27,7 +26,6 @@ function renderCoffees(coffees) {
     }
     return html;
 }
-
 function updateCoffees(e) {
     e.preventDefault(); // don't submit the form, we just want to update the data
     var selectedRoast = roastSelection.value;
@@ -39,7 +37,39 @@ function updateCoffees(e) {
     });
     div.innerHTML = renderCoffees(filteredCoffees);
 }
+//creating a DOM grab to dumped the yoinked values in.
+let container=document.querySelector("#coffees")
 
+//creating a connection to search box
+let searchInput = document.querySelector("#search-bar");
+
+//empty string to hold the search box
+let searchCoffees = "";
+
+//empty box for search
+let coffeeSearchBucket = [];
+
+//function to translate
+searchInput.addEventListener("input", (event) =>{
+    console.log(event.target.value);
+    for (let i =0;i<coffees.length;i++){
+        if (coffees[i].name.toLowerCase().includes(event.target.value.toLowerCase())){
+            coffeeSearchBucket.push(coffees[i]);
+        }
+    }
+    for (let i=0;i<coffeeSearchBucket.length;i++){
+        searchCoffees +=
+            `<div class="coffees">
+                <div>Coffee Name: ${coffeeSearchBucket[i].name}</div>
+                <div>Coffee Roast ${coffeeSearchBucket[i].roast}</div>
+            </div>`
+    }
+    container.innerHTML = searchCoffees;
+    searchCoffees = "";
+    coffeeSearchBucket = [];
+})
+
+//object containing the coffee styles
 // from http://www.ncausa.org/About-Coffee/Coffee-Roasts-Guide
 var coffees = [
     {id: 1, name: 'Light City', roast: 'light'},
