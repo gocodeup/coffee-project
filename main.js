@@ -3,10 +3,11 @@
 // puts cards on the screen
 function renderCoffee(coffee) {
     var html = "<div class=\"coffee\">";
-    //Adds images to coffee names
-    // html += "<img src=\"" + coffee.imgSrc + "\" alt=\"" + coffee.name + "\">"
+
     html += "<h2>" + coffee.name + "</h2>";
     html += "<p>" + coffee.roast + "</p>";
+    //Adds images to coffee names
+    html += "<img src=\"" + coffee.imgSrc + "\" alt=\"" + coffee.name + "\"style='height: 100px; width: 100px; border-radius: 20px'>"
     html += "</div>";
 
     return html;
@@ -111,14 +112,14 @@ coffeSearch.addEventListener(`input`, updateValue);
 //     <div>${coffees.imgSrc}</div>
 // </div>`
 //
-// let allCards =[];
-//
-// for (let i = 0; i < coffees.length; i++) {
-//     allCards.push(`<div class="d-flex flex-column justify-content-center align-items-start" style="min-width: 600px;">
-//     <div>${coffees[i].name}</div>
-//      <div>${coffees[i].roast}</div>
-//      <div>${coffees[i].imgSrc}</div>
-//  </div>`);
-// }
-// console.log(allCards);
+let allCards =[];
+
+for (let i = 0; i < coffees.length; i++) {
+    allCards.push(`<div class="d-flex justify-content-center align-items-start" style="min-width: 600px;">
+    <div>${coffees[i].name}</div>
+     <div>${coffees[i].roast}</div>
+     <div>${coffees[i].imgSrc}</div>
+ </div>`);
+}
+document.getElementById("container").innerHTML = allCards;
 
