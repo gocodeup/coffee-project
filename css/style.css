@@ -1,9 +1,61 @@
-table {
-    border-collapse: collapse;
-    margin: 15px 0;
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Phudu:wght@300;400;500;600;700;800;900&display=swap');
+
+:root {
+    font-family: "IBM Plex Mono", monospace;
+    font-weight: 400;
 }
 
-td, th {
-    border: 1px solid black;
-    padding: 5px 10px;
+body {
+    font-family: inherit;
+}
+
+/*table {*/
+/*    border-collapse: collapse;*/
+/*    margin: 15px 0;*/
+/*}*/
+
+/*td, th {*/
+/*    border: 1px solid black;*/
+/*    padding: 5px 10px;*/
+/*}*/
+
+.coffee {
+    margin: 1em;
+    padding: 1em;
+    max-width: 100%;
+    border: 2px solid #4F595C;
+    border-top-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+form {
+    margin: 1em;
+    padding: 1em;
+    background-color: #e5e9ff;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;
+}
+
+label {
+    font-weight: bold;
+    font-size: 18px;
+}
+
+select {
+    max-width: 25%;
+    display: flex;
+    justify-content: center;
+}
+
+input {
+    max-width: 50%;
+}
+
+button {
+    background-color: #fff8f0;
+    max-width: 50%;
+    border-color: #b9b9b9;
+}
+#coffees {
+    width: 500px;
+    height: 200px;
 }
