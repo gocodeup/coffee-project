@@ -1,0 +1,54 @@
+.page-wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/*style for navigation menu*/
+.nav-link:hover {
+    transition: all ease 0.3s;
+    font-weight: bolder;
+    font-size: 20px;
+}
+
+/*style for header/hero section*/
+
+.hero-wrapper img {
+    max-height: 500px;
+    transition: all ease 0.3s;
+}
+
+.hero-wrapper:hover img {
+    opacity: 95%;
+    transform: scale(1.5);
+}
+
+.hero-overlay {
+    background-color: rgba(0, 0, 0, 0.8);
+    transition: all ease 0.3s;
+    opacity: 0;
+    /*pointer-events: all;*/
+}
+
+.hero-wrapper:hover .hero-overlay {
+    opacity: 1;
+}
+
+.paw-1 {
+    bottom: -250px;
+}
+
+.paw-2 {
+    top: -300px;
+}
+
+.hero-wrapper:hover .paw-1 {
+    right: 0px;
+    bottom: 0px;
+}
+
+.hero-wrapper:hover .paw-2 {
+    transform: scaleY(-1);
+    left: 0px;
+    top: 0px;
+}
