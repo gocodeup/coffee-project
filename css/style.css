@@ -28,6 +28,10 @@ body {
     max-height: 500px;
     transition: all ease 0.3s;
 }
+nav img {
+    width: 200px;
+    height: 100px;
+}
 
 .hero-wrapper:hover img {
     opacity: 95%;
@@ -85,7 +89,7 @@ form {
     box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;
 }
 .main-form {
-    width: 60%;
+    min-width: 700px;
 }
 label {
     font-weight: bold;
