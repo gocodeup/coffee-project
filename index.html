@@ -120,47 +120,109 @@
     <div class="container">
         <div class="row">
             <!--           first column (filter)    -->
-            <div class="col m-5 p-3">
+            <div class="col mb-5 p-3">
                 <h2>Search Roasts</h2>
-                <form class="d-flex gap-3 justify-content-center">
+                <div class="col d-flex justify-content-center">
+                <form class="main-form d-flex gap-3 justify-content-center">
                     <label for="roast-selection">Roast</label>
                     <select id="roast-selection">
                         <option>all</option>
                         <option>light</option>
                         <option>medium</option>
                         <option>dark</option>
-
+                        <option>black</option>
                     </select>
                     <label for="coffee-name">Coffee Name</label>
                     <input id="coffee-name" type="text">
-                    <button id="submit" type="submit">Search</button>
                 </form>
+            </div>
                 <h2>Add a Coffee</h2>
-                <form class="d-flex gap-3 justify-content-center add-coffee-form">
-                    <label for ="id"></label>
-                    <input id ="id" name="id" type="number" hidden="">
-                    <label for="name">Coffee Name</label>
-                    <input id="name" name="name" type="text" required/>
+                <div class="col d-flex justify-content-center">
+                <form class="main-form d-flex gap-3 justify-content-center add-coffee-form">
                     <label for="roast">Roast</label>
                     <select id="roast" name="roast">
                         <option>light</option>
                         <option>medium</option>
                         <option>dark</option>
+                        <option>black</option>
                     </select>
-                    <button id="submit-coffee" type="submit">Submit</button>
+                    <label for ="id"></label>
+                    <input id ="id" name="id" type="number" hidden="">
+                    <label for="name">Coffee Name</label>
+                    <input id="name" name="name" type="text" required/>
+                    <button id="submit-coffee" type="submit">Add Coffee</button>
                 </form>
+            </div>
             </div>
             <!--            second column (coffee types)   -->
         </div>
     </div>
     <div class="container">
         <div class="row d-flex justify-content-center">
-            <div class="col-9">
-                <div id="coffees" class="d-flex flex-column flex-wrap h-50"></div>
+            <div class="col d-flex justify-content-center flex-lg-row">
+                <div id="coffees" class="d-lg-flex flex-lg-wrap justify-content-center justify-content-md-evenly"></div>
             </div>
         </div>
     </div>
+    <div class="container">
+        <footer class="py-5">
+            <div class="row">
+                <div class="col-6 col-md-2 mb-3">
+                    <h5>Section</h5>
+                    <ul class="nav flex-column">
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Home</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Features</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Pricing</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">FAQs</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">About</a></li>
+                    </ul>
+                </div>
 
+                <div class="col-6 col-md-2 mb-3">
+                    <h5>Section</h5>
+                    <ul class="nav flex-column">
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Home</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Features</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Pricing</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">FAQs</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">About</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-6 col-md-2 mb-3">
+                    <h5>Section</h5>
+                    <ul class="nav flex-column">
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Home</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Features</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Pricing</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">FAQs</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">About</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-md-5 offset-md-1 mb-3">
+                    <form class="footer-form">
+                        <h5>Subscribe to our newsletter</h5>
+                        <p>Monthly digest of what's new and exciting from us.</p>
+                        <div class="d-flex flex-column flex-sm-row w-100 gap-2">
+                            <label for="newsletter1" class="visually-hidden">Email address</label>
+                            <input id="newsletter1" type="text" class="form-control" placeholder="Email address">
+                            <button class="btn btn-primary" type="button">Subscribe</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <div class="d-flex flex-column flex-sm-row justify-content-between py-4 my-4 border-top">
+                <p>&copy; 2022 Company, Inc. All rights reserved.</p>
+                <ul class="list-unstyled d-flex">
+                    <li class="ms-3"><a class="link-dark" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#twitter"/></svg></a></li>
+                    <li class="ms-3"><a class="link-dark" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#instagram"/></svg></a></li>
+                    <li class="ms-3"><a class="link-dark" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#facebook"/></svg></a></li>
+                </ul>
+            </div>
+        </footer>
+    </div>
 
 </div>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"

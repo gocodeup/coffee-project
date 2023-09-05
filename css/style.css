@@ -63,26 +63,15 @@ body {
     left: 0px;
     top: 0px;
 }
-
-
-/*table {*/
-/*    border-collapse: collapse;*/
-/*    margin: 15px 0;*/
-/*}*/
-
-/*td, th {*/
-/*    border: 1px solid black;*/
-/*    padding: 5px 10px;*/
-/*}*/
-
 .coffee {
     margin: 1em;
     padding: 1em;
-    max-width: 80%;
-    border: 2px solid #4F595C;
+    max-width:80%;
+    border: 2px solid #E7C905;
     border-top-left-radius: 20px;
     border-bottom-right-radius: 20px;
     box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;
+    width: 400px;
 }
 h2 {
     display: flex;
@@ -91,10 +80,13 @@ h2 {
 form {
     margin: 1em;
     padding: 1em;
-    background-color: #e5e9ff;
+    color: #fff8f0;
+    background-color: #2C52A0;
     box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;
 }
-
+.main-form {
+    width: 60%;
+}
 label {
     font-weight: bold;
     font-size: 18px;
