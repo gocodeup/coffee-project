@@ -10,19 +10,18 @@ td, th {
     border: 1px solid black;
     padding: 5px 10px;
 }
-
-/*#coffees {*/
-/*    border: 2px solid black;*/
-/*}*/
-
-
-/*hides the coffee id*/
+.container-nav {
+    background-color: cadetblue;
+}
 .coffee-id {
     display: none;
 }
 
 .company-logo {
-    max-width: 60px;
-    max-height: 60px;
+    max-width: 70px;
+    max-height: 70px;
     transform: rotate(180deg);
+}
+.bottom-row{
+    background-color: cadetblue ;
 }
