@@ -1,0 +1,294 @@
+/*
+    The "page wrapper" is the outermost container for the page. It mimics
+    the behavior of the body tag, but is a container so that it can be styled
+    with more flexibility than the body tag.
+*/
+.page-wrapper {
+display: flex;
+flex-direction: column;
+min-height: 100vh;
+}
+
+/*
+    The "container", sometimes referred to as a "section", is a container
+    element (semantic when applicable) that vertically separates different
+    areas on the page based on their purpose or topic. It can allow different
+    background colors and properties for each section that help users associate
+    content within it as belonging to the same subject.
+*/
+.container {
+display: flex;
+flex-direction: column;
+align-items: center;
+}
+
+/*
+    The "row" is a container element that horizontally separates its
+    children, which are usually columns. It also performs a secondary role
+    of keeping the content of the site within a reasonable width, so that
+    wider screens don't disrupt the intended layout.
+*/
+.row {
+display: flex;
+width: 100%;
+max-width: 1100px;
+padding: 0 20px;
+}
+.row.full-width {
+    max-width: unset;
+}
+.row.no-padding {
+    padding: unset;
+}
+/*
+    The "column" is a container element that vertically separates its
+    children, which are usually content elements. When paired with sibling columns,
+    it allows for the creation of a flexible grid system that can be used
+    to create a variety of layouts.
+*/
+.column {
+display: flex;
+flex-direction: column;
+flex-grow: 1 0 0;
+order:0;
+}
+
+/* THIS IS OUR UTILITY CLASS FOR FLEX PROPERTIES */
+.d-flex {
+    display: flex;
+}
+.align-items-center {
+    align-items: center;
+}
+.align-items-start {
+    align-items: start;
+}
+.align-items-end {
+    align-items: end;
+}
+.justify-content-center {
+    justify-content: center;
+}
+.justify-content-start {
+    justify-content: start;
+}
+.justify-content-end {
+    justify-content: end;
+}
+.justify-content-between {
+    justify-content: space-between;
+}
+.justify-content-around {
+    justify-content: space-around;
+}
+.justify-content-evenly {
+    justify-content: space-evenly;
+}
+.flex-wrap {
+    flex-wrap: wrap;
+}
+.flex-column {
+    flex-direction: column;
+}
+.flex-grow {
+    flex: 1 0 0;
+}
+.flex-shrink {
+    flex: 0 1 auto;
+}
+
+/* PADDING UTILITY CLASS */
+.p-0 {
+    padding: 0;
+}
+.p-5 {
+    padding: 5px;
+}
+.p-10 {
+    padding: 10px;
+}
+.p-15 {
+    padding: 15px;
+}
+.p-20 {
+    padding: 20px;
+}
+.p-25 {
+    padding: 25px;
+}
+.p-30 {
+    padding: 30px;
+}
+
+.px-0 {
+    padding-left: 0px;
+    padding-right: 0px;
+}
+.px-5 {
+    padding-left: 5px;
+    padding-right: 5px;
+}
+.px-10 {
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.px-15 {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+.px-20 {
+    padding-left: 20px;
+    padding-right: 20px;
+}
+.px-25 {
+    padding-left: 25px;
+    padding-right: 25px;
+}
+.px-30 {
+    padding-left: 30px;
+    padding-right: 30px;
+}
+.py-0 {
+    padding-top: 0px;
+    padding-bottom: 0px;
+}
+.py-5 {
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+.py-10 {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.py-15 {
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+.py-20 {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+.py-25 {
+    padding-top: 25px;
+    padding-bottom: 25px;
+}
+.py-30 {
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+/* MARGIN UTILITY CLASS */
+.m-0 {
+    margin: 0;
+}
+.m-5 {
+    margin: 5px;
+}
+.m-10 {
+    margin: 10px;
+}
+.m-15 {
+    margin: 15px;
+}
+.m-20 {
+    margin: 20px;
+}
+.m-25 {
+    margin: 25px;
+}
+.m-30 {
+    margin: 30px;
+}
+.mx-0 {
+    margin-left: 0px;
+    margin-right: 0px;
+}
+.mx-5 {
+    margin-left: 5px;
+    margin-right: 5px;
+}
+.mx-10 {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+.mx-15 {
+    margin-left: 15px;
+    margin-right: 15px;
+}
+.mx-20 {
+    margin-left: 20px;
+    margin-right: 20px;
+}
+.mx-25 {
+    margin-left: 25px;
+    margin-right: 25px;
+}
+.mx-30 {
+    margin-left: 30px;
+    margin-right: 30px;
+}
+.my-0 {
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+.my-5 {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+.my-10 {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.my-15 {
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+.my-20 {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.my-25 {
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+.my-30 {
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+/* GAP UTILITY CLASSES */
+.gap-0 {
+    gap: 0px;
+}
+.gap-5 {
+    gap: 5px;
+}
+.gap-10 {
+    gap: 10px;
+}
+.gap-15 {
+    gap: 15px;
+}
+.gap-20 {
+    gap: 20px;
+}
+.gap-25 {
+    gap: 25px;
+}
+.gap-30 {
+    gap: 30px;
+}
+.gap-35 {
+    gap: 35px;
+}
+.gap-40 {
+    gap: 40px;
+}
+
+.gap-45 {
+    gap: 45px;
+}
+
+.gap-50 {
+    gap: 50px;
+}

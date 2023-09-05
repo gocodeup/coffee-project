@@ -1,0 +1,28 @@
+@import "resets.css";
+@import "layout.css";
+
+table {
+    border-collapse: collapse;
+    margin: 15px 0;
+}
+
+td, th {
+    border: 1px solid black;
+    padding: 5px 10px;
+}
+
+/*#coffees {*/
+/*    border: 2px solid black;*/
+/*}*/
+
+
+/*hides the coffee id*/
+.coffee-id {
+    display: none;
+}
+
+.company-logo {
+    max-width: 60px;
+    max-height: 60px;
+    transform: rotate(180deg);
+}
