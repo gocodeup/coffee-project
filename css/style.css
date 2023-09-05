@@ -22,12 +22,16 @@ body {
 .coffee {
     margin: 1em;
     padding: 1em;
-    max-width: 100%;
+    max-width: 80%;
     border: 2px solid #4F595C;
     border-top-left-radius: 20px;
     border-bottom-right-radius: 20px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;
 }
-
+h2 {
+    display: flex;
+    justify-content: center;
+}
 form {
     margin: 1em;
     padding: 1em;
@@ -54,8 +58,4 @@ button {
     background-color: #fff8f0;
     max-width: 50%;
     border-color: #b9b9b9;
-}
-#coffees {
-    width: 500px;
-    height: 200px;
 }

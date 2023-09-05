@@ -2,18 +2,34 @@
 
 // puts cards on the screen
 function renderCoffee(coffee) {
-    var html = "<div class=\"coffee\">";
-
-    html += "<h2>" + coffee.name + "</h2>";
-    html += "<p>" + coffee.roast + "</p>";
-    //Adds images to coffee names
-    html += "<img src=\"" + coffee.imgSrc + "\" alt=\"" + coffee.name + "\"style='height: 100px; width: 100px; border-radius: 20px'>"
+    var html = "<div class=\"coffee d-flex justify-content-between\">";
+    html += "<div>"
+        html += "<h2>" + coffee.name + "</h2>";
+        html += "<p>" + coffee.roast + "</p>";
+    html += "</div>"
+    html += "<div>"
+        //Adds images to coffee names
+        html += "<img src=\"" + coffee.image + "\" alt=\"" + coffee.name + "\" style='height: 100px; width: 100px; border-top-left-radius: 20px;\n" + "border-bottom-right-radius: 20px;'>"
+    html += "</div>"
     html += "</div>";
 
     return html;
 }
 
 function renderCoffees(coffees) {
+    coffees.image = "";
+
+    for (let i = 0; i < coffees.length; i++) {
+        if (coffees[i].roast === "light") {
+            coffees[i].image = "img/light-roast.jpeg";
+        } else if (coffees[i].roast === "medium") {
+            coffees[i].image = "img/medium-roast.jpeg";
+        } else if (coffees[i].roast === "dark") {
+            coffees[i].image = "img/dark-roast.jpeg";
+        } else {
+            coffees[i].image = "img/extra-dark.jpeg";
+        }
+    }
     var html = "";
     for (var i = coffees.length - 1; i >= 0; i--) {
         html += renderCoffee(coffees.sort()[i]);
@@ -41,20 +57,20 @@ function updateCoffees(e) {
 
 // from http://www.ncausa.org/About-Coffee/Coffee-Roasts-Guide
 var coffees = [
-    {id: 1, name: "Light City", roast: "light", imgSrc: "img/light-roast.jpeg"},
-    {id: 2, name: "Half City", roast: "light", imgSrc: "img/light-roast.jpeg"},
-    {id: 3, name: "Cinnamon", roast: "light", imgSrc: "img/light-roast.jpeg"},
-    {id: 4, name: "City", roast: "medium", imgSrc: "img/medium-roast.jpeg"},
-    {id: 5, name: "American", roast: "medium", imgSrc: "img/medium-roast.jpeg"},
-    {id: 6, name: "Breakfast", roast: "medium", imgSrc: "img/medium-roast.jpeg"},
-    {id: 7, name: "High", roast: "dark", imgSrc: "img/dark-roast.jpeg"},
-    {id: 8, name: "Continental", roast: "dark", imgSrc: "img/dark-roast.jpeg"},
-    {id: 9, name: "New Orleans", roast: "dark", imgSrc: "img/dark-roast.jpeg"},
-    {id: 10, name: "European", roast: "dark", imgSrc: "img/dark-roast.jpeg"},
-    {id: 11, name: "Espresso", roast: "dark", imgSrc: "img/extra-dark.jpeg"},
-    {id: 12, name: "Viennese", roast: "dark", imgSrc: "img/extra-dark.jpeg"},
-    {id: 13, name: "Italian", roast: "dark", imgSrc: "img/extra-dark.jpeg"},
-    {id: 14, name: "French", roast: "dark", imgSrc: "img/extra-dark.jpeg"},
+    {id: 1, name: "Light City", roast: "light"},
+    {id: 2, name: "Half City", roast: "light"},
+    {id: 3, name: "Cinnamon", roast: "light"},
+    {id: 4, name: "City", roast: "medium"},
+    {id: 5, name: "American", roast: "medium"},
+    {id: 6, name: "Breakfast", roast: "medium"},
+    {id: 7, name: "High", roast: "dark"},
+    {id: 8, name: "Continental", roast: "dark"},
+    {id: 9, name: "New Orleans", roast: "dark"},
+    {id: 10, name: "European", roast: "dark"},
+    {id: 11, name: "Espresso", roast: "black"},
+    {id: 12, name: "Viennese", roast: "black"},
+    {id: 13, name: "Italian", roast: "black"},
+    {id: 14, name: "French", roast: "black"},
 ];
 
 var tbody = document.querySelector("#coffees");
@@ -85,6 +101,8 @@ function searchCoffee(event) {
         }
     });
     tbody.innerHTML = renderCoffees(filteredSearchCoffees);
+
+
 }
 
 // Looks at each letter being entered in the search bar and matches it with an object
@@ -112,14 +130,15 @@ coffeSearch.addEventListener(`input`, updateValue);
 //     <div>${coffees.imgSrc}</div>
 // </div>`
 //
-let allCards =[];
+// let allCards = [];
+//
+// for (let i = 0; i < coffees.length; i++) {
+//     allCards.push(`<div class="d-flex justify-content-center align-items-start" style="min-width: 600px;">
+//     <div>${coffees[i].name}</div>
+//      <div>${coffees[i].roast}</div>
+//      <div>${coffees[i].imgSrc}</div>
+//  </div>`);
+// }
+// document.getElementById("container").innerHTML = allCards;
 
-for (let i = 0; i < coffees.length; i++) {
-    allCards.push(`<div class="d-flex justify-content-center align-items-start" style="min-width: 600px;">
-    <div>${coffees[i].name}</div>
-     <div>${coffees[i].roast}</div>
-     <div>${coffees[i].imgSrc}</div>
- </div>`);
-}
-document.getElementById("container").innerHTML = allCards;
-
+// loop that generates an image based off the roast type in the array
