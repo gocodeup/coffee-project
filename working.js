@@ -2,20 +2,20 @@
 
 // from http://www.ncausa.org/About-Coffee/Coffee-Roasts-Guide
 var coffees = [
-    { id: 1, name: "Light City", roast: "light" },
-    { id: 2, name: "Half City", roast: "light" },
-    { id: 3, name: "Cinnamon", roast: "light" },
-    { id: 4, name: "City", roast: "medium" },
-    { id: 5, name: "American", roast: "medium" },
-    { id: 6, name: "Breakfast", roast: "medium" },
-    { id: 7, name: "High", roast: "dark" },
-    { id: 8, name: "Continental", roast: "dark" },
-    { id: 9, name: "New Orleans", roast: "dark" },
-    { id: 10, name: "European", roast: "dark" },
-    { id: 11, name: "Espresso", roast: "dark" },
-    { id: 12, name: "Viennese", roast: "dark" },
-    { id: 13, name: "Italian", roast: "dark" },
-    { id: 14, name: "French", roast: "dark" },
+    {id: 1, name: "Light City", roast: "light"},
+    {id: 2, name: "Half City", roast: "light"},
+    {id: 3, name: "Cinnamon", roast: "light"},
+    {id: 4, name: "City", roast: "medium"},
+    {id: 5, name: "American", roast: "medium"},
+    {id: 6, name: "Breakfast", roast: "medium"},
+    {id: 7, name: "High", roast: "dark"},
+    {id: 8, name: "Continental", roast: "dark"},
+    {id: 9, name: "New Orleans", roast: "dark"},
+    {id: 10, name: "European", roast: "dark"},
+    {id: 11, name: "Espresso", roast: "black"},
+    {id: 12, name: "Viennese", roast: "black"},
+    {id: 13, name: "Italian", roast: "black"},
+    {id: 14, name: "French", roast: "black"},
 ];
 
 //TODO: This is the beginning of local Storage use. Makes data persistent.
@@ -43,10 +43,15 @@ tbody.innerHTML = renderCoffees(storedCoffee);
 
 // puts cards on the screen
 function renderCoffee(coffee) {
-    var html = '<div class="coffee d-flex flex-column flex-wrap">';
-    // html += "<div>" + coffee.id + "</div>";
-    html += "<h1>" + coffee.name + "</h1>";
+    var html = "<div class=\"coffee d-flex justify-content-between\">";
+    html += "<div>"
+    html += "<h2>" + coffee.name + "</h2>";
     html += "<p>" + coffee.roast + "</p>";
+    html += "</div>"
+    html += "<div>"
+    //Adds images to coffee names
+    html += "<img src=\"" + coffee.image + "\" alt=\"" + coffee.name + "\" style='height: 100px; width: 100px; border-top-left-radius: 20px;\n" + "border-bottom-right-radius: 20px;'>"
+    html += "</div>"
     html += "</div>";
 
     return html;
@@ -55,6 +60,19 @@ function renderCoffee(coffee) {
 //sorts the coffees by id in descending order so that newest coffees are displayed first when filtered by roast selection all.
 //enforces text format of Added Coffee Names to be consistent when displayed in HTML.
 function renderCoffees(coffees) {
+    coffees.image = "";
+
+    for (let i = 0; i < coffees.length; i++) {
+        if (coffees[i].roast === "light") {
+            coffees[i].image = "img/light-roast.jpeg";
+        } else if (coffees[i].roast === "medium") {
+            coffees[i].image = "img/medium-roast.jpeg";
+        } else if (coffees[i].roast === "dark") {
+            coffees[i].image = "img/dark-roast.jpeg";
+        } else {
+            coffees[i].image = "img/extra-dark.jpeg";
+        }
+    }
     let str = "";
     for (let i = 0; i < coffees.length; i++) {
         str = coffees[i].name.split(" ");

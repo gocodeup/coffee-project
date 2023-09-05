@@ -1,60 +1,5 @@
 "use strict";
 
-// puts cards on the screen
-function renderCoffee(coffee) {
-    var html = "<div class=\"coffee d-flex justify-content-between\">";
-    html += "<div>"
-        html += "<h2>" + coffee.name + "</h2>";
-        html += "<p>" + coffee.roast + "</p>";
-    html += "</div>"
-    html += "<div>"
-        //Adds images to coffee names
-        html += "<img src=\"" + coffee.image + "\" alt=\"" + coffee.name + "\" style='height: 100px; width: 100px; border-top-left-radius: 20px;\n" + "border-bottom-right-radius: 20px;'>"
-    html += "</div>"
-    html += "</div>";
-
-    return html;
-}
-
-function renderCoffees(coffees) {
-    coffees.image = "";
-
-    for (let i = 0; i < coffees.length; i++) {
-        if (coffees[i].roast === "light") {
-            coffees[i].image = "img/light-roast.jpeg";
-        } else if (coffees[i].roast === "medium") {
-            coffees[i].image = "img/medium-roast.jpeg";
-        } else if (coffees[i].roast === "dark") {
-            coffees[i].image = "img/dark-roast.jpeg";
-        } else {
-            coffees[i].image = "img/extra-dark.jpeg";
-        }
-    }
-    var html = "";
-    for (var i = coffees.length - 1; i >= 0; i--) {
-        html += renderCoffee(coffees.sort()[i]);
-    }
-    return html;
-}
-
-// Updates the data when it is run through the loop
-
-function updateCoffees(e) {
-    e.preventDefault(); // don't submit the form, we just want to update the data
-    var selectedRoast = roastSelection.value;
-    var filteredCoffees = [];
-    coffees.forEach(function (coffee) {
-        if (selectedRoast === "all") {
-            tbody.innerHTML = renderCoffees(coffees);
-        } else if (coffee.roast === selectedRoast) {
-            filteredCoffees.push(coffee);
-            tbody.innerHTML = renderCoffees(filteredCoffees);
-        }
-    });
-}
-
-// array with all of the objects
-
 // from http://www.ncausa.org/About-Coffee/Coffee-Roasts-Guide
 var coffees = [
     {id: 1, name: "Light City", roast: "light"},
@@ -73,72 +18,147 @@ var coffees = [
     {id: 14, name: "French", roast: "black"},
 ];
 
-var tbody = document.querySelector("#coffees");
-var submitButton = document.querySelector("#submit");
-var roastSelection = document.querySelector("#roast-selection");
+//TODO: This is the beginning of local Storage use. Makes data persistent.
+//declares empty array to push all coffees to local storage
+let storedCoffee = [];
+//grabs the local array data from local storage (will only exist if user has visited and used our site before), will be null if first visit/use
+storedCoffee = JSON.parse(localStorage.getItem(`storedCoffee`));
 
-tbody.innerHTML = renderCoffees(coffees);
-
-// Event listener
-
-submitButton.addEventListener("click", updateCoffees);
-roastSelection.addEventListener(`change`, updateCoffees);
-
-let coffeSearch = document.getElementById("coffee-name");
-let matchedCoffee = "";
-let filteredCoffeeNames = [];
-
-// Displays the item that is entered in the search bar
-
-function searchCoffee(event) {
-    event.preventDefault(); // don't submit the form, we just want to update the data
-    var searchName = coffeSearch.value;
-    var filteredSearchCoffees = [];
-
-    coffees.forEach(function (coffee) {
-        if (coffee.name === searchName) {
-            filteredSearchCoffees.push(coffee);
-        }
-    });
-    tbody.innerHTML = renderCoffees(filteredSearchCoffees);
-
-
+//storedCoffee variable will always be null on first page visit since the local storage key has not yet been stored, so we need to account for this by adding all the coffees from our coffees array into it. Otherwise, renderedCoffees function displays nothing.
+if (storedCoffee === null) {
+    storedCoffee = coffees;
+    localStorage.setItem("storedCoffee", JSON.stringify(storedCoffee));
+    storedCoffee = JSON.parse(localStorage.getItem(`storedCoffee`));
+    renderCoffees(storedCoffee);
 }
 
-// Looks at each letter being entered in the search bar and matches it with an object
+//variable targeting the HTML section where the rendered coffees are displayed
+var tbody = document.querySelector("#coffees");
 
+//variable targeting the roast selection of the first form
+var roastSelection = document.querySelector("#roast-selection");
+
+//displays all the coffee inside storedCoffee on the screen
+tbody.innerHTML = renderCoffees(storedCoffee);
+
+// puts cards on the screen
+function renderCoffee(coffee) {
+    var html = "<div class=\"coffee d-flex justify-content-between\">";
+    html += "<div>"
+    html += "<h2>" + coffee.name + "</h2>";
+    html += "<p>" + coffee.roast + "</p>";
+    html += "</div>"
+    html += "<div>"
+    //Adds images to coffee names
+    html += "<img src=\"" + coffee.image + "\" alt=\"" + coffee.name + "\" style='height: 100px; width: 100px; border-top-left-radius: 20px;\n" + "border-bottom-right-radius: 20px;'>"
+    html += "</div>"
+    html += "</div>";
+
+    return html;
+}
+
+//sorts the coffees by id in descending order so that newest coffees are displayed first when filtered by roast selection all.
+//enforces text format of Added Coffee Names to be consistent when displayed in HTML.
+function renderCoffees(coffees) {
+    coffees.image = "";
+
+    for (let i = 0; i < coffees.length; i++) {
+        if (coffees[i].roast === "light") {
+            coffees[i].image = "img/light-roast.jpeg";
+        } else if (coffees[i].roast === "medium") {
+            coffees[i].image = "img/medium-roast.jpeg";
+        } else if (coffees[i].roast === "dark") {
+            coffees[i].image = "img/dark-roast.jpeg";
+        } else {
+            coffees[i].image = "img/extra-dark.jpeg";
+        }
+    }
+    let str = "";
+    for (let i = 0; i < coffees.length; i++) {
+        str = coffees[i].name.split(" ");
+        str.forEach((word, index) => {
+            let firstLetter = word.charAt(0).toUpperCase();
+            let rest = word.slice(1).toLowerCase();
+            str[index] = firstLetter + rest;
+        });
+        str = str.join(" ");
+        coffees[i].name = str;
+    }
+    var html = "";
+    for (var i = coffees.length - 1; i >= 0; i--) {
+        html += renderCoffee(coffees.sort()[i]);
+    }
+    return html;
+}
+
+//updates the rendered coffees by roast type
+function updateCoffees(e) {
+    e.preventDefault(); // don't submit the form, we just want to update the data
+    var selectedRoast = roastSelection.value;
+    var filteredCoffees = [];
+    storedCoffee.forEach(function (coffee) {
+        if (selectedRoast === "all") {
+            tbody.innerHTML = renderCoffees(storedCoffee);
+        } else if (coffee.roast === selectedRoast) {
+            filteredCoffees.push(coffee);
+            tbody.innerHTML = renderCoffees(filteredCoffees);
+        }
+    });
+}
+
+// Event listener triggered when roast selection is changed
+roastSelection.addEventListener(`change`, updateCoffees);
+
+//Function to update the rendered coffee list to match results based on what the user is typing into the Coffee Name input
+let coffeeSearch = document.getElementById("coffee-name");
+let filteredCoffeeNames = [];
 function updateValue(event) {
     event.preventDefault();
     console.log(event.target.value);
-    for (let i = 0; i < coffees.length; i++) {
-        if (coffees[i].name.toLowerCase().includes(event.target.value.toLowerCase())) {
-            filteredCoffeeNames.push(coffees[i]);
+    for (let i = 0; i < storedCoffee.length; i++) {
+        if (
+            storedCoffee[i].name
+                .toLowerCase()
+                .includes(event.target.value.toLowerCase())
+        ) {
+            filteredCoffeeNames.push(storedCoffee[i]);
         }
-
     }
     tbody.innerHTML = renderCoffees(filteredCoffeeNames);
-    matchedCoffee = "";
     filteredCoffeeNames = [];
 }
+// Event listener triggered when the user types inside the targeted input
+coffeeSearch.addEventListener(`input`, updateValue);
 
-coffeSearch.addEventListener(`input`, searchCoffee);
-coffeSearch.addEventListener(`input`, updateValue);
+//TODO:Beginning of code for add a coffee form
+//variable storing the add coffee form so we can target it
+let addCoffeeForm = document.querySelector(".add-coffee-form");
 
-// let card = `<div class="card f-flex flex-column justify-content-center align-items-center">
-//     <div>${coffees.name}</div>
-//     <div>${coffees.roast}</div>
-//     <div>${coffees.imgSrc}</div>
-// </div>`
-//
-// let allCards = [];
-//
-// for (let i = 0; i < coffees.length; i++) {
-//     allCards.push(`<div class="d-flex justify-content-center align-items-start" style="min-width: 600px;">
-//     <div>${coffees[i].name}</div>
-//      <div>${coffees[i].roast}</div>
-//      <div>${coffees[i].imgSrc}</div>
-//  </div>`);
-// }
-// document.getElementById("container").innerHTML = allCards;
+//event listener for add coffee form that runs when the form is submitted
+addCoffeeForm.addEventListener(`submit`, (event) => {
+    event.preventDefault();
+    //variable that stores the data entered into all form inputs
+    let formData = new FormData(addCoffeeForm);
+    console.log(formData);
 
-// loop that generates an image based off the roast type in the array
+    //variable that stores the values of formData in an object
+    //uses the form input HTML name attributes as the object property
+    let formObj = Object.fromEntries(formData);
+    console.log(formObj);
+
+    //checks if the added coffee name exists, prevents user from submitting same coffee name more than once
+    for (let i = 0; i < storedCoffee.length; i++) {
+        if (storedCoffee[i].name.toLowerCase() === formObj.name.toLowerCase()) {
+            return alert("coffee already exists");
+        }
+    }
+    storedCoffee.push(formObj);
+    for (let i = 0; i < storedCoffee.length; i++) {
+        if (storedCoffee[i].id === "") {
+            storedCoffee[i].id = i + 1;
+        }
+    }
+    localStorage.setItem("storedCoffee", JSON.stringify(storedCoffee));
+    storedCoffee = JSON.parse(localStorage.getItem(`storedCoffee`));
+    tbody.innerHTML = renderCoffees(storedCoffee);
+});

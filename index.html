@@ -16,15 +16,105 @@
 </head>
 <body>
 <div class="page-wrapper">
-    <!--    Header   -->
-    <header class="container">
-        <div class="row">
-            <div class="col d-flex">
-                <img src="img/coffee-logo.png" class="img-fluid " style="height: 100px; width: 150px">
-                <h1>Purrfect Coffee</h1>
-                <hr>
-            </div>
+    <!-- mobile navigation, hidden on large screens and above   -->
+    <div class="collapse" id="navbarToggleExternalContent">
+        <div class="bg-white p-4">
+            <ul
+                class="d-flex list-unstyled gap-3 align-items-center justify-content-center mb-0 text-uppercase"
+            >
+                <li>
+                    <a href="#" style="color: black">home</a>
+                </li>
+                <li>
+                    <a href="#" style="color: black">our roots</a>
+                </li>
+                <li>
+                    <a href="#" style="color: black">instagram</a>
+                </li>
+                <li>
+                    <a href="#" style="color: black">our coffee</a>
+                </li>
+                <li>
+                    <a href="#" style="color: black">current events</a>
+                </li>
+                <li>
+                    <a href="#" style="color: black">news</a>
+                </li>
+            </ul>
         </div>
+    </div>
+    <nav class="navbar navbar-light d-block d-lg-none sec-font">
+        <div class="container-fluid d-flex justify-content-end">
+            <button
+                class="navbar-toggler border border-secondary"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#navbarToggleExternalContent"
+                aria-controls="navbarToggleExternalContent"
+                aria-expanded="false"
+                aria-label="Toggle navigation"
+            >
+                <span class="navbar-toggler-icon"></span>
+            </button>
+        </div>
+    </nav>
+
+    <!--    Header   -->
+    <header class="container-fluid">
+        <div class="row align-items-center justify-content-center mb-5">
+            <!--          logo wrapper        -->
+            <div class="d-flex align-items-center justify-content-center">
+                <img class="ratio ratio-4x3 w-25" src="img/logo.jpeg"/>
+            </div>
+            <!-- desktop navigation, hidden on medium screens and below     -->
+            <nav class="d-none d-lg-flex">
+                <ul
+                    class="list-unstyled d-flex align-items-center justify-content-center gap-3 w-100 text-uppercase"
+                >
+                    <li>
+                        <a href="#" class="text-decoration-none nav-link">home</a>
+                    </li>
+                    <li>
+                        <a href="#" class="text-decoration-none nav-link">our roots</a>
+                    </li>
+                    <li>
+                        <a href="#" class="text-decoration-none nav-link">instagram</a>
+                    </li>
+                    <li>
+                        <a href="#" class="text-decoration-none nav-link">our coffee</a>
+                    </li>
+                    <li>
+                        <a href="#" class="text-decoration-none nav-link"
+                        >current events</a
+                        >
+                    </li>
+                    <li>
+                        <a href="#" class="text-decoration-none nav-link">news</a>
+                    </li>
+                </ul>
+            </nav>
+            <!--   hero image     -->
+            <div class="row hero-wrapper overflow-hidden position-relative">
+                <img
+                    src="/img/hero-img.jpeg"
+                    class="thumbnail ratio ratio-21x9 w-100 object-fit-cover"
+                />
+                <!--    hero image overlay    -->
+                <div
+                    class="hero-overlay d-none d-lg-flex justify-content-center align-items-center h-100 w-100 position-absolute top-0 start-0">
+                </div>
+
+                <img
+                    src="img/cat-paw.png"
+                    style="max-height: 250px; max-width: 250px"
+                    class="paw-1 z-3 position-absolute end-0 d-none d-lg-inline"
+                />
+                <img
+                    src="img/cat-paw.png"
+                    style="max-height: 250px; max-width: 250px"
+                    class="paw-2 z-3 position-absolute start-0 d-none d-lg-inline"
+                />
+            </div>
     </header>
     <!--    Main Body  -->
     <div class="container">
@@ -46,18 +136,18 @@
                     <button id="submit" type="submit">Search</button>
                 </form>
                 <h2>Add a Coffee</h2>
-                <form class="d-flex gap-3 justify-content-center">
-                    <label for="add-roast-selection">Roast</label>
-                    <select id="add-roast-selection">
-                        <option>all</option>
+                <form class="d-flex gap-3 justify-content-center add-coffee-form">
+                    <label for ="id"></label>
+                    <input id ="id" name="id" type="number" hidden="">
+                    <label for="name">Coffee Name</label>
+                    <input id="name" name="name" type="text" required/>
+                    <label for="roast">Roast</label>
+                    <select id="roast" name="roast">
                         <option>light</option>
                         <option>medium</option>
                         <option>dark</option>
-
                     </select>
-                    <label for="add-coffee-name">Coffee Name</label>
-                    <input id="add-coffee-name" type="text">
-                    <button id="submit-coffee" type="submit">Add Coffee</button>
+                    <button id="submit-coffee" type="submit">Submit</button>
                 </form>
             </div>
             <!--            second column (coffee types)   -->
