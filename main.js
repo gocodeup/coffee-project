@@ -1,22 +1,43 @@
 "use strict";
+
 // puts cards on the screen
 function renderCoffee(coffee) {
-    var html = "<div class=\"coffee\">";
-    // html += '<div>' + coffee.id + '</div>';
-    html += "<h1>" + coffee.name + "</h1>";
-    html += "<p>" + coffee.roast + "</p>";
+    var html = "<div class=\"coffee d-flex justify-content-between\">";
+    html += "<div>"
+        html += "<h2>" + coffee.name + "</h2>";
+        html += "<p>" + coffee.roast + "</p>";
+    html += "</div>"
+    html += "<div>"
+        //Adds images to coffee names
+        html += "<img src=\"" + coffee.image + "\" alt=\"" + coffee.name + "\" style='height: 100px; width: 100px; border-top-left-radius: 20px;\n" + "border-bottom-right-radius: 20px;'>"
+    html += "</div>"
     html += "</div>";
 
     return html;
 }
 
 function renderCoffees(coffees) {
+    coffees.image = "";
+
+    for (let i = 0; i < coffees.length; i++) {
+        if (coffees[i].roast === "light") {
+            coffees[i].image = "img/light-roast.jpeg";
+        } else if (coffees[i].roast === "medium") {
+            coffees[i].image = "img/medium-roast.jpeg";
+        } else if (coffees[i].roast === "dark") {
+            coffees[i].image = "img/dark-roast.jpeg";
+        } else {
+            coffees[i].image = "img/extra-dark.jpeg";
+        }
+    }
     var html = "";
     for (var i = coffees.length - 1; i >= 0; i--) {
         html += renderCoffee(coffees.sort()[i]);
     }
     return html;
 }
+
+// Updates the data when it is run through the loop
 
 function updateCoffees(e) {
     e.preventDefault(); // don't submit the form, we just want to update the data
@@ -32,6 +53,8 @@ function updateCoffees(e) {
     });
 }
 
+// array with all of the objects
+
 // from http://www.ncausa.org/About-Coffee/Coffee-Roasts-Guide
 var coffees = [
     {id: 1, name: "Light City", roast: "light"},
@@ -44,10 +67,10 @@ var coffees = [
     {id: 8, name: "Continental", roast: "dark"},
     {id: 9, name: "New Orleans", roast: "dark"},
     {id: 10, name: "European", roast: "dark"},
-    {id: 11, name: "Espresso", roast: "dark"},
-    {id: 12, name: "Viennese", roast: "dark"},
-    {id: 13, name: "Italian", roast: "dark"},
-    {id: 14, name: "French", roast: "dark"},
+    {id: 11, name: "Espresso", roast: "black"},
+    {id: 12, name: "Viennese", roast: "black"},
+    {id: 13, name: "Italian", roast: "black"},
+    {id: 14, name: "French", roast: "black"},
 ];
 
 var tbody = document.querySelector("#coffees");
@@ -62,8 +85,10 @@ submitButton.addEventListener("click", updateCoffees);
 roastSelection.addEventListener(`change`, updateCoffees);
 
 let coffeSearch = document.getElementById("coffee-name");
-let matchedCoffee= "";
+let matchedCoffee = "";
 let filteredCoffeeNames = [];
+
+// Displays the item that is entered in the search bar
 
 function searchCoffee(event) {
     event.preventDefault(); // don't submit the form, we just want to update the data
@@ -76,12 +101,14 @@ function searchCoffee(event) {
         }
     });
     tbody.innerHTML = renderCoffees(filteredSearchCoffees);
+
+
 }
+
+// Looks at each letter being entered in the search bar and matches it with an object
 
 function updateValue(event) {
     event.preventDefault();
-    // var roastName = coffeSearch.value;
-    // var filteredCoffeeNames = [];
     console.log(event.target.value);
     for (let i = 0; i < coffees.length; i++) {
         if (coffees[i].name.toLowerCase().includes(event.target.value.toLowerCase())) {
@@ -89,22 +116,29 @@ function updateValue(event) {
         }
 
     }
-
-    // for (let i = 0; i < filteredCoffeeNames.length; i++) {
-    //
-    //   matchedCoffee +=
-    //     `<div class="coffee">
-    //     <h1>${coffees[i].name}</h1>
-    //     <p>${coffees[i].roast}</p>
-    //     </div>`
-    //
-    // }
     tbody.innerHTML = renderCoffees(filteredCoffeeNames);
-    // document.getElementById("coffees").innerHTML = matchedCoffee;
-    matchedCoffee= "";
+    matchedCoffee = "";
     filteredCoffeeNames = [];
 }
 
-
 coffeSearch.addEventListener(`input`, searchCoffee);
 coffeSearch.addEventListener(`input`, updateValue);
+
+// let card = `<div class="card f-flex flex-column justify-content-center align-items-center">
+//     <div>${coffees.name}</div>
+//     <div>${coffees.roast}</div>
+//     <div>${coffees.imgSrc}</div>
+// </div>`
+//
+// let allCards = [];
+//
+// for (let i = 0; i < coffees.length; i++) {
+//     allCards.push(`<div class="d-flex justify-content-center align-items-start" style="min-width: 600px;">
+//     <div>${coffees[i].name}</div>
+//      <div>${coffees[i].roast}</div>
+//      <div>${coffees[i].imgSrc}</div>
+//  </div>`);
+// }
+// document.getElementById("container").innerHTML = allCards;
+
+// loop that generates an image based off the roast type in the array
