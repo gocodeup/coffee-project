@@ -70,7 +70,7 @@ body {
     border-radius: 50%;
     transition: .5s ease, transform 3s cubic-bezier(0,0,.44,1.18);
 }
-#searchByName {
+.searchByName {
     position: relative;
     z-index: 1;
     width: 250px;
@@ -79,7 +79,7 @@ body {
     border-radius: 8%;
 }
 
-#searchByName::placeholder {
+.searchByName::placeholder {
     color: var(--transition-clr-blue);
     padding-left: 10px;
 }
@@ -108,6 +108,10 @@ body {
     transform: scale(1.10);
     background-color: var(--primary-dark);
     color: var(--transition-clr-blue);
+}
+
+.sign-in-btn {
+    width: 100px;
 }
 
 .bean-roast {

@@ -23,27 +23,36 @@
 
 
             <form>
-              <div class="imgcontainer d-flex justify-content-center">
-                <img src="images/coffee-fabicon.png" alt="Avatar" class="avatar">
+              <div class="container flex-grow">
+                <div class="row flex-grow">
+                  <div class="column align-items-center gap-20 flex-grow">
+                      <label for="username"><b>Username</b></label>
+                      <input type="text" class="searchByName" id="username" placeholder="Enter Username" name="username" required>
+
+                      <label for="password"><b>Password</b></label>
+                      <input type="password" class="searchByName" id="password" placeholder="Enter Password" name="password" required>
+
+                      <span class="d-flex gap-10">
+                        <button type="submit" class=" sign-in-btn roast-selection-btn">Login</button>
+                        <button type="button" class="sign-in-btn roast-selection-btn">Cancel</button>
+                      </span>
+                      <label>
+                        <input type="checkbox" checked="checked" name="remember"> Remember me
+                      </label>
+
+                    <span class="psw">Forgot <a href="#">password?</a></span>
+                  </div>
+                </div>
               </div>
 
-              <div class="container">
-                <label for="username"><b>Username</b></label>
-                <input type="text" id="username" placeholder="Enter Username" name="username" required>
-
-                <label for="password"><b>Password</b></label>
-                <input type="password" id="password" placeholder="Enter Password" name="password" required>
-
-                <button type="submit">Login</button>
-                <label>
-                  <input type="checkbox" checked="checked" name="remember"> Remember me
-                </label>
-              </div>
-
-              <div class="container">
-                <button type="button" class="cancelbtn">Cancel</button>
-                <span class="psw">Forgot <a href="#">password?</a></span>
-              </div>
+<!--              <div class="container">-->
+<!--                <div class="row">-->
+<!--                  <div class="column">-->
+<!--&lt;!&ndash;                    <button type="button" class="cancelbtn roast-selection-btn">Cancel</button>&ndash;&gt;-->
+<!--&lt;!&ndash;                    <span class="psw">Forgot <a href="#">password?</a></span>&ndash;&gt;-->
+<!--                  </div>-->
+<!--                </div>-->
+<!--              </div>-->
             </form>
 
 
