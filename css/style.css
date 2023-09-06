@@ -55,10 +55,12 @@ body {
     opacity: 40%;
     max-height: 600px;
     width: 98%;
+    z-index: -1;
 
 }
 .coffee-id {
     display: none;
+
 }
 
 .company-logo {
@@ -71,12 +73,21 @@ body {
 #searchByName {
     position: relative;
     z-index: 1;
+    width: 250px;
+    height: 30px;
+    border: 2px solid var(--transition-clr-blue);
+    border-radius: 8%;
 }
 
-.roast-selection-form{
-    position: relative;
-    z-index: 1;
+#searchByName::placeholder {
+    color: var(--transition-clr-blue);
+    padding-left: 10px;
 }
+#roast-selection {
+    color: var(--transition-clr-blue);
+
+}
+
 .roast-selection-btn {
 
     height: 50px;
@@ -97,6 +108,11 @@ body {
     transform: scale(1.10);
     background-color: var(--primary-dark);
     color: var(--transition-clr-blue);
+}
+
+.bean-roast {
+    color: var(--transition-clr-blue);
+    font-size: 14px;
 }
 
 .social-media-nav {
@@ -158,6 +174,11 @@ body {
     width: 100%;
 }
 
+.location.gentle-tilt-move-shake:hover,
+.gentle-tilt-move-shake:hover {
+    animation: tilt-n-move-shaking 0.25s infinite;
+}
+
 
 
 /**********************************BOOK TABLE PAGE**********************************/
@@ -180,3 +201,56 @@ body {
     background-color: var(--primary-dark);
 }
 
+
+.glitch {
+    position: relative;
+    font-size: 100px;
+    font-weight: bold;
+    color: #FFFFFF;
+    letter-spacing: 3px;
+    z-index: 1;
+}
+
+.glitch:before,
+.glitch:after {
+    display: block;
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0.8;
+}
+
+.glitch:before {
+    animation: glitch-it 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94) both infinite;
+    color: #00FFFF;
+    z-index: -1;
+}
+
+.glitch:after {
+    animation: glitch-it 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94) reverse both infinite;
+    color: #FF00FF;
+    z-index: -2;
+}
+
+
+
+
+/**********************************KEYFRAME**************************************/
+
+@keyframes tilt-n-move-shaking {
+    0% { transform: translate(0, 0) rotate(0deg); }
+    25% { transform: translate(5px, 5px) rotate(5deg); }
+    50% { transform: translate(0, 0) rotate(0eg); }
+    75% { transform: translate(-5px, 5px) rotate(-5deg); }
+    100% { transform: translate(0, 0) rotate(0deg); }
+}
+
+@keyframes glitch-it {
+    0% { transform: translate(0);}
+    20% { transform: translate(-2px, 2px);}
+    40% { transform: translate(-2px, -2px);}
+    60% { transform: translate(2px, 2px);}
+    80% { transform: translate(2px, -2px);}
+    to { transform: translate(0);}
+}

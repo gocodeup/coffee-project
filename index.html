@@ -11,20 +11,26 @@
     <div class="container nav">
         <div class="row full-width">
             <div class="column flex-grow">
-                <header class=" header d-flex align-items-center">
+                <header class=" header d-flex  align-items-between">
                     <a  class=" logo d-flex align-items-center flex-grow gap-10" href="./not-starbucks.html">
                         <img class="company-logo" src="images/logo.png" alt="company-logo">
-                        ! Starbucks Coffee Shop
-                    </a>
 
+                            <p >! Starbucks Coffee Shop</p>
+                    </a>
+                    <div class="search-bar">
+                        <form>
+                            <label for="searchByName"></label>
+                            <input type="text" id="searchByName" name="searchByName" placeholder="Search coffee by name"/>
+                        </form>
+                    </div>
 
                     <nav class=" navbar d-flex align-items-center gap-10">
 
                         <a href="#" class="active">Home</a>
-                        <a href="./book-a-table.html" target="_blank">Book a Table</a>
+                        <a href="./book-a-table.html">Book a Table</a>
                         <a href="https://www.googlemaps.com" target="_blank">Find a store</a>
                         <a href="./sign-in.html">Sign in</a>
-                        <a href="#">Join us</a>
+                        <a href="./join-us.html">Join us</a>
 
                     </nav>
                 </header>
@@ -32,8 +38,8 @@
 
         </div>
     </div>
-    <!--        end of navbar -->
-    <!--        main image-->
+
+    <!----------------------------------------------------main image---------------------------->
     <div class="container">
         <div class="row full-width">
             <div class="column full-width flex-grow top-img-wrapper">
@@ -46,37 +52,54 @@
     </div>
 
 
-        <!--start of coffee list-->
+        <!-----------------------------start of coffee list---------------------------------------->
+
+
     <div class="container flex-grow align-items-center">
         <div class="row full-width justify-content-center align-items-center flex-grow">
 
             <div class="column full-width flex-grow justify-content-center align-items-center gap-20">
 
-                <form>
-                    <label for="searchByName"></label>
-                    <input type="text" id="searchByName" name="searchByName" placeholder="Search coffee by name"/>
-                </form>
+<!--                <form>-->
+<!--                    <label for="searchByName"></label>-->
+<!--                    <input type="text" id="searchByName" name="searchByName" placeholder="Search coffee by name"/>-->
+<!--                </form>-->
 
 
-                        <section id="coffees"></section>
+                            <section class="d-flex flex-column gap-10" id="coffees"></section>
 
 
-                        <form class="roast-selection-form d-flex flex-column gap-10">
-                            <label for="roast-selection"></label>
-                            <h4>Select by Roast</h4>
-                            <select id="roast-selection">
-                                <option value="all">All</option>
-                                <option>light</option>
-                                <option>medium</option>
-                                <option>dark</option>
+<!--                        <form class="roast-selection-form d-flex flex-column gap-10">-->
+<!--                            <label for="roast-selection"></label>-->
+<!--                            <h4>Select by Roast</h4>-->
+<!--                            <select id="roast-selection">-->
+<!--                                <option value="all">All</option>-->
+<!--                                <option value="light">Light</option>-->
+<!--                                <option value="medium">Medium</option>-->
+<!--                                <option value="dark">Dark</option>-->
 
-                            </select>
-                            <button  class="roast-selection-btn" name="roast-selection" id="submit" type="submit">Make Coffee Simple Again</button>
-                            <br>
-                        </form>
+<!--                            </select>-->
+<!--                            <button  class="roast-selection-btn" name="roast-selection" id="submit" type="submit">Make Coffee Simple Again</button>-->
+<!--                            <br>-->
+<!--                        </form>-->
 
             </div>
         </div>
+    </div>
+    <div class="container">
+        <form class="roast-selection-form d-flex flex-column gap-10">
+            <label for="roast-selection"></label>
+            <h4>Select by Roast</h4>
+            <select id="roast-selection">
+                <option value="all">All</option>
+                <option value="light">Light</option>
+                <option value="medium">Medium</option>
+                <option value="dark">Dark</option>
+
+            </select>
+            <button  class="roast-selection-btn" name="roast-selection" id="submit" type="submit">Make Coffee Simple Again</button>
+            <br>
+        </form>
     </div>
 
                         <!---------------------------- FOOTER ---------------------  -->
@@ -85,14 +108,14 @@
         <div class="row full-width">
             <div class="column full-width flex-grow">
                 <div class="d-flex justify-content-between gap-30 py-30">
-                    <div class="location">
+                    <a class="location gentle-tilt-move-shake" href="https://www.google.com/maps/place/Codeup/@29.4267947,-98.4921593,17z/data=!3m2!4b1!5s0x865c5f5498a313af:0xb825fcec8efc3ab0!4m6!3m5!1s0x865c5f53ae9da8c7:0xfdc2b9d926713c13!8m2!3d29.4267901!4d-98.4895844!16s%2Fg%2F11b76h762_?entry=ttu">
                         <h2>LOCATION</h2>
                         <br>
-                        <a href="https://www.google.com/maps/place/Codeup/@29.4267947,-98.4921593,17z/data=!3m2!4b1!5s0x865c5f5498a313af:0xb825fcec8efc3ab0!4m6!3m5!1s0x865c5f53ae9da8c7:0xfdc2b9d926713c13!8m2!3d29.4267901!4d-98.4895844!16s%2Fg%2F11b76h762_?entry=ttu" class="my-15">600 Navarro St #300, <br>
-                            San Antonio, TX 78205
-                        </a>
-                    </div>
-                    <div class="hours">
+                        <p class="my-15"  >600 Navarro St #300,
+                        <br>
+                            San Antonio, TX 78205</p>
+                    </a>
+                    <div class="hours gentle-tilt-move-shake">
                         <h2>HOURS</h2>
                         <p class="my-15">Sun, Mon, Tue, Wed, Thur, Fri, Sat 5:00 AM - 9:00 PM</p>
                     </div>

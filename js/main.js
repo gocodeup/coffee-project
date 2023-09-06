@@ -2,9 +2,11 @@
 
 function renderCoffee(coffee) {
     var html = `    <div class = "card d-flex">
-                    <p class = "coffee-id"> Coffee id: ${coffee.id}.</p>
-                    <p> ${coffee.name} &nbsp;</p>
-                    <p> Bean Roast: ${coffee.roast}</p>
+                    <a class="gentle-tilt-move-shake" href="/">
+                        <p class = "coffee-id"> Coffee id: ${coffee.id}.</p>
+                        <p> ${coffee.name} &nbsp</p>
+                        <p class="bean-roast"> Bean Roast: ${coffee.roast}</p>
+                    </a>
                 </div>`;
 
     return html;
