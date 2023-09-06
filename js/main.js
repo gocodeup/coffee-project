@@ -3,7 +3,7 @@
 function renderCoffee(coffee) {
     var html = `    <div class = "card d-flex">
                     <p class = "coffee-id"> Coffee id: ${coffee.id}.</p>
-                    <p> ${coffee.name}</p>
+                    <p> ${coffee.name} &nbsp;</p>
                     <p> Bean Roast: ${coffee.roast}</p>
                 </div>`;
 
