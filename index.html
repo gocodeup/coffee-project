@@ -2,55 +2,68 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title></title>
+    <title>Not Starbucks Coffee Shop</title>
+    <link rel="icon" type="image/x-icon" href="images/coffee-fabicon.png">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-<div class="page-wrapper">
-    <div class="container-nav">
+<div class="page-wrapper gap-10">
+    <div class="container nav">
         <div class="row full-width">
             <div class="column flex-grow">
-                <div class="d-flex align-items-center">
-                    <img class="company-logo" src="images/logo.png" alt="">
-                    <h1>Not Starbucks Coffee Shop</h1>
-                </div>
+                <header class=" header d-flex align-items-center">
+                    <a  class=" logo d-flex align-items-center flex-grow gap-10" href="./not-starbucks.html">
+                        <img class="company-logo" src="images/logo.png" alt="company-logo">
+                        ! Starbucks Coffee Shop
+                    </a>
+
+
+                    <nav class=" navbar d-flex align-items-center gap-10">
+
+                        <a href="#" class="active">Home</a>
+                        <a href="./book-a-table.html" target="_blank">Book a Table</a>
+                        <a href="https://www.googlemaps.com" target="_blank">Find a store</a>
+                        <a href="./sign-in.html">Sign in</a>
+                        <a href="#">Join us</a>
+
+                    </nav>
+                </header>
             </div>
-            <nav class="column">
-                <div class="d-flex gap-10">
-                    <form>
-                        <label for="searchByName"></label>
-                        <input type="text" id="searchByName" name="searchByName" placeholder="Search coffee by name"/>
-                    </form>
-                    <a href="#">menu</a>
-                </div>
-            </nav>
+
         </div>
     </div>
     <!--        end of navbar -->
     <!--        main image-->
-    <div class="page-wrapper">
-
-        <div class="column">
-            <img src="images/img_3.png" alt="coffee bean" height="275px">
-
-        </div>
-        <!--start of coffee list-->
-        <div class="container flex-grow">
-            <div class="row bottom-row full-width justify-content-center">
-                <div class="column">
-                    <img src="images/img_4.png" alt="background" height="400px" width="500px">
+    <div class="container">
+        <div class="row full-width">
+            <div class="column full-width flex-grow top-img-wrapper">
+                <div class="top-img-wrapper">
+                    <img class="top-img" src="images/blue-coffee-bg.jpg" alt="coffee-cups">
                 </div>
-                <div class="column full-width flex-grow justify-content-center align-items-center gap-50">
-                    <div class="column">
+            </div>
+        </div>
 
-                        <h3>Coffees of the Day </h3>
-                        <br>
+    </div>
+
+
+        <!--start of coffee list-->
+    <div class="container flex-grow align-items-center">
+        <div class="row full-width justify-content-center align-items-center flex-grow">
+
+            <div class="column full-width flex-grow justify-content-center align-items-center gap-20">
+
+                <form>
+                    <label for="searchByName"></label>
+                    <input type="text" id="searchByName" name="searchByName" placeholder="Search coffee by name"/>
+                </form>
+
+
                         <section id="coffees"></section>
 
 
-                        <form>
+                        <form class="roast-selection-form d-flex flex-column gap-10">
                             <label for="roast-selection"></label>
-                            <h4> Or Select by roast</h4>
+                            <h4>Select by Roast</h4>
                             <select id="roast-selection">
                                 <option value="all">All</option>
                                 <option>light</option>
@@ -58,32 +71,45 @@
                                 <option>dark</option>
 
                             </select>
-                            <input id="submit" type="submit"/>
+                            <button  class="roast-selection-btn" name="roast-selection" id="submit" type="submit">Make Coffee Simple Again</button>
                             <br>
-
                         </form>
 
-                </div>
-<!--                    footer-->
-                    <footer>
-                        <div class="container">
-                            <a href="#top"></a>
-                            <div class="column">
-                                <div class="row">
-
-                                </div>
-                            </div>
-                        </div>
-
-                    </footer>
-                </div>
-
-
             </div>
-
         </div>
-
     </div>
+
+                        <!---------------------------- FOOTER ---------------------  -->
+
+    <footer class="container">
+        <div class="row full-width">
+            <div class="column full-width flex-grow">
+                <div class="d-flex justify-content-between gap-30 py-30">
+                    <div class="location">
+                        <h2>LOCATION</h2>
+                        <br>
+                        <a href="https://www.google.com/maps/place/Codeup/@29.4267947,-98.4921593,17z/data=!3m2!4b1!5s0x865c5f5498a313af:0xb825fcec8efc3ab0!4m6!3m5!1s0x865c5f53ae9da8c7:0xfdc2b9d926713c13!8m2!3d29.4267901!4d-98.4895844!16s%2Fg%2F11b76h762_?entry=ttu" class="my-15">600 Navarro St #300, <br>
+                            San Antonio, TX 78205
+                        </a>
+                    </div>
+                    <div class="hours">
+                        <h2>HOURS</h2>
+                        <p class="my-15">Sun, Mon, Tue, Wed, Thur, Fri, Sat 5:00 AM - 9:00 PM</p>
+                    </div>
+                    <div class="find-us">
+                        <h2>FIND US ON...</h2>
+                        <nav class="social-media-nav d-flex align-items-center gap-20 my-15">
+                            <a href="https://www.facebook.com">Facebook</a>
+                            <a href="https://www.instagram.com">Instagram</a>
+                            <a href="https://www.yelp.com">Yelp</a>
+                        </nav>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </footer>
+
 
 
 </div>

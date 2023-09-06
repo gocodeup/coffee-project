@@ -1,17 +1,61 @@
 @import "resets.css";
 @import "layout.css";
+@import url('https://fonts.googleapis.com/css2?family=Barriecito&family=Fresca&family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Outfit:wght@300;400;600&display=swap');
 
-table {
-    border-collapse: collapse;
-    margin: 15px 0;
+:root {
+    --primary-dark: #081b29;
+    --primary-ligth:#ededed;
+    --transition-clr-blue:#00abf0;
 }
 
-td, th {
-    border: 1px solid black;
-    padding: 5px 10px;
+body {
+    font-family: 'Josefin Sans', sans-serif;
+    background-color: var(--primary-dark);
+    color: var(--primary-ligth);
+
 }
-.container-nav {
-    background-color: cadetblue;
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 10px;
+    background-color: transparent;
+    z-index: 9;
+    font-size: 25px;
+    color: var(--primary-ligth);
+    font-weight: 600;
+
+}
+.logo:hover {
+    color: var(--transition-clr-blue);
+}
+
+.navbar a {
+    font-size: 18px;
+    font-weight: 500;
+    margin-left: 35px;
+    transition: .3s;
+}
+
+.navbar a:hover,
+.navbar a.active{
+    color: var(--transition-clr-blue);
+}
+            /********************************************************MAIN **************************************************/
+
+.company-logo:hover {
+    transform: scale(1.15);
+
+}
+
+.top-img {
+    top: 80px;
+    position: absolute;
+    opacity: 40%;
+    max-height: 600px;
+    width: 98%;
+
 }
 .coffee-id {
     display: none;
@@ -21,7 +65,118 @@ td, th {
     max-width: 70px;
     max-height: 70px;
     transform: rotate(180deg);
+    border-radius: 50%;
+    transition: .5s ease, transform 3s cubic-bezier(0,0,.44,1.18);
 }
-.bottom-row{
-    background-color: cadetblue ;
+#searchByName {
+    position: relative;
+    z-index: 1;
 }
+
+.roast-selection-form{
+    position: relative;
+    z-index: 1;
+}
+.roast-selection-btn {
+
+    height: 50px;
+    background-color: var(--transition-clr-blue);
+    border: 2px solid var(--transition-clr-blue);
+    border-radius: 8px;
+    font-size: 19px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    padding: 5px;
+    transition: .5s ease, transform 3s cubic-bezier(0,0,.44,1.18);
+    position: relative;
+    z-index: 1;
+}
+
+.roast-selection-btn:hover {
+
+    transform: scale(1.10);
+    background-color: var(--primary-dark);
+    color: var(--transition-clr-blue);
+}
+
+.social-media-nav {
+    width: 345px;
+    height: 50px;
+}
+
+.social-media-nav a,
+.a-btn {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 110px;
+    height: 50px;
+    background-color: var(--transition-clr-blue);
+    border: 2px solid var(--transition-clr-blue);
+    border-radius: 8px;
+    font-size: 19px;
+    color: var(--primary-dark);
+    font-weight: 600;
+    letter-spacing: 1px;
+    z-index: 1;
+    overflow: hidden;
+    transition: .5s;
+}
+
+.social-media-nav a:hover {
+    color: var(--transition-clr-blue);
+}
+
+.social-media-nav a:nth-child(2) {
+    background: transparent;
+    color: var(--transition-clr-blue);
+}
+
+.social-media-nav a:nth-child(2):hover {
+    color: var(--primary-dark);
+
+}
+
+.social-media-nav a:nth-child(2)::before {
+    background: var(--transition-clr-blue);
+}
+
+.social-media-nav a::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: var(--primary-dark);
+    z-index: -1;
+    transition: .5s;
+}
+
+.social-media-nav a:hover::before {
+    width: 100%;
+}
+
+
+
+/**********************************BOOK TABLE PAGE**********************************/
+
+.book-table {
+    border: 2px solid white;
+    text-align: center;
+    padding: 70px 30px;
+    border-radius: 3%;
+
+}
+
+.a-btn {
+    width:150px;
+    color: var(--primary-dark);
+}
+
+.a-btn:hover {
+    color: var(--transition-clr-blue);
+    background-color: var(--primary-dark);
+}
+

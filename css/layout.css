@@ -176,6 +176,14 @@ order:0;
     padding-top: 30px;
     padding-bottom: 30px;
 }
+.py-40 {
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+.py-50 {
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
 
 /* MARGIN UTILITY CLASS */
 .m-0 {
@@ -254,6 +262,14 @@ order:0;
 .my-30 {
     margin-top: 30px;
     margin-bottom: 30px;
+}
+.my-40 {
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+.my-50 {
+    margin-top: 50px;
+    margin-bottom: 50px;
 }
 
 /* GAP UTILITY CLASSES */
