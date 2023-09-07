@@ -11,54 +11,118 @@
 </head>
 <body>
 
-<div class="page-wrapper justify-content-center align-items-center">
-  <div class="container flex-grow">
-    <div class="row flex-grow">
-      <main class="column justify-content-center align-items-center gap-40">
+    <div class="page-wrapper justify-content-center align-items-center">
+        <div class="container nav">
+            <div class="row full-width">
+                <div class="column flex-grow">
+                    <header class=" header d-flex  align-items-between">
+                        <a  class=" logo d-flex align-items-center flex-grow gap-10" href="./index.html">
+                            <img class="company-logo" src="images/logo.png" alt="company-logo">
 
-        <h1 class="glitch" data-text="! Welcome">! Welcome</h1>
+                            <p >! Starbucks Coffee Shop</p>
+                        </a>
 
-        <div class="book-table d-flex flex-column">
-
-          <form>
-            <div class="container">
-              <div class="row">
-                <div class="column align-items-center gap-20">
-
-                        <h1>Sign Up</h1>
-                        <p>Please fill in this form to create an account.</p>
-                        <hr>
-
-                        <label for="email"><b>Email</b></label>
-                        <input  id="email" class="searchByName" type="text" placeholder="Enter Email" name="email" required>
-
-                        <label for="password"><b>Password</b></label>
-                        <input id="password" class="searchByName" type="password" placeholder="Enter Password" name="psw" required>
-
-                        <label for="password-repeat"><b>Repeat Password</b></label>
-                        <input id="password-repeat" class="searchByName" type="password" placeholder="Repeat Password" name="psw-repeat" required>
-
-                        <label>
-                          <input type="checkbox" checked="checked" name="remember"> Remember me
-                        </label>
-
-                        <p>By creating an account you agree to our <a href="#" style="color:dodgerblue">Terms & Privacy</a>.</p>
-
-                        <div class="clearfix d-flex gap-20">
-                          <button type="button" class="sign-in-btn roast-selection-btn">Cancel</button>
-                          <button type="submit" class="sign-in-btn roast-selection-btn">Sign Up</button>
+                        <div class="search-bar">
+                            <form>
+                                <label for="searchByName"></label>
+                                <input type="text" class="searchByName" id="searchByName" name="searchByName" placeholder="Search coffee by name"/>
+                            </form>
                         </div>
+
+                        <nav class=" navbar d-flex align-items-center gap-10">
+
+                            <a href="index.html" >Home</a>
+                            <a href="./book-a-table.html">Book a Table</a>
+                            <a href="about-us.html">About Us</a>
+                            <a href="https://www.googlemaps.com" target="_blank">Find a store</a>
+                            <a href="./sign-in.html">Sign in</a>
+                            <a href="./join-us.html" class="active">Join us</a>
+
+                        </nav>
+                    </header>
                 </div>
-              </div>
+
             </div>
-          </form>
-
-
         </div>
-      </main>
-    </div>
-  </div>
-</div>
+
+
+
+        <div class="container flex-grow">
+            <div class="row flex-grow">
+                <main class="column justify-content-center align-items-center gap-40">
+
+                    <h1 class="glitch" data-text="! Welcome">! Welcome</h1>
+
+                    <div class="book-table d-flex flex-column">
+
+                      <form>
+                        <div class="container">
+                          <div class="row">
+                            <div class="column align-items-center gap-20">
+
+                                    <h1>Sign Up</h1>
+                                    <p>Please fill in this form to create an account.</p>
+                                    <hr>
+
+                                    <label for="email"><b>Email</b></label>
+                                    <input  id="email" class="searchByName" type="text" placeholder="Enter Email" name="email" required>
+
+                                    <label for="password"><b>Password</b></label>
+                                    <input id="password" class="searchByName" type="password" placeholder="Enter Password" name="psw" required>
+
+                                    <label for="password-repeat"><b>Repeat Password</b></label>
+                                    <input id="password-repeat" class="searchByName" type="password" placeholder="Repeat Password" name="psw-repeat" required>
+
+                                    <label>
+                                      <input type="checkbox" checked="checked" name="remember"> Remember me
+                                    </label>
+
+                                    <p>By creating an account you agree to our <a href="#" style="color:dodgerblue">Terms & Privacy</a>.</p>
+
+                                    <div class="clearfix d-flex gap-20">
+                                      <button type="button" class="sign-in-btn roast-selection-btn">Cancel</button>
+                                      <button type="submit" class="sign-in-btn roast-selection-btn">Sign Up</button>
+                                    </div>
+                            </div>
+                          </div>
+                        </div>
+                      </form>
+
+
+                </div>
+              </main>
+            </div>
+          </div>
+        </div>
+
+    <footer class="container">
+        <div class="row full-width">
+            <div class="column full-width flex-grow">
+                <div class="d-flex justify-content-between gap-30 py-30">
+                    <a class="location gentle-tilt-move-shake" href="https://www.google.com/maps/place/Codeup/@29.4267947,-98.4921593,17z/data=!3m2!4b1!5s0x865c5f5498a313af:0xb825fcec8efc3ab0!4m6!3m5!1s0x865c5f53ae9da8c7:0xfdc2b9d926713c13!8m2!3d29.4267901!4d-98.4895844!16s%2Fg%2F11b76h762_?entry=ttu">
+                        <h2>LOCATION</h2>
+                        <br>
+                        <p class="my-15"  >600 Navarro St #300,
+                            <br>
+                            San Antonio, TX 78205</p>
+                    </a>
+                    <div class="hours gentle-tilt-move-shake">
+                        <h2>HOURS</h2>
+                        <p class="my-15">Sun, Mon, Tue, Wed, Thur, Fri, Sat 5:00 AM - 9:00 PM</p>
+                    </div>
+                    <div class="find-us">
+                        <h2>FIND US ON...</h2>
+                        <nav class="social-media-nav d-flex align-items-center gap-20 my-15">
+                            <a href="https://www.facebook.com">Facebook</a>
+                            <a href="https://www.instagram.com">Instagram</a>
+                            <a href="https://www.yelp.com">Yelp</a>
+                        </nav>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </footer>
 
 </body>
 </html>
