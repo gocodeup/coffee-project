@@ -241,7 +241,20 @@ body {
 }
 
 
+/**********************************NOT STARBUCKS PAGE*****************************/
 
+#not-starbucks:hover {
+    visibility: hidden;
+    position: relative;
+
+}
+#not-starbucks:hover:after{
+    visibility: visible;
+    position: absolute;
+    top: 0;
+    left: 0;
+    content: "!!!!!!!!"
+}
 
 /**********************************KEYFRAME**************************************/
 
