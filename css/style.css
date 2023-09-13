@@ -45,7 +45,13 @@ body {
     color: var(--transition-clr-blue);
 }
             /********************************************************MAIN **************************************************/
-
+.company-logo {
+    max-width: 70px;
+    max-height: 70px;
+    transform: rotate(180deg);
+    border-radius: 50%;
+    transition: .5s ease, transform 3s cubic-bezier(0,0,.44,1.18);
+}
 .company-logo:hover {
     transform: scale(1.15);
 
@@ -63,14 +69,6 @@ body {
 .coffee-id {
     display: none;
 
-}
-
-.company-logo {
-    max-width: 70px;
-    max-height: 70px;
-    transform: rotate(180deg);
-    border-radius: 50%;
-    transition: .5s ease, transform 3s cubic-bezier(0,0,.44,1.18);
 }
 
 .searchByName {
