@@ -1,38 +1,9 @@
-"use strict"
 
-function renderCoffee(coffee) {
-    var html = '<tr class="coffee">';
-    html += '<td>' + coffee.id + '</td>';
-    html += '<td>' + coffee.name + '</td>';
-    html += '<td>' + coffee.roast + '</td>';
-    html += '</tr>';
+"use strict";
 
-    return html;
-}
-
-function renderCoffees(coffees) {
-    var html = '';
-    for(var i = coffees.length - 1; i >= 0; i--) {
-        html += renderCoffee(coffees[i]);
-    }
-    return html;
-}
-
-function updateCoffees(e) {
-    e.preventDefault(); // don't submit the form, we just want to update the data
-    var selectedRoast = roastSelection.value;
-    var filteredCoffees = [];
-    coffees.forEach(function(coffee) {
-        if (coffee.roast === selectedRoast) {
-            filteredCoffees.push(coffee);
-        }
-    });
-    tbody.innerHTML = renderCoffees(filteredCoffees);
-}
-
-// from http://www.ncausa.org/About-Coffee/Coffee-Roasts-Guide
-var coffees = [
-    {id: 1, name: 'Light City', roast: 'light'},
+// Coffee data
+const coffees = [
+   {id: 1, name: 'Light City', roast: 'light'},
     {id: 2, name: 'Half City', roast: 'light'},
     {id: 3, name: 'Cinnamon', roast: 'light'},
     {id: 4, name: 'City', roast: 'medium'},
@@ -46,12 +17,41 @@ var coffees = [
     {id: 12, name: 'Viennese', roast: 'dark'},
     {id: 13, name: 'Italian', roast: 'dark'},
     {id: 14, name: 'French', roast: 'dark'},
+    // Add more coffee items here
 ];
 
-var tbody = document.querySelector('#coffees');
-var submitButton = document.querySelector('#submit');
-var roastSelection = document.querySelector('#roast-selection');
+// DOM elements
+const tbody = document.querySelector('#coffees');
+const submitButton = document.querySelector('#submit');
+const roastSelection = document.querySelector('#roast-selection');
 
+// Render a single coffee item
+function renderCoffee(coffee) {
+    return `
+        <tr class="coffee">
+            <td>${coffee.id}</td>
+            <td>${coffee.name}</td>
+            <td>${coffee.roast}</td>
+        </tr>
+    `;
+}
+
+// Render a list of coffee items
+function renderCoffees(coffees) {
+    return coffees.map(renderCoffee).join('');
+}
+
+// Update the displayed coffee list
+function updateCoffees(e) {
+    e.preventDefault(); // Prevent form submission
+    const selectedRoast = roastSelection.value;
+    const filteredCoffees = coffees.filter((coffee) => coffee.roast === selectedRoast);
+    tbody.innerHTML = renderCoffees(filteredCoffees);
+}
+
+// Initial rendering of all coffees
 tbody.innerHTML = renderCoffees(coffees);
 
+// Add event listener to the submit button
 submitButton.addEventListener('click', updateCoffees);
+
