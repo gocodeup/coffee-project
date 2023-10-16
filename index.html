@@ -11,11 +11,16 @@
     <form>
         <label for="roast-selection"></label>
         <select id="roast-selection">
-            <option>all</option>
-            <option>light</option>
-            <option>medium</option>
-            <option>dark</option>
+            <option value = "all">all</option>
+            <option value = "light">light</option>
+            <option value = "medium">medium</option>
+            <option value = "dark">dark</option>
         </select>
+            <div>
+                <label>Coffee Name</label>
+                <input type = "text" id="searchCoffee"
+                onkeyup="myFunction()">
+            </div>
         <input id="submit" type="submit" />
     </form>
     <div class="coffees" id="coffees">
@@ -26,4 +31,3 @@
     <script src="main.js"></script>
 </body>
 </html>
-hello
