@@ -4,31 +4,76 @@
     <meta charset="UTF-8">
     <title></title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.css">
 </head>
 <body>
-    <h1>Coffee!</h1>
-
-    <form>
-        <label for="roast-selection"></label>
-        <select id="roast-selection">
-            <option>light</option>
-            <option>medium</option>
-            <option>dark</option>
-        </select>
-        <input id="submit" type="submit" />
-    </form>
-
-    <table>
-        <thead>
-            <tr>
-                <th>ID</th>
-                <th>NAME</th>
-                <th>ROAST</th>
-            </tr>
-        </thead>
-        <tbody id="coffees"></tbody>
-    </table>
-
+<nav class="navbar bg-body-tertiary">
+    <div class="d-flex w-100">
+        <div class="d-flex justify-content-start w-50 ps-3">
+            <i class="fas fa-mug-hot" style="font-size: 30px;"></i>
+            <a class="navbar-brand" style="font-weight: bold; font-size: 25px">Coffee Shop</a>
+        </div>
+        <div class="d-flex justify-content-end w-50">
+            <button class="btn" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+                <i class="fas fa-search-plus" style="color: #0d6efd;font-size: 30px;"></i>
+            </button>
+            <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="fas fa-plus-square" style="color: #0d6efd;font-size: 30px"></i></button>
+        </div>
+    </div>
+</nav>
+<div class="d-flex justify-content-end">
+    <div class="collapse w-25" id="collapseExample" style="border: 2px solid blue; border-radius: 10px">
+        <div class="card card-body">
+            <form class="d-flex" role="search">
+                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" id="search">
+                <button class="btn btn-outline-success" type="submit" id="submit">Search</button>
+            </form>
+            <form>
+                <label>
+                    <label for="roast-selection"></label>
+                    <select class="form-select" id="roast-selection">
+                        <option selected>Select Roast</option>
+                        <option value="light">Light</option>
+                        <option value="medium">Medium</option>
+                        <option value="dark">Dark</option>
+                    </select>
+                </label>
+            </form>
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="exampleModalLabel">New message</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="mb-3">
+                        <label for="recipient-name" class="col-form-label">Recipient:</label>
+                        <input type="text" class="form-control" id="recipient-name">
+                    </div>
+                    <div class="mb-3">
+                        <label for="message-text" class="col-form-label">Message:</label>
+                        <textarea class="form-control" id="message-text"></textarea>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Send message</button>
+            </div>
+        </div>
+    </div>
+</div>
+    <h1 class="text-center">Coffee!</h1>
+    <div class="container p-0 w-90">
+        <div id="coffees" class="row justify-content-center p-0"></div>
+    </div>
     <script src="main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 </body>
 </html>

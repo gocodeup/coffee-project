@@ -1,13 +1,16 @@
 "use strict"
 
 function renderCoffee(coffee) {
-    let html = '<tr class="coffee">';
-    html += `<td>${coffee.id}</td>`;
-    html += `<td>${coffee.name}</td>`;
-    html += `<td>${coffee.roast}</td>`;
-    html += '</tr>';
 
-    return html;
+    let html = '<div class="card col-3 p-0 m-3">';
+    html += '<div class="card-header text-center">';
+    html += '<h3>' + coffee.name + '<h3>';
+    html += '</div><div>';
+    html += '<blockquote class="blockquote mb-0 text-center">';
+    html += '<p>' + coffee.roast + '</p>';
+    html += '</blockquote></div></div>'
+
+    return html
 }
 
 function renderCoffees(coffees) {
@@ -20,9 +23,9 @@ function renderCoffees(coffees) {
 
 function updateCoffees(e) {
     e.preventDefault(); // don't submit the form, we just want to update the data
-    const selectedRoast = roastSelection.value;
-    const filteredCoffees = [];
-    coffees.forEach( coffee => {
+    let selectedRoast = roastSelection.value;
+    let filteredCoffees = [];
+    coffees.forEach(function(coffee) {
         if (coffee.roast === selectedRoast) {
             filteredCoffees.push(coffee);
         }
@@ -31,7 +34,8 @@ function updateCoffees(e) {
 }
 
 // from http://www.ncausa.org/About-Coffee/Coffee-Roasts-Guide
-const coffees = [
+
+let coffees = [
     {id: 1, name: 'Light City', roast: 'light'},
     {id: 2, name: 'Half City', roast: 'light'},
     {id: 3, name: 'Cinnamon', roast: 'light'},
@@ -48,10 +52,24 @@ const coffees = [
     {id: 14, name: 'French', roast: 'dark'},
 ];
 
-const tbody = document.querySelector('#coffees');
-const submitButton = document.querySelector('#submit');
-const roastSelection = document.querySelector('#roast-selection');
+
+let tbody = document.querySelector('#coffees');
+let submitButton = document.querySelector('#submit');
+let roastSelection = document.querySelector('#roast-selection');
+let search = document.querySelector('#search')
 
 tbody.innerHTML = renderCoffees(coffees);
 
 submitButton.addEventListener('click', updateCoffees);
+roastSelection.addEventListener('change', updateCoffees)
+search.addEventListener('keydown', function (){
+        let filteredCoffees = [];
+        coffees.forEach(function(coffee) {
+            let name = coffee.name.toLowerCase()
+            let check = search.value.toLowerCase()
+            if (name.includes(check)) {
+                filteredCoffees.push(coffee);
+            }
+        });
+        tbody.innerHTML = renderCoffees(filteredCoffees);
+    })
