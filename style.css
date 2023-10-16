@@ -11,12 +11,10 @@ td, th {
 
 .logo  {
     display: flex;
-    flex: wrap;
+    flex-wrap: wrap;
     justify-content: center;
 }
 
-
-.card {
-    display:flex
-    flex:start-end;
+h3 {
+    text-align: center;
 }
