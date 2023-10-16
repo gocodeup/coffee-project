@@ -53,8 +53,20 @@ let coffees = [
 let tbody = document.querySelector('#coffees');
 let submitButton = document.querySelector('#submit');
 let roastSelection = document.querySelector('#roast-selection');
+let search = document.querySelector('#search')
 
 tbody.innerHTML = renderCoffees(coffees);
 
 submitButton.addEventListener('click', updateCoffees);
 roastSelection.addEventListener('change', updateCoffees)
+search.addEventListener('keydown', function (){
+        let filteredCoffees = [];
+        coffees.forEach(function(coffee) {
+            let name = coffee.name.toLowerCase()
+            let check = search.value.toLowerCase()
+            if (name.includes(check)) {
+                filteredCoffees.push(coffee);
+            }
+        });
+        tbody.innerHTML = renderCoffees(filteredCoffees);
+    })
