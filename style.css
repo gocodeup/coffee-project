@@ -6,4 +6,17 @@ table {
 td, th {
     border: 1px solid black;
     padding: 5px 10px;
+
+}
+
+.logo  {
+    display: flex;
+    flex: wrap;
+    justify-content: center;
+}
+
+
+.card {
+    display:flex
+    flex:start-end;
 }
