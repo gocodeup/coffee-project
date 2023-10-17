@@ -1,9 +1,76 @@
-table {
-    border-collapse: collapse;
-    margin: 15px 0;
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
 }
 
-td, th {
-    border: 1px solid black;
-    padding: 5px 10px;
+body {
+    margin: 40px;
+    border: 10px;
+    font-family: sans-serif;
+    background-image: url("img/coffeeshop.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
 }
+/*table {*/
+/*    border-collapse: collapse;*/
+/*    margin: 15px 0;*/
+/*}*/
+
+/*td, th {*/
+/*    border: 1px solid black;*/
+/*    padding: 5px 10px;*/
+/*}*/
+
+h1 {
+    text-align: center;
+    color: #721b1b;
+
+}
+
+hr {
+    margin-bottom: 20px;
+}
+/*div.coffees {*/
+/*    display: flex;*/
+/*    flex-flow: column wrap;*/
+/*}*/
+
+/*div#allCoffeesForm {*/
+/*    display: flex;*/
+/*    justify-content: right;*/
+/*}*/
+
+/*div#addACoffeeFormWrapper {*/
+/*    display: flex;*/
+/*    justify-content: right;*/
+/*}*/
+div#mainContent {
+    display: flex;
+    flex-flow:wrap;
+    justify-content: space-between;
+}
+
+div.coffeeName{
+    font-size: 2rem;
+    color: #721b1b;
+}
+
+div.coffee div:nth-of-type(2) {
+    font-size: 1.6rem;
+    color: #6f2121b0;
+}
+
+/*div#coffeeID {*/
+/*    visibility: hidden;*/
+/*    display: none;*/
+/*}*/
+
+#allCoffeesForms {
+
+    margin-bottom: 20px;
+    display: inline-flex;
+    flex-direction: column;
+    color: #721b1b;
+}
+
