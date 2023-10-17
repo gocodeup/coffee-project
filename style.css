@@ -1,9 +1,53 @@
-table {
-    border-collapse: collapse;
-    margin: 15px 0;
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
 }
 
-td, th {
-    border: 1px solid black;
-    padding: 5px 10px;
+body {
+    margin: 40px;
+    border: 10px;
+
+}
+/*table {*/
+/*    border-collapse: collapse;*/
+/*    margin: 15px 0;*/
+/*}*/
+
+/*td, th {*/
+/*    border: 1px solid black;*/
+/*    padding: 5px 10px;*/
+/*}*/
+
+h1 {
+    text-align: center;
+}
+
+hr {
+    margin-bottom: 20px;
+}
+/*div.coffees {*/
+/*    display: flex;*/
+/*    flex-flow: column wrap;*/
+/*}*/
+
+/*div#allCoffeesForm {*/
+/*    display: flex;*/
+/*    justify-content: right;*/
+/*}*/
+
+/*div#addACoffeeFormWrapper {*/
+/*    display: flex;*/
+/*    justify-content: right;*/
+/*}*/
+div#mainContent {
+    display: flex;
+    flex-flow:wrap;
+    justify-content: space-between;
+}
+
+#allCoffeesForm {
+    margin-bottom: 20px;
+    display: flex;
+    flex-grow: 2;
 }
