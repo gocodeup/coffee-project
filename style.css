@@ -6,4 +6,16 @@ table {
 td, th {
     border: 1px solid black;
     padding: 5px 10px;
+
 }
+
+.logo  {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+h3 {
+    text-align: center;
+}
+
