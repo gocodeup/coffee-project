@@ -61,58 +61,28 @@ function myFunction() {
 
 
 
-//     for (i = 0; i < coffees.length; i++) {
-//         var coffeeElement = document.querySelector('#searchCoffee');
-// //
-//         txtValue = coffees.textContent || coffees.innerText;
-//     if (txtValue.indexOf(filter) > -1) {
-//         coffees[i].style.display = [];
-//     } else {
-//         coffees[i].style.display = "none";
-//     }
-//     }
-// }
 
-
-// function myFunction () {
-//     const input = document.querySelector('#searchCoffee');
-//     const coffeeResultsContainer = document.querySelector('#coffees');
-//
-//     input.addEventListener('input', (e) => {
-//
-//         if (e.target.value === '') ;
-//         {
-//             coffeeResultsContainer.innerHTML = '';
-//             return;
-//         }
-//
-//         let searchResults = coffees.filter(coffee => {
-//             return coffee.name.toLowerCase().includes(e.target.value.toLowerCase());
-//         });
-//         coffeeResultsContainer.innerHTML = '';
-//         searchResults.forEach((element, index) => {
-//             const p = document.createElement('p');
-//             p.textContent = (index + 1) + '. ' + element.name;
-//             coffeeResultsContainer.appendChild(p);
-//         })
-//     });
-// }
-//
-// console.log(myFunction());
 const coffeesDiv = document.querySelector("#coffees");
-const addNewCoffeeObject = {
-    id: coffeesDiv.children.length + 1,
-    name: document.querySelector("#newCoffeeName").value,
-    roast: document.querySelector("#addACoffeeRoast").value,
-}
+// const addNewCoffeeObject = {
+//     id: coffeesDiv.children.length + 1,
+//     name: document.querySelector("#newCoffeeName").value,
+//     roast: document.querySelector("#addACoffeeRoast").value,
+// }
 
 
 const addACoffeeSubmitButton=document.querySelector('#submitNewCoffee');
+
+const addCoffeeForm = document.querySelector("#addACoffeeFormWrapper form");
+
 addACoffeeSubmitButton.addEventListener('click', (e) => {
    e.preventDefault();
-
-
-   document.querySelector("#coffees").appendChild(renderCoffee(addNewCoffeeObject));
+    const addNewCoffeeObject = {
+        id: coffeesDiv.children.length + 1,
+        name: document.querySelector("#newCoffeeName").value,
+        roast: document.querySelector("#addACoffeeRoast").value,
+    }
+    coffees.push(addNewCoffeeObject);
+    tbody.innerHTML = renderCoffees(coffees);
 });
 
 
@@ -147,9 +117,6 @@ const roastSelection = document.querySelector('#roast-selection');
 tbody.innerHTML = renderCoffees(coffees);
 
 submitButton.addEventListener('click', updateCoffees, myFunction);
-// input.addEventListener('input', updateCoffee);
 
-// const allCoffees = [...coffees,renderCoffees(coffees)];
-// console.log(allCoffees)
-console.log(coffees.sort());
+// console.log(coffees.sort());
 
