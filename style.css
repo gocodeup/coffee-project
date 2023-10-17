@@ -7,7 +7,10 @@
 body {
     margin: 40px;
     border: 10px;
-
+    font-family: sans-serif;
+    background-image: url("img/coffeeshop.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 /*table {*/
 /*    border-collapse: collapse;*/
@@ -21,6 +24,8 @@ body {
 
 h1 {
     text-align: center;
+    color: #721b1b;
+
 }
 
 hr {
@@ -46,8 +51,24 @@ div#mainContent {
     justify-content: space-between;
 }
 
+div.coffeeName{
+    font-size: 2rem;
+    color: #721b1b;
+}
+
+div.coffee div:nth-of-type(2) {
+    font-size: 1.6rem;
+    color: #6f2121b0;
+}
+
+/*div#coffeeID {*/
+/*    visibility: hidden;*/
+/*    display: none;*/
+/*}*/
+
 #allCoffeesForm {
     margin-bottom: 20px;
     display: flex;
     flex-grow: 2;
 }
+
