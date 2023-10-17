@@ -8,9 +8,8 @@
 </head>
 <body>
     <h1>Coffee!</h1>
-
     <form>
-        <label for="roast-selection"></label>
+        <label for="roast-selection">Roast</label>
         <select id="roast-selection">
             <option value = "all">all</option>
             <option value = "light">light</option>
@@ -20,10 +19,28 @@
             <div id="formInput">
                 <label>Coffee Name</label>
                 <input type = "text" id="searchCoffee"
-                onkeyup="dateCoffupees()">
+                onkeyup="myFunction()">
             </div>
-        <input id="submit" type="submit" />
+        <button id="submit" type="submit">Submit</button>
     </form>
+
+    <div id="addACoffeeFormWrapper" class="form">
+        <form>
+            <h2>Add a Coffee</h2>
+            <label for="addACoffeeRoast">Roast</label>
+            <select id="addACoffeeRoast">
+                <option value = "all">all</option>
+                <option value = "light">light</option>
+                <option value = "medium">medium</option>
+                <option value = "dark">dark</option>
+            </select>
+            <div id="inputCoffee">
+                <label>Name</label>
+                <input type="text" id="newCoffeeName">
+            </div>
+            <button id="submitNewCoffee" type="submit">Submit</button>
+        </form>
+    </div>
     <div class="coffees" id="coffees">
         <div>ID</div>
         <div>NAME</div>
