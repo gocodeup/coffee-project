@@ -1,5 +1,6 @@
 "use strict"
 
+// Function to generate HTML for a single coffee entry
 function renderCoffee(coffee) {
     return `
         <div class="coffee">
@@ -9,6 +10,7 @@ function renderCoffee(coffee) {
     `;
 }
 
+// Function to generate HTML for a list of coffees
 function renderCoffees(coffees) {
     let html = '';
     for(let i = coffees.length - 1; i >= 0; i--) {
@@ -17,19 +19,27 @@ function renderCoffees(coffees) {
     return html;
 }
 
+// Function to update the displayed coffees based on the selected roast level
 function updateCoffees(e) {
     e.preventDefault(); // don't submit the form, we just want to update the data
     const selectedRoast = roastSelection.value;
     tbody.innerHTML="";
-    const filteredCoffees = [];
+    let filteredCoffees = [];
+    if (selectedRoast === 'all') {
+       filteredCoffees= coffees;
+    } else {
+      filteredCoffees = [];
+
     coffees.forEach( coffee => {
         if (coffee.roast === selectedRoast) {
             filteredCoffees.push(coffee);
         }
     });
+    }
     tbody.innerHTML = renderCoffees(filteredCoffees);
 }
 
+// Data representing different coffee types
 // from http://www.ncausa.org/About-Coffee/Coffee-Roasts-Guide
 const coffees = [
     {id: 1, name: 'Light City', roast: 'light'},
@@ -63,31 +73,6 @@ coffees.forEach(function (coffee) {
 });
 
 submitButton.addEventListener('click', updateCoffees);
-
-
-
-// let inputElement = document.querySelector('#coffee-name-input');
-// inputElement.addEventListener('keyup', function(event) {
-//     let inputValue = event.target.value;
-//     console.log(inputValue);
-// });
-
-// document.getElementById("coffee-search-form").addEventListener("submit", function (e) {
-//     e.preventDefault(); // Prevent the form from submitting
-//
-//     const roastSelection = document.getElementById("roast-selection").value;
-//     const searchTerm = document.getElementById("coffee-name-input").value.trim().toLowerCase();
-//
-//     // Filter the coffees based on roast and name
-//     const filteredCoffees = coffees.filter(coffee => {
-//         return coffee.roast === roastSelection && coffee.name.toLowerCase().includes(searchTerm);
-//     });
-//
-//     // Display the filtered coffees or do something else with them
-//     console.log(filteredCoffees);
-// });
-
-
 coffeeNameInput.addEventListener('input', function () {
     const searchTerm = coffeeNameInput.value.trim().toLowerCase();
     tbody.innerHTML = ''; // Clear previous results
@@ -96,4 +81,23 @@ coffeeNameInput.addEventListener('input', function () {
             tbody.innerHTML += renderCoffee(coffee);
         }
     });
+});
+
+const addCoffeeForm = document.querySelector('#submit2');
+addCoffeeForm.addEventListener('click', event => {
+    event.preventDefault(); // Prevent the form from submitting
+
+    // console.log(event.target.parentElement.parentElement.parentElement);
+    const addCoffeeForm = event.target.parentElement.parentElement.parentElement;
+    const roastSelection = addCoffeeForm[0].value;
+    const coffeeName = addCoffeeForm[1].value;
+    console.log(roastSelection + coffeeName);
+    const newCoffee = {
+        id: coffees.length + 1,
+        name: coffeeName,
+        roast: roastSelection
+    };
+    //
+    coffees.push(newCoffee);
+    tbody.innerHTML = renderCoffees(coffees);
 });

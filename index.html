@@ -42,11 +42,12 @@
 							<p id="roast"></p>
 						</div>
 					</div>
-					<div class="col d-flex ">
-						<form class="w-100 ">
+					<div class="col d-flex flex-column">
+						  <form class="w-100 ">
 							<div class="mb-3">
 								<label class="form-label">Roast</label>
 								<select class="w-100" id="roast-selection">
+									<option value="all">All</option>
 									<option>light</option>
 									<option>medium</option>
 									<option>dark</option>
@@ -60,21 +61,24 @@
 								</div>
 								<div><input class="w-100 bg-primary text-white" id="submit" type="submit" /></div>
 							</div>
+						  </form>
 							<hr>
 							<h3 class="text-center">Add a Coffee</h3>
+						  <form id="add-coffee-form">
 							<div class="mb-3">
 								<label class="form-label">Roast</label>
-								<select class="w-100" id="roast-selection2">
+								<select class="w-100" id="new-coffee-roast">
 									<option>light</option>
 									<option>medium</option>
 									<option>dark</option>
 								</select>
 								<label class="form-label">Name</label>
 								<div class="input-group input group-sm mb-3">
-									<input id="coffee-name-input"  type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
+									<input id="new-coffee-name"  type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
 								</div>
 								<div><input class="w-100 bg-primary text-white" id="submit2" type="submit" /></div>
 							</div>
+							</form>
 						</form>
 					</div>
 				</div>
