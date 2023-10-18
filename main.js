@@ -33,7 +33,6 @@ function updateCoffees(e) {
         });
     }
     tbody.innerHTML = renderCoffees(filteredCoffees);
-    // console.log();
 }
 
 //First input form
@@ -54,8 +53,6 @@ function lookupCoffee() {
 
     }
 }
-
-
 
 
 
@@ -103,14 +100,9 @@ const tbody = document.querySelector('#coffees');
 const submitButton = document.querySelector('#submit');
 const roastSelection = document.querySelector('#roast-selection');
 
-
-
-
-
-
 tbody.innerHTML = renderCoffees(coffees);
 
-submitButton.addEventListener('click', updateCoffees, myFunction);
+submitButton.addEventListener('click', updateCoffees, lookupCoffee);
 
-console.log(coffees.sort());
+coffees.sort();
 
