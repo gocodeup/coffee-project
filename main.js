@@ -1,8 +1,7 @@
-"use strict"
+"use strict";
 
 function renderCoffee(coffee) {
     let html = '<div class="coffee" data-id="${coffee.id}">';
-    // html += `<div>${coffee.id}</div>`;
     html += `<div class="coffeeName">${coffee.name}</div>`;
     html += `<div class="coffeeRoast">${coffee.roast}</div>`;
     html += '</div>';
@@ -34,16 +33,14 @@ function updateCoffees(e) {
         });
     }
     tbody.innerHTML = renderCoffees(filteredCoffees);
-    // console.log();
 }
 
 //First input form
-function myFunction() {
+function lookupCoffee() {
     let input, filter, txtValue, i;
     let filteredCoffees = [];
     // objects = coffees
     input = document.getElementById('searchCoffee');
-    // const searchResultsContainer = document.querySelector('#coffees');
     filter = input.value.toUpperCase();
 
 
@@ -60,14 +57,8 @@ function myFunction() {
 
 
 
-
-
 const coffeesDiv = document.querySelector("#coffees");
-// const addNewCoffeeObject = {
-//     id: coffeesDiv.children.length + 1,
-//     name: document.querySelector("#newCoffeeName").value,
-//     roast: document.querySelector("#addACoffeeRoast").value,
-// }
+
 
 
 const addACoffeeSubmitButton=document.querySelector('#submitNewCoffee');
@@ -109,14 +100,9 @@ const tbody = document.querySelector('#coffees');
 const submitButton = document.querySelector('#submit');
 const roastSelection = document.querySelector('#roast-selection');
 
-
-
-
-
-
 tbody.innerHTML = renderCoffees(coffees);
 
-submitButton.addEventListener('click', updateCoffees, myFunction);
+submitButton.addEventListener('click', updateCoffees, lookupCoffee);
 
-// console.log(coffees.sort());
+coffees.sort();
 
