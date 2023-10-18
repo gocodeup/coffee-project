@@ -8,42 +8,31 @@ body {
     margin: 40px;
     border: 10px;
     font-family: sans-serif;
-
-    background-color: rgba(122, 87, 38, 0.74);
+    background-color: #fddec8;
 }
-/*table {*/
-/*    border-collapse: collapse;*/
-/*    margin: 15px 0;*/
-/*}*/
 
-/*td, th {*/
-/*    border: 1px solid black;*/
-/*    padding: 5px 10px;*/
-/*}*/
-
-h1 {
+header{
     text-align: center;
-    color: #721b1b;
-    font-size: 3rem;
+}
+
+header h1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 180px;
+    height: 180px;
+    color: #f1ecec;
+    border-radius: 100%;
+    background-color: #00aba9;
+    border-color: #00aba9;
+    padding: 12px;
+    margin: 30px;
 }
 
 hr {
     margin-bottom: 20px;
 }
-/*div.coffees {*/
-/*    display: flex;*/
-/*    flex-flow: column wrap;*/
-/*}*/
 
-/*div#allCoffeesForm {*/
-/*    display: flex;*/
-/*    justify-content: right;*/
-/*}*/
-
-/*div#addACoffeeFormWrapper {*/
-/*    display: flex;*/
-/*    justify-content: right;*/
-/*}*/
 div#mainContent {
     display: flex;
     flex-flow:wrap;
@@ -64,10 +53,7 @@ div.coffee div:nth-of-type(2) {
     color: #6f2121b0;
 }
 
-/*div#coffeeID {*/
-/*    visibility: hidden;*/
-/*    display: none;*/
-/*}*/
+
 h2 {
     font-size: 2.3rem;
 }
