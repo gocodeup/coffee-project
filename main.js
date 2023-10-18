@@ -1,8 +1,7 @@
-"use strict"
+"use strict";
 
 function renderCoffee(coffee) {
     let html = '<div class="coffee" data-id="${coffee.id}">';
-    // html += `<div>${coffee.id}</div>`;
     html += `<div class="coffeeName">${coffee.name}</div>`;
     html += `<div class="coffeeRoast">${coffee.roast}</div>`;
     html += '</div>';
@@ -38,12 +37,11 @@ function updateCoffees(e) {
 }
 
 //First input form
-function myFunction() {
+function lookupCoffee() {
     let input, filter, txtValue, i;
     let filteredCoffees = [];
     // objects = coffees
     input = document.getElementById('searchCoffee');
-    // const searchResultsContainer = document.querySelector('#coffees');
     filter = input.value.toUpperCase();
 
 
@@ -63,11 +61,7 @@ function myFunction() {
 
 
 const coffeesDiv = document.querySelector("#coffees");
-// const addNewCoffeeObject = {
-//     id: coffeesDiv.children.length + 1,
-//     name: document.querySelector("#newCoffeeName").value,
-//     roast: document.querySelector("#addACoffeeRoast").value,
-// }
+
 
 
 const addACoffeeSubmitButton=document.querySelector('#submitNewCoffee');
@@ -118,5 +112,5 @@ tbody.innerHTML = renderCoffees(coffees);
 
 submitButton.addEventListener('click', updateCoffees, myFunction);
 
-// console.log(coffees.sort());
+console.log(coffees.sort());
 
