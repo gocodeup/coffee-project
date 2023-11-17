@@ -7,3 +7,25 @@ td, th {
     border: 1px solid black;
     padding: 5px 10px;
 }
+
+.container {
+    display: grid;
+    grid-template-columns:
+           1fr
+2fr;
+    /*width: 100%;*/
+    margin: 0 auto;
+    max-width: 1200px;
+    padding: 20px;
+
+}
+
+main {
+    grid-area: main;
+}
+
+.right-side {
+    display: grid;
+    grid-template-rows: auto 1fr;
+    grid-area: aside;
+}
