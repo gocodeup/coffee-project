@@ -21,16 +21,19 @@ function renderCoffees(coffees) {
 
 // Function to update the displayed coffees based on the selected roast
 function updateCoffees(e) {
-    e.preventDefault(); // prevent the form from submitting to backend api
+    e.preventDefault();
     const selectedRoast = roastSelection.value;
-    const filteredCoffees = [];
-    // Filter coffees based on the selected roast
-    coffees.forEach(coffee => {
-        if (coffee.roast === selectedRoast) {
-            filteredCoffees.push(coffee);
-        }
-    });
-    // Updates the HTML content of tbody with the filtered coffees
+    let filteredCoffees = [];
+
+    if (selectedRoast.toLowerCase() === 'all') {
+        // If 'All' is selected, include all coffees in the filtered list
+        filteredCoffees = coffees;
+    } else {
+        // Otherwise, filter coffees based on the selected roast
+        filteredCoffees = coffees.filter(coffee => coffee.roast === selectedRoast);
+    }
+
+    // Update the HTML content of tbody with the filtered coffees
     tbody.innerHTML = renderCoffees(filteredCoffees);
 }
 
@@ -54,7 +57,7 @@ const coffees = [
 
 // Get references to HTML elementsGETTING REAL DUMB
 const tbody = document.querySelector('#coffees');
-const submitButton = document.getElementsByClassName('submit');
+const submitButton = document.querySelector('#submit');
 const roastSelection = document.querySelector('#roast-selection');
 
 // Initial rendering of all coffees

@@ -1,3 +1,7 @@
+form {
+    display: block;
+}
+
 img {
     z-index: -1;
 }
