@@ -1,6 +1,7 @@
 "use strict";
 
 // Function to render a single coffee as an HTML table row
+//REPLACING TABLE DATA WITH DIVS
 function renderCoffee(coffee) {
     let html = '<tr class="coffee">';
     html += `<td>${coffee.id}</td>`;
