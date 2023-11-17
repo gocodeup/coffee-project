@@ -1,11 +1,11 @@
 "use strict"
 
 function renderCoffee(coffee) {
-    let html = '<tr class="coffee">';
-    html += `<td>${coffee.id}</td>`;
-    html += `<td>${coffee.name}</td>`;
-    html += `<td>${coffee.roast}</td>`;
-    html += '</tr>';
+    let html = '<div class="coffee">';
+    html += `<p>${coffee.id}</p>`;
+    html += `<p>${coffee.name}</p>`;
+    html += `<p>${coffee.roast}</p>`;
+    html += '</div>';
 
     return html;
 }
@@ -27,7 +27,7 @@ function updateCoffees(e) {
             filteredCoffees.push(coffee);
         }
     });
-    tbody.innerHTML = renderCoffees(filteredCoffees);
+    coffeeList.innerHTML = renderCoffees(filteredCoffees);
 }
 
 // from http://www.ncausa.org/About-Coffee/Coffee-Roasts-Guide
@@ -46,12 +46,18 @@ const coffees = [
     {id: 12, name: 'Viennese', roast: 'dark'},
     {id: 13, name: 'Italian', roast: 'dark'},
     {id: 14, name: 'French', roast: 'dark'},
+    {id: 15, name: 'French', roast: 'light'},
 ];
 
-const tbody = document.querySelector('#coffees');
+const coffeeList = document.getElementById('coffees');
 const submitButton = document.querySelector('#submit');
 const roastSelection = document.querySelector('#roast-selection');
+// const filteredCoffee = document.getElementById("filtered-coffees")
 
-tbody.innerHTML = renderCoffees(coffees);
+coffeeList.innerHTML = renderCoffees(coffees);
 
+// submitButton.addEventListener('click', (e) => {
+//     e.preventDefault()
+//     console.log("submit has been clicked")
+// });
 submitButton.addEventListener('click', updateCoffees);

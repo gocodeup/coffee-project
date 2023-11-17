@@ -11,21 +11,26 @@ td, th {
 .container {
     display: grid;
     grid-template-columns:
-           1fr
-2fr;
-    /*width: 100%;*/
+           1fr 2fr;
     margin: 0 auto;
-    max-width: 1200px;
     padding: 20px;
-
+}
+h1 {
+    display: flex;
+    justify-content: center;
+    padding: 10px;
 }
 
-main {
-    grid-area: main;
+.left-side {
+    display: grid;
 }
 
 .right-side {
     display: grid;
-    grid-template-rows: auto 1fr;
-    grid-area: aside;
+    grid-template-rows: .5fr 1fr;
+}
+
+.left-side {
+    display: flex;
+    justify-content: left;
 }
