@@ -1,32 +1,30 @@
 "use strict"
 
 function renderCoffee(coffee) {
-    let html = '<tr class="coffee">';
-    html += `<td>${coffee.id}</td>`;
-    html += `<td>${coffee.name}</td>`;
-    html += `<td>${coffee.roast}</td>`;
-    html += '</tr>';
+    let html = '<div class="coffee">';
+    // html += `<div>${coffee.id}</div>`;
+    html += `<h5>${coffee.name}</h5>`;
+    html += `<p>${coffee.roast}</p>`;
+    html += '</div>';
 
     return html;
 }
 
 function renderCoffees(coffees) {
     let html = '';
-    for(let i = coffees.length - 1; i >= 0; i--) {
+    for(let i = 0; i < coffees.length; i++) {
         html += renderCoffee(coffees[i]);
     }
     return html;
 }
 
 function updateCoffees(e) {
-    e.preventDefault(); // don't submit the form, we just want to update the data
+    e.preventDefault();
     const selectedRoast = roastSelection.value;
-    const filteredCoffees = [];
-    coffees.forEach( coffee => {
-        if (coffee.roast === selectedRoast) {
-            filteredCoffees.push(coffee);
-        }
-    });
+    const searchTerm = coffeeSearch.value.toLowerCase();
+    const filteredCoffees = coffees.filter(coffee =>
+        coffee.roast === selectedRoast || coffee.name.includes(searchTerm)
+    );
     tbody.innerHTML = renderCoffees(filteredCoffees);
 }
 
@@ -49,9 +47,12 @@ const coffees = [
 ];
 
 const tbody = document.querySelector('#coffees');
-const submitButton = document.querySelector('#submit');
+const coffeeForm = document.querySelector('#coffee-form');
 const roastSelection = document.querySelector('#roast-selection');
+const coffeeSearch = document.querySelector('#coffee-search');
 
 tbody.innerHTML = renderCoffees(coffees);
 
-submitButton.addEventListener('click', updateCoffees);
+coffeeForm.addEventListener('submit', updateCoffees);
+coffeeSearch.addEventListener('input', updateCoffees);
+
