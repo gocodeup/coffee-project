@@ -7,3 +7,17 @@ td, th {
     border: 1px solid black;
     padding: 5px 10px;
 }
+
+
+body {
+    background-image: url(img/coffee.jpg); /* Replace with the path to your background image */
+    background-size: cover; /* Cover the entire viewport */
+    background-repeat: no-repeat; /* Do not repeat the background image */
+    background-attachment: fixed; /* Fixed background */
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+}
+
+nav {
+    background-color: #FFDAB9; /* Light pumpkin color */
+}

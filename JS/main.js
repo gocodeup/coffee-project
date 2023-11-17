@@ -48,6 +48,67 @@ const coffees = [
     {id: 14, name: 'French', roast: 'dark'},
 ];
 
+
+const searchBar = document.getElementById("coffee-name");
+
+searchBar.addEventListener("keyup", function () {
+    const searchTerm = this.value;
+    const resultsList = [];
+
+    for (const coffee of coffees) {
+        if (coffee.name.includes(searchTerm)) {
+            resultsList.push(coffee);
+        }
+    }
+    for (const result of resultsList) {
+        const listItem = document.createElement("li");
+        listItem.textContent = result.name;
+    }
+    tbody.innerHTML = renderCoffees(resultsList);
+
+});
+
+// main.js
+
+// Function to add a new coffee
+function addNewCoffee() {
+    // Get input values
+    const newCoffeeName = document.getElementById('newCoffeeName').value;
+    const newCoffeeRoast = document.getElementById('newCoffeeRoast').value;
+
+    // Validate input values
+    if (newCoffeeName === "" || newCoffeeRoast === "") {
+        alert("Please enter both coffee name and roast type.");
+        return;
+    }
+
+    // Create a new row for the table
+    const newRow = document.createElement('tr');
+
+    // Create cells for the new row
+    const idCell = document.createElement('td');
+    const nameCell = document.createElement('td');
+    const roastCell = document.createElement('td');
+
+    // Set values for the cells
+    idCell.textContent = "";  // You may generate a unique ID dynamically
+    nameCell.textContent = newCoffeeName;
+    roastCell.textContent = newCoffeeRoast;
+
+    // Append cells to the new row
+    newRow.appendChild(idCell);
+    newRow.appendChild(nameCell);
+    newRow.appendChild(roastCell);
+
+    // Append the new row to the table body
+    document.getElementById('coffees').appendChild(newRow);
+
+    // Clear input fields
+    document.getElementById('newCoffeeName').value = "";
+    document.getElementById('newCoffeeRoast').value = "";
+}
+
+
 const tbody = document.querySelector('#coffees');
 const submitButton = document.querySelector('#submit');
 const roastSelection = document.querySelector('#roast-selection');
@@ -55,3 +116,4 @@ const roastSelection = document.querySelector('#roast-selection');
 tbody.innerHTML = renderCoffees(coffees);
 
 submitButton.addEventListener('click', updateCoffees);
+
