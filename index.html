@@ -6,29 +6,41 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Coffee!</h1>
+<h1>Coffee!</h1>
 
-    <form>
-        <label for="roast-selection"></label>
-        <select id="roast-selection">
-            <option>light</option>
-            <option>medium</option>
-            <option>dark</option>
-        </select>
-        <input id="submit" type="submit" />
-    </form>
+<form>
+    <label for="roast-selection">Roast:</label>
+    <select id="roast-selection">
+        <option value="all">All</option>
+        <option value="light">Light</option>
+        <option value="medium">Medium</option>
+        <option value="dark">Dark</option>
+    </select>
 
-    <table>
-        <thead>
-            <tr>
-                <th>ID</th>
-                <th>NAME</th>
-                <th>ROAST</th>
-            </tr>
-        </thead>
-        <tbody id="coffees"></tbody>
-    </table>
+    <label for="search">Search by name:</label>
+    <input id="search" type="text" placeholder="Enter name">
 
-    <script src="main.js"></script>
+    <input id="submit" type="submit" />
+</form>
+
+<div id="coffees"></div>
+
+<!-- New Coffee Form -->
+<div id="new-coffee-form">
+    <h2>Add New Coffee</h2>
+    <label for="new-coffee-name">Name:</label>
+    <input id="new-coffee-name" type="text" placeholder="Enter coffee name">
+
+    <label for="new-coffee-roast">Roast:</label>
+    <select id="new-coffee-roast">
+        <option value="light">Light</option>
+        <option value="medium">Medium</option>
+        <option value="dark">Dark</option>
+    </select>
+
+    <button id="add-coffee">Add Coffee</button>
+</div>
+
+<script src="main.js"></script>
 </body>
 </html>

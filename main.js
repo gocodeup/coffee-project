@@ -1,36 +1,70 @@
-"use strict"
-
+"use strict";
 function renderCoffee(coffee) {
-    let html = '<tr class="coffee">';
-    html += `<td>${coffee.id}</td>`;
-    html += `<td>${coffee.name}</td>`;
-    html += `<td>${coffee.roast}</td>`;
-    html += '</tr>';
+    let coffeeDiv = document.createElement('div');
+    coffeeDiv.classList.add('coffee');
 
-    return html;
+    let typeParagraph = document.createElement('p');
+    typeParagraph.textContent = `Type: ${coffee.name}`;
+    coffeeDiv.appendChild(typeParagraph);
+
+    let roastParagraph = document.createElement('p');
+    roastParagraph.textContent = `Roast: ${coffee.roast}`;
+    coffeeDiv.appendChild(roastParagraph);
+
+    return coffeeDiv;
 }
 
 function renderCoffees(coffees) {
-    let html = '';
-    for(let i = coffees.length - 1; i >= 0; i--) {
-        html += renderCoffee(coffees[i]);
-    }
-    return html;
-}
+    let coffeesContainer = document.querySelector('#coffees');
+    coffeesContainer.innerHTML = ''; // Clear previous content
 
-function updateCoffees(e) {
-    e.preventDefault(); // don't submit the form, we just want to update the data
-    const selectedRoast = roastSelection.value;
-    const filteredCoffees = [];
-    coffees.forEach( coffee => {
-        if (coffee.roast === selectedRoast) {
-            filteredCoffees.push(coffee);
-        }
+    coffees.forEach(coffee => {
+        let coffeeDiv = renderCoffee(coffee);
+        coffeesContainer.appendChild(coffeeDiv);
     });
-    tbody.innerHTML = renderCoffees(filteredCoffees);
 }
 
-// from http://www.ncausa.org/About-Coffee/Coffee-Roasts-Guide
+function updateCoffees() {
+    const selectedRoast = roastSelection.value;
+    const searchTerm = searchInput.value.toLowerCase();
+    let filteredCoffees = coffees;
+
+    // Filter by selected roast
+    if (selectedRoast !== 'all') {
+        filteredCoffees = filteredCoffees.filter(coffee => coffee.roast === selectedRoast);
+    }
+
+    // Filter by search term
+    if (searchTerm.trim() !== '') {
+        filteredCoffees = filteredCoffees.filter(coffee => coffee.name.toLowerCase().includes(searchTerm));
+    }
+
+    // Render the filtered coffees
+    renderCoffees(filteredCoffees);
+}
+
+function addCoffee() {
+    const newName = newCoffeeName.value.trim();
+    const newRoast = newCoffeeRoast.value;
+
+    if (newName !== '' && newRoast) {
+        const newCoffee = {
+            name: newName,
+            roast: newRoast,
+        };
+
+        // Add the new coffee to the array
+        coffees.push(newCoffee);
+
+        // Render the updated coffees
+        renderCoffees(coffees);
+
+        // Clear the form inputs
+        newCoffeeName.value = '';
+        newCoffeeRoast.value = 'light';
+    }
+}
+// Coffee data array
 const coffees = [
     {id: 1, name: 'Light City', roast: 'light'},
     {id: 2, name: 'Half City', roast: 'light'},
@@ -48,10 +82,16 @@ const coffees = [
     {id: 14, name: 'French', roast: 'dark'},
 ];
 
-const tbody = document.querySelector('#coffees');
-const submitButton = document.querySelector('#submit');
+// Initial render
+renderCoffees(coffees);
+
+// Event handling
 const roastSelection = document.querySelector('#roast-selection');
+const searchInput = document.querySelector('#search');
+const newCoffeeName = document.querySelector('#new-coffee-name');
+const newCoffeeRoast = document.querySelector('#new-coffee-roast');
+const addCoffeeButton = document.querySelector('#add-coffee');
 
-tbody.innerHTML = renderCoffees(coffees);
-
-submitButton.addEventListener('click', updateCoffees);
+roastSelection.addEventListener('input', updateCoffees);
+searchInput.addEventListener('input', updateCoffees);
+addCoffeeButton.addEventListener('click', addCoffee);
