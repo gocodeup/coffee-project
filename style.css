@@ -1,9 +1,19 @@
-table {
-    border-collapse: collapse;
-    margin: 15px 0;
+
+#stain-1 {
+    position: absolute;
+    top: -18em;
+    right: -5em;
 }
 
-td, th {
-    border: 1px solid black;
-    padding: 5px 10px;
+#stain-2 {
+    position: absolute;
+    top: 18em;
+    left: -5em;
+
+}
+
+#logo {
+    position: absolute;
+    top: -16em;
+    left: -14em;
 }

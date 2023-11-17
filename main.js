@@ -3,11 +3,10 @@
 // Function to render a single coffee as an HTML table row
 //REPLACING TABLE DATA WITH DIVS
 function renderCoffee(coffee) {
-    let html = '<tr class="coffee">';
-    html += `<td>${coffee.id}</td>`;
-    html += `<td>${coffee.name}</td>`;
-    html += `<td>${coffee.roast}</td>`;
-    html += '</tr>';
+    let html = '<div class="coffee">';
+    html += `<div style="font-size: 20px">${coffee.name}</div>`;
+    html += `<div>${coffee.roast}</div>`;
+    html += '</div>';
     return html;
 }
 
@@ -22,7 +21,7 @@ function renderCoffees(coffees) {
 
 // Function to update the displayed coffees based on the selected roast
 function updateCoffees(e) {
-    e.preventDefault(); // prevent the form from submitting
+    e.preventDefault(); // prevent the form from submitting to backend api
     const selectedRoast = roastSelection.value;
     const filteredCoffees = [];
     // Filter coffees based on the selected roast
@@ -31,7 +30,7 @@ function updateCoffees(e) {
             filteredCoffees.push(coffee);
         }
     });
-    // Update the HTML content of tbody with the filtered coffees
+    // Updates the HTML content of tbody with the filtered coffees
     tbody.innerHTML = renderCoffees(filteredCoffees);
 }
 
@@ -53,9 +52,9 @@ const coffees = [
     {id: 14, name: 'French', roast: 'dark'},
 ];
 
-// Get references to HTML elements
+// Get references to HTML elementsGETTING REAL DUMB
 const tbody = document.querySelector('#coffees');
-const submitButton = document.querySelector('#submit');
+const submitButton = document.getElementsByClassName('submit');
 const roastSelection = document.querySelector('#roast-selection');
 
 // Initial rendering of all coffees
