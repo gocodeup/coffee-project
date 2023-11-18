@@ -18,13 +18,16 @@
     <div class="row">
         <!-- Left Column -->
         <div class="col-md-8">
-            <div id="coffees"></div>
+            <div class="row" id="coffees">
+                <!-- Coffee items will be dynamically added here -->
+            </div>
         </div>
 
         <!-- Right Column -->
         <div class="col-md-4">
             <!-- Roast Selection Form -->
             <form id="roast-form">
+                <h2>Select Your Coffee</h2>
                 <label for="roast-selection">Roast:</label>
                 <select id="roast-selection">
                     <option value="all">All</option>
@@ -32,15 +35,14 @@
                     <option value="medium">Medium</option>
                     <option value="dark">Dark</option>
                 </select>
-            </form>
 
-            <!-- Search Form -->
-            <form id="search-form">
-                <label for="search">Search by name:</label>
-                <input id="search" type="text" placeholder="Enter name">
+                <!-- Search Form -->
+                <form id="search-form">
+                    <label for="search">Search by name:</label>
+                    <input id="search" type="text" placeholder="Enter name">
+                </form>
             </form>
-
-            <!-- New Coffee Form -->
+            <!-- Add New Coffee Form -->
             <div id="new-coffee-form">
                 <h2>Add New Coffee</h2>
                 <label for="new-coffee-name">Name:</label>
@@ -61,20 +63,6 @@
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 <script src="main.js"></script>
-<script>
-    // Sample JavaScript for handling form submissions
-    document.getElementById("roast-form").addEventListener("submit", function (event) {
-        event.preventDefault();
-        // Handle roast form submission here
-        console.log("Roast form submitted");
-    });
-
-    document.getElementById("search-form").addEventListener("submit", function (event) {
-        event.preventDefault();
-        // Handle search form submission here
-        console.log("Search form submitted");
-    });
-</script>
 </body>
 </html>
 
