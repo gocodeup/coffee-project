@@ -23,9 +23,8 @@
 
         <!-- Right Column -->
         <div class="col-md-4">
-            <!-- First Form -->
-            <form>
-                <h2>What Are You Looking For?</h2>
+            <!-- Roast Selection Form -->
+            <form id="roast-form">
                 <label for="roast-selection">Roast:</label>
                 <select id="roast-selection">
                     <option value="all">All</option>
@@ -33,11 +32,12 @@
                     <option value="medium">Medium</option>
                     <option value="dark">Dark</option>
                 </select>
+            </form>
 
+            <!-- Search Form -->
+            <form id="search-form">
                 <label for="search">Search by name:</label>
                 <input id="search" type="text" placeholder="Enter name">
-
-                <input id="submit" type="submit" />
             </form>
 
             <!-- New Coffee Form -->
@@ -61,6 +61,20 @@
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 <script src="main.js"></script>
+<script>
+    // Sample JavaScript for handling form submissions
+    document.getElementById("roast-form").addEventListener("submit", function (event) {
+        event.preventDefault();
+        // Handle roast form submission here
+        console.log("Roast form submitted");
+    });
+
+    document.getElementById("search-form").addEventListener("submit", function (event) {
+        event.preventDefault();
+        // Handle search form submission here
+        console.log("Search form submitted");
+    });
+</script>
 </body>
 </html>
 
