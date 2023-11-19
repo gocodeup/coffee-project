@@ -51,21 +51,11 @@ const coffees = [
 
 const searchBar = document.getElementById("coffee-name");
 
-searchBar.addEventListener("keyup", function () {
-    const searchTerm = this.value;
-    const resultsList = [];
+searchBar.addEventListener("input", function () {
+    const searchTerm = this.value.toLowerCase(); // Convert the search term to lowercase for case-insensitive comparison
+    const resultsList = coffees.filter(coffee => coffee.name.toLowerCase().includes(searchTerm));
 
-    for (const coffee of coffees) {
-        if (coffee.name.includes(searchTerm)) {
-            resultsList.push(coffee);
-        }
-    }
-    for (const result of resultsList) {
-        const listItem = document.createElement("li");
-        listItem.textContent = result.name;
-    }
     tbody.innerHTML = renderCoffees(resultsList);
-
 });
 
 // main.js
