@@ -13,6 +13,25 @@ improvements to it.
 1. Open up the HTML file and check out the existing application.
 1. Read through the code and understand the existing code structure before you start to build the features.
 
+## User Stories
+1. When a user visit the webpage, I expect to see a collection of coffees displayed.
+2. When a user select a roast option, I expect to see coffees with the matching roast displayed on the screen.
+3. When a user type a coffee name into the search field, I expect to see coffees that include the characters that have been typed.
+4. When a user select a roast and provide a new coffee name and click submit, I expect the new coffee to be displayed as the last item of the collection of coffees.
+
+## Feature List
+1. Display a collection of coffee objects to the client.
+2. Organizes the coffee collections by Coffee ID in ascending order.
+3. Utilizes flexbox and semantic HTML for web layout.
+4. Search functionality that allows users to filter coffees by name.
+
+### Bonus Features
+5. Option to select `all` roasts for roast type.
+6. Provides an interactive form that allows users to add coffees to the collection of coffee objects.
+7. Search input data is sanitized to account for case sensitivity.
+8. Utilizes `localStorage` to locally track the current collection of coffee objects.
+9. Implements Bootstrap, Materialize, or custom CSS to fully style the page.
+
 ## TODO
 
 - Update the HTML
