@@ -1,5 +1,6 @@
 "use strict"
 
+// ALL I DID TO THIS FUNCTION WAS CHANGE THE tr TO A div AND THE td's TO p TAGS.
 function renderCoffee(coffee) {
     let html = '<div class="coffee">';
     html += `<p>${coffee.id}</p>`;
@@ -18,6 +19,8 @@ function renderCoffees(coffees) {
     return html;
 }
 
+// THE ONLY MODIFICATION TO THIS FUNCTION WAS THE VARIABLE NAME
+// ON LINE 33 (CHANGED FROM tbody TO coffeesList)
 function updateCoffees(e) {
     e.preventDefault(); // don't submit the form, we just want to update the data
     const selectedRoast = roastSelection.value;
@@ -27,7 +30,7 @@ function updateCoffees(e) {
             filteredCoffees.push(coffee);
         }
     });
-    coffeeList.innerHTML = renderCoffees(filteredCoffees);
+    coffeesList.innerHTML = renderCoffees(filteredCoffees);
 }
 
 // from http://www.ncausa.org/About-Coffee/Coffee-Roasts-Guide
@@ -46,18 +49,16 @@ const coffees = [
     {id: 12, name: 'Viennese', roast: 'dark'},
     {id: 13, name: 'Italian', roast: 'dark'},
     {id: 14, name: 'French', roast: 'dark'},
-    {id: 15, name: 'French', roast: 'light'},
 ];
 
-const coffeeList = document.getElementById('coffees');
+// ON LINE 55 CHANGED VARIABLE NAME FROM tbody TO coffeesList;
+const coffeesList = document.querySelector('#coffees');
+// (ON LINE 57) ALSO TESTED IT BY TARGETING THE DIV USING getElementById // THIS ALSO WORKS
+// const coffeesList = document.getElementById('coffees');
 const submitButton = document.querySelector('#submit');
 const roastSelection = document.querySelector('#roast-selection');
-// const filteredCoffee = document.getElementById("filtered-coffees")
 
-coffeeList.innerHTML = renderCoffees(coffees);
+// ON LINE 62 CHANGED VARIABLE NAME FROM tbody TO coffeesList;
+coffeesList.innerHTML = renderCoffees(coffees);
 
-// submitButton.addEventListener('click', (e) => {
-//     e.preventDefault()
-//     console.log("submit has been clicked")
-// });
 submitButton.addEventListener('click', updateCoffees);
