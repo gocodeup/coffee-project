@@ -53,9 +53,10 @@
                 <table>
                     <thead>
                     <tr>
-                        <th>ID</th>
-                        <th>NAME</th>
-                        <th>ROAST</th>
+<!--                        SEV: CREATING IDS FOR THESE TO CALL LATER-->
+                        <th id="ids">ID</th>
+                        <th id="names">NAME</th>
+                        <th id="roasts">ROAST</th>
                     </tr>
                     </thead>
                     <tbody id="coffees"></tbody>
@@ -69,6 +70,8 @@
                     <option>light</option>
                     <option>medium</option>
                     <option>dark</option>
+<!--                    SEV: ADDED AN OPTION TO SHOW ALL ROASTS-->
+                    <option>All Roasts</option>
                 </select>
                 <input id="submit" type="submit"/>
             </form>
@@ -81,6 +84,8 @@
                 </select>
                 <input id="submit2" type="submit"/>
             </form>
+<!--            <div class="blurred-photo">-->
+<!--            <img src="Img/coffee2.jpg" alt="another coffee" class="border border-5 border-dark rounded col-md-3"></div>-->
 
             <form id="addCoffeeForm" class="mt-4">
                 <div class="form-group">
@@ -103,7 +108,8 @@
     <label for="coffee-name">Which coffee were you looking for?</label>
     <input name="coffee-name" type="text" id="coffee-name" placeholder="Coffee Name...">
     <ul id="results"></ul>
-    <img src="pouring-coffee.gif" alt="..." class="border border-5 border-dark rounded col-md-3">
+<!--  SEV: GIF IMAGE ADDED IN-->
+    <img src="pouring-coffee.gif" alt="coffee pour" class="border border-5 border-dark rounded col-md-3">
 
 </div>
 

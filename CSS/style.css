@@ -21,3 +21,15 @@ body {
 nav {
     background-color: #FFDAB9; /* Light pumpkin color */
 }
+
+/*SEV: HIDING SPECIFIC ID'S AND THE ID NUMBERS THEMSELVES HERE*/
+#coffees td:first-child {
+    display: none;
+}
+#ids {
+    display: none;
+}
+
+.card-body {
+    background-image: url("Img/coffee2.jpg");
+}
