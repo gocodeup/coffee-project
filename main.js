@@ -24,10 +24,12 @@ function renderCoffees(coffees) {
 function updateCoffees(e) {
     e.preventDefault(); // don't submit the form, we just want to update the data
     const selectedRoast = roastSelection.value;
-    const filteredCoffees = [];
+    let filteredCoffees = [];
     coffees.forEach(coffee => {
-        if (coffee.roast === selectedRoast) {
-            filteredCoffees.push(coffee);
+        if (selectedRoast === 'all'){
+            filteredCoffees = coffees;
+        } else {
+            filteredCoffees = coffees.filter(coffee => coffee.roast === selectedRoast);
         }
     });
     coffeesList.innerHTML = renderCoffees(filteredCoffees);
@@ -63,48 +65,18 @@ const coffees = [
     {id: 13, name: 'Italian', roast: 'dark'},
     {id: 14, name: 'French', roast: 'dark'},
 ];
+
 const addCoffeeButton = document.querySelector('#addCoffee');
 const coffeesList = document.querySelector('#coffees');
-// const submitButton = document.querySelector('#submit');
 const roastSelection = document.querySelector('#roast-selection');
 const coffeeSearch = document.querySelector('#coffeeSearch');
 const submitButton = document.querySelector('#submit1');
-// const tbody = document.querySelector("#coffees");
-
 
 coffeesList.innerHTML = renderCoffees(coffees);
 
-// submitButton.addEventListener('click', updateCoffees);
 roastSelection.addEventListener("input", updateCoffees);
-// searchInput.addEventListener('keyup', updateCoffees);
+
 addCoffeeButton.addEventListener('click', addNewCoffee);
-// coffeeSearch.addEventListener('keyup', searchText )
-
-
-// function searchText() {
-// e.preventDefault();
-// coffeeSearch.addEventListener("keydown", () => {
-//     const name = coffeeSearch.value.toLowerCase();
-//     const filtered = coffees.filter((coffee) => {
-//         coffee.name.toLowerCase().includes(name)
-//     });
-//     tbody.innerHTML = renderCoffees(filtered)
-// })
-//
-// tbody.innerHTML = renderCoffees(coffees);
-
-// const nameCoffees = [];
-// const roast = updateCoffees;
-// console.log(name)
-// coffees.forEach( coffee => {
-//     if (coffee.name.toLowerCase().includes(searchText) === name) {
-//         nameCoffees.push(coffee);
-//         console.log(coffee)
-//
-//     }
-//
-//
-// });
 
 
 const tbody = document.querySelector('#coffees');
