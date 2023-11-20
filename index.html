@@ -53,22 +53,22 @@
         <div class="col-md-4">
             <!-- Roast Selection Form -->
             <div class="selection-form">
-            <form id="roast-form">
-                <h2>Select Your Coffee</h2>
-                <label for="roast-selection">Roast:</label>
-                <select id="roast-selection">
-                    <option value="all">All</option>
-                    <option value="light">Light</option>
-                    <option value="medium">Medium</option>
-                    <option value="dark">Dark</option>
-                </select>
-                <br>
-                <!-- Search Form -->
-                <form id="search-form">
-                    <label for="search">Search by name:</label>
-                    <input id="search" type="text" placeholder="Enter name">
+                <form id="roast-form">
+                    <h2>Select Your Coffee</h2>
+                    <select select class="form-select" aria-label="Default select example" id="roast-selection">
+                        <option selected>Please Select Your Roast</option>
+                        <option value="all">All</option>
+                        <option value="light">Light</option>
+                        <option value="medium">Medium</option>
+                        <option value="dark">Dark</option>
+                    </select>
+                    <br>
+                    <!-- Search Form -->
+                    <form id="search-form">
+                        <label for="search">Search by name:</label>
+                        <input id="search" type="text" placeholder="Enter name">
+                    </form>
                 </form>
-            </form>
             </div>
             <!-- Add New Coffee Form -->
             <div id="new-coffee-form">
@@ -96,5 +96,3 @@
 <script src="main.js"></script>
 </body>
 </html>
-
-
