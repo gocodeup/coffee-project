@@ -1,14 +1,18 @@
 /* Custom CSS */
 body {
+    background-image: url("pexels-daria-obymaha-1684151.jpg");
+    background-position: center;
+    background-size: cover;
     font-family: Arial, sans-serif;
-    background-color: #f8f9fa;
     margin: 0;
     padding: 20px;
 }
 
 h1 {
+    font-family: Jonathan Hetegral, sans-serif;
     text-align: center;
     color: #333;
+    font-size: larger;
 }
 
 .container {
@@ -23,10 +27,10 @@ h1 {
 
 .right-side {
     flex: 1;
-    background-color: #fff;
+    /*background-color: #fff;*/
     padding: 20px;
     border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    /*box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);*/
 }
 
 form {
@@ -37,7 +41,10 @@ form {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 10px;
+    font-family: Agbalumo, sans-serif;
 }
+
+
 
 #coffees > div {
     border: 1px solid #ccc;
