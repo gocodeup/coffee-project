@@ -57,10 +57,7 @@ function updateInput(e) {
             }
         )
     }
-<<<<<<< HEAD
     console.log(currentRoast);
-=======
->>>>>>> main
     updateCoffees(e, currentRoast);
 }
 
