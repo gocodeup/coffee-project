@@ -10,21 +10,21 @@ td, th {
 
 
 body {
-    background-image: url(img/coffee.jpg); /* Replace with the path to your background image */
-    background-size: cover; /* Cover the entire viewport */
-    background-repeat: no-repeat; /* Do not repeat the background image */
-    background-attachment: fixed; /* Fixed background */
-    margin: 0; /* Remove default margin */
-    padding: 0; /* Remove default padding */
+    background-image: url("Img/coffee.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    margin: 0;
+    padding: 0;
     font-family: 'Merriweather Sans', sans-serif;
-    font-family: 'Work Sans', sans-serif;
+
 }
 
 nav {
-    background-color: #FFDAB9; /* Light pumpkin color */
+    background-color: #FFDAB9;
 }
 
-/*SEV: HIDING SPECIFIC ID'S AND THE ID NUMBERS THEMSELVES HERE*/
+ /*HIDING SPECIFIC ID'S AND THE ID NUMBERS THEMSELVES HERE*/
 #coffees td:first-child {
     display: none;
 }
@@ -35,7 +35,7 @@ nav {
 
 
 .card {
-    background: url('Img/coffee2.jpg') no-repeat center center fixed;
+    /*background: url('Img/coffee2.jpg') no-repeat center center fixed;*/
     background-size: cover;
     position: relative;
 }
@@ -43,6 +43,13 @@ nav {
 .card-body {
     font-size: x-large;
     background-color: #483C32;
-    color: #EADDCA; /* Fixing the comment syntax here */
+    color: #EADDCA;
+    background: url('Img/coffee2.jpg') no-repeat center center fixed;
 }
 
+#coffee-pour {
+    bottom: 4px;
+    right: 4px;
+    position: fixed;
+    width: 30em;
+}
