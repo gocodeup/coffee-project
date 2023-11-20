@@ -12,7 +12,7 @@ h1 {
 }
 
 #coffee-form {
-    max-width: 400px;
+    max-width: 700px;
     margin: 0 auto;
     padding: 20px;
     background-color: #f8f9fa;
@@ -34,21 +34,28 @@ input, select {
 }
 
 button {
-    background-color: #007bff;
+    background-color: black;
     color: #fff;
     padding: 10px 20px;
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    width: 100%;
+
 }
 
 button:hover {
     background-color: #0056b3;
 }
 
-/*.container2 {*/
-/*    display: flex;*/
-/*    flex-wrap: wrap;*/
-/*    width: 1000px;*/
-/*    color: green;*/
-/*}*/
+.container2 {
+    color: green;
+}
+
+#coffees {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    border: 2px solid black;
+    margin: auto;
+}
