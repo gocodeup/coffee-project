@@ -1,6 +1,4 @@
 "use strict"
-
-// ALL I DID TO THIS FUNCTION WAS CHANGE THE tr TO A div AND THE td's TO p TAGS.
 function renderCoffee(coffee) {
     let html = '<div class="coffee">';
     html += `<p>${coffee.id}</p>`;
@@ -11,6 +9,9 @@ function renderCoffee(coffee) {
     return html;
 }
 
+
+const searchInput = document.querySelector('#coffeeSearch');
+
 function renderCoffees(coffees) {
     let html = '';
     for(let i = coffees.length - 1; i >= 0; i--) {
@@ -18,9 +19,6 @@ function renderCoffees(coffees) {
     }
     return html;
 }
-
-// THE ONLY MODIFICATION TO THIS FUNCTION WAS THE VARIABLE NAME
-// ON LINE 33 (CHANGED FROM tbody TO coffeesList)
 function updateCoffees(e) {
     e.preventDefault(); // don't submit the form, we just want to update the data
     const selectedRoast = roastSelection.value;
@@ -32,8 +30,20 @@ function updateCoffees(e) {
     });
     coffeesList.innerHTML = renderCoffees(filteredCoffees);
 }
+function addNewCoffee(e) {
+    e.preventDefault()
+    const CoffeeName = document.querySelector('#coffeeName').value;
+    const CoffeeRoast = document.querySelector('#coffeeRoast').value;
 
-// from http://www.ncausa.org/About-Coffee/Coffee-Roasts-Guide
+    const newCoffee = {
+        id: coffees.length + 1,
+        name: CoffeeName,
+        roast: CoffeeRoast
+    };
+    coffees.push(newCoffee);
+    coffeesList.innerHTML = renderCoffees(coffees)
+}
+
 const coffees = [
     {id: 1, name: 'Light City', roast: 'light'},
     {id: 2, name: 'Half City', roast: 'light'},
@@ -50,16 +60,14 @@ const coffees = [
     {id: 13, name: 'Italian', roast: 'dark'},
     {id: 14, name: 'French', roast: 'dark'},
 ];
-
-// ON LINE 55 CHANGED VARIABLE NAME FROM tbody TO coffeesList;
+const addCoffeeButton = document.querySelector('#addCoffee');
 const coffeesList = document.querySelector('#coffees');
-// (ON LINE 57) ALSO TESTED IT BY TARGETING THE DIV USING getElementById // THIS ALSO WORKS
-// const coffeesList = document.getElementById('coffees');
 const submitButton = document.querySelector('#submit');
 const roastSelection = document.querySelector('#roast-selection');
 
-// ON LINE 62 CHANGED VARIABLE NAME FROM tbody TO coffeesList;
 coffeesList.innerHTML = renderCoffees(coffees);
 
 submitButton.addEventListener('click', updateCoffees);
 roastSelection.addEventListener("input", updateCoffees);
+searchInput.addEventListener('keyup', updateCoffees);
+addCoffeeButton.addEventListener('click', addNewCoffee);
