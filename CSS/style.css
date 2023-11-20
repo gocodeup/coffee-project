@@ -1,0 +1,57 @@
+
+
+table {
+    border-collapse: collapse;
+    margin: 15px 0;
+}
+
+td, th {
+    border: 1px solid black;
+    padding: 5px 10px;
+}
+
+
+body {
+    background-image: url("Img/coffee.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    margin: 0;
+    padding: 0;
+    font-family: 'Merriweather Sans', sans-serif;
+
+}
+
+nav {
+    background-color: #FFDAB9;
+}
+
+/*HIDING SPECIFIC ID'S AND THE ID NUMBERS THEMSELVES HERE*/
+#coffees td:first-child {
+    display: none;
+}
+
+#ids {
+    display: none;
+}
+
+
+.card {
+    /*background: url('Img/coffee2.jpg') no-repeat center center fixed;*/
+    background-size: cover;
+    position: relative;
+}
+
+.card-body {
+    font-size: x-large;
+    background-color: #483C32;
+    color: #EADDCA;
+    background: url('Img/coffee2.jpg') no-repeat center center fixed;
+}
+
+#coffee-pour {
+    bottom: 4px;
+    right: 4px;
+    position: fixed;
+    width: 30em;
+}
