@@ -1,16 +1,14 @@
 "use strict"
-// SEV: ADDED A COUNTER TO ALLOW INCREMENTING OF ID
+// ADDED A COUNTER TO ALLOW INCREMENTING OF ID
 let counter = 15;
 
 function renderCoffee(coffee) {
     let html = '<tr class="coffee">';
-    // SEV: ADDED COUNTER TO INCREMENT ON NEW COFFEES, OR TO CALL EXISTING ID'S ON CURRENT COFFEES
+    // ADDED COUNTER TO INCREMENT ON NEW COFFEES, OR TO CALL EXISTING ID'S ON CURRENT COFFEES
     html += `<td>${coffee.id || counter++}</td>`;
-    // html += `<td>${counter++}</td>`;
-    // html += `<td>${coffee.id}</td>`;
     html += `<td>${coffee.name}</td>`;
-    html += `<td>${coffee.roast}</td>`;
-    html += '</tr>';
+    html += `<td>${coffee.roast}</td>`; //p tag
+    html += '</tr>'; //div
 
     return html;
 }
@@ -23,19 +21,9 @@ function renderCoffees(coffees) {
     return html;
 }
 
-// function updateCoffees(e) {
-//     e.preventDefault(); // don't submit the form, we just want to update the data
-//     const selectedRoast = roastSelection.value;
-//     const filteredCoffees = [];
-//     coffees.forEach( coffee => {
-//         if (coffee.roast === selectedRoast) {
-//             filteredCoffees.push(coffee);
-//         }
-//     });
-//     tbody.innerHTML = renderCoffees(filteredCoffees);
-// }
 
-// SEV: CHECKING IF AN OPTION IS ALL ROASTS, IF SO WILL DISPLAY ALL ROASTS
+
+// CHECKING IF AN OPTION IS ALL ROASTS, IF SO WILL DISPLAY ALL ROASTS
 // ADDED AN IF STATEMENT FOR CHECKING FOR ALL ROASTS FIRST THEN CONTINUE WITH THE FUNCTION
 // NOT SURE IF THERE'S A PRETTIER WAY TO SHOW THIS
 function updateCoffees(e) {
@@ -74,7 +62,7 @@ const coffees = [
     {id: 14, name: 'French', roast: 'dark'},
 ];
 
-// SEV: SEARCH BAR CODE TO MAKE IT CASE INSENSITIVE WHEN LOOKING FOR A PARTICULAR BREW
+// SEARCH BAR CODE TO MAKE IT CASE INSENSITIVE WHEN LOOKING FOR A PARTICULAR BREW
 
 const searchBar = document.getElementById("coffee-name");
 
@@ -85,7 +73,6 @@ searchBar.addEventListener("input", function () {
     tbody.innerHTML = renderCoffees(resultsList);
 });
 
-// main.js
 
 // Function to add a new coffee
 function addNewCoffee() {
@@ -106,7 +93,8 @@ function addNewCoffee() {
     const idCell = document.createElement('td');
     const nameCell = document.createElement('td');
     const roastCell = document.createElement('td');
-    // SEV: COUNTER FOR ID'S, GENERATES DYNAMICALLY
+
+    // COUNTER FOR ID'S, GENERATES DYNAMICALLY
     // Set values for the cells
     idCell.textContent = counter++;
     nameCell.textContent = newCoffeeName;
@@ -134,3 +122,4 @@ tbody.innerHTML = renderCoffees(coffees);
 
 submitButton.addEventListener('click', updateCoffees);
 
+//============================================================//
