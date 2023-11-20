@@ -122,3 +122,6 @@ const roastSelection = document.querySelector('#roast-selection');
 section.innerHTML = renderCoffees(coffees);
 
 submitButton.addEventListener('click', updateCoffees);
+
+//============================================================//
+
