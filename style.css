@@ -1,9 +1,54 @@
-table {
-    border-collapse: collapse;
-    margin: 15px 0;
+body {
+    border: 20px solid lightcoral;
+    background-image: url("coffee.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+h1 {
+    font-family: "American Typewriter",sans-serif;
+    text-align: center;
+    padding-top: 80px;
+    color: lightcoral;
 }
 
-td, th {
-    border: 1px solid black;
-    padding: 5px 10px;
+#coffee-form {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f8f9fa;
+    border: 1px solid #ced4da;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
+
+label {
+    display: block;
+    margin-bottom: 8px;
+}
+
+input, select {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 16px;
+    box-sizing: border-box;
+}
+
+button {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/*.container2 {*/
+/*    display: flex;*/
+/*    flex-wrap: wrap;*/
+/*    width: 1000px;*/
+/*    color: green;*/
+/*}*/
