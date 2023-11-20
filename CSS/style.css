@@ -1,14 +1,14 @@
 
 
-table {
-    border-collapse: collapse;
-    margin: 15px 0;
-}
+/*table {*/
+/*    border-collapse: collapse;*/
+/*    margin: 15px 0;*/
+/*}*/
 
-td, th {
-    border: 1px solid black;
-    padding: 5px 10px;
-}
+/*td, th {*/
+/*    border: 1px solid black;*/
+/*    padding: 5px 10px;*/
+/*}*/
 
 
 body {
@@ -31,24 +31,27 @@ nav {
     display: none;
 }
 
-#ids {
+#coffee-id {
     display: none;
 }
 
 
 .card {
     /*background: url('Img/coffee2.jpg') no-repeat center center fixed;*/
-    background-size: cover;
-    position: relative;
+    /*background-size: cover;*/
+    /*position: relative;*/
 }
 
 .card-body {
     font-size: x-large;
-    background-color: #483C32;
+    background-color: blanchedalmond;
     color: #EADDCA;
-    background: url('Img/coffee2.jpg') no-repeat center center fixed;
+    opacity: .7;
+    /*background: url('Img/coffee2.jpg') no-repeat center center fixed;*/
 }
-
+section {
+    color: black;
+}
 #coffee-pour {
     bottom: 4px;
     right: 4px;

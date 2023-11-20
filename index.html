@@ -55,52 +55,78 @@
 </nav>
 <div class="container">
     <div class="row">
-
-        <div class="card col-md-8 card-body" style="max-block-size: max-content;">
+        <div class="card col-md-7 card-body" style="max-block-size: max-content;">
             <h5 class="card-title"></h5>
             <h3 class="card-subtitle mb-2 text-body-secondary text-center">Available Selection</h3>
             <h5 class="card-text"></h5>
-            <table>
-                <thead>
-                <tr>
-                    <!--                      CREATING IDS FOR THESE TO CALL LATER-->
-                    <th id="ids">ID</th>
-                    <th id="names">NAME</th>
-                    <th id="roasts">ROAST</th>
-                </tr>
-                </thead>
-                <tbody id="coffees"></tbody>
-            </table>
+            <!--            <div class="coffee d-flex justify-content-between">-->
+            <!--                <p id="ids" class=" col-md-1">ID</p>-->
+            <!--                <p id="names" class=" col-md-2">NAME</p>-->
+            <!--                <p id="roasts" class=" col-md-2">ROAST</p>-->
+
+            <!--&lt;!&ndash;                <div class="row col-md-12">&ndash;&gt;-->
+            <!--                   -->
+            <!--&lt;!&ndash;                </div>&ndash;&gt;-->
+            <!--            </div>-->
+            <section id="coffees" class="row">
+
+            </section>
+            <!--            <table>-->
+            <!--                <thead>-->
+            <!--            <tr>-->
+            <!--                      CREATING IDS FOR THESE TO CALL LATER-->
+            <!--                                <th id="ids">ID</th>-->
+            <!--                                <th id="names">NAME</th>-->
+            <!--                                <th id="roasts">ROAST</th>-->
+            <!--            </tr>-->
+            <!--                </thead>-->
+            <!--                <tbody id="coffees"></tbody>-->
+            <!--            </table>-->
         </div>
-        <div class="col-md-4">
-            <form>
-                <label for="roast-selection" style="font-size: x-large">What Type of Roast Were You Looking For?</label>
-                <select id="roast-selection">
-                    <option>light</option>
-                    <option>medium</option>
-                    <option>dark</option>
+        <div class="col-md-5">
+            <form style="display: inline-table">
+                <label class="text-center" for="roast-selection" style="font-size: x-large">What Type of Roast Were You
+                    Looking For?</label>
+                <select id="roast-selection" class=" col-6 mx-auto btn-lg fs-4 dropdown-toggle" style="margin-bottom: 13px">
+                    <option>Light</option>
+                    <option>Medium</option>
+                    <option>Dark</option>
                     <!--                    ADDED AN OPTION TO SHOW ALL ROASTS-->
                     <option>All Roasts</option>
                 </select>
-                <input id="submit" type="submit" class="btn btn-success"/>
+                <input id="submit" type="submit" class="btn btn-success  col-6 mx-auto"/>
 
             </form>
+            <p>
+                <button class="btn btn-primary btn-success" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapseWidthExample" aria-expanded="false"
+                        aria-controls="collapseWidthExample" style="margin-bottom: -10px">
+                    Choice not listed?
+                </button>
+            </p>
+            <div style="min-height: 120px;">
+                <div class="collapse collapse-horizontal" id="collapseWidthExample">
+                    <div class="card card-body" style="width: 300px; margin-left: 25px">
+                      Perhaps there's a different option you were looking for, what might that be?
 
-            <form id="addCoffeeForm" class="mt-4">
-                <div class="form-group">
-                    <label for="newCoffeeName">Coffee Name:</label>
-                    <input type="text" class="form-control" id="newCoffeeName" required>
+                        <form id="addCoffeeForm" class="mt-4">
+                            <div class="form-group">
+                                <label for="newCoffeeName">Coffee Name:</label>
+                                <input type="text" class="form-control" id="newCoffeeName" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="newCoffeeRoast">Select Roast Type:</label>
+                                <select class="form-control" id="newCoffeeRoast" required>
+                                    <option value="Light">Light</option>
+                                    <option value="Medium">Medium</option>
+                                    <option value="Dark">Dark</option>
+                                </select>
+                            </div>
+                            <button type="button" class="btn btn-success" onclick="addNewCoffee()">Add Coffee</button>
+                        </form>
+                    </div>
                 </div>
-                <div class="form-group">
-                    <label for="newCoffeeRoast">Select Roast Type:</label>
-                    <select class="form-control" id="newCoffeeRoast" required>
-                        <option value="Light">Light</option>
-                        <option value="Medium">Medium</option>
-                        <option value="Dark">Dark</option>
-                    </select>
-                </div>
-                <button type="button" class="btn btn-success" onclick="addNewCoffee()">Add Coffee</button>
-            </form>
+            </div>
         </div>
     </div>
 
