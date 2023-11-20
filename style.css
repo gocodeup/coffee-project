@@ -3,6 +3,11 @@ body {
     background-image: url("coffee.jpg");
     background-repeat: no-repeat;
     background-size: cover;
+
+}
+.container {
+    max-width: 1200px;
+    max-height: 1000px;
 }
 h1 {
     font-family: "American Typewriter",sans-serif;
@@ -55,7 +60,23 @@ button:hover {
 #coffees {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-evenly;
-    border: 2px solid black;
-    margin: auto;
+    justify-content: space-between;
+    margin: 10px;
+    font-family: "American Typewriter",sans-serif;
+    color: black;
+    font-size: 20px;
+}
+.coffee {
+    width: 48%; /* Adjust the width based on your preference */
+    margin-bottom: 10px;
+    padding: 10px;
+    background-color: transparent;
+    border: 1px solid #ced4da;
+    border-radius: 5px;
+    /*box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);*/
+    text-align: center;
+}
+
+.coffeeName {
+    font-weight: bold;
 }
