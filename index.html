@@ -1,92 +1,3 @@
-<!--<!DOCTYPE html>-->
-<!--<html lang="en">-->
-<!--<head>-->
-<!--    <meta charset="UTF-8">-->
-<!--    <title></title>-->
-<!--    <link rel="stylesheet" href="style.css">-->
-<!--    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">-->
-<!--</head>-->
-<!--<body>-->
-<!--<nav class="navbar navbar-expand-lg navbar-light bg-light">-->
-<!--    <div class="container-fluid">-->
-<!--        &lt;!&ndash; Brand &ndash;&gt;-->
-<!--        <a class="navbar-brand" href="#">Your Coffee Shop</a>-->
-
-<!--        &lt;!&ndash; Toggle button for mobile &ndash;&gt;-->
-<!--        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">-->
-<!--            <span class="navbar-toggler-icon"></span>-->
-<!--        </button>-->
-
-<!--        &lt;!&ndash; Navbar items &ndash;&gt;-->
-<!--        <div class="collapse navbar-collapse" id="navbarNav">-->
-<!--            <ul class="navbar-nav">-->
-<!--                <li class="nav-item">-->
-<!--                    <a class="nav-link" href="#">Home</a>-->
-<!--                </li>-->
-<!--                <li class="nav-item">-->
-<!--                    <a class="nav-link" href="#">Menu</a>-->
-<!--                </li>-->
-<!--                <li class="nav-item">-->
-<!--                    <a class="nav-link" href="#">About Us</a>-->
-<!--                </li>-->
-<!--                <li class="nav-item">-->
-<!--                    <a class="nav-link" href="#">Contact</a>-->
-<!--                </li>-->
-<!--            </ul>-->
-<!--        </div>-->
-<!--    </div>-->
-<!--</nav>-->
-<!--    <div class="row">-->
-<!--        &lt;!&ndash; Left Column &ndash;&gt;-->
-<!--        <div class="col-md-8 border-start">-->
-<!--            <div class="row" id="coffees">-->
-<!--                &lt;!&ndash; Coffee items will be dynamically added here &ndash;&gt;-->
-<!--            </div>-->
-<!--        </div>-->
-
-<!--        &lt;!&ndash; Right Column &ndash;&gt;-->
-<!--        <div class="col-md-4">-->
-<!--            &lt;!&ndash; Roast Selection Form &ndash;&gt;-->
-<!--            <form id="roast-form">-->
-<!--                <h2>Select Your Coffee</h2>-->
-<!--                <label for="roast-selection">Roast:</label>-->
-<!--                <select id="roast-selection">-->
-<!--                    <option value="all">All</option>-->
-<!--                    <option value="light">Light</option>-->
-<!--                    <option value="medium">Medium</option>-->
-<!--                    <option value="dark">Dark</option>-->
-<!--                </select>-->
-<!--                <br>-->
-<!--                &lt;!&ndash; Search Form &ndash;&gt;-->
-<!--                <form id="search-form">-->
-<!--                    <label for="search">Search by name:</label>-->
-<!--                    <input id="search" type="text" placeholder="Enter name">-->
-<!--                </form>-->
-<!--            </form>-->
-<!--            &lt;!&ndash; Add New Coffee Form &ndash;&gt;-->
-<!--            <div id="new-coffee-form">-->
-<!--                <h2>Add New Coffee</h2>-->
-<!--                <label for="new-coffee-name">Name:</label>-->
-<!--                <input id="new-coffee-name" type="text" placeholder="Enter coffee name">-->
-
-<!--                <br> &lt;!&ndash; Added line break to move the roast selector to the next line &ndash;&gt;-->
-<!--                <label for="new-coffee-roast">Roast:</label>-->
-<!--                <select id="new-coffee-roast">-->
-<!--                    <option value="light">Light</option>-->
-<!--                    <option value="medium">Medium</option>-->
-<!--                    <option value="dark">Dark</option>-->
-<!--                </select>-->
-
-<!--                <button id="add-coffee">Add Coffee</button>-->
-<!--            </div>-->
-<!--        </div>-->
-<!--    </div>-->
-<!--</div>-->
-
-<!--<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>-->
-<!--<script src="main.js"></script>-->
-<!--</body>-->
-<!--</html>-->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -174,6 +85,8 @@
                 </select>
 
                 <button id="add-coffee">Add Coffee</button>
+                <button onclick="clearLocalStorage()">Clear Added Coffees</button>
+
             </div>
         </div>
     </div>
