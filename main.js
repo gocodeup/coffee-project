@@ -28,26 +28,38 @@ function updateRoast(e) {
             } else if (coffee.roast === selectedRoast) {
                 filteredCoffees.push(coffee);
             }
-
         });
-        tbody.innerHTML = renderCoffees(filteredCoffees);
+        coffeeDiv.innerHTML = renderCoffees(filteredCoffees);
+    }
 }
-}
-
 
 function updateName(e) {
+
     const filteredCoffees = [];
     const nameSelectorNew = nameSelector.value.toLowerCase()
+    const currentRoast = [];
+    for (let i = 0; i < coffees.length; i++) {
+        if (coffees[i].roast === roastSelection.value) {
+            currentRoast.push(coffees[i]);
+        }
+    }
+
     e.preventDefault();
     console.log("Check")
-    if(nameSelectorNew !== ""){
-        coffees.forEach(coffee => {
-            if(coffee.name[0].toLowerCase().includes(nameSelectorNew)){
-                filteredCoffees.push(coffee.name.toLowerCase())
-                console.log(coffee.name.toLowerCase())
+    if (nameSelectorNew === "") {
+        currentRoast.forEach(coffee => {
+            filteredCoffees.push(coffee);
+        })
+    } else {
+        currentRoast.forEach(coffee => {
+                if (coffee.name.toLowerCase().includes(nameSelectorNew) && coffee.roast === roastSelection.value) {
+                    filteredCoffees.push(coffee);
+                }
             }
-            ;
-        }); tbody.innerHTML = renderCoffees(filteredCoffees);}
+        )
+    }
+
+    coffeeDiv.innerHTML = renderCoffees(filteredCoffees);
 }
 
 // from http://www.ncausa.org/About-Coffee/Coffee-Roasts-Guide
@@ -68,11 +80,11 @@ const coffees = [
     {id: 14, name: 'French', roast: 'dark'},
 ];
 
-const tbody = document.querySelector('#coffees');
+const coffeeDiv = document.querySelector('#coffees');
 const roastSelection = document.querySelector('#roast-selection');
 const nameSelector = document.querySelector('#name-selector');
 
-tbody.innerHTML = renderCoffees(coffees);
+coffeeDiv.innerHTML = renderCoffees(coffees);
 
 roastSelection.addEventListener("change", updateRoast);
 document.querySelector("#name-selector").addEventListener("input", updateName);
