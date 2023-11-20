@@ -23,13 +23,29 @@ function renderCoffees(coffees) {
 // ON LINE 33 (CHANGED FROM tbody TO coffeesList)
 function updateCoffees(e) {
     e.preventDefault(); // don't submit the form, we just want to update the data
-    const selectedRoast = roastSelection.value;
+    const selectedRoast = roastSelection.value.toLowerCase();
+    const searchTerm = userTexts.value.trim().toLowerCase();
+    console.log('Selected Roast:', selectedRoast);
+    console.log('Search Term:', searchTerm);
+
     const filteredCoffees = [];
     coffees.forEach( coffee => {
-        if (coffee.roast === selectedRoast) {
-            filteredCoffees.push(coffee);
+        console.log('Coffee Roast:', coffee.roast.toLowerCase());
+        console.log('Coffee Name:', coffee.name.toLowerCase());
+
+        if (coffee.roast.toLowerCase() === selectedRoast){
+            const matchesRoast = coffee.roast.toLowerCase() === selectedRoast || selectedRoast === 'all';
+            const matchesSearch = coffee.name.toLowerCase().includes(searchTerm);
+            console.log('Matches Roast:', matchesRoast);
+            console.log('Matches Search:', matchesSearch);
+
+            // filteredCoffees.push(coffee); /*without this in the code it doesn't populate */
+            if (matchesRoast && matchesSearch);
+            filteredCoffees.push(coffee); /*without this in the code it doesn't populate */
         }
     });
+    console.log('Filtered Coffees:', filteredCoffees);
+
     coffeesList.innerHTML = renderCoffees(filteredCoffees);
 }
 
@@ -57,6 +73,7 @@ const coffeesList = document.querySelector('#coffees');
 // const coffeesList = document.getElementById('coffees');
 const submitButton = document.querySelector('#submit');
 const roastSelection = document.querySelector('#roast-selection');
+const userTexts = document.querySelector('#userText')
 
 // ON LINE 62 CHANGED VARIABLE NAME FROM tbody TO coffeesList;
 coffeesList.innerHTML = renderCoffees(coffees);
