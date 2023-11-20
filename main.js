@@ -34,11 +34,11 @@ function updateRoast(e) {
 }
 
 function updateName(e) {
-
+    e.preventDefault();
     const filteredNames = [];
     const nameSelectorNew = nameSelector.value.toLowerCase()
-    e.preventDefault();
-    console.log(nameSelectorNew)
+    const selectedRoast = roastSelection.value;
+    console.log(selectedRoast)
     if (nameSelectorNew === "") {
         filteredNames.forEach(coffee => {
 
@@ -46,12 +46,13 @@ function updateName(e) {
         })}
      else {
         coffees.forEach(coffee => {
-                if (coffee.name.toLowerCase().includes(nameSelectorNew))/*&& coffee.roast === roastSelection.value) */ {
+                if (coffee.name.toLowerCase().includes(nameSelectorNew) && coffee.roast === selectedRoast) {
                     filteredNames.push(coffee);
                 }
             }
         )
     }
+
 
     coffeeDiv.innerHTML = renderCoffees(filteredNames);
 }
