@@ -62,3 +62,4 @@ const roastSelection = document.querySelector('#roast-selection');
 coffeesList.innerHTML = renderCoffees(coffees);
 
 submitButton.addEventListener('click', updateCoffees);
+roastSelection.addEventListener("input", updateCoffees);
