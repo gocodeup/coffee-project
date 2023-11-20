@@ -20,3 +20,9 @@ body {
         background-position: 0% 50%;
     }
 }
+
+.border-start {
+    border-left: 1px solid #ced4da; /* Use the color you prefer */
+    padding-left: 10px; /* Optional: Add some padding to separate the content from the border */
+}
+
