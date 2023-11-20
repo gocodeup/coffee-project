@@ -69,6 +69,25 @@ input[type="submit"] {
 input[type="submit"]:hover {
     background-color: #0056b3;
 }
+button[type="text"],
+select.form-select {
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+button[type="submit"] {
+    width: 100%;
+    padding: 8px 10px;
+    border: none;
+    border-radius: 3px;
+    background-color: #007bff;
+    color: #fff;
+    cursor: pointer;
+}
+
+button[type="submit"]:hover {
+    background-color: #0056b3;
+}
 
 /* Bootstrap Overrides */
 select.form-select {
