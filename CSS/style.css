@@ -16,8 +16,33 @@ body {
     background-attachment: fixed; /* Fixed background */
     margin: 0; /* Remove default margin */
     padding: 0; /* Remove default padding */
+    font-family: 'Merriweather Sans', sans-serif;
+    font-family: 'Work Sans', sans-serif;
 }
 
 nav {
     background-color: #FFDAB9; /* Light pumpkin color */
 }
+
+/*SEV: HIDING SPECIFIC ID'S AND THE ID NUMBERS THEMSELVES HERE*/
+#coffees td:first-child {
+    display: none;
+}
+
+#ids {
+    display: none;
+}
+
+
+.card {
+    background: url('Img/coffee2.jpg') no-repeat center center fixed;
+    background-size: cover;
+    position: relative;
+}
+
+.card-body {
+    font-size: x-large;
+    background-color: #483C32;
+    color: #EADDCA; /* Fixing the comment syntax here */
+}
+

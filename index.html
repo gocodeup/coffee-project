@@ -5,6 +5,9 @@
     <title>Black Bean Coffee</title>
     <link rel="stylesheet" href="CSS/style.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather+Sans:wght@500&family=Work+Sans:wght@100&display=swap" rel="stylesheet">
 </head>
 
 <body style="background-image: url('img/coffee.jpg'); background-size: cover; fixed; margin: 0; padding: 0;">
@@ -45,7 +48,7 @@
 
 <div class="container">
     <div class="row">
-        <div class="card col-md-8" style="max-block-size: max-content;">
+        <div class="card col-md-8" style="width: auto ">
             <div class="card-body">
                 <h5 class="card-title"></h5>
                 <h6 class="card-subtitle mb-2 text-body-secondary">Which Coffee You Want?</h6>
@@ -53,9 +56,10 @@
                 <table>
                     <thead>
                     <tr>
-                        <th>ID</th>
-                        <th>NAME</th>
-                        <th>ROAST</th>
+                        <!--                        SEV: CREATING IDS FOR THESE TO CALL LATER-->
+                        <th id="ids">ID</th>
+                        <th id="names">NAME</th>
+                        <th id="roasts">ROAST</th>
                     </tr>
                     </thead>
                     <tbody id="coffees"></tbody>
@@ -69,6 +73,8 @@
                     <option>light</option>
                     <option>medium</option>
                     <option>dark</option>
+<!--                    SEV: ADDED AN OPTION TO SHOW ALL ROASTS-->
+                    <option>All Roasts</option>
                 </select>
                 <input id="submit" type="submit"/>
             </form>
@@ -81,6 +87,8 @@
                 </select>
                 <input id="submit2" type="submit"/>
             </form>
+<!--            <div class="blurred-photo">-->
+<!--            <img src="Img/coffee2.jpg" alt="another coffee" class="border border-5 border-dark rounded col-md-3"></div>-->
 
             <form id="addCoffeeForm" class="mt-4">
                 <div class="form-group">
@@ -103,6 +111,9 @@
     <label for="coffee-name">Which coffee were you looking for?</label>
     <input name="coffee-name" type="text" id="coffee-name" placeholder="Coffee Name...">
     <ul id="results"></ul>
+<!--  SEV: GIF IMAGE ADDED IN-->
+    <img src="pouring-coffee.gif" alt="coffee pour" class="border border-5 border-dark rounded col-md-3">
+
 </div>
 
 <script src="JS/main.js"></script>
