@@ -23,9 +23,13 @@ function updateCoffees(e) {
     const selectedRoast = roastSelection.value;
     const filteredCoffees = [];
     coffees.forEach( coffee => {
-        if (coffee.roast === selectedRoast) {
+        if(selectedRoast === "all"){
+            filteredCoffees.push(coffee)
+        }
+            else if (coffee.roast === selectedRoast) {
             filteredCoffees.push(coffee);
         }
+
     });
     tbody.innerHTML = renderCoffees(filteredCoffees);
 }
