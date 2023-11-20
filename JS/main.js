@@ -87,31 +87,23 @@ function addNewCoffee() {
         return;
     }
 
-    // Create a new row for the table
-    const newRow = document.createElement('div');
+    // Create a new coffee object
+    const newCoffee = {
+        id: counter++,
+        name: newCoffeeName,
+        roast: newCoffeeRoast
+    };
 
-    // Create cells for the new row
-    const idCell = document.createElement('p');
-    const nameCell = document.createElement('p');
-    const roastCell = document.createElement('p');
+    // Add the new coffee to the coffees array
+    coffees.push(newCoffee);
 
-    // COUNTER FOR ID'S, GENERATES DYNAMICALLY
-    // Set values for the cells
-    idCell.textContent = counter++;
-    nameCell.textContent = newCoffeeName;
-    roastCell.textContent = newCoffeeRoast;
-
-    // Append cells to the new row
-    newRow.appendChild(idCell);
-    newRow.appendChild(nameCell);
-    newRow.appendChild(roastCell);
-
-    // Append the new row to the table body
-    document.getElementById('coffees').appendChild(newRow);
+    // Render the updated list of coffees
+    section.innerHTML = renderCoffees(coffees);
 
     // Clear input fields
     document.getElementById('newCoffeeName').value = "";
     document.getElementById('newCoffeeRoast').value = "";
+
 }
 
 
