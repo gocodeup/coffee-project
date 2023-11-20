@@ -50,7 +50,9 @@ function updateCoffees(e) {
                 filteredCoffees.push(coffee);
                 tbody.innerHTML = renderCoffees(filteredCoffees);
             }
-        })
+        });
+        tbody.innerHTML = renderCoffees(filteredCoffees);
+
     }
 }
 
@@ -131,5 +133,4 @@ const roastSelection = document.querySelector('#roast-selection');
 tbody.innerHTML = renderCoffees(coffees);
 
 submitButton.addEventListener('click', updateCoffees);
-
 
