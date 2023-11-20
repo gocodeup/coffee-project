@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -55,8 +56,8 @@
             <div class="selection-form">
                 <form id="roast-form">
                     <h2>Select Your Coffee</h2>
-                    <select select class="form-select" aria-label="Default select example" id="roast-selection">
-                        <option selected>Please Select Your Roast</option>
+                    <label for="roast-selection">Roast:</label>
+                    <select id="roast-selection">
                         <option value="all">All</option>
                         <option value="light">Light</option>
                         <option value="medium">Medium</option>
@@ -85,8 +86,6 @@
                 </select>
 
                 <button id="add-coffee">Add Coffee</button>
-                <button onclick="clearLocalStorage()">Clear Added Coffees</button>
-
             </div>
         </div>
     </div>

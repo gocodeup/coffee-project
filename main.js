@@ -1,34 +1,5 @@
 "use strict";
 
-// Function to load coffee data from localStorage
-function loadCoffees() {
-    const storedCoffees = localStorage.getItem('coffees');
-    return storedCoffees ? JSON.parse(storedCoffees) : null;
-}
-
-// Function to save coffee data to localStorage
-function saveCoffees(coffees) {
-    localStorage.setItem('coffees', JSON.stringify(coffees));
-}
-
-// Coffee data array
-let coffees = loadCoffees() || [
-    { id: 1, name: 'Light City', roast: 'light' },
-    { id: 2, name: 'Half City', roast: 'light' },
-    { id: 3, name: 'Cinnamon', roast: 'light' },
-    { id: 4, name: 'City', roast: 'medium' },
-    { id: 5, name: 'American', roast: 'medium' },
-    { id: 6, name: 'Breakfast', roast: 'medium' },
-    { id: 7, name: 'High', roast: 'dark' },
-    { id: 8, name: 'Continental', roast: 'dark' },
-    { id: 9, name: 'New Orleans', roast: 'dark' },
-    { id: 10, name: 'European', roast: 'dark' },
-    { id: 11, name: 'Espresso', roast: 'dark' },
-    { id: 12, name: 'Viennese', roast: 'dark' },
-    { id: 13, name: 'Italian', roast: 'dark' },
-    { id: 14, name: 'French', roast: 'dark' },
-];
-
 function renderCoffee(coffee) {
     let coffeeDiv = document.createElement('div');
     coffeeDiv.classList.add('col-6', 'col-md-4', 'coffee');
@@ -51,7 +22,6 @@ function renderCoffee(coffee) {
     coffeeDiv.style.border = '1px solid #38220f';
     coffeeDiv.style.margin = '0.5em';
     coffeeDiv.style.width = '12em';
-    coffeeDiv.style.borderRadius= '15%';
 
     let typeParagraph = document.createElement('p');
     typeParagraph.textContent = `Type: ${coffee.name}`;
@@ -63,7 +33,6 @@ function renderCoffee(coffee) {
 
     return coffeeDiv;
 }
-
 function renderCoffees(coffees) {
     let coffeesContainer = document.querySelector('#coffees');
     coffeesContainer.innerHTML = ''; // Clear previous content
@@ -91,9 +60,6 @@ function updateCoffees() {
 
     // Render the filtered coffees
     renderCoffees(filteredCoffees);
-
-    // Save the entire array to localStorage
-    saveCoffees(filteredCoffees);
 }
 
 function addCoffee() {
@@ -109,9 +75,6 @@ function addCoffee() {
         // Add the new coffee to the array
         coffees.push(newCoffee);
 
-        // Save the entire array to localStorage
-        saveCoffees(coffees);
-
         // Render the updated coffees
         renderCoffees(coffees);
 
@@ -121,33 +84,27 @@ function addCoffee() {
     }
 }
 
+// Coffee data array
+const coffees = [
+    { id: 1, name: 'Light City', roast: 'light' },
+    { id: 2, name: 'Half City', roast: 'light' },
+    { id: 3, name: 'Cinnamon', roast: 'light' },
+    { id: 4, name: 'City', roast: 'medium' },
+    { id: 5, name: 'American', roast: 'medium' },
+    { id: 6, name: 'Breakfast', roast: 'medium' },
+    { id: 7, name: 'High', roast: 'dark' },
+    { id: 8, name: 'Continental', roast: 'dark' },
+    { id: 9, name: 'New Orleans', roast: 'dark' },
+    { id: 10, name: 'European', roast: 'dark' },
+    { id: 11, name: 'Espresso', roast: 'dark' },
+    { id: 12, name: 'Viennese', roast: 'dark' },
+    { id: 13, name: 'Italian', roast: 'dark' },
+    { id: 14, name: 'French', roast: 'dark' },
+];
+
 // Initial render
 renderCoffees(coffees);
 
-
-// Reset added coffees
-function clearLocalStorage() {
-    localStorage.removeItem('coffees');
-    coffees = [
-        { id: 1, name: 'Light City', roast: 'light' },
-        { id: 2, name: 'Half City', roast: 'light' },
-        { id: 3, name: 'Cinnamon', roast: 'light' },
-        { id: 4, name: 'City', roast: 'medium' },
-        { id: 5, name: 'American', roast: 'medium' },
-        { id: 6, name: 'Breakfast', roast: 'medium' },
-        { id: 7, name: 'High', roast: 'dark' },
-        { id: 8, name: 'Continental', roast: 'dark' },
-        { id: 9, name: 'New Orleans', roast: 'dark' },
-        { id: 10, name: 'European', roast: 'dark' },
-        { id: 11, name: 'Espresso', roast: 'dark' },
-        { id: 12, name: 'Viennese', roast: 'dark' },
-        { id: 13, name: 'Italian', roast: 'dark' },
-        { id: 14, name: 'French', roast: 'dark' },
-    ];
-
-    // Render the initial state
-    renderCoffees(coffees);
-}
 
 // Event handling
 const roastSelection = document.querySelector('#roast-selection');
@@ -156,6 +113,8 @@ const newCoffeeName = document.querySelector('#new-coffee-name');
 const newCoffeeRoast = document.querySelector('#new-coffee-roast');
 const addCoffeeButton = document.querySelector('#add-coffee');
 
-roastSelection.addEventListener('change', updateCoffees);
+roastSelection.addEventListener('change', updateCoffees); // Changed 'input' to 'change' for immediate update
 searchInput.addEventListener('input', updateCoffees);
 addCoffeeButton.addEventListener('click', addCoffee);
+
+// ...
