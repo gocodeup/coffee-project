@@ -3,15 +3,61 @@
 <head>
     <meta charset="UTF-8">
     <title></title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="CSS/style.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
           integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+
 </head>
 <body>
+<!--NAVBAR-->
+<nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <div class="container-fluid">
+        <button class="button" data-text="Awesome">
+            <span class="actual-text">&nbsp;BaddaBean&nbsp;</span>
+            <span aria-hidden="true" class="hover-text">&nbsp;BaddaBean&nbsp;</span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Shop</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Contact</a>
+                </li>
+            </ul>
+            <div class="rating">
+                <input value="5" name="rate" id="star5" type="radio">
+                <label title="text" for="star5"></label>
+                <input value="4" name="rate" id="star4" type="radio">
+                <label title="text" for="star4"></label>
+                <input value="3" name="rate" id="star3" type="radio" checked="">
+                <label title="text" for="star3"></label>
+                <input value="2" name="rate" id="star2" type="radio">
+                <label title="text" for="star2"></label>
+                <input value="1" name="rate" id="star1" type="radio">
+                <label title="text" for="star1"></label>
+            </div>
+            <form class="d-flex" role="search">
+                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-secondary" type="submit">Search</button>
+            </form>
+        </div>
+    </div>
+</nav>
+<!--END NAVBAR-->
+
+<!--BEGINNING OF CONTAINER-->
 <div class="container">
     <div class="row">
         <div class="col-6 order-1">
-            <h1>BaddaBean Coffee Shop</h1>
+            <h1>BaddaBean Coffee Shop <i class="bi bi-cup-hot"></i></h1>
 
 
             <form id="coffee-form">
@@ -28,7 +74,9 @@
                     <option value="dark">Dark</option>
                 </select>
 
+                <!--END OF SEARCH -->
 
+                <!--        BEGINNING OF ADD -->
                 <label class="mt-3" for="add-coffee-search"><strong>Add A Coffee</strong></label>
                 <input type="text" id="add-coffee-search" placeholder="Enter coffee name">
 
@@ -39,7 +87,21 @@
                     <option value="medium">medium</option>
                     <option value="dark">dark</option>
                 </select>
-                <button class="mt-3" id="add-coffee-btn">Submit</button>
+                <!--        ADD BUTTON -->
+                <button class="mt-3" id="add-coffee-btn">Add</button>
+                <section class="loader">
+
+                    <div class="slider" style="--i:0">
+                    </div>
+                    <div class="slider" style="--i:1">
+                    </div>
+                    <div class="slider" style="--i:2">
+                    </div>
+                    <div class="slider" style="--i:3">
+                    </div>
+                    <div class="slider" style="--i:4">
+                    </div>
+                </section>
             </form>
         </div>
         <div class="col-6 order-2">
@@ -49,11 +111,10 @@
             </div>
         </div>
     </div>
-
-<script src="main.js"></script>
+</div>
+<script src="JS/main.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
         crossorigin="anonymous"></script>
-</div>
 </body>
 </html>
