@@ -20,46 +20,40 @@ function renderCoffees(coffees) {
 function updateRoast(e) {
     e.preventDefault(); // don't submit the form, we just want to update the data
     const selectedRoast = roastSelection.value;
-    const filteredCoffees = [];
+    const filteredRoast = [];
     if (e.target === roastSelection) {
         coffees.forEach(coffee => {
             if (selectedRoast === "all") {
-                filteredCoffees.push(coffee)
+                filteredRoast.push(coffee)
             } else if (coffee.roast === selectedRoast) {
-                filteredCoffees.push(coffee);
+                filteredRoast.push(coffee);
             }
         });
-        coffeeDiv.innerHTML = renderCoffees(filteredCoffees);
+        coffeeDiv.innerHTML = renderCoffees(filteredRoast);
     }
 }
 
 function updateName(e) {
 
-    const filteredCoffees = [];
+    const filteredNames = [];
     const nameSelectorNew = nameSelector.value.toLowerCase()
-    const currentRoast = [];
-    for (let i = 0; i < coffees.length; i++) {
-        if (coffees[i].roast === roastSelection.value) {
-            currentRoast.push(coffees[i]);
-        }
-    }
-
     e.preventDefault();
-    console.log("Check")
+    console.log(nameSelectorNew)
     if (nameSelectorNew === "") {
-        currentRoast.forEach(coffee => {
-            filteredCoffees.push(coffee);
-        })
-    } else {
-        currentRoast.forEach(coffee => {
-                if (coffee.name.toLowerCase().includes(nameSelectorNew) && coffee.roast === roastSelection.value) {
-                    filteredCoffees.push(coffee);
+        filteredNames.forEach(coffee => {
+
+            filteredNames.push(coffee)
+        })}
+     else {
+        coffees.forEach(coffee => {
+                if (coffee.name.toLowerCase().includes(nameSelectorNew))/*&& coffee.roast === roastSelection.value) */ {
+                    filteredNames.push(coffee);
                 }
             }
         )
     }
 
-    coffeeDiv.innerHTML = renderCoffees(filteredCoffees);
+    coffeeDiv.innerHTML = renderCoffees(filteredNames);
 }
 
 // from http://www.ncausa.org/About-Coffee/Coffee-Roasts-Guide
