@@ -1,37 +1,45 @@
 "use strict"
 
 function renderCoffee(coffee) {
-    let html = '<tr class="coffee">';
-    html += `<td>${coffee.id}</td>`;
-    html += `<td>${coffee.name}</td>`;
-    html += `<td>${coffee.roast}</td>`;
-    html += '</tr>';
+    let html = '<div class="coffee">';
+    html += `<h2>${coffee.name}</h2>`;
+    html += `<p>${coffee.roast}</p>`;
+    html += '</div>';
 
     return html;
 }
 
 function renderCoffees(coffees) {
     let html = '';
-    for(let i = coffees.length - 1; i >= 0; i--) {
+    for (let i = coffees.length - 1; i >= 0; i--) {
         html += renderCoffee(coffees[i]);
     }
     return html;
 }
 
-function updateCoffees(e) {
+function updateRoast(e) {
     e.preventDefault(); // don't submit the form, we just want to update the data
     const selectedRoast = roastSelection.value;
     const filteredCoffees = [];
-    coffees.forEach( coffee => {
-        if(selectedRoast === "all"){
-            filteredCoffees.push(coffee)
-        }
-            else if (coffee.roast === selectedRoast) {
-            filteredCoffees.push(coffee);
-        }
+    if (e.target === roastSelection) {
+        coffees.forEach(coffee => {
+            if (selectedRoast === "all") {
+                filteredCoffees.push(coffee)
+            } else if (coffee.roast === selectedRoast) {
+                filteredCoffees.push(coffee);
+            }
 
-    });
-    tbody.innerHTML = renderCoffees(filteredCoffees);
+        });
+        tbody.innerHTML = renderCoffees(filteredCoffees);
+    }
+}
+
+function updateName(e) {
+    const input = nameSelector.value;
+    e.preventDefault();
+    if (input !== "") {
+        console.log("hello");
+    }
 }
 
 // from http://www.ncausa.org/About-Coffee/Coffee-Roasts-Guide
@@ -53,9 +61,10 @@ const coffees = [
 ];
 
 const tbody = document.querySelector('#coffees');
-const submitButton = document.querySelector('#submit');
 const roastSelection = document.querySelector('#roast-selection');
+const nameSelector = document.querySelector('#name-selector');
 
 tbody.innerHTML = renderCoffees(coffees);
 
-submitButton.addEventListener('click', updateCoffees);
+roastSelection.addEventListener("change", updateRoast);
+nameSelector.addEventListener("change", updateName);
