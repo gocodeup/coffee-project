@@ -9,7 +9,7 @@
 <body>
 <h1>Coffee!</h1>
 
-<form>
+<form id="search">
     <label for="roast-selection"></label>
     <select id="roast-selection">
         <option value="all">all</option>
@@ -18,8 +18,21 @@
         <option value="dark">dark</option>
     </select>
     <br>
-    <label for="name-selector">Choose Your Favorite Type!</label>
+    <label for="name-selector">Search for a coffee</label>
     <input type="text" id="name-selector">
+</form>
+<form id="add">
+    <label for="add-coffee"></label>
+    <select id="add-roast-selection">
+        <option value="all">all</option>
+        <option value="light">light</option>
+        <option value="medium">medium</option>
+        <option value="dark">dark</option>
+    </select>
+    <br>
+    <label for="name-selector">Add a coffee</label>
+    <input type="text" id="add-name-selector">
+    <button type="button">Add Coffee</button>
 </form>
 
 <div id="coffees">

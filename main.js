@@ -61,6 +61,30 @@ function updateInput(e) {
     updateCoffees(e, currentRoast);
 }
 
+function addCoffee(e, roast, name) {
+    e.preventDefault();
+    console.log("hello");
+    name = document.querySelector("#add-name-selector").value.toLowerCase();
+    const nameCapitalized = name.charAt(0).toUpperCase() + name.slice(1);
+    name = nameCapitalized;
+    roast = document.querySelector("#add-roast-selection").value;
+    if (roast !== "all" && name !== "") {
+        const newCoffee = {
+            id: coffees.length + 1,
+            name: name,
+            roast: roast
+        }
+        coffees.push(newCoffee);
+        console.log(coffees);
+        updateCoffees(e, coffees);
+    }
+}
+
+function submitTest(e) {
+    e.preventDefault();
+    console.log("submitted");
+}
+
 // from http://www.ncausa.org/About-Coffee/Coffee-Roasts-Guide
 const coffees = [
     {id: 1, name: 'Light City', roast: 'light'},
@@ -82,8 +106,14 @@ const coffees = [
 const coffeeDiv = document.querySelector('#coffees');
 const roastSelection = document.querySelector('#roast-selection');
 const nameSelector = document.querySelector('#name-selector');
+const addBtn = document.querySelector("#add button");
+let roast = "";
+let name = "";
+
 
 coffeeDiv.innerHTML = renderCoffees(coffees);
 
 roastSelection.addEventListener("change", updateCoffees);
 nameSelector.addEventListener("input", updateInput);
+addBtn.addEventListener("click", addCoffee);
+document.querySelector("#add-name-selector").addEventListener("submit", submitTest);
