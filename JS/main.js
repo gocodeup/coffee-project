@@ -25,7 +25,7 @@ function renderCoffees(coffees) {
 
 // CHECKING IF AN OPTION IS ALL ROASTS, IF SO WILL DISPLAY ALL ROASTS
 // ADDED AN IF STATEMENT FOR CHECKING FOR ALL ROASTS FIRST THEN CONTINUE WITH THE FUNCTION
-// NOT SURE IF THERE'S A PRETTIER WAY TO SHOW THIS
+// NOT SURE IF THERE'S A NICER WAY TO SHOW THIS
 function updateCoffees(e) {
     e.preventDefault(); // don't submit the form, we just want to update the data
     const selectedRoast = roastSelection.value;
