@@ -55,7 +55,7 @@
 </nav>
 <div class="container">
     <div class="row">
-        <div class="card col-md-7 card-body" style="max-block-size: max-content;">
+        <div class="card col-md-7 card-body">
             <h5 class="card-title"></h5>
             <h3 class="card-subtitle mb-2 text-body-secondary text-center">Available Selection</h3>
             <h5 class="card-text"></h5>
@@ -63,11 +63,10 @@
             </section>
         </div>
         <div class="col-md-5">
-            <form style="display: inline-table">
-                <label class="text-center" for="roast-selection" style="font-size: x-large">What Type of Roast Were You
+            <form>
+                <label class="roast-label text-center" for="roast-selection">What Type of Roast Were You
                     Looking For?</label>
-                <select id="roast-selection" class=" col-6 mx-auto btn-lg fs-4 dropdown-toggle"
-                        style="margin-bottom: 13px">
+                <select id="roast-selection" class=" col-6 mx-auto btn-lg fs-4 dropdown-toggle">
                     <option>Light</option>
                     <option>Medium</option>
                     <option>Dark</option>
@@ -84,9 +83,9 @@
                     Choice not listed?
                 </button>
             </p>
-            <div style="min-height: 120px;">
+            <div class="mini-card-div">
                 <div class="collapse collapse-horizontal" id="collapseWidthExample">
-                    <div class="card card-body" style="width: 300px; margin-left: 25px">
+                    <div class="card card-body mini-card-body">
                         Perhaps there's a different option you were looking for, what might that be?
 
                         <form id="addCoffeeForm" class="mt-4">

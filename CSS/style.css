@@ -1,16 +1,4 @@
 
-
-/*table {*/
-/*    border-collapse: collapse;*/
-/*    margin: 15px 0;*/
-/*}*/
-
-/*td, th {*/
-/*    border: 1px solid black;*/
-/*    padding: 5px 10px;*/
-/*}*/
-
-
 body {
     background-image: url("Img/coffee.jpg");
     background-size: cover;
@@ -37,9 +25,7 @@ nav {
 
 
 .card {
-    /*background: url('Img/coffee2.jpg') no-repeat center center fixed;*/
-    /*background-size: cover;*/
-    /*position: relative;*/
+    max-block-size: max-content;
 }
 
 .card-body {
@@ -47,7 +33,7 @@ nav {
     background-color: blanchedalmond;
     color: #EADDCA;
     opacity: .7;
-    /*background: url('Img/coffee2.jpg') no-repeat center center fixed;*/
+
 }
 section {
     color: black;
@@ -59,3 +45,22 @@ section {
     width: 30em;
 }
 
+form {
+    display: inline-table;
+}
+
+.roast-label {
+    font-size: x-large;
+}
+#roast-selection {
+    margin-bottom: 13px;
+}
+
+.mini-card-div {
+    min-height: 120px;
+}
+
+.mini-card-body {
+    width: 300px;
+    margin-left: 25px;
+}
