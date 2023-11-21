@@ -38,6 +38,7 @@ function updateCoffees(e, input) {
             }
         });
     }
+    filteredCoffees = filteredCoffees.sort(filteredCoffees.id);
     coffeeDiv.innerHTML = renderCoffees(filteredCoffees);
 }
 
@@ -57,10 +58,6 @@ function updateInput(e) {
             }
         )
     }
-<<<<<<< HEAD
-    console.log(currentRoast);
-=======
->>>>>>> main
     updateCoffees(e, currentRoast);
 }
 
