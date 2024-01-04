@@ -7,16 +7,17 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <div class="page-wrapper gap-10">
+<div class="page-wrapper gap-10">
 
-        <div class="container nav">
+    <!-- Navbar -->
+    <div class="container nav">
+        <nav>
             <div class="row full-width">
                 <div class="column flex-grow">
-                    <header class=" header d-flex  align-items-between">
-                        <a  class=" logo d-flex align-items-center flex-grow gap-10" href="./index.html">
-                            <img class="company-logo" src="images/logo.png" alt="company-logo">
-
-                            <p>! Starbucks Coffee Shop</p>
+                    <header class="header d-flex align-items-between">
+                        <a class="logo d-flex align-items-center flex-grow gap-10" href="./index.html">
+                            <img class="company-logo" src="images/logo.jpg" alt="company-logo">
+                            <p>Brewed Awakenings Coffee House</p>
                         </a>
 
                         <div class="search-bar">
@@ -26,37 +27,31 @@
                             </form>
                         </div>
 
-                        <nav class=" navbar d-flex align-items-center gap-10">
-
+                        <div class="navbar d-flex align-items-center gap-10">
                             <a href="index.html" class="active">Home</a>
                             <a href="./book-a-table.html">Book a Table</a>
                             <a href="about-us.html">About Us</a>
                             <a href="https://www.googlemaps.com" target="_blank">Find a store</a>
                             <a href="./sign-in.html">Sign in</a>
                             <a href="./join-us.html">Join us</a>
-
-                        </nav>
+                        </div>
                     </header>
                 </div>
+            </div>
+        </nav>
+    </div>
 
+    <!-- Main Image -->
+    <div class="container">
+        <div class="row full-width">
+            <div class="column full-width flex-grow top-img-wrapper">
+                <img class="top-img" src="images/blue-coffee-bg.jpg" alt="coffee-cups">
             </div>
         </div>
-
-        <!----------------------------------------------------main image---------------------------->
-
-        <div class="container">
-            <div class="row full-width">
-                <div class="column full-width flex-grow top-img-wrapper">
-                    <div class="top-img-wrapper">
-                        <img class="top-img" src="images/blue-coffee-bg.jpg" alt="coffee-cups">
-                    </div>
-                </div>
-            </div>
-
-        </div>
+    </div>
 
 
-            <!-----------------------------start of coffee list---------------------------------------->
+    <!-----------------------------start of coffee list---------------------------------------->
 
 
         <div class="container flex-grow align-items-center">
@@ -81,7 +76,7 @@
                     <option value="dark">Dark</option>
 
                 </select>
-                <button  class="roast-selection-btn" name="roast-selection" id="submit" type="submit">Make Coffee Simple Again</button>
+<!--                <button  class="roast-selection-btn" name="roast-selection" id="submit" type="submit">Make Coffee Simple Again</button>-->
                 <br>
             </form>
         </div>

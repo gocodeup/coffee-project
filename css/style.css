@@ -14,7 +14,17 @@ body {
     color: var(--primary-ligth);
 
 }
-
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px;
+    background-color: var(--primary-dark);
+    color: var(--primary-ligth);
+    font-weight: 600;
+    font-size: 18px;
+    z-index: 9;
+}
 .header {
     position: fixed;
     top: 0;
@@ -23,18 +33,20 @@ body {
     padding: 20px 10px;
     background-color: transparent;
     z-index: 9;
-    font-size: 25px;
+    font-size: 20px;
     color: var(--primary-ligth);
     font-weight: 600;
 
 }
-
+#coffees {
+    margin-top: 70px; /* Adjust the value as needed */
+}
 .logo:hover {
     color: var(--transition-clr-blue);
 }
 
 .navbar a {
-    font-size: 18px;
+    font-size: 17px;
     font-weight: 500;
     margin-left: 35px;
     transition: .3s;
@@ -45,18 +57,28 @@ body {
     color: var(--transition-clr-blue);
 }
             /********************************************************MAIN **************************************************/
+/*.company-logo {*/
+/*    max-width: 50px;*/
+/*    max-height: 50px;*/
+/*    transform: scaleX(-1);*/
+/*    border-radius: 50%;*/
+/*    transition: .5s ease, transform 3s cubic-bezier(0,0,.44,1.18);*/
+/*}*/
+/*.company-logo:hover {*/
+
+/*    transform:scaleX(-1) rotate(90deg) scale(1.10);*/
+/*}*/
 .company-logo {
-    max-width: 70px;
-    max-height: 70px;
-    transform: rotate(180deg);
+    max-width: 50px;
+    max-height: 50px;
+    transform: scaleX(-1); /* Flips the image horizontally */
     border-radius: 50%;
     transition: .5s ease, transform 3s cubic-bezier(0,0,.44,1.18);
 }
+
 .company-logo:hover {
-    transform: scale(1.15);
-
+    transform: scaleX(-1) rotate(-70deg) scale(1.10); /* Maintains flip, rotates clockwise, and scales up */
 }
-
 .top-img {
     top: 80px;
     position: absolute;
@@ -97,7 +119,7 @@ body {
     background-color: var(--transition-clr-blue);
     border: 2px solid var(--transition-clr-blue);
     border-radius: 8px;
-    font-size: 19px;
+    font-size: 15px;
     font-weight: 600;
     letter-spacing: 1px;
     padding: 5px;
@@ -119,14 +141,28 @@ body {
 
 .bean-roast {
     color: var(--transition-clr-blue);
-    font-size: 14px;
+    font-size: 11px;
 }
 
 .social-media-nav {
     width: 345px;
     height: 50px;
 }
-
+footer {
+    position: relative;
+    bottom: 0;
+    left: 0;
+    /*height: 50px;*/
+    width: 100%;
+    padding: 10px 10px;
+    background-color: var(--primary-dark);
+    z-index: 9;
+    font-size: 12px;
+    color: var(--primary-ligth);
+    font-weight: 600;
+    text-align: center;
+    padding: 0px;
+}
 .social-media-nav a,
 .a-btn {
     position: relative;
@@ -138,7 +174,7 @@ body {
     background-color: var(--transition-clr-blue);
     border: 2px solid var(--transition-clr-blue);
     border-radius: 8px;
-    font-size: 19px;
+    font-size: 13px;
     color: var(--primary-dark);
     font-weight: 600;
     letter-spacing: 1px;
