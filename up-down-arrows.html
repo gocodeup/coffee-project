@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+use strict;
+
+$(document).ready(function () {
+window.displayBoxIndex = -1;
+$('#cityresults').on('click', 'a', function () {
+$('#city').val($(this).text());
+$('#cityresults').hide('');
+$('#citygeonameid').val($(this).parent().attr('data-id'));
+return false;
+});
+var Navigate = function (diff) {
+displayBoxIndex += diff;
+var oBoxCollection = $("#cityresults ul li a");
+if (displayBoxIndex >= oBoxCollection.length) {
+displayBoxIndex = 0;
+}
+if (displayBoxIndex < 0) {
+displayBoxIndex = oBoxCollection.length - 1;
+}
+var cssClass = "display_box_hover";
+oBoxCollection.removeClass(cssClass).eq(displayBoxIndex).addClass(cssClass);
+}
+$(document).on('keypress keyup', function (e) {
+if (e.keyCode == 13 || e.keyCode == 32) {
+$('.display_box_hover').trigger('click');
+return false;
+}
+if (e.keyCode == 40) {
+//down arrow
+Navigate(1);
+}
+if (e.keyCode == 38) {
+//up arrow
+Navigate(-1);
+}
+});
+</body>
+</html>
