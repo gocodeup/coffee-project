@@ -32,7 +32,7 @@ improvements to it.
 - Add functionality to update the displayed coffee as the user types into the
   search box, or as soon as they select an option from the select.
 
-**Bonus**
+**Additional Features**
 
 - Add an option to select all roasts for roast type
 
